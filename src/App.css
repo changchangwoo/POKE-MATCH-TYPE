@@ -1,0 +1,14 @@
+/* 디폴트 스타일 */
+#root {
+    font-family: 'NeoDunggeunmo';
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    
+}
+
+button, input, select {
+    font-family: 'NeoDunggeunmo';
+    border: none;
+}
