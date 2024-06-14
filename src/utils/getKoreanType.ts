@@ -18,7 +18,8 @@ type PokemonType =
   | "dark"
   | "fairy"
   | "unknown"
-  | "shadow";
+  | "shadow"
+  | string
 
 const typeMapping: Record<PokemonType, string> = {
   normal: "노말",

@@ -1,0 +1,22 @@
+[
+    { "no": 1, "name": "normal", "damage": 1 },
+    { "no": 2, "name": "fighting", "damage": 1 },
+    { "no": 3, "name": "flying", "damage": 1 },
+    { "no": 4, "name": "poison", "damage": 1 },
+    { "no": 5, "name": "ground", "damage": 1 },
+    { "no": 6, "name": "rock", "damage": 1 },
+    { "no": 7, "name": "bug", "damage": 1 },
+    { "no": 8, "name": "ghost", "damage": 1 },
+    { "no": 9, "name": "steel", "damage": 1 },
+    { "no": 10, "name": "fire", "damage": 1 },
+    { "no": 11, "name": "water", "damage": 1 },
+    { "no": 12, "name": "grass", "damage": 1 },
+    { "no": 13, "name": "electric", "damage": 1 },
+    { "no": 14, "name": "psychic", "damage": 1 },
+    { "no": 15, "name": "ice", "damage": 1 },
+    { "no": 16, "name": "dragon", "damage": 1 },
+    { "no": 17, "name": "dark", "damage": 1 },
+    { "no": 18, "name": "fairy", "damage": 1 },
+    { "no": 19, "name": "unknown", "damage": 1 },
+    { "no": 20, "name": "shadow", "damage": 1 }
+]

@@ -41,13 +41,14 @@ const Main = () => {
       }
     };
     fetchData();
+    console.log(matchInfo)
   }, [searchParams]);
 
   return (
     <div css={MainContainer}>
       <Search searchParams={searchParams} setSearchParams={setSearchParams} />
       {matchInfo && <MatchCard MatchInfo={matchInfo} />}
-      <TypeCard />
+      {matchInfo && <TypeCard MatchInfo={matchInfo} />}
     </div>
   );
 };

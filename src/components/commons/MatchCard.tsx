@@ -3,28 +3,26 @@ import { MatchInfo as IMatchInfo } from "../../models/pokemonData";
 import { uniqueId } from "lodash";
 import { getKoreanType } from "../../utils/getKoreanType";
 import { useGetType } from "../../hooks/useGetType";
+import { v4 as uuidv4 } from 'uuid';
+
+import TypeBadge from "./TypeBadge";
 
 interface MatchCardProps {
-  MatchInfo : IMatchInfo;
+  MatchInfo: IMatchInfo;
 }
 
-const MatchCard = ({MatchInfo} : MatchCardProps) => {
-  const typeNos = MatchInfo.types.map(type => type.typeNo);
-  const typeDetails = useGetType(typeNos);
-
+const MatchCard = ({ MatchInfo }: MatchCardProps) => {
   return (
     <div css={matchCardContainer}>
       <h1>매치 포켓몬</h1>
-      <div css={imgBox(MatchInfo.types[0].typeNo)} >
-        <img src={MatchInfo.imgs}/>
+      <div css={imgBox(MatchInfo.types[0].typeNo)}>
+        <img src={MatchInfo.imgs} />
       </div>
       <h2>{MatchInfo.name}</h2>
       <div css={pokeTypes}>
-        {
-          MatchInfo.types.map((type : any) => (
-            <div key={uniqueId()} css={pokeType(type.typeNo)}>{getKoreanType(type.name)}</div>
-          ))
-        }
+        {MatchInfo.types.map((type: any) => (
+          <TypeBadge key={uuidv4()} typeNo={type.typeNo}> {getKoreanType(type.name)}</TypeBadge>
+        ))}
       </div>
       <select defaultValue="특성을 선택해주세요">
         <option value="value1">Option 1</option>
@@ -60,7 +58,7 @@ const matchCardContainer = css`
   }
 `;
 
-const imgBox = (no : number) =>css`
+const imgBox = (no: number) => css`
   width: 100%;
   height: 200px;
   background-color: ${`var(--type${no})`};
@@ -71,11 +69,11 @@ const imgBox = (no : number) =>css`
   justify-content: center;
   align-items: center;
   aspect-ratio: 1;
-  border : 1px solid var(--border);
+  border: 1px solid var(--border);
   img {
     width: 100%;
-  height: 100%;
-  object-fit: contain; /* 이미지가 비율을 유지하면서 잘리지 않도록 설정 */
+    height: 100%;
+    object-fit: contain; 
   }
 `;
 
@@ -83,23 +81,10 @@ const pokeTypes = css`
   display: flex;
   flex-direction: row;
   gap: 5px;
-  width: 100%;
+  width: 60%;
   justify-content: center;
   align-items: center;
   color: #ffffff;
-
-`;
-
-const pokeType = (no : number) => css`
-  flex: 1;
-  height: 25px;
-  background-color: ${`var(--type${no})`};
-  border : 1px solid var(--border);
-  border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 80px;
 `;
 
 export default MatchCard;

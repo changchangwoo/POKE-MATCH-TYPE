@@ -13,9 +13,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
     <Global styles={globalStyles}/>
     <QueryClientProvider client={queryClient}>
-      <React.StrictMode>
         <App />
-      </React.StrictMode>
     </QueryClientProvider>
   </BrowserRouter>
 );
