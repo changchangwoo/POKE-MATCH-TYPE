@@ -1,46 +1,45 @@
-import { css } from "@emotion/react";
-import { useState, useEffect, ChangeEvent } from "react";
+import { useState, useEffect, ChangeEvent, FormEvent } from "react";
 import { FaSearch } from "react-icons/fa";
+import pokemonNames from "../../datas/pokemonData.json";
+import {
+  searchContainer,
+  inputBox,
+  suggestionsList,
+  activeSuggestion,
+} from "./SearchStyles";
+import { SetURLSearchParams, useSearchParams } from "react-router-dom";
 
 interface PokemonNameType {
-    id: number;
-    name: string;
+  no: number;
+  name: string;
 }
 
-const Search = () => {
+interface SearchProps {
+  setSearchParams: SetURLSearchParams;
+  searchParams: URLSearchParams;
+}
+
+const Search = ({ setSearchParams, searchParams }: SearchProps) => {
+  const newSearchParams = new URLSearchParams(searchParams);
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [suggestions, setSuggestions] = useState<PokemonNameType[]>([]);
-  const [pokemonData, setPokemonData] = useState<PokemonNameType[]>([]);
-
-  useEffect(() => {
-    const fetchPokemonData = async () => {
-      try {
-        const response = await fetch("pokemonData.json"); // 여기 경로 수정
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const data = await response.json();
-        console.log(data);
-        setPokemonData(data);
-      } catch (error) {
-        console.error("Error fetching the pokemon data:", error);
-      }
-    };
-
-    fetchPokemonData();
-  }, []);
+  const [activeSuggestionIndex, setActiveSuggestionIndex] =
+    useState<number>(-1);
 
   useEffect(() => {
     if (searchTerm === "") {
       setSuggestions([]);
     } else {
-      if (!pokemonData) return;
-      const filteredSuggestions = pokemonData.filter((pokemon) =>
-        pokemon.name.includes(searchTerm)
-      );
+      if (!pokemonNames) return;
+
+      const filteredSuggestions = pokemonNames.filter((pokemon) => {
+        return pokemon.name.startsWith(searchTerm);
+      });
+
       setSuggestions(filteredSuggestions);
+      setActiveSuggestionIndex(-1);
     }
-  }, [searchTerm, pokemonData]);
+  }, [searchTerm]);
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
@@ -49,24 +48,63 @@ const Search = () => {
   const handleSuggestionClick = (suggestion: PokemonNameType) => {
     setSearchTerm(suggestion.name);
     setSuggestions([]);
+    handleSubmit();
+  };
+
+  const handleSubmit = (event?: FormEvent) => {
+    if (event) {
+      event.preventDefault();
+    }
+    if (suggestions.length > 0 && suggestions[0].name === searchTerm) {
+      console.log(suggestions[0].no);
+      newSearchParams.set("no", String(suggestions[0].no));
+      newSearchParams.set("name", String(suggestions[0].name));
+      setSearchParams(newSearchParams);
+      setSuggestions([]);
+    }
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (suggestions.length > 0) {
+      if (event.key === "ArrowDown") {
+        setActiveSuggestionIndex((prevIndex) =>
+          prevIndex === suggestions.length - 1 ? 0 : prevIndex + 1
+        );
+      } else if (event.key === "ArrowUp") {
+        setActiveSuggestionIndex((prevIndex) =>
+          prevIndex === 0 ? suggestions.length - 1 : prevIndex - 1
+        );
+      } else if (event.key === "Enter") {
+        if (
+          activeSuggestionIndex >= 0 &&
+          activeSuggestionIndex < suggestions.length
+        ) {
+          handleSuggestionClick(suggestions[activeSuggestionIndex]);
+        }
+      }
+    }
   };
 
   return (
     <div css={searchContainer}>
-      <div css={inputBox}>
+      <form css={inputBox} onSubmit={handleSubmit}>
         <FaSearch />
         <input
           value={searchTerm}
           onChange={handleInputChange}
+          onKeyDown={handleKeyDown}
           placeholder="매칭된 포켓몬을 입력해주세요"
         />
-      </div>
+      </form>
       {suggestions.length > 0 && (
         <ul css={suggestionsList}>
           {suggestions.map((suggestion, index) => (
             <li
               key={index}
               onClick={() => handleSuggestionClick(suggestion)}
+              css={
+                index === activeSuggestionIndex ? activeSuggestion : undefined
+              }
             >
               {suggestion.name}
             </li>
@@ -76,55 +114,5 @@ const Search = () => {
     </div>
   );
 };
-
-const searchContainer = css`
-  width: 100%;
-  position: relative;
-`;
-
-const inputBox = css`
-  background-color: #ffffff;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 100%;
-  height: 40px;
-  border: 1px solid var(--border);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-radius: 8px;
-
-  svg {
-    fill: grey;
-    font-size: var(--fontMedium);
-  }
-
-  input {
-    flex: 1;
-    font-size: var(--fontMedium);
-  }
-`;
-
-const suggestionsList = css`
-  position: absolute;
-  top: 60px;
-  width: 100%;
-  border: 1px solid var(--border);
-  background-color: #ffffff;
-  border-radius: 8px;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-
-  li {
-    padding: 10px;
-    cursor: pointer;
-
-    &:hover {
-      background-color: #f0f0f0;
-    }
-  }
-`;
 
 export default Search;

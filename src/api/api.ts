@@ -1,26 +1,21 @@
 import axios from "axios";
 
-interface IAPI {
-    url : string
-}
+const baseURL = "https://pokeapi.co/api/v2/";
 
-const baseURL = 'https://pokeapi.co/api/v2/'
+export const API = async (url: string) => {
+  try {
+    const response = await axios.get(baseURL + url);
+    return response.data;
+  } catch (e) {
+    console.log(e);
+  }
+};
 
-export const API = async ({url} : IAPI) => {
-    try {
-        const response = await axios.get(baseURL+url)
-        console.log(response.data)
-        return response.data
-    }
-    catch (e) {
-        console.log(e)
-    }
-}
+export const fetchDetailPokemon = async (no : string) => {
+  return API(`pokemon/${no}/`);
+};
 
-export const fetchAllPokemonList = async () => {
-    return API({url : 'pokemon-species/1'});
-}
+export const fetchDetailType = async (no : string) => {
+  return API(`type/${no}/`);
 
-export const fetchDetailPokem = async () => {
-    return API({url : 'pokemon-species?limit=10000'});
 }
