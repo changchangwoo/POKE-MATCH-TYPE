@@ -41,7 +41,6 @@ const Main = () => {
       }
     };
     fetchData();
-    console.log(matchInfo)
   }, [searchParams]);
 
   return (

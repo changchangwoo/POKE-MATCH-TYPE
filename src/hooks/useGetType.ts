@@ -1,73 +1,84 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { fetchDetailType } from "../api/api";
 import defaultTypesData from "../../src/datas/defaultTypes.json";
+import { initial } from "lodash";
 
-const typeRelations = [
-  "double_damage_from",
-  "half_damage_from",
-  "no_damage_from",
-];
-
-interface DamageGroup {
+interface IDamageData {
   no: number;
   name: string;
   damage: number;
 }
 
-export const useGetType = (searchTypes: number[], searchParams : URLSearchParams) => {
-  const [pokemonType, setPokemonType] = useState<DamageGroup[]>(defaultTypesData)
+interface IDamageRelations {
+  key : string;
+  types : [{
+    name : string;
+    url : string;
+  }]
+}
 
-  const getDetailType = async (no: string) => {
-    const response = await fetchDetailType(no);
-    const damageRelations = response.damage_relations;
-    const updatedTypes = [...pokemonType];
-    for (let relation of typeRelations) {
-      if (damageRelations[relation].length > 0) {
-        damageRelations[relation].forEach((element: any) => {
-          const typeToUpdate = updatedTypes.find(
-            (type) => type.name === element.name
-          );
-          if (typeToUpdate) {
-            switch (relation) {
-              case typeRelations[0]:
-                typeToUpdate.damage *= 2;
-                break;
-              case typeRelations[1]:
-                typeToUpdate.damage *= 0.5;
-                break;
-              case typeRelations[2]:
-                typeToUpdate.damage *= 0;
-                break;
-              default:
-                break;
-            }
-          }
-        });
-      }
+/* fetch를 반복문을 통해서 넣을수가 없다 애초에
+비동기기때문에 이렇게하면 그냥 십창난다
+그러니까 로직을 아예 다 분리를 해야한다
+mathinfo를 통해서 데이터를 패칭해오는 로직 자체를 하나 만들고
+그 로직을 지금처럼 경감 계산한 타입 배열로 만드느거 하나 만들고
+그 배열을 그룹화해서 보내는것 총 세가지가 분리되어야한다
+
+*/
+export const useGetType = (searchTypes: number[], renderTrigger: boolean) => {
+  const [pokemonType, setPokemonType] = useState<IDamageData[]>([]);
+
+  useEffect(()=>{
+    const initialTypes = JSON.parse(JSON.stringify(defaultTypesData));
+    const fetchDetail = async () => {
+      const response = await fetchDetailType(searchTypes);
+      console.log(response);
+      await getDetailType(initialTypes, response);
+      const groupTypes = await getGroupType(initialTypes)
+      console.log(initialTypes)
+      console.log(groupTypes)
     }
-    setPokemonType(updatedTypes);
-  };
+    fetchDetail();
+  }, [])
 
-  const groupTypes = (types: DamageGroup[]) => {
+  const getDetailType = async (updateTypes : IDamageData[], damageRelations : IDamageRelations[] ) => {
+    for (let relation of damageRelations) {
+      relation.types.forEach((element) => {
+         const typeToUpdate = updateTypes.find((type) => type.name === element.name);
+         if(typeToUpdate) {
+         switch(relation.key) {
+          case 'doubleDamage' :
+            typeToUpdate.damage *= 2;
+            break;
+          case 'halfDamage' :
+            typeToUpdate.damage *= 0.5;
+            break;
+          case 'noDamage' :
+            typeToUpdate.damage *= 0;
+            break;
+         }
+        }
+      });
+    }
+  }
+
+  const getGroupType = async (types: IDamageData[]) => {
     const grouped = types.reduce((acc, type) => {
       if (!acc[type.damage]) {
         acc[type.damage] = [];
       }
       acc[type.damage].push(type);
       return acc;
-    }, {} as Record<number, DamageGroup[]>);
+    }, {} as Record<number, IDamageData[]>);
 
-    return Object.keys(grouped).map(damage => ({
+    const groupedArray = Object.keys(grouped).map(damage => ({
       damage: Number(damage),
       types: grouped[Number(damage)],
     }));
-  };
-  
-  useEffect(() => {
-    searchTypes.forEach((type) => {
-      getDetailType(type.toString());
-    });    
-  }, [searchParams]);
 
-  return groupTypes(pokemonType).sort((a,b) => b.damage - a.damage);
+    return groupedArray;
+  };
+
+
+    return pokemonType;
 };

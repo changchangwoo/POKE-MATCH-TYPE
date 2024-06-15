@@ -1,0 +1,76 @@
+import { useEffect, useState } from "react";
+import { fetchDetailType } from "../api/api";
+import defaultTypesData from "../../src/datas/defaultTypes.json";
+
+export interface IDamageData {
+  no: number;
+  name: string;
+  damage: number;
+}
+
+export interface IDamageRelations {
+  key: string;
+  types: {
+    name: string;
+    url: string;
+  }[];
+}
+
+export const getDetailType = async (searchTypes: number[]) => {
+  const initialTypes: IDamageData[] = JSON.parse(JSON.stringify(defaultTypesData));
+
+  const fetchAllDetails = async () => {
+    const detailPromises = await fetchDetailType(searchTypes)
+    const detailResponses = await Promise.all(detailPromises);
+    const allDamageRelations = detailResponses.flat();
+    await getCirculType(initialTypes, allDamageRelations);
+    const groupTypes = await getGroupType(initialTypes);
+    return groupTypes;
+  };
+
+  const getCirculType = async (
+    updateTypes: IDamageData[],
+    damageRelations: IDamageRelations[]
+  ) => {
+    for (let relation of damageRelations) {
+      relation.types.forEach((element) => {
+        const typeToUpdate = updateTypes.find(
+          (type) => type.name === element.name
+        );
+        if (typeToUpdate) {
+          switch (relation.key) {
+            case "doubleDamage":
+              typeToUpdate.damage *= 2;
+              break;
+            case "halfDamage":
+              typeToUpdate.damage *= 0.5;
+              break;
+            case "noDamage":
+              typeToUpdate.damage *= 0;
+              break;
+          }
+        }
+      });
+    }
+  };
+
+  const getGroupType = async (types: IDamageData[]) => {
+    const grouped = types.reduce((acc, type) => {
+      if (!acc[type.damage]) {
+        acc[type.damage] = [];
+      }
+      acc[type.damage].push(type);
+      return acc;
+    }, {} as Record<number, IDamageData[]>);
+
+    const groupedArray = Object.keys(grouped).map((damage) => ({
+      damage: Number(damage),
+      types: grouped[Number(damage)],
+    }));
+
+    return groupedArray;
+  };
+
+  const detailTypes = await fetchAllDetails();
+  return detailTypes.sort((a,b) => b.damage - a.damage);
+};

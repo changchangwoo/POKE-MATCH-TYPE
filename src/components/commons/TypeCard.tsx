@@ -1,20 +1,33 @@
 import { css } from "@emotion/react";
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { MatchInfo as IMatchInfo } from "../../models/pokemonData";
 import { useGetType } from "../../hooks/useGetType";
 import TypeBadge from "./TypeBadge";
 import { getKoreanType } from "../../utils/getKoreanType";
 import { v4 as uuidv4 } from 'uuid';
+import { IDamageData, getDetailType } from "../../utils/getDetailType";
 
 interface MatchCardProps {
   MatchInfo: IMatchInfo;
-  searchParams : URLSearchParams;
 }
 
-const TypeCard = ({ MatchInfo, searchParams }: MatchCardProps) => {
+interface ITypeRelations {
+  damage: number; 
+  types: IDamageData[];
+}
+
+const TypeCard = ({ MatchInfo }: MatchCardProps) => {
   const typeNo = MatchInfo.types.map((type) => type.typeNo);
-  let typeRelations = useGetType(typeNo);
-  if (!typeRelations) return;
+  const [typeRelations, setTypeRelations] = useState<ITypeRelations[]>([]);
+  
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await getDetailType(typeNo);
+      setTypeRelations(result)
+    };
+    fetchData();
+  }, [MatchInfo]);
+
   if (typeRelations.length > 1) {
     return (
       <div css={typeCardContainer}>
