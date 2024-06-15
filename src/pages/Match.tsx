@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import SelectType from "../components/SelectType";
 import { Types } from "../models/pokemonData";
 import TypeCheckwithCharacter from "../components/commons/TypeCheckwithCharacter";

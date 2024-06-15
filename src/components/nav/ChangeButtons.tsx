@@ -7,7 +7,7 @@ const ChangeButtons = () => {
   const location = useLocation();
 
   return (
-    <div css={ChangeSectionContainer(location.pathname)}>
+    <div css={ChangeSectionContainer}>
       <button onClick={() => navigator('/')} className={location.pathname === '/' ? 'active' : ''}>
         포켓몬으로 비교
       </button>
@@ -18,7 +18,7 @@ const ChangeButtons = () => {
   );
 };
 
-const ChangeSectionContainer = (pathname: string) => css`
+const ChangeSectionContainer = css`
   padding-top: 20px;
   height: auto;
   display: flex;
