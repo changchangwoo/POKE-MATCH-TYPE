@@ -7,7 +7,7 @@ import {
   suggestionsList,
   activeSuggestion,
 } from "./SearchStyles";
-import { SetURLSearchParams, useSearchParams } from "react-router-dom";
+import { SetURLSearchParams } from "react-router-dom";
 
 interface PokemonNameType {
   no: number;

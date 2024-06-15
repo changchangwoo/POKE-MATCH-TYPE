@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import { MatchInfo as IMatchInfo } from "../models/pokemonData";
 import TypeCheckwithCharacter from "./commons/TypeCheckwithCharacter";
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 interface MatchCardProps {
   MatchInfo: IMatchInfo;

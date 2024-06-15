@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { Fragment, useEffect, useState } from "react";
-import { MatchInfo as IMatchInfo, Types } from "../../models/pokemonData";
+import { Types } from "../../models/pokemonData";
 import TypeBadge from "./TypeBadge";
 import { getKoreanType } from "../../utils/getKoreanType";
 import { v4 as uuidv4 } from "uuid";

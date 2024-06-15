@@ -1,7 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import React from "react";
-import { FaBlog, FaGit, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { FaCopyright, FaPencil } from "react-icons/fa6";
 
 const Footer = () => {

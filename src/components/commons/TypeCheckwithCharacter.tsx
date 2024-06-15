@@ -4,7 +4,7 @@ import { getKoreanType } from "../../utils/getKoreanType";
 import TypeBadge from "./TypeBadge";
 import { v4 as uuidv4 } from "uuid";
 import abilities from "../../datas/pokemonAbilityData.json"
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 import { useLocation } from "react-router-dom";
 
 
