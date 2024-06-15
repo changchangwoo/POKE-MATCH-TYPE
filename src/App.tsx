@@ -24,7 +24,7 @@ function App() {
 }
 const Container = css`
 width: 100vw;
-max-width: 1000px;
+max-width: 800px;
 padding: 50px 20px 20px 20px;
 display: flex;
 flex-direction: column;

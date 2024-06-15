@@ -19,5 +19,6 @@ const TypeBadgeStyle = (typeNo: number) => css`
   justify-content: center;
   align-items: center;
   color: white;
+  max-width: 180px;
 `;
 export default TypeBadge;

@@ -5,6 +5,7 @@ import TypeBadge from "./TypeBadge";
 import { v4 as uuidv4 } from "uuid";
 import abilities from "../../datas/pokemonAbilityData.json"
 import { Dispatch, SetStateAction, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 
 interface TypeCheckProps {
@@ -14,9 +15,13 @@ interface TypeCheckProps {
 }
 
 const TypeCheckwithCharacter = ({ types, selectedAbility, setSelectedAbility}: TypeCheckProps) => {
+  const location = useLocation();
+
   const handleAbilityChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = event.target.value;
     setSelectedAbility(selectedValue);
+    let currentPath = location.pathname + "/typecheck"
+    localStorage.setItem(currentPath, selectedValue);
   };
 
   return (

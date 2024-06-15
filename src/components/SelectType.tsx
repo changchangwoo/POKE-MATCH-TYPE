@@ -4,6 +4,7 @@ import defaultTypesData from "../../src/datas/defaultTypes.json";
 import { getKoreanType } from "../utils/getKoreanType";
 import { v4 as uuidv4 } from "uuid";
 import { Types } from "../models/pokemonData";
+import { useLocation } from "react-router-dom";
 
 interface SelectTypeProps {
   checkedType: Types[];

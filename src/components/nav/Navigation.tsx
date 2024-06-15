@@ -20,6 +20,7 @@ const navigationStyle = css`
   color: white;
   position: fixed;
   z-index: 300;
+  font-weight: 500;
 `;
 
 export default Navigation;

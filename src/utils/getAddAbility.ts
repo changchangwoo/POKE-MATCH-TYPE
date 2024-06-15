@@ -22,6 +22,8 @@ export const getAddAbility = async (
     case "delta_stream":
       typeCalculator.push({ type: "flying", effects: 1 });
       // 비행타입 약점이 없어지는 절댓값
+      // *****아직 못구현했삼..
+
       break;
     case "thick_fat":
       typeCalculator.push({ type: "fire", effects: 0.5 });

@@ -56,7 +56,6 @@ const Search = ({ setSearchParams, searchParams }: SearchProps) => {
       event.preventDefault();
     }
     if (suggestions.length > 0 && suggestions[0].name === searchTerm) {
-      console.log(suggestions[0].no);
       newSearchParams.set("no", String(suggestions[0].no));
       newSearchParams.set("name", String(suggestions[0].name));
       setSearchParams(newSearchParams);

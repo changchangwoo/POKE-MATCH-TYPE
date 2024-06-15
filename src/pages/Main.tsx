@@ -3,14 +3,22 @@ import Search from "../components/search/Search";
 import MatchCard from "../components/MatchCard";
 import TypeCard from "../components/commons/TypeCard";
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useLocation, useSearchParams } from "react-router-dom";
 import { fetchDetailPokemon } from "../api/api";
 import { MatchInfo as IMatchInfo } from "../models/pokemonData";
 
 const Main = () => {
+  const location = useLocation();
   const [selectedAbility, setSelectedAbility] = useState("");
   const [searchParams, setSearchParams] = useSearchParams();
   const [matchInfo, setMatchInfo] = useState<IMatchInfo>();
+
+  useEffect(()=>{
+  const getSessionMatchDatas = localStorage.getItem(location.pathname+"/matchDatas")
+  const getSessionTypeCheck = localStorage.getItem(location.pathname+"/typecheck")
+  if(getSessionMatchDatas) setSearchParams(JSON.parse(getSessionMatchDatas))
+  if(getSessionTypeCheck) setSelectedAbility(getSessionTypeCheck)
+  }, [location.pathname])
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,7 +28,7 @@ const Main = () => {
         try {
           const detailData = await fetchDetailPokemon(no);
           if (detailData && detailData.types) {
-            setMatchInfo({
+            const matchDatas = {
               name,
               types: detailData.types.map((typeInfo: any) => {
                 if (typeInfo.type.url) {
@@ -36,7 +44,9 @@ const Main = () => {
               }),
               no: Number(no),
               imgs: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${no}.png`,
-            });
+            }
+            localStorage.setItem(location.pathname+"/matchDatas", JSON.stringify(matchDatas));
+            setMatchInfo(matchDatas);
           }
         } catch (error) {
           console.error("Failed to fetch Pokemon details:", error);

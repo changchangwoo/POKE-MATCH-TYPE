@@ -49,7 +49,7 @@ const FooterContainer = css`
   }
 
   h3 {
-    font-size: 12px;
+    font-size: 14px;
     color: black;
   }
 `;
