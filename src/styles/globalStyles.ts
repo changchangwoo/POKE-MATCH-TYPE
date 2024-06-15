@@ -21,7 +21,7 @@ export const globalStyles = css`
     --type12: #66a945; /* grass */
     --type13: #fbb917; /* electric */
     --type14: #dd6b7b; /* psychic */
-    --type15: #6dc83b; /* ice */
+    --type15: #42D8FF; /* ice */
     --type16: #535ca8; /* dragon */
     --type17: #4c4948; /* dark */
     --type18: #dab4d4; /* fairy */

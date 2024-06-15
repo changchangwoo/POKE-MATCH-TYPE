@@ -16,7 +16,5 @@
     { "no": 15, "name": "ice", "damage": 1 },
     { "no": 16, "name": "dragon", "damage": 1 },
     { "no": 17, "name": "dark", "damage": 1 },
-    { "no": 18, "name": "fairy", "damage": 1 },
-    { "no": 19, "name": "unknown", "damage": 1 },
-    { "no": 20, "name": "shadow", "damage": 1 }
+    { "no": 18, "name": "fairy", "damage": 1 }
 ]

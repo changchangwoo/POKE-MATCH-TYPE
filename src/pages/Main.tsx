@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import Search from "../components/search/Search";
-import MatchCard from "../components/commons/MatchCard";
+import MatchCard from "../components/MatchCard";
 import TypeCard from "../components/commons/TypeCard";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
@@ -10,7 +10,6 @@ import { MatchInfo as IMatchInfo } from "../models/pokemonData";
 const Main = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [matchInfo, setMatchInfo] = useState<IMatchInfo>();
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,7 +25,10 @@ const Main = () => {
                 if (typeInfo.type.url) {
                   const match = typeInfo.type.url.match(/\/(\d+)\/$/);
                   const typeNo = match ? match[1] : null;
-                  return { typeNo: typeNo ? Number(typeNo) : null, name: typeInfo.type.name };
+                  return {
+                    typeNo: typeNo ? Number(typeNo) : null,
+                    name: typeInfo.type.name,
+                  };
                 } else {
                   return { typeNo: null, name: typeInfo.type.name };
                 }
@@ -44,11 +46,13 @@ const Main = () => {
   }, [searchParams]);
 
   return (
-    <div css={MainContainer}>
+    <>
       <Search searchParams={searchParams} setSearchParams={setSearchParams} />
-      {matchInfo && <MatchCard MatchInfo={matchInfo} />}
-      {matchInfo && <TypeCard MatchInfo={matchInfo} />}
-    </div>
+      <div css={MainContainer}>
+        {matchInfo && <MatchCard MatchInfo={matchInfo} />}
+        {matchInfo && <TypeCard MatchTypes={matchInfo.types} />}
+      </div>
+    </>
   );
 };
 

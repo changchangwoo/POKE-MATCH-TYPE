@@ -2,10 +2,12 @@ import { css } from "@emotion/react";
 
 export const searchContainer = css`
   width: 100%;
+  height: auto;
   position: relative;
 `;
 
 export const inputBox = css`
+position: relative;
   background-color: #ffffff;
   padding: 10px;
   box-sizing: border-box;
@@ -30,15 +32,15 @@ export const inputBox = css`
 `;
 
 export const suggestionsList = css`
-  position: absolute;
   top: 60px;
+  z-index: 100;
   width: 100%;
   border: 1px solid var(--border);
   background-color: #ffffff;
   border-radius: 8px;
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin-top: 10px;
   overflow-y: hidden;
   &::-webkit-scrollbar {
     display: none;

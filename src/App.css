@@ -1,5 +1,5 @@
 /* 디폴트 스타일 */
-#root {
+html, #root {
     font-family: 'NeoDunggeunmo';
     background-color: var(--primary);
     display: flex;

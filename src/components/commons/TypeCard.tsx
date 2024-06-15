@@ -1,32 +1,37 @@
 import { css } from "@emotion/react";
-import React, { Fragment, useEffect, useState } from "react";
-import { MatchInfo as IMatchInfo } from "../../models/pokemonData";
-import { useGetType } from "../../hooks/useGetType";
+import { Fragment, useEffect, useState } from "react";
+import { MatchInfo as IMatchInfo, Types } from "../../models/pokemonData";
 import TypeBadge from "./TypeBadge";
 import { getKoreanType } from "../../utils/getKoreanType";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 import { IDamageData, getDetailType } from "../../utils/getDetailType";
+import { getAddAbility } from "../../utils/getAddAbility";
 
 interface MatchCardProps {
-  MatchInfo: IMatchInfo;
+  MatchTypes: Types[];
+  selectedAbility? : string;
 }
 
-interface ITypeRelations {
-  damage: number; 
+export interface ITypeRelations {
+  damage: number;
   types: IDamageData[];
 }
 
-const TypeCard = ({ MatchInfo }: MatchCardProps) => {
-  const typeNo = MatchInfo.types.map((type) => type.typeNo);
+const TypeCard = ({ MatchTypes, selectedAbility }: MatchCardProps) => {
+  const typeNo = MatchTypes.map((type) => type.typeNo);
   const [typeRelations, setTypeRelations] = useState<ITypeRelations[]>([]);
-  
+
   useEffect(() => {
     const fetchData = async () => {
-      const result = await getDetailType(typeNo);
-      setTypeRelations(result)
+      let result = await getDetailType(typeNo);
+      if(selectedAbility && selectedAbility !== "") {
+        console.log("특성 존재", selectedAbility)
+        getAddAbility(result);
+      }
+      setTypeRelations(result);
     };
     fetchData();
-  }, [MatchInfo]);
+  }, [MatchTypes, selectedAbility]);
 
   if (typeRelations.length > 1) {
     return (
@@ -61,7 +66,7 @@ const typeCardContainer = css`
 `;
 
 const title = css`
-margin-top: 10px;
+  margin-top: 10px;
 `;
 const typeSection = css`
   display: grid;

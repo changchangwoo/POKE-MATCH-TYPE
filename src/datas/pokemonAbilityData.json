@@ -1,0 +1,23 @@
+[
+  { "value": "", "label": "없음" },
+  { "value": "dry_skin", "label": "건조피부" },
+  { "value": "heatproof", "label": "내열" },
+  { "value": "well_baked_body", "label": "노릇노릇바디" },
+  { "value": "delta_stream", "label": "델타스트림" },
+  { "value": "thick_fat", "label": "두꺼운지방" },
+  { "value": "storm_drain", "label": "마중물" },
+  { "value": "fluffy", "label": "복슬복슬" },
+  { "value": "levitate", "label": "부유" },
+  { "value": "wonder_guard", "label": "불가사의부적" },
+  { "value": "water_bubble", "label": "수포" },
+  { "value": "water_absorb", "label": "저수" },
+  { "value": "motor_drive", "label": "전기엔진" },
+  { "value": "purifying_salt", "label": "정화의소금" },
+  { "value": "volt_absorb", "label": "축전" },
+  { "value": "flash_fire", "label": "타오르는불꽃" },
+  { "value": "tera_shell", "label": "테라셸" },
+  { "value": "lightning_rod", "label": "피뢰침" },
+  { "value": "earth_eater", "label": "흙먹기" },
+  { "value": "sap_sipper", "label": "흡수" },
+  { "value": "filter", "label": "Filter" }
+]
