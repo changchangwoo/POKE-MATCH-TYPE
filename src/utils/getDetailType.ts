@@ -17,15 +17,17 @@ export interface IDamageRelations {
 }
 
 export const getDetailType = async (searchTypes: number[]) => {
-  const initialTypes: IDamageData[] = JSON.parse(JSON.stringify(defaultTypesData));
+  const initialTypes: IDamageData[] = JSON.parse(
+    JSON.stringify(defaultTypesData)
+  );
 
   const fetchAllDetails = async () => {
-    const detailPromises = await fetchDetailType(searchTypes)
+    const detailPromises = await fetchDetailType(searchTypes);
     const detailResponses = await Promise.all(detailPromises);
     const allDamageRelations = detailResponses.flat();
     await getCirculType(initialTypes, allDamageRelations);
-    const groupTypes = await getGroupType(initialTypes);
-    return groupTypes;
+    // const groupTypes = await getGroupType(initialTypes);
+    return initialTypes;
   };
 
   const getCirculType = async (
@@ -53,24 +55,23 @@ export const getDetailType = async (searchTypes: number[]) => {
       });
     }
   };
-
-  const getGroupType = async (types: IDamageData[]) => {
-    const grouped = types.reduce((acc, type) => {
-      if (!acc[type.damage]) {
-        acc[type.damage] = [];
-      }
-      acc[type.damage].push(type);
-      return acc;
-    }, {} as Record<number, IDamageData[]>);
-
-    const groupedArray = Object.keys(grouped).map((damage) => ({
-      damage: Number(damage),
-      types: grouped[Number(damage)],
-    }));
-
-    return groupedArray;
-  };
-
   const detailTypes = await fetchAllDetails();
-  return detailTypes.sort((a,b) => b.damage - a.damage);
+  return detailTypes;
+};
+
+export const getGroupType = async (types: IDamageData[]) => {
+  const grouped = types.reduce((acc, type) => {
+    if (!acc[type.damage]) {
+      acc[type.damage] = [];
+    }
+    acc[type.damage].push(type);
+    return acc;
+  }, {} as Record<number, IDamageData[]>);
+
+  const groupedArray = Object.keys(grouped).map((damage) => ({
+    damage: Number(damage),
+    types: grouped[Number(damage)],
+  }));
+
+  return groupedArray.sort((a, b) => b.damage - a.damage);
 };

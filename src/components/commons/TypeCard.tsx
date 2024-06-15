@@ -4,7 +4,7 @@ import { MatchInfo as IMatchInfo, Types } from "../../models/pokemonData";
 import TypeBadge from "./TypeBadge";
 import { getKoreanType } from "../../utils/getKoreanType";
 import { v4 as uuidv4 } from "uuid";
-import { IDamageData, getDetailType } from "../../utils/getDetailType";
+import { IDamageData, getDetailType, getGroupType } from "../../utils/getDetailType";
 import { getAddAbility } from "../../utils/getAddAbility";
 
 interface MatchCardProps {
@@ -25,10 +25,10 @@ const TypeCard = ({ MatchTypes, selectedAbility }: MatchCardProps) => {
     const fetchData = async () => {
       let result = await getDetailType(typeNo);
       if(selectedAbility && selectedAbility !== "") {
-        console.log("특성 존재", selectedAbility)
-        getAddAbility(result);
+        getAddAbility(result, selectedAbility);
       }
-      setTypeRelations(result);
+      let groupResult = await getGroupType(result);
+      setTypeRelations(groupResult);
     };
     fetchData();
   }, [MatchTypes, selectedAbility]);

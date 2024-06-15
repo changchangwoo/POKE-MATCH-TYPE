@@ -8,6 +8,7 @@ import { fetchDetailPokemon } from "../api/api";
 import { MatchInfo as IMatchInfo } from "../models/pokemonData";
 
 const Main = () => {
+  const [selectedAbility, setSelectedAbility] = useState("");
   const [searchParams, setSearchParams] = useSearchParams();
   const [matchInfo, setMatchInfo] = useState<IMatchInfo>();
 
@@ -49,8 +50,8 @@ const Main = () => {
     <>
       <Search searchParams={searchParams} setSearchParams={setSearchParams} />
       <div css={MainContainer}>
-        {matchInfo && <MatchCard MatchInfo={matchInfo} />}
-        {matchInfo && <TypeCard MatchTypes={matchInfo.types} />}
+        {matchInfo && <MatchCard MatchInfo={matchInfo} selectedAbility={selectedAbility} setSelectedAbility={setSelectedAbility}/>}
+        {matchInfo && <TypeCard MatchTypes={matchInfo.types} selectedAbility={selectedAbility}/>}
       </div>
     </>
   );

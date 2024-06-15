@@ -4,7 +4,7 @@ import React from "react";
 const Navigation = () => {
   return (
     <>
-      <div css={navigationStyle}>POKE MATCH TYPE</div>
+      <div css={navigationStyle}>포켓몬 약점 계산기</div>
     </>
   );
 };

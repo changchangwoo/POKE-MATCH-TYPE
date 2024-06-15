@@ -1,14 +1,15 @@
 import { css } from "@emotion/react";
 import { MatchInfo as IMatchInfo } from "../models/pokemonData";
 import TypeCheckwithCharacter from "./commons/TypeCheckwithCharacter";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 
 interface MatchCardProps {
   MatchInfo: IMatchInfo;
+  selectedAbility : string;
+  setSelectedAbility : Dispatch<SetStateAction<string>>
 }
 
-const MatchCard = ({ MatchInfo }: MatchCardProps) => {
-  const [selectedAbility, setSelectedAbility] = useState("");
+const MatchCard = ({ MatchInfo, selectedAbility, setSelectedAbility }: MatchCardProps) => {
 
   return (
     <div css={matchCardContainer}>

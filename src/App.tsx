@@ -5,6 +5,7 @@ import Match from './pages/Match'
 import { css } from '@emotion/react'
 import Navigation from './components/nav/Navigation'
 import ChangeButtons from './components/nav/ChangeButtons'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path='/' element={<Main />} />
       <Route path="/type" element={<Match />}/>
     </Routes>
+    <Footer />
     </div>
     </>
   )
@@ -28,6 +30,5 @@ display: flex;
 flex-direction: column;
 gap: 20px;
 box-sizing: border-box;
-  
 `
 export default App

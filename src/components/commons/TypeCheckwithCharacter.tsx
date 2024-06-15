@@ -61,11 +61,20 @@ const TypeCheckwithCharacterContainer = css`
     box-sizing: border-box;
     font-size: var(--fontMedium);
 
+    select:hover {
+            background-color: var(--primary); /* 원하는 색상으로 변경 */
+        }
+
   
   option {
     text-align: center;
     font-size: var(--fontMedium);
   }
+
+  
+  option:hover {
+            background-color: var(--primary); /* 원하는 색상으로 변경 */
+        }
   }
 `;
 
