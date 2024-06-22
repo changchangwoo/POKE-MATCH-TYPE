@@ -1,4 +1,3 @@
-import { fetchDetailType } from "../api/api";
 import defaultTypesData from "../../src/datas/defaultTypes.json";
 
 export interface IDamageData {
