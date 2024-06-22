@@ -11,14 +11,12 @@ const Match = () => {
   const [selectedAbility, setSelectedAbility] = useState("");
   const location = useLocation();
 
-  // 데이터를 로컬 저장소에 저장하는 useEffect
   useEffect(() => {
     if (checkedType.length > 0) {
       localStorage.setItem(location.pathname + "/matchDatas", JSON.stringify(checkedType));
     }
   }, [checkedType, location.pathname]);
 
-  // 로컬 저장소에서 데이터를 불러오는 useEffect
   useEffect(() => {
     const getSessionCheckedDatas = localStorage.getItem(location.pathname + "/matchDatas");
     const getSessionTypeCheck = localStorage.getItem(location.pathname + "/typecheck");

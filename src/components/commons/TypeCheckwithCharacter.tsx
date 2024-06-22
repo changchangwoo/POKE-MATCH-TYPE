@@ -67,7 +67,7 @@ const TypeCheckwithCharacterContainer = css`
     font-size: var(--fontMedium);
 
     select:hover {
-            background-color: var(--primary); /* 원하는 색상으로 변경 */
+            background-color: var(--primary);
         }
 
   
@@ -78,7 +78,7 @@ const TypeCheckwithCharacterContainer = css`
 
   
   option:hover {
-            background-color: var(--primary); /* 원하는 색상으로 변경 */
+            background-color: var(--primary);
         }
   }
 `;

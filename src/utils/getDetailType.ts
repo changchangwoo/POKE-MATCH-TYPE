@@ -15,17 +15,16 @@ export interface IDamageRelations {
   }[];
 }
 
-export const getDetailType = async (searchTypes: number[]) => {
+export const getDetailType = async (typeData : IDamageRelations[]) => {
+  if(typeData.length === 0) console.log('hello')
   const initialTypes: IDamageData[] = JSON.parse(
     JSON.stringify(defaultTypesData)
   );
 
   const fetchAllDetails = async () => {
-    const detailPromises = await fetchDetailType(searchTypes);
-    const detailResponses = await Promise.all(detailPromises);
+    const detailResponses = await Promise.all(typeData);
     const allDamageRelations = detailResponses.flat();
     await getCirculType(initialTypes, allDamageRelations);
-    // const groupTypes = await getGroupType(initialTypes);
     return initialTypes;
   };
 

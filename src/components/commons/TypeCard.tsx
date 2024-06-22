@@ -6,10 +6,11 @@ import { getKoreanType } from "../../utils/getKoreanType";
 import { v4 as uuidv4 } from "uuid";
 import { IDamageData, getDetailType, getGroupType } from "../../utils/getDetailType";
 import { getAddAbility } from "../../utils/getAddAbility";
+import useFetchDetailType from "../../hooks/queries/useFetchDetailType";
 
 interface MatchCardProps {
   MatchTypes: Types[];
-  selectedAbility? : string;
+  selectedAbility?: string;
 }
 
 export interface ITypeRelations {
@@ -20,18 +21,26 @@ export interface ITypeRelations {
 const TypeCard = ({ MatchTypes, selectedAbility }: MatchCardProps) => {
   const typeNo = MatchTypes.map((type) => type.typeNo);
   const [typeRelations, setTypeRelations] = useState<ITypeRelations[]>([]);
+  const { data: typeData, isLoading, error } = useFetchDetailType(typeNo);
 
   useEffect(() => {
+    if (!typeData || isLoading || error) return;
+
     const fetchData = async () => {
-      let result = await getDetailType(typeNo);
-      if(selectedAbility && selectedAbility !== "") {
+      let result = await getDetailType(typeData);
+      if (selectedAbility && selectedAbility !== "") {
         getAddAbility(result, selectedAbility);
       }
       let groupResult = await getGroupType(result);
       setTypeRelations(groupResult);
+      console.log(groupResult)
     };
     fetchData();
-  }, [MatchTypes, selectedAbility]);
+  }, [MatchTypes, selectedAbility, typeData, isLoading, error]);
+
+  if (isLoading) return <div>로딩 중...</div>;
+  if (error) return <div>에러가 발생했습니다: {error.message}</div>;
+  if (!typeRelations.length) return <div>타입 데이터를 찾을 수 없습니다.</div>;
 
   if (typeRelations.length > 1) {
     return (

@@ -8,17 +8,17 @@ html, #root {
 }
 
 html {
-    overflow-y: scroll; /* 세로 스크롤바 항상 표시 */
-    scrollbar-width: thin; /* Firefox 용 스크롤바 너비 설정 */
+    overflow-y: scroll;
+    scrollbar-width: thin;
     &::-webkit-scrollbar {
-      width: 12px; /* Chrome, Safari 용 스크롤바 너비 설정 */
+      width: 12px;
     }
     &::-webkit-scrollbar-thumb {
-      background-color: #888; /* 스크롤바 색상 */
-      border-radius: 6px; /* 스크롤바 모서리 둥글게 */
+      background-color: #888;
+      border-radius: 6px; 
     }
     &::-webkit-scrollbar-track {
-      background-color: #f1f1f1; /* 스크롤바 트랙 색상 */
+      background-color: #f1f1f1; 
     }
     
 }
