@@ -21,10 +21,10 @@ export interface ITypeRelations {
 const TypeCard = ({ MatchTypes, selectedAbility }: MatchCardProps) => {
   const typeNo = MatchTypes.map((type) => type.typeNo);
   const [typeRelations, setTypeRelations] = useState<ITypeRelations[]>([]);
-  const { data: typeData, isLoading, error } = useFetchDetailType(typeNo);
+  const { data: typeData, isLoading } = useFetchDetailType(typeNo);
 
   useEffect(() => {
-    if (!typeData || isLoading || error) return;
+    if (!typeData || isLoading) return;
 
     const fetchData = async () => {
       let result = await getDetailType(typeData);
@@ -36,11 +36,9 @@ const TypeCard = ({ MatchTypes, selectedAbility }: MatchCardProps) => {
       console.log(groupResult)
     };
     fetchData();
-  }, [MatchTypes, selectedAbility, typeData, isLoading, error]);
+  }, [MatchTypes, selectedAbility, typeData, isLoading]);
 
   if (isLoading) return <div>로딩 중...</div>;
-  if (error) return <div>에러가 발생했습니다: {error.message}</div>;
-  if (!typeRelations.length) return <div>타입 데이터를 찾을 수 없습니다.</div>;
 
   if (typeRelations.length > 1) {
     return (
