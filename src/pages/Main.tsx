@@ -24,7 +24,7 @@ const Main = () => {
   }, [location.pathname]);
 
   if(detailDataLoading || speciesDataLoading) return null;
-  if(detailDataError || speciesDataError) return null;
+  if(detailDataError) return null;
 
 
   return (

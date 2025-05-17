@@ -34,13 +34,13 @@ const SelectType = ({ checkedType, setCheckedType }: SelectTypeProps) => {
             (checked) => checked.typeNo === type.no
           );
           return (
-            <div
+            <button
               css={item(isChecked ? type.no : undefined)}
               onClick={() => handleSelect(type)}
               key={uuidv4()}
             >
               {getKoreanType(type.name)}
-            </div>
+            </button>
           );
         })}
       </div>

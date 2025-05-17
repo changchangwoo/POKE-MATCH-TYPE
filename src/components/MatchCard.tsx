@@ -3,9 +3,11 @@ import { MatchInfo as IMatchInfo } from "../models/pokemonData";
 import { Dispatch, SetStateAction } from "react";
 import { SetURLSearchParams } from "react-router-dom";
 import TypeBadge from "./commons/TypeBadge";
-import { v4 as uuidv4 } from "uuid";
 import { getKoreanType } from "../utils/getKoreanType";
 import SelectAbility from "./commons/SelectAbility";
+import { v4 as uuidv4 } from "uuid";
+import SpeciesButtons from "./SpeciesButtons";
+
 
 
 interface MatchCardProps {
@@ -18,7 +20,6 @@ interface MatchCardProps {
 } 
 
 const MatchCard = ({ MatchInfo, selectedAbility, speciesData,  setSelectedAbility, setSearchParams}: MatchCardProps) => {
-  console.log(speciesData.varieties)
   return (
     <div css={matchCardContainer}>
       <h1>매치 포켓몬</h1>
@@ -33,6 +34,9 @@ const MatchCard = ({ MatchInfo, selectedAbility, speciesData,  setSelectedAbilit
           </TypeBadge>
         ))}
       </div>
+      {
+        speciesData && <SpeciesButtons speciesData={speciesData} setSearchParams={setSearchParams}/>
+      }
       <SelectAbility
         selectedAbility={selectedAbility}
         setSelectedAbility={setSelectedAbility}
@@ -84,5 +88,7 @@ const pokeTypes = css`
   color: #ffffff;
   margin: auto;
 `;
+
+
 
 export default MatchCard;

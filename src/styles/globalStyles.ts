@@ -3,7 +3,8 @@ import { css } from "@emotion/react";
 export const globalStyles = css`
   :root {
     /* 컬러 */
-    --point: #eb9191;
+    /* --point: #eb9191; */
+    --point: grey;
     --primary: #f8f9fa;
     --border: #d9d9d9;
     /* 타입 */

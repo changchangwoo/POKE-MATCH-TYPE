@@ -7,7 +7,9 @@ export const API = async (url: string) => {
     const response = await axios.get(baseURL + url);
     return response.data;
   } catch (e) {
-    console.log(e);
+    if(axios.isAxiosError(e) && e.response?.status === 404) {
+      return null;
+    }
   }
 };
 

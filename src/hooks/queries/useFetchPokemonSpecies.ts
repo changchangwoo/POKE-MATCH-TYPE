@@ -4,7 +4,7 @@ import { fetchPokemonSpecies } from "../../api/api";
 const useFetchPokemonSpecies = (no: string) => {
   return useQuery({
     queryKey: ["pokemonSpecies", no],
-    queryFn: () => fetchPokemonSpecies(no),
+    queryFn: () => fetchPokemonSpecies(no) || null,
     enabled: !!no,
   });
 };
