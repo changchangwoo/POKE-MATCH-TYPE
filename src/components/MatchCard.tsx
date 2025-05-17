@@ -1,16 +1,24 @@
 import { css } from "@emotion/react";
 import { MatchInfo as IMatchInfo } from "../models/pokemonData";
-import TypeCheckwithCharacter from "./commons/TypeCheckwithCharacter";
 import { Dispatch, SetStateAction } from "react";
+import { SetURLSearchParams } from "react-router-dom";
+import TypeBadge from "./commons/TypeBadge";
+import { v4 as uuidv4 } from "uuid";
+import { getKoreanType } from "../utils/getKoreanType";
+import SelectAbility from "./commons/SelectAbility";
+
 
 interface MatchCardProps {
   MatchInfo: IMatchInfo;
   selectedAbility : string;
+  speciesData : any;
   setSelectedAbility : Dispatch<SetStateAction<string>>
-}
+  setSearchParams: SetURLSearchParams;
 
-const MatchCard = ({ MatchInfo, selectedAbility, setSelectedAbility }: MatchCardProps) => {
+} 
 
+const MatchCard = ({ MatchInfo, selectedAbility, speciesData,  setSelectedAbility, setSearchParams}: MatchCardProps) => {
+  console.log(speciesData.varieties)
   return (
     <div css={matchCardContainer}>
       <h1>매치 포켓몬</h1>
@@ -18,8 +26,14 @@ const MatchCard = ({ MatchInfo, selectedAbility, setSelectedAbility }: MatchCard
         <img src={MatchInfo.imgs} />
       </div>
       <h2>{MatchInfo.name}</h2>
-      <TypeCheckwithCharacter
-        types={MatchInfo.types}
+      <div css={pokeTypes}>
+        {MatchInfo.types.map((type) => (
+          <TypeBadge key={uuidv4()} typeNo={type.typeNo}>
+            {getKoreanType(type.name)}
+          </TypeBadge>
+        ))}
+      </div>
+      <SelectAbility
         selectedAbility={selectedAbility}
         setSelectedAbility={setSelectedAbility}
       />
@@ -58,6 +72,17 @@ const imgBox = (no: number) => css`
     height: 100%;
     object-fit: contain;
   }
+`;
+
+const pokeTypes = css`
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  margin: auto;
 `;
 
 export default MatchCard;

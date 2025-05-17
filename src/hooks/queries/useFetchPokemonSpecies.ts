@@ -1,12 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchPokemonSpecies } from "../../api/api";
 
-const useFetchPokemonSpacies = (no: string) => {
+const useFetchPokemonSpecies = (no: string) => {
   return useQuery({
-    queryKey: ["pokemonSpacies", no],
+    queryKey: ["pokemonSpecies", no],
     queryFn: () => fetchPokemonSpecies(no),
     enabled: !!no,
   });
 };
 
-export default useFetchPokemonSpacies;
+export default useFetchPokemonSpecies;

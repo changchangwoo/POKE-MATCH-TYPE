@@ -2,9 +2,9 @@ import { css } from "@emotion/react";
 import { useEffect, useState } from "react";
 import SelectType from "../components/SelectType";
 import { Types } from "../models/pokemonData";
-import TypeCheckwithCharacter from "../components/commons/TypeCheckwithCharacter";
 import TypeCard from "../components/commons/TypeCard";
 import { useLocation } from "react-router-dom";
+import SelectAbility from "../components/commons/SelectAbility";
 
 const Match = () => {
   const [checkedType, setCheckedType] = useState<Types[]>([]);
@@ -36,8 +36,7 @@ const Match = () => {
   return (
     <div css={matchContainer}>
       <SelectType checkedType={checkedType} setCheckedType={setCheckedType} />
-      <TypeCheckwithCharacter
-        types={checkedType}
+      <SelectAbility
         selectedAbility={selectedAbility}
         setSelectedAbility={setSelectedAbility}
       />

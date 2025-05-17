@@ -1,7 +1,4 @@
-import { Types } from "../../models/pokemonData";
 import { css } from "@emotion/react";
-import { getKoreanType } from "../../utils/getKoreanType";
-import TypeBadge from "./TypeBadge";
 import { v4 as uuidv4 } from "uuid";
 import abilities from "../../datas/pokemonAbilityData.json"
 import { Dispatch, SetStateAction } from "react";
@@ -9,12 +6,11 @@ import { useLocation } from "react-router-dom";
 
 
 interface TypeCheckProps {
-  types: Types[];
   selectedAbility : string;
   setSelectedAbility : Dispatch<SetStateAction<string>>
 }
 
-const TypeCheckwithCharacter = ({ types, selectedAbility, setSelectedAbility}: TypeCheckProps) => {
+const SelectAbility = ({ selectedAbility, setSelectedAbility}: TypeCheckProps) => {
   const location = useLocation();
 
   const handleAbilityChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -25,14 +21,8 @@ const TypeCheckwithCharacter = ({ types, selectedAbility, setSelectedAbility}: T
   };
 
   return (
-    <div css={TypeCheckwithCharacterContainer}>
-      <div css={pokeTypes}>
-        {types.map((type) => (
-          <TypeBadge key={uuidv4()} typeNo={type.typeNo}>
-            {getKoreanType(type.name)}
-          </TypeBadge>
-        ))}
-      </div>
+    <div css={SelectAbilityContainer}>
+
       <select
         value={selectedAbility}
         onChange={handleAbilityChange}
@@ -47,7 +37,7 @@ const TypeCheckwithCharacter = ({ types, selectedAbility, setSelectedAbility}: T
   );
 };
 
-const TypeCheckwithCharacterContainer = css`
+const SelectAbilityContainer = css`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -83,15 +73,6 @@ const TypeCheckwithCharacterContainer = css`
   }
 `;
 
-const pokeTypes = css`
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-  width: 60%;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  margin: auto;
-`;
 
-export default TypeCheckwithCharacter;
+
+export default SelectAbility;
