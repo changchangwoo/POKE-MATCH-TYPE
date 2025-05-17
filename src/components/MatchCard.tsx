@@ -24,7 +24,7 @@ const MatchCard = ({ MatchInfo, selectedAbility, speciesData,  setSelectedAbilit
     <div css={matchCardContainer}>
       <h1>매치 포켓몬</h1>
       <div css={imgBox(MatchInfo.types[0].typeNo)}>
-        <img src={MatchInfo.imgs} />
+        <img src={MatchInfo.imgs} loading="lazy" alt={`Pokemon ${MatchInfo.no}`}/>
       </div>
       <h2>{MatchInfo.name}</h2>
       <div css={pokeTypes}>
