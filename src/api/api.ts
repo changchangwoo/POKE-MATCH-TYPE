@@ -15,6 +15,10 @@ export const fetchDetailPokemon = async (no: string) => {
   return API(`pokemon/${no}/`);
 };
 
+export const fetchPokemonSpecies = async (no: string) => {
+  return API(`pokemon-species/${no}/`);
+}
+
 export const fetchDetailType = async (numbers: number[]) => {
   const damageRelations = [];
   for (let no of numbers) {

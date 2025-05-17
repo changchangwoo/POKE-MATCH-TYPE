@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { useLocation, useSearchParams } from "react-router-dom";
 import { MatchInfo as IMatchInfo } from "../models/pokemonData";
 import useFetchDetailPokemon from "../hooks/queries/useFetchDetailPokemon";
+import useFetchPokemonSpacies from "../hooks/queries/useFetchPokemonSpacies";
 
 const Main = () => {
   const location = useLocation();
@@ -15,6 +16,7 @@ const Main = () => {
   const name = searchParams.get("name");
   const no = searchParams.get("no");
   const { data: detailData } = useFetchDetailPokemon(no || "");
+  const {data: spaciesData} = useFetchPokemonSpacies(no || "");
 
   useEffect(() => {
     const getSessionMatchDatas = localStorage.getItem(location.pathname + "/matchDatas");
@@ -25,9 +27,10 @@ const Main = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      if (no && name && detailData) {
+      if (no && name && detailData && spaciesData) {
         try {
-          console.log(detailData);
+          console.log("디테일데이터", detailData);
+          console.log("종류데이터", spaciesData.varieties)
           if (detailData && detailData.types) {
             const matchDatas = {
               name,
