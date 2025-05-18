@@ -23,6 +23,7 @@ const Main = () => {
     if (getSessionTypeCheck) setSelectedAbility(getSessionTypeCheck);
   }, [location.pathname]);
 
+
   if(detailDataLoading || speciesDataLoading) return null;
   if(detailDataError) return null;
 

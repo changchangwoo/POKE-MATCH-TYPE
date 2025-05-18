@@ -1,7 +1,7 @@
-import { getSpeciesDetail } from '../utils/getSpeciesDetail';
 import { SetURLSearchParams } from 'react-router-dom';
 import { css } from '@emotion/react';
 import { useState } from 'react';
+import { getSpeciesTranslate } from '../utils/getSpeciesTranslate';
 
 interface SpeciesButtonsProps {
   speciesData: any;
@@ -26,7 +26,7 @@ const SpeciesButtons = ({ speciesData, setSearchParams }: SpeciesButtonsProps) =
       <h1>종류</h1>
       <div css={speciesTypes}>
         {speciesData.varieties.map((species: any, idx: number) => {
-          const label = getSpeciesDetail(species.pokemon.name);
+          const label = getSpeciesTranslate(species.pokemon.name);
           if (!label) return null;
 
           return (
