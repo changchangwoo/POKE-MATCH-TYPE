@@ -13,17 +13,18 @@ import SpeciesButtons from "./SpeciesButtons";
 interface MatchCardProps {
   MatchInfo: IMatchInfo;
   selectedAbility : string;
-  speciesData : any;
+  varietiesData : any;
+  varietiesIdx : string | null;
   setSelectedAbility : Dispatch<SetStateAction<string>>
   setSearchParams: SetURLSearchParams;
 
 } 
 
-const MatchCard = ({ MatchInfo, selectedAbility, speciesData,  setSelectedAbility, setSearchParams}: MatchCardProps) => {
+const MatchCard = ({ MatchInfo, selectedAbility, varietiesData, varietiesIdx,  setSelectedAbility, setSearchParams}: MatchCardProps) => {
   return (
     <div css={matchCardContainer}>
       <h1>매치 포켓몬</h1>
-      <div css={imgBox(MatchInfo.types[0].typeNo)}>
+      <div css={imgBox(MatchInfo.types[0].typeNo)}> 
         <img src={MatchInfo.imgs} loading="lazy" alt={`Pokemon ${MatchInfo.no}`}/>
       </div>
       <h2>{MatchInfo.name}</h2>
@@ -35,7 +36,9 @@ const MatchCard = ({ MatchInfo, selectedAbility, speciesData,  setSelectedAbilit
         ))}
       </div>
       {
-        speciesData && <SpeciesButtons speciesData={speciesData} setSearchParams={setSearchParams}/>
+        varietiesData && <SpeciesButtons varietiesData={varietiesData} setSearchParams={setSearchParams}
+        name={MatchInfo.name}
+        varietiesIdx={varietiesIdx}/>
       }
       <SelectAbility
         selectedAbility={selectedAbility}

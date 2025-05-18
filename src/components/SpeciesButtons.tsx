@@ -4,28 +4,31 @@ import { useState } from 'react';
 import { getSpeciesTranslate } from '../utils/getSpeciesTranslate';
 
 interface SpeciesButtonsProps {
-  speciesData: any;
+  varietiesData: any;
+  varietiesIdx: string | null;
+  name : string;
   setSearchParams: SetURLSearchParams;
 }
 
-const SpeciesButtons = ({ speciesData, setSearchParams }: SpeciesButtonsProps) => {
-  const [clickedBtn, setClickedBtn] = useState<number | null>(null);
+const SpeciesButtons = ({ varietiesData, varietiesIdx, name, setSearchParams }: SpeciesButtonsProps) => {
+  const [clickedBtn, setClickedBtn] = useState<number | null>(Number(varietiesIdx));
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const btnIdx = e.currentTarget.dataset.idx;
     const urlIdx = e.currentTarget.dataset.url?.match(/\/(\d+)\/$/)?.[1];
-    const name = e.currentTarget.dataset.name;
     if (btnIdx !== undefined) {
       setClickedBtn(Number(btnIdx));
-      setSearchParams({no : urlIdx || ''})
+      setSearchParams({no : urlIdx || "", name : name || "", varietiesIdx : btnIdx || "0"});
     }
   };
+
+
   
   return (
     <>
-      <h1>종류</h1>
+      <h1>변형</h1>
       <div css={speciesTypes}>
-        {speciesData.varieties.map((species: any, idx: number) => {
+        {varietiesData.varieties.map((species: any, idx: number) => {
           const label = getSpeciesTranslate(species.pokemon.name);
           if (!label) return null;
 

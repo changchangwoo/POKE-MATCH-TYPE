@@ -5,7 +5,7 @@ import TypeCard from "../components/commons/TypeCard";
 import { useEffect, useState } from "react";
 import { useLocation, useSearchParams } from "react-router-dom";
 import useFetchDetailPokemon from "../hooks/queries/useFetchDetailPokemon";
-import useFetchPokemonSpecies from "../hooks/queries/useFetchPokemonSpecies";
+import useFetchPokemonVarieties from "../hooks/queries/useFetchPokemonVarieties";
 
 const Main = () => {
   const location = useLocation();
@@ -13,8 +13,9 @@ const Main = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const name = searchParams.get("name");
   const no = searchParams.get("no");
+  const varietiesIdx = searchParams.get("varietiesIdx");
   const { data: matchInfo, error : detailDataError, isLoading: detailDataLoading } = useFetchDetailPokemon(no || "", name || "");
-  const { data: speciesData, error : speciesDataError, isLoading: speciesDataLoading} = useFetchPokemonSpecies(no || "",);
+  const { data: varietiesData, error : varietiesDataError, isLoading: varietiesDataLoading} = useFetchPokemonVarieties(no || "", name || "");
 
   useEffect(() => {
     const getSessionMatchDatas = localStorage.getItem(location.pathname + "/matchDatas");
@@ -24,7 +25,7 @@ const Main = () => {
   }, [location.pathname]);
 
 
-  if(detailDataLoading || speciesDataLoading) return null;
+  if(detailDataLoading || varietiesDataLoading) return null;
   if(detailDataError) return null;
 
 
@@ -33,7 +34,7 @@ const Main = () => {
       <Search searchParams={searchParams} setSearchParams={setSearchParams} />
       <div css={MainContainer}>
         {matchInfo && <MatchCard MatchInfo={matchInfo} selectedAbility={selectedAbility} setSelectedAbility={setSelectedAbility}
-        setSearchParams={setSearchParams} speciesData={speciesData} />}
+        setSearchParams={setSearchParams} varietiesData={varietiesData} varietiesIdx={varietiesIdx} />}
         {matchInfo && <TypeCard MatchTypes={matchInfo.types} selectedAbility={selectedAbility} />}
       </div>
     </>
