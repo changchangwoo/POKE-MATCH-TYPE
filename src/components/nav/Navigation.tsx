@@ -17,7 +17,7 @@ const navigationStyle = css`
   justify-content: center;
   align-items: center;
   color: white;
-  position: fixed;
+  position: absolute;
   z-index: 300;
   font-weight: 500;
 `;

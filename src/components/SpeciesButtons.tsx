@@ -56,6 +56,7 @@ const speciesTypes = css`
   grid-template-columns: repeat(4, 1fr);
   width: 60%;
   justify-content: center;
+  margin-bottom: 10px;
 `;
 
 const speciesBtn = css`

@@ -21,8 +21,9 @@ const SelectAbility = ({ selectedAbility, setSelectedAbility}: TypeCheckProps) =
   };
 
   return (
+    <>
+    <h1>특성</h1>
     <div css={SelectAbilityContainer}>
-
       <select
         value={selectedAbility}
         onChange={handleAbilityChange}
@@ -34,6 +35,7 @@ const SelectAbility = ({ selectedAbility, setSelectedAbility}: TypeCheckProps) =
         ))}
       </select>
     </div>
+    </>
   );
 };
 
@@ -43,6 +45,7 @@ const SelectAbilityContainer = css`
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+  
 
   select {
     width: 100%;

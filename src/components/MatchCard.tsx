@@ -90,6 +90,7 @@ const pokeTypes = css`
   align-items: center;
   color: #ffffff;
   margin: auto;
+  margin-bottom: 10px;
 `;
 
 

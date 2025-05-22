@@ -58,6 +58,7 @@ const Search = ({ setSearchParams, searchParams }: SearchProps) => {
     if (suggestions.length > 0 && suggestions[0].name === searchTerm) {
       newSearchParams.set("no", String(suggestions[0].no));
       newSearchParams.set("name", String(suggestions[0].name));
+      newSearchParams.set("varietiesIdx", "0");
       setSearchParams(newSearchParams);
       setSuggestions([]);
     }
