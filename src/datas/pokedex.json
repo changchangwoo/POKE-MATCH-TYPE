@@ -1,0 +1,5165 @@
+[
+  {
+    "no": 1,
+    "name": "이상해씨",
+    "varieties": []
+  },
+  {
+    "no": 2,
+    "name": "이상해풀",
+    "varieties": []
+  },
+  {
+    "no": 3,
+    "name": "이상해꽃",
+    "varieties": ["메가이상해꽃", "이상해꽃(거다이맥스)"]
+  },
+  {
+    "no": 4,
+    "name": "파이리",
+    "varieties": []
+  },
+  {
+    "no": 5,
+    "name": "리자드",
+    "varieties": []
+  },
+  {
+    "no": 6,
+    "name": "리자몽",
+    "varieties": ["메가리자몽X", "메가리자몽Y", "리자몽(거다이맥스)"]
+  },
+  {
+    "no": 7,
+    "name": "꼬부기",
+    "varieties": []
+  },
+  {
+    "no": 8,
+    "name": "어니부기",
+    "varieties": []
+  },
+  {
+    "no": 9,
+    "name": "거북왕",
+    "varieties": ["메가거북왕", "거북왕(거다이맥스)"]
+  },
+  {
+    "no": 10,
+    "name": "캐터피",
+    "varieties": []
+  },
+  {
+    "no": 11,
+    "name": "단데기",
+    "varieties": []
+  },
+  {
+    "no": 12,
+    "name": "버터플",
+    "varieties": ["버터플(거다이맥스)"]
+  },
+  {
+    "no": 13,
+    "name": "뿔충이",
+    "varieties": []
+  },
+  {
+    "no": 14,
+    "name": "딱충이",
+    "varieties": []
+  },
+  {
+    "no": 15,
+    "name": "독침붕",
+    "varieties": ["메가독침붕"]
+  },
+  {
+    "no": 16,
+    "name": "구구",
+    "varieties": []
+  },
+  {
+    "no": 17,
+    "name": "피죤",
+    "varieties": []
+  },
+  {
+    "no": 18,
+    "name": "피죤투",
+    "varieties": ["메가피죤투"]
+  },
+  {
+    "no": 19,
+    "name": "꼬렛",
+    "varieties": ["꼬렛(알로라)"]
+  },
+  {
+    "no": 20,
+    "name": "레트라",
+    "varieties": ["레트라(알로라)"]
+  },
+  {
+    "no": 21,
+    "name": "깨비참",
+    "varieties": []
+  },
+  {
+    "no": 22,
+    "name": "깨비드릴조",
+    "varieties": []
+  },
+  {
+    "no": 23,
+    "name": "아보",
+    "varieties": []
+  },
+  {
+    "no": 24,
+    "name": "아보크",
+    "varieties": []
+  },
+  {
+    "no": 25,
+    "name": "피카츄",
+    "varieties": ["피카츄(거다이맥스)"]
+  },
+  {
+    "no": 26,
+    "name": "라이츄",
+    "varieties": ["라이츄(알로라)"]
+  },
+  {
+    "no": 27,
+    "name": "모래두지",
+    "varieties": ["모래두지(알로라)"]
+  },
+  {
+    "no": 28,
+    "name": "고지",
+    "varieties": ["고지(알로라)"]
+  },
+  {
+    "no": 29,
+    "name": "니드런♀",
+    "varieties": []
+  },
+  {
+    "no": 30,
+    "name": "니드리나",
+    "varieties": []
+  },
+  {
+    "no": 31,
+    "name": "니드퀸",
+    "varieties": []
+  },
+  {
+    "no": 32,
+    "name": "니드런♂",
+    "varieties": []
+  },
+  {
+    "no": 33,
+    "name": "니드리노",
+    "varieties": []
+  },
+  {
+    "no": 34,
+    "name": "니드킹",
+    "varieties": []
+  },
+  {
+    "no": 35,
+    "name": "삐삐",
+    "varieties": []
+  },
+  {
+    "no": 36,
+    "name": "픽시",
+    "varieties": []
+  },
+  {
+    "no": 37,
+    "name": "식스테일",
+    "varieties": ["식스테일(알로라)"]
+  },
+  {
+    "no": 38,
+    "name": "나인테일",
+    "varieties": ["나인테일(알로라)"]
+  },
+  {
+    "no": 39,
+    "name": "푸린",
+    "varieties": []
+  },
+  {
+    "no": 40,
+    "name": "푸크린",
+    "varieties": []
+  },
+  {
+    "no": 41,
+    "name": "주뱃",
+    "varieties": []
+  },
+  {
+    "no": 42,
+    "name": "골뱃",
+    "varieties": []
+  },
+  {
+    "no": 43,
+    "name": "뚜벅쵸",
+    "varieties": []
+  },
+  {
+    "no": 44,
+    "name": "냄새꼬",
+    "varieties": []
+  },
+  {
+    "no": 45,
+    "name": "라플레시아",
+    "varieties": []
+  },
+  {
+    "no": 46,
+    "name": "파라스",
+    "varieties": []
+  },
+  {
+    "no": 47,
+    "name": "파라섹트",
+    "varieties": []
+  },
+  {
+    "no": 48,
+    "name": "콘팡",
+    "varieties": []
+  },
+  {
+    "no": 49,
+    "name": "도나리",
+    "varieties": []
+  },
+  {
+    "no": 50,
+    "name": "디그다",
+    "varieties": ["디그다(알로라)"]
+  },
+  {
+    "no": 51,
+    "name": "닥트리오",
+    "varieties": ["닥트리오(알로라)"]
+  },
+  {
+    "no": 52,
+    "name": "나옹",
+    "varieties": ["나옹(알로라)", "나옹(가라르)", "나옹(거다이맥스)"]
+  },
+  {
+    "no": 53,
+    "name": "페르시온",
+    "varieties": ["페르시온(알로라)"]
+  },
+  {
+    "no": 54,
+    "name": "고라파덕",
+    "varieties": []
+  },
+  {
+    "no": 55,
+    "name": "골덕",
+    "varieties": []
+  },
+  {
+    "no": 56,
+    "name": "망키",
+    "varieties": []
+  },
+  {
+    "no": 57,
+    "name": "성원숭",
+    "varieties": []
+  },
+  {
+    "no": 58,
+    "name": "가디",
+    "varieties": ["가디(히스이)"]
+  },
+  {
+    "no": 59,
+    "name": "윈디",
+    "varieties": ["윈디(히스이)"]
+  },
+  {
+    "no": 60,
+    "name": "발챙이",
+    "varieties": []
+  },
+  {
+    "no": 61,
+    "name": "슈륙챙이",
+    "varieties": []
+  },
+  {
+    "no": 62,
+    "name": "강챙이",
+    "varieties": []
+  },
+  {
+    "no": 63,
+    "name": "캐이시",
+    "varieties": []
+  },
+  {
+    "no": 64,
+    "name": "윤겔라",
+    "varieties": []
+  },
+  {
+    "no": 65,
+    "name": "후딘",
+    "varieties": ["메가후딘"]
+  },
+  {
+    "no": 66,
+    "name": "알통몬",
+    "varieties": []
+  },
+  {
+    "no": 67,
+    "name": "근육몬",
+    "varieties": []
+  },
+  {
+    "no": 68,
+    "name": "괴력몬",
+    "varieties": ["괴력몬(거다이맥스)"]
+  },
+  {
+    "no": 69,
+    "name": "모다피",
+    "varieties": []
+  },
+  {
+    "no": 70,
+    "name": "우츠동",
+    "varieties": []
+  },
+  {
+    "no": 71,
+    "name": "우츠보트",
+    "varieties": []
+  },
+  {
+    "no": 72,
+    "name": "왕눈해",
+    "varieties": []
+  },
+  {
+    "no": 73,
+    "name": "독파리",
+    "varieties": []
+  },
+  {
+    "no": 74,
+    "name": "꼬마돌",
+    "varieties": ["꼬마돌(알로라)"]
+  },
+  {
+    "no": 75,
+    "name": "데구리",
+    "varieties": ["데구리(알로라)"]
+  },
+  {
+    "no": 76,
+    "name": "딱구리",
+    "varieties": ["딱구리(알로라)"]
+  },
+  {
+    "no": 77,
+    "name": "포니타",
+    "varieties": ["포니타(가라르)"]
+  },
+  {
+    "no": 78,
+    "name": "날쌩마",
+    "varieties": ["날쌩마(가라르)"]
+  },
+  {
+    "no": 79,
+    "name": "야돈",
+    "varieties": ["야돈(가라르)"]
+  },
+  {
+    "no": 80,
+    "name": "야도란",
+    "varieties": ["야도란(가라르)", "메가야도란"]
+  },
+  {
+    "no": 81,
+    "name": "코일",
+    "varieties": []
+  },
+  {
+    "no": 82,
+    "name": "레어코일",
+    "varieties": []
+  },
+  {
+    "no": 83,
+    "name": "파오리",
+    "varieties": ["파오리(가라르)"]
+  },
+  {
+    "no": 84,
+    "name": "두두",
+    "varieties": []
+  },
+  {
+    "no": 85,
+    "name": "두트리오",
+    "varieties": []
+  },
+  {
+    "no": 86,
+    "name": "쥬쥬",
+    "varieties": []
+  },
+  {
+    "no": 87,
+    "name": "쥬레곤",
+    "varieties": []
+  },
+  {
+    "no": 88,
+    "name": "질퍽이",
+    "varieties": ["질퍽이(알로라)"]
+  },
+  {
+    "no": 89,
+    "name": "질뻐기",
+    "varieties": ["질뻐기(알로라)"]
+  },
+  {
+    "no": 90,
+    "name": "셀러",
+    "varieties": []
+  },
+  {
+    "no": 91,
+    "name": "파르셀",
+    "varieties": []
+  },
+  {
+    "no": 92,
+    "name": "고오스",
+    "varieties": []
+  },
+  {
+    "no": 93,
+    "name": "고우스트",
+    "varieties": []
+  },
+  {
+    "no": 94,
+    "name": "팬텀",
+    "varieties": ["메가팬텀", "팬텀(거다이맥스)"]
+  },
+  {
+    "no": 95,
+    "name": "롱스톤",
+    "varieties": []
+  },
+  {
+    "no": 96,
+    "name": "슬리프",
+    "varieties": []
+  },
+  {
+    "no": 97,
+    "name": "슬리퍼",
+    "varieties": []
+  },
+  {
+    "no": 98,
+    "name": "크랩",
+    "varieties": []
+  },
+  {
+    "no": 99,
+    "name": "킹크랩",
+    "varieties": ["킹크랩(거다이맥스)"]
+  },
+  {
+    "no": 100,
+    "name": "찌리리공",
+    "varieties": ["찌리리공(히스이)"]
+  },
+  {
+    "no": 101,
+    "name": "붐볼",
+    "varieties": ["붐볼(히스이)"]
+  },
+  {
+    "no": 102,
+    "name": "아라리",
+    "varieties": []
+  },
+  {
+    "no": 103,
+    "name": "나시",
+    "varieties": ["나시(알로라)"]
+  },
+  {
+    "no": 104,
+    "name": "탕구리",
+    "varieties": []
+  },
+  {
+    "no": 105,
+    "name": "텅구리",
+    "varieties": ["텅구리(알로라)"]
+  },
+  {
+    "no": 106,
+    "name": "시라소몬",
+    "varieties": []
+  },
+  {
+    "no": 107,
+    "name": "홍수몬",
+    "varieties": []
+  },
+  {
+    "no": 108,
+    "name": "내루미",
+    "varieties": []
+  },
+  {
+    "no": 109,
+    "name": "또가스",
+    "varieties": []
+  },
+  {
+    "no": 110,
+    "name": "또도가스",
+    "varieties": ["또도가스(가라르)"]
+  },
+  {
+    "no": 111,
+    "name": "뿔카노",
+    "varieties": []
+  },
+  {
+    "no": 112,
+    "name": "코뿌리",
+    "varieties": []
+  },
+  {
+    "no": 113,
+    "name": "럭키",
+    "varieties": []
+  },
+  {
+    "no": 114,
+    "name": "덩쿠리",
+    "varieties": []
+  },
+  {
+    "no": 115,
+    "name": "캥카",
+    "varieties": ["메가캥카"]
+  },
+  {
+    "no": 116,
+    "name": "쏘드라",
+    "varieties": []
+  },
+  {
+    "no": 117,
+    "name": "시드라",
+    "varieties": []
+  },
+  {
+    "no": 118,
+    "name": "콘치",
+    "varieties": []
+  },
+  {
+    "no": 119,
+    "name": "왕콘치",
+    "varieties": []
+  },
+  {
+    "no": 120,
+    "name": "별가사리",
+    "varieties": []
+  },
+  {
+    "no": 121,
+    "name": "아쿠스타",
+    "varieties": []
+  },
+  {
+    "no": 122,
+    "name": "마임맨",
+    "varieties": ["마임맨(가라르)"]
+  },
+  {
+    "no": 123,
+    "name": "스라크",
+    "varieties": []
+  },
+  {
+    "no": 124,
+    "name": "루주라",
+    "varieties": []
+  },
+  {
+    "no": 125,
+    "name": "에레브",
+    "varieties": []
+  },
+  {
+    "no": 126,
+    "name": "마그마",
+    "varieties": []
+  },
+  {
+    "no": 127,
+    "name": "쁘사이저",
+    "varieties": ["메가쁘사이저"]
+  },
+  {
+    "no": 128,
+    "name": "켄타로스",
+    "varieties": [
+      "켄타로스(팔데아/컴뱃종)",
+      "켄타로스(팔데아/블레이즈종)",
+      "켄타로스(팔데아/워터종)"
+    ]
+  },
+  {
+    "no": 129,
+    "name": "잉어킹",
+    "varieties": []
+  },
+  {
+    "no": 130,
+    "name": "갸라도스",
+    "varieties": ["메가갸라도스"]
+  },
+  {
+    "no": 131,
+    "name": "라프라스",
+    "varieties": ["라프라스(거다이맥스)"]
+  },
+  {
+    "no": 132,
+    "name": "메타몽",
+    "varieties": []
+  },
+  {
+    "no": 133,
+    "name": "이브이",
+    "varieties": ["이브이(거다이맥스)"]
+  },
+  {
+    "no": 134,
+    "name": "샤미드",
+    "varieties": []
+  },
+  {
+    "no": 135,
+    "name": "쥬피썬더",
+    "varieties": []
+  },
+  {
+    "no": 136,
+    "name": "부스터",
+    "varieties": []
+  },
+  {
+    "no": 137,
+    "name": "폴리곤",
+    "varieties": []
+  },
+  {
+    "no": 138,
+    "name": "암나이트",
+    "varieties": []
+  },
+  {
+    "no": 139,
+    "name": "암스타",
+    "varieties": []
+  },
+  {
+    "no": 140,
+    "name": "투구",
+    "varieties": []
+  },
+  {
+    "no": 141,
+    "name": "투구푸스",
+    "varieties": []
+  },
+  {
+    "no": 142,
+    "name": "프테라",
+    "varieties": ["메가프테라"]
+  },
+  {
+    "no": 143,
+    "name": "잠만보",
+    "varieties": ["잠만보(거다이맥스)"]
+  },
+  {
+    "no": 144,
+    "name": "프리져",
+    "varieties": ["프리져(가라르)"]
+  },
+  {
+    "no": 145,
+    "name": "썬더",
+    "varieties": ["썬더(가라르)"]
+  },
+  {
+    "no": 146,
+    "name": "파이어",
+    "varieties": ["파이어(가라르)"]
+  },
+  {
+    "no": 147,
+    "name": "미뇽",
+    "varieties": []
+  },
+  {
+    "no": 148,
+    "name": "신뇽",
+    "varieties": []
+  },
+  {
+    "no": 149,
+    "name": "망나뇽",
+    "varieties": []
+  },
+  {
+    "no": 150,
+    "name": "뮤츠",
+    "varieties": ["메가뮤츠X", "메가뮤츠Y"]
+  },
+  {
+    "no": 151,
+    "name": "뮤",
+    "varieties": []
+  },
+  {
+    "no": 152,
+    "name": "치코리타",
+    "varieties": []
+  },
+  {
+    "no": 153,
+    "name": "베이리프",
+    "varieties": []
+  },
+  {
+    "no": 154,
+    "name": "메가니움",
+    "varieties": []
+  },
+  {
+    "no": 155,
+    "name": "브케인",
+    "varieties": []
+  },
+  {
+    "no": 156,
+    "name": "마그케인",
+    "varieties": []
+  },
+  {
+    "no": 157,
+    "name": "블레이범",
+    "varieties": ["블레이범(히스이)"]
+  },
+  {
+    "no": 158,
+    "name": "리아코",
+    "varieties": []
+  },
+  {
+    "no": 159,
+    "name": "엘리게이",
+    "varieties": []
+  },
+  {
+    "no": 160,
+    "name": "장크로다일",
+    "varieties": []
+  },
+  {
+    "no": 161,
+    "name": "꼬리선",
+    "varieties": []
+  },
+  {
+    "no": 162,
+    "name": "다꼬리",
+    "varieties": []
+  },
+  {
+    "no": 163,
+    "name": "부우부",
+    "varieties": []
+  },
+  {
+    "no": 164,
+    "name": "야부엉",
+    "varieties": []
+  },
+  {
+    "no": 165,
+    "name": "레디바",
+    "varieties": []
+  },
+  {
+    "no": 166,
+    "name": "레디안",
+    "varieties": []
+  },
+  {
+    "no": 167,
+    "name": "페이검",
+    "varieties": []
+  },
+  {
+    "no": 168,
+    "name": "아리아도스",
+    "varieties": []
+  },
+  {
+    "no": 169,
+    "name": "크로뱃",
+    "varieties": []
+  },
+  {
+    "no": 170,
+    "name": "초라기",
+    "varieties": []
+  },
+  {
+    "no": 171,
+    "name": "랜턴",
+    "varieties": []
+  },
+  {
+    "no": 172,
+    "name": "피츄",
+    "varieties": []
+  },
+  {
+    "no": 173,
+    "name": "삐",
+    "varieties": []
+  },
+  {
+    "no": 174,
+    "name": "푸푸린",
+    "varieties": []
+  },
+  {
+    "no": 175,
+    "name": "토게피",
+    "varieties": []
+  },
+  {
+    "no": 176,
+    "name": "토게틱",
+    "varieties": []
+  },
+  {
+    "no": 177,
+    "name": "네이티",
+    "varieties": []
+  },
+  {
+    "no": 178,
+    "name": "네이티오",
+    "varieties": []
+  },
+  {
+    "no": 179,
+    "name": "메리프",
+    "varieties": []
+  },
+  {
+    "no": 180,
+    "name": "보송송",
+    "varieties": []
+  },
+  {
+    "no": 181,
+    "name": "전룡",
+    "varieties": ["메가전룡"]
+  },
+  {
+    "no": 182,
+    "name": "아르코",
+    "varieties": []
+  },
+  {
+    "no": 183,
+    "name": "마릴",
+    "varieties": []
+  },
+  {
+    "no": 184,
+    "name": "마릴리",
+    "varieties": []
+  },
+  {
+    "no": 185,
+    "name": "꼬지모",
+    "varieties": []
+  },
+  {
+    "no": 186,
+    "name": "왕구리",
+    "varieties": []
+  },
+  {
+    "no": 187,
+    "name": "통통코",
+    "varieties": []
+  },
+  {
+    "no": 188,
+    "name": "두코",
+    "varieties": []
+  },
+  {
+    "no": 189,
+    "name": "솜솜코",
+    "varieties": []
+  },
+  {
+    "no": 190,
+    "name": "에이팜",
+    "varieties": []
+  },
+  {
+    "no": 191,
+    "name": "해너츠",
+    "varieties": []
+  },
+  {
+    "no": 192,
+    "name": "해루미",
+    "varieties": []
+  },
+  {
+    "no": 193,
+    "name": "왕자리",
+    "varieties": []
+  },
+  {
+    "no": 194,
+    "name": "우파",
+    "varieties": ["우파(팔데아)"]
+  },
+  {
+    "no": 195,
+    "name": "누오",
+    "varieties": []
+  },
+  {
+    "no": 196,
+    "name": "에브이",
+    "varieties": []
+  },
+  {
+    "no": 197,
+    "name": "블래키",
+    "varieties": []
+  },
+  {
+    "no": 198,
+    "name": "니로우",
+    "varieties": []
+  },
+  {
+    "no": 199,
+    "name": "야도킹",
+    "varieties": ["야도킹(가라르)"]
+  },
+  {
+    "no": 200,
+    "name": "무우마",
+    "varieties": []
+  },
+  {
+    "no": 201,
+    "name": "안농",
+    "varieties": []
+  },
+  {
+    "no": 202,
+    "name": "마자용",
+    "varieties": []
+  },
+  {
+    "no": 203,
+    "name": "키링키",
+    "varieties": []
+  },
+  {
+    "no": 204,
+    "name": "피콘",
+    "varieties": []
+  },
+  {
+    "no": 205,
+    "name": "쏘콘",
+    "varieties": []
+  },
+  {
+    "no": 206,
+    "name": "노고치",
+    "varieties": []
+  },
+  {
+    "no": 207,
+    "name": "글라이거",
+    "varieties": []
+  },
+  {
+    "no": 208,
+    "name": "강철톤",
+    "varieties": ["메가강철톤"]
+  },
+  {
+    "no": 209,
+    "name": "블루",
+    "varieties": []
+  },
+  {
+    "no": 210,
+    "name": "그랑블루",
+    "varieties": []
+  },
+  {
+    "no": 211,
+    "name": "침바루",
+    "varieties": ["침바루(히스이)"]
+  },
+  {
+    "no": 212,
+    "name": "핫삼",
+    "varieties": ["메가핫삼"]
+  },
+  {
+    "no": 213,
+    "name": "단단지",
+    "varieties": []
+  },
+  {
+    "no": 214,
+    "name": "헤라크로스",
+    "varieties": ["메가헤라크로스"]
+  },
+  {
+    "no": 215,
+    "name": "포푸니",
+    "varieties": ["포푸니(히스이)"]
+  },
+  {
+    "no": 216,
+    "name": "깜지곰",
+    "varieties": []
+  },
+  {
+    "no": 217,
+    "name": "링곰",
+    "varieties": []
+  },
+  {
+    "no": 218,
+    "name": "마그마그",
+    "varieties": []
+  },
+  {
+    "no": 219,
+    "name": "마그카르고",
+    "varieties": []
+  },
+  {
+    "no": 220,
+    "name": "꾸꾸리",
+    "varieties": []
+  },
+  {
+    "no": 221,
+    "name": "메꾸리",
+    "varieties": []
+  },
+  {
+    "no": 222,
+    "name": "코산호",
+    "varieties": ["코산호(가라르)"]
+  },
+  {
+    "no": 223,
+    "name": "총어",
+    "varieties": []
+  },
+  {
+    "no": 224,
+    "name": "대포무노",
+    "varieties": []
+  },
+  {
+    "no": 225,
+    "name": "딜리버드",
+    "varieties": []
+  },
+  {
+    "no": 226,
+    "name": "만타인",
+    "varieties": []
+  },
+  {
+    "no": 227,
+    "name": "무장조",
+    "varieties": []
+  },
+  {
+    "no": 228,
+    "name": "델빌",
+    "varieties": []
+  },
+  {
+    "no": 229,
+    "name": "헬가",
+    "varieties": ["메가헬가"]
+  },
+  {
+    "no": 230,
+    "name": "킹드라",
+    "varieties": []
+  },
+  {
+    "no": 231,
+    "name": "코코리",
+    "varieties": []
+  },
+  {
+    "no": 232,
+    "name": "코리갑",
+    "varieties": []
+  },
+  {
+    "no": 233,
+    "name": "폴리곤2",
+    "varieties": []
+  },
+  {
+    "no": 234,
+    "name": "노라키",
+    "varieties": []
+  },
+  {
+    "no": 235,
+    "name": "루브도",
+    "varieties": []
+  },
+  {
+    "no": 236,
+    "name": "배루키",
+    "varieties": []
+  },
+  {
+    "no": 237,
+    "name": "카포에라",
+    "varieties": []
+  },
+  {
+    "no": 238,
+    "name": "뽀뽀라",
+    "varieties": []
+  },
+  {
+    "no": 239,
+    "name": "에레키드",
+    "varieties": []
+  },
+  {
+    "no": 240,
+    "name": "마그비",
+    "varieties": []
+  },
+  {
+    "no": 241,
+    "name": "밀탱크",
+    "varieties": []
+  },
+  {
+    "no": 242,
+    "name": "해피너스",
+    "varieties": []
+  },
+  {
+    "no": 243,
+    "name": "라이코",
+    "varieties": []
+  },
+  {
+    "no": 244,
+    "name": "앤테이",
+    "varieties": []
+  },
+  {
+    "no": 245,
+    "name": "스이쿤",
+    "varieties": []
+  },
+  {
+    "no": 246,
+    "name": "애버라스",
+    "varieties": []
+  },
+  {
+    "no": 247,
+    "name": "데기라스",
+    "varieties": []
+  },
+  {
+    "no": 248,
+    "name": "마기라스",
+    "varieties": ["메가마기라스"]
+  },
+  {
+    "no": 249,
+    "name": "루기아",
+    "varieties": []
+  },
+  {
+    "no": 250,
+    "name": "칠색조",
+    "varieties": []
+  },
+  {
+    "no": 251,
+    "name": "세레비",
+    "varieties": []
+  },
+  {
+    "no": 252,
+    "name": "나무지기",
+    "varieties": []
+  },
+  {
+    "no": 253,
+    "name": "나무돌이",
+    "varieties": []
+  },
+  {
+    "no": 254,
+    "name": "나무킹",
+    "varieties": ["메가나무킹"]
+  },
+  {
+    "no": 255,
+    "name": "아차모",
+    "varieties": []
+  },
+  {
+    "no": 256,
+    "name": "영치코",
+    "varieties": []
+  },
+  {
+    "no": 257,
+    "name": "번치코",
+    "varieties": ["메가번치코"]
+  },
+  {
+    "no": 258,
+    "name": "물짱이",
+    "varieties": []
+  },
+  {
+    "no": 259,
+    "name": "늪짱이",
+    "varieties": []
+  },
+  {
+    "no": 260,
+    "name": "대짱이",
+    "varieties": ["메가대짱이"]
+  },
+  {
+    "no": 261,
+    "name": "포챠나",
+    "varieties": []
+  },
+  {
+    "no": 262,
+    "name": "그라에나",
+    "varieties": []
+  },
+  {
+    "no": 263,
+    "name": "지그제구리",
+    "varieties": ["지그제구리(가라르)"]
+  },
+  {
+    "no": 264,
+    "name": "직구리",
+    "varieties": ["직구리(가라르)"]
+  },
+  {
+    "no": 265,
+    "name": "개무소",
+    "varieties": []
+  },
+  {
+    "no": 266,
+    "name": "실쿤",
+    "varieties": []
+  },
+  {
+    "no": 267,
+    "name": "뷰티플라이",
+    "varieties": []
+  },
+  {
+    "no": 268,
+    "name": "카스쿤",
+    "varieties": []
+  },
+  {
+    "no": 269,
+    "name": "독케일",
+    "varieties": []
+  },
+  {
+    "no": 270,
+    "name": "연꽃몬",
+    "varieties": []
+  },
+  {
+    "no": 271,
+    "name": "로토스",
+    "varieties": []
+  },
+  {
+    "no": 272,
+    "name": "로파파",
+    "varieties": []
+  },
+  {
+    "no": 273,
+    "name": "도토링",
+    "varieties": []
+  },
+  {
+    "no": 274,
+    "name": "잎새코",
+    "varieties": []
+  },
+  {
+    "no": 275,
+    "name": "다탱구",
+    "varieties": []
+  },
+  {
+    "no": 276,
+    "name": "테일로",
+    "varieties": []
+  },
+  {
+    "no": 277,
+    "name": "스왈로",
+    "varieties": []
+  },
+  {
+    "no": 278,
+    "name": "갈모매",
+    "varieties": []
+  },
+  {
+    "no": 279,
+    "name": "패리퍼",
+    "varieties": []
+  },
+  {
+    "no": 280,
+    "name": "랄토스",
+    "varieties": []
+  },
+  {
+    "no": 281,
+    "name": "킬리아",
+    "varieties": []
+  },
+  {
+    "no": 282,
+    "name": "가디안",
+    "varieties": ["메가가디안"]
+  },
+  {
+    "no": 283,
+    "name": "비구술",
+    "varieties": []
+  },
+  {
+    "no": 284,
+    "name": "비나방",
+    "varieties": []
+  },
+  {
+    "no": 285,
+    "name": "버섯꼬",
+    "varieties": []
+  },
+  {
+    "no": 286,
+    "name": "버섯모",
+    "varieties": []
+  },
+  {
+    "no": 287,
+    "name": "게을로",
+    "varieties": []
+  },
+  {
+    "no": 288,
+    "name": "발바로",
+    "varieties": []
+  },
+  {
+    "no": 289,
+    "name": "게을킹",
+    "varieties": []
+  },
+  {
+    "no": 290,
+    "name": "토중몬",
+    "varieties": []
+  },
+  {
+    "no": 291,
+    "name": "아이스크",
+    "varieties": []
+  },
+  {
+    "no": 292,
+    "name": "껍질몬",
+    "varieties": []
+  },
+  {
+    "no": 293,
+    "name": "소곤룡",
+    "varieties": []
+  },
+  {
+    "no": 294,
+    "name": "노공룡",
+    "varieties": []
+  },
+  {
+    "no": 295,
+    "name": "폭음룡",
+    "varieties": []
+  },
+  {
+    "no": 296,
+    "name": "마크탕",
+    "varieties": []
+  },
+  {
+    "no": 297,
+    "name": "하리뭉",
+    "varieties": []
+  },
+  {
+    "no": 298,
+    "name": "루리리",
+    "varieties": []
+  },
+  {
+    "no": 299,
+    "name": "코코파스",
+    "varieties": []
+  },
+  {
+    "no": 300,
+    "name": "에나비",
+    "varieties": []
+  },
+  {
+    "no": 301,
+    "name": "델케티",
+    "varieties": []
+  },
+  {
+    "no": 302,
+    "name": "깜까미",
+    "varieties": ["메가깜까미"]
+  },
+  {
+    "no": 303,
+    "name": "입치트",
+    "varieties": ["메가입치트"]
+  },
+  {
+    "no": 304,
+    "name": "가보리",
+    "varieties": []
+  },
+  {
+    "no": 305,
+    "name": "갱도라",
+    "varieties": []
+  },
+  {
+    "no": 306,
+    "name": "보스로라",
+    "varieties": ["메가보스로라"]
+  },
+  {
+    "no": 307,
+    "name": "요가랑",
+    "varieties": []
+  },
+  {
+    "no": 308,
+    "name": "요가램",
+    "varieties": ["메가요가램"]
+  },
+  {
+    "no": 309,
+    "name": "썬더라이",
+    "varieties": []
+  },
+  {
+    "no": 310,
+    "name": "썬더볼트",
+    "varieties": ["메가썬더볼트"]
+  },
+  {
+    "no": 311,
+    "name": "플러시",
+    "varieties": []
+  },
+  {
+    "no": 312,
+    "name": "마이농",
+    "varieties": []
+  },
+  {
+    "no": 313,
+    "name": "볼비트",
+    "varieties": []
+  },
+  {
+    "no": 314,
+    "name": "네오비트",
+    "varieties": []
+  },
+  {
+    "no": 315,
+    "name": "로젤리아",
+    "varieties": []
+  },
+  {
+    "no": 316,
+    "name": "꼴깍몬",
+    "varieties": []
+  },
+  {
+    "no": 317,
+    "name": "꿀꺽몬",
+    "varieties": []
+  },
+  {
+    "no": 318,
+    "name": "샤프니아",
+    "varieties": []
+  },
+  {
+    "no": 319,
+    "name": "샤크니아",
+    "varieties": ["메가샤크니아"]
+  },
+  {
+    "no": 320,
+    "name": "고래왕자",
+    "varieties": []
+  },
+  {
+    "no": 321,
+    "name": "고래왕",
+    "varieties": []
+  },
+  {
+    "no": 322,
+    "name": "둔타",
+    "varieties": []
+  },
+  {
+    "no": 323,
+    "name": "폭타",
+    "varieties": ["메가폭타"]
+  },
+  {
+    "no": 324,
+    "name": "코터스",
+    "varieties": []
+  },
+  {
+    "no": 325,
+    "name": "피그점프",
+    "varieties": []
+  },
+  {
+    "no": 326,
+    "name": "피그킹",
+    "varieties": []
+  },
+  {
+    "no": 327,
+    "name": "얼루기",
+    "varieties": []
+  },
+  {
+    "no": 328,
+    "name": "톱치",
+    "varieties": []
+  },
+  {
+    "no": 329,
+    "name": "비브라바",
+    "varieties": []
+  },
+  {
+    "no": 330,
+    "name": "플라이곤",
+    "varieties": []
+  },
+  {
+    "no": 331,
+    "name": "선인왕",
+    "varieties": []
+  },
+  {
+    "no": 332,
+    "name": "밤선인",
+    "varieties": []
+  },
+  {
+    "no": 333,
+    "name": "파비코",
+    "varieties": []
+  },
+  {
+    "no": 334,
+    "name": "파비코리",
+    "varieties": ["메가파비코리"]
+  },
+  {
+    "no": 335,
+    "name": "쟝고",
+    "varieties": []
+  },
+  {
+    "no": 336,
+    "name": "세비퍼",
+    "varieties": []
+  },
+  {
+    "no": 337,
+    "name": "루나톤",
+    "varieties": []
+  },
+  {
+    "no": 338,
+    "name": "솔록",
+    "varieties": []
+  },
+  {
+    "no": 339,
+    "name": "미꾸리",
+    "varieties": []
+  },
+  {
+    "no": 340,
+    "name": "메깅",
+    "varieties": []
+  },
+  {
+    "no": 341,
+    "name": "가재군",
+    "varieties": []
+  },
+  {
+    "no": 342,
+    "name": "가재장군",
+    "varieties": []
+  },
+  {
+    "no": 343,
+    "name": "오뚝군",
+    "varieties": []
+  },
+  {
+    "no": 344,
+    "name": "점토도리",
+    "varieties": []
+  },
+  {
+    "no": 345,
+    "name": "릴링",
+    "varieties": []
+  },
+  {
+    "no": 346,
+    "name": "릴리요",
+    "varieties": []
+  },
+  {
+    "no": 347,
+    "name": "아노딥스",
+    "varieties": []
+  },
+  {
+    "no": 348,
+    "name": "아말도",
+    "varieties": []
+  },
+  {
+    "no": 349,
+    "name": "빈티나",
+    "varieties": []
+  },
+  {
+    "no": 350,
+    "name": "밀로틱",
+    "varieties": []
+  },
+  {
+    "no": 351,
+    "name": "캐스퐁",
+    "varieties": []
+  },
+  {
+    "no": 352,
+    "name": "켈리몬",
+    "varieties": []
+  },
+  {
+    "no": 353,
+    "name": "어둠대신",
+    "varieties": []
+  },
+  {
+    "no": 354,
+    "name": "다크펫",
+    "varieties": ["메가다크펫"]
+  },
+  {
+    "no": 355,
+    "name": "해골몽",
+    "varieties": []
+  },
+  {
+    "no": 356,
+    "name": "미라몽",
+    "varieties": []
+  },
+  {
+    "no": 357,
+    "name": "트로피우스",
+    "varieties": []
+  },
+  {
+    "no": 358,
+    "name": "치렁",
+    "varieties": []
+  },
+  {
+    "no": 359,
+    "name": "앱솔",
+    "varieties": ["메가앱솔"]
+  },
+  {
+    "no": 360,
+    "name": "마자",
+    "varieties": []
+  },
+  {
+    "no": 361,
+    "name": "눈꼬마",
+    "varieties": []
+  },
+  {
+    "no": 362,
+    "name": "얼음귀신",
+    "varieties": ["메가얼음귀신"]
+  },
+  {
+    "no": 363,
+    "name": "대굴레오",
+    "varieties": []
+  },
+  {
+    "no": 364,
+    "name": "씨레오",
+    "varieties": []
+  },
+  {
+    "no": 365,
+    "name": "씨카이저",
+    "varieties": []
+  },
+  {
+    "no": 366,
+    "name": "진주몽",
+    "varieties": []
+  },
+  {
+    "no": 367,
+    "name": "헌테일",
+    "varieties": []
+  },
+  {
+    "no": 368,
+    "name": "분홍장이",
+    "varieties": []
+  },
+  {
+    "no": 369,
+    "name": "시라칸",
+    "varieties": []
+  },
+  {
+    "no": 370,
+    "name": "사랑동이",
+    "varieties": []
+  },
+  {
+    "no": 371,
+    "name": "아공이",
+    "varieties": []
+  },
+  {
+    "no": 372,
+    "name": "쉘곤",
+    "varieties": []
+  },
+  {
+    "no": 373,
+    "name": "보만다",
+    "varieties": ["메가보만다"]
+  },
+  {
+    "no": 374,
+    "name": "메탕",
+    "varieties": []
+  },
+  {
+    "no": 375,
+    "name": "메탕구",
+    "varieties": []
+  },
+  {
+    "no": 376,
+    "name": "메타그로스",
+    "varieties": ["메가메타그로스"]
+  },
+  {
+    "no": 377,
+    "name": "레지락",
+    "varieties": []
+  },
+  {
+    "no": 378,
+    "name": "레지아이스",
+    "varieties": []
+  },
+  {
+    "no": 379,
+    "name": "레지스틸",
+    "varieties": []
+  },
+  {
+    "no": 380,
+    "name": "라티아스",
+    "varieties": ["메가라티아스"]
+  },
+  {
+    "no": 381,
+    "name": "라티오스",
+    "varieties": ["메가라티오스"]
+  },
+  {
+    "no": 382,
+    "name": "가이오가",
+    "varieties": ["원시가이오가"]
+  },
+  {
+    "no": 383,
+    "name": "그란돈",
+    "varieties": ["원시그란돈"]
+  },
+  {
+    "no": 384,
+    "name": "레쿠쟈",
+    "varieties": ["메가레쿠쟈"]
+  },
+  {
+    "no": 385,
+    "name": "지라치",
+    "varieties": []
+  },
+  {
+    "no": 386,
+    "name": "테오키스(노말폼)",
+    "varieties": [
+      "테오키스(어택폼)",
+      "테오키스(디펜스폼)",
+      "테오키스(스피드폼)"
+    ]
+  },
+  {
+    "no": 387,
+    "name": "모부기",
+    "varieties": []
+  },
+  {
+    "no": 388,
+    "name": "수풀부기",
+    "varieties": []
+  },
+  {
+    "no": 389,
+    "name": "토대부기",
+    "varieties": []
+  },
+  {
+    "no": 390,
+    "name": "불꽃숭이",
+    "varieties": []
+  },
+  {
+    "no": 391,
+    "name": "파이숭이",
+    "varieties": []
+  },
+  {
+    "no": 392,
+    "name": "초염몽",
+    "varieties": []
+  },
+  {
+    "no": 393,
+    "name": "팽도리",
+    "varieties": []
+  },
+  {
+    "no": 394,
+    "name": "팽태자",
+    "varieties": []
+  },
+  {
+    "no": 395,
+    "name": "엠페르트",
+    "varieties": []
+  },
+  {
+    "no": 396,
+    "name": "찌르꼬",
+    "varieties": []
+  },
+  {
+    "no": 397,
+    "name": "찌르버드",
+    "varieties": []
+  },
+  {
+    "no": 398,
+    "name": "찌르호크",
+    "varieties": []
+  },
+  {
+    "no": 399,
+    "name": "비버니",
+    "varieties": []
+  },
+  {
+    "no": 400,
+    "name": "비버통",
+    "varieties": []
+  },
+  {
+    "no": 401,
+    "name": "귀뚤뚜기",
+    "varieties": []
+  },
+  {
+    "no": 402,
+    "name": "귀뚤톡크",
+    "varieties": []
+  },
+  {
+    "no": 403,
+    "name": "꼬링크",
+    "varieties": []
+  },
+  {
+    "no": 404,
+    "name": "럭시오",
+    "varieties": []
+  },
+  {
+    "no": 405,
+    "name": "렌트라",
+    "varieties": []
+  },
+  {
+    "no": 406,
+    "name": "꼬몽울",
+    "varieties": []
+  },
+  {
+    "no": 407,
+    "name": "로즈레이드",
+    "varieties": []
+  },
+  {
+    "no": 408,
+    "name": "두개도스",
+    "varieties": []
+  },
+  {
+    "no": 409,
+    "name": "램펄드",
+    "varieties": []
+  },
+  {
+    "no": 410,
+    "name": "방패톱스",
+    "varieties": []
+  },
+  {
+    "no": 411,
+    "name": "바리톱스",
+    "varieties": []
+  },
+  {
+    "no": 412,
+    "name": "도롱충이(초목도롱)",
+    "varieties": ["도롱충이(모래땅도롱)", "도롱충이(슈레도롱)"]
+  },
+  {
+    "no": 413,
+    "name": "도롱마담(초목도롱)",
+    "varieties": ["도롱마담(모래땅도롱)", "도롱마담(슈레도롱)"]
+  },
+  {
+    "no": 414,
+    "name": "나메일",
+    "varieties": []
+  },
+  {
+    "no": 415,
+    "name": "세꿀버리",
+    "varieties": []
+  },
+  {
+    "no": 416,
+    "name": "비퀸",
+    "varieties": []
+  },
+  {
+    "no": 417,
+    "name": "파치리스",
+    "varieties": []
+  },
+  {
+    "no": 418,
+    "name": "브이젤",
+    "varieties": []
+  },
+  {
+    "no": 419,
+    "name": "플로젤",
+    "varieties": []
+  },
+  {
+    "no": 420,
+    "name": "체리버",
+    "varieties": []
+  },
+  {
+    "no": 421,
+    "name": "체리꼬(네거폼)",
+    "varieties": ["체리꼬(포지폼)"]
+  },
+  {
+    "no": 422,
+    "name": "깝질무(서쪽바다)",
+    "varieties": ["깝질무(동쪽바다)"]
+  },
+  {
+    "no": 423,
+    "name": "트리토돈(서쪽바다)",
+    "varieties": ["트리토돈(동쪽바다)"]
+  },
+  {
+    "no": 424,
+    "name": "겟핸보숭",
+    "varieties": []
+  },
+  {
+    "no": 425,
+    "name": "흔들풍손",
+    "varieties": []
+  },
+  {
+    "no": 426,
+    "name": "둥실라이드",
+    "varieties": []
+  },
+  {
+    "no": 427,
+    "name": "이어롤",
+    "varieties": []
+  },
+  {
+    "no": 428,
+    "name": "이어롭",
+    "varieties": ["메가이어롭"]
+  },
+  {
+    "no": 429,
+    "name": "무우마직",
+    "varieties": []
+  },
+  {
+    "no": 430,
+    "name": "돈크로우",
+    "varieties": []
+  },
+  {
+    "no": 431,
+    "name": "나옹마",
+    "varieties": []
+  },
+  {
+    "no": 432,
+    "name": "몬냥이",
+    "varieties": []
+  },
+  {
+    "no": 433,
+    "name": "랑딸랑",
+    "varieties": []
+  },
+  {
+    "no": 434,
+    "name": "스컹뿡",
+    "varieties": []
+  },
+  {
+    "no": 435,
+    "name": "스컹탱크",
+    "varieties": []
+  },
+  {
+    "no": 436,
+    "name": "동미러",
+    "varieties": []
+  },
+  {
+    "no": 437,
+    "name": "동탁군",
+    "varieties": []
+  },
+  {
+    "no": 438,
+    "name": "꼬지지",
+    "varieties": []
+  },
+  {
+    "no": 439,
+    "name": "흉내내",
+    "varieties": []
+  },
+  {
+    "no": 440,
+    "name": "핑복",
+    "varieties": []
+  },
+  {
+    "no": 441,
+    "name": "페라페",
+    "varieties": []
+  },
+  {
+    "no": 442,
+    "name": "화강돌",
+    "varieties": []
+  },
+  {
+    "no": 443,
+    "name": "딥상어동",
+    "varieties": []
+  },
+  {
+    "no": 444,
+    "name": "한바이트",
+    "varieties": []
+  },
+  {
+    "no": 445,
+    "name": "한카리아스",
+    "varieties": ["메가한카리아스"]
+  },
+  {
+    "no": 446,
+    "name": "먹고자",
+    "varieties": []
+  },
+  {
+    "no": 447,
+    "name": "리오르",
+    "varieties": []
+  },
+  {
+    "no": 448,
+    "name": "루카리오",
+    "varieties": ["메가루카리오"]
+  },
+  {
+    "no": 449,
+    "name": "히포포타스",
+    "varieties": []
+  },
+  {
+    "no": 450,
+    "name": "하마돈",
+    "varieties": []
+  },
+  {
+    "no": 451,
+    "name": "스콜피",
+    "varieties": []
+  },
+  {
+    "no": 452,
+    "name": "드래피온",
+    "varieties": []
+  },
+  {
+    "no": 453,
+    "name": "삐딱구리",
+    "varieties": []
+  },
+  {
+    "no": 454,
+    "name": "독개굴",
+    "varieties": []
+  },
+  {
+    "no": 455,
+    "name": "무스틈니",
+    "varieties": []
+  },
+  {
+    "no": 456,
+    "name": "형광어",
+    "varieties": []
+  },
+  {
+    "no": 457,
+    "name": "네오라이트",
+    "varieties": []
+  },
+  {
+    "no": 458,
+    "name": "타만타",
+    "varieties": []
+  },
+  {
+    "no": 459,
+    "name": "눈쓰개",
+    "varieties": []
+  },
+  {
+    "no": 460,
+    "name": "눈설왕",
+    "varieties": ["메가눈설왕"]
+  },
+  {
+    "no": 461,
+    "name": "포푸니라",
+    "varieties": []
+  },
+  {
+    "no": 462,
+    "name": "자포코일",
+    "varieties": []
+  },
+  {
+    "no": 463,
+    "name": "내룸벨트",
+    "varieties": []
+  },
+  {
+    "no": 464,
+    "name": "거대코뿌리",
+    "varieties": []
+  },
+  {
+    "no": 465,
+    "name": "덩쿠림보",
+    "varieties": []
+  },
+  {
+    "no": 466,
+    "name": "에레키블",
+    "varieties": []
+  },
+  {
+    "no": 467,
+    "name": "마그마번",
+    "varieties": []
+  },
+  {
+    "no": 468,
+    "name": "토게키스",
+    "varieties": []
+  },
+  {
+    "no": 469,
+    "name": "메가자리",
+    "varieties": []
+  },
+  {
+    "no": 470,
+    "name": "리피아",
+    "varieties": []
+  },
+  {
+    "no": 471,
+    "name": "글레이시아",
+    "varieties": []
+  },
+  {
+    "no": 472,
+    "name": "글라이온",
+    "varieties": []
+  },
+  {
+    "no": 473,
+    "name": "맘모꾸리",
+    "varieties": []
+  },
+  {
+    "no": 474,
+    "name": "폴리곤Z",
+    "varieties": []
+  },
+  {
+    "no": 475,
+    "name": "엘레이드",
+    "varieties": ["메가엘레이드"]
+  },
+  {
+    "no": 476,
+    "name": "대코파스",
+    "varieties": []
+  },
+  {
+    "no": 477,
+    "name": "야느와르몽",
+    "varieties": []
+  },
+  {
+    "no": 478,
+    "name": "눈여아",
+    "varieties": []
+  },
+  {
+    "no": 479,
+    "name": "로토무(로토무)",
+    "varieties": [
+      "로토무(히트로토무)",
+      "로토무(워시로토무)",
+      "로토무(프로스트로토무)",
+      "로토무(스핀로토무)",
+      "로토무(커트로토무)"
+    ]
+  },
+  {
+    "no": 480,
+    "name": "유크시",
+    "varieties": []
+  },
+  {
+    "no": 481,
+    "name": "엠라이트",
+    "varieties": []
+  },
+  {
+    "no": 482,
+    "name": "아그놈",
+    "varieties": []
+  },
+  {
+    "no": 483,
+    "name": "디아루가",
+    "varieties": ["디아루가(오리진폼)"]
+  },
+  {
+    "no": 484,
+    "name": "펄기아",
+    "varieties": ["펄기아(오리진폼)"]
+  },
+  {
+    "no": 485,
+    "name": "히드런",
+    "varieties": []
+  },
+  {
+    "no": 486,
+    "name": "레지기가스",
+    "varieties": []
+  },
+  {
+    "no": 487,
+    "name": "기라티나(어나더폼)",
+    "varieties": ["기라티나(오리진폼)"]
+  },
+  {
+    "no": 488,
+    "name": "크레세리아",
+    "varieties": []
+  },
+  {
+    "no": 489,
+    "name": "피오네",
+    "varieties": []
+  },
+  {
+    "no": 490,
+    "name": "마나피",
+    "varieties": []
+  },
+  {
+    "no": 491,
+    "name": "다크라이",
+    "varieties": []
+  },
+  {
+    "no": 492,
+    "name": "쉐이미(랜드폼)",
+    "varieties": ["쉐이미(스카이폼)"]
+  },
+  {
+    "no": 493,
+    "name": "아르세우스",
+    "varieties": []
+  },
+  {
+    "no": 494,
+    "name": "비크티니",
+    "varieties": []
+  },
+  {
+    "no": 495,
+    "name": "주리비얀",
+    "varieties": []
+  },
+  {
+    "no": 496,
+    "name": "샤비",
+    "varieties": []
+  },
+  {
+    "no": 497,
+    "name": "샤로다",
+    "varieties": []
+  },
+  {
+    "no": 498,
+    "name": "뚜꾸리",
+    "varieties": []
+  },
+  {
+    "no": 499,
+    "name": "차오꿀",
+    "varieties": []
+  },
+  {
+    "no": 500,
+    "name": "염무왕",
+    "varieties": []
+  },
+  {
+    "no": 501,
+    "name": "수댕이",
+    "varieties": []
+  },
+  {
+    "no": 502,
+    "name": "쌍검자비",
+    "varieties": []
+  },
+  {
+    "no": 503,
+    "name": "대검귀",
+    "varieties": ["대검귀(히스이)"]
+  },
+  {
+    "no": 504,
+    "name": "보르쥐",
+    "varieties": []
+  },
+  {
+    "no": 505,
+    "name": "보르그",
+    "varieties": []
+  },
+  {
+    "no": 506,
+    "name": "요테리",
+    "varieties": []
+  },
+  {
+    "no": 507,
+    "name": "하데리어",
+    "varieties": []
+  },
+  {
+    "no": 508,
+    "name": "바랜드",
+    "varieties": []
+  },
+  {
+    "no": 509,
+    "name": "쌔비냥",
+    "varieties": []
+  },
+  {
+    "no": 510,
+    "name": "레파르다스",
+    "varieties": []
+  },
+  {
+    "no": 511,
+    "name": "야나프",
+    "varieties": []
+  },
+  {
+    "no": 512,
+    "name": "야나키",
+    "varieties": []
+  },
+  {
+    "no": 513,
+    "name": "바오프",
+    "varieties": []
+  },
+  {
+    "no": 514,
+    "name": "바오키",
+    "varieties": []
+  },
+  {
+    "no": 515,
+    "name": "앗차프",
+    "varieties": []
+  },
+  {
+    "no": 516,
+    "name": "앗차키",
+    "varieties": []
+  },
+  {
+    "no": 517,
+    "name": "몽나",
+    "varieties": []
+  },
+  {
+    "no": 518,
+    "name": "몽얌나",
+    "varieties": []
+  },
+  {
+    "no": 519,
+    "name": "콩둘기",
+    "varieties": []
+  },
+  {
+    "no": 520,
+    "name": "유토브",
+    "varieties": []
+  },
+  {
+    "no": 521,
+    "name": "켄호로우(수컷)",
+    "varieties": ["켄호로우(암컷)"]
+  },
+  {
+    "no": 522,
+    "name": "줄뮤마",
+    "varieties": []
+  },
+  {
+    "no": 523,
+    "name": "제브라이카",
+    "varieties": []
+  },
+  {
+    "no": 524,
+    "name": "단굴",
+    "varieties": []
+  },
+  {
+    "no": 525,
+    "name": "암트르",
+    "varieties": []
+  },
+  {
+    "no": 526,
+    "name": "기가이어스",
+    "varieties": []
+  },
+  {
+    "no": 527,
+    "name": "또르박쥐",
+    "varieties": []
+  },
+  {
+    "no": 528,
+    "name": "맘박쥐",
+    "varieties": []
+  },
+  {
+    "no": 529,
+    "name": "두더류",
+    "varieties": []
+  },
+  {
+    "no": 530,
+    "name": "몰드류",
+    "varieties": []
+  },
+  {
+    "no": 531,
+    "name": "다부니",
+    "varieties": ["메가다부니"]
+  },
+  {
+    "no": 532,
+    "name": "으랏차",
+    "varieties": []
+  },
+  {
+    "no": 533,
+    "name": "토쇠골",
+    "varieties": []
+  },
+  {
+    "no": 534,
+    "name": "노보청",
+    "varieties": []
+  },
+  {
+    "no": 535,
+    "name": "동챙이",
+    "varieties": []
+  },
+  {
+    "no": 536,
+    "name": "두까비",
+    "varieties": []
+  },
+  {
+    "no": 537,
+    "name": "두빅굴",
+    "varieties": []
+  },
+  {
+    "no": 538,
+    "name": "던지미",
+    "varieties": []
+  },
+  {
+    "no": 539,
+    "name": "타격귀",
+    "varieties": []
+  },
+  {
+    "no": 540,
+    "name": "두르보",
+    "varieties": []
+  },
+  {
+    "no": 541,
+    "name": "두르쿤",
+    "varieties": []
+  },
+  {
+    "no": 542,
+    "name": "모아머",
+    "varieties": []
+  },
+  {
+    "no": 543,
+    "name": "마디네",
+    "varieties": []
+  },
+  {
+    "no": 544,
+    "name": "휠구",
+    "varieties": []
+  },
+  {
+    "no": 545,
+    "name": "펜드라",
+    "varieties": []
+  },
+  {
+    "no": 546,
+    "name": "소미안",
+    "varieties": []
+  },
+  {
+    "no": 547,
+    "name": "엘풍",
+    "varieties": []
+  },
+  {
+    "no": 548,
+    "name": "치릴리",
+    "varieties": []
+  },
+  {
+    "no": 549,
+    "name": "드레디어",
+    "varieties": ["드레디어(히스이)"]
+  },
+  {
+    "no": 550,
+    "name": "배쓰나이(적색근)",
+    "varieties": ["배쓰나이(청색근)", "배쓰나이(백색근)"]
+  },
+  {
+    "no": 551,
+    "name": "깜눈크",
+    "varieties": []
+  },
+  {
+    "no": 552,
+    "name": "악비르",
+    "varieties": []
+  },
+  {
+    "no": 553,
+    "name": "악비아르",
+    "varieties": []
+  },
+  {
+    "no": 554,
+    "name": "달막화",
+    "varieties": ["달막화(가라르)"]
+  },
+  {
+    "no": 555,
+    "name": "불비달마(노말모드)",
+    "varieties": [
+      "불비달마(달마모드)",
+      "불비달마(가라르)",
+      "불비달마(가라르/달마모드)"
+    ]
+  },
+  {
+    "no": 556,
+    "name": "마라카치",
+    "varieties": []
+  },
+  {
+    "no": 557,
+    "name": "돌살이",
+    "varieties": []
+  },
+  {
+    "no": 558,
+    "name": "암팰리스",
+    "varieties": []
+  },
+  {
+    "no": 559,
+    "name": "곤율랭",
+    "varieties": []
+  },
+  {
+    "no": 560,
+    "name": "곤율거니",
+    "varieties": []
+  },
+  {
+    "no": 561,
+    "name": "심보러",
+    "varieties": []
+  },
+  {
+    "no": 562,
+    "name": "데스마스",
+    "varieties": ["데스마스(가라르)"]
+  },
+  {
+    "no": 563,
+    "name": "데스니칸",
+    "varieties": []
+  },
+  {
+    "no": 564,
+    "name": "프로토가",
+    "varieties": []
+  },
+  {
+    "no": 565,
+    "name": "늑골라",
+    "varieties": []
+  },
+  {
+    "no": 566,
+    "name": "아켄",
+    "varieties": []
+  },
+  {
+    "no": 567,
+    "name": "아케오스",
+    "varieties": []
+  },
+  {
+    "no": 568,
+    "name": "깨봉이",
+    "varieties": []
+  },
+  {
+    "no": 569,
+    "name": "더스트나",
+    "varieties": ["더스트나(거다이맥스)"]
+  },
+  {
+    "no": 570,
+    "name": "조로아",
+    "varieties": ["조로아(히스이)"]
+  },
+  {
+    "no": 571,
+    "name": "조로아크",
+    "varieties": ["조로아크(히스이)"]
+  },
+  {
+    "no": 572,
+    "name": "치라미",
+    "varieties": []
+  },
+  {
+    "no": 573,
+    "name": "치라치노",
+    "varieties": []
+  },
+  {
+    "no": 574,
+    "name": "고디탱",
+    "varieties": []
+  },
+  {
+    "no": 575,
+    "name": "고디보미",
+    "varieties": []
+  },
+  {
+    "no": 576,
+    "name": "고디모아젤",
+    "varieties": []
+  },
+  {
+    "no": 577,
+    "name": "유니란",
+    "varieties": []
+  },
+  {
+    "no": 578,
+    "name": "듀란",
+    "varieties": []
+  },
+  {
+    "no": 579,
+    "name": "란쿨루스",
+    "varieties": []
+  },
+  {
+    "no": 580,
+    "name": "꼬지보리",
+    "varieties": []
+  },
+  {
+    "no": 581,
+    "name": "스완나",
+    "varieties": []
+  },
+  {
+    "no": 582,
+    "name": "바닐프티",
+    "varieties": []
+  },
+  {
+    "no": 583,
+    "name": "바닐리치",
+    "varieties": []
+  },
+  {
+    "no": 584,
+    "name": "배바닐라",
+    "varieties": []
+  },
+  {
+    "no": 585,
+    "name": "사철록(봄)",
+    "varieties": ["사철록(여름)", "사철록(가을)", "사철록(겨울)"]
+  },
+  {
+    "no": 586,
+    "name": "바라철록(봄)",
+    "varieties": ["바라철록(여름)", "바라철록(가을)", "바라철록(겨울)"]
+  },
+  {
+    "no": 587,
+    "name": "에몽가",
+    "varieties": []
+  },
+  {
+    "no": 588,
+    "name": "딱정곤",
+    "varieties": []
+  },
+  {
+    "no": 589,
+    "name": "슈바르고",
+    "varieties": []
+  },
+  {
+    "no": 590,
+    "name": "깜놀버슬",
+    "varieties": []
+  },
+  {
+    "no": 591,
+    "name": "뽀록나",
+    "varieties": []
+  },
+  {
+    "no": 592,
+    "name": "탱그릴(수컷)",
+    "varieties": ["탱그릴(암컷)"]
+  },
+  {
+    "no": 593,
+    "name": "탱탱겔(수컷)",
+    "varieties": ["탱탱겔(암컷)"]
+  },
+  {
+    "no": 594,
+    "name": "맘복치",
+    "varieties": []
+  },
+  {
+    "no": 595,
+    "name": "파쪼옥",
+    "varieties": []
+  },
+  {
+    "no": 596,
+    "name": "전툴라",
+    "varieties": []
+  },
+  {
+    "no": 597,
+    "name": "철시드",
+    "varieties": []
+  },
+  {
+    "no": 598,
+    "name": "너트령",
+    "varieties": []
+  },
+  {
+    "no": 599,
+    "name": "기어르",
+    "varieties": []
+  },
+  {
+    "no": 600,
+    "name": "기기어르",
+    "varieties": []
+  },
+  {
+    "no": 601,
+    "name": "기기기어르",
+    "varieties": []
+  },
+  {
+    "no": 602,
+    "name": "저리어",
+    "varieties": []
+  },
+  {
+    "no": 603,
+    "name": "저리릴",
+    "varieties": []
+  },
+  {
+    "no": 604,
+    "name": "저리더프",
+    "varieties": []
+  },
+  {
+    "no": 605,
+    "name": "리그레",
+    "varieties": []
+  },
+  {
+    "no": 606,
+    "name": "벰크",
+    "varieties": []
+  },
+  {
+    "no": 607,
+    "name": "불켜미",
+    "varieties": []
+  },
+  {
+    "no": 608,
+    "name": "램프라",
+    "varieties": []
+  },
+  {
+    "no": 609,
+    "name": "샹델라",
+    "varieties": []
+  },
+  {
+    "no": 610,
+    "name": "터검니",
+    "varieties": []
+  },
+  {
+    "no": 611,
+    "name": "액슨도",
+    "varieties": []
+  },
+  {
+    "no": 612,
+    "name": "액스라이즈",
+    "varieties": []
+  },
+  {
+    "no": 613,
+    "name": "코고미",
+    "varieties": []
+  },
+  {
+    "no": 614,
+    "name": "툰베어",
+    "varieties": []
+  },
+  {
+    "no": 615,
+    "name": "프리지오",
+    "varieties": []
+  },
+  {
+    "no": 616,
+    "name": "쪼마리",
+    "varieties": []
+  },
+  {
+    "no": 617,
+    "name": "어지리더",
+    "varieties": []
+  },
+  {
+    "no": 618,
+    "name": "메더",
+    "varieties": ["메더(가라르)"]
+  },
+  {
+    "no": 619,
+    "name": "비조푸",
+    "varieties": []
+  },
+  {
+    "no": 620,
+    "name": "비조도",
+    "varieties": []
+  },
+  {
+    "no": 621,
+    "name": "크리만",
+    "varieties": []
+  },
+  {
+    "no": 622,
+    "name": "골비람",
+    "varieties": []
+  },
+  {
+    "no": 623,
+    "name": "골루그",
+    "varieties": []
+  },
+  {
+    "no": 624,
+    "name": "자망칼",
+    "varieties": []
+  },
+  {
+    "no": 625,
+    "name": "절각참",
+    "varieties": []
+  },
+  {
+    "no": 626,
+    "name": "버프론",
+    "varieties": []
+  },
+  {
+    "no": 627,
+    "name": "수리둥보",
+    "varieties": []
+  },
+  {
+    "no": 628,
+    "name": "워글",
+    "varieties": ["워글(히스이)"]
+  },
+  {
+    "no": 629,
+    "name": "벌차이",
+    "varieties": []
+  },
+  {
+    "no": 630,
+    "name": "버랜지나",
+    "varieties": []
+  },
+  {
+    "no": 631,
+    "name": "앤티골",
+    "varieties": []
+  },
+  {
+    "no": 632,
+    "name": "아이앤트",
+    "varieties": []
+  },
+  {
+    "no": 633,
+    "name": "모노두",
+    "varieties": []
+  },
+  {
+    "no": 634,
+    "name": "디헤드",
+    "varieties": []
+  },
+  {
+    "no": 635,
+    "name": "삼삼드래",
+    "varieties": []
+  },
+  {
+    "no": 636,
+    "name": "활화르바",
+    "varieties": []
+  },
+  {
+    "no": 637,
+    "name": "불카모스",
+    "varieties": []
+  },
+  {
+    "no": 638,
+    "name": "코바르온",
+    "varieties": []
+  },
+  {
+    "no": 639,
+    "name": "테라키온",
+    "varieties": []
+  },
+  {
+    "no": 640,
+    "name": "비리디온",
+    "varieties": []
+  },
+  {
+    "no": 641,
+    "name": "토네로스(화신폼)",
+    "varieties": ["토네로스(영물폼)"]
+  },
+  {
+    "no": 642,
+    "name": "볼트로스(화신폼)",
+    "varieties": ["볼트로스(영물폼)"]
+  },
+  {
+    "no": 643,
+    "name": "레시라무",
+    "varieties": []
+  },
+  {
+    "no": 644,
+    "name": "제크로무",
+    "varieties": []
+  },
+  {
+    "no": 645,
+    "name": "랜드로스(화신폼)",
+    "varieties": ["랜드로스(영물폼)"]
+  },
+  {
+    "no": 646,
+    "name": "큐레무(큐레무)",
+    "varieties": ["큐레무(화이트큐레무)", "큐레무(블랙큐레무)"]
+  },
+  {
+    "no": 647,
+    "name": "케르디오(평상시모습)",
+    "varieties": ["케르디오(각오)"]
+  },
+  {
+    "no": 648,
+    "name": "메로엣타(보이스폼)",
+    "varieties": ["메로엣타(스텝폼)"]
+  },
+  {
+    "no": 649,
+    "name": "게노세크트",
+    "varieties": []
+  },
+  {
+    "no": 650,
+    "name": "도치마론",
+    "varieties": []
+  },
+  {
+    "no": 651,
+    "name": "도치보구",
+    "varieties": []
+  },
+  {
+    "no": 652,
+    "name": "브리가론",
+    "varieties": []
+  },
+  {
+    "no": 653,
+    "name": "푸호꼬",
+    "varieties": []
+  },
+  {
+    "no": 654,
+    "name": "테르나",
+    "varieties": []
+  },
+  {
+    "no": 655,
+    "name": "마폭시",
+    "varieties": []
+  },
+  {
+    "no": 656,
+    "name": "개구마르",
+    "varieties": []
+  },
+  {
+    "no": 657,
+    "name": "개굴반장",
+    "varieties": []
+  },
+  {
+    "no": 658,
+    "name": "개굴닌자",
+    "varieties": []
+  },
+  {
+    "no": 659,
+    "name": "파르빗",
+    "varieties": []
+  },
+  {
+    "no": 660,
+    "name": "파르토",
+    "varieties": []
+  },
+  {
+    "no": 661,
+    "name": "화살꼬빈",
+    "varieties": []
+  },
+  {
+    "no": 662,
+    "name": "불화살빈",
+    "varieties": []
+  },
+  {
+    "no": 663,
+    "name": "파이어로",
+    "varieties": []
+  },
+  {
+    "no": 664,
+    "name": "분이벌레",
+    "varieties": []
+  },
+  {
+    "no": 665,
+    "name": "분떠도리",
+    "varieties": []
+  },
+  {
+    "no": 666,
+    "name": "비비용",
+    "varieties": []
+  },
+  {
+    "no": 667,
+    "name": "레오꼬",
+    "varieties": []
+  },
+  {
+    "no": 668,
+    "name": "화염레오(수컷)",
+    "varieties": ["화염레오(암컷)"]
+  },
+  {
+    "no": 669,
+    "name": "플라베베",
+    "varieties": []
+  },
+  {
+    "no": 670,
+    "name": "플라엣테",
+    "varieties": []
+  },
+  {
+    "no": 671,
+    "name": "플라제스",
+    "varieties": []
+  },
+  {
+    "no": 672,
+    "name": "메이클",
+    "varieties": []
+  },
+  {
+    "no": 673,
+    "name": "고고트",
+    "varieties": []
+  },
+  {
+    "no": 674,
+    "name": "판짱",
+    "varieties": []
+  },
+  {
+    "no": 675,
+    "name": "부란다",
+    "varieties": []
+  },
+  {
+    "no": 676,
+    "name": "트리미앙",
+    "varieties": []
+  },
+  {
+    "no": 677,
+    "name": "냐스퍼",
+    "varieties": []
+  },
+  {
+    "no": 678,
+    "name": "냐오닉스(수컷)",
+    "varieties": ["냐오닉스(암컷)"]
+  },
+  {
+    "no": 679,
+    "name": "단칼빙",
+    "varieties": []
+  },
+  {
+    "no": 680,
+    "name": "쌍검킬",
+    "varieties": []
+  },
+  {
+    "no": 681,
+    "name": "킬가르도(실드폼)",
+    "varieties": ["킬가르도(블레이드폼)"]
+  },
+  {
+    "no": 682,
+    "name": "슈쁘",
+    "varieties": []
+  },
+  {
+    "no": 683,
+    "name": "프레프티르",
+    "varieties": []
+  },
+  {
+    "no": 684,
+    "name": "나룸퍼프",
+    "varieties": []
+  },
+  {
+    "no": 685,
+    "name": "나루림",
+    "varieties": []
+  },
+  {
+    "no": 686,
+    "name": "오케이징",
+    "varieties": []
+  },
+  {
+    "no": 687,
+    "name": "칼라마네로",
+    "varieties": []
+  },
+  {
+    "no": 688,
+    "name": "거북손손",
+    "varieties": []
+  },
+  {
+    "no": 689,
+    "name": "거북손데스",
+    "varieties": []
+  },
+  {
+    "no": 690,
+    "name": "수레기",
+    "varieties": []
+  },
+  {
+    "no": 691,
+    "name": "드래캄",
+    "varieties": []
+  },
+  {
+    "no": 692,
+    "name": "완철포",
+    "varieties": []
+  },
+  {
+    "no": 693,
+    "name": "블로스터",
+    "varieties": []
+  },
+  {
+    "no": 694,
+    "name": "목도리키텔",
+    "varieties": []
+  },
+  {
+    "no": 695,
+    "name": "일레도리자드",
+    "varieties": []
+  },
+  {
+    "no": 696,
+    "name": "티고라스",
+    "varieties": []
+  },
+  {
+    "no": 697,
+    "name": "견고라스",
+    "varieties": []
+  },
+  {
+    "no": 698,
+    "name": "아마루스",
+    "varieties": []
+  },
+  {
+    "no": 699,
+    "name": "아마루르가",
+    "varieties": []
+  },
+  {
+    "no": 700,
+    "name": "님피아",
+    "varieties": []
+  },
+  {
+    "no": 701,
+    "name": "루차불",
+    "varieties": []
+  },
+  {
+    "no": 702,
+    "name": "데덴네",
+    "varieties": []
+  },
+  {
+    "no": 703,
+    "name": "멜리시",
+    "varieties": []
+  },
+  {
+    "no": 704,
+    "name": "미끄메라",
+    "varieties": []
+  },
+  {
+    "no": 705,
+    "name": "미끄네일",
+    "varieties": ["미끄네일(히스이)"]
+  },
+  {
+    "no": 706,
+    "name": "미끄래곤",
+    "varieties": ["미끄래곤(히스이)"]
+  },
+  {
+    "no": 707,
+    "name": "클레피",
+    "varieties": []
+  },
+  {
+    "no": 708,
+    "name": "나목령",
+    "varieties": []
+  },
+  {
+    "no": 709,
+    "name": "대로트",
+    "varieties": []
+  },
+  {
+    "no": 710,
+    "name": "호바귀",
+    "varieties": []
+  },
+  {
+    "no": 711,
+    "name": "펌킨인",
+    "varieties": []
+  },
+  {
+    "no": 712,
+    "name": "꽁어름",
+    "varieties": []
+  },
+  {
+    "no": 713,
+    "name": "크레베이스",
+    "varieties": ["크레베이스(히스이)"]
+  },
+  {
+    "no": 714,
+    "name": "음뱃",
+    "varieties": []
+  },
+  {
+    "no": 715,
+    "name": "음번",
+    "varieties": []
+  },
+  {
+    "no": 716,
+    "name": "제르네아스",
+    "varieties": []
+  },
+  {
+    "no": 717,
+    "name": "이벨타르",
+    "varieties": []
+  },
+  {
+    "no": 718,
+    "name": "지가르데(50%폼)",
+    "varieties": ["지가르데(10%폼)", "지가르데(퍼펙트폼)"]
+  },
+  {
+    "no": 719,
+    "name": "디안시",
+    "varieties": ["메가디안시"]
+  },
+  {
+    "no": 720,
+    "name": "후파(굴레에빠진후파)",
+    "varieties": ["후파(굴레를벗어난후파)"]
+  },
+  {
+    "no": 721,
+    "name": "볼케니온",
+    "varieties": []
+  },
+  {
+    "no": 722,
+    "name": "나몰빼미",
+    "varieties": []
+  },
+  {
+    "no": 723,
+    "name": "빼미스로우",
+    "varieties": []
+  },
+  {
+    "no": 724,
+    "name": "모크나이퍼",
+    "varieties": ["모크나이퍼(히스이)"]
+  },
+  {
+    "no": 725,
+    "name": "냐오불",
+    "varieties": []
+  },
+  {
+    "no": 726,
+    "name": "냐오히트",
+    "varieties": []
+  },
+  {
+    "no": 727,
+    "name": "어흥염",
+    "varieties": []
+  },
+  {
+    "no": 728,
+    "name": "누리공",
+    "varieties": []
+  },
+  {
+    "no": 729,
+    "name": "키요공",
+    "varieties": []
+  },
+  {
+    "no": 730,
+    "name": "누리레느",
+    "varieties": []
+  },
+  {
+    "no": 731,
+    "name": "콕코구리",
+    "varieties": []
+  },
+  {
+    "no": 732,
+    "name": "크라파",
+    "varieties": []
+  },
+  {
+    "no": 733,
+    "name": "왕큰부리",
+    "varieties": []
+  },
+  {
+    "no": 734,
+    "name": "영구스",
+    "varieties": []
+  },
+  {
+    "no": 735,
+    "name": "형사구스",
+    "varieties": []
+  },
+  {
+    "no": 736,
+    "name": "턱지충이",
+    "varieties": []
+  },
+  {
+    "no": 737,
+    "name": "전지충이",
+    "varieties": []
+  },
+  {
+    "no": 738,
+    "name": "투구뿌논",
+    "varieties": []
+  },
+  {
+    "no": 739,
+    "name": "오기지게",
+    "varieties": []
+  },
+  {
+    "no": 740,
+    "name": "모단단게",
+    "varieties": []
+  },
+  {
+    "no": 741,
+    "name": "춤추새(이글이글스타일)",
+    "varieties": [
+      "춤추새(파칙파칙스타일)",
+      "춤추새(훌라훌라스타일)",
+      "춤추새(하늘하늘스타일)"
+    ]
+  },
+  {
+    "no": 742,
+    "name": "에블리",
+    "varieties": []
+  },
+  {
+    "no": 743,
+    "name": "에리본",
+    "varieties": []
+  },
+  {
+    "no": 744,
+    "name": "암멍이",
+    "varieties": []
+  },
+  {
+    "no": 745,
+    "name": "루가루암(한낮)",
+    "varieties": ["루가루암(한밤중)", "루가루암(황혼)"]
+  },
+  {
+    "no": 746,
+    "name": "약어리(단독)",
+    "varieties": ["약어리(군집)"]
+  },
+  {
+    "no": 747,
+    "name": "시마사리",
+    "varieties": []
+  },
+  {
+    "no": 748,
+    "name": "더시마사리",
+    "varieties": []
+  },
+  {
+    "no": 749,
+    "name": "머드나기",
+    "varieties": []
+  },
+  {
+    "no": 750,
+    "name": "만마드",
+    "varieties": []
+  },
+  {
+    "no": 751,
+    "name": "물거미",
+    "varieties": []
+  },
+  {
+    "no": 752,
+    "name": "깨비물거미",
+    "varieties": []
+  },
+  {
+    "no": 753,
+    "name": "짜랑랑",
+    "varieties": []
+  },
+  {
+    "no": 754,
+    "name": "라란티스",
+    "varieties": []
+  },
+  {
+    "no": 755,
+    "name": "자마슈",
+    "varieties": []
+  },
+  {
+    "no": 756,
+    "name": "마셰이드",
+    "varieties": []
+  },
+  {
+    "no": 757,
+    "name": "야도뇽",
+    "varieties": []
+  },
+  {
+    "no": 758,
+    "name": "염뉴트",
+    "varieties": []
+  },
+  {
+    "no": 759,
+    "name": "포곰곰",
+    "varieties": []
+  },
+  {
+    "no": 760,
+    "name": "이븐곰",
+    "varieties": []
+  },
+  {
+    "no": 761,
+    "name": "달콤아",
+    "varieties": []
+  },
+  {
+    "no": 762,
+    "name": "달무리나",
+    "varieties": []
+  },
+  {
+    "no": 763,
+    "name": "달코퀸",
+    "varieties": []
+  },
+  {
+    "no": 764,
+    "name": "큐아링",
+    "varieties": []
+  },
+  {
+    "no": 765,
+    "name": "하랑우탄",
+    "varieties": []
+  },
+  {
+    "no": 766,
+    "name": "내던숭이",
+    "varieties": []
+  },
+  {
+    "no": 767,
+    "name": "꼬시레",
+    "varieties": []
+  },
+  {
+    "no": 768,
+    "name": "갑주무사",
+    "varieties": []
+  },
+  {
+    "no": 769,
+    "name": "모래꿍",
+    "varieties": []
+  },
+  {
+    "no": 770,
+    "name": "모래성이당",
+    "varieties": []
+  },
+  {
+    "no": 771,
+    "name": "해무기",
+    "varieties": []
+  },
+  {
+    "no": 772,
+    "name": "타입:널",
+    "varieties": []
+  },
+  {
+    "no": 773,
+    "name": "실버디(타입:노말)",
+    "varieties": []
+  },
+  {
+    "no": 774,
+    "name": "메테노(유성)",
+    "varieties": ["메테노(빨간색코어)"]
+  },
+  {
+    "no": 775,
+    "name": "자말라",
+    "varieties": []
+  },
+  {
+    "no": 776,
+    "name": "폭거북스",
+    "varieties": []
+  },
+  {
+    "no": 777,
+    "name": "토게데마루",
+    "varieties": []
+  },
+  {
+    "no": 778,
+    "name": "따라큐(둔갑한모습)",
+    "varieties": []
+  },
+  {
+    "no": 779,
+    "name": "치갈기",
+    "varieties": []
+  },
+  {
+    "no": 780,
+    "name": "할비롱",
+    "varieties": []
+  },
+  {
+    "no": 781,
+    "name": "타타륜",
+    "varieties": []
+  },
+  {
+    "no": 782,
+    "name": "짜랑꼬",
+    "varieties": []
+  },
+  {
+    "no": 783,
+    "name": "짜랑고우",
+    "varieties": []
+  },
+  {
+    "no": 784,
+    "name": "짜랑고우거",
+    "varieties": []
+  },
+  {
+    "no": 785,
+    "name": "카푸꼬꼬꼭",
+    "varieties": []
+  },
+  {
+    "no": 786,
+    "name": "카푸나비나",
+    "varieties": []
+  },
+  {
+    "no": 787,
+    "name": "카푸브루루",
+    "varieties": []
+  },
+  {
+    "no": 788,
+    "name": "카푸느지느",
+    "varieties": []
+  },
+  {
+    "no": 789,
+    "name": "코스모그",
+    "varieties": []
+  },
+  {
+    "no": 790,
+    "name": "코스모움",
+    "varieties": []
+  },
+  {
+    "no": 791,
+    "name": "솔가레오",
+    "varieties": []
+  },
+  {
+    "no": 792,
+    "name": "루나아라",
+    "varieties": []
+  },
+  {
+    "no": 793,
+    "name": "텅비드",
+    "varieties": []
+  },
+  {
+    "no": 794,
+    "name": "매시붕",
+    "varieties": []
+  },
+  {
+    "no": 795,
+    "name": "페로코체",
+    "varieties": []
+  },
+  {
+    "no": 796,
+    "name": "전수목",
+    "varieties": []
+  },
+  {
+    "no": 797,
+    "name": "철화구야",
+    "varieties": []
+  },
+  {
+    "no": 798,
+    "name": "종이신도",
+    "varieties": []
+  },
+  {
+    "no": 799,
+    "name": "악식킹",
+    "varieties": []
+  },
+  {
+    "no": 800,
+    "name": "네크로즈마",
+    "varieties": [
+      "네크로즈마(황혼의갈기)",
+      "네크로즈마(새벽의날개)",
+      "네크로즈마(울트라네크로즈마)"
+    ]
+  },
+  {
+    "no": 801,
+    "name": "마기아나",
+    "varieties": []
+  },
+  {
+    "no": 802,
+    "name": "마샤도",
+    "varieties": []
+  },
+  {
+    "no": 803,
+    "name": "베베놈",
+    "varieties": []
+  },
+  {
+    "no": 804,
+    "name": "아고용",
+    "varieties": []
+  },
+  {
+    "no": 805,
+    "name": "차곡차곡",
+    "varieties": []
+  },
+  {
+    "no": 806,
+    "name": "두파팡",
+    "varieties": []
+  },
+  {
+    "no": 807,
+    "name": "제라오라",
+    "varieties": []
+  },
+  {
+    "no": 808,
+    "name": "멜탄",
+    "varieties": []
+  },
+  {
+    "no": 809,
+    "name": "멜메탈",
+    "varieties": ["멜메탈(거다이맥스)"]
+  },
+  {
+    "no": 810,
+    "name": "흥나숭",
+    "varieties": []
+  },
+  {
+    "no": 811,
+    "name": "채키몽",
+    "varieties": []
+  },
+  {
+    "no": 812,
+    "name": "고릴타",
+    "varieties": ["고릴타(거다이맥스)"]
+  },
+  {
+    "no": 813,
+    "name": "염버니",
+    "varieties": []
+  },
+  {
+    "no": 814,
+    "name": "래비풋",
+    "varieties": []
+  },
+  {
+    "no": 815,
+    "name": "에이스번",
+    "varieties": ["에이스번(거다이맥스)"]
+  },
+  {
+    "no": 816,
+    "name": "울머기",
+    "varieties": []
+  },
+  {
+    "no": 817,
+    "name": "누겔레온",
+    "varieties": []
+  },
+  {
+    "no": 818,
+    "name": "인텔리레온",
+    "varieties": ["인텔리레온(거다이맥스)"]
+  },
+  {
+    "no": 819,
+    "name": "탐리스",
+    "varieties": []
+  },
+  {
+    "no": 820,
+    "name": "요씽리스",
+    "varieties": []
+  },
+  {
+    "no": 821,
+    "name": "파라꼬",
+    "varieties": []
+  },
+  {
+    "no": 822,
+    "name": "파크로우",
+    "varieties": []
+  },
+  {
+    "no": 823,
+    "name": "아머까오",
+    "varieties": ["아머까오(거다이맥스)"]
+  },
+  {
+    "no": 824,
+    "name": "두루지벌레",
+    "varieties": []
+  },
+  {
+    "no": 825,
+    "name": "레돔벌레",
+    "varieties": []
+  },
+  {
+    "no": 826,
+    "name": "이올브",
+    "varieties": ["이올브(거다이맥스)"]
+  },
+  {
+    "no": 827,
+    "name": "훔처우",
+    "varieties": []
+  },
+  {
+    "no": 828,
+    "name": "폭슬라이",
+    "varieties": []
+  },
+  {
+    "no": 829,
+    "name": "꼬모카",
+    "varieties": []
+  },
+  {
+    "no": 830,
+    "name": "백솜모카",
+    "varieties": []
+  },
+  {
+    "no": 831,
+    "name": "우르",
+    "varieties": []
+  },
+  {
+    "no": 832,
+    "name": "배우르",
+    "varieties": []
+  },
+  {
+    "no": 833,
+    "name": "깨물부기",
+    "varieties": []
+  },
+  {
+    "no": 834,
+    "name": "갈가부기",
+    "varieties": ["갈가부기(거다이맥스)"]
+  },
+  {
+    "no": 835,
+    "name": "멍파치",
+    "varieties": []
+  },
+  {
+    "no": 836,
+    "name": "펄스멍",
+    "varieties": []
+  },
+  {
+    "no": 837,
+    "name": "탄동",
+    "varieties": []
+  },
+  {
+    "no": 838,
+    "name": "탄차곤",
+    "varieties": []
+  },
+  {
+    "no": 839,
+    "name": "석탄산",
+    "varieties": ["석탄산(거다이맥스)"]
+  },
+  {
+    "no": 840,
+    "name": "과사삭벌레",
+    "varieties": []
+  },
+  {
+    "no": 841,
+    "name": "애프룡",
+    "varieties": ["애프룡(거다이맥스)"]
+  },
+  {
+    "no": 842,
+    "name": "단지래플",
+    "varieties": ["단지래플(거다이맥스)"]
+  },
+  {
+    "no": 843,
+    "name": "모래뱀",
+    "varieties": []
+  },
+  {
+    "no": 844,
+    "name": "사다이사",
+    "varieties": ["사다이사(거다이맥스)"]
+  },
+  {
+    "no": 845,
+    "name": "윽우지",
+    "varieties": []
+  },
+  {
+    "no": 846,
+    "name": "찌로꼬치",
+    "varieties": []
+  },
+  {
+    "no": 847,
+    "name": "꼬치조",
+    "varieties": []
+  },
+  {
+    "no": 848,
+    "name": "일레즌",
+    "varieties": []
+  },
+  {
+    "no": 849,
+    "name": "스트린더(하이한모습)",
+    "varieties": [
+      "스트린더(로우한모습)",
+      "스트린더(하이한모습/거다이맥스)",
+      "스트린더(로우한모습/거다이맥스)"
+    ]
+  },
+  {
+    "no": 850,
+    "name": "태우지네",
+    "varieties": []
+  },
+  {
+    "no": 851,
+    "name": "다태우지네",
+    "varieties": ["다태우지네(거다이맥스)"]
+  },
+  {
+    "no": 852,
+    "name": "때때무노",
+    "varieties": []
+  },
+  {
+    "no": 853,
+    "name": "케오퍼스",
+    "varieties": []
+  },
+  {
+    "no": 854,
+    "name": "데인차(위작폼)",
+    "varieties": ["데인차(진작폼)"]
+  },
+  {
+    "no": 855,
+    "name": "포트데스(위작폼)",
+    "varieties": ["포트데스(진작폼)"]
+  },
+  {
+    "no": 856,
+    "name": "몸지브림",
+    "varieties": []
+  },
+  {
+    "no": 857,
+    "name": "손지브림",
+    "varieties": []
+  },
+  {
+    "no": 858,
+    "name": "브리무음",
+    "varieties": ["브리무음(거다이맥스)"]
+  },
+  {
+    "no": 859,
+    "name": "메롱꿍",
+    "varieties": []
+  },
+  {
+    "no": 860,
+    "name": "쏘겨모",
+    "varieties": []
+  },
+  {
+    "no": 861,
+    "name": "오롱털",
+    "varieties": ["오롱털(거다이맥스)"]
+  },
+  {
+    "no": 862,
+    "name": "가로막구리",
+    "varieties": []
+  },
+  {
+    "no": 863,
+    "name": "나이킹",
+    "varieties": []
+  },
+  {
+    "no": 864,
+    "name": "산호르곤",
+    "varieties": []
+  },
+  {
+    "no": 865,
+    "name": "창파나이트",
+    "varieties": []
+  },
+  {
+    "no": 866,
+    "name": "마임꽁꽁",
+    "varieties": []
+  },
+  {
+    "no": 867,
+    "name": "데스판",
+    "varieties": []
+  },
+  {
+    "no": 868,
+    "name": "마빌크",
+    "varieties": []
+  },
+  {
+    "no": 869,
+    "name": "마휘핑",
+    "varieties": ["마휘핑(거다이맥스)"]
+  },
+  {
+    "no": 870,
+    "name": "대여르",
+    "varieties": []
+  },
+  {
+    "no": 871,
+    "name": "찌르성게",
+    "varieties": []
+  },
+  {
+    "no": 872,
+    "name": "누니머기",
+    "varieties": []
+  },
+  {
+    "no": 873,
+    "name": "모스노우",
+    "varieties": []
+  },
+  {
+    "no": 874,
+    "name": "돌헨진",
+    "varieties": []
+  },
+  {
+    "no": 875,
+    "name": "빙큐보(아이스페이스)",
+    "varieties": ["빙큐보(나이스페이스)"]
+  },
+  {
+    "no": 876,
+    "name": "에써르(수컷)",
+    "varieties": ["에써르(암컷)"]
+  },
+  {
+    "no": 877,
+    "name": "모르페코(배부른모양)",
+    "varieties": ["모르페코(배고픈모양)"]
+  },
+  {
+    "no": 878,
+    "name": "끼리동",
+    "varieties": []
+  },
+  {
+    "no": 879,
+    "name": "대왕끼리동",
+    "varieties": ["대왕끼리동(거다이맥스)"]
+  },
+  {
+    "no": 880,
+    "name": "파치래곤",
+    "varieties": []
+  },
+  {
+    "no": 881,
+    "name": "파치르돈",
+    "varieties": []
+  },
+  {
+    "no": 882,
+    "name": "어래곤",
+    "varieties": []
+  },
+  {
+    "no": 883,
+    "name": "어치르돈",
+    "varieties": []
+  },
+  {
+    "no": 884,
+    "name": "두랄루돈",
+    "varieties": ["두랄루돈(거다이맥스)"]
+  },
+  {
+    "no": 885,
+    "name": "드라꼰",
+    "varieties": []
+  },
+  {
+    "no": 886,
+    "name": "드래런치",
+    "varieties": []
+  },
+  {
+    "no": 887,
+    "name": "드래펄트",
+    "varieties": []
+  },
+  {
+    "no": 888,
+    "name": "자시안(역전의용사)",
+    "varieties": ["자시안(검왕)"]
+  },
+  {
+    "no": 889,
+    "name": "자마젠타(역전의용사)",
+    "varieties": ["자마젠타(방패왕)"]
+  },
+  {
+    "no": 890,
+    "name": "무한다이노",
+    "varieties": []
+  },
+  {
+    "no": 891,
+    "name": "치고마",
+    "varieties": []
+  },
+  {
+    "no": 892,
+    "name": "우라오스(일격의태세)",
+    "varieties": [
+      "우라오스(연격의태세)",
+      "우라오스(일격의태세/거다이맥스)",
+      "우라오스(연격의태세/거다이맥스)"
+    ]
+  },
+  {
+    "no": 893,
+    "name": "자루도",
+    "varieties": []
+  },
+  {
+    "no": 894,
+    "name": "레지에레키",
+    "varieties": []
+  },
+  {
+    "no": 895,
+    "name": "레지드래고",
+    "varieties": []
+  },
+  {
+    "no": 896,
+    "name": "블리자포스",
+    "varieties": []
+  },
+  {
+    "no": 897,
+    "name": "레이스포스",
+    "varieties": []
+  },
+  {
+    "no": 898,
+    "name": "버드렉스",
+    "varieties": ["버드렉스(백마탄모습)", "버드렉스(흑마탄모습)"]
+  },
+  {
+    "no": 899,
+    "name": "신비록",
+    "varieties": []
+  },
+  {
+    "no": 900,
+    "name": "사마자르",
+    "varieties": []
+  },
+  {
+    "no": 901,
+    "name": "다투곰",
+    "varieties": ["다투곰(붉은달)"]
+  },
+  {
+    "no": 902,
+    "name": "대쓰여너(수컷)",
+    "varieties": ["대쓰여너(암컷)"]
+  },
+  {
+    "no": 903,
+    "name": "포푸니크",
+    "varieties": []
+  },
+  {
+    "no": 904,
+    "name": "장침바루",
+    "varieties": []
+  },
+  {
+    "no": 905,
+    "name": "러브로스(화신폼)",
+    "varieties": ["러브로스(영물폼)"]
+  },
+  {
+    "no": 906,
+    "name": "나오하",
+    "varieties": []
+  },
+  {
+    "no": 907,
+    "name": "나로테",
+    "varieties": []
+  },
+  {
+    "no": 908,
+    "name": "마스카나",
+    "varieties": []
+  },
+  {
+    "no": 909,
+    "name": "뜨아거",
+    "varieties": []
+  },
+  {
+    "no": 910,
+    "name": "악뜨거",
+    "varieties": []
+  },
+  {
+    "no": 911,
+    "name": "라우드본",
+    "varieties": []
+  },
+  {
+    "no": 912,
+    "name": "꾸왁스",
+    "varieties": []
+  },
+  {
+    "no": 913,
+    "name": "아꾸왁",
+    "varieties": []
+  },
+  {
+    "no": 914,
+    "name": "웨이니발",
+    "varieties": []
+  },
+  {
+    "no": 915,
+    "name": "맛보돈",
+    "varieties": []
+  },
+  {
+    "no": 916,
+    "name": "퍼퓨돈(수컷)",
+    "varieties": ["퍼퓨돈(암컷)"]
+  },
+  {
+    "no": 917,
+    "name": "타랜툴라",
+    "varieties": []
+  },
+  {
+    "no": 918,
+    "name": "트래피더",
+    "varieties": []
+  },
+  {
+    "no": 919,
+    "name": "콩알뚜기",
+    "varieties": []
+  },
+  {
+    "no": 920,
+    "name": "엑스레그",
+    "varieties": []
+  },
+  {
+    "no": 921,
+    "name": "빠모",
+    "varieties": []
+  },
+  {
+    "no": 922,
+    "name": "빠모트",
+    "varieties": []
+  },
+  {
+    "no": 923,
+    "name": "빠르모트",
+    "varieties": []
+  },
+  {
+    "no": 924,
+    "name": "두리쥐",
+    "varieties": []
+  },
+  {
+    "no": 925,
+    "name": "파밀리쥐(세식구)",
+    "varieties": ["파밀리쥐(네식구)"]
+  },
+  {
+    "no": 926,
+    "name": "쫀도기",
+    "varieties": []
+  },
+  {
+    "no": 927,
+    "name": "바우첼",
+    "varieties": []
+  },
+  {
+    "no": 928,
+    "name": "미니브",
+    "varieties": []
+  },
+  {
+    "no": 929,
+    "name": "올리뇨",
+    "varieties": []
+  },
+  {
+    "no": 930,
+    "name": "올리르바",
+    "varieties": []
+  },
+  {
+    "no": 931,
+    "name": "시비꼬(그린페더)",
+    "varieties": ["시비꼬(블루페더)", "시비꼬(옐로페더)", "시비꼬(화이트페더)"]
+  },
+  {
+    "no": 932,
+    "name": "베베솔트",
+    "varieties": []
+  },
+  {
+    "no": 933,
+    "name": "스태솔트",
+    "varieties": []
+  },
+  {
+    "no": 934,
+    "name": "콜로솔트",
+    "varieties": []
+  },
+  {
+    "no": 935,
+    "name": "카르본",
+    "varieties": []
+  },
+  {
+    "no": 936,
+    "name": "카디나르마",
+    "varieties": []
+  },
+  {
+    "no": 937,
+    "name": "파라블레이즈",
+    "varieties": []
+  },
+  {
+    "no": 938,
+    "name": "빈나두",
+    "varieties": []
+  },
+  {
+    "no": 939,
+    "name": "찌리배리",
+    "varieties": []
+  },
+  {
+    "no": 940,
+    "name": "찌리비",
+    "varieties": []
+  },
+  {
+    "no": 941,
+    "name": "찌리비크",
+    "varieties": []
+  },
+  {
+    "no": 942,
+    "name": "오라티프",
+    "varieties": []
+  },
+  {
+    "no": 943,
+    "name": "마피티프",
+    "varieties": []
+  },
+  {
+    "no": 944,
+    "name": "땃쭈르",
+    "varieties": []
+  },
+  {
+    "no": 945,
+    "name": "태깅구르",
+    "varieties": []
+  },
+  {
+    "no": 946,
+    "name": "그푸리",
+    "varieties": []
+  },
+  {
+    "no": 947,
+    "name": "공푸리",
+    "varieties": []
+  },
+  {
+    "no": 948,
+    "name": "들눈해",
+    "varieties": []
+  },
+  {
+    "no": 949,
+    "name": "육파리",
+    "varieties": []
+  },
+  {
+    "no": 950,
+    "name": "절벼게",
+    "varieties": []
+  },
+  {
+    "no": 951,
+    "name": "캡싸이",
+    "varieties": []
+  },
+  {
+    "no": 952,
+    "name": "스코빌런",
+    "varieties": []
+  },
+  {
+    "no": 953,
+    "name": "구르데",
+    "varieties": []
+  },
+  {
+    "no": 954,
+    "name": "베라카스",
+    "varieties": []
+  },
+  {
+    "no": 955,
+    "name": "하느라기",
+    "varieties": []
+  },
+  {
+    "no": 956,
+    "name": "클레스퍼트라",
+    "varieties": []
+  },
+  {
+    "no": 957,
+    "name": "어리짱",
+    "varieties": []
+  },
+  {
+    "no": 958,
+    "name": "벼리짱",
+    "varieties": []
+  },
+  {
+    "no": 959,
+    "name": "두드리짱",
+    "varieties": []
+  },
+  {
+    "no": 960,
+    "name": "바다그다",
+    "varieties": []
+  },
+  {
+    "no": 961,
+    "name": "바닥트리오",
+    "varieties": []
+  },
+  {
+    "no": 962,
+    "name": "떨구새",
+    "varieties": []
+  },
+  {
+    "no": 963,
+    "name": "맨돌핀",
+    "varieties": []
+  },
+  {
+    "no": 964,
+    "name": "돌핀맨(나이브폼)",
+    "varieties": ["돌핀맨(마이티폼)"]
+  },
+  {
+    "no": 965,
+    "name": "부르롱",
+    "varieties": []
+  },
+  {
+    "no": 966,
+    "name": "부르르룸",
+    "varieties": []
+  },
+  {
+    "no": 967,
+    "name": "모토마",
+    "varieties": []
+  },
+  {
+    "no": 968,
+    "name": "꿈트렁",
+    "varieties": []
+  },
+  {
+    "no": 969,
+    "name": "초롱순",
+    "varieties": []
+  },
+  {
+    "no": 970,
+    "name": "킬라플로르",
+    "varieties": []
+  },
+  {
+    "no": 971,
+    "name": "망망이",
+    "varieties": []
+  },
+  {
+    "no": 972,
+    "name": "묘두기",
+    "varieties": []
+  },
+  {
+    "no": 973,
+    "name": "꼬이밍고",
+    "varieties": []
+  },
+  {
+    "no": 974,
+    "name": "터벅고래",
+    "varieties": []
+  },
+  {
+    "no": 975,
+    "name": "우락고래",
+    "varieties": []
+  },
+  {
+    "no": 976,
+    "name": "가비루사",
+    "varieties": []
+  },
+  {
+    "no": 977,
+    "name": "어써러셔",
+    "varieties": []
+  },
+  {
+    "no": 978,
+    "name": "싸리용(젖힌모습)",
+    "varieties": ["싸리용(늘어진모습)", "싸리용(뻗은모습)"]
+  },
+  {
+    "no": 979,
+    "name": "저승갓숭",
+    "varieties": []
+  },
+  {
+    "no": 980,
+    "name": "토오",
+    "varieties": []
+  },
+  {
+    "no": 981,
+    "name": "키키링",
+    "varieties": []
+  },
+  {
+    "no": 982,
+    "name": "노고고치(두마디폼)",
+    "varieties": ["노고고치(세마디폼)"]
+  },
+  {
+    "no": 983,
+    "name": "대도각참",
+    "varieties": []
+  },
+  {
+    "no": 984,
+    "name": "위대한엄니",
+    "varieties": []
+  },
+  {
+    "no": 985,
+    "name": "우렁찬꼬리",
+    "varieties": []
+  },
+  {
+    "no": 986,
+    "name": "사나운버섯",
+    "varieties": []
+  },
+  {
+    "no": 987,
+    "name": "날개치는머리",
+    "varieties": []
+  },
+  {
+    "no": 988,
+    "name": "땅을기는날개",
+    "varieties": []
+  },
+  {
+    "no": 989,
+    "name": "모래털가죽",
+    "varieties": []
+  },
+  {
+    "no": 990,
+    "name": "무쇠바퀴",
+    "varieties": []
+  },
+  {
+    "no": 991,
+    "name": "무쇠보따리",
+    "varieties": []
+  },
+  {
+    "no": 992,
+    "name": "무쇠손",
+    "varieties": []
+  },
+  {
+    "no": 993,
+    "name": "무쇠머리",
+    "varieties": []
+  },
+  {
+    "no": 994,
+    "name": "무쇠독나방",
+    "varieties": []
+  },
+  {
+    "no": 995,
+    "name": "무쇠가시",
+    "varieties": []
+  },
+  {
+    "no": 996,
+    "name": "드니차",
+    "varieties": []
+  },
+  {
+    "no": 997,
+    "name": "드니꽁",
+    "varieties": []
+  },
+  {
+    "no": 998,
+    "name": "드닐레이브",
+    "varieties": []
+  },
+  {
+    "no": 999,
+    "name": "모으령(상자폼)",
+    "varieties": ["모으령(도보폼)"]
+  },
+  {
+    "no": 1000,
+    "name": "타부자고",
+    "varieties": []
+  },
+  {
+    "no": 1001,
+    "name": "총지엔",
+    "varieties": []
+  },
+  {
+    "no": 1002,
+    "name": "파오젠",
+    "varieties": []
+  },
+  {
+    "no": 1003,
+    "name": "딩루",
+    "varieties": []
+  },
+  {
+    "no": 1004,
+    "name": "위유이",
+    "varieties": []
+  },
+  {
+    "no": 1005,
+    "name": "고동치는달",
+    "varieties": []
+  },
+  {
+    "no": 1006,
+    "name": "무쇠무인",
+    "varieties": []
+  },
+  {
+    "no": 1007,
+    "name": "코라이돈",
+    "varieties": []
+  },
+  {
+    "no": 1008,
+    "name": "미라이돈",
+    "varieties": []
+  },
+  {
+    "no": 1009,
+    "name": "굽이치는물결",
+    "varieties": []
+  },
+  {
+    "no": 1010,
+    "name": "무쇠잎새",
+    "varieties": []
+  },
+  {
+    "no": 1011,
+    "name": "과미르",
+    "varieties": []
+  },
+  {
+    "no": 1012,
+    "name": "차데스(가짜배기)",
+    "varieties": ["차데스(알짜배기)"]
+  },
+  {
+    "no": 1013,
+    "name": "그우린차(범작)",
+    "varieties": ["그우린차(걸작)"]
+  },
+  {
+    "no": 1014,
+    "name": "조타구",
+    "varieties": []
+  },
+  {
+    "no": 1015,
+    "name": "이야후",
+    "varieties": []
+  },
+  {
+    "no": 1016,
+    "name": "기로치",
+    "varieties": []
+  },
+  {
+    "no": 1017,
+    "name": "오거폰(벽록의가면)",
+    "varieties": [
+      "오거폰(우물의가면)",
+      "오거폰(화덕의가면)",
+      "오거폰(주춧돌의가면)"
+    ]
+  },
+  {
+    "no": 1018,
+    "name": "브리두라스",
+    "varieties": []
+  },
+  {
+    "no": 1019,
+    "name": "과미드라",
+    "varieties": []
+  },
+  {
+    "no": 1020,
+    "name": "꿰뚫는화염",
+    "varieties": []
+  },
+  {
+    "no": 1021,
+    "name": "날뛰는우레",
+    "varieties": []
+  },
+  {
+    "no": 1022,
+    "name": "무쇠암석",
+    "varieties": []
+  },
+  {
+    "no": 1023,
+    "name": "무쇠감투",
+    "varieties": []
+  },
+  {
+    "no": 1024,
+    "name": "테라파고스(노말폼)",
+    "varieties": ["테라파고스(테라스탈폼)", "테라파고스(스텔라폼)"]
+  },
+  {
+    "no": 1025,
+    "name": "복숭악동",
+    "varieties": []
+  }
+]

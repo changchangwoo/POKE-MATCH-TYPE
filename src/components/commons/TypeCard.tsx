@@ -4,7 +4,11 @@ import { Types } from "../../models/pokemonData";
 import TypeBadge from "./TypeBadge";
 import { getKoreanType } from "../../utils/getKoreanType";
 import { v4 as uuidv4 } from "uuid";
-import { IDamageData, getDetailType, getGroupType } from "../../utils/getDetailType";
+import {
+  IDamageData,
+  getDetailType,
+  getGroupType,
+} from "../../utils/getDetailType";
 import { getAddAbility } from "../../utils/getAddAbility";
 import useFetchDetailType from "../../hooks/queries/useFetchDetailType";
 
@@ -33,7 +37,6 @@ const TypeCard = ({ MatchTypes, selectedAbility }: MatchCardProps) => {
       }
       let groupResult = await getGroupType(result);
       setTypeRelations(groupResult);
-      console.log(groupResult)
     };
     fetchData();
   }, [MatchTypes, selectedAbility, typeData, isLoading]);

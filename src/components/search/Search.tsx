@@ -1,6 +1,5 @@
 import { useState, useEffect, ChangeEvent, FormEvent } from "react";
 import { FaSearch } from "react-icons/fa";
-import pokemonNames from "../../datas/pokemonData.json";
 import {
   searchContainer,
   inputBox,
@@ -8,6 +7,7 @@ import {
   activeSuggestion,
 } from "./SearchStyles";
 import { SetURLSearchParams } from "react-router-dom";
+import { IPokeDex } from "../../models/pokemonData";
 
 interface PokemonNameType {
   no: number;
@@ -17,9 +17,14 @@ interface PokemonNameType {
 interface SearchProps {
   setSearchParams: SetURLSearchParams;
   searchParams: URLSearchParams;
+  pokemonNames: IPokeDex[];
 }
 
-const Search = ({ setSearchParams, searchParams }: SearchProps) => {
+const Search = ({
+  setSearchParams,
+  searchParams,
+  pokemonNames,
+}: SearchProps) => {
   const newSearchParams = new URLSearchParams(searchParams);
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [suggestions, setSuggestions] = useState<PokemonNameType[]>([]);

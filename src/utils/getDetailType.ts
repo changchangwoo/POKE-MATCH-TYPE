@@ -14,8 +14,7 @@ export interface IDamageRelations {
   }[];
 }
 
-export const getDetailType = async (typeData : IDamageRelations[]) => {
-  if(typeData.length === 0) console.log('hello')
+export const getDetailType = async (typeData: IDamageRelations[]) => {
   const initialTypes: IDamageData[] = JSON.parse(
     JSON.stringify(defaultTypesData)
   );
