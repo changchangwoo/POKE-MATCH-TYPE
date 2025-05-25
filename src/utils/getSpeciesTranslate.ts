@@ -1,5 +1,3 @@
-import { TSpecises } from "../models/pokemonData";
-
 export const getSpeciesTranslate = (name : string): string => {
   if (/-mega(-|$)/.test(name)) return "메가진화";
   if (/-gmax$/.test(name)) return "거다이맥스";

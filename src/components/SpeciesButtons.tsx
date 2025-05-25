@@ -35,7 +35,7 @@ const SpeciesButtons = ({
 
   return (
     <>
-      <h1>변형</h1>
+      <h1>폼</h1>
       <div css={speciesTypes}>
         {varietiesData.varieties.map((species: any, idx: number) => {
           if(species.is_visible === false) return null; // is_visible이 false인 경우 버튼을 렌더링하지 않음

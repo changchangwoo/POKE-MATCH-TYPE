@@ -10,7 +10,9 @@ import pokedex from "../datas/pokedex.json";
 
 const pokedexHash = new Map();
 pokedex.map((item) => {
+  item.name = item.name.replace(/\s*\(.*?\)\s*/g, '').trim();
   pokedexHash.set(item.no, item);
+  
 });
 
 const Main = () => {
