@@ -1,6 +1,6 @@
 import { TSpecises } from "../models/pokemonData";
 
-export const getSpeciesTranslate = (name : string): TSpecises => {
+export const getSpeciesTranslate = (name : string): string => {
   if (/-mega(-|$)/.test(name)) return "메가진화";
   if (/-gmax$/.test(name)) return "거다이맥스";
   if (/-galar$/.test(name)) return "가라르";
@@ -11,5 +11,5 @@ export const getSpeciesTranslate = (name : string): TSpecises => {
   if (/-sinnoh$/.test(name)) return "신오";
   if (/-unova$/.test(name)) return "하나";
   if (/-kalos$/.test(name)) return "칼로스";
-  return "기본형";
+  return name
   };

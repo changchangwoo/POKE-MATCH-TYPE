@@ -18,12 +18,19 @@ const useFetchPokemonVarieties = (
         sessionDatas === "{}" ||
         JSON.parse(sessionDatas).name !== name
       ) {
-        const fetchVarietiesData = [...fetchDatas.varieties];
+        const fetchVarietiesData = [...fetchDatas.varieties].map((item) => {
+          const newItem = {
+            ...item,
+            is_visible: true,
+          };
+          return newItem;
+        });
         const filterVarieties = getFilterFixVarieties(
           pokeDexHash,
           no,
           fetchVarietiesData
         );
+        filterVarieties[0].pokemon.name = "기본형";
         const varietiesData = {
           name: name,
           varieties: fetchVarietiesData,
