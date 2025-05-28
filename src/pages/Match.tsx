@@ -13,13 +13,20 @@ const Match = () => {
 
   useEffect(() => {
     if (checkedType.length > 0) {
-      localStorage.setItem(location.pathname + "/matchDatas", JSON.stringify(checkedType));
+      localStorage.setItem(
+        location.pathname + "/matchDatas",
+        JSON.stringify(checkedType)
+      );
     }
   }, [checkedType, location.pathname]);
 
   useEffect(() => {
-    const getSessionCheckedDatas = localStorage.getItem(location.pathname + "/matchDatas");
-    const getSessionTypeCheck = localStorage.getItem(location.pathname + "/typecheck");
+    const getSessionCheckedDatas = localStorage.getItem(
+      location.pathname + "/matchDatas"
+    );
+    const getSessionTypeCheck = localStorage.getItem(
+      location.pathname + "/typecheck"
+    );
 
     if (getSessionCheckedDatas) {
       const parsedCheckedDatas = JSON.parse(getSessionCheckedDatas);

@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { css } from "@emotion/react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const ChangeButtons = () => {
   const navigator = useNavigate();
@@ -8,11 +8,29 @@ const ChangeButtons = () => {
 
   return (
     <div css={ChangeSectionContainer}>
-      <button onClick={() => navigator('/')} className={location.pathname === '/' ? 'active' : ''}>
+      <button
+        onClick={() => navigator("/")}
+        className={location.pathname === "/" ? "active" : ""}
+      >
         포켓몬으로 비교
       </button>
-      <button onClick={() => navigator('/type')} className={location.pathname === '/type' ? 'active' : ''}>
+      <button
+        onClick={() => navigator("/type")}
+        className={location.pathname === "/type" ? "active" : ""}
+      >
         타입으로 비교
+      </button>
+      <button
+        onClick={() => navigator("/table")}
+        className={location.pathname === "/type" ? "active" : ""}
+      >
+        상성 표
+      </button>
+      <button
+        onClick={() => navigator("/quiz")}
+        className={location.pathname === "/type" ? "active" : ""}
+      >
+        타입 퀴즈
       </button>
     </div>
   );
@@ -43,7 +61,7 @@ const ChangeSectionContainer = css`
 
     &.active {
       background-color: var(--point);
-      color:#ffffff;
+      color: #ffffff;
     }
   }
 `;
