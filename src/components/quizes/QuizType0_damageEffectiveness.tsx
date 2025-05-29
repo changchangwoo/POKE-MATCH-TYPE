@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useEffect, useMemo } from "react";
 import useFetchDetailPokemonForQuiz from "../../hooks/queries/useFetchDetailPokemonForQuiz";
 import TypeBadge from "../commons/TypeBadge";
 import { getKoreanType } from "../../utils/getKoreanType";
@@ -12,29 +12,40 @@ interface QuizType0_Props {
 
 const QuizType0_damageEffectiveness = (setProgress: QuizType0_Props) => {
   const {
-    data: matchInfo,
-    error: detailDataError,
-    isLoading: detailDataLoading,
+    data: quiz0_data,
+    error: quiz0_dataError,
+    isLoading: quiz0_dataLoading,
   } = useFetchDetailPokemonForQuiz();
 
-  if (!matchInfo || detailDataLoading) return null;
-  if (detailDataError) return null;
+  const quizNum = useMemo(() => {
+    if (!quiz0_data?.groupResult?.length) return null;
+    return Math.floor(Math.random() * quiz0_data.groupResult.length);
+  }, [quiz0_data?.groupResult]);
+
+  useEffect(() => {
+    console.log(quizNum);
+  });
+
+  if (!quiz0_data || quiz0_dataLoading || !quizNum) return null;
+
   return (
     <div css={matchCardContainer}>
       <h1 css={title}>
         해당 포켓몬을 공격했을 때,
-        <b>4배의 데미지를 줄 수 있는</b>
-        타입을 모두 선택하세요
+        <b>
+          {quiz0_data.groupResult[quizNum].damage}배의 데미지를 줄 수 있는 타입
+        </b>
+        을 선택하세요
       </h1>
-      <div css={imgBox(matchInfo.types[0].typeNo)}>
+      <div css={imgBox(quiz0_data.matchDatas.types[0].typeNo)}>
         <img
-          src={matchInfo.imgs}
+          src={quiz0_data.matchDatas.imgs}
           loading="lazy"
-          alt={`Pokemon ${matchInfo.no}`}
+          alt={`Pokemon ${quiz0_data.matchDatas.no}`}
         />
       </div>
       <div css={pokeTypes}>
-        {matchInfo.types.map((type) => (
+        {quiz0_data.matchDatas.types.map((type) => (
           <TypeBadge key={uuidv4()} typeNo={type.typeNo}>
             {getKoreanType(type.name)}
           </TypeBadge>

@@ -1,15 +1,10 @@
 import { css } from "@emotion/react";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment } from "react";
 import { Types } from "../../models/pokemonData";
 import TypeBadge from "./TypeBadge";
 import { getKoreanType } from "../../utils/getKoreanType";
 import { v4 as uuidv4 } from "uuid";
-import {
-  IDamageData,
-  getDetailType,
-  getGroupType,
-} from "../../utils/getDetailType";
-import { getAddAbility } from "../../utils/getAddAbility";
+import { IDamageData } from "../../utils/getDetailType";
 import useFetchDetailType from "../../hooks/queries/useFetchDetailType";
 
 interface MatchCardProps {

@@ -1,11 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchDetailPokemon } from "../../api/api";
+import { fetchDetailPokemon, fetchDetailType } from "../../api/api";
 import { MatchInfo } from "../../models/pokemonData";
 import PokeDex from "../../datas/pokedex.json";
+import { getDetailType, getGroupType } from "../../utils/getDetailType";
 
 const useFetchDetailPokemonForQuiz = (name: string = "") => {
   return useQuery({
     queryKey: ["detailPokemonForQuiz"],
+    refetchOnWindowFocus: false,
+    refetchOnReconnect: false,
+    refetchOnMount: false,
     queryFn: async () => {
       const lastNum = PokeDex[PokeDex.length - 1].no;
       const no = Math.floor(Math.random() * lastNum);
@@ -27,8 +31,12 @@ const useFetchDetailPokemonForQuiz = (name: string = "") => {
         no: Number(no),
         imgs: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${no}.png`,
       };
+      const typeNo = matchDatas.types.map((type) => type.typeNo);
+      const fetchDetailTypeData = await fetchDetailType(typeNo);
+      const circulateTypeData = await getDetailType(fetchDetailTypeData);
 
-      return matchDatas;
+      let groupResult = await getGroupType(circulateTypeData);
+      return { groupResult, matchDatas };
     },
   });
 };
