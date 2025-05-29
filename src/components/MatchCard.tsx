@@ -8,24 +8,32 @@ import SelectAbility from "./commons/SelectAbility";
 import { v4 as uuidv4 } from "uuid";
 import SpeciesButtons from "./SpeciesButtons";
 
-
-
 interface MatchCardProps {
   MatchInfo: IMatchInfo;
-  selectedAbility : string;
-  varietiesData : any;
-  varietiesIdx : string | null;
-  setSelectedAbility : Dispatch<SetStateAction<string>>
+  selectedAbility: string;
+  varietiesData: any;
+  varietiesIdx: string | null;
+  setSelectedAbility: Dispatch<SetStateAction<string>>;
   setSearchParams: SetURLSearchParams;
+}
 
-} 
-
-const MatchCard = ({ MatchInfo, selectedAbility, varietiesData, varietiesIdx,  setSelectedAbility, setSearchParams}: MatchCardProps) => {
+const MatchCard = ({
+  MatchInfo,
+  selectedAbility,
+  varietiesData,
+  varietiesIdx,
+  setSelectedAbility,
+  setSearchParams,
+}: MatchCardProps) => {
   return (
     <div css={matchCardContainer}>
       <h1>매치 포켓몬</h1>
-      <div css={imgBox(MatchInfo.types[0].typeNo)}> 
-        <img src={MatchInfo.imgs} loading="lazy" alt={`Pokemon ${MatchInfo.no}`}/>
+      <div css={imgBox(MatchInfo.types[0].typeNo)}>
+        <img
+          src={MatchInfo.imgs}
+          loading="lazy"
+          alt={`Pokemon ${MatchInfo.no}`}
+        />
       </div>
       <h2>{MatchInfo.name}</h2>
       <div css={pokeTypes}>
@@ -35,11 +43,14 @@ const MatchCard = ({ MatchInfo, selectedAbility, varietiesData, varietiesIdx,  s
           </TypeBadge>
         ))}
       </div>
-      {
-        varietiesData && <SpeciesButtons varietiesData={varietiesData} setSearchParams={setSearchParams}
-        name={MatchInfo.name}
-        varietiesIdx={varietiesIdx}/>
-      }
+      {varietiesData && (
+        <SpeciesButtons
+          varietiesData={varietiesData}
+          setSearchParams={setSearchParams}
+          name={MatchInfo.name}
+          varietiesIdx={varietiesIdx}
+        />
+      )}
       <SelectAbility
         selectedAbility={selectedAbility}
         setSelectedAbility={setSelectedAbility}
@@ -48,7 +59,7 @@ const MatchCard = ({ MatchInfo, selectedAbility, varietiesData, varietiesIdx,  s
   );
 };
 
-const matchCardContainer = css`
+export const matchCardContainer = css`
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
@@ -62,7 +73,7 @@ const matchCardContainer = css`
   gap: 10px;
 `;
 
-const imgBox = (no: number) => css`
+export const imgBox = (no: number) => css`
   width: 100%;
   height: 200px;
   background-color: ${`var(--type${no})`};
@@ -81,7 +92,7 @@ const imgBox = (no: number) => css`
   }
 `;
 
-const pokeTypes = css`
+export const pokeTypes = css`
   display: flex;
   flex-direction: row;
   gap: 5px;
@@ -92,7 +103,5 @@ const pokeTypes = css`
   margin: auto;
   margin-bottom: 10px;
 `;
-
-
 
 export default MatchCard;

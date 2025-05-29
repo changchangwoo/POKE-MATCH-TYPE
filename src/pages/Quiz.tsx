@@ -21,7 +21,7 @@ const Quiz = () => {
           case 2:
             return <QuizEnd />;
           default:
-            return <div>잘못된 섹션</div>;
+            return <div>에러 페이지</div>;
         }
       })()}
     </div>

@@ -19,13 +19,6 @@ export const getDetailType = async (typeData: IDamageRelations[]) => {
     JSON.stringify(defaultTypesData)
   );
 
-  const fetchAllDetails = async () => {
-    const detailResponses = await Promise.all(typeData);
-    const allDamageRelations = detailResponses.flat();
-    await getCirculType(initialTypes, allDamageRelations);
-    return initialTypes;
-  };
-
   const getCirculType = async (
     updateTypes: IDamageData[],
     damageRelations: IDamageRelations[]
@@ -50,6 +43,13 @@ export const getDetailType = async (typeData: IDamageRelations[]) => {
         }
       });
     }
+  };
+
+  const fetchAllDetails = async () => {
+    const detailResponses = await Promise.all(typeData);
+    const allDamageRelations = detailResponses.flat();
+    await getCirculType(initialTypes, allDamageRelations);
+    return initialTypes;
   };
   const detailTypes = await fetchAllDetails();
   return detailTypes;

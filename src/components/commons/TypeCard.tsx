@@ -24,23 +24,13 @@ export interface ITypeRelations {
 
 const TypeCard = ({ MatchTypes, selectedAbility }: MatchCardProps) => {
   const typeNo = MatchTypes.map((type) => type.typeNo);
-  const [typeRelations, setTypeRelations] = useState<ITypeRelations[]>([]);
-  const { data: typeData, isLoading } = useFetchDetailType(typeNo);
+  const {
+    data: typeRelations,
+    isLoading,
+    isError,
+  } = useFetchDetailType(typeNo, selectedAbility);
 
-  useEffect(() => {
-    if (!typeData || isLoading) return;
-
-    const fetchData = async () => {
-      let result = await getDetailType(typeData);
-      if (selectedAbility && selectedAbility !== "") {
-        getAddAbility(result, selectedAbility);
-      }
-      let groupResult = await getGroupType(result);
-      setTypeRelations(groupResult);
-    };
-    fetchData();
-  }, [MatchTypes, selectedAbility, typeData, isLoading]);
-
+  if (!typeRelations) return;
   if (isLoading) return <div>로딩 중...</div>;
 
   if (typeRelations.length > 1) {

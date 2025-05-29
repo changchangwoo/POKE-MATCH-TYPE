@@ -1,12 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchDetailPokemon } from "../../api/api";
 import { MatchInfo } from "../../models/pokemonData";
+import PokeDex from "../../datas/pokedex.json";
 
-const useFetchDetailPokemon = (no: string, name: string) => {
+const useFetchDetailPokemonForQuiz = (name: string = "") => {
   return useQuery({
-    queryKey: ["detailPokemon", no],
+    queryKey: ["detailPokemonForQuiz"],
     queryFn: async () => {
-      const fetchDatas = await fetchDetailPokemon(no);
+      const lastNum = PokeDex[PokeDex.length - 1].no;
+      const no = Math.floor(Math.random() * lastNum);
+      const fetchDatas = await fetchDetailPokemon(String(no));
       const matchDatas: MatchInfo = {
         name,
         types: fetchDatas.types.map((typeInfo: any) => {
@@ -24,14 +27,10 @@ const useFetchDetailPokemon = (no: string, name: string) => {
         no: Number(no),
         imgs: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${no}.png`,
       };
-      localStorage.setItem(
-        location.pathname + "/matchDatas",
-        JSON.stringify(matchDatas)
-      );
+
       return matchDatas;
     },
-    enabled: !!no,
   });
 };
 
-export default useFetchDetailPokemon;
+export default useFetchDetailPokemonForQuiz;
