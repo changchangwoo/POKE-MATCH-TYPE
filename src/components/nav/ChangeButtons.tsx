@@ -22,13 +22,13 @@ const ChangeButtons = () => {
       </button>
       <button
         onClick={() => navigator("/table")}
-        className={location.pathname === "/type" ? "active" : ""}
+        className={location.pathname === "/table" ? "active" : ""}
       >
         상성 표
       </button>
       <button
         onClick={() => navigator("/quiz")}
-        className={location.pathname === "/type" ? "active" : ""}
+        className={location.pathname === "/quiz" ? "active" : ""}
       >
         타입 퀴즈
       </button>

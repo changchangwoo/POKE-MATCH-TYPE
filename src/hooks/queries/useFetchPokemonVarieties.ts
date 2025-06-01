@@ -31,7 +31,6 @@ const useFetchPokemonVarieties = (
           fetchVarietiesData
         );
         filterVarieties[0].pokemon.name = "기본형";
-        console.log(filterVarieties);
         const varietiesData = {
           name: name,
           varieties: fetchVarietiesData,

@@ -40,7 +40,18 @@ const Main = () => {
     const getSessionTypeCheck = localStorage.getItem(
       location.pathname + "/typecheck"
     );
-    if (getSessionMatchDatas) setSearchParams(JSON.parse(getSessionMatchDatas));
+    const getSessionVarietiesIdx = localStorage.getItem(
+      location.pathname + "/varietiesIdx"
+    );
+    if (getSessionMatchDatas)  {
+      const parseMatchDatas = JSON.parse(getSessionMatchDatas);
+      const parsedVarietiesIdx = getSessionVarietiesIdx ? JSON.parse(getSessionVarietiesIdx) : "0";
+      setSearchParams(
+        {
+          ...parseMatchDatas,
+          varietiesIdx: parsedVarietiesIdx.varietiesIdx || "0",
+                });
+    }
     if (getSessionTypeCheck) setSelectedAbility(getSessionTypeCheck);
   }, [location.pathname]);
 

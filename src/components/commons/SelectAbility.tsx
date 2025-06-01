@@ -22,8 +22,9 @@ const SelectAbility = ({ selectedAbility, setSelectedAbility}: TypeCheckProps) =
 
   return (
     <>
-    <h1>특성</h1>
     <div css={SelectAbilityContainer}>
+          <h1>특성</h1>
+
       <select
         value={selectedAbility}
         onChange={handleAbilityChange}
@@ -45,6 +46,10 @@ const SelectAbilityContainer = css`
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+
+  h1 {
+    text-align: center;
+  }
   
 
   select {

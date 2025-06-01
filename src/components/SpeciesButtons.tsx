@@ -30,8 +30,15 @@ const SpeciesButtons = ({
         name: name || "",
         varietiesIdx: btnIdx || "0",
       });
+      localStorage.setItem(
+        location.pathname + "/varietiesIdx",
+        JSON.stringify({
+          varietiesIdx: btnIdx,
+        })
+      )
     }
   };
+
 
   return (
     <>
