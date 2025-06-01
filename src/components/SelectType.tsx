@@ -1,25 +1,32 @@
 import { css } from "@emotion/react";
 import { Dispatch, SetStateAction } from "react";
-import defaultTypesData from "../../src/datas/defaultTypes.json";
+  import defaultTypesData from "../../src/datas/defaultTypes.json";
 import { getKoreanType } from "../utils/getKoreanType";
 import { v4 as uuidv4 } from "uuid";
 import { Types } from "../models/pokemonData";
+import { IDamageData } from "../utils/getDetailType";
 
 interface SelectTypeProps {
   checkedType: Types[];
   setCheckedType: Dispatch<SetStateAction<Types[]>>;
+  quizModeDatas?: IDamageData[];
 }
-const SelectType = ({ checkedType, setCheckedType }: SelectTypeProps) => {
+const SelectType = ({ checkedType, setCheckedType, quizModeDatas }: SelectTypeProps) => {
+      const selectedDatas = quizModeDatas || defaultTypesData;
   const handleSelect = (type: any) => {
     const isAlreadyChecked = checkedType.some(
       (checked) => checked.typeNo === type.no
     );
+
 
     if (isAlreadyChecked) {
       setCheckedType(
         checkedType.filter((checked) => checked.typeNo !== type.no)
       );
     } else {
+      if (quizModeDatas) {
+        if (checkedType.length >= 1) return;
+      }
       if (checkedType.length >= 2) return;
       setCheckedType([...checkedType, { typeNo: type.no, name: type.name }]);
     }
@@ -29,7 +36,7 @@ const SelectType = ({ checkedType, setCheckedType }: SelectTypeProps) => {
     <div css={selectTypeContainer}>
       <h1>타입 선택</h1>
       <div css={selectTypes}>
-        {defaultTypesData.map((type) => {
+        {selectedDatas.map((type) => {
           const isChecked = checkedType.some(
             (checked) => checked.typeNo === type.no
           );

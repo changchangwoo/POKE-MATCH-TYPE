@@ -37,7 +37,6 @@ const quizContainer = css`
   align-items: center;
   height: 800px;
   border-radius: 30px;
-  background-color: white;
 `;
 
 export default Quiz;
