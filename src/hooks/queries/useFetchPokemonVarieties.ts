@@ -45,18 +45,3 @@ const useFetchPokemonVarieties = (
 };
 
 export default useFetchPokemonVarieties;
-
-/*
-고정 변형의 위치를 우선적으로 구하기
-(pokeDex의 번호, pokeAPI의 번호)
-pokeAPI 번호는 만들어둔 getSpeciesTranslate 타입을 참고해서,
-pokeDex 번호는 한글 텍스트를 분리하는 과정이 필요
-
-pokeDex는 디폴트값이 이름으로가 있기 때문에 개수가 하나 더 적음
-처음부터 고정 값을 그냥 다 없애버린 데이터 하나 분리
-그럼 서로 폼 데이터만 남을 거 아님
-그게 pokeAPI와 pokeDEX의 length가 일치한다면 폼 데이터도 추가
-
-
-
-*/

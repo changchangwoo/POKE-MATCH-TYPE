@@ -15,8 +15,6 @@ const useFetchDetailType = (typeNo: number[], selectedAbility?: string) => {
       let groupResult = await getGroupType(circulateTypeData);
       return groupResult;
     },
-    // refetchOnWindowFocus: true, // 포커스 시 다시 패칭
-    // staleTime: 1000 * 60 * 5, // 5분 동안 데이터가 신선하게 유지
   });
 };
 

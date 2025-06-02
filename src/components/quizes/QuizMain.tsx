@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import QuizType0_damageEffectiveness from "./QuizType0_damageEffectiveness";
 import QuizType1_quizTypeInference from "./QuizType1_quizTypeInference";
 import QuizType2_typeDescription from "./QuizType2_typeDescription";
@@ -8,9 +8,17 @@ const QuizMain = () => {
   const [progress, setProgress] = useState<number>(0);
   const [quizType, setQuizType] = useState<number>(0);
 
+  const submitAnswer = useCallback((answer: any, correct: any) => {
+    if (answer === correct) {
+      alert("정답입니다!");
+    } else {
+      alert("틀렸습니다! 정답은 " + correct + "입니다.");
+    }
+    setProgress((prev) => prev + 1);
+  }, []);
+
   useEffect(() => {
-    // const curQuizType = Math.floor(Math.random() * 3);
-    const curQuizType = 0;
+    const curQuizType = 1;
     setQuizType(curQuizType);
   }, [progress]);
 
@@ -24,21 +32,21 @@ const QuizMain = () => {
             return (
               <QuizType0_damageEffectiveness
                 key={progress}
-                setProgress={setProgress}
+                submitAnswer={submitAnswer}
               />
             );
           case 1:
             return (
               <QuizType1_quizTypeInference
                 key={progress}
-                setProgress={setProgress}
+                submitAnswer={submitAnswer}
               />
             );
           case 2:
             return (
               <QuizType2_typeDescription
                 key={progress}
-                setProgress={setProgress}
+                submitAnswer={submitAnswer}
               />
             );
           default:

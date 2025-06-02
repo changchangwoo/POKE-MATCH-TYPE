@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { Dispatch, SetStateAction, useState } from "react";
+import { useState } from "react";
 import TypeBadge from "../commons/TypeBadge";
 import { getKoreanType } from "../../utils/getKoreanType";
 import { v4 as uuidv4 } from "uuid";
@@ -9,20 +9,13 @@ import { useGetDetailPokemonForQuiz } from "../../hooks/useGetDetailPokemonForQu
 import { Types } from "../../models/pokemonData";
 
 interface QuizType0_Props {
-  setProgress: Dispatch<SetStateAction<number>>;
+  submitAnswer: (answer: any, correct: any) => void;
 }
 
-const QuizType0_damageEffectiveness = ({ setProgress }: QuizType0_Props) => {
+const QuizType0_damageEffectiveness = ({ submitAnswer }: QuizType0_Props) => {
   const [checkedType, setCheckedType] = useState<Types[]>([]);
   const { questionArr, quizNum, groupResult, matchDatas } =
     useGetDetailPokemonForQuiz();
-  const submitAnswer = () => {
-    if (checkedType[0].name === questionArr[0].name) {
-    } else {
-      alert("틀렸습니다! 정답은 " + questionArr[0].name + "입니다.");
-    }
-    setProgress((prev: number) => prev + 1);
-  };
 
   if (!questionArr || !quizNum || !groupResult || !matchDatas) return null;
   return (
@@ -53,7 +46,10 @@ const QuizType0_damageEffectiveness = ({ setProgress }: QuizType0_Props) => {
           quizModeDatas={questionArr}
         />
       </div>
-      <button onClick={submitAnswer} css={submitBtn}>
+      <button
+        onClick={() => submitAnswer(checkedType[0]?.name, questionArr[0].name)}
+        css={submitBtn}
+      >
         정답 제출
       </button>
     </div>
@@ -70,7 +66,6 @@ const title = css`
 
 const submitBtn = css`
   width: 30%;
-  /* background-color: orange; */
   height: 45px;
   border-radius: 8px;
   border: 1px solid var(--border);
