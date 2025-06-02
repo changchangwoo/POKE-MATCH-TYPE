@@ -9,7 +9,6 @@ const useFetchDetailPokemonForQuiz = (name: string = "") => {
     queryKey: ["detailPokemonForQuiz"],
     refetchOnWindowFocus: false,
     refetchOnReconnect: false,
-    refetchOnMount: false,
     queryFn: async () => {
       const lastNum = PokeDex[PokeDex.length - 1].no;
       const no = Math.floor(Math.random() * lastNum);

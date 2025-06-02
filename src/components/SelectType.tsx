@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { Dispatch, SetStateAction } from "react";
-  import defaultTypesData from "../../src/datas/defaultTypes.json";
+import defaultTypesData from "../../src/datas/defaultTypes.json";
 import { getKoreanType } from "../utils/getKoreanType";
 import { v4 as uuidv4 } from "uuid";
 import { Types } from "../models/pokemonData";
@@ -11,13 +11,16 @@ interface SelectTypeProps {
   setCheckedType: Dispatch<SetStateAction<Types[]>>;
   quizModeDatas?: IDamageData[];
 }
-const SelectType = ({ checkedType, setCheckedType, quizModeDatas }: SelectTypeProps) => {
-      const selectedDatas = quizModeDatas || defaultTypesData;
+const SelectType = ({
+  checkedType,
+  setCheckedType,
+  quizModeDatas,
+}: SelectTypeProps) => {
+  const selectedDatas = quizModeDatas || defaultTypesData;
   const handleSelect = (type: any) => {
     const isAlreadyChecked = checkedType.some(
       (checked) => checked.typeNo === type.no
     );
-
 
     if (isAlreadyChecked) {
       setCheckedType(
@@ -85,7 +88,7 @@ const item = (no: number | undefined) => css`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  color : ${no ? `white` : "black"};
+  color: ${no ? `white` : "black"};
   transition: all 0.2s;
 `;
 

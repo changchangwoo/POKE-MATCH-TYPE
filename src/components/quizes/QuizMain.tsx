@@ -21,11 +21,26 @@ const QuizMain = () => {
       {(() => {
         switch (quizType) {
           case 0:
-            return <QuizType0_damageEffectiveness setProgress={setProgress} />;
+            return (
+              <QuizType0_damageEffectiveness
+                key={progress}
+                setProgress={setProgress}
+              />
+            );
           case 1:
-            return <QuizType1_quizTypeInference setProgress={setProgress} />;
+            return (
+              <QuizType1_quizTypeInference
+                key={progress}
+                setProgress={setProgress}
+              />
+            );
           case 2:
-            return <QuizType2_typeDescription setProgress={setProgress} />;
+            return (
+              <QuizType2_typeDescription
+                key={progress}
+                setProgress={setProgress}
+              />
+            );
           default:
             return <div>에러 페이지</div>;
         }

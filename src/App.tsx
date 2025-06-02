@@ -9,21 +9,21 @@ import Footer from "./components/Footer";
 import Table from "./pages/Table";
 import Quiz from "./pages/Quiz";
 
-const nonVisible = true;
+const visible = false;
 
 function App() {
   return (
     <>
-      {nonVisible && <Navigation />}
+      {visible && <Navigation />}
       <div css={Container}>
-        {nonVisible && <ChangeButtons />}
+        {visible && <ChangeButtons />}
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/type" element={<Match />} />
           <Route path="/table" element={<Table />} />
           <Route path="/quiz" element={<Quiz />} />
         </Routes>
-        {nonVisible && <Footer />}
+        {visible && <Footer />}
       </div>
     </>
   );
