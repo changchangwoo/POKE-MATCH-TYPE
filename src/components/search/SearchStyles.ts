@@ -32,7 +32,8 @@ position: relative;
 `;
 
 export const suggestionsList = css`
-  top: 60px;
+  top: 50px;
+  position: absolute;
   z-index: 100;
   width: 100%;
   border: 1px solid var(--border);
