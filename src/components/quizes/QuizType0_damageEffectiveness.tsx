@@ -49,20 +49,3 @@ export const title = css`
   }
 `;
 
-const submitBtn = css`
-  width: 30%;
-  height: 45px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: var(--primary);
-  cursor: pointer;
-
-  &:hover {
-    transition: all 0.2s;
-    background-color: var(--border);
-  }
-`;
-
-const typeSection = css`
-  width: 100%;
-`;

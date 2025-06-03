@@ -18,7 +18,7 @@ const QuizMain = () => {
   }, []);
 
   useEffect(() => {
-    const curQuizType = 1;
+    const curQuizType = 2;
     setQuizType(curQuizType);
   }, [progress]);
 
