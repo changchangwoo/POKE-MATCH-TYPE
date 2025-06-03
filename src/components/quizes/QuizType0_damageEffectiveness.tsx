@@ -25,7 +25,7 @@ const QuizType0_damageEffectiveness = ({ submitAnswer }: QuizType0_Props) => {
         <b>{groupResult[quizNum].damage}배의 데미지를 줄 수 있는 타입</b>을
         선택하세요
       </h1>
-      <div css={imgBox(matchDatas.types[0].typeNo)}>
+      <div css={imgBox(matchDatas.types[0].no)}>
         <img
           src={matchDatas.imgs}
           loading="lazy"
@@ -34,7 +34,7 @@ const QuizType0_damageEffectiveness = ({ submitAnswer }: QuizType0_Props) => {
       </div>
       <div css={pokeTypes}>
         {matchDatas.types.map((type) => (
-          <TypeBadge key={uuidv4()} typeNo={type.typeNo}>
+          <TypeBadge key={uuidv4()} no={type.no}>
             {getKoreanType(type.name)}
           </TypeBadge>
         ))}
@@ -58,7 +58,7 @@ const QuizType0_damageEffectiveness = ({ submitAnswer }: QuizType0_Props) => {
 
 export default QuizType0_damageEffectiveness;
 
-const title = css`
+export const title = css`
   b {
     font-weight: bold;
   }
@@ -79,5 +79,5 @@ const submitBtn = css`
 `;
 
 const typeSection = css`
-  width: 80%;
+  width: 100%;
 `;

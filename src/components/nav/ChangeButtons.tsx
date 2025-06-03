@@ -42,12 +42,14 @@ const ChangeSectionContainer = css`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
 
   button {
     flex: 1;
     height: 40px;
     max-width: 300px;
+    min-width: 150px;
     box-sizing: border-box;
     border: 1px solid var(--border);
     font-size: var(--fontMedium);

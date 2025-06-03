@@ -1,0 +1,106 @@
+[
+  [
+    { "no": 12, "name": "grass" },
+    { "no": 10, "name": "fire" },
+    { "no": 11, "name": "water" }
+  ],
+  [
+    { "no": 12, "name": "grass" },
+    { "no": 4, "name": "poison" },
+    { "no": 5, "name": "ground" }
+  ],
+  [
+    { "no": 10, "name": "fire" },
+    { "no": 6, "name": "rock" },
+    { "no": 9, "name": "steel" }
+  ],
+  [
+    { "no": 2, "name": "fighting" },
+    { "no": 3, "name": "flying" },
+    { "no": 6, "name": "rock" }
+  ],
+  [
+    { "no": 2, "name": "fighting" },
+    { "no": 14, "name": "psychic" },
+    { "no": 17, "name": "dark" }
+  ],
+  [
+    { "no": 12, "name": "grass" },
+    { "no": 7, "name": "bug" },
+    { "no": 10, "name": "fire" },
+    { "no": 11, "name": "water" }
+  ],
+  [
+    { "no": 10, "name": "fire" },
+    { "no": 6, "name": "rock" },
+    { "no": 5, "name": "ground" },
+    { "no": 12, "name": "grass" }
+  ],
+  [
+    { "no": 12, "name": "grass" },
+    { "no": 3, "name": "flying" },
+    { "no": 6, "name": "rock" },
+    { "no": 5, "name": "ground" }
+  ],
+  [
+    { "no": 10, "name": "fire" },
+    { "no": 6, "name": "rock" },
+    { "no": 2, "name": "fighting" },
+    { "no": 18, "name": "fairy" },
+    { "no": 9, "name": "steel" }
+  ],
+  [
+    { "no": 12, "name": "grass" },
+    { "no": 7, "name": "bug" },
+    { "no": 10, "name": "fire" },
+    { "no": 6, "name": "rock" },
+    { "no": 2, "name": "fighting" },
+    { "no": 18, "name": "fairy" },
+    { "no": 4, "name": "poison" },
+    { "no": 5, "name": "ground" }
+  ],
+  [
+    { "no": 18, "name": "fairy" },
+    { "no": 10, "name": "fire" },
+    { "no": 6, "name": "rock" },
+    { "no": 2, "name": "fighting" }
+  ],
+  [
+    { "no": 6, "name": "rock" },
+    { "no": 2, "name": "fighting" },
+    { "no": 14, "name": "psychic" },
+    { "no": 7, "name": "bug" }
+  ],
+  [
+    { "no": 6, "name": "rock" },
+    { "no": 12, "name": "grass" },
+    { "no": 7, "name": "bug" }
+  ],
+  [
+    { "no": 2, "name": "fighting" },
+    { "no": 18, "name": "fairy" },
+    { "no": 9, "name": "steel" }
+  ],
+  [
+    { "no": 10, "name": "fire" },
+    { "no": 5, "name": "ground" },
+    { "no": 15, "name": "ice" }
+  ],
+  [
+    { "no": 12, "name": "grass" },
+    { "no": 3, "name": "flying" },
+    { "no": 13, "name": "electric" }
+  ],
+  [
+    { "no": 18, "name": "fairy" },
+    { "no": 4, "name": "poison" },
+    { "no": 5, "name": "ground" },
+    { "no": 11, "name": "water" },
+    { "no": 12, "name": "grass" },
+    { "no": 10, "name": "fire" },
+    { "no": 6, "name": "rock" },
+    { "no": 2, "name": "fighting" },
+    { "no": 14, "name": "psychic" },
+    { "no": 17, "name": "dark" }
+  ]
+]

@@ -18,8 +18,6 @@ const navigationStyle = css`
   align-items: center;
   color: white;
   position: absolute;
-  z-index: 300;
-  font-weight: 500;
 `;
 
 export default Navigation;

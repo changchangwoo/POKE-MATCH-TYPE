@@ -70,7 +70,7 @@ const SpeciesButtons = ({
 const speciesTypes = css`
   display: grid;
   gap: 5px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   width: 60%;
   justify-content: center;
   margin-bottom: 10px;

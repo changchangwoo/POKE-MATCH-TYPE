@@ -35,7 +35,6 @@ const quizContainer = css`
   gap: 20px;
   justify-content: center;
   align-items: center;
-  height: 800px;
   border-radius: 30px;
 `;
 

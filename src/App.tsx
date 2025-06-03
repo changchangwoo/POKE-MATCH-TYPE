@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 import Table from "./pages/Table";
 import Quiz from "./pages/Quiz";
 
-const visible = false;
+const visible = true;
 
 function App() {
   return (

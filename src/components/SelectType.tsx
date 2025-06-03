@@ -4,12 +4,11 @@ import defaultTypesData from "../../src/datas/defaultTypes.json";
 import { getKoreanType } from "../utils/getKoreanType";
 import { v4 as uuidv4 } from "uuid";
 import { Types } from "../models/pokemonData";
-import { IDamageData } from "../utils/getDetailType";
 
 interface SelectTypeProps {
   checkedType: Types[];
   setCheckedType: Dispatch<SetStateAction<Types[]>>;
-  quizModeDatas?: IDamageData[];
+  quizModeDatas?: Types[];
 }
 const SelectType = ({
   checkedType,
@@ -19,19 +18,18 @@ const SelectType = ({
   const selectedDatas = quizModeDatas || defaultTypesData;
   const handleSelect = (type: any) => {
     const isAlreadyChecked = checkedType.some(
-      (checked) => checked.typeNo === type.no
+      (checked) => checked.no === type.no
     );
-
     if (isAlreadyChecked) {
       setCheckedType(
-        checkedType.filter((checked) => checked.typeNo !== type.no)
+        checkedType.filter((checked) => checked.no !== type.no)
       );
     } else {
       if (quizModeDatas) {
         if (checkedType.length >= 1) return;
       }
       if (checkedType.length >= 2) return;
-      setCheckedType([...checkedType, { typeNo: type.no, name: type.name }]);
+      setCheckedType([...checkedType, { no: type.no, name: type.name }]);
     }
   };
 
@@ -41,7 +39,7 @@ const SelectType = ({
       <div css={selectTypes}>
         {selectedDatas.map((type) => {
           const isChecked = checkedType.some(
-            (checked) => checked.typeNo === type.no
+            (checked) => checked.no === type.no
           );
           return (
             <button

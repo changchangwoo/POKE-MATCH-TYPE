@@ -6,7 +6,7 @@ export interface MatchInfo {
 }
 
 export interface Types {
-  typeNo: number;
+  no: number;
   name: string;
 }
 

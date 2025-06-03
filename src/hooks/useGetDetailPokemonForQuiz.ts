@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import PokeDex from "../datas/pokedex.json";
 import { fetchDetailPokemon, fetchDetailType } from "../api/api";
-import { MatchInfo } from "../models/pokemonData";
+import { MatchInfo, Types } from "../models/pokemonData";
 import {
   getDetailType,
   getGroupType,
@@ -13,14 +13,14 @@ export const useGetDetailPokemonForQuiz = () => {
   const [groupResult, setGroupResult] =
     useState<{ damage: number; types: IDamageData[] }[]>();
   const [matchDatas, setMatchDatas] = useState<MatchInfo>();
-  const [questionArr, setQuetstionArr] = useState<IDamageData[]>([]);
+  const [questionArr, setQuetstionArr] = useState<Types[]>([]);
   const [quizNum, setQuizNum] = useState<number>(0);
 
   useEffect(() => {
     const useFetchDetailPokemonQuiz = async (name: string = "") => {
       const lastNum = PokeDex[PokeDex.length - 1].no;
-      const no = Math.floor(Math.random() * lastNum);
-      const fetchDatas = await fetchDetailPokemon(String(no));
+      const randomNum = Math.floor(Math.random() * lastNum);
+      const fetchDatas = await fetchDetailPokemon(String(randomNum));
       const matchDatas: MatchInfo = {
         name,
         types: fetchDatas.types.map((typeInfo: any) => {
@@ -28,17 +28,17 @@ export const useGetDetailPokemonForQuiz = () => {
             const match = typeInfo.type.url.match(/\/(\d+)\/$/);
             const typeNo = match ? match[1] : null;
             return {
-              typeNo: typeNo ? Number(typeNo) : null,
+              no: typeNo ? Number(typeNo) : null,
               name: typeInfo.type.name,
             };
           } else {
-            return { typeNo: null, name: typeInfo.type.name };
+            return { no: null, name: typeInfo.type.name };
           }
         }),
-        no: Number(no),
-        imgs: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${no}.png`,
+        no: Number(randomNum),
+        imgs: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${randomNum}.png`,
       };
-      const typeNo = matchDatas.types.map((type) => type.typeNo);
+      const typeNo = matchDatas.types.map((type) => type.no);
       const fetchDetailTypeData = await fetchDetailType(typeNo);
       const circulateTypeData = await getDetailType(fetchDetailTypeData);
 
@@ -48,7 +48,7 @@ export const useGetDetailPokemonForQuiz = () => {
       const quizNum = getRandomNum(groupResult.length);
 
       const answerSet = new Set<string>();
-      const result: IDamageData[] = [];
+      const result: Types[] = [];
 
       while (true) {
         const randTypeNum = getRandomNum(

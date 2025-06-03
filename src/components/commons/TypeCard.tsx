@@ -18,12 +18,12 @@ export interface ITypeRelations {
 }
 
 const TypeCard = ({ MatchTypes, selectedAbility }: MatchCardProps) => {
-  const typeNo = MatchTypes.map((type) => type.typeNo);
+  const no = MatchTypes.map((type) => type.no);
   const {
     data: typeRelations,
     isLoading,
     isError,
-  } = useFetchDetailType(typeNo, selectedAbility);
+  } = useFetchDetailType(no, selectedAbility);
 
   if (!typeRelations) return;
   if (isLoading) return <div>로딩 중...</div>;
@@ -36,7 +36,7 @@ const TypeCard = ({ MatchTypes, selectedAbility }: MatchCardProps) => {
             <div css={title}>데미지 x {type.damage}</div>
             <div css={typeSection}>
               {type.types.map((item) => (
-                <TypeBadge key={uuidv4()} typeNo={item.no}>
+                <TypeBadge key={uuidv4()} no={item.no}>
                   {getKoreanType(item.name)}
                 </TypeBadge>
               ))}

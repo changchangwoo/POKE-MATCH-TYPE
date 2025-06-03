@@ -28,6 +28,7 @@ export const globalStyles = css`
     --type18: #dab4d4; /* fairy */
     --type19: #ffffff; /* unknown */
     --type20: #4c4948; /* shadow */
+    --type100: grey; /* blank */
 
     /* 폰트 사이즈 */
     @media screen and (max-width: 600) {

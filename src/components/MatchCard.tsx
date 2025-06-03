@@ -28,7 +28,7 @@ const MatchCard = ({
   return (
     <div css={matchCardContainer}>
       <h1>매치 포켓몬</h1>
-      <div css={imgBox(MatchInfo.types[0].typeNo)}>
+      <div css={imgBox(MatchInfo.types[0].no)}>
         <img
           src={MatchInfo.imgs}
           loading="lazy"
@@ -38,7 +38,7 @@ const MatchCard = ({
       <h2>{MatchInfo.name}</h2>
       <div css={pokeTypes}>
         {MatchInfo.types.map((type) => (
-          <TypeBadge key={uuidv4()} typeNo={type.typeNo}>
+          <TypeBadge key={uuidv4()} no={type.no}>
             {getKoreanType(type.name)}
           </TypeBadge>
         ))}
@@ -71,6 +71,7 @@ export const matchCardContainer = css`
   justify-content: center;
   align-items: center;
   gap: 10px;
+  min-height: 475px;
 `;
 
 export const imgBox = (no: number) => css`
