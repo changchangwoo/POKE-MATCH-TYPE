@@ -6,20 +6,42 @@ import TypeBadge from "../commons/TypeBadge";
 import { v4 as uuidv4 } from "uuid";
 import { getKoreanType } from "../../utils/getKoreanType";
 import quizType1_data from "../../datas/quizType1Data.json";
+import { Types } from "../../models/pokemonData";
+import defaultTypes from "../../datas/defaultTypes.json";
+import QuizAnswer from "./QuizAnswer";
 
 interface QuizType1_Props {
   submitAnswer: (answer: any, correct: any) => void;
 }
 
-const randQuiz = getRandomNum(quizType1_data.length);
+
+const QuizType1_quizTypeInference = ({ submitAnswer }: QuizType1_Props) => {
+  const [questionArr, setQuetstionArr] = useState<Types[]>([]);
+  const randQuiz = getRandomNum(quizType1_data.length);
 const randBlank = getRandomNum(quizType1_data[randQuiz].length);
 const answer = quizType1_data[randQuiz][randBlank];
 
-const QuizType1_quizTypeInference = ({ submitAnswer }: QuizType1_Props) => {
-  const [questionArr, setQuetstionArr] = useState([]);
 
   useEffect(() => {
-    // setQuestion(randQuiz);
+    const answerSet = new Set<string>();
+    const result: Types[] = [];
+    result.push(answer);
+    answerSet.add(answer.name);
+    while (true) {
+      const randTypeNum = getRandomNum(defaultTypes.length);
+      const candidate = defaultTypes[randTypeNum];
+      if (!answerSet.has(candidate.name)) {
+        result.push(
+          {
+            no: candidate.no,
+            name: candidate.name,
+          }
+        );
+        answerSet.add(candidate.name);
+      }
+      if (result.length === 6) break;
+    }
+    setQuetstionArr(result);
   }, []);
 return (
   <div css={matchCardContainer}>
@@ -53,6 +75,8 @@ return (
         ))}
       </div>
     </div>
+    <QuizAnswer questionArr={questionArr} submitAnswer={submitAnswer} />
+
     
   </div>
 );
@@ -93,16 +117,11 @@ display: flex;
 flex-wrap: wrap;
 align-items: center;
 justify-content: center;
-gap: 20px;
-  
+gap: 20px;  
 `
+
+
+
 export default QuizType1_quizTypeInference;
 
-/*
-  문제에서 랜덤 발췌
-  퀴즈로 Type을 씌우려면 타입 번호가 필요
-  랜덤 퀴즈 안, 랜덤 블랭크가 정답
-  정답 생성 로직
 
-
-*/

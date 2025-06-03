@@ -1,19 +1,16 @@
 import { css } from "@emotion/react";
-import { useState } from "react";
 import TypeBadge from "../commons/TypeBadge";
 import { getKoreanType } from "../../utils/getKoreanType";
 import { v4 as uuidv4 } from "uuid";
 import { imgBox, matchCardContainer, pokeTypes } from "../MatchCard";
-import SelectType from "../SelectType";
 import { useGetDetailPokemonForQuiz } from "../../hooks/useGetDetailPokemonForQuiz";
-import { Types } from "../../models/pokemonData";
+import QuizAnswer from "./QuizAnswer";
 
 interface QuizType0_Props {
   submitAnswer: (answer: any, correct: any) => void;
 }
 
 const QuizType0_damageEffectiveness = ({ submitAnswer }: QuizType0_Props) => {
-  const [checkedType, setCheckedType] = useState<Types[]>([]);
   const { questionArr, quizNum, groupResult, matchDatas } =
     useGetDetailPokemonForQuiz();
 
@@ -39,19 +36,7 @@ const QuizType0_damageEffectiveness = ({ submitAnswer }: QuizType0_Props) => {
           </TypeBadge>
         ))}
       </div>
-      <div css={typeSection}>
-        <SelectType
-          checkedType={checkedType}
-          setCheckedType={setCheckedType}
-          quizModeDatas={questionArr}
-        />
-      </div>
-      <button
-        onClick={() => submitAnswer(checkedType[0]?.name, questionArr[0].name)}
-        css={submitBtn}
-      >
-        정답 제출
-      </button>
+        <QuizAnswer questionArr={questionArr} submitAnswer={submitAnswer} />
     </div>
   );
 };
