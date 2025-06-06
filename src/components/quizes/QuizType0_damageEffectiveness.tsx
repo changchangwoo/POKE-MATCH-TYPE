@@ -47,5 +47,7 @@ export const title = css`
   b {
     font-weight: bold;
   }
+  margin-bottom: 30px;
+  
 `;
 

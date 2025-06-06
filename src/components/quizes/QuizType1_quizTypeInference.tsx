@@ -9,6 +9,7 @@ import quizType1_data from "../../datas/quizType1Data.json";
 import { Types } from "../../models/pokemonData";
 import defaultTypes from "../../datas/defaultTypes.json";
 import QuizAnswer from "./QuizAnswer";
+import { title } from "./QuizType0_damageEffectiveness";
 
 interface QuizType1_Props {
   submitAnswer: (answer: any, correct: any) => void;
@@ -48,7 +49,7 @@ return (
     <h1 css={title}>
       <div style={{display: "inline-block"}}>
       <TypeBadge no={100} quizMode={true}>?</TypeBadge>
-      </div>에 들어갈 타입을 고르세요
+      </div> 에 들어갈 타입을 고르세요
     </h1>
     <div css={questionContainer}>
       <div css={badgeContainer}>
@@ -93,13 +94,6 @@ const questionContainer = css`
   background-color: var(--primary);
   padding: 20px;
   box-sizing: border-box;
-`
-
-const title = css`
-display: flex;
-align-items: center;
-gap: 10px;
-  
 `
 
 const badgeContainer = css`

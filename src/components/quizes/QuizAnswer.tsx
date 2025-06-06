@@ -4,7 +4,7 @@ import { Types } from '../../models/pokemonData';
 import { css } from '@emotion/react';
 
 interface QuizAnswerProps {
-    questionArr: Types[];
+    questionArr: Types[]
     submitAnswer: (answer: string, correct: string) => void;
 }
 
@@ -13,7 +13,7 @@ export const QuizAnswer = ({questionArr, submitAnswer} : QuizAnswerProps) => {
 
   return (
     <>
-              <div css={typeSection}>
+              <div css={AnswerContainer}>
             <SelectType
               checkedType={checkedType}
               setCheckedType={setCheckedType}
@@ -30,11 +30,11 @@ export const QuizAnswer = ({questionArr, submitAnswer} : QuizAnswerProps) => {
   )
 }
 
-const typeSection = css`
+export const AnswerContainer = css`
   width: 100%;
 `;
 
-const submitBtn = css`
+export const submitBtn = css`
   width: 30%;
   height: 45px;
   border-radius: 8px;

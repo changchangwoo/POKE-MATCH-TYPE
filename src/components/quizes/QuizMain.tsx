@@ -3,12 +3,14 @@ import { useCallback, useEffect, useState } from "react";
 import QuizType0_damageEffectiveness from "./QuizType0_damageEffectiveness";
 import QuizType1_quizTypeInference from "./QuizType1_quizTypeInference";
 import QuizType2_typeDescription from "./QuizType2_typeDescription";
+import { getRandomNum } from "../../utils/getRandomNum";
 
 const QuizMain = () => {
   const [progress, setProgress] = useState<number>(0);
   const [quizType, setQuizType] = useState<number>(0);
 
   const submitAnswer = useCallback((answer: any, correct: any) => {
+    console.log(answer, correct)
     if (answer === correct) {
       alert("정답입니다!");
     } else {
@@ -18,7 +20,8 @@ const QuizMain = () => {
   }, []);
 
   useEffect(() => {
-    const curQuizType = 2;
+    const curQuizType = getRandomNum(3);
+    console.log("현재 퀴즈 유형: ", curQuizType);
     setQuizType(curQuizType);
   }, [progress]);
 
