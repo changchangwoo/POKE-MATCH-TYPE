@@ -8,11 +8,13 @@ import QuizAnswer from "./QuizAnswer";
 
 interface QuizType0_Props {
   submitAnswer: (answer: any, correct: any) => void;
+  progress: number;
 }
 
-const QuizType0_damageEffectiveness = ({ submitAnswer }: QuizType0_Props) => {
+const QuizType0_damageEffectiveness = ({ submitAnswer, progress }: QuizType0_Props) => {
   const { questionArr, quizNum, groupResult, matchDatas } =
-    useGetDetailPokemonForQuiz();
+    useGetDetailPokemonForQuiz(progress);
+
 
   if (!questionArr || !quizNum || !groupResult || !matchDatas) return null;
   return (

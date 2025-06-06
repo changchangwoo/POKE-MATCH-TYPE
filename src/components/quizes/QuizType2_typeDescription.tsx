@@ -21,7 +21,7 @@ const QuizType2_typeDescription = ({ submitAnswer }: QuizType2_Props) => {
   const [attacker, setAttacker] = useState<Types>();
   const [defender, setDefender] = useState<Types[]>([]);
   const [questionArr, setQuestionArr] = useState<number[]>([]);
-  const [checkedAnswer, setCheckedAnswer] = useState<number>(0);
+  const [checkedAnswer, setCheckedAnswer] = useState<number | null>(null);
   const [answer, setAnswer] = useState<number>(0);
     useEffect(() => {
     const fetchDetailTypeQuiz = async () => {
@@ -84,7 +84,7 @@ const QuizType2_typeDescription = ({ submitAnswer }: QuizType2_Props) => {
         </div>
       </div>
         <div css={selectDamageContainer}>
-          {questionArr.map((damage, idx) => {
+          {questionArr.map((damage) => {
           const isChecked = checkedAnswer === damage;
             return (
               <button

@@ -9,7 +9,7 @@ import {
 } from "../utils/getDetailType";
 import { getRandomNum } from "../utils/getRandomNum";
 
-export const useGetDetailPokemonForQuiz = () => {
+export const useGetDetailPokemonForQuiz = (progress : number) => {
   const [groupResult, setGroupResult] =
     useState<{ damage: number; types: IDamageData[] }[]>();
   const [matchDatas, setMatchDatas] = useState<MatchInfo>();
@@ -82,7 +82,7 @@ export const useGetDetailPokemonForQuiz = () => {
     };
 
     useFetchDetailPokemonQuiz();
-  }, []);
+  }, [progress]);
 
   return {
     questionArr,

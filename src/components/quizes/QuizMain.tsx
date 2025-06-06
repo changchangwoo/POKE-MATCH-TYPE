@@ -10,7 +10,6 @@ const QuizMain = () => {
   const [quizType, setQuizType] = useState<number>(0);
 
   const submitAnswer = useCallback((answer: any, correct: any) => {
-    console.log(answer, correct)
     if (answer === correct) {
       alert("정답입니다!");
     } else {
@@ -22,6 +21,7 @@ const QuizMain = () => {
   useEffect(() => {
     const curQuizType = getRandomNum(3);
     console.log("현재 퀴즈 유형: ", curQuizType);
+    console.log("현재 프로그레스 : ", progress)
     setQuizType(curQuizType);
   }, [progress]);
 
@@ -34,21 +34,22 @@ const QuizMain = () => {
           case 0:
             return (
               <QuizType0_damageEffectiveness
-                key={progress}
+                key={`${quizType}-${progress}`}
                 submitAnswer={submitAnswer}
+                progress={progress}
               />
             );
           case 1:
             return (
               <QuizType1_quizTypeInference
-                key={progress}
+                key={`${quizType}-${progress}`}
                 submitAnswer={submitAnswer}
               />
             );
           case 2:
             return (
               <QuizType2_typeDescription
-                key={progress}
+                key={`${quizType}-${progress}`}
                 submitAnswer={submitAnswer}
               />
             );
