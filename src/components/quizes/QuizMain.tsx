@@ -1,34 +1,56 @@
-import { css } from "@emotion/react";
-import { useCallback, useEffect, useState } from "react";
+import {useEffect, useState } from "react";
 import QuizType0_damageEffectiveness from "./QuizType0_damageEffectiveness";
 import QuizType1_quizTypeInference from "./QuizType1_quizTypeInference";
 import QuizType2_typeDescription from "./QuizType2_typeDescription";
 import { getRandomNum } from "../../utils/getRandomNum";
+import StepProgress from "./StepProgress";
 
 const QuizMain = () => {
   const [progress, setProgress] = useState<number>(0);
   const [quizType, setQuizType] = useState<number>(0);
+  const [progressArr, setProgressArr] = useState<{ step: string }[]>(() =>
+    new Array(10).fill(null).map(() => ({ step: "none" }))
+  );
 
-  const submitAnswer = useCallback((answer: any, correct: any) => {
+  const submitAnswer = (answer: any, correct: any) => {
     if (answer === correct) {
-      alert("정답입니다!");
+      alert(`정답입니다! `);
+      console.log('프로그레스', progress)
+      setProgressArr(
+        progressArr.map((item, idx) =>
+          idx === progress ? { step: "correct" } : item
+        )
+      );
     } else {
       alert("틀렸습니다! 정답은 " + correct + "입니다.");
+            console.log('프로그레스', progress)
+
+      setProgressArr(
+        progressArr.map((item, idx) =>
+          idx === progress ? { step: "wrong" } : item
+        )
+      );
     }
+    console.log(progressArr);
     setProgress((prev) => prev + 1);
-  }, []);
+  };
 
   useEffect(() => {
+    setProgressArr(
+      progressArr.map((item, idx) =>
+        idx === progress ? { step: "current" } : item
+      )
+    );
     const curQuizType = getRandomNum(3);
-    console.log("현재 퀴즈 유형: ", curQuizType);
-    console.log("현재 프로그레스 : ", progress)
     setQuizType(curQuizType);
   }, [progress]);
 
   return (
     <>
-      <div css={progressContainer}>{progress}</div>
-      <h1>Main</h1>
+      <StepProgress
+        currentStep={progress}
+        progressArr={progressArr}
+      ></StepProgress>
       {(() => {
         switch (quizType) {
           case 0:
@@ -61,12 +83,5 @@ const QuizMain = () => {
   );
 };
 
-const progressContainer = css`
-  width: 100%;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
 export default QuizMain;
+ 

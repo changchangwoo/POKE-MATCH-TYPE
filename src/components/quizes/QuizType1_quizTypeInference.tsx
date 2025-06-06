@@ -49,7 +49,7 @@ return (
     <h1 css={title}>
       <div style={{display: "inline-block"}}>
       <TypeBadge no={100} quizMode={true}>?</TypeBadge>
-      </div> 에 들어갈 타입을 고르세요
+      </div> 에 들어갈 타입은?
     </h1>
     <div css={questionContainer}>
       <div css={badgeContainer}>
@@ -89,7 +89,7 @@ const questionContainer = css`
   align-items: center;
   justify-content: center;
   min-height: 140px;
-  border-radius: 20px;
+  border-radius: 8px;
   border: 1px solid var(--border);
   background-color: var(--primary);
   padding: 20px;

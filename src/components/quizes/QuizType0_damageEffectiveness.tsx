@@ -20,9 +20,8 @@ const QuizType0_damageEffectiveness = ({ submitAnswer, progress }: QuizType0_Pro
   return (
     <div css={matchCardContainer}>
       <h1 css={title}>
-        해당 포켓몬을 공격했을 때,&nbsp;
-        <b>{groupResult[quizNum].damage}배의 데미지를 줄 수 있는 타입</b>을
-        선택하세요
+        해당 포켓몬을 공격했을 때,<br/>
+        <b>{groupResult[quizNum].damage}배의 데미지를 줄 수 있는 타입</b>은?
       </h1>
       <div css={imgBox(matchDatas.types[0].no)}>
         <img
@@ -50,6 +49,8 @@ export const title = css`
     font-weight: bold;
   }
   margin-bottom: 30px;
+  text-align: center;
+  width: 100%;
   
 `;
 

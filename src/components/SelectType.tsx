@@ -35,7 +35,7 @@ const SelectType = ({
 
   return (
     <div css={selectTypeContainer}>
-      <h1>타입 선택</h1>
+      <h1>{quizModeDatas ? "" : "타입 선택"}</h1>
       <div css={selectTypes}>
         {selectedDatas.map((type) => {
           const isChecked = checkedType.some(

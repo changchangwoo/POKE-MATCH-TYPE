@@ -32,7 +32,6 @@ const quizContainer = css`
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   justify-content: center;
   align-items: center;
   border-radius: 30px;
