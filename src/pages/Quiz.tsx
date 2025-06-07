@@ -6,18 +6,15 @@ import QuizEnd from "../components/quizes/QuizEnd";
 
 const Quiz = () => {
   const [section, setSection] = useState<number>(0);
-  const onClickStartBtn = () => {
-    setSection(1);
-  };
 
   return (
     <div css={quizContainer}>
       {(() => {
         switch (section) {
           case 0:
-            return <QuizReady onClickStartBtn={onClickStartBtn} />;
+            return <QuizReady setSection={setSection} />;
           case 1:
-            return <QuizMain />;
+            return <QuizMain setSection={setSection}/>;
           case 2:
             return <QuizEnd />;
           default:

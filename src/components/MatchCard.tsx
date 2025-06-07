@@ -71,7 +71,7 @@ export const matchCardContainer = css`
   justify-content: center;
   align-items: center;
   gap: 10px;
-  min-height: 475px;
+  min-height: 450px;
 `;
 
 export const imgBox = (no: number) => css`

@@ -7,8 +7,6 @@ interface StepProgressProps {
 }
 
 const StepProgress = ({ currentStep, progressArr }: StepProgressProps) => {
-    console.log(progressArr)
-
     return (
     <div css={container}>
         <div>{currentStep} / {progressArr.length}</div>

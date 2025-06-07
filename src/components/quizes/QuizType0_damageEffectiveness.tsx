@@ -15,18 +15,16 @@ const QuizType0_damageEffectiveness = ({ submitAnswer, progress }: QuizType0_Pro
   const { questionArr, quizNum, groupResult, matchDatas } =
     useGetDetailPokemonForQuiz(progress);
 
-
   if (!questionArr || !quizNum || !groupResult || !matchDatas) return null;
   return (
     <div css={matchCardContainer}>
       <h1 css={title}>
         해당 포켓몬을 공격했을 때,<br/>
-        <b>{groupResult[quizNum].damage}배의 데미지를 줄 수 있는 타입</b>은?
+        <b>{groupResult[quizNum].damage}배의 데미지를 가하는 타입</b>은?
       </h1>
       <div css={imgBox(matchDatas.types[0].no)}>
         <img
           src={matchDatas.imgs}
-          loading="lazy"
           alt={`Pokemon ${matchDatas.no}`}
         />
       </div>
@@ -48,9 +46,12 @@ export const title = css`
   b {
     font-weight: bold;
   }
-  margin-bottom: 30px;
   text-align: center;
   width: 100%;
-  
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: center;
 `;
 

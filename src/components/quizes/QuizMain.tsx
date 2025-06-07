@@ -1,11 +1,14 @@
-import {useEffect, useState } from "react";
+import {Dispatch, SetStateAction, useEffect, useState } from "react";
 import QuizType0_damageEffectiveness from "./QuizType0_damageEffectiveness";
 import QuizType1_quizTypeInference from "./QuizType1_quizTypeInference";
 import QuizType2_typeDescription from "./QuizType2_typeDescription";
 import { getRandomNum } from "../../utils/getRandomNum";
 import StepProgress from "./StepProgress";
 
-const QuizMain = () => {
+interface QuizMainProps {
+  setSection:Dispatch<SetStateAction<number>>;
+}
+const QuizMain = ({setSection} : QuizMainProps) => {
   const [progress, setProgress] = useState<number>(0);
   const [quizType, setQuizType] = useState<number>(0);
   const [progressArr, setProgressArr] = useState<{ step: string }[]>(() =>
@@ -31,11 +34,14 @@ const QuizMain = () => {
         )
       );
     }
-    console.log(progressArr);
     setProgress((prev) => prev + 1);
   };
 
   useEffect(() => {
+    if(progress >= 10) {
+      setSection((prev) => prev + 1);
+      return;
+    }
     setProgressArr(
       progressArr.map((item, idx) =>
         idx === progress ? { step: "current" } : item

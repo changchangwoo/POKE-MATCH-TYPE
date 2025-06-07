@@ -17,6 +17,8 @@ export const useGetDetailPokemonForQuiz = (progress : number) => {
   const [quizNum, setQuizNum] = useState<number>(0);
 
   useEffect(() => {
+    console.log("useEffect 동작 확인")
+    let isCancelled = false;
     const useFetchDetailPokemonQuiz = async (name: string = "") => {
       const lastNum = PokeDex[PokeDex.length - 1].no;
       const randomNum = Math.floor(Math.random() * lastNum);
@@ -75,6 +77,7 @@ export const useGetDetailPokemonForQuiz = (progress : number) => {
           answerSet.add(candidate.name);
         }
       }
+      if(isCancelled) return
       setGroupResult(groupResult);
       setMatchDatas(matchDatas);
       setQuizNum(quizNum);
@@ -82,6 +85,10 @@ export const useGetDetailPokemonForQuiz = (progress : number) => {
     };
 
     useFetchDetailPokemonQuiz();
+
+    return () => {
+      isCancelled = true;
+    }
   }, [progress]);
 
   return {

@@ -47,9 +47,11 @@ const answer = quizType1_data[randQuiz][randBlank];
 return (
   <div css={matchCardContainer}>
     <h1 css={title}>
+      <div>
       <div style={{display: "inline-block"}}>
       <TypeBadge no={100} quizMode={true}>?</TypeBadge>
       </div> 에 들어갈 타입은?
+      </div>
     </h1>
     <div css={questionContainer}>
       <div css={badgeContainer}>

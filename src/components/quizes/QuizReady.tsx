@@ -1,14 +1,17 @@
 import { css } from "@emotion/react";
+import { Dispatch, SetStateAction } from "react";
 
 interface QuizReadyProps {
-  onClickStartBtn: () => void;
+  setSection:Dispatch<SetStateAction<number>>;
 }
 
-const QuizReady = ({ onClickStartBtn }: QuizReadyProps) => {
+const QuizReady = ({ setSection }: QuizReadyProps) => {
   return (
     <>
       <h1>Ready</h1>
-      <button css={quizStartBtn} onClick={onClickStartBtn}>
+      <button css={quizStartBtn} onClick={() => {
+        setSection((prev) => prev + 1)}
+      }>
         start
       </button>
     </>

@@ -63,9 +63,10 @@ const QuizType2_typeDescription = ({ submitAnswer }: QuizType2_Props) => {
   return (
     <div css={matchCardContainer}>
       <h1 css={title}>
+        <div>
         <b>{getKoreanType(attacker.name)}타입 공격</b>에 대한 <br/>
         <b>{getKoreanType(defender[0].name)}/{getKoreanType(defender[1].name)} 타입</b>의 피해량은?
-        
+        </div>
       </h1>
       <div css={quizContainer}>
         <div css={quizTypeContainer} data-name="공격">

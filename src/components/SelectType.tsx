@@ -26,7 +26,10 @@ const SelectType = ({
       );
     } else {
       if (quizModeDatas) {
-        if (checkedType.length >= 1) return;
+        if (checkedType.length === 1) {
+          setCheckedType([{ no: type.no, name: type.name }]);
+          return;
+        }
       }
       if (checkedType.length >= 2) return;
       setCheckedType([...checkedType, { no: type.no, name: type.name }]);
@@ -91,3 +94,8 @@ const item = (no: number | undefined) => css`
 `;
 
 export default SelectType;
+
+/*
+퀴즈모드 데이터가 아닌 경우, 담는 개념 X
+
+*/
