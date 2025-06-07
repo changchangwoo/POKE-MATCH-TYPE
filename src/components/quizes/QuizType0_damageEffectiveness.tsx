@@ -15,7 +15,12 @@ const QuizType0_damageEffectiveness = ({ submitAnswer, progress }: QuizType0_Pro
   const { questionArr, quizNum, groupResult, matchDatas } =
     useGetDetailPokemonForQuiz(progress);
 
-  if (!questionArr || !quizNum || !groupResult || !matchDatas) return null;
+  if (!questionArr || quizNum === undefined || !groupResult || !matchDatas) 
+    {
+      console.log(questionArr, quizNum, groupResult, matchDatas)
+      console.log("렌더 안되서 리턴")
+      return null;
+    }
   return (
     <div css={matchCardContainer}>
       <h1 css={title}>
