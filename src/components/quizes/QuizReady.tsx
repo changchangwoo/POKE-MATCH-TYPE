@@ -1,6 +1,5 @@
 import { css } from "@emotion/react";
 import { Dispatch, SetStateAction } from "react";
-import tempImg from "../../imgs/quizReady_temp.png";
 
 interface QuizReadyProps {
   setSection:Dispatch<SetStateAction<number>>;
