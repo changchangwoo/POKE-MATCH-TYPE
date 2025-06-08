@@ -12,7 +12,7 @@ const Quiz = () => {
 
   return (
     <div css={quizContainer}>
-      <h1>포켓몬 타입 퀴즈</h1>
+      <h1>포켓몬 상성 퀴즈</h1>
       {(() => {
         switch (section) {
           case 0:

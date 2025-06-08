@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -30,7 +29,7 @@ const ChangeButtons = () => {
         onClick={() => navigator("/quiz")}
         className={location.pathname === "/quiz" ? "active" : ""}
       >
-        타입 퀴즈
+        상성 퀴즈
       </button>
     </div>
   );
