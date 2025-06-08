@@ -9,6 +9,7 @@ const Quiz = () => {
 
   return (
     <div css={quizContainer}>
+      <h1>포켓몬 타입 퀴즈</h1>
       {(() => {
         switch (section) {
           case 0:
@@ -32,6 +33,7 @@ const quizContainer = css`
   justify-content: center;
   align-items: center;
   border-radius: 30px;
+  gap: 10px;
 `;
 
 export default Quiz;
