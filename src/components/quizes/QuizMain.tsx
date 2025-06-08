@@ -7,13 +7,13 @@ import StepProgress from "./StepProgress";
 
 interface QuizMainProps {
   setSection:Dispatch<SetStateAction<number>>;
+  setProgressArr: Dispatch<SetStateAction<{ step: string }[]>>;
+  progressArr: { step: string }[];
 }
-const QuizMain = ({setSection} : QuizMainProps) => {
+const QuizMain = ({setSection, progressArr, setProgressArr} : QuizMainProps) => {
   const [progress, setProgress] = useState<number>(0);
   const [quizType, setQuizType] = useState<number>(0);
-  const [progressArr, setProgressArr] = useState<{ step: string }[]>(() =>
-    new Array(10).fill(null).map(() => ({ step: "none" }))
-  );
+
 
   const submitAnswer = (answer: any, correct: any) => {
     if (answer === correct) {

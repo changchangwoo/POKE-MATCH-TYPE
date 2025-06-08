@@ -29,7 +29,7 @@ const QuizReady = ({ setSection }: QuizReadyProps) => {
 
 export default QuizReady;
 
-const quizReadyImagContainer = css`
+export const quizReadyImagContainer = css`
   width: 100%;
   height: 250px;
   background-color: var(--border);
@@ -55,7 +55,7 @@ background-color: white;
 
 `
 
-const quizReadyContainer = css`
+export const quizReadyContainer = css`
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
@@ -73,6 +73,7 @@ const quizReadyContainer = css`
 
   span {
     text-align: center;
+    line-height: 1.5;;
 
   }
   `;

@@ -6,6 +6,9 @@ import QuizEnd from "../components/quizes/QuizEnd";
 
 const Quiz = () => {
   const [section, setSection] = useState<number>(0);
+  const [progressArr, setProgressArr] = useState<{ step: string }[]>(() =>
+    new Array(10).fill(null).map(() => ({ step: "none" }))
+  );
 
   return (
     <div css={quizContainer}>
@@ -15,9 +18,10 @@ const Quiz = () => {
           case 0:
             return <QuizReady setSection={setSection} />;
           case 1:
-            return <QuizMain setSection={setSection}/>;
+            return <QuizMain setSection={setSection}
+            progressArr={progressArr} setProgressArr={setProgressArr}/>;
           case 2:
-            return <QuizEnd />;
+            return <QuizEnd progressArr={progressArr}/>;
           default:
             return <div>에러 페이지</div>;
         }
