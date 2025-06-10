@@ -29,7 +29,19 @@ const SettingModal = ({ setModal }: SettingModalProps) => {
             </p>
             <Footer />
           </div>
-          <AccordianList title="라이트 모드">
+          <AccordianList title="테마 선택">
+            <div css={themeContainer}>
+              <button>태양의 돌</button>
+              <button>달의 돌</button>
+            </div>
+          </AccordianList>
+          <AccordianList title="언어 선택">
+            <span>컨텐츠 입니다.</span>
+          </AccordianList>
+          <AccordianList title="저작권">
+            <span>컨텐츠 입니다.</span>
+          </AccordianList>
+          <AccordianList title="피드백">
             <span>컨텐츠 입니다.</span>
           </AccordianList>
         </ul>
@@ -37,6 +49,11 @@ const SettingModal = ({ setModal }: SettingModalProps) => {
     </div>
   );
 };
+
+const themeContainer = css`
+  display: flex;
+  gap: 10px;
+`;
 
 const ModalOverlay = css`
   position: fixed;

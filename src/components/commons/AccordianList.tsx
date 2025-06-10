@@ -9,33 +9,48 @@ interface AccrodianProps {
 const AccordianList = ({ children, title }: AccrodianProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <div css={AccordianListContainer}>
-      <div className="title" onClick={() => setIsOpen((prev) => !prev)}>
-        {title} <FaCaretDown />
+    <div
+      css={AccordianListContainer}
+      onClick={() => setIsOpen((prev) => !prev)}
+    >
+      <div className="title">
+        <span>{title}</span>
+        <span css={openIcon(isOpen)}>
+          <FaCaretDown />
+        </span>
       </div>
       {isOpen && <div className="contents">{children}</div>}
     </div>
   );
 };
 
-const AccordianListContainer = css`
+const AccordianListContainer = () => css`
   width: 100%;
   border-bottom: 1px solid var(--border);
+  cursor: pointer;
+
+  :hover {
+    background-color: var(--border);
+  }
 
   .title {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 12px 16px;
+    gap: 5px;
     cursor: pointer;
-    :hover {
-      background-color: var(--border);
-    }
   }
 
   .contents {
     padding: 12px 16px;
   }
+`;
+
+const openIcon = (isOpen: boolean) => css`
+  transform: rotate(${isOpen ? "180deg" : "0deg"});
+  display: flex;
+  align-items: center;
 `;
 
 export default AccordianList;
