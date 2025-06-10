@@ -1,16 +1,16 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { FaGithub } from "react-icons/fa";
-import { FaCopyright, FaPencil } from "react-icons/fa6";
+import { FaPencil } from "react-icons/fa6";
 
 const Footer = () => {
   return (
     <div css={FooterContainer}>
       <>
-        <h3>
+        {/* <h3>
           <FaCopyright /> Data provided by PokeAPI
-        </h3>
-        
+        </h3> */}
+
         <a href="https://github.com/changchangwoo/POKE-MATCH-TYPE">
           <FaGithub />
           changchangwoo/github.io
@@ -33,7 +33,8 @@ const FooterContainer = css`
   gap: 5px;
   font-size: 13px;
 
-  a, h3 {
+  a,
+  h3 {
     width: 100%;
     display: flex;
     align-items: center;

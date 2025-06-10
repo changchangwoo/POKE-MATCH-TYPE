@@ -2,6 +2,8 @@ import { css } from "@emotion/react";
 import { Dispatch, SetStateAction } from "react";
 import { FaCaretDown } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
+import Footer from "../Footer";
+import AccordianList from "../commons/AccordianList";
 
 interface SettingModalProps {
   setModal: Dispatch<SetStateAction<boolean>>;
@@ -18,31 +20,23 @@ const SettingModal = ({ setModal }: SettingModalProps) => {
           </button>
         </div>
         <ul className="ModalContents">
-          <h1>포켓몬스터 약점 계산기 -v02</h1>
-          <li>라이트 모드 <FaCaretDown /></li>
-          <li>언어 설정 <FaCaretDown /></li>
-          <li>저작권 <FaCaretDown /></li>
-          <li>피드백 <FaCaretDown /></li>
+          <div className="ModalDescription">
+            <h1>포켓몬스터 약점 계산기 -v02</h1>
+            <p>
+              본 서비스를 이용해주셔서 정말 감사합니다.
+              <br />
+              뭐라도 더 열심히 만들어보겠습니다.. 헤헤
+            </p>
+            <Footer />
+          </div>
+          <AccordianList title="라이트 모드">
+            <span>컨텐츠 입니다.</span>
+          </AccordianList>
         </ul>
       </div>
     </div>
   );
 };
-
-/*
-모달 안에 컨텐츠들을 전부 새 컴포넌트로 할까??
-단순 아코디언으로 할 수 있는 것들
--> 저작권
--> 피드백
--> 감사인사
--> 걍 필요없는 자잘구레한것들
-
-동작이 이뤄지는 것들
--> 다크모드
--> 언어 설정
--> 분리하자
-
-*/
 
 const ModalOverlay = css`
   position: fixed;
@@ -61,31 +55,22 @@ const ModalContainer = css`
   width: 100%;
   height: 100%;
   background-color: white;
-  .ModalContents {
-  display: flex;
-  flex-direction: column;
-  h1 {
-    height: 80px;
+
+  .ModalDescription {
+    border-bottom: 1px solid var(--border);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid var(--border);
+    margin-top: 30px;
 
-  }
-    li {
-      width: 100%;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      justify-content: center;
-      border-bottom: 1px solid var(--border);
-      height: 40px;
-      cursor: pointer;
-      :hover {
-        background-color: var(--border);
-      }
+    p {
+      font-size: 13px;
+      color: grey;
+      padding: 20px;
+      max-width: 300px;
+      text-align: center;
     }
-
   }
   .ModalHeader {
     width: 100%;
@@ -119,3 +104,11 @@ const ModalContainer = css`
 `;
 
 export default SettingModal;
+
+/*
+아코디언 컴포넌트를 만드려고 했을 때 유의사항들
+아코디언 버튼을 클릭하는 경우 데이터가 출력되고 제어할 수 있는건 기본적임
+=> 공통 컴포넌트로 묶기 위해서는
+아코디언 contents 부분을 합성컴포넌트로 받고, 아코디언 타이틀 부분만 제어 
+
+*/
