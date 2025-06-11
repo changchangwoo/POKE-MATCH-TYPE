@@ -40,6 +40,7 @@ const AccordianListContainer = () => css`
     padding: 12px 16px;
     gap: 5px;
     cursor: pointer;
+    color: var(--text);
   }
 
   .contents {

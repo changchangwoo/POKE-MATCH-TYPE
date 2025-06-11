@@ -19,7 +19,7 @@ const TypeBadgeStyle = (no: number, quizMode?: boolean) => css`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--background);
+  color: white;
   max-width: ${quizMode ? "80px" : "180px"};
   ${quizMode ? "min-width: 80px;" : ""};
 `;

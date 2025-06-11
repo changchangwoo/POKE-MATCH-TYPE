@@ -60,6 +60,10 @@ const MatchCard = ({
 };
 
 export const matchCardContainer = css`
+  h1,
+  h2 {
+    color: var(--text);
+  }
   width: 100%;
   padding: 20px;
   box-sizing: border-box;

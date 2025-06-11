@@ -28,6 +28,8 @@ export const inputBox = css`
   input {
     flex: 1;
     font-size: var(--fontMedium);
+    background-color: var(--background);
+    color: var(--text);
   }
 `;
 

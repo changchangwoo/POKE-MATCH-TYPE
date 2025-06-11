@@ -62,6 +62,7 @@ const typeCardContainer = css`
 
 const title = css`
   margin-top: 10px;
+  color: var(--text);
 `;
 
 const typeSection = css`

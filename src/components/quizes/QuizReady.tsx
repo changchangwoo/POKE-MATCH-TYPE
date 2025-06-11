@@ -74,6 +74,7 @@ export const quizReadyContainer = css`
   span {
     text-align: center;
     line-height: 1.5;
+    color: var(--text);
   }
 `;
 
@@ -83,6 +84,7 @@ const quizStartBtn = css`
   border: 1px solid var(--border);
   border-radius: 5px;
   background-color: var(--background);
+  color: var(--text);
 
   cursor: pointer;
   &:hover {

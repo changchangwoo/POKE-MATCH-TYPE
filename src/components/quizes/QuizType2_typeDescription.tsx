@@ -9,9 +9,8 @@ import { title } from "./QuizType0_damageEffectiveness";
 import { css } from "@emotion/react";
 import { getKoreanType } from "../../utils/getKoreanType";
 import TypeBadge from "../commons/TypeBadge";
-import {  submitBtn } from "./QuizAnswer";
+import { submitBtn } from "./QuizAnswer";
 import { v4 as uuidv4 } from "uuid";
-
 
 interface QuizType2_Props {
   submitAnswer: (answer: any, correct: any) => void;
@@ -23,7 +22,7 @@ const QuizType2_typeDescription = ({ submitAnswer }: QuizType2_Props) => {
   const [questionArr, setQuestionArr] = useState<number[]>([]);
   const [checkedAnswer, setCheckedAnswer] = useState<number | null>(null);
   const [answer, setAnswer] = useState<number>(0);
-    useEffect(() => {
+  useEffect(() => {
     const fetchDetailTypeQuiz = async () => {
       const randomTypes: number[] = [];
       while (true) {
@@ -64,8 +63,12 @@ const QuizType2_typeDescription = ({ submitAnswer }: QuizType2_Props) => {
     <div css={matchCardContainer}>
       <h1 css={title}>
         <div>
-        <b>{getKoreanType(attacker.name)}타입 공격</b>에 대한 <br/>
-        <b>{getKoreanType(defender[0].name)}/{getKoreanType(defender[1].name)} 타입</b>의 피해량은?
+          <b>{getKoreanType(attacker.name)}타입 공격</b>에 대한 <br />
+          <b>
+            {getKoreanType(defender[0].name)}/{getKoreanType(defender[1].name)}{" "}
+            타입
+          </b>
+          의 피해량은?
         </div>
       </h1>
       <div css={quizContainer}>
@@ -84,37 +87,35 @@ const QuizType2_typeDescription = ({ submitAnswer }: QuizType2_Props) => {
           </>
         </div>
       </div>
-        <div css={selectDamageContainer}>
-          {questionArr.map((damage) => {
+      <div css={selectDamageContainer}>
+        {questionArr.map((damage) => {
           const isChecked = checkedAnswer === damage;
-            return (
-              <button
-                key={uuidv4()}
-                onClick={() => setCheckedAnswer(damage)}
-                data-name={damage}
-                css={answerButton(isChecked)}
-              >
-                {damage}의 피해를 입힌다.
-              </button>
-            );
-          })}
-        </div>
+          return (
+            <button
+              key={uuidv4()}
+              onClick={() => setCheckedAnswer(damage)}
+              data-name={damage}
+              css={answerButton(isChecked)}
+            >
+              {damage}의 피해를 입힌다.
+            </button>
+          );
+        })}
+      </div>
 
-              <button
-          onClick={() => submitAnswer(checkedAnswer, answer)}
-          css={submitBtn}
-        >
-          정답 제출
-        </button>
+      <button
+        onClick={() => submitAnswer(checkedAnswer, answer)}
+        css={submitBtn}
+      >
+        정답 제출
+      </button>
     </div>
   );
 };
 
 export default QuizType2_typeDescription;
 
-
-
-const selectDamageContainer =  css`
+const selectDamageContainer = css`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -123,22 +124,22 @@ const selectDamageContainer =  css`
   width: 100%;
   max-width: 400px;
   border: 1px solid var(--border);
+  background-color: var(--primary);
   border-radius: 10px;
   padding: 10px;
   box-sizing: border-box;
-
-
+  color: var(--text);
 `;
 
 const answerButton = (isChecked: boolean) => css`
-      width: 100%;
-    height: 30px;
-    border-radius: 5px;
-    cursor: pointer;
-    border: 1px solid var(--border);
-  background-color: ${isChecked ? `var(--border)` : "var(--primary)"};
-
-  `
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  color: var(--text);
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background-color: ${isChecked ? `var(--border)` : "var(--background)"};
+`;
 
 const quizContainer = css`
   width: 100%;
@@ -159,9 +160,10 @@ const quizTypeContainer = css`
   align-items: center;
   justify-content: center;
   gap: 10px;
-    padding: 10px;
+  padding: 10px;
   box-sizing: border-box;
-
+  color: var(--text);
+  background-color: var(--primary);
 
   &::before {
     content: attr(data-name);

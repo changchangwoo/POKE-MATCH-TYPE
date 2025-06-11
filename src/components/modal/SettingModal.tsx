@@ -63,7 +63,7 @@ const ModalOverlay = css`
 const ModalContainer = css`
   width: 100%;
   height: 100%;
-  background-color: var(--background);
+  background-color: var(--primary);
 
   .ModalDescription {
     border-bottom: 1px solid var(--border);
@@ -80,11 +80,15 @@ const ModalContainer = css`
       max-width: 300px;
       text-align: center;
     }
+
+    h1 {
+      color: var(--text);
+    }
   }
   .ModalHeader {
     width: 100%;
     height: 50px;
-    background-color: grey;
+    background-color: var(--point);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,13 +100,13 @@ const ModalContainer = css`
       right: 20px;
       max-width: 25px;
       height: 25px;
-      border: 1px solid var(--var(--background));
+      border: 1px solid var(--border);
       border-radius: 4px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--point);
-      background-color: var(--background);
+      background-color: var(--primary);
       cursor: pointer;
       transition: all 0.2;
       :hover {

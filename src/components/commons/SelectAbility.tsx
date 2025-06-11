@@ -1,41 +1,40 @@
 import { css } from "@emotion/react";
 import { v4 as uuidv4 } from "uuid";
-import abilities from "../../datas/pokemonAbilityData.json"
+import abilities from "../../datas/pokemonAbilityData.json";
 import { Dispatch, SetStateAction } from "react";
 import { useLocation } from "react-router-dom";
 
-
 interface TypeCheckProps {
-  selectedAbility : string;
-  setSelectedAbility : Dispatch<SetStateAction<string>>
+  selectedAbility: string;
+  setSelectedAbility: Dispatch<SetStateAction<string>>;
 }
 
-const SelectAbility = ({ selectedAbility, setSelectedAbility}: TypeCheckProps) => {
+const SelectAbility = ({
+  selectedAbility,
+  setSelectedAbility,
+}: TypeCheckProps) => {
   const location = useLocation();
 
   const handleAbilityChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = event.target.value;
     setSelectedAbility(selectedValue);
-    let currentPath = location.pathname + "/typecheck"
+    let currentPath = location.pathname + "/typecheck";
     localStorage.setItem(currentPath, selectedValue);
   };
 
   return (
     <>
-    <div css={SelectAbilityContainer}>
-          <h1>특성</h1>
+      <div css={SelectAbilityContainer}>
+        <h1>특성</h1>
 
-      <select
-        value={selectedAbility}
-        onChange={handleAbilityChange}
-      >
-        {abilities.map((ability) => (
-          <option key={uuidv4()} value={ability.value}>
-            {ability.label}
-          </option>
-        ))}
-      </select>
-    </div>
+        <select value={selectedAbility} onChange={handleAbilityChange}>
+          {abilities.map((ability) => (
+            <option key={uuidv4()} value={ability.value}>
+              {ability.label}
+            </option>
+          ))}
+        </select>
+      </div>
     </>
   );
 };
@@ -49,8 +48,8 @@ const SelectAbilityContainer = css`
 
   h1 {
     text-align: center;
+    color: var(--text);
   }
-  
 
   select {
     width: 100%;
@@ -65,22 +64,18 @@ const SelectAbilityContainer = css`
     font-size: var(--fontMedium);
 
     select:hover {
-            background-color: var(--primary);
-        }
+      background-color: var(--primary);
+    }
 
-  
-  option {
-    text-align: center;
-    font-size: var(--fontMedium);
-  }
+    option {
+      text-align: center;
+      font-size: var(--fontMedium);
+    }
 
-  
-  option:hover {
-            background-color: var(--primary);
-        }
+    option:hover {
+      background-color: var(--primary);
+    }
   }
 `;
-
-
 
 export default SelectAbility;

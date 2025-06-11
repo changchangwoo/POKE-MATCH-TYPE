@@ -18,10 +18,15 @@ const Quiz = () => {
           case 0:
             return <QuizReady setSection={setSection} />;
           case 1:
-            return <QuizMain setSection={setSection}
-            progressArr={progressArr} setProgressArr={setProgressArr}/>;
+            return (
+              <QuizMain
+                setSection={setSection}
+                progressArr={progressArr}
+                setProgressArr={setProgressArr}
+              />
+            );
           case 2:
-            return <QuizEnd progressArr={progressArr}/>;
+            return <QuizEnd progressArr={progressArr} />;
           default:
             return <div>에러 페이지</div>;
         }
@@ -38,6 +43,9 @@ const quizContainer = css`
   align-items: center;
   border-radius: 30px;
   gap: 10px;
+  h1 {
+    color: var(--text);
+  }
 `;
 
 export default Quiz;

@@ -55,6 +55,7 @@ const ChangeSectionContainer = css`
     cursor: pointer;
     background-color: var(--background);
     border-radius: 6px;
+    color: var(--text);
 
     :hover {
       background-color: var(--point);

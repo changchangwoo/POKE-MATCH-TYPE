@@ -58,6 +58,9 @@ const SelectType = ({
 };
 
 const selectTypeContainer = css`
+  h1 {
+    color: var(--text);
+  }
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,7 +90,7 @@ const item = (no: number | undefined) => css`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  color: ${no ? `var(--background)` : "var(--text)"};
+  color: white;
   transition: all 0.2s;
 `;
 

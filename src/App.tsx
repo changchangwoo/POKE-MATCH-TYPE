@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { json, Route, Routes } from "react-router-dom";
 import Main from "./pages/Main";
 import Match from "./pages/Match";
 import { css, Global } from "@emotion/react";
@@ -15,6 +15,26 @@ type TThemeContext = {
   theme: TThemeData;
   setTheme: Dispatch<SetStateAction<TThemeData>>;
 };
+const getInitialTheme = (): TThemeData => {
+  const sessionTheme = localStorage.getItem("theme");
+  if (sessionTheme) {
+    try {
+      return JSON.parse(sessionTheme) as TThemeData;
+    } catch {
+      return {
+        name: "태양의 돌",
+        num: 1,
+        type: "light",
+      };
+    }
+  }
+
+  return {
+    name: "태양의 돌",
+    num: 1,
+    type: "light",
+  };
+};
 
 export const ThemeContext = createContext<TThemeContext>({
   theme: {
@@ -26,11 +46,7 @@ export const ThemeContext = createContext<TThemeContext>({
 });
 
 function App() {
-  const [theme, setTheme] = useState<TThemeData>({
-    name: "태양의 돌",
-    num: 1,
-    type: "light",
-  });
+  const [theme, setTheme] = useState<TThemeData>(getInitialTheme);
   return (
     <>
       <Global styles={globalStyles(theme.type)} />

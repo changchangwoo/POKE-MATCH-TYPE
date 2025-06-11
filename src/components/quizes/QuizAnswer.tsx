@@ -1,34 +1,34 @@
-import React, { useState } from 'react'
-import SelectType from '../SelectType';
-import { Types } from '../../models/pokemonData';
-import { css } from '@emotion/react';
+import React, { useState } from "react";
+import SelectType from "../SelectType";
+import { Types } from "../../models/pokemonData";
+import { css } from "@emotion/react";
 
 interface QuizAnswerProps {
-    questionArr: Types[]
-    submitAnswer: (answer: string, correct: string) => void;
+  questionArr: Types[];
+  submitAnswer: (answer: string, correct: string) => void;
 }
 
-export const QuizAnswer = ({questionArr, submitAnswer} : QuizAnswerProps) => {
-        const [checkedType, setCheckedType] = useState<Types[]>([]);
+export const QuizAnswer = ({ questionArr, submitAnswer }: QuizAnswerProps) => {
+  const [checkedType, setCheckedType] = useState<Types[]>([]);
 
   return (
     <>
-              <div css={AnswerContainer}>
-            <SelectType
-              checkedType={checkedType}
-              setCheckedType={setCheckedType}
-              quizModeDatas={questionArr}
-            />
-          </div>
-          <button
-            onClick={() => submitAnswer(checkedType[0]?.name, questionArr[0].name)}
-            css={submitBtn}
-          >
-            정답 제출
-          </button>
-          </>
-  )
-}
+      <div css={AnswerContainer}>
+        <SelectType
+          checkedType={checkedType}
+          setCheckedType={setCheckedType}
+          quizModeDatas={questionArr}
+        />
+      </div>
+      <button
+        onClick={() => submitAnswer(checkedType[0]?.name, questionArr[0].name)}
+        css={submitBtn}
+      >
+        정답 제출
+      </button>
+    </>
+  );
+};
 
 export const AnswerContainer = css`
   width: 100%;
@@ -41,6 +41,7 @@ export const submitBtn = css`
   border: 1px solid var(--border);
   background: var(--primary);
   cursor: pointer;
+  color: var(--text);
 
   &:hover {
     transition: all 0.2s;
@@ -48,4 +49,4 @@ export const submitBtn = css`
   }
 `;
 
-export default QuizAnswer
+export default QuizAnswer;
