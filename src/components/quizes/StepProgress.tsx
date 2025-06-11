@@ -29,6 +29,9 @@ const container = css`
   align-items: center;
   margin: 16px 0;
   flex-direction: column;
+  div {
+    color: var(--text);
+  }
 `;
 
 const progressContainer = css`

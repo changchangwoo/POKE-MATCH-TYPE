@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 import { Dispatch, SetStateAction } from "react";
+import quizReadyImg from "../../imgs/quiz_ready.jpg";
 
 interface QuizReadyProps {
   setSection: Dispatch<SetStateAction<number>>;
@@ -8,7 +9,7 @@ interface QuizReadyProps {
 const QuizReady = ({ setSection }: QuizReadyProps) => {
   return (
     <div css={quizReadyContainer}>
-      <div css={quizReadyImagContainer}></div>
+      <img src={quizReadyImg} css={quizReadyImgContainer}></img>
       <span>
         퀴즈를 통해 <br />내 타입 이해도를 확인해보세요!
       </span>
@@ -31,13 +32,14 @@ const QuizReady = ({ setSection }: QuizReadyProps) => {
 
 export default QuizReady;
 
-export const quizReadyImagContainer = css`
+export const quizReadyImgContainer = css`
   width: 100%;
   height: 250px;
   background-color: var(--border);
   border-radius: 10px;
   z-index: 1;
   border: 1px solid var(--border);
+  object-fit: cover;
 `;
 
 const quizReadyText = css`

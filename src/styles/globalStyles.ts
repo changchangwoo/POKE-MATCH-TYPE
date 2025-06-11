@@ -7,15 +7,19 @@ type TThemeStyles = {
   background: string;
   text: string;
   border: string;
+  text_reverse: string;
+  highlight: string;
 };
 
 const themes: Record<TTheme, TThemeStyles> = {
   light: {
-    point: "#DE7038", // 태양의 돌
+    point: "#DE7038",
     primary: "#f8f9fa",
     background: "#ffffff",
     text: "#000000",
     border: "#d9d9d9",
+    text_reverse: "white",
+    highlight: "#fbc02d",
   },
   dark: {
     point: "#AEC6B5",
@@ -23,6 +27,8 @@ const themes: Record<TTheme, TThemeStyles> = {
     background: "#212121",
     text: "#E0E0E0",
     border: "#3A3A3A",
+    text_reverse: "black",
+    highlight: "#ffd54f",
   },
 };
 
@@ -37,6 +43,7 @@ export const globalStyles = (themeMode: keyof typeof themes = "light") => {
       --background: ${theme.background}; // 디폴트(화이트)
       --text: ${theme.text}; // 디폴트(블랙)
       --border: ${theme.border}; // border 배경
+      --highlight: ${theme.highlight};
       --grey: grey;
 
       /* 타입 */

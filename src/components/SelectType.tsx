@@ -37,7 +37,7 @@ const SelectType = ({
   return (
     <div css={selectTypeContainer}>
       <h1>{quizModeDatas ? "" : "타입 선택"}</h1>
-      <div css={selectTypes}>
+      <div css={selectTypes(quizModeDatas)}>
         {selectedDatas.map((type) => {
           const isChecked = checkedType.some(
             (checked) => checked.no === type.no
@@ -68,7 +68,7 @@ const selectTypeContainer = css`
   gap: 10px;
 `;
 
-const selectTypes = css`
+const selectTypes = (quizModeDatas: Types[] | undefined) => css`
   display: grid;
   height: auto;
   grid-template-columns: repeat(3, 1fr);
@@ -78,7 +78,7 @@ const selectTypes = css`
   width: 100%;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background-color: var(--background);
+  background-color: ${quizModeDatas ? "var(--primary)" : "var(--background)"};
 `;
 
 const item = (no: number | undefined) => css`
@@ -90,7 +90,7 @@ const item = (no: number | undefined) => css`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  color: white;
+  color: ${no ? "white" : "var(--text)"};
   transition: all 0.2s;
 `;
 

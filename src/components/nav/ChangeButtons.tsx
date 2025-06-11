@@ -21,13 +21,13 @@ const ChangeButtons = () => {
       </button>
       <button
         onClick={() => navigator("/table")}
-        className={location.pathname === "/table" ? "active" : ""}
+        className={`new ${location.pathname === "/table" ? "active" : ""}`}
       >
         상성 표
       </button>
       <button
         onClick={() => navigator("/quiz")}
-        className={location.pathname === "/quiz" ? "active" : ""}
+        className={`new ${location.pathname === "/quiz" ? "active" : ""}`}
       >
         상성 퀴즈
       </button>
@@ -56,6 +56,7 @@ const ChangeSectionContainer = css`
     background-color: var(--background);
     border-radius: 6px;
     color: var(--text);
+    position: relative;
 
     :hover {
       background-color: var(--point);
@@ -64,6 +65,15 @@ const ChangeSectionContainer = css`
     &.active {
       background-color: var(--point);
       color: var(--background);
+    }
+
+    &.new::after {
+      content: "new";
+      color: var(--highlight) !important;
+      left: 43%;
+      top: -8px;
+      position: absolute;
+      font-size: 14px;
     }
   }
 `;
