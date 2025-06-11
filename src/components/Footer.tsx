@@ -50,7 +50,7 @@ const FooterContainer = css`
 
   h3 {
     font-size: 14px;
-    color: black;
+    color: var(--text);
     margin-bottom: 10px;
   }
 `;

@@ -21,9 +21,7 @@ const SelectType = ({
       (checked) => checked.no === type.no
     );
     if (isAlreadyChecked) {
-      setCheckedType(
-        checkedType.filter((checked) => checked.no !== type.no)
-      );
+      setCheckedType(checkedType.filter((checked) => checked.no !== type.no));
     } else {
       if (quizModeDatas) {
         if (checkedType.length === 1) {
@@ -77,7 +75,7 @@ const selectTypes = css`
   width: 100%;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background-color: white;
+  background-color: var(--background);
 `;
 
 const item = (no: number | undefined) => css`
@@ -89,7 +87,7 @@ const item = (no: number | undefined) => css`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  color: ${no ? `white` : "black"};
+  color: ${no ? `var(--background)` : "var(--text)"};
   transition: all 0.2s;
 `;
 

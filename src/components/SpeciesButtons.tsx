@@ -35,10 +35,9 @@ const SpeciesButtons = ({
         JSON.stringify({
           varietiesIdx: btnIdx,
         })
-      )
+      );
     }
   };
-
 
   return (
     <>
@@ -86,7 +85,7 @@ const speciesBtn = css`
 
 const selectedBtn = css`
   background-color: var(--point);
-  color: white;
+  color: var(--background);
 `;
 
 export default SpeciesButtons;

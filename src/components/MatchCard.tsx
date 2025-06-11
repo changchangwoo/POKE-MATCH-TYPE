@@ -64,7 +64,7 @@ export const matchCardContainer = css`
   padding: 20px;
   box-sizing: border-box;
   border: 1px solid var(--border);
-  background-color: #ffffff;
+  background-color: var(--background)
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -100,7 +100,7 @@ export const pokeTypes = css`
   width: 60%;
   justify-content: center;
   align-items: center;
-  color: #ffffff;
+  color: var(--background)
   margin: auto;
   margin-bottom: 10px;
 `;

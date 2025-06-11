@@ -50,7 +50,7 @@ const TypeCard = ({ MatchTypes, selectedAbility }: MatchCardProps) => {
 
 const typeCardContainer = css`
   width: 100%;
-  background-color: #ffffff;
+  background-color: var(--background);
   padding: 20px;
   box-sizing: border-box;
   display: flex;

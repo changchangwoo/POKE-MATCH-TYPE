@@ -8,7 +8,7 @@ export const searchContainer = css`
 
 export const inputBox = css`
 position: relative;
-  background-color: #ffffff;
+  background-color: var(--background)
   padding: 10px;
   box-sizing: border-box;
   width: 100%;
@@ -37,7 +37,7 @@ export const suggestionsList = css`
   z-index: 100;
   width: 100%;
   border: 1px solid var(--border);
-  background-color: #ffffff;
+  background-color: var(--background)
   border-radius: 8px;
   list-style-type: none;
   padding: 0;

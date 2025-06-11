@@ -4,9 +4,12 @@ export const globalStyles = css`
   :root {
     /* 컬러 */
     /* --point: #eb9191; */
-    --point: grey;
-    --primary: #f8f9fa;
-    --border: #d9d9d9;
+    --point: grey; // 포인트 색
+    --primary: #f8f9fa; // 배경 바탕
+    --background: #ffffff; // 디폴트(화이트)
+    --text: #000000; // 디폴트(블랙)
+    --border: #d9d9d9; // border 배경
+
     /* 타입 */
     --type1: #949495; /* normal */
     --type2: #e09c40; /* fighting */
@@ -22,7 +25,7 @@ export const globalStyles = css`
     --type12: #66a945; /* grass */
     --type13: #fbb917; /* electric */
     --type14: #dd6b7b; /* psychic */
-    --type15: #42D8FF; /* ice */
+    --type15: #42d8ff; /* ice */
     --type16: #535ca8; /* dragon */
     --type17: #4c4948; /* dark */
     --type18: #dab4d4; /* fairy */

@@ -1,9 +1,9 @@
 import { css } from "@emotion/react";
 import { Dispatch, SetStateAction } from "react";
-import { FaCaretDown } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import Footer from "../Footer";
 import AccordianList from "../commons/AccordianList";
+import Theme from "./Theme";
 
 interface SettingModalProps {
   setModal: Dispatch<SetStateAction<boolean>>;
@@ -30,10 +30,7 @@ const SettingModal = ({ setModal }: SettingModalProps) => {
             <Footer />
           </div>
           <AccordianList title="테마 선택">
-            <div css={themeContainer}>
-              <button>태양의 돌</button>
-              <button>달의 돌</button>
-            </div>
+            <Theme />
           </AccordianList>
           <AccordianList title="언어 선택">
             <span>컨텐츠 입니다.</span>
@@ -49,11 +46,6 @@ const SettingModal = ({ setModal }: SettingModalProps) => {
     </div>
   );
 };
-
-const themeContainer = css`
-  display: flex;
-  gap: 10px;
-`;
 
 const ModalOverlay = css`
   position: fixed;
@@ -71,7 +63,7 @@ const ModalOverlay = css`
 const ModalContainer = css`
   width: 100%;
   height: 100%;
-  background-color: white;
+  background-color: var(--background);
 
   .ModalDescription {
     border-bottom: 1px solid var(--border);
@@ -96,7 +88,7 @@ const ModalContainer = css`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--background);
     border-bottom: 1px solid var(--border);
 
     button {
@@ -104,13 +96,13 @@ const ModalContainer = css`
       right: 20px;
       max-width: 25px;
       height: 25px;
-      border: 1px solid var(--white);
+      border: 1px solid var(--var(--background));
       border-radius: 4px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--point);
-      background-color: white;
+      background-color: var(--background);
       cursor: pointer;
       transition: all 0.2;
       :hover {

@@ -4,7 +4,7 @@ import { useState } from "react";
 import SettingModal from "../modal/SettingModal";
 
 const Navigation = () => {
-  const [isModal, setModal] = useState<boolean>(false)
+  const [isModal, setModal] = useState<boolean>(false);
 
   return (
     <>
@@ -27,25 +27,23 @@ const navigationStyle = css`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: var(--background);
   position: absolute;
   box-sizing: border-box;
   padding: 20px;
-
-  
 
   button {
     position: absolute;
     right: 20px;
     max-width: 25px;
     height: 25px;
-    border: 1px solid var(--white);
+    border: 1px solid var(--border);
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--point);
-    background-color: white;
+    background-color: var(--background);
     cursor: pointer;
     transition: all 0.2;
     :hover {

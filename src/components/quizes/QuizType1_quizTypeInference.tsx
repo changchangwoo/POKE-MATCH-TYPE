@@ -15,13 +15,11 @@ interface QuizType1_Props {
   submitAnswer: (answer: any, correct: any) => void;
 }
 
-
 const QuizType1_quizTypeInference = ({ submitAnswer }: QuizType1_Props) => {
   const [questionArr, setQuetstionArr] = useState<Types[]>([]);
   const randQuiz = getRandomNum(quizType1_data.length);
-const randBlank = getRandomNum(quizType1_data[randQuiz].length);
-const answer = quizType1_data[randQuiz][randBlank];
-
+  const randBlank = getRandomNum(quizType1_data[randQuiz].length);
+  const answer = quizType1_data[randQuiz][randBlank];
 
   useEffect(() => {
     const answerSet = new Set<string>();
@@ -32,57 +30,58 @@ const answer = quizType1_data[randQuiz][randBlank];
       const randTypeNum = getRandomNum(defaultTypes.length);
       const candidate = defaultTypes[randTypeNum];
       if (!answerSet.has(candidate.name)) {
-        result.push(
-          {
-            no: candidate.no,
-            name: candidate.name,
-          }
-        );
+        result.push({
+          no: candidate.no,
+          name: candidate.name,
+        });
         answerSet.add(candidate.name);
       }
       if (result.length === 6) break;
     }
     setQuetstionArr(result);
   }, []);
-return (
-  <div css={matchCardContainer}>
-    <h1 css={title}>
-      <div>
-      <div style={{display: "inline-block"}}>
-      <TypeBadge no={100} quizMode={true}>?</TypeBadge>
-      </div> 에 들어갈 타입은?
+  return (
+    <div css={matchCardContainer}>
+      <h1 css={title}>
+        <div>
+          <div style={{ display: "inline-block" }}>
+            <TypeBadge no={100} quizMode={true}>
+              ?
+            </TypeBadge>
+          </div>{" "}
+          에 들어갈 타입은?
+        </div>
+      </h1>
+      <div css={questionContainer}>
+        <div css={badgeContainer}>
+          {quizType1_data[randQuiz].map((type, idx) => (
+            <React.Fragment key={uuidv4()}>
+              {idx === randBlank ? (
+                <TypeBadge no={100} quizMode={true}>
+                  ?
+                </TypeBadge>
+              ) : (
+                <TypeBadge no={type.no} quizMode={true}>
+                  {getKoreanType(type.name)}
+                </TypeBadge>
+              )}
+              <h2
+                style={{
+                  color:
+                    idx === quizType1_data[randQuiz].length - 1
+                      ? "transparent"
+                      : "var(--text)",
+                }}
+              >
+                {">"}
+              </h2>
+            </React.Fragment>
+          ))}
+        </div>
       </div>
-    </h1>
-    <div css={questionContainer}>
-      <div css={badgeContainer}>
-        {quizType1_data[randQuiz].map((type, idx) => (
-          <React.Fragment key={uuidv4()}>
-            {idx === randBlank ? (
-              <TypeBadge no={100} quizMode={true}>?</TypeBadge>
-            ) : (
-              <TypeBadge no={type.no} quizMode={true}>
-                {getKoreanType(type.name)}
-              </TypeBadge>
-            )}
-            <h2
-              style={{
-                color:
-                  idx === quizType1_data[randQuiz].length - 1
-                    ? "transparent"
-                    : "black",
-              }}
-            >
-              {">"}
-            </h2>
-          </React.Fragment>
-        ))}
-      </div>
+      <QuizAnswer questionArr={questionArr} submitAnswer={submitAnswer} />
     </div>
-    <QuizAnswer questionArr={questionArr} submitAnswer={submitAnswer} />
-
-    
-  </div>
-);
+  );
 };
 
 const questionContainer = css`
@@ -96,28 +95,22 @@ const questionContainer = css`
   background-color: var(--primary);
   padding: 20px;
   box-sizing: border-box;
-`
+`;
 
 const badgeContainer = css`
   @media screen and (min-width: 600px) {
-          width: 500px;
-
+    width: 500px;
   }
-    @media screen and (min-width: 800px) {
-      width: 700px;
+  @media screen and (min-width: 800px) {
+    width: 700px;
+  }
+  width: 800px;
 
-    }
-    width: 800px;
-
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-justify-content: center;
-gap: 20px;  
-`
-
-
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+`;
 
 export default QuizType1_quizTypeInference;
-
-

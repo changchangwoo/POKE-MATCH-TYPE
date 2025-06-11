@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import  { ReactNode } from "react";
+import { ReactNode } from "react";
 
 interface TypeBadgeProps {
   no: number;
@@ -19,8 +19,8 @@ const TypeBadgeStyle = (no: number, quizMode?: boolean) => css`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: var(--background);
   max-width: ${quizMode ? "80px" : "180px"};
-  ${quizMode ? 'min-width: 80px;' : ''};
+  ${quizMode ? "min-width: 80px;" : ""};
 `;
 export default TypeBadge;
