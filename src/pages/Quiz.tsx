@@ -3,6 +3,7 @@ import { useState } from "react";
 import QuizReady from "../components/quizes/QuizReady";
 import QuizMain from "../components/quizes/QuizMain";
 import QuizEnd from "../components/quizes/QuizEnd";
+import QuizIntro from "../components/quizes/QuizIntro";
 
 const Quiz = () => {
   const [section, setSection] = useState<number>(0);
@@ -18,6 +19,8 @@ const Quiz = () => {
           case 0:
             return <QuizReady setSection={setSection} />;
           case 1:
+            return <QuizIntro setSection={setSection} />;
+          case 2:
             return (
               <QuizMain
                 setSection={setSection}
@@ -25,7 +28,7 @@ const Quiz = () => {
                 setProgressArr={setProgressArr}
               />
             );
-          case 2:
+          case 3:
             return <QuizEnd progressArr={progressArr} />;
           default:
             return <div>에러 페이지</div>;

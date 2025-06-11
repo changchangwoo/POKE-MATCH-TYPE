@@ -8,25 +8,27 @@ interface QuizReadyProps {
 
 const QuizReady = ({ setSection }: QuizReadyProps) => {
   return (
-    <div css={quizReadyContainer}>
-      <img src={quizReadyImg} css={quizReadyImgContainer}></img>
-      <span>
-        퀴즈를 통해 <br />내 타입 이해도를 확인해보세요!
-      </span>
-      <ul css={quizReadyText}>
-        <li>총 10문제로 구성되어있습니다.</li>
-        <li>중도 이탈 시 진행 초기화됩니다.</li>
-        <li>퀴즈 유형과 문제는 랜덤입니다.</li>
-      </ul>
-      <button
-        css={quizStartBtn}
-        onClick={() => {
-          setSection((prev) => prev + 1);
-        }}
-      >
-        시작하기
-      </button>
-    </div>
+    <>
+      <div css={quizReadyContainer}>
+        <img src={quizReadyImg} css={quizReadyImgContainer}></img>
+        <span>
+          퀴즈를 통해 <br />내 타입 이해도를 확인해보세요!
+        </span>
+        <ul css={quizReadyText}>
+          <li>총 10문제로 구성되어있습니다.</li>
+          <li>중도 이탈 시 진행 초기화됩니다.</li>
+          <li>퀴즈 유형과 문제는 랜덤입니다.</li>
+        </ul>
+        <button
+          css={quizStartBtn}
+          onClick={() => {
+            setSection((prev) => prev + 1);
+          }}
+        >
+          시작하기
+        </button>
+      </div>
+    </>
   );
 };
 
