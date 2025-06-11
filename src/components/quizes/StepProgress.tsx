@@ -1,8 +1,7 @@
-/** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 
 interface StepProgressProps {
-  currentStep: number; // 0부터 시작한다고 가정
+  currentStep: number;
   progressArr: { step: string }[];
 }
 

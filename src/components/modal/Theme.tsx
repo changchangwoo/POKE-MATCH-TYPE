@@ -1,34 +1,49 @@
 import { css } from "@emotion/react";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ThemeContext } from "../../App";
+import { TThemeData } from "../../models/settingData";
 
-type TThemeData = { name: string; num: Number };
-
-const ThemeData: TThemeData[] = [
+const ThemeDatas: TThemeData[] = [
   {
     name: "태양의 돌",
     num: 1,
+    type: "light",
   },
   {
     name: "달의 돌",
     num: 2,
+    type: "dark",
   },
 ];
 
 const Theme = () => {
-  const [curTheme, setCurTheme] = useState<TThemeData>({
-    name: "태양의 돌",
-    num: 1,
-  });
+  const { theme, setTheme } = useContext(ThemeContext);
+
+  const handleThemeBtn = (
+    e: React.MouseEvent<HTMLButtonElement>,
+    data: TThemeData
+  ) => {
+    e.stopPropagation();
+    setTheme(data);
+    localStorage.setItem(
+      "theme",
+      JSON.stringify({
+        ...data,
+      })
+    );
+  };
+
   return (
     <div css={themeContainer}>
-      {ThemeData.map((element, idx) => {
-        const isClicked = curTheme.num === idx;
+      {ThemeDatas.map((data, idx) => {
+        const isClicked = theme.num === idx + 1;
         return (
           <button
+            key={data.name}
             css={themeButton(isClicked)}
-            onClick={() => setCurTheme(element)}
+            onClick={(e) => handleThemeBtn(e, data)}
           >
-            {element.name}
+            {data.name}
           </button>
         );
       })}
@@ -40,14 +55,17 @@ export default Theme;
 const themeContainer = css`
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 `;
 
 const themeButton = (isClicked: boolean) => css`
-  width: 100%;
+  min-width: 150px;
   height: 40px;
   border: 1px solid var(--border);
   font-size: 14px;
-  border-radius: 8px;
-  background-color: ${isClicked ? "var(--background)" : "var(--point)"};
-  color: ${isClicked ? "var(--text)" : "var(--background)"};
+  border-radius: 5px;
+  background-color: ${isClicked ? "var(--point)" : "var(--background)"};
+  color: ${isClicked ? "var(--background)" : "var(--text)"};
 `;

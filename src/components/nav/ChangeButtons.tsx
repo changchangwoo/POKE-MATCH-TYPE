@@ -53,7 +53,7 @@ const ChangeSectionContainer = css`
     border: 1px solid var(--border);
     font-size: var(--fontMedium);
     cursor: pointer;
-    background-color: var(--background)
+    background-color: var(--background);
     border-radius: 6px;
 
     :hover {
@@ -62,7 +62,7 @@ const ChangeSectionContainer = css`
 
     &.active {
       background-color: var(--point);
-      color: var(--background)
+      color: var(--background);
     }
   }
 `;
