@@ -1,5 +1,5 @@
 import "./App.css";
-import { json, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Main from "./pages/Main";
 import Match from "./pages/Match";
 import { css, Global } from "@emotion/react";
@@ -8,50 +8,26 @@ import ChangeButtons from "./components/nav/ChangeButtons";
 import Table from "./pages/Table";
 import Quiz from "./pages/Quiz";
 import { globalStyles } from "./styles/globalStyles";
-import { createContext, Dispatch, SetStateAction, useState } from "react";
-import { TThemeData } from "./models/settingData";
-
-type TThemeContext = {
-  theme: TThemeData;
-  setTheme: Dispatch<SetStateAction<TThemeData>>;
-};
-const getInitialTheme = (): TThemeData => {
-  const sessionTheme = localStorage.getItem("theme");
-  if (sessionTheme) {
-    try {
-      return JSON.parse(sessionTheme) as TThemeData;
-    } catch {
-      return {
-        name: "태양의 돌",
-        num: 1,
-        type: "light",
-      };
-    }
-  }
-
-  return {
-    name: "태양의 돌",
-    num: 1,
-    type: "light",
-  };
-};
-
-export const ThemeContext = createContext<TThemeContext>({
-  theme: {
-    name: "태양의 돌",
-    num: 1,
-    type: "light",
-  },
-  setTheme: () => {},
-});
+import { useState } from "react";
+import { TLanguageData, TThemeData } from "./models/settingData";
+import {
+  getInitialLanguage,
+  getInitialTheme,
+  LanguageContext,
+  ThemeContext,
+} from "./utils/getInitialData";
 
 function App() {
   const [theme, setTheme] = useState<TThemeData>(getInitialTheme);
+  const [language, setLanguage] = useState<TLanguageData>(getInitialLanguage);
+
   return (
     <>
       <Global styles={globalStyles(theme.type)} />
       <ThemeContext.Provider value={{ theme, setTheme }}>
-        <Navigation />
+        <LanguageContext.Provider value={{ language, setLanguage }}>
+          <Navigation />
+        </LanguageContext.Provider>
       </ThemeContext.Provider>
       <div css={Container}>
         <ChangeButtons />

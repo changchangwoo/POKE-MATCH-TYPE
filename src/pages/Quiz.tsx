@@ -6,7 +6,7 @@ import QuizEnd from "../components/quizes/QuizEnd";
 import QuizIntro from "../components/quizes/QuizIntro";
 
 const Quiz = () => {
-  const [section, setSection] = useState<number>(3);
+  const [section, setSection] = useState<number>(0);
   const [progressArr, setProgressArr] = useState<{ step: string }[]>(() =>
     new Array(10).fill(null).map(() => ({ step: "none" }))
   );

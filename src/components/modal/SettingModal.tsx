@@ -4,6 +4,7 @@ import { IoMdClose } from "react-icons/io";
 import Footer from "../Footer";
 import AccordianList from "../commons/AccordianList";
 import Theme from "./Theme";
+import LanguageSetting from "./LanguageSetting";
 
 interface SettingModalProps {
   setModal: Dispatch<SetStateAction<boolean>>;
@@ -33,7 +34,7 @@ const SettingModal = ({ setModal }: SettingModalProps) => {
             <Theme />
           </AccordianList>
           <AccordianList title="언어 선택">
-            <span>컨텐츠 입니다.</span>
+            <LanguageSetting />
           </AccordianList>
           <AccordianList title="저작권">
             <span>컨텐츠 입니다.</span>

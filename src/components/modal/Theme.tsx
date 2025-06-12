@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
-import { useContext, useState } from "react";
-import { ThemeContext } from "../../App";
+import { useContext } from "react";
 import { TThemeData } from "../../models/settingData";
+import { ThemeContext } from "../../utils/getInitialData";
 
 const ThemeDatas: TThemeData[] = [
   {
