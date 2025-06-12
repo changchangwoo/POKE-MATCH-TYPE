@@ -3,7 +3,7 @@ import { SelectAbilityContainer } from "../commons/SelectAbility";
 import { v4 as uuidv4 } from "uuid";
 
 const languageList = [
-  { label: "한국어", type: "ko" },
+  { label: "한국어", type: "kor" },
   { label: "English", type: "eng" },
 ];
 
@@ -12,8 +12,7 @@ const LanguageSetting = () => {
   const handleAbilityChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = event.target.value;
     setSelectLanguage(selectedValue);
-    let currentPath = location.pathname + "/typecheck";
-    localStorage.setItem(currentPath, selectedValue);
+    localStorage.setItem("langauge", selectedValue);
   };
   return (
     <>
