@@ -5,9 +5,10 @@ import { useEffect, useState } from "react";
 
 interface QuizAlertProps {
   quizType: "correct" | "incorrect";
+  answerText: string;
 }
 
-const QuizAlert = ({ quizType }: QuizAlertProps) => {
+const QuizAlert = ({ quizType, answerText }: QuizAlertProps) => {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
@@ -30,7 +31,7 @@ const QuizAlert = ({ quizType }: QuizAlertProps) => {
           <span>오답입니다..</span>
         )}
         <span>
-          정답은 <b>정답</b> 입니다.
+          정답은 <b>{answerText}</b> 입니다.
         </span>
       </div>
     </div>

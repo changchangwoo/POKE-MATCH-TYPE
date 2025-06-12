@@ -1,4 +1,7 @@
-import { quizReadyContainer, quizReadyImgContainer } from "./QuizReady";
+import { quizReadyContainer } from "./QuizReady";
+import quizSuccessImg from "../../imgs/quiz_success.png";
+import quizFailedImg from "../../imgs/quiz_failed.jpg";
+import { QuizIntroImgContainer } from "./QuizIntro";
 
 interface QuizEndProps {
   progressArr: { step: string }[];
@@ -10,38 +13,22 @@ const QuizEnd = ({ progressArr }: QuizEndProps) => {
   ).length;
   const renderMessage = () => {
     if (correctCount === 10) {
-      return (
-        <>
-          전부 맞추다니...
-          <br />
-          설마 오박사님이세요?😮
-        </>
-      );
     } else if (correctCount >= 7) {
       return (
         <>
-          좋아요!
+          피카츄가 무사히 숲 속을 빠져나왔어요!
           <br />
-          타입에 대한 이해도가 높은 트레이너입니다!🙂
+          트레이너로서 기본 소양이 출중한데요?
         </>
       );
-    } else if (correctCount >= 4) {
+    } else
       return (
         <>
-          나쁘지는 않지만,
-          <br /> 트레이너 길은 더 험합니다🤔
+          도통 숲 속을 빠져나올 길이 안보이네요.
           <br />
+          다시 한번 피카츄를 도와볼까요?
         </>
       );
-    } else {
-      return (
-        <>
-          포켓몬... 타입... <br />
-          그것은 아직 먼 이야기🥲
-          <br />
-        </>
-      );
-    }
   };
   return (
     <div css={quizReadyContainer}>
@@ -50,7 +37,11 @@ const QuizEnd = ({ progressArr }: QuizEndProps) => {
         <br />✨ {correctCount}문제 맞추셨습니다!✨
       </span>
 
-      <div css={quizReadyImgContainer}></div>
+      <img
+        src={correctCount >= 7 ? quizSuccessImg : quizFailedImg}
+        css={QuizIntroImgContainer}
+      ></img>
+
       <span css={{ textAlign: "center" }}>{renderMessage()}</span>
     </div>
   );

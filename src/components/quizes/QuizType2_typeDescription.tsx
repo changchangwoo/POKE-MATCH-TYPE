@@ -97,7 +97,7 @@ const QuizType2_typeDescription = ({ submitAnswer }: QuizType2_Props) => {
               data-name={damage}
               css={answerButton(isChecked)}
             >
-              {damage}배의 피해를 입힌다.
+              {damage}배의 피해를 입는다.
             </button>
           );
         })}

@@ -26,7 +26,7 @@ const QuizType0_damageEffectiveness = ({
       <h1 css={title}>
         해당 포켓몬을 공격했을 때,
         <br />
-        <b>{groupResult[quizNum].damage}배의 데미지를 가하는 타입</b>은?
+        <b>{groupResult[quizNum].damage}배의 데미지를 가하는 타입은?</b>
       </h1>
       <div css={imgBox(matchDatas.types[0].no)}>
         <img src={matchDatas.imgs} alt={`Pokemon ${matchDatas.no}`} />

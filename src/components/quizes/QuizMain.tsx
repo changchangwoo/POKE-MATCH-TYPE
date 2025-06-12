@@ -5,6 +5,7 @@ import QuizType2_typeDescription from "./QuizType2_typeDescription";
 import { getRandomNum } from "../../utils/getRandomNum";
 import StepProgress from "./StepProgress";
 import QuizAlert from "../modal/QuizAlert";
+import { getKoreanType } from "../../utils/getKoreanType";
 
 interface QuizMainProps {
   setSection: Dispatch<SetStateAction<number>>;
@@ -21,10 +22,12 @@ const QuizMain = ({
   const [alertType, setAlertType] = useState<"correct" | "incorrect" | null>(
     null
   );
+  const [answerText, setAnswerText] = useState<string>("");
 
   const submitAnswer = (answer: any, correct: any) => {
     const isCorrect = answer === correct;
-
+    if (Number(correct) === correct) setAnswerText(`${correct}배`);
+    else setAnswerText(`${getKoreanType(correct)} 타입`);
     setAlertType(isCorrect ? "correct" : "incorrect");
     setTimeout(() => setAlertType(null), 3000);
     setProgressArr(
@@ -32,7 +35,6 @@ const QuizMain = ({
         idx === progress ? { step: isCorrect ? "correct" : "wrong" } : item
       )
     );
-
     setProgress((prev) => prev + 1);
   };
 
@@ -46,7 +48,7 @@ const QuizMain = ({
         idx === progress ? { step: "current" } : item
       )
     );
-    const curQuizType = 2;
+    const curQuizType = getRandomNum(3);
     setQuizType(curQuizType);
   }, [progress]);
 
@@ -84,7 +86,7 @@ const QuizMain = ({
             return <div>에러 페이지</div>;
         }
       })()}
-      {alertType && <QuizAlert quizType={alertType} />}
+      {alertType && <QuizAlert quizType={alertType} answerText={answerText} />}
     </>
   );
 };
