@@ -18,7 +18,11 @@ interface QuizType1_Props {
 const QuizType1_quizTypeInference = ({ submitAnswer }: QuizType1_Props) => {
   const [questionArr, setQuetstionArr] = useState<Types[]>([]);
   const randQuiz = getRandomNum(quizType1_data.length);
-  const randBlank = getRandomNum(quizType1_data[randQuiz].length);
+  let randBlank = 0;
+  while (randBlank === 0 || randBlank === quizType1_data[randQuiz].length - 1) {
+    randBlank = getRandomNum(quizType1_data[randQuiz].length);
+  }
+
   const answer = quizType1_data[randQuiz][randBlank];
 
   useEffect(() => {
@@ -73,7 +77,7 @@ const QuizType1_quizTypeInference = ({ submitAnswer }: QuizType1_Props) => {
                       : "var(--text)",
                 }}
               >
-                {">"}
+                {"<"}
               </h2>
             </React.Fragment>
           ))}

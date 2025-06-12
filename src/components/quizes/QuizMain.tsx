@@ -26,11 +26,14 @@ const QuizMain = ({
     const isCorrect = answer === correct;
 
     setAlertType(isCorrect ? "correct" : "incorrect");
+    setTimeout(() => setAlertType(null), 3000);
+    setProgressArr(
+      progressArr.map((item, idx) =>
+        idx === progress ? { step: isCorrect ? "correct" : "wrong" } : item
+      )
+    );
 
-    setTimeout(() => {
-      setAlertType(null);
-      setProgress((prev) => prev + 1);
-    }, 3000);
+    setProgress((prev) => prev + 1);
   };
 
   useEffect(() => {
@@ -43,7 +46,7 @@ const QuizMain = ({
         idx === progress ? { step: "current" } : item
       )
     );
-    const curQuizType = getRandomNum(3);
+    const curQuizType = 2;
     setQuizType(curQuizType);
   }, [progress]);
 

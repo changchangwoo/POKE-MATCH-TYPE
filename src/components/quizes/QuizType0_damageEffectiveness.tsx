@@ -11,27 +11,25 @@ interface QuizType0_Props {
   progress: number;
 }
 
-const QuizType0_damageEffectiveness = ({ submitAnswer, progress }: QuizType0_Props) => {
+const QuizType0_damageEffectiveness = ({
+  submitAnswer,
+  progress,
+}: QuizType0_Props) => {
   const { questionArr, quizNum, groupResult, matchDatas } =
     useGetDetailPokemonForQuiz(progress);
 
-  if (!questionArr || quizNum === undefined || !groupResult || !matchDatas) 
-    {
-      console.log(questionArr, quizNum, groupResult, matchDatas)
-      console.log("렌더 안되서 리턴")
-      return null;
-    }
+  if (!questionArr || quizNum === undefined || !groupResult || !matchDatas) {
+    return null;
+  }
   return (
     <div css={matchCardContainer}>
       <h1 css={title}>
-        해당 포켓몬을 공격했을 때,<br/>
+        해당 포켓몬을 공격했을 때,
+        <br />
         <b>{groupResult[quizNum].damage}배의 데미지를 가하는 타입</b>은?
       </h1>
       <div css={imgBox(matchDatas.types[0].no)}>
-        <img
-          src={matchDatas.imgs}
-          alt={`Pokemon ${matchDatas.no}`}
-        />
+        <img src={matchDatas.imgs} alt={`Pokemon ${matchDatas.no}`} />
       </div>
       <div css={pokeTypes}>
         {matchDatas.types.map((type) => (
@@ -40,7 +38,7 @@ const QuizType0_damageEffectiveness = ({ submitAnswer, progress }: QuizType0_Pro
           </TypeBadge>
         ))}
       </div>
-        <QuizAnswer questionArr={questionArr} submitAnswer={submitAnswer} />
+      <QuizAnswer questionArr={questionArr} submitAnswer={submitAnswer} />
     </div>
   );
 };
@@ -56,7 +54,6 @@ export const title = css`
   height: 50px;
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
   justify-content: center;
 `;
-

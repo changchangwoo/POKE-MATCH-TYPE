@@ -1,19 +1,36 @@
+import { css } from "@emotion/react";
+
 const Table = () => {
   return (
-    <div>
-      <h1>테이블 표 페이지</h1>
+    <div css={tableContainer}>
+      <h1>타입 상성 표</h1>
+      <div className="tableContents">
+        <h1>테이블 표 페이지</h1>
+      </div>
     </div>
   );
 };
 
-/*
-테이블 표 페이지는
-
-나무위키에 있는 포켓몬 타입 대응 테이블 개발
-반응형 생각해서, 크기 맞춰지도록
-저장 버튼 누르면 다운이 되어지도록,
-그 외 기능 추가할만한 거 없음 << 이게 따로 페이지가 분리될 필요가 있나?
-쓸모가 없을 것 같기도한데
-*/
-
+const tableContainer = css`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  gap: 10px;
+  h1 {
+    color: var(--text);
+  }
+  .tableContents {
+    width: 100%;
+    height: 400px;
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+`;
 export default Table;
