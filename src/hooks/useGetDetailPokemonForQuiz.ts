@@ -7,7 +7,7 @@ import {
   getGroupType,
   IDamageData,
 } from "../utils/getDetailType";
-import { getRandomNum } from "../utils/getRandomNum";
+import { getRandomNum, getShuffleArr } from "../utils/getRandomNum";
 
 export const useGetDetailPokemonForQuiz = (progress: number) => {
   const [groupResult, setGroupResult] =
@@ -15,13 +15,14 @@ export const useGetDetailPokemonForQuiz = (progress: number) => {
   const [matchDatas, setMatchDatas] = useState<MatchInfo>();
   const [questionArr, setQuetstionArr] = useState<Types[]>([]);
   const [quizNum, setQuizNum] = useState<number>(0);
-  
+  const [answerIdx, setAnswerIdx] = useState<number>(0);
+
   useEffect(() => {
-    console.log("퀴즈0 발생")
     let isCancelled = false;
     const useFetchDetailPokemonQuiz = async (name: string = "") => {
       const lastNum = PokeDex[PokeDex.length - 1].no;
       const randomNum = Math.floor(Math.random() * lastNum);
+      let correct;
       const fetchDatas = await fetchDetailPokemon(String(randomNum));
       const matchDatas: MatchInfo = {
         name,
@@ -57,7 +58,7 @@ export const useGetDetailPokemonForQuiz = (progress: number) => {
           quiz0_dataGroupResult[quizNum].types.length
         );
         const candidate = quiz0_dataGroupResult[quizNum].types[randTypeNum];
-        console.log("퀴즈 정답 : ", candidate)
+        correct = candidate;
         if (!answerSet.has(candidate.name)) {
           result.push(candidate);
           answerSet.add(candidate.name);
@@ -78,11 +79,13 @@ export const useGetDetailPokemonForQuiz = (progress: number) => {
           answerSet.add(candidate.name);
         }
       }
+      const shuffleResult = getShuffleArr(result);
       if (isCancelled) return;
+      setAnswerIdx(shuffleResult.findIndex((item) => item.no === correct.no));
       setGroupResult(groupResult);
       setMatchDatas(matchDatas);
       setQuizNum(quizNum);
-      setQuetstionArr(result);
+      setQuetstionArr(shuffleResult);
     };
 
     useFetchDetailPokemonQuiz();
@@ -97,5 +100,6 @@ export const useGetDetailPokemonForQuiz = (progress: number) => {
     quizNum,
     groupResult,
     matchDatas,
+    answerIdx,
   };
 };

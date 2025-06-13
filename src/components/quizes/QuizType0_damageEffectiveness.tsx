@@ -9,15 +9,16 @@ import QuizAnswer from "./QuizAnswer";
 interface QuizType0_Props {
   submitAnswer: (answer: any, correct: any) => void;
   progress: number;
+  isNext: boolean;
 }
 
 const QuizType0_damageEffectiveness = ({
   submitAnswer,
   progress,
+  isNext
 }: QuizType0_Props) => {
-  const { questionArr, quizNum, groupResult, matchDatas } =
+  const { questionArr, quizNum, groupResult, matchDatas, answerIdx } =
     useGetDetailPokemonForQuiz(progress);
-
   if (!questionArr || quizNum === undefined || !groupResult || !matchDatas) {
     return null;
   }
@@ -32,13 +33,14 @@ const QuizType0_damageEffectiveness = ({
         <img src={matchDatas.imgs} alt={`Pokemon ${matchDatas.no}`} />
       </div>
       <div css={pokeTypes}>
-        {matchDatas.types.map((type) => (
+        {
+        matchDatas.types.map((type) => (
           <TypeBadge key={uuidv4()} no={type.no}>
             {getKoreanType(type.name)}
           </TypeBadge>
         ))}
       </div>
-      <QuizAnswer questionArr={questionArr} submitAnswer={submitAnswer} />
+      <QuizAnswer questionArr={questionArr} submitAnswer={submitAnswer} isNext={isNext} answerIdx={answerIdx} />
     </>
   );
 };

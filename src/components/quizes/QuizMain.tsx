@@ -20,12 +20,13 @@ const QuizMain = ({
   setProgressArr,
 }: QuizMainProps) => {
   const [progress, setProgress] = useState<number>(0);
-  const [quizType, setQuizType] = useState<number>(getRandomNum(3));
+  // const [quizType, setQuizType] = useState<number>(getRandomNum(3));
+  const [quizType, setQuizType] = useState<number>(2);
   const [alertType, setAlertType] = useState<"correct" | "incorrect" | null>(
     null
   );
   const [answerText, setAnswerText] = useState<string>("");
-  const [isNext, setIsNext] = useState<boolean>(true)
+  const [isNext, setIsNext] = useState<boolean>(false);
 
   const submitAnswer = (answer: any, correct: any) => {
     const isCorrect = answer === correct;
@@ -38,16 +39,17 @@ const QuizMain = ({
         idx === progress ? { step: isCorrect ? "correct" : "wrong" } : item
       )
     );
-    setTimeout(() => {
-    setQuizType(getRandomNum(3));
-      setAlertType(null);
-      setProgress((prev) => prev + 1);
-    }, 3000)
+    setIsNext(true);
   };
 
   const handleNextButton = () => {
-
-  }
+    setTimeout(() => {
+      setQuizType(getRandomNum(3));
+      setAlertType(null);
+      setProgress((prev) => prev + 1);
+    }, 3000);
+    setIsNext(false);
+  };
 
   useEffect(() => {
     if (progress >= 10) {
@@ -68,38 +70,44 @@ const QuizMain = ({
         progressArr={progressArr}
       ></StepProgress>
       <div css={matchCardContainer}>
-      {(() => {
-        switch (quizType) {
-          case 0:
-            return (
-              <QuizType0_damageEffectiveness
-                key={progress}
-                submitAnswer={submitAnswer}
-                progress={progress}
-              />
-            );
-          case 1:
-            return (
-              <QuizType1_quizTypeInference
-                key={progress}
-                submitAnswer={submitAnswer}
-                progress={progress}
-              />
-            );
-          case 2:
-            return (
-              <QuizType2_typeDescription
-                key={progress}
-                submitAnswer={submitAnswer}
-                progress={progress}
-
-              />
-            );
-          default:
-            return <div>에러 페이지</div>;
-        }
-      })()}
-      {isNext && <button css={nextButton}>다음 문제</button>}
+        {(() => {
+          switch (quizType) {
+            case 0:
+              return (
+                <QuizType0_damageEffectiveness
+                  key={progress}
+                  submitAnswer={submitAnswer}
+                  progress={progress}
+                  isNext={isNext}
+                />
+              );
+            case 1:
+              return (
+                <QuizType1_quizTypeInference
+                  key={progress}
+                  submitAnswer={submitAnswer}
+                  progress={progress}
+                  isNext={isNext}
+                />
+              );
+            case 2:
+              return (
+                <QuizType2_typeDescription
+                  key={progress}
+                  submitAnswer={submitAnswer}
+                  progress={progress}
+                  isNext={isNext}
+                />
+              );
+            default:
+              return <div>에러 페이지</div>;
+          }
+        })()}
+        {isNext && (
+          <button css={nextButton} onClick={handleNextButton}>
+            다음 문제
+          </button>
+        )}
       </div>
       {alertType && <QuizAlert quizType={alertType} answerText={answerText} />}
     </>
@@ -107,23 +115,22 @@ const QuizMain = ({
 };
 
 const nextButton = css`
-    position: relative;
-    background-color: var(--background);
-    border: 1px solid var(--border);
-    color: var(--text);
-    height: 30px;
-    border-radius: 6px;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    cursor: pointer;
-    width: 30%;
+  position: relative;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  color: var(--text);
+  height: 30px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 30%;
 
-      &:hover {
+  &:hover {
     transition: all 0.2s;
     background-color: var(--border);
   }
-`
-
+`;
 
 export default QuizMain;

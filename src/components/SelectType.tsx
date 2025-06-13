@@ -9,11 +9,15 @@ interface SelectTypeProps {
   checkedType: Types[];
   setCheckedType: Dispatch<SetStateAction<Types[]>>;
   quizModeDatas?: Types[];
+  answerIdx?: number;
+  isNext: boolean
 }
 const SelectType = ({
   checkedType,
   setCheckedType,
   quizModeDatas,
+  answerIdx,
+  isNext = false
 }: SelectTypeProps) => {
   const selectedDatas = quizModeDatas || defaultTypesData;
   const handleSelect = (type: any) => {
@@ -35,16 +39,18 @@ const SelectType = ({
   };
 
   return (
-    <div css={selectTypeContainer}>
+    <div css={selectTypeContainer(isNext)}>
       <h1>{quizModeDatas ? "" : "타입 선택"}</h1>
       <div css={selectTypes(quizModeDatas)}>
-        {selectedDatas.map((type) => {
+        {selectedDatas.map((type, idx) => {
           const isChecked = checkedType.some(
             (checked) => checked.no === type.no
           );
           return (
             <button
-              css={item(isChecked ? type.no : undefined)}
+              css={item(isChecked ? type.no : undefined, 
+                (isNext && answerIdx === idx)
+              )}
               onClick={() => handleSelect(type)}
               key={uuidv4()}
             >
@@ -57,8 +63,9 @@ const SelectType = ({
   );
 };
 
-const selectTypeContainer = css`
-  h1 {
+const selectTypeContainer = (isNext : boolean = false) => css`
+pointer-events: ${isNext ? "none" : "all"};
+h1 {
     color: var(--text);
   }
   display: flex;
@@ -81,10 +88,10 @@ const selectTypes = (quizModeDatas: Types[] | undefined) => css`
   background-color: ${quizModeDatas ? "var(--primary)" : "var(--background)"};
 `;
 
-const item = (no: number | undefined) => css`
+const item = (no: number | undefined, isAnswer : boolean| undefined) => css`
   background-color: ${no ? `var(--type${no})` : "var(--border)"};
   height: 25px;
-  border: 1px solid var(--border);
+  border: ${isAnswer ? `2px solid var(--highlight)`:`1px solid var(--border)`};
   border-radius: 4px;
   display: flex;
   justify-content: center;
@@ -92,6 +99,7 @@ const item = (no: number | undefined) => css`
   cursor: pointer;
   color: ${no ? "white" : "var(--text)"};
   transition: all 0.2s;
+
 `;
 
 export default SelectType;

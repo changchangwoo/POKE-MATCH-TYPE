@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getRandomNum } from "../../utils/getRandomNum";
+import { getRandomNum, getShuffleArr } from "../../utils/getRandomNum";
 import { css } from "@emotion/react";
 import TypeBadge from "../commons/TypeBadge";
 import { v4 as uuidv4 } from "uuid";
@@ -13,28 +13,35 @@ import { title } from "./QuizType0_damageEffectiveness";
 interface QuizType1_Props {
   submitAnswer: (answer: any, correct: any) => void;
   progress: number;
+  isNext: boolean;
 }
 
 const QuizType1_quizTypeInference = ({
   submitAnswer,
   progress,
+  isNext,
 }: QuizType1_Props) => {
   const [questionArr, setQuetstionArr] = useState<Types[]>([]);
-  const randQuiz = getRandomNum(quizType1_data.length);
-  let randBlank = 0;
-  while (randBlank === 0 || randBlank === quizType1_data[randQuiz].length - 1) {
-    randBlank = getRandomNum(quizType1_data[randQuiz].length);
-  }
-
-  const answer = quizType1_data[randQuiz][randBlank];
+  const [answerIdx, setAnswerIdx] = useState<number>(0);
+  const [randQuiz, setRandQuiz] = useState<number>(0);
+  const [randBlank, setRandBlank] = useState<any>(null);
 
   useEffect(() => {
-    console.log("퀴즈1 발생");
+    const randQuiz = getRandomNum(quizType1_data.length);
+    let randBlank = 0;
+    while (
+      randBlank === 0 ||
+      randBlank === quizType1_data[randQuiz].length - 1
+    ) {
+      randBlank = getRandomNum(quizType1_data[randQuiz].length);
+    }
+    const answer = quizType1_data[randQuiz][randBlank];
+    console.log("렌더");
     const answerSet = new Set<string>();
     const result: Types[] = [];
     result.push(answer);
     answerSet.add(answer.name);
-    console.log("퀴즈 정답 : ", answer);
+    const correct = result[0];
     while (true) {
       const randTypeNum = getRandomNum(defaultTypes.length);
       const candidate = defaultTypes[randTypeNum];
@@ -47,7 +54,11 @@ const QuizType1_quizTypeInference = ({
       }
       if (result.length === 6) break;
     }
-    setQuetstionArr(result);
+    const shuffleResult = getShuffleArr(result);
+    setAnswerIdx(shuffleResult.findIndex((item) => item.no === correct.no));
+    setRandQuiz(randQuiz)
+    setRandBlank(randBlank)
+    setQuetstionArr(shuffleResult);
   }, [progress]);
   return (
     <>
@@ -88,7 +99,12 @@ const QuizType1_quizTypeInference = ({
           ))}
         </div>
       </div>
-      <QuizAnswer questionArr={questionArr} submitAnswer={submitAnswer} />
+      <QuizAnswer
+        questionArr={questionArr}
+        submitAnswer={submitAnswer}
+        isNext={isNext}
+        answerIdx={answerIdx}
+      />
     </>
   );
 };
