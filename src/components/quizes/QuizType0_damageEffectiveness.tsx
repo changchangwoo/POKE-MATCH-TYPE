@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 import TypeBadge from "../commons/TypeBadge";
 import { getKoreanType } from "../../utils/getKoreanType";
 import { v4 as uuidv4 } from "uuid";
-import { imgBox, matchCardContainer, pokeTypes } from "../MatchCard";
+import { imgBox, pokeTypes } from "../MatchCard";
 import { useGetDetailPokemonForQuiz } from "../../hooks/useGetDetailPokemonForQuiz";
 import QuizAnswer from "./QuizAnswer";
 
@@ -22,7 +22,7 @@ const QuizType0_damageEffectiveness = ({
     return null;
   }
   return (
-    <div css={matchCardContainer}>
+    <>
       <h1 css={title}>
         해당 포켓몬을 공격했을 때,
         <br />
@@ -39,7 +39,7 @@ const QuizType0_damageEffectiveness = ({
         ))}
       </div>
       <QuizAnswer questionArr={questionArr} submitAnswer={submitAnswer} />
-    </div>
+    </>
   );
 };
 

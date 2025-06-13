@@ -120,6 +120,7 @@ const QuizAlertContainer = (isCorrect: boolean) => css`
       border-radius: 10px;
       border: 1px solid var(--border);
       box-sizing: border-box;
+      object-fit: cover;
     }
   }
 `;

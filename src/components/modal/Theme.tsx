@@ -68,4 +68,5 @@ const themeButton = (isClicked: boolean) => css`
   border-radius: 5px;
   background-color: ${isClicked ? "var(--point)" : "var(--background)"};
   color: ${isClicked ? "var(--background)" : "var(--text)"};
+  cursor: pointer;
 `;

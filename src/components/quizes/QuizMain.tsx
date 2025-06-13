@@ -6,6 +6,8 @@ import { getRandomNum } from "../../utils/getRandomNum";
 import StepProgress from "./StepProgress";
 import QuizAlert from "../modal/QuizAlert";
 import { getKoreanType } from "../../utils/getKoreanType";
+import { matchCardContainer } from "../MatchCard";
+import { css } from "@emotion/react";
 
 interface QuizMainProps {
   setSection: Dispatch<SetStateAction<number>>;
@@ -18,11 +20,12 @@ const QuizMain = ({
   setProgressArr,
 }: QuizMainProps) => {
   const [progress, setProgress] = useState<number>(0);
-  const [quizType, setQuizType] = useState<number>(0);
+  const [quizType, setQuizType] = useState<number>(getRandomNum(3));
   const [alertType, setAlertType] = useState<"correct" | "incorrect" | null>(
     null
   );
   const [answerText, setAnswerText] = useState<string>("");
+  const [isNext, setIsNext] = useState<boolean>(true)
 
   const submitAnswer = (answer: any, correct: any) => {
     const isCorrect = answer === correct;
@@ -35,8 +38,16 @@ const QuizMain = ({
         idx === progress ? { step: isCorrect ? "correct" : "wrong" } : item
       )
     );
-    setProgress((prev) => prev + 1);
+    setTimeout(() => {
+    setQuizType(getRandomNum(3));
+      setAlertType(null);
+      setProgress((prev) => prev + 1);
+    }, 3000)
   };
+
+  const handleNextButton = () => {
+
+  }
 
   useEffect(() => {
     if (progress >= 10) {
@@ -48,8 +59,6 @@ const QuizMain = ({
         idx === progress ? { step: "current" } : item
       )
     );
-    const curQuizType = getRandomNum(3);
-    setQuizType(curQuizType);
   }, [progress]);
 
   return (
@@ -58,12 +67,13 @@ const QuizMain = ({
         currentStep={progress}
         progressArr={progressArr}
       ></StepProgress>
+      <div css={matchCardContainer}>
       {(() => {
         switch (quizType) {
           case 0:
             return (
               <QuizType0_damageEffectiveness
-                key={`${quizType}-${progress}`}
+                key={progress}
                 submitAnswer={submitAnswer}
                 progress={progress}
               />
@@ -71,24 +81,49 @@ const QuizMain = ({
           case 1:
             return (
               <QuizType1_quizTypeInference
-                key={`${quizType}-${progress}`}
+                key={progress}
                 submitAnswer={submitAnswer}
+                progress={progress}
               />
             );
           case 2:
             return (
               <QuizType2_typeDescription
-                key={`${quizType}-${progress}`}
+                key={progress}
                 submitAnswer={submitAnswer}
+                progress={progress}
+
               />
             );
           default:
             return <div>에러 페이지</div>;
         }
       })()}
+      {isNext && <button css={nextButton}>다음 문제</button>}
+      </div>
       {alertType && <QuizAlert quizType={alertType} answerText={answerText} />}
     </>
   );
 };
+
+const nextButton = css`
+    position: relative;
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    color: var(--text);
+    height: 30px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    cursor: pointer;
+    width: 30%;
+
+      &:hover {
+    transition: all 0.2s;
+    background-color: var(--border);
+  }
+`
+
 
 export default QuizMain;

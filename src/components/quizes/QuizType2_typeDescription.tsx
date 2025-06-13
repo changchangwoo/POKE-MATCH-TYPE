@@ -3,7 +3,6 @@ import { fetchDetailType } from "../../api/api";
 import { getRandomNum } from "../../utils/getRandomNum";
 import defaultTypes from "../../datas/defaultTypes.json";
 import { getDetailType, getGroupType } from "../../utils/getDetailType";
-import { matchCardContainer } from "../MatchCard";
 import { Types } from "../../models/pokemonData";
 import { title } from "./QuizType0_damageEffectiveness";
 import { css } from "@emotion/react";
@@ -14,15 +13,20 @@ import { v4 as uuidv4 } from "uuid";
 
 interface QuizType2_Props {
   submitAnswer: (answer: any, correct: any) => void;
+  progress: number;
 }
 
-const QuizType2_typeDescription = ({ submitAnswer }: QuizType2_Props) => {
+const QuizType2_typeDescription = ({
+  submitAnswer,
+  progress,
+}: QuizType2_Props) => {
   const [attacker, setAttacker] = useState<Types>();
   const [defender, setDefender] = useState<Types[]>([]);
   const [questionArr, setQuestionArr] = useState<number[]>([]);
   const [checkedAnswer, setCheckedAnswer] = useState<number | null>(null);
   const [answer, setAnswer] = useState<number>(0);
   useEffect(() => {
+    console.log("퀴즈2 발생");
     const fetchDetailTypeQuiz = async () => {
       const randomTypes: number[] = [];
       while (true) {
@@ -36,6 +40,8 @@ const QuizType2_typeDescription = ({ submitAnswer }: QuizType2_Props) => {
       let groupResult = await getGroupType(circulateTypeData);
 
       let randomIndex = getRandomNum(groupResult.length);
+      console.log("퀴즈 정답 : ", groupResult[randomIndex].damage);
+      console.log("퀴즈 문제 : ", groupResult);
       setAnswer(groupResult[randomIndex].damage);
       let questionArr: number[] = [];
       groupResult.forEach((result) => {
@@ -57,10 +63,10 @@ const QuizType2_typeDescription = ({ submitAnswer }: QuizType2_Props) => {
       setQuestionArr(questionArr);
     };
     fetchDetailTypeQuiz();
-  }, []);
+  }, [progress]);
   if (!attacker || !defender) return;
   return (
-    <div css={matchCardContainer}>
+    <>
       <h1 css={title}>
         <div>
           <b>{getKoreanType(attacker.name)}타입 공격</b>에 대한 <br />
@@ -109,7 +115,7 @@ const QuizType2_typeDescription = ({ submitAnswer }: QuizType2_Props) => {
       >
         정답 제출
       </button>
-    </div>
+    </>
   );
 };
 

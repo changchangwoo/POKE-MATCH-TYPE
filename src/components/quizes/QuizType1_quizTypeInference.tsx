@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { getRandomNum } from "../../utils/getRandomNum";
-import { matchCardContainer } from "../MatchCard";
 import { css } from "@emotion/react";
 import TypeBadge from "../commons/TypeBadge";
 import { v4 as uuidv4 } from "uuid";
@@ -13,9 +12,13 @@ import { title } from "./QuizType0_damageEffectiveness";
 
 interface QuizType1_Props {
   submitAnswer: (answer: any, correct: any) => void;
+  progress: number;
 }
 
-const QuizType1_quizTypeInference = ({ submitAnswer }: QuizType1_Props) => {
+const QuizType1_quizTypeInference = ({
+  submitAnswer,
+  progress,
+}: QuizType1_Props) => {
   const [questionArr, setQuetstionArr] = useState<Types[]>([]);
   const randQuiz = getRandomNum(quizType1_data.length);
   let randBlank = 0;
@@ -26,10 +29,12 @@ const QuizType1_quizTypeInference = ({ submitAnswer }: QuizType1_Props) => {
   const answer = quizType1_data[randQuiz][randBlank];
 
   useEffect(() => {
+    console.log("퀴즈1 발생");
     const answerSet = new Set<string>();
     const result: Types[] = [];
     result.push(answer);
     answerSet.add(answer.name);
+    console.log("퀴즈 정답 : ", answer);
     while (true) {
       const randTypeNum = getRandomNum(defaultTypes.length);
       const candidate = defaultTypes[randTypeNum];
@@ -43,9 +48,9 @@ const QuizType1_quizTypeInference = ({ submitAnswer }: QuizType1_Props) => {
       if (result.length === 6) break;
     }
     setQuetstionArr(result);
-  }, []);
+  }, [progress]);
   return (
-    <div css={matchCardContainer}>
+    <>
       <h1 css={title}>
         <div>
           <div style={{ display: "inline-block" }}>
@@ -84,7 +89,7 @@ const QuizType1_quizTypeInference = ({ submitAnswer }: QuizType1_Props) => {
         </div>
       </div>
       <QuizAnswer questionArr={questionArr} submitAnswer={submitAnswer} />
-    </div>
+    </>
   );
 };
 

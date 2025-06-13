@@ -15,8 +15,9 @@ export const useGetDetailPokemonForQuiz = (progress: number) => {
   const [matchDatas, setMatchDatas] = useState<MatchInfo>();
   const [questionArr, setQuetstionArr] = useState<Types[]>([]);
   const [quizNum, setQuizNum] = useState<number>(0);
-
+  
   useEffect(() => {
+    console.log("퀴즈0 발생")
     let isCancelled = false;
     const useFetchDetailPokemonQuiz = async (name: string = "") => {
       const lastNum = PokeDex[PokeDex.length - 1].no;
@@ -56,6 +57,7 @@ export const useGetDetailPokemonForQuiz = (progress: number) => {
           quiz0_dataGroupResult[quizNum].types.length
         );
         const candidate = quiz0_dataGroupResult[quizNum].types[randTypeNum];
+        console.log("퀴즈 정답 : ", candidate)
         if (!answerSet.has(candidate.name)) {
           result.push(candidate);
           answerSet.add(candidate.name);

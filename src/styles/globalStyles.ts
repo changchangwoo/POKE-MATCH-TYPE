@@ -69,10 +69,12 @@ export const globalStyles = (themeMode: keyof typeof themes = "light") => {
       --type20: #4c4948; /* shadow */
       --type100: grey; /* blank */
 
-      /* 폰트 사이즈 */
-      @media screen and (max-width: 600) {
         --fontLarge: 16px;
         --fontMedium: 14px;
+        --fontSmall : 14px;
+
+      /* 폰트 사이즈 */
+      @media screen and (max-width: 600) {
       }
     }
   `;

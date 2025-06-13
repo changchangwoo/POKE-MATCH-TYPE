@@ -44,7 +44,7 @@ export const quizReadyImgContainer = css`
   object-fit: cover;
 `;
 
-const quizReadyText = css`
+export const quizReadyText = css`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -56,7 +56,8 @@ const quizReadyText = css`
   border: 1px solid var(--border);
   border-radius: 10px;
   color: grey;
-  background-color: var(--background);
+  background-color: var(--primary);
+  font-size: var(--fontMedium);
 `;
 
 export const quizReadyContainer = css`
@@ -66,6 +67,7 @@ export const quizReadyContainer = css`
   min-height: 400px;
   border: 1px solid var(--border);
   border-radius: 10px;
+  background-color: var(--background);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,7 +89,7 @@ const quizStartBtn = css`
   height: 40px;
   border: 1px solid var(--border);
   border-radius: 5px;
-  background-color: var(--background);
+  background-color: var(--primary);
   color: var(--text);
 
   cursor: pointer;

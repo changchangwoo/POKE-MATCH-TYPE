@@ -1,6 +1,7 @@
 import { css } from "@emotion/react";
 import { Dispatch, SetStateAction } from "react";
 import QuizIntroImg from "../../imgs/quiz_intro.jpg";
+import { quizReadyText } from "./QuizReady";
 
 interface QuizIntroProps {
   setSection: Dispatch<SetStateAction<number>>;
@@ -10,14 +11,17 @@ const QuizIntro = ({ setSection }: QuizIntroProps) => {
   return (
     <div css={QuizIntroContainer}>
       <img src={QuizIntroImg} css={QuizIntroImgContainer}></img>
-      <span>
-        이런! 피카츄가 숲에서 길을 잃었어요!
-        <br />
-        다행히도, 퀴즈를 풀면 무사히 빠져나갈 수 있어요.
-        <br />
-        피카츄를 도와주세요!
-      </span>
-
+      <div css={quizReadyText}>
+        <span>
+          이런! 피카츄가 숲에서 길을 잃었어요!
+          <br />
+          정말 다행스럽게도 <br/>
+          퀴즈를 풀면 무사히 빠져나갈 수 있어요.
+          <br />
+          <br />
+          길 잃은 피카츄를 도와주세요!
+        </span>
+      </div>
       <button
         css={quizStartBtn}
         onClick={() => {
@@ -49,6 +53,7 @@ export const QuizIntroContainer = css`
   min-height: 400px;
   border: 1px solid var(--border);
   border-radius: 10px;
+  background-color: var(--background);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,7 +75,7 @@ const quizStartBtn = css`
   height: 40px;
   border: 1px solid var(--border);
   border-radius: 5px;
-  background-color: var(--background);
+  background-color: var(--primary);
   color: var(--text);
 
   cursor: pointer;
