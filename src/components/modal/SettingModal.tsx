@@ -6,6 +6,8 @@ import AccordianList from "../commons/AccordianList";
 import Theme from "./Theme";
 import LanguageSetting from "./LanguageSetting";
 import { APP } from "../../const/kor";
+import { FaGithub } from "react-icons/fa";
+import { IoMailSharp } from "react-icons/io5";
 
 interface SettingModalProps {
   setModal: Dispatch<SetStateAction<boolean>>;
@@ -35,10 +37,33 @@ const SettingModal = ({ setModal }: SettingModalProps) => {
             <LanguageSetting />
           </AccordianList>
           <AccordianList title={APP.COPYRIGHT.TITLE}>
-            <span>컨텐츠 입니다.</span>
+            <div className="copyrightContents">
+              <p>{APP.COPYRIGHT.DESCIRPTION_1}</p>
+              <p>{APP.COPYRIGHT.DESCIRPTION_2}</p>
+              <p>{APP.COPYRIGHT.DESCIRPTION_3}</p>
+            </div>
           </AccordianList>
           <AccordianList title={APP.FEEDBACK.TITLE}>
-            <span>컨텐츠 입니다.</span>
+            <div className="copyrightContents">
+              <p>{APP.FEEDBACK.DESCRIPTION_1}</p>
+              <p>{APP.FEEDBACK.DESCRIPTION_2}</p>
+              <p>{APP.FEEDBACK.DESCRIPTION_3}</p>
+              <p>{APP.FEEDBACK.DESCRIPTION_4}</p>
+              <p>{APP.FEEDBACK.DESCRIPTION_5}</p>
+              <br/>
+    <a
+      href="https://github.com/changchangwoo/POKE-MATCH-TYPE"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="githubLink"
+    >
+          <FaGithub />
+      changchangwoo/POKE-MATCH-TYPE
+        </a>
+              <p>
+                <IoMailSharp />
+                changchangwoo@naver.com</p><br/>
+            </div>
           </AccordianList>
         </ul>
       </div>

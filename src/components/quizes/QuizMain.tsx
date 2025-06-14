@@ -21,8 +21,7 @@ const QuizMain = ({
   setProgressArr,
 }: QuizMainProps) => {
   const [progress, setProgress] = useState<number>(0);
-  // const [quizType, setQuizType] = useState<number>(getRandomNum(3));
-  const [quizType, setQuizType] = useState<number>(2);
+  const [quizType, setQuizType] = useState<number>(getRandomNum(3));
   const [alertType, setAlertType] = useState<"correct" | "incorrect" | null>(
     null
   );

@@ -65,7 +65,7 @@ const QuizType1_quizTypeInference = ({
     <>
       <h1 css={title}>
         <div>
-          <div style={{ display: "inline-block" }}>
+          <div style={{ display: "inline-block", marginRight: "5px"}}>
             <TypeBadge no={100} quizMode={true}>
               ?
             </TypeBadge>

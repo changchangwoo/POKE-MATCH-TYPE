@@ -26,8 +26,24 @@ const AccordianList = ({ children, title }: AccrodianProps) => {
 
 const AccordianListContainer = () => css`
   width: 100%;
+  margin: auto;
   border-bottom: 1px solid var(--border);
   cursor: pointer;
+  margin: auto;
+
+
+  .copyrightContents {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    p {
+  margin: auto;
+color: var(--text);
+text-align: center;
+font-size: var(--fontSmall);
+max-width: 600px;
+    }
+  }
 
   :hover {
     background-color: var(--border);
@@ -45,6 +61,21 @@ const AccordianListContainer = () => css`
 
   .contents {
     padding: 12px 16px;
+  }
+
+  a {
+    margin: auto;
+    display: flex;
+    gap: 10px;
+    color: var(--text);
+  }
+
+  p {
+        margin: auto;
+    display: flex;
+    gap: 10px;
+    color: var(--text);
+    font-size: var(--fontSmall);
   }
 `;
 

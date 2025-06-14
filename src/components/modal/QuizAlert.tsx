@@ -31,7 +31,7 @@ const QuizAlert = ({ quizType, answerText }: QuizAlertProps) => {
         ) : (
           <span>{QUIZ.ALERT.FAILED}</span>
         )}
-        <span>{QUIZ.ALERT.MESSAGE.replace("{answer}", answerText)}</span>
+        <span>{QUIZ.ALERT.MESSAGE.replace("{answerText}", answerText)}</span>
       </div>
     </div>
   );

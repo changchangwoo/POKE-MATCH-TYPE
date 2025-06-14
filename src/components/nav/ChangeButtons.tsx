@@ -18,7 +18,7 @@ const ChangeButtons = () => {
         onClick={() => navigator("/type")}
         className={location.pathname === "/type" ? "active" : ""}
       >
-        {APP.CHANGE_BUTTON.COMPATIBILITY_QUIZ}
+        {APP.CHANGE_BUTTON.COMPARE_TYPE}
       </button>
       <button
         onClick={() => navigator("/table")}

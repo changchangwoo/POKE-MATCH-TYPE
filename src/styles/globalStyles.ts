@@ -71,7 +71,7 @@ export const globalStyles = (themeMode: keyof typeof themes = "light") => {
 
         --fontLarge: 16px;
         --fontMedium: 14px;
-        --fontSmall : 14px;
+        --fontSmall : 13px;
 
       /* 폰트 사이즈 */
       @media screen and (max-width: 600) {

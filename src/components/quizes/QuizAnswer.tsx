@@ -44,7 +44,7 @@ export const submitBtn = (isNext : boolean) => css`
   height: 45px;
   border-radius: 8px;
   border: 1px solid var(--border);
-  background: var(--primary);
+  background: ${isNext ? "var(--border)" : "var(--primary)"};
   cursor: pointer;
   color: var(--text);
   pointer-events: ${isNext ? "none" : "all"};

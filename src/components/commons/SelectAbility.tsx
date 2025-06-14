@@ -53,7 +53,9 @@ export const SelectAbilityContainer = css`
   }
 
   select {
+    margin: auto;
     width: 100%;
+    max-width: 600px;
     display: flex;
     justify-content: center;
     align-items: center;

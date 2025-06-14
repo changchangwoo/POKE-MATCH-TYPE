@@ -17,10 +17,20 @@ export const APP = {
     DATA_ENG: "영어"
   },
   COPYRIGHT : {
-    TITLE : "저작권"
+    TITLE : "저작권",
+    DESCIRPTION_1 :"본 서비스는 PokeAPI에서 제공하는 공개 API 데이터를 사용합니다.", 
+    DESCIRPTION_2 :"포켓몬의 이름, 이미지, 타입 등 모든 포켓몬 관련 콘텐츠의 저작권은 Nintendo, Creatures Inc. ,GAME FREAK Inc.에 있습니다.",  
+    DESCIRPTION_3 :"또한 개인 포트폴리오 및 학습 목적의 프로젝트입니다.",
   },
   FEEDBACK : {
-    TITLE : "피드백"
+    TITLE : "피드백",
+    DESCRIPTION_1 : "안녕하세요! 제가 만든 서비스를 이용해주셔서 정말 감사합니다.",
+    DESCRIPTION_2 : "훌륭한 여러분들과 본 서비스를 비롯하여 다양한 의견을 교류하고싶습니다.",
+    DESCRIPTION_3 : "지금은 많이 부족하지만, 도움을 주신다면 멋진 서비스가 될 것입니다.",
+    DESCRIPTION_4 : "어떤 내용이라도 남겨주신다면 확인 후 꼭 반영하겠습니다!!",
+    DESCRIPTION_5 : "그럼 좋은하루 되세요!",
+    
+
   },
   CHANGE_BUTTON : {
     COMPARE_POKEMON : "포켓몬으로 비교",
@@ -90,14 +100,15 @@ export const QUIZ = {
     ALERT : {
         SUCCESS : "정답입니다!",
         FAILED : "오답입니다..",
-        MESSAGE : "정답은 {answerText} 입니다.",
+        MESSAGE : "정답은 {answerText} 타입 입니다.",
         TYPE_1 : "정답",
         TYPE_2 : "오답"
     },
     END : {
         SUCCESS_1 : "피카츄가 무사히 숲 속을 빠져나왔어요!",
         SUCCESS_2 : "트레이너로서 기본 소양이 출중한데요?",
-        FAILD_1 : "",
-        FAILD_2 : "",
+        FAILD_1 : "피카츄가 아직 길을 헤매고 있어요",
+        FAILD_2 : "다시 한번 피카츄를 도와줄까요?",
+        SYSTEM: "10문제 중 {correctCount} 문제 맞추셨습니다!✨"
     }
 }

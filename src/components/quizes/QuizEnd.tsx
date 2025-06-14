@@ -33,9 +33,7 @@ const QuizEnd = ({ progressArr }: QuizEndProps) => {
   };
   return (
     <div css={quizReadyContainer}>
-      <span>
-        {QUIZ.END.SYSTEM_1}
-      <br />✨ {QUIZ.END.SYSTEM_2.replace("{correctCount}", correctCount.toString())}
+      <span>{QUIZ.END.SYSTEM.replace("{correctCount}", correctCount.toString())}
       </span>
 
       <img
