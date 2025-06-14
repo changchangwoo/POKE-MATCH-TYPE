@@ -16,6 +16,8 @@ const QuizAlert = ({ quizType, answerText }: QuizAlertProps) => {
     return () => clearTimeout(timer);
   }, []);
 
+  console.log(answerText)
+
   if (!visible) return null;
   return (
     <div css={QuizAlertContainer(quizType === "correct")}>

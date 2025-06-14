@@ -7,7 +7,7 @@ import { useGetDetailPokemonForQuiz } from "../../hooks/useGetDetailPokemonForQu
 import QuizAnswer from "./QuizAnswer";
 
 interface QuizType0_Props {
-  submitAnswer: (answer: any, correct: any) => void;
+  submitAnswer: (answerIdx: number, correctIdx: number, correctData : any) => void;
   progress: number;
   isNext: boolean;
 }

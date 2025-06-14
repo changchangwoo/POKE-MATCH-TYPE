@@ -20,19 +20,20 @@ const QuizMain = ({
   setProgressArr,
 }: QuizMainProps) => {
   const [progress, setProgress] = useState<number>(0);
-  const [quizType, setQuizType] = useState<number>(getRandomNum(3));
+  // const [quizType, setQuizType] = useState<number>(getRandomNum(3));
+  const [quizType, setQuizType] = useState<number>(2);
   const [alertType, setAlertType] = useState<"correct" | "incorrect" | null>(
     null
   );
   const [answerText, setAnswerText] = useState<string>("");
   const [isNext, setIsNext] = useState<boolean>(false);
 
-  const submitAnswer = (answer: any, correct: any) => {
-    const isCorrect = answer === correct;
-    if (Number(correct) === correct) setAnswerText(`${correct}배`);
-    else setAnswerText(`${getKoreanType(correct)} 타입`);
+  const submitAnswer = (answerIdx : number, correctIdx : number, correctData : any) => {
+    const isCorrect = answerIdx === correctIdx;
+    if(correctData.name) setAnswerText(getKoreanType(correctData.name))
+    else if (correctData.damage) setAnswerText(`${correctData.damage}배`)
+
     setAlertType(isCorrect ? "correct" : "incorrect");
-    setTimeout(() => setAlertType(null), 3000);
     setProgressArr(
       progressArr.map((item, idx) =>
         idx === progress ? { step: isCorrect ? "correct" : "wrong" } : item

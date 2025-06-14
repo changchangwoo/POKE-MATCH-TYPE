@@ -12,7 +12,7 @@ import { submitBtn } from "./QuizAnswer";
 import { v4 as uuidv4 } from "uuid";
 
 interface QuizType2_Props {
-  submitAnswer: (answer: any, correct: any) => void;
+  submitAnswer: (answerIdx: number, correctIdx: number, correctData : any) => void;
   progress: number;
   isNext: boolean;
 }
@@ -25,9 +25,17 @@ const QuizType2_typeDescription = ({
   const [attacker, setAttacker] = useState<Types>();
   const [defender, setDefender] = useState<Types[]>([]);
   const [questionArr, setQuestionArr] = useState<number[]>([]);
-  const [checkedAnswer, setCheckedAnswer] = useState<number | null>(null);
+  const [checkedAnswer, setCheckedAnswer] = useState<{
+    damage : number;
+    idx : number 
+   }>(
+    {
+      damage : 0,
+      idx : -1
+    }
+   );
   const [answerIdx, setAnswerIdx] = useState<number>(0);
-  const [answer, setAnswer] = useState<number>(0);
+  const [answer, setAnswer] = useState<any>(null);
   useEffect(() => {
     const fetchDetailTypeQuiz = async () => {
       const randomTypes: number[] = [];
@@ -42,7 +50,7 @@ const QuizType2_typeDescription = ({
       let groupResult = await getGroupType(circulateTypeData);
 
       let randomIndex = getRandomNum(groupResult.length);
-      setAnswer(groupResult[randomIndex].damage);
+      setAnswer(groupResult[randomIndex]);
       setAnswerIdx(randomIndex);
       let questionArr: number[] = [];
       groupResult.forEach((result) => {
@@ -96,11 +104,11 @@ const QuizType2_typeDescription = ({
       </div>
       <div css={selectDamageContainer(isNext)}>
         {questionArr.map((damage, idx) => {
-          const isChecked = checkedAnswer === damage;
+          const isChecked = checkedAnswer.idx === idx;
           return (
             <button
               key={uuidv4()}
-              onClick={() => setCheckedAnswer(damage)}
+              onClick={() => setCheckedAnswer({damage, idx})}
               data-name={damage}
               css={answerButton(isChecked, (isNext && answerIdx === idx))}
             >
@@ -111,7 +119,7 @@ const QuizType2_typeDescription = ({
       </div>
 
       <button
-        onClick={() => submitAnswer(checkedAnswer, answer)}
+        onClick={() => submitAnswer(checkedAnswer.idx, answerIdx, answer)}
         css={submitBtn(isNext)}
       >
         정답 제출

@@ -1,17 +1,17 @@
 import { useState } from "react";
 import SelectType from "../SelectType";
-import { Types } from "../../models/pokemonData";
+import { checkedTypes, Types } from "../../models/pokemonData";
 import { css } from "@emotion/react";
 
 interface QuizAnswerProps {
   questionArr: Types[];
-  submitAnswer: (answer: string, correct: string) => void;
+  submitAnswer: (answerIdx: number, correctIdx: number, correctData : any) => void;
   isNext: boolean;
   answerIdx : number;
 }
 
 export const QuizAnswer = ({ questionArr, submitAnswer, isNext, answerIdx }: QuizAnswerProps) => {
-  const [checkedType, setCheckedType] = useState<Types[]>([]);
+  const [checkedType, setCheckedType] = useState<(checkedTypes)[]>([]);
 
   return (
     <>
@@ -25,7 +25,7 @@ export const QuizAnswer = ({ questionArr, submitAnswer, isNext, answerIdx }: Qui
         />
       </div>
       <button
-        onClick={() => submitAnswer(checkedType[0]?.name, questionArr[0].name)}
+        onClick={() => submitAnswer(checkedType[0].idx, answerIdx, questionArr[answerIdx])}
         css={submitBtn(isNext)}
       >
         정답 제출

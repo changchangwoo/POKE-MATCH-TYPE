@@ -3,14 +3,14 @@ import { Dispatch, SetStateAction } from "react";
 import defaultTypesData from "../../src/datas/defaultTypes.json";
 import { getKoreanType } from "../utils/getKoreanType";
 import { v4 as uuidv4 } from "uuid";
-import { Types } from "../models/pokemonData";
+import { checkedTypes, Types } from "../models/pokemonData";
 
 interface SelectTypeProps {
-  checkedType: Types[];
-  setCheckedType: Dispatch<SetStateAction<Types[]>>;
+  checkedType: checkedTypes[];
+  setCheckedType: Dispatch<SetStateAction<checkedTypes[]>>;
   quizModeDatas?: Types[];
   answerIdx?: number;
-  isNext: boolean
+  isNext?: boolean
 }
 const SelectType = ({
   checkedType,
@@ -20,7 +20,7 @@ const SelectType = ({
   isNext = false
 }: SelectTypeProps) => {
   const selectedDatas = quizModeDatas || defaultTypesData;
-  const handleSelect = (type: any) => {
+  const handleSelect = (type: any, idx : number) => {
     const isAlreadyChecked = checkedType.some(
       (checked) => checked.no === type.no
     );
@@ -29,12 +29,12 @@ const SelectType = ({
     } else {
       if (quizModeDatas) {
         if (checkedType.length === 1) {
-          setCheckedType([{ no: type.no, name: type.name }]);
+          setCheckedType([{ no: type.no, name: type.name, idx}]);
           return;
         }
       }
       if (checkedType.length >= 2) return;
-      setCheckedType([...checkedType, { no: type.no, name: type.name }]);
+      setCheckedType([...checkedType, {no: type.no, name: type.name, idx }]);
     }
   };
 
@@ -51,7 +51,7 @@ const SelectType = ({
               css={item(isChecked ? type.no : undefined, 
                 (isNext && answerIdx === idx)
               )}
-              onClick={() => handleSelect(type)}
+              onClick={() => handleSelect(type, idx)}
               key={uuidv4()}
             >
               {getKoreanType(type.name)}

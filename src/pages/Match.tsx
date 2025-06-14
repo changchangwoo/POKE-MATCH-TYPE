@@ -1,13 +1,13 @@
 import { css } from "@emotion/react";
 import { useEffect, useState } from "react";
 import SelectType from "../components/SelectType";
-import { Types } from "../models/pokemonData";
+import { checkedTypes } from "../models/pokemonData";
 import TypeCard from "../components/commons/TypeCard";
 import { useLocation } from "react-router-dom";
 import SelectAbility from "../components/commons/SelectAbility";
 
 const Match = () => {
-  const [checkedType, setCheckedType] = useState<Types[]>([]);
+  const [checkedType, setCheckedType] = useState<checkedTypes[]>([]);
   const [selectedAbility, setSelectedAbility] = useState("");
   const location = useLocation();
 

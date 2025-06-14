@@ -11,7 +11,7 @@ import QuizAnswer from "./QuizAnswer";
 import { title } from "./QuizType0_damageEffectiveness";
 
 interface QuizType1_Props {
-  submitAnswer: (answer: any, correct: any) => void;
+  submitAnswer: (answerIdx: number, correctIdx: number, correctData : any) => void;
   progress: number;
   isNext: boolean;
 }
@@ -55,7 +55,8 @@ const QuizType1_quizTypeInference = ({
       if (result.length === 6) break;
     }
     const shuffleResult = getShuffleArr(result);
-    setAnswerIdx(shuffleResult.findIndex((item) => item.no === correct.no));
+    const answerIdx = shuffleResult.findIndex((item) => item.no === correct.no)
+    setAnswerIdx(answerIdx);
     setRandQuiz(randQuiz)
     setRandBlank(randBlank)
     setQuetstionArr(shuffleResult);

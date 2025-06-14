@@ -10,6 +10,12 @@ export interface Types {
   name: string;
 }
 
+export interface checkedTypes {
+  no: number;
+  name : string;
+  idx : number
+}
+
 export interface IPokeDex {
   no: number;
   name: string;
