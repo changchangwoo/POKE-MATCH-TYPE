@@ -1,6 +1,7 @@
 import { css } from "@emotion/react";
 import { Dispatch, SetStateAction } from "react";
 import quizReadyImg from "../../imgs/quiz_ready.jpg";
+import { QUIZ } from "../../const/kor";
 
 interface QuizReadyProps {
   setSection: Dispatch<SetStateAction<number>>;
@@ -12,12 +13,12 @@ const QuizReady = ({ setSection }: QuizReadyProps) => {
       <div css={quizReadyContainer}>
         <img src={quizReadyImg} css={quizReadyImgContainer}></img>
         <span>
-          퀴즈를 통해 <br />내 타입 이해도를 확인해보세요!
+          {QUIZ.READY.TITLE}
         </span>
         <ul css={quizReadyText}>
-          <li>총 10문제로 구성되어있습니다.</li>
-          <li>중도 이탈 시 진행 초기화됩니다.</li>
-          <li>퀴즈 유형과 문제는 랜덤입니다.</li>
+          <li>{QUIZ.READY.TITLE_SUB_1}</li>
+          <li>{QUIZ.READY.TITLE_SUB_2}</li>
+          <li>{QUIZ.READY.TITLE_SUB_3}</li>
         </ul>
         <button
           css={quizStartBtn}
@@ -25,7 +26,7 @@ const QuizReady = ({ setSection }: QuizReadyProps) => {
             setSection((prev) => prev + 1);
           }}
         >
-          시작하기
+          {QUIZ.READY.BTN}
         </button>
       </div>
     </>

@@ -4,6 +4,7 @@ import QuizReady from "../components/quizes/QuizReady";
 import QuizMain from "../components/quizes/QuizMain";
 import QuizEnd from "../components/quizes/QuizEnd";
 import QuizIntro from "../components/quizes/QuizIntro";
+import { QUIZ } from "../const/kor";
 
 const Quiz = () => {
   const [section, setSection] = useState<number>(0);
@@ -13,7 +14,7 @@ const Quiz = () => {
 
   return (
     <div css={quizContainer}>
-      <h1>포켓몬 상성 퀴즈</h1>
+      <h1>{QUIZ.TITLE}</h1>
       {(() => {
         switch (section) {
           case 0:
@@ -31,7 +32,7 @@ const Quiz = () => {
           case 3:
             return <QuizEnd progressArr={progressArr} />;
           default:
-            return <div>에러 페이지</div>;
+            return <div>{QUIZ.ERROR}</div>;
         }
       })()}
     </div>

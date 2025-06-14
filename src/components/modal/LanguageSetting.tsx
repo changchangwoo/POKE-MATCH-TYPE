@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { SelectAbilityContainer } from "../commons/SelectAbility";
 import { v4 as uuidv4 } from "uuid";
+import { APP } from "../../const/kor";
 
 const languageList = [
-  { label: "한국어", type: "kor" },
-  { label: "English", type: "eng" },
+  { label: APP.LANGUAGE.DATA_KOR, type: "kor" },
+  { label: APP.LANGUAGE.DATA_ENG, type: "eng" },
 ];
 
 const LanguageSetting = () => {

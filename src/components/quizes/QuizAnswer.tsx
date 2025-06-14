@@ -2,6 +2,7 @@ import { useState } from "react";
 import SelectType from "../SelectType";
 import { checkedTypes, Types } from "../../models/pokemonData";
 import { css } from "@emotion/react";
+import { QUIZ } from "../../const/kor";
 
 interface QuizAnswerProps {
   questionArr: Types[];
@@ -28,7 +29,7 @@ export const QuizAnswer = ({ questionArr, submitAnswer, isNext, answerIdx }: Qui
         onClick={() => submitAnswer(checkedType[0].idx, answerIdx, questionArr[answerIdx])}
         css={submitBtn(isNext)}
       >
-        정답 제출
+        {QUIZ.SUBMIT}
       </button>
     </>
   );

@@ -1,9 +1,10 @@
 import { css } from "@emotion/react";
+import { TABLE } from "../const/kor";
 
 const Table = () => {
   return (
     <div css={tableContainer}>
-      <h1>타입 상성 표</h1>
+      <h1>{TABLE.TITLE}</h1>
       <div className="tableContents">
         <h1>테이블 표 페이지</h1>
       </div>

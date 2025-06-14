@@ -2,15 +2,16 @@ import { css } from "@emotion/react";
 import { useContext } from "react";
 import { TThemeData } from "../../models/settingData";
 import { ThemeContext } from "../../utils/getInitialData";
+import { APP } from "../../const/kor";
 
 const ThemeDatas: TThemeData[] = [
   {
-    name: "태양의 돌",
+    name: APP.THEME.DATA_SUN_STONE,
     num: 1,
     type: "light",
   },
   {
-    name: "달의 돌",
+    name: APP.THEME.DATA_MOON_STONE,
     num: 2,
     type: "dark",
   },

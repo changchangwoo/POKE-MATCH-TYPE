@@ -7,6 +7,7 @@ import { getKoreanType } from "../utils/getKoreanType";
 import SelectAbility from "./commons/SelectAbility";
 import { v4 as uuidv4 } from "uuid";
 import SpeciesButtons from "./SpeciesButtons";
+import { MAIN } from "../const/kor";
 
 interface MatchCardProps {
   MatchInfo: IMatchInfo;
@@ -27,7 +28,7 @@ const MatchCard = ({
 }: MatchCardProps) => {
   return (
     <div css={matchCardContainer}>
-      <h1>매치 포켓몬</h1>
+      <h1>{MAIN.MATCH.MATCH_CARD_TITLE}</h1>
       <div css={imgBox(MatchInfo.types[0].no)}>
         <img
           src={MatchInfo.imgs}

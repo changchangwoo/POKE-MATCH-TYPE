@@ -7,7 +7,7 @@ interface AccrodianProps {
   title: string;
 }
 const AccordianList = ({ children, title }: AccrodianProps) => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(true);
   return (
     <div
       css={AccordianListContainer}

@@ -2,6 +2,7 @@ import { css } from "@emotion/react";
 import { Dispatch, SetStateAction } from "react";
 import QuizIntroImg from "../../imgs/quiz_intro.jpg";
 import { quizReadyText } from "./QuizReady";
+import { QUIZ } from "../../const/kor";
 
 interface QuizIntroProps {
   setSection: Dispatch<SetStateAction<number>>;
@@ -13,13 +14,14 @@ const QuizIntro = ({ setSection }: QuizIntroProps) => {
       <img src={QuizIntroImg} css={QuizIntroImgContainer}></img>
       <div css={quizReadyText}>
         <span>
-          이런! 피카츄가 숲에서 길을 잃었어요!
+          {QUIZ.INTRO.TITLE_1}
           <br />
-          정말 다행스럽게도 <br/>
-          퀴즈를 풀면 무사히 빠져나갈 수 있어요.
+          {QUIZ.INTRO.TITLE_2}
+          <br />
+          {QUIZ.INTRO.TITLE_3}
           <br />
           <br />
-          길 잃은 피카츄를 도와주세요!
+          {QUIZ.INTRO.TITLE_4}
         </span>
       </div>
       <button
@@ -28,7 +30,7 @@ const QuizIntro = ({ setSection }: QuizIntroProps) => {
           setSection((prev) => prev + 1);
         }}
       >
-        시작하기
+        {QUIZ.READY.BTN}
       </button>
     </div>
   );

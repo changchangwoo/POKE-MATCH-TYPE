@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 import { imgBox, pokeTypes } from "../MatchCard";
 import { useGetDetailPokemonForQuiz } from "../../hooks/useGetDetailPokemonForQuiz";
 import QuizAnswer from "./QuizAnswer";
+import { QUIZ } from "../../const/kor";
 
 interface QuizType0_Props {
   submitAnswer: (answerIdx: number, correctIdx: number, correctData : any) => void;
@@ -25,9 +26,9 @@ const QuizType0_damageEffectiveness = ({
   return (
     <>
       <h1 css={title}>
-        해당 포켓몬을 공격했을 때,
+        {QUIZ.MAIN_1.TITLE_1}
         <br />
-        <b>{groupResult[quizNum].damage}배의 데미지를 가하는 타입은?</b>
+        <b>{groupResult[quizNum].damage}{QUIZ.MAIN_1.TITLE_2}</b>
       </h1>
       <div css={imgBox(matchDatas.types[0].no)}>
         <img src={matchDatas.imgs} alt={`Pokemon ${matchDatas.no}`} />

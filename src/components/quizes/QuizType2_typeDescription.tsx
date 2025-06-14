@@ -10,6 +10,7 @@ import { getKoreanType } from "../../utils/getKoreanType";
 import TypeBadge from "../commons/TypeBadge";
 import { submitBtn } from "./QuizAnswer";
 import { v4 as uuidv4 } from "uuid";
+import { QUIZ } from "../../const/kor";
 
 interface QuizType2_Props {
   submitAnswer: (answerIdx: number, correctIdx: number, correctData : any) => void;
@@ -78,19 +79,16 @@ const QuizType2_typeDescription = ({
     <>
       <h1 css={title}>
         <div>
-          <b>{getKoreanType(attacker.name)}타입 공격</b>에 대한 <br />
-          <b>
+          {getKoreanType(attacker.name)}{QUIZ.MAIN_3.TITLE_1}<br />
             {getKoreanType(defender[0].name)}/{getKoreanType(defender[1].name)}{" "}
-            타입
-          </b>
-          의 피해량은?
+            {QUIZ.MAIN_3.TITLE_2}
         </div>
       </h1>
       <div css={quizContainer}>
-        <div css={quizTypeContainer} data-name="공격">
+        <div css={quizTypeContainer} data-name={QUIZ.MAIN_3.DATA_NAME_ATTACK}>
           <TypeBadge no={attacker.no}>{getKoreanType(attacker.name)}</TypeBadge>
         </div>
-        <div css={quizTypeContainer} data-name="방어">
+        <div css={quizTypeContainer} data-name={QUIZ.MAIN_3.DATA_NAME_DEFENSE}>
           <>
             {defender.map((type, idx) => {
               return (
@@ -112,7 +110,7 @@ const QuizType2_typeDescription = ({
               data-name={damage}
               css={answerButton(isChecked, (isNext && answerIdx === idx))}
             >
-              {damage}배의 피해를 입는다.
+              {damage}{QUIZ.MAIN_3.DESCRIPTION}
             </button>
           );
         })}
@@ -122,7 +120,7 @@ const QuizType2_typeDescription = ({
         onClick={() => submitAnswer(checkedAnswer.idx, answerIdx, answer)}
         css={submitBtn(isNext)}
       >
-        정답 제출
+        {QUIZ.SUBMIT}
       </button>
     </>
   );
@@ -183,7 +181,7 @@ const quizTypeContainer = css`
 
   &::before {
     content: attr(data-name);
-    position: absolute; /* 핵심: flex의 영향에서 탈출 */
+    position: absolute; 
     top: 0%;
     left: 50%;
     transform: translate(-50%, -50%);

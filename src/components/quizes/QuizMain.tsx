@@ -8,6 +8,7 @@ import QuizAlert from "../modal/QuizAlert";
 import { getKoreanType } from "../../utils/getKoreanType";
 import { matchCardContainer } from "../MatchCard";
 import { css } from "@emotion/react";
+import { QUIZ } from "../../const/kor";
 
 interface QuizMainProps {
   setSection: Dispatch<SetStateAction<number>>;
@@ -98,12 +99,12 @@ const QuizMain = ({
                 />
               );
             default:
-              return <div>에러 페이지</div>;
+              return <div>{QUIZ.ERROR}</div>;
           }
         })()}
         {isNext && (
           <button css={nextButton} onClick={handleNextButton}>
-            다음 문제
+            {QUIZ.NEXT}
           </button>
         )}
       </div>

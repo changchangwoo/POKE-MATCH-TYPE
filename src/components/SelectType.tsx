@@ -4,6 +4,7 @@ import defaultTypesData from "../../src/datas/defaultTypes.json";
 import { getKoreanType } from "../utils/getKoreanType";
 import { v4 as uuidv4 } from "uuid";
 import { checkedTypes, Types } from "../models/pokemonData";
+import { MATCH } from "../const/kor";
 
 interface SelectTypeProps {
   checkedType: checkedTypes[];
@@ -40,7 +41,7 @@ const SelectType = ({
 
   return (
     <div css={selectTypeContainer(isNext)}>
-      <h1>{quizModeDatas ? "" : "타입 선택"}</h1>
+      <h1>{quizModeDatas ? "" : MATCH.SELECT_TYPE.TITLE}</h1>
       <div css={selectTypes(quizModeDatas)}>
         {selectedDatas.map((type, idx) => {
           const isChecked = checkedType.some(

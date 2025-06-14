@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { APP } from "../../const/kor";
 
 const ChangeButtons = () => {
   const navigator = useNavigate();
@@ -11,25 +12,25 @@ const ChangeButtons = () => {
         onClick={() => navigator("/")}
         className={location.pathname === "/" ? "active" : ""}
       >
-        포켓몬으로 비교
+        {APP.CHANGE_BUTTON.COMPARE_POKEMON}
       </button>
       <button
         onClick={() => navigator("/type")}
         className={location.pathname === "/type" ? "active" : ""}
       >
-        타입으로 비교
+        {APP.CHANGE_BUTTON.COMPATIBILITY_QUIZ}
       </button>
       <button
         onClick={() => navigator("/table")}
         className={`new ${location.pathname === "/table" ? "active" : ""}`}
       >
-        상성 표
+        {APP.CHANGE_BUTTON.COPATIBILITY_TABLE}
       </button>
       <button
         onClick={() => navigator("/quiz")}
         className={`new ${location.pathname === "/quiz" ? "active" : ""}`}
       >
-        상성 퀴즈
+        {APP.CHANGE_BUTTON.COMPATIBILITY_QUIZ}
       </button>
     </div>
   );

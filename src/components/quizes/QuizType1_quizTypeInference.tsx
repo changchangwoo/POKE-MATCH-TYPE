@@ -9,6 +9,7 @@ import { Types } from "../../models/pokemonData";
 import defaultTypes from "../../datas/defaultTypes.json";
 import QuizAnswer from "./QuizAnswer";
 import { title } from "./QuizType0_damageEffectiveness";
+import { QUIZ } from "../../const/kor";
 
 interface QuizType1_Props {
   submitAnswer: (answerIdx: number, correctIdx: number, correctData : any) => void;
@@ -36,7 +37,6 @@ const QuizType1_quizTypeInference = ({
       randBlank = getRandomNum(quizType1_data[randQuiz].length);
     }
     const answer = quizType1_data[randQuiz][randBlank];
-    console.log("렌더");
     const answerSet = new Set<string>();
     const result: Types[] = [];
     result.push(answer);
@@ -69,8 +69,8 @@ const QuizType1_quizTypeInference = ({
             <TypeBadge no={100} quizMode={true}>
               ?
             </TypeBadge>
-          </div>{" "}
-          에 들어갈 타입은?
+          </div>
+          {QUIZ.MAIN_2.TITLE}
         </div>
       </h1>
       <div css={questionContainer}>

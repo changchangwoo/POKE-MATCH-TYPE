@@ -2,6 +2,7 @@ import { css } from "@emotion/react";
 import { IoSettingsSharp } from "react-icons/io5";
 import { useState } from "react";
 import SettingModal from "../modal/SettingModal";
+import { APP } from "../../const/kor";
 
 const Navigation = () => {
   const [isModal, setModal] = useState<boolean>(false);
@@ -9,7 +10,7 @@ const Navigation = () => {
   return (
     <>
       <div css={navigationStyle}>
-        <span>포켓몬 약점 계산기 </span>
+        <span>{APP.TITLE}</span>
         <button onClick={() => setModal(!isModal)}>
           <IoSettingsSharp />
         </button>

@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import abilities from "../../datas/pokemonAbilityData.json";
 import { Dispatch, SetStateAction } from "react";
 import { useLocation } from "react-router-dom";
+import { MATCH } from "../../const/kor";
 
 interface TypeCheckProps {
   selectedAbility: string;
@@ -25,7 +26,7 @@ const SelectAbility = ({
   return (
     <>
       <div css={SelectAbilityContainer}>
-        <h1>특성</h1>
+        <h1>{MATCH.SELECT_ABILITY.TITLE}</h1>
 
         <select value={selectedAbility} onChange={handleAbilityChange}>
           {abilities.map((ability) => (

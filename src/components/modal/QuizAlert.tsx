@@ -2,6 +2,7 @@ import { css } from "@emotion/react";
 import QuizCorrrectImg from "../../imgs/quiz_correct.jpg";
 import QuizIncorrectImg from "../../imgs/quiz_incorrect.jpg";
 import { useEffect, useState } from "react";
+import { QUIZ } from "../../const/kor";
 
 interface QuizAlertProps {
   quizType: "correct" | "incorrect";
@@ -16,8 +17,6 @@ const QuizAlert = ({ quizType, answerText }: QuizAlertProps) => {
     return () => clearTimeout(timer);
   }, []);
 
-  console.log(answerText)
-
   if (!visible) return null;
   return (
     <div css={QuizAlertContainer(quizType === "correct")}>
@@ -28,13 +27,11 @@ const QuizAlert = ({ quizType, answerText }: QuizAlertProps) => {
       </div>
       <div className="quizAlertText">
         {quizType === "correct" ? (
-          <span>정답입니다!</span>
+          <span>{QUIZ.ALERT.SUCCESS}</span>
         ) : (
-          <span>오답입니다..</span>
+          <span>{QUIZ.ALERT.FAILED}</span>
         )}
-        <span>
-          정답은 <b>{answerText}</b> 입니다.
-        </span>
+        <span>{QUIZ.ALERT.MESSAGE.replace("{answer}", answerText)}</span>
       </div>
     </div>
   );
@@ -101,7 +98,7 @@ const QuizAlertContainer = (isCorrect: boolean) => css`
     box-sizing: border-box;
 
     &::after {
-      content: "${isCorrect ? "정답" : "오답"}";
+      content: "${isCorrect ? QUIZ.ALERT.TYPE_1 : QUIZ.ALERT.TYPE_2}";
       position: absolute;
       top: -15px;
       left: 50%;

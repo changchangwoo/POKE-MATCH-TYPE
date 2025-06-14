@@ -5,6 +5,7 @@ import Footer from "../Footer";
 import AccordianList from "../commons/AccordianList";
 import Theme from "./Theme";
 import LanguageSetting from "./LanguageSetting";
+import { APP } from "../../const/kor";
 
 interface SettingModalProps {
   setModal: Dispatch<SetStateAction<boolean>>;
@@ -15,31 +16,28 @@ const SettingModal = ({ setModal }: SettingModalProps) => {
     <div css={ModalOverlay}>
       <div css={ModalContainer}>
         <div className="ModalHeader">
-          <span>설정</span>
+          <span>{APP.SETTING.TITLE}</span>
           <button onClick={() => setModal((prev) => !prev)}>
             <IoMdClose />
           </button>
         </div>
         <ul className="ModalContents">
           <div className="ModalDescription">
-            <h1>포켓몬스터 약점 계산기 -v02</h1>
-            <p>
-              본 서비스를 이용해주셔서 정말 감사합니다.
-              <br />
-              뭐라도 더 열심히 만들어보겠습니다.. 헤헤
-            </p>
+            <h1>{APP.SETTING.DESCRIPTION_TITLE}</h1>
+            <p>{APP.SETTING.DESCRIPTION_SUB_1}<br/>
+              {APP.SETTING.DESCRIPTION_SUB_2}</p>
             <Footer />
           </div>
-          <AccordianList title="테마 선택">
+          <AccordianList title={APP.THEME.TITLE}>
             <Theme />
           </AccordianList>
-          <AccordianList title="언어 선택">
+          <AccordianList title={APP.LANGUAGE.TITLE}>
             <LanguageSetting />
           </AccordianList>
-          <AccordianList title="저작권">
+          <AccordianList title={APP.COPYRIGHT.TITLE}>
             <span>컨텐츠 입니다.</span>
           </AccordianList>
-          <AccordianList title="피드백">
+          <AccordianList title={APP.FEEDBACK.TITLE}>
             <span>컨텐츠 입니다.</span>
           </AccordianList>
         </ul>
@@ -78,7 +76,7 @@ const ModalContainer = css`
       font-size: 13px;
       color: grey;
       padding: 20px;
-      max-width: 300px;
+      max-width: 400px;
       text-align: center;
     }
 

@@ -8,6 +8,7 @@ import {
 } from "./SearchStyles";
 import { SetURLSearchParams } from "react-router-dom";
 import { IPokeDex } from "../../models/pokemonData";
+import { MAIN } from "../../const/kor";
 
 interface PokemonNameType {
   no: number;
@@ -98,7 +99,7 @@ const Search = ({
           value={searchTerm}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
-          placeholder="매칭된 포켓몬을 입력해주세요"
+          placeholder={MAIN.SEARCH.PLACE_HOLDER}
         />
       </form>
       {suggestions.length > 0 && (

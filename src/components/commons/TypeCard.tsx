@@ -6,6 +6,7 @@ import { getKoreanType } from "../../utils/getKoreanType";
 import { v4 as uuidv4 } from "uuid";
 import { IDamageData } from "../../utils/getDetailType";
 import useFetchDetailType from "../../hooks/queries/useFetchDetailType";
+import { MAIN } from "../../const/kor";
 
 interface MatchCardProps {
   MatchTypes: Types[];
@@ -26,14 +27,14 @@ const TypeCard = ({ MatchTypes, selectedAbility }: MatchCardProps) => {
   } = useFetchDetailType(no, selectedAbility);
 
   if (!typeRelations) return;
-  if (isLoading) return <div>로딩 중...</div>;
+  if (isLoading) return <div>{MAIN.LOADING}</div>;
 
   if (typeRelations.length > 1) {
     return (
       <div css={typeCardContainer}>
         {typeRelations.map((type) => (
           <Fragment key={uuidv4()}>
-            <div css={title}>데미지 x {type.damage}</div>
+            <div css={title}>{MAIN.MATCH.TYPE_CARD_DAMAGE} x {type.damage}</div>
             <div css={typeSection}>
               {type.types.map((item) => (
                 <TypeBadge key={uuidv4()} no={item.no}>
