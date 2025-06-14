@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import TypeBadge from "../commons/TypeBadge";
-import { getKoreanType } from "../../utils/getKoreanType";
+import { getTranslateType } from "../../utils/getTranslateType";
 import { v4 as uuidv4 } from "uuid";
 import { imgBox, pokeTypes } from "../MatchCard";
 import { useGetDetailPokemonForQuiz } from "../../hooks/useGetDetailPokemonForQuiz";
@@ -20,7 +20,7 @@ const QuizType0_damageEffectiveness = ({
   progress,
   isNext
 }: QuizType0_Props) => {
-      const {text} = useContext(LanguageContext);
+      const {language, text} = useContext(LanguageContext);
   const { questionArr, quizNum, groupResult, matchDatas, answerIdx } =
     useGetDetailPokemonForQuiz(progress);
   if (!questionArr || quizNum === undefined || !groupResult || !matchDatas) {
@@ -40,7 +40,7 @@ const QuizType0_damageEffectiveness = ({
         {
         matchDatas.types.map((type) => (
           <TypeBadge key={uuidv4()} no={type.no}>
-            {getKoreanType(type.name)}
+            {getTranslateType(type.name, language.type)}
           </TypeBadge>
         ))}
       </div>

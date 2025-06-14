@@ -11,7 +11,7 @@ import QuizType2_typeDescription from "./QuizType2_typeDescription";
 import { getRandomNum } from "../../utils/getRandomNum";
 import StepProgress from "./StepProgress";
 import QuizAlert from "../modal/QuizAlert";
-import { getKoreanType } from "../../utils/getKoreanType";
+import { getTranslateType } from "../../utils/getTranslateType";
 import { matchCardContainer } from "../MatchCard";
 import { css } from "@emotion/react";
 import { LanguageContext } from "../../utils/getInitialData";
@@ -26,7 +26,7 @@ const QuizMain = ({
   progressArr,
   setProgressArr,
 }: QuizMainProps) => {
-  const { text } = useContext(LanguageContext);
+  const { language, text } = useContext(LanguageContext);
   const [progress, setProgress] = useState<number>(0);
   const [quizType, setQuizType] = useState<number>(getRandomNum(3));
   const [alertType, setAlertType] = useState<"correct" | "incorrect" | null>(
@@ -41,7 +41,7 @@ const QuizMain = ({
     correctData: any
   ) => {
     const isCorrect = answerIdx === correctIdx;
-    if (correctData.name) setAnswerText(getKoreanType(correctData.name));
+    if (correctData.name) setAnswerText(getTranslateType(correctData.name, language.type));
     else if (correctData.damage) setAnswerText(`${correctData.damage}배`);
 
     setAlertType(isCorrect ? "correct" : "incorrect");

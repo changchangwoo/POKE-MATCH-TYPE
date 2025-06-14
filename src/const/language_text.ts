@@ -158,6 +158,8 @@ export const LANGUAGE_TEXTS = {
     MATCH: {
       MATCH_CARD_TITLE: "Matched Pokémon",
       TYPE_CARD_DAMAGE: "Damage",
+      FORM : "Form",
+
     },
   },
   MATCH: {

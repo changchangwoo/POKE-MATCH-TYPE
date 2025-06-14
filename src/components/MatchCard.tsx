@@ -3,7 +3,7 @@ import { MatchInfo as IMatchInfo } from "../models/pokemonData";
 import { Dispatch, SetStateAction, useContext } from "react";
 import { SetURLSearchParams } from "react-router-dom";
 import TypeBadge from "./commons/TypeBadge";
-import { getKoreanType } from "../utils/getKoreanType";
+import { getTranslateType } from "../utils/getTranslateType";
 import SelectAbility from "./commons/SelectAbility";
 import { v4 as uuidv4 } from "uuid";
 import SpeciesButtons from "./SpeciesButtons";
@@ -26,7 +26,7 @@ const MatchCard = ({
   setSelectedAbility,
   setSearchParams,
 }: MatchCardProps) => {
-      const {text} = useContext(LanguageContext);
+      const {language, text} = useContext(LanguageContext);
   return (
     <div css={matchCardContainer}>
       <h1>{text.MAIN.MATCH.MATCH_CARD_TITLE}</h1>
@@ -41,7 +41,7 @@ const MatchCard = ({
       <div css={pokeTypes}>
         {MatchInfo.types.map((type) => (
           <TypeBadge key={uuidv4()} no={type.no}>
-            {getKoreanType(type.name)}
+            {getTranslateType(type.name, language.type)}
           </TypeBadge>
         ))}
       </div>

@@ -3,7 +3,7 @@ import { getRandomNum, getShuffleArr } from "../../utils/getRandomNum";
 import { css } from "@emotion/react";
 import TypeBadge from "../commons/TypeBadge";
 import { v4 as uuidv4 } from "uuid";
-import { getKoreanType } from "../../utils/getKoreanType";
+import { getTranslateType } from "../../utils/getTranslateType";
 import quizType1_data from "../../datas/quizType1Data.json";
 import { Types } from "../../models/pokemonData";
 import defaultTypes from "../../datas/defaultTypes.json";
@@ -23,7 +23,7 @@ const QuizType1_quizTypeInference = ({
   progress,
   isNext,
 }: QuizType1_Props) => {
-      const {text} = useContext(LanguageContext);
+      const {language, text} = useContext(LanguageContext);
   const [questionArr, setQuetstionArr] = useState<Types[]>([]);
   const [answerIdx, setAnswerIdx] = useState<number>(0);
   const [randQuiz, setRandQuiz] = useState<number>(0);
@@ -85,7 +85,7 @@ const QuizType1_quizTypeInference = ({
                 </TypeBadge>
               ) : (
                 <TypeBadge no={type.no} quizMode={true}>
-                  {getKoreanType(type.name)}
+                  {getTranslateType(type.name, language.type)}
                 </TypeBadge>
               )}
               <h2

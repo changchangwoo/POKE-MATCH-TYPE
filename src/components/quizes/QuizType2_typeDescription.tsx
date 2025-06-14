@@ -6,7 +6,7 @@ import { getDetailType, getGroupType } from "../../utils/getDetailType";
 import { Types } from "../../models/pokemonData";
 import { title } from "./QuizType0_damageEffectiveness";
 import { css } from "@emotion/react";
-import { getKoreanType } from "../../utils/getKoreanType";
+import { getTranslateType } from "../../utils/getTranslateType";
 import TypeBadge from "../commons/TypeBadge";
 import { submitBtn } from "./QuizAnswer";
 import { v4 as uuidv4 } from "uuid";
@@ -24,7 +24,7 @@ const QuizType2_typeDescription = ({
   progress,
   isNext,
 }: QuizType2_Props) => {
-      const {text} = useContext(LanguageContext);
+      const {language, text} = useContext(LanguageContext);
   const [attacker, setAttacker] = useState<Types>();
   const [defender, setDefender] = useState<Types[]>([]);
   const [questionArr, setQuestionArr] = useState<number[]>([]);
@@ -81,21 +81,21 @@ const QuizType2_typeDescription = ({
     <>
       <h1 css={title}>
         <div>
-          {getKoreanType(attacker.name)}{text.QUIZ.MAIN_3.TITLE_1}<br />
-            {getKoreanType(defender[0].name)}/{getKoreanType(defender[1].name)}{" "}
+          {getTranslateType(attacker.name, language.type)}{text.QUIZ.MAIN_3.TITLE_1}<br />
+            {getTranslateType(defender[0].name, language.type)}/{getTranslateType(defender[1].name, language.type)}{" "}
             {text.QUIZ.MAIN_3.TITLE_2}
         </div>
       </h1>
       <div css={quizContainer}>
         <div css={quizTypeContainer} data-name={text.QUIZ.MAIN_3.DATA_NAME_ATTACK}>
-          <TypeBadge no={attacker.no}>{getKoreanType(attacker.name)}</TypeBadge>
+          <TypeBadge no={attacker.no}>{getTranslateType(attacker.name, language.type)}</TypeBadge>
         </div>
         <div css={quizTypeContainer} data-name={text.QUIZ.MAIN_3.DATA_NAME_DEFENSE}>
           <>
             {defender.map((type, idx) => {
               return (
                 <TypeBadge no={type.no} key={idx}>
-                  {getKoreanType(type.name)}
+                  {getTranslateType(type.name, language.type)}
                 </TypeBadge>
               );
             })}

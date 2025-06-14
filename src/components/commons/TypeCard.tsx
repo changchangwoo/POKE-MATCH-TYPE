@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 import { Fragment, useContext } from "react";
 import { Types } from "../../models/pokemonData";
 import TypeBadge from "./TypeBadge";
-import { getKoreanType } from "../../utils/getKoreanType";
+import { getTranslateType } from "../../utils/getTranslateType";
 import { v4 as uuidv4 } from "uuid";
 import { IDamageData } from "../../utils/getDetailType";
 import useFetchDetailType from "../../hooks/queries/useFetchDetailType";
@@ -20,7 +20,7 @@ export interface ITypeRelations {
 }
 
 const TypeCard = ({ MatchTypes, selectedAbility }: MatchCardProps) => {
-    const { text } = useContext(LanguageContext);
+    const { language, text } = useContext(LanguageContext);
   
   const no = MatchTypes.map((type) => type.no);
   const {
@@ -41,7 +41,7 @@ const TypeCard = ({ MatchTypes, selectedAbility }: MatchCardProps) => {
             <div css={typeSection}>
               {type.types.map((item) => (
                 <TypeBadge key={uuidv4()} no={item.no}>
-                  {getKoreanType(item.name)}
+              {getTranslateType(item.name, language.type)}
                 </TypeBadge>
               ))}
             </div>

@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import { Dispatch, SetStateAction, useContext } from "react";
 import defaultTypesData from "../../src/datas/defaultTypes.json";
-import { getKoreanType } from "../utils/getKoreanType";
+import { getTranslateType } from "../utils/getTranslateType";
 import { v4 as uuidv4 } from "uuid";
 import { checkedTypes, Types } from "../models/pokemonData";
 import { LanguageContext } from "../utils/getInitialData";
@@ -20,7 +20,7 @@ const SelectType = ({
   answerIdx,
   isNext = false,
 }: SelectTypeProps) => {
-  const { text } = useContext(LanguageContext);
+  const { language, text } = useContext(LanguageContext);
   const selectedDatas = quizModeDatas || defaultTypesData;
   const handleSelect = (type: any, idx: number) => {
     const isAlreadyChecked = checkedType.some(
@@ -57,7 +57,7 @@ const SelectType = ({
               onClick={() => handleSelect(type, idx)}
               key={uuidv4()}
             >
-              {getKoreanType(type.name)}
+            {getTranslateType(type.name, language.type)}
             </button>
           );
         })}
