@@ -1,8 +1,8 @@
 import { css } from "@emotion/react";
 import QuizCorrrectImg from "../../imgs/quiz_correct.jpg";
 import QuizIncorrectImg from "../../imgs/quiz_incorrect.jpg";
-import { useEffect, useState } from "react";
-import { QUIZ } from "../../const/kor";
+import { useContext, useEffect, useState } from "react";
+import { LanguageContext } from "../../utils/getInitialData";
 
 interface QuizAlertProps {
   quizType: "correct" | "incorrect";
@@ -11,6 +11,7 @@ interface QuizAlertProps {
 
 const QuizAlert = ({ quizType, answerText }: QuizAlertProps) => {
   const [visible, setVisible] = useState(true);
+  const { text } = useContext(LanguageContext);
 
   useEffect(() => {
     const timer = setTimeout(() => setVisible(false), 3000);
@@ -27,11 +28,13 @@ const QuizAlert = ({ quizType, answerText }: QuizAlertProps) => {
       </div>
       <div className="quizAlertText">
         {quizType === "correct" ? (
-          <span>{QUIZ.ALERT.SUCCESS}</span>
+          <span>{text.QUIZ.ALERT.SUCCESS}</span>
         ) : (
-          <span>{QUIZ.ALERT.FAILED}</span>
+          <span>{text.QUIZ.ALERT.FAILED}</span>
         )}
-        <span>{QUIZ.ALERT.MESSAGE.replace("{answerText}", answerText)}</span>
+        <span>
+          {text.QUIZ.ALERT.MESSAGE.replace("{answerText}", answerText)}
+        </span>
       </div>
     </div>
   );
@@ -98,7 +101,7 @@ const QuizAlertContainer = (isCorrect: boolean) => css`
     box-sizing: border-box;
 
     &::after {
-      content: "${isCorrect ? QUIZ.ALERT.TYPE_1 : QUIZ.ALERT.TYPE_2}";
+      content: "${isCorrect ? "O" : "X"}";
       position: absolute;
       top: -15px;
       left: 50%;

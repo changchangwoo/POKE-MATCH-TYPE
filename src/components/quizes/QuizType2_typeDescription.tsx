@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { fetchDetailType } from "../../api/api";
 import { getRandomNum } from "../../utils/getRandomNum";
 import defaultTypes from "../../datas/defaultTypes.json";
@@ -10,7 +10,8 @@ import { getKoreanType } from "../../utils/getKoreanType";
 import TypeBadge from "../commons/TypeBadge";
 import { submitBtn } from "./QuizAnswer";
 import { v4 as uuidv4 } from "uuid";
-import { QUIZ } from "../../const/kor";
+import { LanguageContext } from "../../utils/getInitialData";
+
 
 interface QuizType2_Props {
   submitAnswer: (answerIdx: number, correctIdx: number, correctData : any) => void;
@@ -23,6 +24,7 @@ const QuizType2_typeDescription = ({
   progress,
   isNext,
 }: QuizType2_Props) => {
+      const {text} = useContext(LanguageContext);
   const [attacker, setAttacker] = useState<Types>();
   const [defender, setDefender] = useState<Types[]>([]);
   const [questionArr, setQuestionArr] = useState<number[]>([]);
@@ -79,16 +81,16 @@ const QuizType2_typeDescription = ({
     <>
       <h1 css={title}>
         <div>
-          {getKoreanType(attacker.name)}{QUIZ.MAIN_3.TITLE_1}<br />
+          {getKoreanType(attacker.name)}{text.QUIZ.MAIN_3.TITLE_1}<br />
             {getKoreanType(defender[0].name)}/{getKoreanType(defender[1].name)}{" "}
-            {QUIZ.MAIN_3.TITLE_2}
+            {text.QUIZ.MAIN_3.TITLE_2}
         </div>
       </h1>
       <div css={quizContainer}>
-        <div css={quizTypeContainer} data-name={QUIZ.MAIN_3.DATA_NAME_ATTACK}>
+        <div css={quizTypeContainer} data-name={text.QUIZ.MAIN_3.DATA_NAME_ATTACK}>
           <TypeBadge no={attacker.no}>{getKoreanType(attacker.name)}</TypeBadge>
         </div>
-        <div css={quizTypeContainer} data-name={QUIZ.MAIN_3.DATA_NAME_DEFENSE}>
+        <div css={quizTypeContainer} data-name={text.QUIZ.MAIN_3.DATA_NAME_DEFENSE}>
           <>
             {defender.map((type, idx) => {
               return (
@@ -110,7 +112,7 @@ const QuizType2_typeDescription = ({
               data-name={damage}
               css={answerButton(isChecked, (isNext && answerIdx === idx))}
             >
-              {damage}{QUIZ.MAIN_3.DESCRIPTION}
+              {damage}{text.QUIZ.MAIN_3.DESCRIPTION}
             </button>
           );
         })}
@@ -120,7 +122,7 @@ const QuizType2_typeDescription = ({
         onClick={() => submitAnswer(checkedAnswer.idx, answerIdx, answer)}
         css={submitBtn(isNext)}
       >
-        {QUIZ.SUBMIT}
+        {text.QUIZ.SUBMIT}
       </button>
     </>
   );

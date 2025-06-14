@@ -1,4 +1,4 @@
-import { useState, useEffect, ChangeEvent, FormEvent } from "react";
+import { useState, useEffect, ChangeEvent, FormEvent, useContext } from "react";
 import { FaSearch } from "react-icons/fa";
 import {
   searchContainer,
@@ -8,7 +8,8 @@ import {
 } from "./SearchStyles";
 import { SetURLSearchParams } from "react-router-dom";
 import { IPokeDex } from "../../models/pokemonData";
-import { MAIN } from "../../const/kor";
+import { LanguageContext } from "../../utils/getInitialData";
+
 
 interface PokemonNameType {
   no: number;
@@ -26,6 +27,8 @@ const Search = ({
   searchParams,
   pokemonNames,
 }: SearchProps) => {
+      const { text } = useContext(LanguageContext);
+  
   const newSearchParams = new URLSearchParams(searchParams);
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [suggestions, setSuggestions] = useState<PokemonNameType[]>([]);
@@ -99,7 +102,7 @@ const Search = ({
           value={searchTerm}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
-          placeholder={MAIN.SEARCH.PLACE_HOLDER}
+          placeholder={text.MAIN.SEARCH.PLACE_HOLDER}
         />
       </form>
       {suggestions.length > 0 && (

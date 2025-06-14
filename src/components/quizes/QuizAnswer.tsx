@@ -1,18 +1,28 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import SelectType from "../SelectType";
 import { checkedTypes, Types } from "../../models/pokemonData";
 import { css } from "@emotion/react";
-import { QUIZ } from "../../const/kor";
+import { LanguageContext } from "../../utils/getInitialData";
 
 interface QuizAnswerProps {
   questionArr: Types[];
-  submitAnswer: (answerIdx: number, correctIdx: number, correctData : any) => void;
+  submitAnswer: (
+    answerIdx: number,
+    correctIdx: number,
+    correctData: any
+  ) => void;
   isNext: boolean;
-  answerIdx : number;
+  answerIdx: number;
 }
 
-export const QuizAnswer = ({ questionArr, submitAnswer, isNext, answerIdx }: QuizAnswerProps) => {
-  const [checkedType, setCheckedType] = useState<(checkedTypes)[]>([]);
+export const QuizAnswer = ({
+  questionArr,
+  submitAnswer,
+  isNext,
+  answerIdx,
+}: QuizAnswerProps) => {
+  const [checkedType, setCheckedType] = useState<checkedTypes[]>([]);
+  const { text } = useContext(LanguageContext);
 
   return (
     <>
@@ -26,10 +36,12 @@ export const QuizAnswer = ({ questionArr, submitAnswer, isNext, answerIdx }: Qui
         />
       </div>
       <button
-        onClick={() => submitAnswer(checkedType[0].idx, answerIdx, questionArr[answerIdx])}
+        onClick={() =>
+          submitAnswer(checkedType[0].idx, answerIdx, questionArr[answerIdx])
+        }
         css={submitBtn(isNext)}
       >
-        {QUIZ.SUBMIT}
+        {text.QUIZ.SUBMIT}
       </button>
     </>
   );
@@ -39,7 +51,7 @@ export const AnswerContainer = css`
   width: 100%;
 `;
 
-export const submitBtn = (isNext : boolean) => css`
+export const submitBtn = (isNext: boolean) => css`
   width: 30%;
   height: 45px;
   border-radius: 8px;

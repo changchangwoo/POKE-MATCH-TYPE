@@ -1,24 +1,23 @@
 import { css } from "@emotion/react";
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useContext } from "react";
 import quizReadyImg from "../../imgs/quiz_ready.jpg";
-import { QUIZ } from "../../const/kor";
+import { LanguageContext } from "../../utils/getInitialData";
 
 interface QuizReadyProps {
   setSection: Dispatch<SetStateAction<number>>;
 }
 
 const QuizReady = ({ setSection }: QuizReadyProps) => {
+  const { text } = useContext(LanguageContext);
   return (
     <>
       <div css={quizReadyContainer}>
         <img src={quizReadyImg} css={quizReadyImgContainer}></img>
-        <span>
-          {QUIZ.READY.TITLE}
-        </span>
+        <span>{text.QUIZ.READY.TITLE}</span>
         <ul css={quizReadyText}>
-          <li>{QUIZ.READY.TITLE_SUB_1}</li>
-          <li>{QUIZ.READY.TITLE_SUB_2}</li>
-          <li>{QUIZ.READY.TITLE_SUB_3}</li>
+          <li>{text.QUIZ.READY.TITLE_SUB_1}</li>
+          <li>{text.QUIZ.READY.TITLE_SUB_2}</li>
+          <li>{text.QUIZ.READY.TITLE_SUB_3}</li>
         </ul>
         <button
           css={quizStartBtn}
@@ -26,7 +25,7 @@ const QuizReady = ({ setSection }: QuizReadyProps) => {
             setSection((prev) => prev + 1);
           }}
         >
-          {QUIZ.READY.BTN}
+          {text.QUIZ.READY.BTN}
         </button>
       </div>
     </>

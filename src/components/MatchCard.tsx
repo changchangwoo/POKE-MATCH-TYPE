@@ -1,13 +1,13 @@
 import { css } from "@emotion/react";
 import { MatchInfo as IMatchInfo } from "../models/pokemonData";
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useContext } from "react";
 import { SetURLSearchParams } from "react-router-dom";
 import TypeBadge from "./commons/TypeBadge";
 import { getKoreanType } from "../utils/getKoreanType";
 import SelectAbility from "./commons/SelectAbility";
 import { v4 as uuidv4 } from "uuid";
 import SpeciesButtons from "./SpeciesButtons";
-import { MAIN } from "../const/kor";
+import { LanguageContext } from "../utils/getInitialData";
 
 interface MatchCardProps {
   MatchInfo: IMatchInfo;
@@ -26,9 +26,10 @@ const MatchCard = ({
   setSelectedAbility,
   setSearchParams,
 }: MatchCardProps) => {
+      const {text} = useContext(LanguageContext);
   return (
     <div css={matchCardContainer}>
-      <h1>{MAIN.MATCH.MATCH_CARD_TITLE}</h1>
+      <h1>{text.MAIN.MATCH.MATCH_CARD_TITLE}</h1>
       <div css={imgBox(MatchInfo.types[0].no)}>
         <img
           src={MatchInfo.imgs}

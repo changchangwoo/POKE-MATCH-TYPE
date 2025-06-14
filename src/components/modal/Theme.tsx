@@ -1,24 +1,24 @@
 import { css } from "@emotion/react";
 import { useContext } from "react";
 import { TThemeData } from "../../models/settingData";
-import { ThemeContext } from "../../utils/getInitialData";
-import { APP } from "../../const/kor";
-
-const ThemeDatas: TThemeData[] = [
-  {
-    name: APP.THEME.DATA_SUN_STONE,
-    num: 1,
-    type: "light",
-  },
-  {
-    name: APP.THEME.DATA_MOON_STONE,
-    num: 2,
-    type: "dark",
-  },
-];
+import { LanguageContext, ThemeContext } from "../../utils/getInitialData";
 
 const Theme = () => {
   const { theme, setTheme } = useContext(ThemeContext);
+  const { text } = useContext(LanguageContext);
+
+  const ThemeDatas: TThemeData[] = [
+    {
+      name: text.APP.THEME.DATA_SUN_STONE,
+      num: 1,
+      type: "light",
+    },
+    {
+      name: text.APP.THEME.DATA_MOON_STONE,
+      num: 2,
+      type: "dark",
+    },
+  ];
 
   const handleThemeBtn = (
     e: React.MouseEvent<HTMLButtonElement>,

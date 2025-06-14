@@ -1,4 +1,10 @@
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import {
+  Dispatch,
+  SetStateAction,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import QuizType0_damageEffectiveness from "./QuizType0_damageEffectiveness";
 import QuizType1_quizTypeInference from "./QuizType1_quizTypeInference";
 import QuizType2_typeDescription from "./QuizType2_typeDescription";
@@ -8,7 +14,7 @@ import QuizAlert from "../modal/QuizAlert";
 import { getKoreanType } from "../../utils/getKoreanType";
 import { matchCardContainer } from "../MatchCard";
 import { css } from "@emotion/react";
-import { QUIZ } from "../../const/kor";
+import { LanguageContext } from "../../utils/getInitialData";
 
 interface QuizMainProps {
   setSection: Dispatch<SetStateAction<number>>;
@@ -20,6 +26,7 @@ const QuizMain = ({
   progressArr,
   setProgressArr,
 }: QuizMainProps) => {
+  const { text } = useContext(LanguageContext);
   const [progress, setProgress] = useState<number>(0);
   const [quizType, setQuizType] = useState<number>(getRandomNum(3));
   const [alertType, setAlertType] = useState<"correct" | "incorrect" | null>(
@@ -28,10 +35,14 @@ const QuizMain = ({
   const [answerText, setAnswerText] = useState<string>("");
   const [isNext, setIsNext] = useState<boolean>(false);
 
-  const submitAnswer = (answerIdx : number, correctIdx : number, correctData : any) => {
+  const submitAnswer = (
+    answerIdx: number,
+    correctIdx: number,
+    correctData: any
+  ) => {
     const isCorrect = answerIdx === correctIdx;
-    if(correctData.name) setAnswerText(getKoreanType(correctData.name))
-    else if (correctData.damage) setAnswerText(`${correctData.damage}배`)
+    if (correctData.name) setAnswerText(getKoreanType(correctData.name));
+    else if (correctData.damage) setAnswerText(`${correctData.damage}배`);
 
     setAlertType(isCorrect ? "correct" : "incorrect");
     setProgressArr(
@@ -98,12 +109,12 @@ const QuizMain = ({
                 />
               );
             default:
-              return <div>{QUIZ.ERROR}</div>;
+              return <div>{text.QUIZ.ERROR}</div>;
           }
         })()}
         {isNext && (
           <button css={nextButton} onClick={handleNextButton}>
-            {QUIZ.NEXT}
+            {text.QUIZ.NEXT}
           </button>
         )}
       </div>

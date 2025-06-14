@@ -2,13 +2,16 @@ import { quizReadyContainer } from "./QuizReady";
 import quizSuccessImg from "../../imgs/quiz_success.png";
 import quizFailedImg from "../../imgs/quiz_failed.jpg";
 import { QuizIntroImgContainer } from "./QuizIntro";
-import { QUIZ } from "../../const/kor";
+import { useContext } from "react";
+import { LanguageContext } from "../../utils/getInitialData";
 
 interface QuizEndProps {
   progressArr: { step: string }[];
 }
 
 const QuizEnd = ({ progressArr }: QuizEndProps) => {
+  const { text } = useContext(LanguageContext);
+
   const correctCount = progressArr.filter(
     (item) => item.step === "correct"
   ).length;
@@ -17,23 +20,24 @@ const QuizEnd = ({ progressArr }: QuizEndProps) => {
     } else if (correctCount >= 7) {
       return (
         <>
-          {QUIZ.END.SUCCESS_1}
+          {text.QUIZ.END.SUCCESS_1}
           <br />
-          {QUIZ.END.SUCCESS_2}
+          {text.QUIZ.END.SUCCESS_2}
         </>
       );
     } else
       return (
         <>
-          {QUIZ.END.FAILD_1}
+          {text.QUIZ.END.FAILD_1}
           <br />
-          {QUIZ.END.FAILD_2}
+          {text.QUIZ.END.FAILD_2}
         </>
       );
   };
   return (
     <div css={quizReadyContainer}>
-      <span>{QUIZ.END.SYSTEM.replace("{correctCount}", correctCount.toString())}
+      <span>
+        {text.QUIZ.END.SYSTEM.replace("{correctCount}", correctCount.toString())}
       </span>
 
       <img

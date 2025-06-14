@@ -1,5 +1,6 @@
 import { createContext, Dispatch, SetStateAction } from "react";
 import { TLanguageData, TThemeData } from "../models/settingData";
+import { LANGUAGE_TEXTS } from "../const/language_text";
 
 type TThemeContext = {
   theme: TThemeData;
@@ -9,6 +10,8 @@ type TThemeContext = {
 type TLanguageContext = {
   language: TLanguageData;
   setLanguage: Dispatch<SetStateAction<TLanguageData>>;
+  text : any;
+  setText: Dispatch<SetStateAction<any>>
 };
 
 export const ThemeContext = createContext<TThemeContext>({
@@ -22,10 +25,11 @@ export const ThemeContext = createContext<TThemeContext>({
 
 export const LanguageContext = createContext<TLanguageContext>({
   language: {
-    label: "한국어",
-    type: "kor",
+    type: "kor"
   },
   setLanguage: () => {},
+  text: LANGUAGE_TEXTS.kor,
+  setText: () => {}
 });
 
 export const getInitialTheme = (): TThemeData => {
@@ -49,20 +53,10 @@ export const getInitialTheme = (): TThemeData => {
   };
 };
 export const getInitialLanguage = (): TLanguageData => {
-  const sessionTheme = localStorage.getItem("language");
-  if (sessionTheme) {
-    try {
-      return JSON.parse(sessionTheme) as TLanguageData;
-    } catch {
-      return {
-        label: "한국어",
-        type: "kor",
-      };
-    }
+  const sessionLanguage = localStorage.getItem("language");
+  if (sessionLanguage) {
+    return {type : sessionLanguage};
+   
   }
-
-  return {
-    label: "한국어",
-    type: "kor",
-  };
+  return {type: "kor"}
 };

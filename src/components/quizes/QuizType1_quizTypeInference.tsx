@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { getRandomNum, getShuffleArr } from "../../utils/getRandomNum";
 import { css } from "@emotion/react";
 import TypeBadge from "../commons/TypeBadge";
@@ -9,7 +9,8 @@ import { Types } from "../../models/pokemonData";
 import defaultTypes from "../../datas/defaultTypes.json";
 import QuizAnswer from "./QuizAnswer";
 import { title } from "./QuizType0_damageEffectiveness";
-import { QUIZ } from "../../const/kor";
+import { LanguageContext } from "../../utils/getInitialData";
+
 
 interface QuizType1_Props {
   submitAnswer: (answerIdx: number, correctIdx: number, correctData : any) => void;
@@ -22,6 +23,7 @@ const QuizType1_quizTypeInference = ({
   progress,
   isNext,
 }: QuizType1_Props) => {
+      const {text} = useContext(LanguageContext);
   const [questionArr, setQuetstionArr] = useState<Types[]>([]);
   const [answerIdx, setAnswerIdx] = useState<number>(0);
   const [randQuiz, setRandQuiz] = useState<number>(0);
@@ -70,7 +72,7 @@ const QuizType1_quizTypeInference = ({
               ?
             </TypeBadge>
           </div>
-          {QUIZ.MAIN_2.TITLE}
+          {text.QUIZ.MAIN_2.TITLE}
         </div>
       </h1>
       <div css={questionContainer}>

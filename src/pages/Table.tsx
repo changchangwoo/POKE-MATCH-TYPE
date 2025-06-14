@@ -1,10 +1,12 @@
 import { css } from "@emotion/react";
-import { TABLE } from "../const/kor";
+import { useContext } from "react";
+import { LanguageContext } from "../utils/getInitialData";
 
 const Table = () => {
+  const { text } = useContext(LanguageContext);
   return (
     <div css={tableContainer}>
-      <h1>{TABLE.TITLE}</h1>
+      <h1>{text.TABLE.TITLE}</h1>
       <div className="tableContents">
         <h1>테이블 표 페이지</h1>
       </div>

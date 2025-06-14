@@ -1,12 +1,13 @@
 import { css } from "@emotion/react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import QuizReady from "../components/quizes/QuizReady";
 import QuizMain from "../components/quizes/QuizMain";
 import QuizEnd from "../components/quizes/QuizEnd";
 import QuizIntro from "../components/quizes/QuizIntro";
-import { QUIZ } from "../const/kor";
+import { LanguageContext } from "../utils/getInitialData";
 
 const Quiz = () => {
+  const { text } = useContext(LanguageContext);
   const [section, setSection] = useState<number>(0);
   const [progressArr, setProgressArr] = useState<{ step: string }[]>(() =>
     new Array(10).fill(null).map(() => ({ step: "none" }))
@@ -14,7 +15,7 @@ const Quiz = () => {
 
   return (
     <div css={quizContainer}>
-      <h1>{QUIZ.TITLE}</h1>
+      <h1>{text.QUIZ.TITLE}</h1>
       {(() => {
         switch (section) {
           case 0:
@@ -32,7 +33,7 @@ const Quiz = () => {
           case 3:
             return <QuizEnd progressArr={progressArr} />;
           default:
-            return <div>{QUIZ.ERROR}</div>;
+            return <div>{text.QUIZ.ERROR}</div>;
         }
       })()}
     </div>
@@ -107,3 +108,4 @@ export default Quiz;
   - x1
   - x0
 */
+ 

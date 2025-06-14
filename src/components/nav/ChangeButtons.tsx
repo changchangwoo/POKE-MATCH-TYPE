@@ -1,9 +1,11 @@
 import { css } from "@emotion/react";
+import { useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { APP } from "../../const/kor";
+import { LanguageContext } from "../../utils/getInitialData";
 
 const ChangeButtons = () => {
   const navigator = useNavigate();
+  const { text } = useContext(LanguageContext);
   const location = useLocation();
 
   return (
@@ -12,25 +14,25 @@ const ChangeButtons = () => {
         onClick={() => navigator("/")}
         className={location.pathname === "/" ? "active" : ""}
       >
-        {APP.CHANGE_BUTTON.COMPARE_POKEMON}
+        {text.APP.CHANGE_BUTTON.COMPARE_POKEMON}
       </button>
       <button
         onClick={() => navigator("/type")}
         className={location.pathname === "/type" ? "active" : ""}
       >
-        {APP.CHANGE_BUTTON.COMPARE_TYPE}
+        {text.APP.CHANGE_BUTTON.COMPARE_TYPE}
       </button>
       <button
         onClick={() => navigator("/table")}
         className={`new ${location.pathname === "/table" ? "active" : ""}`}
       >
-        {APP.CHANGE_BUTTON.COPATIBILITY_TABLE}
+        {text.APP.CHANGE_BUTTON.COPATIBILITY_TABLE}
       </button>
       <button
         onClick={() => navigator("/quiz")}
         className={`new ${location.pathname === "/quiz" ? "active" : ""}`}
       >
-        {APP.CHANGE_BUTTON.COMPATIBILITY_QUIZ}
+        {text.APP.CHANGE_BUTTON.COMPATIBILITY_QUIZ}
       </button>
     </div>
   );

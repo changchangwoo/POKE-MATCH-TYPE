@@ -1,9 +1,9 @@
 import { css } from "@emotion/react";
 import { v4 as uuidv4 } from "uuid";
 import abilities from "../../datas/pokemonAbilityData.json";
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useContext } from "react";
 import { useLocation } from "react-router-dom";
-import { MATCH } from "../../const/kor";
+import { LanguageContext } from "../../utils/getInitialData";
 
 interface TypeCheckProps {
   selectedAbility: string;
@@ -15,6 +15,7 @@ const SelectAbility = ({
   setSelectedAbility,
 }: TypeCheckProps) => {
   const location = useLocation();
+  const { text } = useContext(LanguageContext);
 
   const handleAbilityChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = event.target.value;
@@ -26,7 +27,7 @@ const SelectAbility = ({
   return (
     <>
       <div css={SelectAbilityContainer}>
-        <h1>{MATCH.SELECT_ABILITY.TITLE}</h1>
+        <h1>{text.MATCH.SELECT_ABILITY.TITLE}</h1>
 
         <select value={selectedAbility} onChange={handleAbilityChange}>
           {abilities.map((ability) => (

@@ -1,16 +1,19 @@
 import { css } from "@emotion/react";
 import { IoSettingsSharp } from "react-icons/io5";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import SettingModal from "../modal/SettingModal";
-import { APP } from "../../const/kor";
+import { LanguageContext } from "../../utils/getInitialData";
+
 
 const Navigation = () => {
   const [isModal, setModal] = useState<boolean>(false);
+      const {text} = useContext(LanguageContext);
+  
 
   return (
     <>
       <div css={navigationStyle}>
-        <span>{APP.TITLE}</span>
+        <span>{text.APP.TITLE}</span>
         <button onClick={() => setModal(!isModal)}>
           <IoSettingsSharp />
         </button>

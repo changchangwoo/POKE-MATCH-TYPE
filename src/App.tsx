@@ -9,35 +9,40 @@ import Table from "./pages/Table";
 import Quiz from "./pages/Quiz";
 import { globalStyles } from "./styles/globalStyles";
 import { useState } from "react";
-import { TLanguageData, TThemeData } from "./models/settingData";
+import { TLanguageData, TLanguageType, TThemeData } from "./models/settingData";
 import {
   getInitialLanguage,
   getInitialTheme,
   LanguageContext,
   ThemeContext,
 } from "./utils/getInitialData";
+import { LANGUAGE_TEXTS } from "./const/language_text";
 
 function App() {
-  const [theme, setTheme] = useState<TThemeData>(getInitialTheme);
-  const [language, setLanguage] = useState<TLanguageData>(getInitialLanguage);
+  const [theme, setTheme] = useState<TThemeData>(getInitialTheme());
+  const initialLanguage = getInitialLanguage();
+  const [language, setLanguage] = useState<TLanguageData>(initialLanguage);
+  const [text, setText] = useState(LANGUAGE_TEXTS[initialLanguage.type  as TLanguageType]);
 
   return (
     <>
       <Global styles={globalStyles(theme.type)} />
-      <ThemeContext.Provider value={{ theme, setTheme }}>
-        <LanguageContext.Provider value={{ language, setLanguage }}>
+      <LanguageContext.Provider
+        value={{ language, setLanguage, text, setText }}
+      >
+        <ThemeContext.Provider value={{ theme, setTheme }}>
           <Navigation />
-        </LanguageContext.Provider>
-      </ThemeContext.Provider>
-      <div css={Container}>
-        <ChangeButtons />
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/type" element={<Match />} />
-          <Route path="/table" element={<Table />} />
-          <Route path="/quiz" element={<Quiz />} />
-        </Routes>
-      </div>
+        </ThemeContext.Provider>
+        <div css={Container}>
+          <ChangeButtons />
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/type" element={<Match />} />
+            <Route path="/table" element={<Table />} />
+            <Route path="/quiz" element={<Quiz />} />
+          </Routes>
+        </div>
+      </LanguageContext.Provider>
     </>
   );
 }

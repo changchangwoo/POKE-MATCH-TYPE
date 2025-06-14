@@ -1,7 +1,8 @@
 import { SetURLSearchParams } from "react-router-dom";
 import { css } from "@emotion/react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { getSpeciesTranslate } from "../utils/getSpeciesTranslate";
+import { LanguageContext } from "../utils/getInitialData";
 
 interface SpeciesButtonsProps {
   varietiesData: any;
@@ -19,7 +20,7 @@ const SpeciesButtons = ({
   const [clickedBtn, setClickedBtn] = useState<number | null>(
     Number(varietiesIdx)
   );
-
+  const { text } = useContext(LanguageContext);
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const btnIdx = e.currentTarget.dataset.idx;
     const urlIdx = e.currentTarget.dataset.url?.match(/\/(\d+)\/$/)?.[1];
@@ -41,10 +42,10 @@ const SpeciesButtons = ({
 
   return (
     <>
-      <h1>폼</h1>
+      <h1>{text.MAIN.MATCH.FORM}</h1>
       <div css={speciesTypes}>
         {varietiesData.varieties.map((species: any, idx: number) => {
-          if (species.is_visible === false) return null; // is_visible이 false인 경우 버튼을 렌더링하지 않음
+          if (species.is_visible === false) return null;
           const label = getSpeciesTranslate(species.pokemon.name);
           if (!label) return null;
 

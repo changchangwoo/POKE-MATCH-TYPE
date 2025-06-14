@@ -1,27 +1,29 @@
 import { css } from "@emotion/react";
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useContext } from "react";
 import QuizIntroImg from "../../imgs/quiz_intro.jpg";
 import { quizReadyText } from "./QuizReady";
-import { QUIZ } from "../../const/kor";
+import { LanguageContext } from "../../utils/getInitialData";
+
 
 interface QuizIntroProps {
   setSection: Dispatch<SetStateAction<number>>;
 }
 
 const QuizIntro = ({ setSection }: QuizIntroProps) => {
+      const {text} = useContext(LanguageContext);
   return (
     <div css={QuizIntroContainer}>
       <img src={QuizIntroImg} css={QuizIntroImgContainer}></img>
       <div css={quizReadyText}>
         <span>
-          {QUIZ.INTRO.TITLE_1}
+          {text.QUIZ.INTRO.TITLE_1}
           <br />
-          {QUIZ.INTRO.TITLE_2}
+          {text.QUIZ.INTRO.TITLE_2}
           <br />
-          {QUIZ.INTRO.TITLE_3}
+          {text.QUIZ.INTRO.TITLE_3}
           <br />
           <br />
-          {QUIZ.INTRO.TITLE_4}
+          {text.QUIZ.INTRO.TITLE_4}
         </span>
       </div>
       <button
@@ -30,7 +32,7 @@ const QuizIntro = ({ setSection }: QuizIntroProps) => {
           setSection((prev) => prev + 1);
         }}
       >
-        {QUIZ.READY.BTN}
+        {text.QUIZ.READY.BTN}
       </button>
     </div>
   );
