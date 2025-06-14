@@ -93,5 +93,11 @@ export const QUIZ = {
         MESSAGE : "정답은 {answerText} 입니다.",
         TYPE_1 : "정답",
         TYPE_2 : "오답"
+    },
+    END : {
+        SUCCESS_1 : "피카츄가 무사히 숲 속을 빠져나왔어요!",
+        SUCCESS_2 : "트레이너로서 기본 소양이 출중한데요?",
+        FAILD_1 : "",
+        FAILD_2 : "",
     }
 }

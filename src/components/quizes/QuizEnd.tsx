@@ -2,6 +2,7 @@ import { quizReadyContainer } from "./QuizReady";
 import quizSuccessImg from "../../imgs/quiz_success.png";
 import quizFailedImg from "../../imgs/quiz_failed.jpg";
 import { QuizIntroImgContainer } from "./QuizIntro";
+import { QUIZ } from "../../const/kor";
 
 interface QuizEndProps {
   progressArr: { step: string }[];
@@ -16,25 +17,25 @@ const QuizEnd = ({ progressArr }: QuizEndProps) => {
     } else if (correctCount >= 7) {
       return (
         <>
-          피카츄가 무사히 숲 속을 빠져나왔어요!
+          {QUIZ.END.SUCCESS_1}
           <br />
-          트레이너로서 기본 소양이 출중한데요?
+          {QUIZ.END.SUCCESS_2}
         </>
       );
     } else
       return (
         <>
-          도통 숲 속을 빠져나올 길이 안보이네요.
+          {QUIZ.END.FAILD_1}
           <br />
-          다시 한번 피카츄를 도와볼까요?
+          {QUIZ.END.FAILD_2}
         </>
       );
   };
   return (
     <div css={quizReadyContainer}>
       <span>
-        총 10문제 중에서,
-        <br />✨ {correctCount}문제 맞추셨습니다!✨
+        {QUIZ.END.SYSTEM_1}
+      <br />✨ {QUIZ.END.SYSTEM_2.replace("{correctCount}", correctCount.toString())}
       </span>
 
       <img
