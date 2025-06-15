@@ -36,7 +36,6 @@ export const inputBox = css`
 export const suggestionsList = css`
   top: 50px;
   color: var(--text);
-  position: absolute;
   z-index: 100;
   width: 100%;
   border: 1px solid var(--border);
