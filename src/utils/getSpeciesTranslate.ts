@@ -1,15 +1,21 @@
-export const getSpeciesTranslate = (name: string): string => {
-  if (/-mega-x$/.test(name)) return "메가진화-X";
-  if (/-mega-y$/.test(name)) return "메가진화-Y";
-  if (/-mega$/.test(name)) return "메가진화";
-  if (/-gmax$/.test(name)) return "거다이맥스";
-  if (/-galar$/.test(name)) return "가라르";
-  if (/-alola$/.test(name)) return "알로라";
-  if (/-hisui$/.test(name)) return "히스이";
-  if (/-paldea$/.test(name)) return "팔데아";
-  if (/-hoenn$/.test(name)) return "호연";
-  if (/-sinnoh$/.test(name)) return "신오";
-  if (/-unova$/.test(name)) return "하나";
-  if (/-kalos$/.test(name)) return "칼로스";
-  return name;
+import { TLanguageType } from "../models/settingData";
+import speciesData from "../datas/speciesData.json";
+
+export const getSpeciesTranslate = (
+  name: string,
+  language: TLanguageType
+): string => {
+  if (/-mega-x$/.test(name)) return speciesData["megaX"][language]
+  if (/-mega-y$/.test(name)) return speciesData["megaY"][language]
+  if (/-mega$/.test(name)) return speciesData["mega"][language]
+  if (/-gmax$/.test(name)) return speciesData["gmax"][language]
+  if (/-galar$/.test(name)) return speciesData["galar"][language]
+  if (/-alola$/.test(name)) return speciesData["alola"][language]
+  if (/-hisui$/.test(name)) return speciesData["hisui"][language]
+  if (/-paldea$/.test(name)) return speciesData["paldea"][language]
+  if (/-hoenn$/.test(name)) return speciesData["hoenn"][language]
+  if (/-sinnoh$/.test(name)) return speciesData["sinnoh"][language]
+  if (/-unova$/.test(name)) return speciesData["unova"][language]
+  if (/-kalos$/.test(name)) return speciesData["kalos"][language]
+  return speciesData["default"][language];
 };

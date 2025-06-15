@@ -20,17 +20,22 @@ export const LANGUAGE_TEXTS = {
       },
       COPYRIGHT: {
         TITLE: "저작권",
-        DESCIRPTION_1: "본 서비스는 PokeAPI에서 제공하는 공개 API 데이터를 사용합니다.",
+        DESCIRPTION_1:
+          "본 서비스는 PokeAPI에서 제공하는 공개 API 데이터를 사용합니다.",
         DESCIRPTION_2:
           "포켓몬의 이름, 이미지, 타입 등 모든 포켓몬 관련 콘텐츠의 저작권은 Nintendo, Creatures Inc. ,GAME FREAK Inc.에 있습니다.",
         DESCIRPTION_3: "또한 개인 포트폴리오 및 학습 목적의 프로젝트입니다.",
       },
       FEEDBACK: {
         TITLE: "피드백",
-        DESCRIPTION_1: "안녕하세요! 제가 만든 서비스를 이용해주셔서 정말 감사합니다.",
-        DESCRIPTION_2: "훌륭한 여러분들과 본 서비스를 비롯하여 다양한 의견을 교류하고싶습니다.",
-        DESCRIPTION_3: "지금은 많이 부족하지만, 도움을 주신다면 멋진 서비스가 될 것입니다.",
-        DESCRIPTION_4: "어떤 내용이라도 남겨주신다면 확인 후 꼭 반영하겠습니다!!",
+        DESCRIPTION_1:
+          "안녕하세요! 제가 만든 서비스를 이용해주셔서 정말 감사합니다.",
+        DESCRIPTION_2:
+          "훌륭한 여러분들과 본 서비스를 비롯하여 다양한 의견을 교류하고싶습니다.",
+        DESCRIPTION_3:
+          "지금은 많이 부족하지만, 도움을 주신다면 멋진 서비스가 될 것입니다.",
+        DESCRIPTION_4:
+          "어떤 내용이라도 남겨주신다면 확인 후 꼭 반영하겠습니다!!",
         DESCRIPTION_5: "그럼 좋은하루 되세요!",
       },
       CHANGE_BUTTON: {
@@ -48,7 +53,7 @@ export const LANGUAGE_TEXTS = {
       MATCH: {
         MATCH_CARD_TITLE: "매치 포켓몬",
         TYPE_CARD_DAMAGE: "데미지",
-        FORM : "폼",
+        FORM: "폼",
       },
     },
     MATCH: {
@@ -110,116 +115,124 @@ export const LANGUAGE_TEXTS = {
       },
     },
   },
-  eng : {
-  APP: {
-    TITLE: "Pokémon Type Calculator",
-    SETTING: {
-      TITLE: "Settings",
-      DESCRIPTION_TITLE: "Pokémon Type Calculator -v02",
-      DESCRIPTION_SUB_1: "This service provides Pokémon type compatibility calculations.",
-      DESCRIPTION_SUB_2: "It is intended to support and assist beginner players.",
+  eng: {
+    APP: {
+      TITLE: "Pokémon Type Calculator",
+      SETTING: {
+        TITLE: "Settings",
+        DESCRIPTION_TITLE: "Pokémon Type Calculator -v02",
+        DESCRIPTION_SUB_1:
+          "This service provides Pokémon type compatibility calculations.",
+        DESCRIPTION_SUB_2:
+          "It is intended to support and assist beginner players.",
+      },
+      THEME: {
+        TITLE: "Theme",
+        DATA_SUN_STONE: "Sun Stone",
+        DATA_MOON_STONE: "Moon Stone",
+      },
+      LANGUAGE: {
+        TITLE: "Language",
+        DATA_KOR: "Korean",
+        DATA_ENG: "English",
+      },
+      COPYRIGHT: {
+        TITLE: "Copyright",
+        DESCIRPTION_1:
+          "This service uses data from the publicly available PokeAPI.",
+        DESCIRPTION_2:
+          "All content related to Pokémon including names, images, and types is copyrighted by Nintendo, Creatures Inc., and GAME FREAK Inc.",
+        DESCIRPTION_3:
+          "This is a personal project for portfolio and learning purposes.",
+      },
+      FEEDBACK: {
+        TITLE: "Feedback",
+        DESCRIPTION_1:
+          "Hello! Thank you so much for using the service I created.",
+        DESCRIPTION_2:
+          "I’d love to exchange thoughts and ideas with amazing users like you.",
+        DESCRIPTION_3:
+          "Although the service is still lacking, with your help it can become much better.",
+        DESCRIPTION_4:
+          "Any feedback you leave will be carefully reviewed and reflected!",
+        DESCRIPTION_5: "Wishing you a wonderful day!",
+      },
+      CHANGE_BUTTON: {
+        COMPARE_POKEMON: "Compare by Pokémon",
+        COMPARE_TYPE: "Compare by Type",
+        COPATIBILITY_TABLE: "Type Table",
+        COMPATIBILITY_QUIZ: "Type Quiz",
+      },
     },
-    THEME: {
-      TITLE: "Theme",
-      DATA_SUN_STONE: "Sun Stone",
-      DATA_MOON_STONE: "Moon Stone",
-    },
-    LANGUAGE: {
-      TITLE: "Language",
-      DATA_KOR: "Korean",
-      DATA_ENG: "English"
-    },
-    COPYRIGHT: {
-      TITLE: "Copyright",
-      DESCIRPTION_1: "This service uses data from the publicly available PokeAPI.",
-      DESCIRPTION_2: "All content related to Pokémon including names, images, and types is copyrighted by Nintendo, Creatures Inc., and GAME FREAK Inc.",
-      DESCIRPTION_3: "This is a personal project for portfolio and learning purposes.",
-    },
-    FEEDBACK: {
-      TITLE: "Feedback",
-      DESCRIPTION_1: "Hello! Thank you so much for using the service I created.",
-      DESCRIPTION_2: "I’d love to exchange thoughts and ideas with amazing users like you.",
-      DESCRIPTION_3: "Although the service is still lacking, with your help it can become much better.",
-      DESCRIPTION_4: "Any feedback you leave will be carefully reviewed and reflected!",
-      DESCRIPTION_5: "Wishing you a wonderful day!",
-    },
-    CHANGE_BUTTON: {
-      COMPARE_POKEMON: "Compare by Pokémon",
-      COMPARE_TYPE: "Compare by Type",
-      COPATIBILITY_TABLE: "Type Table",
-      COMPATIBILITY_QUIZ: "Type Quiz",
-    }
-  },
-  MAIN: {
-    LOADING: "Loading...",
-    SEARCH: {
-      PLACE_HOLDER: "Please enter the matched Pokémon",
+    MAIN: {
+      LOADING: "Loading...",
+      SEARCH: {
+        PLACE_HOLDER: "Please enter the matched Pokémon",
+      },
+      MATCH: {
+        MATCH_CARD_TITLE: "Matched Pokémon",
+        TYPE_CARD_DAMAGE: "Damage",
+        FORM: "Form",
+      },
     },
     MATCH: {
-      MATCH_CARD_TITLE: "Matched Pokémon",
-      TYPE_CARD_DAMAGE: "Damage",
-      FORM : "Form",
-
+      SELECT_TYPE: {
+        TITLE: "Select Type",
+      },
+      SELECT_ABILITY: {
+        TITLE: "Ability",
+      },
+    },
+    TABLE: {
+      TITLE: "Type Compatibility Chart",
+    },
+    QUIZ: {
+      TITLE: "Pokémon Type Quiz",
+      ERROR: "Error Page",
+      NEXT: "Next Question",
+      SUBMIT: "Submit Answer",
+      READY: {
+        TITLE:
+          "Test your understanding of type compatibility through this quiz!",
+        TITLE_SUB_1: "Consists of 10 questions.",
+        TITLE_SUB_2: "Progress will reset if you quit midway.",
+        TITLE_SUB_3: "Question types and content are random.",
+        BTN: "Start",
+      },
+      INTRO: {
+        TITLE_1: "Oh no! Pikachu is lost in the forest!",
+        TITLE_2: "Luckily,",
+        TITLE_3: "Solving this quiz will help Pikachu escape safely.",
+        TITLE_4: "Please help the lost Pikachu!",
+      },
+      MAIN_1: {
+        TITLE_1: "When you attack this Pokémon,",
+        TITLE_2: "which type deals double damage?",
+      },
+      MAIN_2: {
+        TITLE: "Which type goes in the blank?",
+      },
+      MAIN_3: {
+        TITLE_1: "When attacked by a",
+        TITLE_2: "type, how much damage does the",
+        DESCRIPTION: "Takes double damage.",
+        DATA_NAME_ATTACK: "Attack",
+        DATA_NAME_DEFENSE: "Defense",
+      },
+      ALERT: {
+        SUCCESS: "Correct!",
+        FAILED: "Incorrect...",
+        MESSAGE: "The correct answer is {answerText} type.",
+        TYPE_1: "Correct",
+        TYPE_2: "Incorrect",
+      },
+      END: {
+        SUCCESS_1: "Pikachu has safely escaped the forest!",
+        SUCCESS_2: "You’ve got excellent trainer skills!",
+        FAILD_1: "Pikachu is still lost in the forest.",
+        FAILD_2: "Would you like to try helping Pikachu again?",
+        SYSTEM: "You got {correctCount} out of 10 questions right! ✨",
+      },
     },
   },
-  MATCH: {
-    SELECT_TYPE: {
-      TITLE: "Select Type",
-    },
-    SELECT_ABILITY: {
-      TITLE: "Ability",
-    },
-  },
-  TABLE: {
-    TITLE: "Type Compatibility Chart"
-  },
-  QUIZ: {
-    TITLE: "Pokémon Type Quiz",
-    ERROR: "Error Page",
-    NEXT: "Next Question",
-    SUBMIT: "Submit Answer",
-    READY: {
-      TITLE: "Test your understanding of type compatibility through this quiz!",
-      TITLE_SUB_1: "Consists of 10 questions.",
-      TITLE_SUB_2: "Progress will reset if you quit midway.",
-      TITLE_SUB_3: "Question types and content are random.",
-      BTN: "Start",
-    },
-    INTRO: {
-      TITLE_1: "Oh no! Pikachu is lost in the forest!",
-      TITLE_2: "Luckily,",
-      TITLE_3: "Solving this quiz will help Pikachu escape safely.",
-      TITLE_4: "Please help the lost Pikachu!",
-    },
-    MAIN_1: {
-      TITLE_1: "When you attack this Pokémon,",
-      TITLE_2: "which type deals double damage?",
-    },
-    MAIN_2: {
-      TITLE: "Which type goes in the blank?",
-    },
-    MAIN_3: {
-      TITLE_1: "When attacked by a",
-      TITLE_2: "type, how much damage does the",
-      DESCRIPTION: "Takes double damage.",
-      DATA_NAME_ATTACK: "Attack",
-      DATA_NAME_DEFENSE: "Defense"
-    },
-    ALERT: {
-      SUCCESS: "Correct!",
-      FAILED: "Incorrect...",
-      MESSAGE: "The correct answer is {answerText} type.",
-      TYPE_1: "Correct",
-      TYPE_2: "Incorrect"
-    },
-    END: {
-      SUCCESS_1: "Pikachu has safely escaped the forest!",
-      SUCCESS_2: "You’ve got excellent trainer skills!",
-      FAILD_1: "Pikachu is still lost in the forest.",
-      FAILD_2: "Would you like to try helping Pikachu again?",
-      SYSTEM: "You got {correctCount} out of 10 questions right! ✨"
-    }
-  }
-  },
-
 };

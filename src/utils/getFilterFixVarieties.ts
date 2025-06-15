@@ -1,4 +1,5 @@
 import { IPokeDex } from "../models/pokemonData";
+import { TLanguageType } from "../models/settingData";
 import { getSpeciesTranslate } from "./getSpeciesTranslate";
 // pokeDEX 우선 분리
 
@@ -42,13 +43,14 @@ const FILTER_EXTRA = [
 export const getFilterFixVarieties = (
   pokeDexHash: Map<number, IPokeDex>,
   no: string,
-  fetchVarietiesData: any
+  fetchVarietiesData: any,
+  language : TLanguageType
 ) => {
   const pokeDexData = pokeDexHash.get(Number(no));
   const cloneFetchVarietiesData = JSON.parse(
     JSON.stringify(fetchVarietiesData)
   );
-  const filterfetchVarieties = getFilterfetchVarieties(cloneFetchVarietiesData);
+  const filterfetchVarieties = getFilterfetchVarieties(cloneFetchVarietiesData, language);
   const filterPokeDexVarieties = getFilterPokeDexVarieties(pokeDexData);
   const originData = fetchVarietiesData;
   // 두 배열의 개수가 일치하는 경우
@@ -77,7 +79,8 @@ const getFilterfetchVarieties = (
       name: string;
       url: string;
     };
-  }[]
+  }[],
+  language: TLanguageType
 ) => {
   const regexes = FILTER_VARIETIES.map((pattern) => new RegExp(pattern));
   const regexesExtra = FILTER_EXTRA.map((pattern) => new RegExp(pattern));
@@ -91,7 +94,7 @@ const getFilterfetchVarieties = (
       return;
     }
     if (!isMatch) {
-      const korName = getSpeciesTranslate(name);
+      const korName = getSpeciesTranslate(name, language);
       filterDatas.push({ idx, name: korName });
     }
   });

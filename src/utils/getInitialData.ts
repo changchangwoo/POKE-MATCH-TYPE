@@ -1,5 +1,5 @@
 import { createContext, Dispatch, SetStateAction } from "react";
-import { TLanguageData, TThemeData } from "../models/settingData";
+import { TLanguageData, TLanguageType, TThemeData } from "../models/settingData";
 import { LANGUAGE_TEXTS } from "../const/language_text";
 
 type TThemeContext = {
@@ -53,7 +53,7 @@ export const getInitialTheme = (): TThemeData => {
   };
 };
 export const getInitialLanguage = (): TLanguageData => {
-  const sessionLanguage = localStorage.getItem("language");
+  const sessionLanguage = localStorage.getItem("language") as TLanguageType;
   if (sessionLanguage) {
     return {type : sessionLanguage};
    

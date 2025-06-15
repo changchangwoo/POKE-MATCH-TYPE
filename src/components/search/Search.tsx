@@ -1,146 +1,144 @@
-  import { useState, useEffect, ChangeEvent, FormEvent, useContext } from "react";
-  import { FaSearch } from "react-icons/fa";
-  import {
-    searchContainer,
-    inputBox,
-    suggestionsList,
-    activeSuggestion,
-  } from "./SearchStyles";
-  import { SetURLSearchParams } from "react-router-dom";
-  import { IPokeDex } from "../../models/pokemonData";
-  import { LanguageContext } from "../../utils/getInitialData";
-  import { useRef } from "react";
+import { useState, useEffect, ChangeEvent, FormEvent, useContext } from "react";
+import { FaSearch } from "react-icons/fa";
+import {
+  searchContainer,
+  inputBox,
+  suggestionsList,
+  activeSuggestion,
+} from "./SearchStyles";
+import { SetURLSearchParams } from "react-router-dom";
+import { IPokeDex } from "../../models/pokemonData";
+import { LanguageContext } from "../../utils/getInitialData";
+import { useRef } from "react";
 
+interface PokemonNameType {
+  no: number;
+  name: string;
+}
 
-  interface PokemonNameType {
-    no: number;
-    name: string;
-  }
+interface SearchProps {
+  setSearchParams: SetURLSearchParams;
+  searchParams: URLSearchParams;
+  pokemonNames: IPokeDex[];
+}
 
-  interface SearchProps {
-    setSearchParams: SetURLSearchParams;
-    searchParams: URLSearchParams;
-    pokemonNames: IPokeDex[];
-  }
+const Search = ({
+  setSearchParams,
+  searchParams,
+  pokemonNames,
+}: SearchProps) => {
+  const { language, text } = useContext(LanguageContext);
+  const newSearchParams = new URLSearchParams(searchParams);
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [suggestions, setSuggestions] = useState<PokemonNameType[]>([]);
+  const [activeSuggestionIndex, setActiveSuggestionIndex] =
+    useState<number>(-1);
+  const searchRef = useRef<HTMLDivElement>(null);
 
-  const Search = ({
-    setSearchParams,
-    searchParams,
-    pokemonNames,
-  }: SearchProps) => {
-    const { language, text } = useContext(LanguageContext);
-    const newSearchParams = new URLSearchParams(searchParams);
-    const [searchTerm, setSearchTerm] = useState<string>("");
-    const [suggestions, setSuggestions] = useState<PokemonNameType[]>([]);
-    const [activeSuggestionIndex, setActiveSuggestionIndex] =
-      useState<number>(-1);
-    const searchRef = useRef<HTMLDivElement>(null);
-    
-    useEffect(() => {
-      const handleClickOutside = (event : MouseEvent) => {
-        if(
-          searchRef.current &&
-          !searchRef.current.contains(event.target as Node) 
-        ) {
-          setSuggestions([]);
-        }
-      }
-      document.addEventListener("mousedown", handleClickOutside);
-      return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-      }
-    }, [])
-
-    useEffect(() => {
-      if (searchTerm === "") {
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        searchRef.current &&
+        !searchRef.current.contains(event.target as Node)
+      ) {
         setSuggestions([]);
-      } else {
-        if (!pokemonNames) return;
-        const filteredSuggestions = pokemonNames
-          .filter((pokemon) => pokemon.name[language.type].startsWith(searchTerm))
-          .map((pokemon) => ({
-            no: pokemon.no,
-            name: pokemon.name[language.type],
-          }));
-
-        setSuggestions(filteredSuggestions);
-        setActiveSuggestionIndex(-1);
       }
-    }, [searchTerm]);
-
-    
-    const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-      setSearchTerm(event.target.value);
     };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
-    const handleSuggestionClick = (suggestion: PokemonNameType) => {
-      setSearchTerm(suggestion.name);
+  useEffect(() => {
+    if (searchTerm === "") {
       setSuggestions([]);
-      handleSubmit();
-    };
+    } else {
+      if (!pokemonNames) return;
+      const filteredSuggestions = pokemonNames
+        .filter((pokemon) => pokemon.name[language.type].startsWith(searchTerm))
+        .map((pokemon) => ({
+          no: pokemon.no,
+          name: pokemon.name[language.type],
+        }));
 
-    const handleSubmit = (event?: FormEvent) => {
-      if (event) {
-        event.preventDefault();
-      }
-      if (suggestions.length > 0 && suggestions[0].name === searchTerm) {
-        newSearchParams.set("no", String(suggestions[0].no));
-        newSearchParams.set("name", String(suggestions[0].name));
-        newSearchParams.set("varietiesIdx", "0");
-        setSearchParams(newSearchParams);
-        setSuggestions([]);
-      }
-    };
+      setSuggestions(filteredSuggestions);
+      setActiveSuggestionIndex(-1);
+    }
+  }, [searchTerm]);
 
-    const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-      if (suggestions.length > 0) {
-        if (event.key === "ArrowDown") {
-          setActiveSuggestionIndex((prevIndex) =>
-            prevIndex === suggestions.length - 1 ? 0 : prevIndex + 1
-          );
-        } else if (event.key === "ArrowUp") {
-          setActiveSuggestionIndex((prevIndex) =>
-            prevIndex === 0 ? suggestions.length - 1 : prevIndex - 1
-          );
-        } else if (event.key === "Enter") {
-          if (
-            activeSuggestionIndex >= 0 &&
-            activeSuggestionIndex < suggestions.length
-          ) {
-            handleSuggestionClick(suggestions[activeSuggestionIndex]);
-          }
-        }
-      }
-    };
-
-    return (
-      <div css={searchContainer} ref={searchRef}>
-        <form css={inputBox} onSubmit={handleSubmit}>
-          <FaSearch />
-          <input
-            value={searchTerm}
-            onChange={handleInputChange}
-            onKeyDown={handleKeyDown}
-            placeholder={text.MAIN.SEARCH.PLACE_HOLDER}
-          />
-        </form>
-        {suggestions.length > 0 && (
-          <ul css={suggestionsList} >
-            {suggestions.map((suggestion, index) => (
-              <li
-                key={index}
-                onClick={() => handleSuggestionClick(suggestion)}
-                css={
-                  index === activeSuggestionIndex ? activeSuggestion : undefined
-                }
-              >
-                {suggestion.name}
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-    );
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(event.target.value);
   };
 
-  export default Search;
+  const handleSuggestionClick = (suggestion: PokemonNameType) => {
+    setSearchTerm(suggestion.name);
+    setSuggestions([]);
+    handleSubmit();
+  };
+
+  const handleSubmit = (event?: FormEvent) => {
+    if (event) {
+      event.preventDefault();
+    }
+    if (suggestions.length > 0 && suggestions[0].name === searchTerm) {
+      newSearchParams.set("no", String(suggestions[0].no));
+      newSearchParams.set("name", String(suggestions[0].name));
+      newSearchParams.set("varietiesIdx", "0");
+      setSearchParams(newSearchParams);
+      setSuggestions([]);
+    }
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (suggestions.length > 0) {
+      if (event.key === "ArrowDown") {
+        setActiveSuggestionIndex((prevIndex) =>
+          prevIndex === suggestions.length - 1 ? 0 : prevIndex + 1
+        );
+      } else if (event.key === "ArrowUp") {
+        setActiveSuggestionIndex((prevIndex) =>
+          prevIndex === 0 ? suggestions.length - 1 : prevIndex - 1
+        );
+      } else if (event.key === "Enter") {
+        if (
+          activeSuggestionIndex >= 0 &&
+          activeSuggestionIndex < suggestions.length
+        ) {
+          handleSuggestionClick(suggestions[activeSuggestionIndex]);
+        }
+      }
+    }
+  };
+
+  return (
+    <div css={searchContainer} ref={searchRef}>
+      <form css={inputBox} onSubmit={handleSubmit}>
+        <FaSearch />
+        <input
+          value={searchTerm}
+          onChange={handleInputChange}
+          onKeyDown={handleKeyDown}
+          placeholder={text.MAIN.SEARCH.PLACE_HOLDER}
+        />
+      </form>
+      {suggestions.length > 0 && (
+        <ul css={suggestionsList}>
+          {suggestions.map((suggestion, index) => (
+            <li
+              key={index}
+              onClick={() => handleSuggestionClick(suggestion)}
+              css={
+                index === activeSuggestionIndex ? activeSuggestion : undefined
+              }
+            >
+              {suggestion.name}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+};
+
+export default Search;

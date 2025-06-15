@@ -15,7 +15,7 @@ const SelectAbility = ({
   setSelectedAbility,
 }: TypeCheckProps) => {
   const location = useLocation();
-  const { text } = useContext(LanguageContext);
+  const { language, text } = useContext(LanguageContext);
 
   const handleAbilityChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = event.target.value;
@@ -32,7 +32,7 @@ const SelectAbility = ({
         <select value={selectedAbility} onChange={handleAbilityChange}>
           {abilities.map((ability) => (
             <option key={uuidv4()} value={ability.value}>
-              {ability.label}
+              {ability.label[language.type]}
             </option>
           ))}
         </select>

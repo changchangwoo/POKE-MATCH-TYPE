@@ -20,10 +20,11 @@ const SpeciesButtons = ({
   const [clickedBtn, setClickedBtn] = useState<number | null>(
     Number(varietiesIdx)
   );
-  const { text } = useContext(LanguageContext);
+  const { language, text } = useContext(LanguageContext);
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const btnIdx = e.currentTarget.dataset.idx;
     const urlIdx = e.currentTarget.dataset.url?.match(/\/(\d+)\/$/)?.[1];
+    console.log(urlIdx)
     if (btnIdx !== undefined) {
       setClickedBtn(Number(btnIdx));
       setSearchParams({
@@ -46,7 +47,7 @@ const SpeciesButtons = ({
       <div css={speciesTypes}>
         {varietiesData.varieties.map((species: any, idx: number) => {
           if (species.is_visible === false) return null;
-          const label = getSpeciesTranslate(species.pokemon.name);
+          const label = getSpeciesTranslate(species.pokemon.name, language.type)
           if (!label) return null;
 
           return (

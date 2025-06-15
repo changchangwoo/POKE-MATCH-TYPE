@@ -14,7 +14,7 @@ interface MatchMainProps {
 }
 
 const MatchMain = ({ setSearchParams, searchParams }: MatchMainProps) => {
-  const { language } = useContext(LanguageContext);
+  const { language, text } = useContext(LanguageContext);
   const [selectedAbility, setSelectedAbility] = useState("");
 
   const pokedexHash = new Map();
@@ -36,7 +36,7 @@ const MatchMain = ({ setSearchParams, searchParams }: MatchMainProps) => {
     data: varietiesData,
     error: varietiesDataError,
     isLoading: varietiesDataLoading,
-  } = useFetchPokemonVarieties(no || "", name || "", pokedexHash);
+  } = useFetchPokemonVarieties(no || "", name || "", pokedexHash, language.type);
 
   useEffect(() => {
     const getSessionMatchDatas = localStorage.getItem(
@@ -68,7 +68,7 @@ const MatchMain = ({ setSearchParams, searchParams }: MatchMainProps) => {
     <div css={MainContainer}>
       {matchInfo && (
         <MatchCard
-          MatchInfo={matchInfo}
+        MatchInfo={matchInfo}
           selectedAbility={selectedAbility}
           setSelectedAbility={setSelectedAbility}
           setSearchParams={setSearchParams}

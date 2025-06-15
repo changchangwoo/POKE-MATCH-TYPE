@@ -1,23 +1,59 @@
 [
-  { "value": "", "label": "없음" },
-  { "value": "dry_skin", "label": "건조피부" },
-  { "value": "heatproof", "label": "내열" },
-  { "value": "well_baked_body", "label": "노릇노릇바디" },
-  { "value": "delta_stream", "label": "델타스트림" },
-  { "value": "thick_fat", "label": "두꺼운지방" },
-  { "value": "storm_drain", "label": "마중물" },
-  { "value": "fluffy", "label": "복슬복슬" },
-  { "value": "levitate", "label": "부유" },
-  { "value": "wonder_guard", "label": "불가사의부적" },
-  { "value": "water_bubble", "label": "수포" },
-  { "value": "water_absorb", "label": "저수" },
-  { "value": "motor_drive", "label": "전기엔진" },
-  { "value": "purifying_salt", "label": "정화의소금" },
-  { "value": "volt_absorb", "label": "축전" },
-  { "value": "flash_fire", "label": "타오르는불꽃" },
-  { "value": "tera_shell", "label": "테라셸" },
-  { "value": "lightning_rod", "label": "피뢰침" },
-  { "value": "earth_eater", "label": "흙먹기" },
-  { "value": "sap_sipper", "label": "흡수" },
-  { "value": "filter", "label": "Filter" }
+  { "value": "", "label": { "kor": "없음", "eng": "none" } },
+  { "value": "dry_skin", "label": { "kor": "건조피부", "eng": "dry_skin" } },
+  { "value": "heatproof", "label": { "kor": "내열", "eng": "heatproof" } },
+  {
+    "value": "well_baked_body",
+    "label": { "kor": "노릇노릇바디", "eng": "well_baked_body" }
+  },
+  {
+    "value": "delta_stream",
+    "label": { "kor": "델타스트림", "eng": "delta_stream" }
+  },
+  {
+    "value": "thick_fat",
+    "label": { "kor": "두꺼운지방", "eng": "thick_fat" }
+  },
+  {
+    "value": "storm_drain",
+    "label": { "kor": "마중물", "eng": "storm_drain" }
+  },
+  { "value": "fluffy", "label": { "kor": "복슬복슬", "eng": "fluffy" } },
+  { "value": "levitate", "label": { "kor": "부유", "eng": "levitate" } },
+  {
+    "value": "wonder_guard",
+    "label": { "kor": "불가사의부적", "eng": "wonder_guard" }
+  },
+  {
+    "value": "water_bubble",
+    "label": { "kor": "수포", "eng": "water_bubble" }
+  },
+  {
+    "value": "water_absorb",
+    "label": { "kor": "저수", "eng": "water_absorb" }
+  },
+  {
+    "value": "motor_drive",
+    "label": { "kor": "전기엔진", "eng": "motor_drive" }
+  },
+  {
+    "value": "purifying_salt",
+    "label": { "kor": "정화의소금", "eng": "purifying_salt" }
+  },
+  { "value": "volt_absorb", "label": { "kor": "축전", "eng": "volt_absorb" } },
+  {
+    "value": "flash_fire",
+    "label": { "kor": "타오르는불꽃", "eng": "flash_fire" }
+  },
+  { "value": "tera_shell", "label": { "kor": "테라셸", "eng": "tera_shell" } },
+  {
+    "value": "lightning_rod",
+    "label": { "kor": "피뢰침", "eng": "lightning_rod" }
+  },
+  {
+    "value": "earth_eater",
+    "label": { "kor": "흙먹기", "eng": "earth_eater" }
+  },
+  { "value": "sap_sipper", "label": { "kor": "흡수", "eng": "sap_sipper" } },
+  { "value": "filter", "label": { "kor": "Filter", "eng": "filter" } }
 ]

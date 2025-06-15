@@ -1,0 +1,15 @@
+{
+  "megaX": { "kor": "메가진화-X", "eng": "mega-x" },
+  "megaY": { "kor": "메가진화-Y", "eng": "mega-y" },
+  "mega": { "kor": "메가진화", "eng": "mega" },
+  "gmax": { "kor": "거다이맥스", "eng": "gmax" },
+  "galar": { "kor": "가라르", "eng": "galar" },
+  "alola": { "kor": "알로라", "eng": "alola" },
+  "hisui": { "kor": "히스이", "eng": "hisui" },
+  "paldea": { "kor": "팔데아", "eng": "paldea" },
+  "hoenn": { "kor": "호연", "eng": "hoenn" },
+  "sinnoh": { "kor": "신오", "eng": "sinnoh" },
+  "unova": { "kor": "하나", "eng": "unova" },
+  "kalos": { "kor": "칼로스", "eng": "kalos" },
+  "default" : {"kor" : "기본형", "eng" : "default"}
+}
