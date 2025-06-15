@@ -1,3 +1,5 @@
+import { TLanguageType } from "./settingData";
+
 export interface MatchInfo {
   no: number;
   name: string;
@@ -18,7 +20,7 @@ export interface checkedTypes {
 
 export interface IPokeDex {
   no: number;
-  name: string;
+  name : Record<TLanguageType, string>;
   varieties: string[];
 }
 

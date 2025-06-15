@@ -1,17 +1,12 @@
 import { css } from "@emotion/react";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import TypeCard from "./commons/TypeCard";
 import MatchCard from "./MatchCard";
 import useFetchDetailPokemon from "../hooks/queries/useFetchDetailPokemon";
 import useFetchPokemonVarieties from "../hooks/queries/useFetchPokemonVarieties";
 import pokedex from "../datas/pokedex.json";
 import { SetURLSearchParams } from "react-router-dom";
-
-const pokedexHash = new Map();
-pokedex.map((item) => {
-  item.name = item.name.replace(/\s*\(.*?\)\s*/g, "").trim();
-  pokedexHash.set(item.no, item);
-});
+import { LanguageContext } from "../utils/getInitialData";
 
 interface MatchMainProps {
   setSearchParams: SetURLSearchParams;
@@ -19,7 +14,14 @@ interface MatchMainProps {
 }
 
 const MatchMain = ({ setSearchParams, searchParams }: MatchMainProps) => {
+  const { language } = useContext(LanguageContext);
   const [selectedAbility, setSelectedAbility] = useState("");
+
+  const pokedexHash = new Map();
+  pokedex.map((item) => {
+  item.name.kor = item.name.kor.replace(/\s*\(.*?\)\s*/g, "").trim();
+  pokedexHash.set(item.no, item);
+});
 
   const name = searchParams.get("name");
   const no = searchParams.get("no");

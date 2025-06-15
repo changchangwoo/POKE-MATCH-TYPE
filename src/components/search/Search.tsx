@@ -10,7 +10,6 @@ import { SetURLSearchParams } from "react-router-dom";
 import { IPokeDex } from "../../models/pokemonData";
 import { LanguageContext } from "../../utils/getInitialData";
 
-
 interface PokemonNameType {
   no: number;
   name: string;
@@ -27,8 +26,7 @@ const Search = ({
   searchParams,
   pokemonNames,
 }: SearchProps) => {
-      const { text } = useContext(LanguageContext);
-  
+  const { language, text } = useContext(LanguageContext);
   const newSearchParams = new URLSearchParams(searchParams);
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [suggestions, setSuggestions] = useState<PokemonNameType[]>([]);
@@ -40,10 +38,12 @@ const Search = ({
       setSuggestions([]);
     } else {
       if (!pokemonNames) return;
-
-      const filteredSuggestions = pokemonNames.filter((pokemon) => {
-        return pokemon.name.startsWith(searchTerm);
-      });
+      const filteredSuggestions = pokemonNames
+        .filter((pokemon) => pokemon.name[language.type].startsWith(searchTerm))
+        .map((pokemon) => ({
+          no: pokemon.no,
+          name: pokemon.name[language.type],
+        }));
 
       setSuggestions(filteredSuggestions);
       setActiveSuggestionIndex(-1);
