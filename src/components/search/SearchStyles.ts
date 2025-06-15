@@ -45,12 +45,8 @@ export const suggestionsList = css`
   list-style-type: none;
   padding: 0;
   margin-top: 10px;
-  overflow-y: hidden;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  overflow-y: auto;
+  max-height: 700px;
 
   li {
     padding: 10px;
@@ -58,10 +54,12 @@ export const suggestionsList = css`
 
     &:hover {
       background-color: #f0f0f0;
+      color: var(--black);
     }
   }
 `;
 
 export const activeSuggestion = css`
   background-color: #f0f0f0;
+  color: var(--black);
 `;

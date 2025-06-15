@@ -44,6 +44,8 @@ export const globalStyles = (themeMode: keyof typeof themes = "light") => {
       --text: ${theme.text}; // 디폴트(블랙)
       --border: ${theme.border}; // border 배경
       --highlight: ${theme.highlight};
+      --black: #000000;
+      --white: #E0E0E0;
       --grey: grey;
 
       /* 타입 */
