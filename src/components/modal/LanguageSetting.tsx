@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState } from "react";
 import { SelectAbilityContainer } from "../commons/SelectAbility";
 import { LanguageContext } from "../../utils/getInitialData";
 import { LANGUAGE_TEXTS } from "../../const/language_text";

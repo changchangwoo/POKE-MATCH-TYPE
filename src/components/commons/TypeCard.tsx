@@ -28,6 +28,8 @@ const TypeCard = ({ MatchTypes, selectedAbility }: MatchCardProps) => {
     isLoading,
     isError,
   } = useFetchDetailType(no, selectedAbility);
+  
+  console.log(isError)
 
   if (!typeRelations) return;
   if (isLoading) return <div>{text.MAIN.LOADING}</div>;
