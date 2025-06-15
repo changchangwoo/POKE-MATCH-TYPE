@@ -21,7 +21,7 @@ export interface checkedTypes {
 export interface IPokeDex {
   no: number;
   name : Record<TLanguageType, string>;
-  varieties: string[];
+  varieties: Record<TLanguageType, string[]>;
 }
 
 export type TSpecises =

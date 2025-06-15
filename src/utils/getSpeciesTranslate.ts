@@ -17,5 +17,6 @@ export const getSpeciesTranslate = (
   if (/-sinnoh$/.test(name)) return speciesData["sinnoh"][language]
   if (/-unova$/.test(name)) return speciesData["unova"][language]
   if (/-kalos$/.test(name)) return speciesData["kalos"][language]
-  return speciesData["default"][language];
+  if (name === "default") return speciesData["default"][language]
+  return name; 
 };

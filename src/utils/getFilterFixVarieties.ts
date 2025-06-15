@@ -4,6 +4,7 @@ import { getSpeciesTranslate } from "./getSpeciesTranslate";
 // pokeDEX 우선 분리
 
 const FILTER_POKEDEX_KOR = [
+  // 고정 폼
   "메가진화",
   "거다이맥스",
   "가라르",
@@ -30,6 +31,7 @@ const FILTER_VARIETIES = [
 ];
 
 const FILTER_EXTRA = [
+  // 예외 폼 제거
   "pikachu-galar",
   "pikachu-alola",
   "pikachu-hisui",
@@ -38,30 +40,54 @@ const FILTER_EXTRA = [
   "pikachu-sinnoh",
   "pikachu-unova",
   "pikachu-kalos",
+  "zygarde-10-power-construct",
+  "zygarde-50-power-construct",
+  "zygarde-10",
+];
+
+const FILTER_EXCEPTION = [
+  // 예외 폼 추가 (이름에 고정 폼이 있는 경우)
+  "tauros-paldea",
+  "darmanitan-galar-zen",
+  "darmanitan-galar-standard",
+  "toxtricity-amped-gmax",
+  "toxtricity-low-key-gmax",
+  "urshifu-single-strike-gmax",
+  "urshifu-rapid-strike-gmax"
 ];
 
 export const getFilterFixVarieties = (
   pokeDexHash: Map<number, IPokeDex>,
   no: string,
   fetchVarietiesData: any,
-  language : TLanguageType
+  language: TLanguageType
 ) => {
   const pokeDexData = pokeDexHash.get(Number(no));
   const cloneFetchVarietiesData = JSON.parse(
     JSON.stringify(fetchVarietiesData)
   );
-  const filterfetchVarieties = getFilterfetchVarieties(cloneFetchVarietiesData, language);
-  const filterPokeDexVarieties = getFilterPokeDexVarieties(pokeDexData);
+  const filterfetchVarieties = getFilterfetchVarieties(
+    cloneFetchVarietiesData,
+    language
+  );
+  const filterPokeDexVarieties = getFilterPokeDexVarieties(
+    language,
+    pokeDexData
+  );
   const originData = fetchVarietiesData;
   // 두 배열의 개수가 일치하는 경우
   if (filterPokeDexVarieties?.length === filterfetchVarieties.length - 1) {
-    filterPokeDexVarieties.forEach((el) => {
+    filterPokeDexVarieties?.forEach((el) => {
+      if (el.name === "더미") {
+        originData[el.idx].is_visible = false;
+        return;
+      }
       originData[el.idx].pokemon.name = el.name;
     });
   }
   // 두 배열의 개수가 일치하지 않는 경우 (= 모든 폼 데이터 삭제)
   // 값이 지워지면서 배열 값이 변경 => idx의 의미가 없어짐
-  // 값은 전부 그대로 유지하면서 isVisibile만 false로 변경경
+  // 값은 전부 그대로 유지하면서 isVisibile만 false로 변경
   else {
     filterfetchVarieties.forEach((el) => {
       if (el.idx === 0) return; // 기본형은 제외
@@ -84,32 +110,42 @@ const getFilterfetchVarieties = (
 ) => {
   const regexes = FILTER_VARIETIES.map((pattern) => new RegExp(pattern));
   const regexesExtra = FILTER_EXTRA.map((pattern) => new RegExp(pattern));
+  const regexesException = FILTER_EXCEPTION.map(
+    (pattern) => new RegExp(pattern)
+  );
   const filterDatas: { idx: number; name: string }[] = [];
   fetchVarietiesData.forEach((element, idx) => {
     const name = element.pokemon.name;
+    const isException = regexesException.some((regex) => regex.test(name));
     const isMatch = regexes.some((regex) => regex.test(name));
     const isExtra = regexesExtra.some((regex) => regex.test(name));
+
     if (isExtra) {
       filterDatas.push({ idx, name: "removeData" });
       return;
     }
-    if (!isMatch) {
-      const korName = getSpeciesTranslate(name, language);
-      filterDatas.push({ idx, name: korName });
+    if (!isMatch || isException) {
+      const translateName = getSpeciesTranslate(name, language);
+      filterDatas.push({ idx, name: translateName });
     }
   });
 
   return filterDatas;
 };
 
-const getFilterPokeDexVarieties = (pokeDexData?: IPokeDex) => {
+const getFilterPokeDexVarieties = (
+  language: TLanguageType,
+  pokeDexData?: IPokeDex
+) => {
+  
   if (!pokeDexData) return;
-  const pokeDexVarieties = pokeDexData.varieties;
+  const pokeDexVarieties = pokeDexData.varieties[language];
   const filterDatas: { idx: number; name: string }[] = [];
   if (pokeDexVarieties.length <= 0) return filterDatas;
   pokeDexVarieties.forEach((pokedexData, idx) => {
     const match = pokedexData.match(/\(([^)]+)\)/);
     const matchResult = match ? match[1] : null;
+    
     if (matchResult && !FILTER_POKEDEX_KOR.includes(matchResult)) {
       filterDatas.push({ idx: idx + 1, name: matchResult });
     }

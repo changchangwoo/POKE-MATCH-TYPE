@@ -5,7 +5,7 @@
       "kor": "이상해씨",
       "eng": "bulbasaur"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 2,
@@ -13,7 +13,7 @@
       "kor": "이상해풀",
       "eng": "ivysaur"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 3,
@@ -21,7 +21,7 @@
       "kor": "이상해꽃",
       "eng": "venusaur"
     },
-    "varieties": ["메가이상해꽃", "이상해꽃(거다이맥스)"]
+    "varieties": { "kor": ["메가이상해꽃", "이상해꽃(거다이맥스)"], "eng": [] }
   },
   {
     "no": 4,
@@ -29,7 +29,7 @@
       "kor": "파이리",
       "eng": "charmander"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 5,
@@ -37,7 +37,7 @@
       "kor": "리자드",
       "eng": "charmeleon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 6,
@@ -45,7 +45,10 @@
       "kor": "리자몽",
       "eng": "charizard"
     },
-    "varieties": ["메가리자몽X", "메가리자몽Y", "리자몽(거다이맥스)"]
+    "varieties": {
+      "kor": ["메가리자몽X", "메가리자몽Y", "리자몽(거다이맥스)"],
+      "eng": []
+    }
   },
   {
     "no": 7,
@@ -53,7 +56,7 @@
       "kor": "꼬부기",
       "eng": "squirtle"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 8,
@@ -61,7 +64,7 @@
       "kor": "어니부기",
       "eng": "wartortle"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 9,
@@ -69,7 +72,7 @@
       "kor": "거북왕",
       "eng": "blastoise"
     },
-    "varieties": ["메가거북왕", "거북왕(거다이맥스)"]
+    "varieties": { "kor": ["메가거북왕", "거북왕(거다이맥스)"], "eng": [] }
   },
   {
     "no": 10,
@@ -77,7 +80,7 @@
       "kor": "캐터피",
       "eng": "caterpie"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 11,
@@ -85,7 +88,7 @@
       "kor": "단데기",
       "eng": "metapod"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 12,
@@ -93,7 +96,7 @@
       "kor": "버터플",
       "eng": "butterfree"
     },
-    "varieties": ["버터플(거다이맥스)"]
+    "varieties": { "kor": ["버터플(거다이맥스)"], "eng": [] }
   },
   {
     "no": 13,
@@ -101,7 +104,7 @@
       "kor": "뿔충이",
       "eng": "weedle"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 14,
@@ -109,7 +112,7 @@
       "kor": "딱충이",
       "eng": "kakuna"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 15,
@@ -117,7 +120,7 @@
       "kor": "독침붕",
       "eng": "beedrill"
     },
-    "varieties": ["메가독침붕"]
+    "varieties": { "kor": ["메가독침붕"], "eng": [] }
   },
   {
     "no": 16,
@@ -125,7 +128,7 @@
       "kor": "구구",
       "eng": "pidgey"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 17,
@@ -133,7 +136,7 @@
       "kor": "피죤",
       "eng": "pidgeotto"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 18,
@@ -141,7 +144,7 @@
       "kor": "피죤투",
       "eng": "pidgeot"
     },
-    "varieties": ["메가피죤투"]
+    "varieties": { "kor": ["메가피죤투"], "eng": [] }
   },
   {
     "no": 19,
@@ -149,7 +152,7 @@
       "kor": "꼬렛",
       "eng": "rattata"
     },
-    "varieties": ["꼬렛(알로라)"]
+    "varieties": { "kor": ["꼬렛(알로라)"], "eng": [] }
   },
   {
     "no": 20,
@@ -157,7 +160,7 @@
       "kor": "레트라",
       "eng": "raticate"
     },
-    "varieties": ["레트라(알로라)"]
+    "varieties": { "kor": ["레트라(알로라)"], "eng": [] }
   },
   {
     "no": 21,
@@ -165,7 +168,7 @@
       "kor": "깨비참",
       "eng": "spearow"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 22,
@@ -173,7 +176,7 @@
       "kor": "깨비드릴조",
       "eng": "fearow"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 23,
@@ -181,7 +184,7 @@
       "kor": "아보",
       "eng": "ekans"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 24,
@@ -189,7 +192,7 @@
       "kor": "아보크",
       "eng": "arbok"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 25,
@@ -197,7 +200,7 @@
       "kor": "피카츄",
       "eng": "pikachu"
     },
-    "varieties": ["피카츄(거다이맥스)"]
+    "varieties": { "kor": ["피카츄(거다이맥스)"], "eng": [] }
   },
   {
     "no": 26,
@@ -205,7 +208,7 @@
       "kor": "라이츄",
       "eng": "raichu"
     },
-    "varieties": ["라이츄(알로라)"]
+    "varieties": { "kor": ["라이츄(알로라)"], "eng": [] }
   },
   {
     "no": 27,
@@ -213,7 +216,7 @@
       "kor": "모래두지",
       "eng": "sandshrew"
     },
-    "varieties": ["모래두지(알로라)"]
+    "varieties": { "kor": ["모래두지(알로라)"], "eng": [] }
   },
   {
     "no": 28,
@@ -221,7 +224,7 @@
       "kor": "고지",
       "eng": "sandslash"
     },
-    "varieties": ["고지(알로라)"]
+    "varieties": { "kor": ["고지(알로라)"], "eng": [] }
   },
   {
     "no": 29,
@@ -229,7 +232,7 @@
       "kor": "니드런♀",
       "eng": "nidoran-f"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 30,
@@ -237,7 +240,7 @@
       "kor": "니드리나",
       "eng": "nidorina"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 31,
@@ -245,7 +248,7 @@
       "kor": "니드퀸",
       "eng": "nidoqueen"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 32,
@@ -253,7 +256,7 @@
       "kor": "니드런♂",
       "eng": "nidoran-m"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 33,
@@ -261,7 +264,7 @@
       "kor": "니드리노",
       "eng": "nidorino"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 34,
@@ -269,7 +272,7 @@
       "kor": "니드킹",
       "eng": "nidoking"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 35,
@@ -277,7 +280,7 @@
       "kor": "삐삐",
       "eng": "clefairy"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 36,
@@ -285,7 +288,7 @@
       "kor": "픽시",
       "eng": "clefable"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 37,
@@ -293,7 +296,7 @@
       "kor": "식스테일",
       "eng": "vulpix"
     },
-    "varieties": ["식스테일(알로라)"]
+    "varieties": { "kor": ["식스테일(알로라)"], "eng": [] }
   },
   {
     "no": 38,
@@ -301,7 +304,7 @@
       "kor": "나인테일",
       "eng": "ninetales"
     },
-    "varieties": ["나인테일(알로라)"]
+    "varieties": { "kor": ["나인테일(알로라)"], "eng": [] }
   },
   {
     "no": 39,
@@ -309,7 +312,7 @@
       "kor": "푸린",
       "eng": "jigglypuff"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 40,
@@ -317,7 +320,7 @@
       "kor": "푸크린",
       "eng": "wigglytuff"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 41,
@@ -325,7 +328,7 @@
       "kor": "주뱃",
       "eng": "zubat"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 42,
@@ -333,7 +336,7 @@
       "kor": "골뱃",
       "eng": "golbat"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 43,
@@ -341,7 +344,7 @@
       "kor": "뚜벅쵸",
       "eng": "oddish"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 44,
@@ -349,7 +352,7 @@
       "kor": "냄새꼬",
       "eng": "gloom"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 45,
@@ -357,7 +360,7 @@
       "kor": "라플레시아",
       "eng": "vileplume"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 46,
@@ -365,7 +368,7 @@
       "kor": "파라스",
       "eng": "paras"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 47,
@@ -373,7 +376,7 @@
       "kor": "파라섹트",
       "eng": "parasect"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 48,
@@ -381,7 +384,7 @@
       "kor": "콘팡",
       "eng": "venonat"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 49,
@@ -389,7 +392,7 @@
       "kor": "도나리",
       "eng": "venomoth"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 50,
@@ -397,7 +400,7 @@
       "kor": "디그다",
       "eng": "diglett"
     },
-    "varieties": ["디그다(알로라)"]
+    "varieties": { "kor": ["디그다(알로라)"], "eng": [] }
   },
   {
     "no": 51,
@@ -405,7 +408,7 @@
       "kor": "닥트리오",
       "eng": "dugtrio"
     },
-    "varieties": ["닥트리오(알로라)"]
+    "varieties": { "kor": ["닥트리오(알로라)"], "eng": [] }
   },
   {
     "no": 52,
@@ -413,7 +416,10 @@
       "kor": "나옹",
       "eng": "meowth"
     },
-    "varieties": ["나옹(알로라)", "나옹(가라르)", "나옹(거다이맥스)"]
+    "varieties": {
+      "kor": ["나옹(알로라)", "나옹(가라르)", "나옹(거다이맥스)"],
+      "eng": []
+    }
   },
   {
     "no": 53,
@@ -421,7 +427,7 @@
       "kor": "페르시온",
       "eng": "persian"
     },
-    "varieties": ["페르시온(알로라)"]
+    "varieties": { "kor": ["페르시온(알로라)"], "eng": [] }
   },
   {
     "no": 54,
@@ -429,7 +435,7 @@
       "kor": "고라파덕",
       "eng": "psyduck"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 55,
@@ -437,7 +443,7 @@
       "kor": "골덕",
       "eng": "golduck"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 56,
@@ -445,7 +451,7 @@
       "kor": "망키",
       "eng": "mankey"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 57,
@@ -453,7 +459,7 @@
       "kor": "성원숭",
       "eng": "primeape"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 58,
@@ -461,7 +467,7 @@
       "kor": "가디",
       "eng": "growlithe"
     },
-    "varieties": ["가디(히스이)"]
+    "varieties": { "kor": ["가디(히스이)"], "eng": [] }
   },
   {
     "no": 59,
@@ -469,7 +475,7 @@
       "kor": "윈디",
       "eng": "arcanine"
     },
-    "varieties": ["윈디(히스이)"]
+    "varieties": { "kor": ["윈디(히스이)"], "eng": [] }
   },
   {
     "no": 60,
@@ -477,7 +483,7 @@
       "kor": "발챙이",
       "eng": "poliwag"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 61,
@@ -485,7 +491,7 @@
       "kor": "슈륙챙이",
       "eng": "poliwhirl"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 62,
@@ -493,7 +499,7 @@
       "kor": "강챙이",
       "eng": "poliwrath"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 63,
@@ -501,7 +507,7 @@
       "kor": "캐이시",
       "eng": "abra"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 64,
@@ -509,7 +515,7 @@
       "kor": "윤겔라",
       "eng": "kadabra"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 65,
@@ -517,7 +523,7 @@
       "kor": "후딘",
       "eng": "alakazam"
     },
-    "varieties": ["메가후딘"]
+    "varieties": { "kor": ["메가후딘"], "eng": [] }
   },
   {
     "no": 66,
@@ -525,7 +531,7 @@
       "kor": "알통몬",
       "eng": "machop"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 67,
@@ -533,7 +539,7 @@
       "kor": "근육몬",
       "eng": "machoke"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 68,
@@ -541,7 +547,7 @@
       "kor": "괴력몬",
       "eng": "machamp"
     },
-    "varieties": ["괴력몬(거다이맥스)"]
+    "varieties": { "kor": ["괴력몬(거다이맥스)"], "eng": [] }
   },
   {
     "no": 69,
@@ -549,7 +555,7 @@
       "kor": "모다피",
       "eng": "bellsprout"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 70,
@@ -557,7 +563,7 @@
       "kor": "우츠동",
       "eng": "weepinbell"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 71,
@@ -565,7 +571,7 @@
       "kor": "우츠보트",
       "eng": "victreebel"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 72,
@@ -573,7 +579,7 @@
       "kor": "왕눈해",
       "eng": "tentacool"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 73,
@@ -581,7 +587,7 @@
       "kor": "독파리",
       "eng": "tentacruel"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 74,
@@ -589,7 +595,7 @@
       "kor": "꼬마돌",
       "eng": "geodude"
     },
-    "varieties": ["꼬마돌(알로라)"]
+    "varieties": { "kor": ["꼬마돌(알로라)"], "eng": [] }
   },
   {
     "no": 75,
@@ -597,7 +603,7 @@
       "kor": "데구리",
       "eng": "graveler"
     },
-    "varieties": ["데구리(알로라)"]
+    "varieties": { "kor": ["데구리(알로라)"], "eng": [] }
   },
   {
     "no": 76,
@@ -605,7 +611,7 @@
       "kor": "딱구리",
       "eng": "golem"
     },
-    "varieties": ["딱구리(알로라)"]
+    "varieties": { "kor": ["딱구리(알로라)"], "eng": [] }
   },
   {
     "no": 77,
@@ -613,7 +619,7 @@
       "kor": "포니타",
       "eng": "ponyta"
     },
-    "varieties": ["포니타(가라르)"]
+    "varieties": { "kor": ["포니타(가라르)"], "eng": [] }
   },
   {
     "no": 78,
@@ -621,7 +627,7 @@
       "kor": "날쌩마",
       "eng": "rapidash"
     },
-    "varieties": ["날쌩마(가라르)"]
+    "varieties": { "kor": ["날쌩마(가라르)"], "eng": [] }
   },
   {
     "no": 79,
@@ -629,7 +635,7 @@
       "kor": "야돈",
       "eng": "slowpoke"
     },
-    "varieties": ["야돈(가라르)"]
+    "varieties": { "kor": ["야돈(가라르)"], "eng": [] }
   },
   {
     "no": 80,
@@ -637,7 +643,7 @@
       "kor": "야도란",
       "eng": "slowbro"
     },
-    "varieties": ["야도란(가라르)", "메가야도란"]
+    "varieties": { "kor": ["야도란(가라르)", "메가야도란"], "eng": [] }
   },
   {
     "no": 81,
@@ -645,7 +651,7 @@
       "kor": "코일",
       "eng": "magnemite"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 82,
@@ -653,7 +659,7 @@
       "kor": "레어코일",
       "eng": "magneton"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 83,
@@ -661,7 +667,7 @@
       "kor": "파오리",
       "eng": "farfetchd"
     },
-    "varieties": ["파오리(가라르)"]
+    "varieties": { "kor": ["파오리(가라르)"], "eng": [] }
   },
   {
     "no": 84,
@@ -669,7 +675,7 @@
       "kor": "두두",
       "eng": "doduo"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 85,
@@ -677,7 +683,7 @@
       "kor": "두트리오",
       "eng": "dodrio"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 86,
@@ -685,7 +691,7 @@
       "kor": "쥬쥬",
       "eng": "seel"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 87,
@@ -693,7 +699,7 @@
       "kor": "쥬레곤",
       "eng": "dewgong"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 88,
@@ -701,7 +707,7 @@
       "kor": "질퍽이",
       "eng": "grimer"
     },
-    "varieties": ["질퍽이(알로라)"]
+    "varieties": { "kor": ["질퍽이(알로라)"], "eng": [] }
   },
   {
     "no": 89,
@@ -709,7 +715,7 @@
       "kor": "질뻐기",
       "eng": "muk"
     },
-    "varieties": ["질뻐기(알로라)"]
+    "varieties": { "kor": ["질뻐기(알로라)"], "eng": [] }
   },
   {
     "no": 90,
@@ -717,7 +723,7 @@
       "kor": "셀러",
       "eng": "shellder"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 91,
@@ -725,7 +731,7 @@
       "kor": "파르셀",
       "eng": "cloyster"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 92,
@@ -733,7 +739,7 @@
       "kor": "고오스",
       "eng": "gastly"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 93,
@@ -741,7 +747,7 @@
       "kor": "고우스트",
       "eng": "haunter"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 94,
@@ -749,7 +755,7 @@
       "kor": "팬텀",
       "eng": "gengar"
     },
-    "varieties": ["메가팬텀", "팬텀(거다이맥스)"]
+    "varieties": { "kor": ["메가팬텀", "팬텀(거다이맥스)"], "eng": [] }
   },
   {
     "no": 95,
@@ -757,7 +763,7 @@
       "kor": "롱스톤",
       "eng": "onix"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 96,
@@ -765,7 +771,7 @@
       "kor": "슬리프",
       "eng": "drowzee"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 97,
@@ -773,7 +779,7 @@
       "kor": "슬리퍼",
       "eng": "hypno"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 98,
@@ -781,7 +787,7 @@
       "kor": "크랩",
       "eng": "krabby"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 99,
@@ -789,7 +795,7 @@
       "kor": "킹크랩",
       "eng": "kingler"
     },
-    "varieties": ["킹크랩(거다이맥스)"]
+    "varieties": { "kor": ["킹크랩(거다이맥스)"], "eng": [] }
   },
   {
     "no": 100,
@@ -797,7 +803,7 @@
       "kor": "찌리리공",
       "eng": "voltorb"
     },
-    "varieties": ["찌리리공(히스이)"]
+    "varieties": { "kor": ["찌리리공(히스이)"], "eng": [] }
   },
   {
     "no": 101,
@@ -805,7 +811,7 @@
       "kor": "붐볼",
       "eng": "electrode"
     },
-    "varieties": ["붐볼(히스이)"]
+    "varieties": { "kor": ["붐볼(히스이)"], "eng": [] }
   },
   {
     "no": 102,
@@ -813,7 +819,7 @@
       "kor": "아라리",
       "eng": "exeggcute"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 103,
@@ -821,7 +827,7 @@
       "kor": "나시",
       "eng": "exeggutor"
     },
-    "varieties": ["나시(알로라)"]
+    "varieties": { "kor": ["나시(알로라)"], "eng": [] }
   },
   {
     "no": 104,
@@ -829,7 +835,7 @@
       "kor": "탕구리",
       "eng": "cubone"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 105,
@@ -837,7 +843,7 @@
       "kor": "텅구리",
       "eng": "marowak"
     },
-    "varieties": ["텅구리(알로라)"]
+    "varieties": { "kor": ["텅구리(알로라)"], "eng": [] }
   },
   {
     "no": 106,
@@ -845,7 +851,7 @@
       "kor": "시라소몬",
       "eng": "hitmonlee"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 107,
@@ -853,7 +859,7 @@
       "kor": "홍수몬",
       "eng": "hitmonchan"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 108,
@@ -861,7 +867,7 @@
       "kor": "내루미",
       "eng": "lickitung"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 109,
@@ -869,7 +875,7 @@
       "kor": "또가스",
       "eng": "koffing"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 110,
@@ -877,7 +883,7 @@
       "kor": "또도가스",
       "eng": "weezing"
     },
-    "varieties": ["또도가스(가라르)"]
+    "varieties": { "kor": ["또도가스(가라르)"], "eng": [] }
   },
   {
     "no": 111,
@@ -885,7 +891,7 @@
       "kor": "뿔카노",
       "eng": "rhyhorn"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 112,
@@ -893,7 +899,7 @@
       "kor": "코뿌리",
       "eng": "rhydon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 113,
@@ -901,7 +907,7 @@
       "kor": "럭키",
       "eng": "chansey"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 114,
@@ -909,7 +915,7 @@
       "kor": "덩쿠리",
       "eng": "tangela"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 115,
@@ -917,7 +923,7 @@
       "kor": "캥카",
       "eng": "kangaskhan"
     },
-    "varieties": ["메가캥카"]
+    "varieties": { "kor": ["메가캥카"], "eng": [] }
   },
   {
     "no": 116,
@@ -925,7 +931,7 @@
       "kor": "쏘드라",
       "eng": "horsea"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 117,
@@ -933,7 +939,7 @@
       "kor": "시드라",
       "eng": "seadra"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 118,
@@ -941,7 +947,7 @@
       "kor": "콘치",
       "eng": "goldeen"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 119,
@@ -949,7 +955,7 @@
       "kor": "왕콘치",
       "eng": "seaking"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 120,
@@ -957,7 +963,7 @@
       "kor": "별가사리",
       "eng": "staryu"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 121,
@@ -965,7 +971,7 @@
       "kor": "아쿠스타",
       "eng": "starmie"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 122,
@@ -973,7 +979,7 @@
       "kor": "마임맨",
       "eng": "mr-mime"
     },
-    "varieties": ["마임맨(가라르)"]
+    "varieties": { "kor": ["마임맨(가라르)"], "eng": [] }
   },
   {
     "no": 123,
@@ -981,7 +987,7 @@
       "kor": "스라크",
       "eng": "scyther"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 124,
@@ -989,7 +995,7 @@
       "kor": "루주라",
       "eng": "jynx"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 125,
@@ -997,7 +1003,7 @@
       "kor": "에레브",
       "eng": "electabuzz"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 126,
@@ -1005,7 +1011,7 @@
       "kor": "마그마",
       "eng": "magmar"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 127,
@@ -1013,7 +1019,7 @@
       "kor": "쁘사이저",
       "eng": "pinsir"
     },
-    "varieties": ["메가쁘사이저"]
+    "varieties": { "kor": ["메가쁘사이저"], "eng": [] }
   },
   {
     "no": 128,
@@ -1021,11 +1027,18 @@
       "kor": "켄타로스",
       "eng": "tauros"
     },
-    "varieties": [
-      "켄타로스(팔데아/컴뱃종)",
-      "켄타로스(팔데아/블레이즈종)",
-      "켄타로스(팔데아/워터종)"
-    ]
+    "varieties": {
+      "kor": [
+        "켄타로스(팔데아/컴뱃종)",
+        "켄타로스(팔데아/블레이즈종)",
+        "켄타로스(팔데아/워터종)"
+      ],
+      "eng": [
+        "Tauros (Paldean Combat Breed)",
+        "Tauros (Paldean Blaze Breed)",
+        "Tauros (Paldean Aqua Breed)"
+      ]
+    }
   },
   {
     "no": 129,
@@ -1033,7 +1046,7 @@
       "kor": "잉어킹",
       "eng": "magikarp"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 130,
@@ -1041,7 +1054,7 @@
       "kor": "갸라도스",
       "eng": "gyarados"
     },
-    "varieties": ["메가갸라도스"]
+    "varieties": { "kor": ["메가갸라도스"], "eng": [] }
   },
   {
     "no": 131,
@@ -1049,7 +1062,7 @@
       "kor": "라프라스",
       "eng": "lapras"
     },
-    "varieties": ["라프라스(거다이맥스)"]
+    "varieties": { "kor": ["라프라스(거다이맥스)"], "eng": [] }
   },
   {
     "no": 132,
@@ -1057,7 +1070,7 @@
       "kor": "메타몽",
       "eng": "ditto"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 133,
@@ -1065,7 +1078,7 @@
       "kor": "이브이",
       "eng": "eevee"
     },
-    "varieties": ["이브이(거다이맥스)"]
+    "varieties": { "kor": ["이브이(거다이맥스)"], "eng": [] }
   },
   {
     "no": 134,
@@ -1073,7 +1086,7 @@
       "kor": "샤미드",
       "eng": "vaporeon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 135,
@@ -1081,7 +1094,7 @@
       "kor": "쥬피썬더",
       "eng": "jolteon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 136,
@@ -1089,7 +1102,7 @@
       "kor": "부스터",
       "eng": "flareon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 137,
@@ -1097,7 +1110,7 @@
       "kor": "폴리곤",
       "eng": "porygon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 138,
@@ -1105,7 +1118,7 @@
       "kor": "암나이트",
       "eng": "omanyte"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 139,
@@ -1113,7 +1126,7 @@
       "kor": "암스타",
       "eng": "omastar"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 140,
@@ -1121,7 +1134,7 @@
       "kor": "투구",
       "eng": "kabuto"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 141,
@@ -1129,7 +1142,7 @@
       "kor": "투구푸스",
       "eng": "kabutops"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 142,
@@ -1137,7 +1150,7 @@
       "kor": "프테라",
       "eng": "aerodactyl"
     },
-    "varieties": ["메가프테라"]
+    "varieties": { "kor": ["메가프테라"], "eng": [] }
   },
   {
     "no": 143,
@@ -1145,7 +1158,7 @@
       "kor": "잠만보",
       "eng": "snorlax"
     },
-    "varieties": ["잠만보(거다이맥스)"]
+    "varieties": { "kor": ["잠만보(거다이맥스)"], "eng": [] }
   },
   {
     "no": 144,
@@ -1153,7 +1166,7 @@
       "kor": "프리져",
       "eng": "articuno"
     },
-    "varieties": ["프리져(가라르)"]
+    "varieties": { "kor": ["프리져(가라르)"], "eng": [] }
   },
   {
     "no": 145,
@@ -1161,7 +1174,7 @@
       "kor": "썬더",
       "eng": "zapdos"
     },
-    "varieties": ["썬더(가라르)"]
+    "varieties": { "kor": ["썬더(가라르)"], "eng": [] }
   },
   {
     "no": 146,
@@ -1169,7 +1182,7 @@
       "kor": "파이어",
       "eng": "moltres"
     },
-    "varieties": ["파이어(가라르)"]
+    "varieties": { "kor": ["파이어(가라르)"], "eng": [] }
   },
   {
     "no": 147,
@@ -1177,7 +1190,7 @@
       "kor": "미뇽",
       "eng": "dratini"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 148,
@@ -1185,7 +1198,7 @@
       "kor": "신뇽",
       "eng": "dragonair"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 149,
@@ -1193,7 +1206,7 @@
       "kor": "망나뇽",
       "eng": "dragonite"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 150,
@@ -1201,7 +1214,7 @@
       "kor": "뮤츠",
       "eng": "mewtwo"
     },
-    "varieties": ["메가뮤츠X", "메가뮤츠Y"]
+    "varieties": { "kor": ["메가뮤츠X", "메가뮤츠Y"], "eng": [] }
   },
   {
     "no": 151,
@@ -1209,7 +1222,7 @@
       "kor": "뮤",
       "eng": "mew"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 152,
@@ -1217,7 +1230,7 @@
       "kor": "치코리타",
       "eng": "chikorita"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 153,
@@ -1225,7 +1238,7 @@
       "kor": "베이리프",
       "eng": "bayleef"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 154,
@@ -1233,7 +1246,7 @@
       "kor": "메가니움",
       "eng": "meganium"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 155,
@@ -1241,7 +1254,7 @@
       "kor": "브케인",
       "eng": "cyndaquil"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 156,
@@ -1249,7 +1262,7 @@
       "kor": "마그케인",
       "eng": "quilava"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 157,
@@ -1257,7 +1270,7 @@
       "kor": "블레이범",
       "eng": "typhlosion"
     },
-    "varieties": ["블레이범(히스이)"]
+    "varieties": { "kor": ["블레이범(히스이)"], "eng": [] }
   },
   {
     "no": 158,
@@ -1265,7 +1278,7 @@
       "kor": "리아코",
       "eng": "totodile"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 159,
@@ -1273,7 +1286,7 @@
       "kor": "엘리게이",
       "eng": "croconaw"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 160,
@@ -1281,7 +1294,7 @@
       "kor": "장크로다일",
       "eng": "feraligatr"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 161,
@@ -1289,7 +1302,7 @@
       "kor": "꼬리선",
       "eng": "sentret"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 162,
@@ -1297,7 +1310,7 @@
       "kor": "다꼬리",
       "eng": "furret"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 163,
@@ -1305,7 +1318,7 @@
       "kor": "부우부",
       "eng": "hoothoot"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 164,
@@ -1313,7 +1326,7 @@
       "kor": "야부엉",
       "eng": "noctowl"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 165,
@@ -1321,7 +1334,7 @@
       "kor": "레디바",
       "eng": "ledyba"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 166,
@@ -1329,7 +1342,7 @@
       "kor": "레디안",
       "eng": "ledian"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 167,
@@ -1337,7 +1350,7 @@
       "kor": "페이검",
       "eng": "spinarak"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 168,
@@ -1345,7 +1358,7 @@
       "kor": "아리아도스",
       "eng": "ariados"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 169,
@@ -1353,7 +1366,7 @@
       "kor": "크로뱃",
       "eng": "crobat"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 170,
@@ -1361,7 +1374,7 @@
       "kor": "초라기",
       "eng": "chinchou"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 171,
@@ -1369,7 +1382,7 @@
       "kor": "랜턴",
       "eng": "lanturn"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 172,
@@ -1377,7 +1390,7 @@
       "kor": "피츄",
       "eng": "pichu"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 173,
@@ -1385,7 +1398,7 @@
       "kor": "삐",
       "eng": "cleffa"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 174,
@@ -1393,7 +1406,7 @@
       "kor": "푸푸린",
       "eng": "igglybuff"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 175,
@@ -1401,7 +1414,7 @@
       "kor": "토게피",
       "eng": "togepi"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 176,
@@ -1409,7 +1422,7 @@
       "kor": "토게틱",
       "eng": "togetic"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 177,
@@ -1417,7 +1430,7 @@
       "kor": "네이티",
       "eng": "natu"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 178,
@@ -1425,7 +1438,7 @@
       "kor": "네이티오",
       "eng": "xatu"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 179,
@@ -1433,7 +1446,7 @@
       "kor": "메리프",
       "eng": "mareep"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 180,
@@ -1441,7 +1454,7 @@
       "kor": "보송송",
       "eng": "flaaffy"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 181,
@@ -1449,7 +1462,7 @@
       "kor": "전룡",
       "eng": "ampharos"
     },
-    "varieties": ["메가전룡"]
+    "varieties": { "kor": ["메가전룡"], "eng": [] }
   },
   {
     "no": 182,
@@ -1457,7 +1470,7 @@
       "kor": "아르코",
       "eng": "bellossom"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 183,
@@ -1465,7 +1478,7 @@
       "kor": "마릴",
       "eng": "marill"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 184,
@@ -1473,7 +1486,7 @@
       "kor": "마릴리",
       "eng": "azumarill"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 185,
@@ -1481,7 +1494,7 @@
       "kor": "꼬지모",
       "eng": "sudowoodo"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 186,
@@ -1489,7 +1502,7 @@
       "kor": "왕구리",
       "eng": "politoed"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 187,
@@ -1497,7 +1510,7 @@
       "kor": "통통코",
       "eng": "hoppip"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 188,
@@ -1505,7 +1518,7 @@
       "kor": "두코",
       "eng": "skiploom"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 189,
@@ -1513,7 +1526,7 @@
       "kor": "솜솜코",
       "eng": "jumpluff"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 190,
@@ -1521,7 +1534,7 @@
       "kor": "에이팜",
       "eng": "aipom"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 191,
@@ -1529,7 +1542,7 @@
       "kor": "해너츠",
       "eng": "sunkern"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 192,
@@ -1537,7 +1550,7 @@
       "kor": "해루미",
       "eng": "sunflora"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 193,
@@ -1545,7 +1558,7 @@
       "kor": "왕자리",
       "eng": "yanma"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 194,
@@ -1553,7 +1566,7 @@
       "kor": "우파",
       "eng": "wooper"
     },
-    "varieties": ["우파(팔데아)"]
+    "varieties": { "kor": ["우파(팔데아)"], "eng": [] }
   },
   {
     "no": 195,
@@ -1561,7 +1574,7 @@
       "kor": "누오",
       "eng": "quagsire"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 196,
@@ -1569,7 +1582,7 @@
       "kor": "에브이",
       "eng": "espeon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 197,
@@ -1577,7 +1590,7 @@
       "kor": "블래키",
       "eng": "umbreon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 198,
@@ -1585,7 +1598,7 @@
       "kor": "니로우",
       "eng": "murkrow"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 199,
@@ -1593,7 +1606,7 @@
       "kor": "야도킹",
       "eng": "slowking"
     },
-    "varieties": ["야도킹(가라르)"]
+    "varieties": { "kor": ["야도킹(가라르)"], "eng": [] }
   },
   {
     "no": 200,
@@ -1601,7 +1614,7 @@
       "kor": "무우마",
       "eng": "misdreavus"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 201,
@@ -1609,7 +1622,7 @@
       "kor": "안농",
       "eng": "unown"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 202,
@@ -1617,7 +1630,7 @@
       "kor": "마자용",
       "eng": "wobbuffet"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 203,
@@ -1625,7 +1638,7 @@
       "kor": "키링키",
       "eng": "girafarig"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 204,
@@ -1633,7 +1646,7 @@
       "kor": "피콘",
       "eng": "pineco"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 205,
@@ -1641,7 +1654,7 @@
       "kor": "쏘콘",
       "eng": "forretress"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 206,
@@ -1649,7 +1662,7 @@
       "kor": "노고치",
       "eng": "dunsparce"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 207,
@@ -1657,7 +1670,7 @@
       "kor": "글라이거",
       "eng": "gligar"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 208,
@@ -1665,7 +1678,7 @@
       "kor": "강철톤",
       "eng": "steelix"
     },
-    "varieties": ["메가강철톤"]
+    "varieties": { "kor": ["메가강철톤"], "eng": [] }
   },
   {
     "no": 209,
@@ -1673,7 +1686,7 @@
       "kor": "블루",
       "eng": "snubbull"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 210,
@@ -1681,7 +1694,7 @@
       "kor": "그랑블루",
       "eng": "granbull"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 211,
@@ -1689,7 +1702,7 @@
       "kor": "침바루",
       "eng": "qwilfish"
     },
-    "varieties": ["침바루(히스이)"]
+    "varieties": { "kor": ["침바루(히스이)"], "eng": [] }
   },
   {
     "no": 212,
@@ -1697,7 +1710,7 @@
       "kor": "핫삼",
       "eng": "scizor"
     },
-    "varieties": ["메가핫삼"]
+    "varieties": { "kor": ["메가핫삼"], "eng": [] }
   },
   {
     "no": 213,
@@ -1705,7 +1718,7 @@
       "kor": "단단지",
       "eng": "shuckle"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 214,
@@ -1713,7 +1726,7 @@
       "kor": "헤라크로스",
       "eng": "heracross"
     },
-    "varieties": ["메가헤라크로스"]
+    "varieties": { "kor": ["메가헤라크로스"], "eng": [] }
   },
   {
     "no": 215,
@@ -1721,7 +1734,7 @@
       "kor": "포푸니",
       "eng": "sneasel"
     },
-    "varieties": ["포푸니(히스이)"]
+    "varieties": { "kor": ["포푸니(히스이)"], "eng": [] }
   },
   {
     "no": 216,
@@ -1729,7 +1742,7 @@
       "kor": "깜지곰",
       "eng": "teddiursa"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 217,
@@ -1737,7 +1750,7 @@
       "kor": "링곰",
       "eng": "ursaring"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 218,
@@ -1745,7 +1758,7 @@
       "kor": "마그마그",
       "eng": "slugma"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 219,
@@ -1753,7 +1766,7 @@
       "kor": "마그카르고",
       "eng": "magcargo"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 220,
@@ -1761,7 +1774,7 @@
       "kor": "꾸꾸리",
       "eng": "swinub"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 221,
@@ -1769,7 +1782,7 @@
       "kor": "메꾸리",
       "eng": "piloswine"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 222,
@@ -1777,7 +1790,7 @@
       "kor": "코산호",
       "eng": "corsola"
     },
-    "varieties": ["코산호(가라르)"]
+    "varieties": { "kor": ["코산호(가라르)"], "eng": [] }
   },
   {
     "no": 223,
@@ -1785,7 +1798,7 @@
       "kor": "총어",
       "eng": "remoraid"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 224,
@@ -1793,7 +1806,7 @@
       "kor": "대포무노",
       "eng": "octillery"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 225,
@@ -1801,7 +1814,7 @@
       "kor": "딜리버드",
       "eng": "delibird"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 226,
@@ -1809,7 +1822,7 @@
       "kor": "만타인",
       "eng": "mantine"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 227,
@@ -1817,7 +1830,7 @@
       "kor": "무장조",
       "eng": "skarmory"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 228,
@@ -1825,7 +1838,7 @@
       "kor": "델빌",
       "eng": "houndour"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 229,
@@ -1833,7 +1846,7 @@
       "kor": "헬가",
       "eng": "houndoom"
     },
-    "varieties": ["메가헬가"]
+    "varieties": { "kor": ["메가헬가"], "eng": [] }
   },
   {
     "no": 230,
@@ -1841,7 +1854,7 @@
       "kor": "킹드라",
       "eng": "kingdra"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 231,
@@ -1849,7 +1862,7 @@
       "kor": "코코리",
       "eng": "phanpy"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 232,
@@ -1857,7 +1870,7 @@
       "kor": "코리갑",
       "eng": "donphan"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 233,
@@ -1865,7 +1878,7 @@
       "kor": "폴리곤2",
       "eng": "porygon2"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 234,
@@ -1873,7 +1886,7 @@
       "kor": "노라키",
       "eng": "stantler"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 235,
@@ -1881,7 +1894,7 @@
       "kor": "루브도",
       "eng": "smeargle"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 236,
@@ -1889,7 +1902,7 @@
       "kor": "배루키",
       "eng": "tyrogue"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 237,
@@ -1897,7 +1910,7 @@
       "kor": "카포에라",
       "eng": "hitmontop"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 238,
@@ -1905,7 +1918,7 @@
       "kor": "뽀뽀라",
       "eng": "smoochum"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 239,
@@ -1913,7 +1926,7 @@
       "kor": "에레키드",
       "eng": "elekid"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 240,
@@ -1921,7 +1934,7 @@
       "kor": "마그비",
       "eng": "magby"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 241,
@@ -1929,7 +1942,7 @@
       "kor": "밀탱크",
       "eng": "miltank"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 242,
@@ -1937,7 +1950,7 @@
       "kor": "해피너스",
       "eng": "blissey"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 243,
@@ -1945,7 +1958,7 @@
       "kor": "라이코",
       "eng": "raikou"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 244,
@@ -1953,7 +1966,7 @@
       "kor": "앤테이",
       "eng": "entei"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 245,
@@ -1961,7 +1974,7 @@
       "kor": "스이쿤",
       "eng": "suicune"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 246,
@@ -1969,7 +1982,7 @@
       "kor": "애버라스",
       "eng": "larvitar"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 247,
@@ -1977,7 +1990,7 @@
       "kor": "데기라스",
       "eng": "pupitar"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 248,
@@ -1985,7 +1998,7 @@
       "kor": "마기라스",
       "eng": "tyranitar"
     },
-    "varieties": ["메가마기라스"]
+    "varieties": { "kor": ["메가마기라스"], "eng": [] }
   },
   {
     "no": 249,
@@ -1993,7 +2006,7 @@
       "kor": "루기아",
       "eng": "lugia"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 250,
@@ -2001,7 +2014,7 @@
       "kor": "칠색조",
       "eng": "ho-oh"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 251,
@@ -2009,7 +2022,7 @@
       "kor": "세레비",
       "eng": "celebi"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 252,
@@ -2017,7 +2030,7 @@
       "kor": "나무지기",
       "eng": "treecko"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 253,
@@ -2025,7 +2038,7 @@
       "kor": "나무돌이",
       "eng": "grovyle"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 254,
@@ -2033,7 +2046,7 @@
       "kor": "나무킹",
       "eng": "sceptile"
     },
-    "varieties": ["메가나무킹"]
+    "varieties": { "kor": ["메가나무킹"], "eng": [] }
   },
   {
     "no": 255,
@@ -2041,7 +2054,7 @@
       "kor": "아차모",
       "eng": "torchic"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 256,
@@ -2049,7 +2062,7 @@
       "kor": "영치코",
       "eng": "combusken"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 257,
@@ -2057,7 +2070,7 @@
       "kor": "번치코",
       "eng": "blaziken"
     },
-    "varieties": ["메가번치코"]
+    "varieties": { "kor": ["메가번치코"], "eng": [] }
   },
   {
     "no": 258,
@@ -2065,7 +2078,7 @@
       "kor": "물짱이",
       "eng": "mudkip"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 259,
@@ -2073,7 +2086,7 @@
       "kor": "늪짱이",
       "eng": "marshtomp"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 260,
@@ -2081,7 +2094,7 @@
       "kor": "대짱이",
       "eng": "swampert"
     },
-    "varieties": ["메가대짱이"]
+    "varieties": { "kor": ["메가대짱이"], "eng": [] }
   },
   {
     "no": 261,
@@ -2089,7 +2102,7 @@
       "kor": "포챠나",
       "eng": "poochyena"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 262,
@@ -2097,7 +2110,7 @@
       "kor": "그라에나",
       "eng": "mightyena"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 263,
@@ -2105,7 +2118,7 @@
       "kor": "지그제구리",
       "eng": "zigzagoon"
     },
-    "varieties": ["지그제구리(가라르)"]
+    "varieties": { "kor": ["지그제구리(가라르)"], "eng": [] }
   },
   {
     "no": 264,
@@ -2113,7 +2126,7 @@
       "kor": "직구리",
       "eng": "linoone"
     },
-    "varieties": ["직구리(가라르)"]
+    "varieties": { "kor": ["직구리(가라르)"], "eng": [] }
   },
   {
     "no": 265,
@@ -2121,7 +2134,7 @@
       "kor": "개무소",
       "eng": "wurmple"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 266,
@@ -2129,7 +2142,7 @@
       "kor": "실쿤",
       "eng": "silcoon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 267,
@@ -2137,7 +2150,7 @@
       "kor": "뷰티플라이",
       "eng": "beautifly"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 268,
@@ -2145,7 +2158,7 @@
       "kor": "카스쿤",
       "eng": "cascoon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 269,
@@ -2153,7 +2166,7 @@
       "kor": "독케일",
       "eng": "dustox"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 270,
@@ -2161,7 +2174,7 @@
       "kor": "연꽃몬",
       "eng": "lotad"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 271,
@@ -2169,7 +2182,7 @@
       "kor": "로토스",
       "eng": "lombre"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 272,
@@ -2177,7 +2190,7 @@
       "kor": "로파파",
       "eng": "ludicolo"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 273,
@@ -2185,7 +2198,7 @@
       "kor": "도토링",
       "eng": "seedot"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 274,
@@ -2193,7 +2206,7 @@
       "kor": "잎새코",
       "eng": "nuzleaf"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 275,
@@ -2201,7 +2214,7 @@
       "kor": "다탱구",
       "eng": "shiftry"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 276,
@@ -2209,7 +2222,7 @@
       "kor": "테일로",
       "eng": "taillow"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 277,
@@ -2217,7 +2230,7 @@
       "kor": "스왈로",
       "eng": "swellow"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 278,
@@ -2225,7 +2238,7 @@
       "kor": "갈모매",
       "eng": "wingull"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 279,
@@ -2233,7 +2246,7 @@
       "kor": "패리퍼",
       "eng": "pelipper"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 280,
@@ -2241,7 +2254,7 @@
       "kor": "랄토스",
       "eng": "ralts"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 281,
@@ -2249,7 +2262,7 @@
       "kor": "킬리아",
       "eng": "kirlia"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 282,
@@ -2257,7 +2270,7 @@
       "kor": "가디안",
       "eng": "gardevoir"
     },
-    "varieties": ["메가가디안"]
+    "varieties": { "kor": ["메가가디안"], "eng": [] }
   },
   {
     "no": 283,
@@ -2265,7 +2278,7 @@
       "kor": "비구술",
       "eng": "surskit"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 284,
@@ -2273,7 +2286,7 @@
       "kor": "비나방",
       "eng": "masquerain"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 285,
@@ -2281,7 +2294,7 @@
       "kor": "버섯꼬",
       "eng": "shroomish"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 286,
@@ -2289,7 +2302,7 @@
       "kor": "버섯모",
       "eng": "breloom"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 287,
@@ -2297,7 +2310,7 @@
       "kor": "게을로",
       "eng": "slakoth"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 288,
@@ -2305,7 +2318,7 @@
       "kor": "발바로",
       "eng": "vigoroth"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 289,
@@ -2313,7 +2326,7 @@
       "kor": "게을킹",
       "eng": "slaking"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 290,
@@ -2321,7 +2334,7 @@
       "kor": "토중몬",
       "eng": "nincada"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 291,
@@ -2329,7 +2342,7 @@
       "kor": "아이스크",
       "eng": "ninjask"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 292,
@@ -2337,7 +2350,7 @@
       "kor": "껍질몬",
       "eng": "shedinja"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 293,
@@ -2345,7 +2358,7 @@
       "kor": "소곤룡",
       "eng": "whismur"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 294,
@@ -2353,7 +2366,7 @@
       "kor": "노공룡",
       "eng": "loudred"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 295,
@@ -2361,7 +2374,7 @@
       "kor": "폭음룡",
       "eng": "exploud"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 296,
@@ -2369,7 +2382,7 @@
       "kor": "마크탕",
       "eng": "makuhita"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 297,
@@ -2377,7 +2390,7 @@
       "kor": "하리뭉",
       "eng": "hariyama"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 298,
@@ -2385,7 +2398,7 @@
       "kor": "루리리",
       "eng": "azurill"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 299,
@@ -2393,7 +2406,7 @@
       "kor": "코코파스",
       "eng": "nosepass"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 300,
@@ -2401,7 +2414,7 @@
       "kor": "에나비",
       "eng": "skitty"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 301,
@@ -2409,7 +2422,7 @@
       "kor": "델케티",
       "eng": "delcatty"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 302,
@@ -2417,7 +2430,7 @@
       "kor": "깜까미",
       "eng": "sableye"
     },
-    "varieties": ["메가깜까미"]
+    "varieties": { "kor": ["메가깜까미"], "eng": [] }
   },
   {
     "no": 303,
@@ -2425,7 +2438,7 @@
       "kor": "입치트",
       "eng": "mawile"
     },
-    "varieties": ["메가입치트"]
+    "varieties": { "kor": ["메가입치트"], "eng": [] }
   },
   {
     "no": 304,
@@ -2433,7 +2446,7 @@
       "kor": "가보리",
       "eng": "aron"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 305,
@@ -2441,7 +2454,7 @@
       "kor": "갱도라",
       "eng": "lairon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 306,
@@ -2449,7 +2462,7 @@
       "kor": "보스로라",
       "eng": "aggron"
     },
-    "varieties": ["메가보스로라"]
+    "varieties": { "kor": ["메가보스로라"], "eng": [] }
   },
   {
     "no": 307,
@@ -2457,7 +2470,7 @@
       "kor": "요가랑",
       "eng": "meditite"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 308,
@@ -2465,7 +2478,7 @@
       "kor": "요가램",
       "eng": "medicham"
     },
-    "varieties": ["메가요가램"]
+    "varieties": { "kor": ["메가요가램"], "eng": [] }
   },
   {
     "no": 309,
@@ -2473,7 +2486,7 @@
       "kor": "썬더라이",
       "eng": "electrike"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 310,
@@ -2481,7 +2494,7 @@
       "kor": "썬더볼트",
       "eng": "manectric"
     },
-    "varieties": ["메가썬더볼트"]
+    "varieties": { "kor": ["메가썬더볼트"], "eng": [] }
   },
   {
     "no": 311,
@@ -2489,7 +2502,7 @@
       "kor": "플러시",
       "eng": "plusle"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 312,
@@ -2497,7 +2510,7 @@
       "kor": "마이농",
       "eng": "minun"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 313,
@@ -2505,7 +2518,7 @@
       "kor": "볼비트",
       "eng": "volbeat"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 314,
@@ -2513,7 +2526,7 @@
       "kor": "네오비트",
       "eng": "illumise"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 315,
@@ -2521,7 +2534,7 @@
       "kor": "로젤리아",
       "eng": "roselia"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 316,
@@ -2529,7 +2542,7 @@
       "kor": "꼴깍몬",
       "eng": "gulpin"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 317,
@@ -2537,7 +2550,7 @@
       "kor": "꿀꺽몬",
       "eng": "swalot"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 318,
@@ -2545,7 +2558,7 @@
       "kor": "샤프니아",
       "eng": "carvanha"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 319,
@@ -2553,7 +2566,7 @@
       "kor": "샤크니아",
       "eng": "sharpedo"
     },
-    "varieties": ["메가샤크니아"]
+    "varieties": { "kor": ["메가샤크니아"], "eng": [] }
   },
   {
     "no": 320,
@@ -2561,7 +2574,7 @@
       "kor": "고래왕자",
       "eng": "wailmer"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 321,
@@ -2569,7 +2582,7 @@
       "kor": "고래왕",
       "eng": "wailord"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 322,
@@ -2577,7 +2590,7 @@
       "kor": "둔타",
       "eng": "numel"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 323,
@@ -2585,7 +2598,7 @@
       "kor": "폭타",
       "eng": "camerupt"
     },
-    "varieties": ["메가폭타"]
+    "varieties": { "kor": ["메가폭타"], "eng": [] }
   },
   {
     "no": 324,
@@ -2593,7 +2606,7 @@
       "kor": "코터스",
       "eng": "torkoal"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 325,
@@ -2601,7 +2614,7 @@
       "kor": "피그점프",
       "eng": "spoink"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 326,
@@ -2609,7 +2622,7 @@
       "kor": "피그킹",
       "eng": "grumpig"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 327,
@@ -2617,7 +2630,7 @@
       "kor": "얼루기",
       "eng": "spinda"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 328,
@@ -2625,7 +2638,7 @@
       "kor": "톱치",
       "eng": "trapinch"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 329,
@@ -2633,7 +2646,7 @@
       "kor": "비브라바",
       "eng": "vibrava"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 330,
@@ -2641,7 +2654,7 @@
       "kor": "플라이곤",
       "eng": "flygon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 331,
@@ -2649,7 +2662,7 @@
       "kor": "선인왕",
       "eng": "cacnea"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 332,
@@ -2657,7 +2670,7 @@
       "kor": "밤선인",
       "eng": "cacturne"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 333,
@@ -2665,7 +2678,7 @@
       "kor": "파비코",
       "eng": "swablu"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 334,
@@ -2673,7 +2686,7 @@
       "kor": "파비코리",
       "eng": "altaria"
     },
-    "varieties": ["메가파비코리"]
+    "varieties": { "kor": ["메가파비코리"], "eng": [] }
   },
   {
     "no": 335,
@@ -2681,7 +2694,7 @@
       "kor": "쟝고",
       "eng": "zangoose"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 336,
@@ -2689,7 +2702,7 @@
       "kor": "세비퍼",
       "eng": "seviper"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 337,
@@ -2697,7 +2710,7 @@
       "kor": "루나톤",
       "eng": "lunatone"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 338,
@@ -2705,7 +2718,7 @@
       "kor": "솔록",
       "eng": "solrock"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 339,
@@ -2713,7 +2726,7 @@
       "kor": "미꾸리",
       "eng": "barboach"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 340,
@@ -2721,7 +2734,7 @@
       "kor": "메깅",
       "eng": "whiscash"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 341,
@@ -2729,7 +2742,7 @@
       "kor": "가재군",
       "eng": "corphish"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 342,
@@ -2737,7 +2750,7 @@
       "kor": "가재장군",
       "eng": "crawdaunt"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 343,
@@ -2745,7 +2758,7 @@
       "kor": "오뚝군",
       "eng": "baltoy"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 344,
@@ -2753,7 +2766,7 @@
       "kor": "점토도리",
       "eng": "claydol"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 345,
@@ -2761,7 +2774,7 @@
       "kor": "릴링",
       "eng": "lileep"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 346,
@@ -2769,7 +2782,7 @@
       "kor": "릴리요",
       "eng": "cradily"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 347,
@@ -2777,7 +2790,7 @@
       "kor": "아노딥스",
       "eng": "anorith"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 348,
@@ -2785,7 +2798,7 @@
       "kor": "아말도",
       "eng": "armaldo"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 349,
@@ -2793,7 +2806,7 @@
       "kor": "빈티나",
       "eng": "feebas"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 350,
@@ -2801,7 +2814,7 @@
       "kor": "밀로틱",
       "eng": "milotic"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 351,
@@ -2809,7 +2822,7 @@
       "kor": "캐스퐁",
       "eng": "castform"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 352,
@@ -2817,7 +2830,7 @@
       "kor": "켈리몬",
       "eng": "kecleon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 353,
@@ -2825,7 +2838,7 @@
       "kor": "어둠대신",
       "eng": "shuppet"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 354,
@@ -2833,7 +2846,7 @@
       "kor": "다크펫",
       "eng": "banette"
     },
-    "varieties": ["메가다크펫"]
+    "varieties": { "kor": ["메가다크펫"], "eng": [] }
   },
   {
     "no": 355,
@@ -2841,7 +2854,7 @@
       "kor": "해골몽",
       "eng": "duskull"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 356,
@@ -2849,7 +2862,7 @@
       "kor": "미라몽",
       "eng": "dusclops"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 357,
@@ -2857,7 +2870,7 @@
       "kor": "트로피우스",
       "eng": "tropius"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 358,
@@ -2865,7 +2878,7 @@
       "kor": "치렁",
       "eng": "chimecho"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 359,
@@ -2873,7 +2886,7 @@
       "kor": "앱솔",
       "eng": "absol"
     },
-    "varieties": ["메가앱솔"]
+    "varieties": { "kor": ["메가앱솔"], "eng": [] }
   },
   {
     "no": 360,
@@ -2881,7 +2894,7 @@
       "kor": "마자",
       "eng": "wynaut"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 361,
@@ -2889,7 +2902,7 @@
       "kor": "눈꼬마",
       "eng": "snorunt"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 362,
@@ -2897,7 +2910,7 @@
       "kor": "얼음귀신",
       "eng": "glalie"
     },
-    "varieties": ["메가얼음귀신"]
+    "varieties": { "kor": ["메가얼음귀신"], "eng": [] }
   },
   {
     "no": 363,
@@ -2905,7 +2918,7 @@
       "kor": "대굴레오",
       "eng": "spheal"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 364,
@@ -2913,7 +2926,7 @@
       "kor": "씨레오",
       "eng": "sealeo"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 365,
@@ -2921,7 +2934,7 @@
       "kor": "씨카이저",
       "eng": "walrein"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 366,
@@ -2929,7 +2942,7 @@
       "kor": "진주몽",
       "eng": "clamperl"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 367,
@@ -2937,7 +2950,7 @@
       "kor": "헌테일",
       "eng": "huntail"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 368,
@@ -2945,7 +2958,7 @@
       "kor": "분홍장이",
       "eng": "gorebyss"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 369,
@@ -2953,7 +2966,7 @@
       "kor": "시라칸",
       "eng": "relicanth"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 370,
@@ -2961,7 +2974,7 @@
       "kor": "사랑동이",
       "eng": "luvdisc"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 371,
@@ -2969,7 +2982,7 @@
       "kor": "아공이",
       "eng": "bagon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 372,
@@ -2977,7 +2990,7 @@
       "kor": "쉘곤",
       "eng": "shelgon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 373,
@@ -2985,7 +2998,7 @@
       "kor": "보만다",
       "eng": "salamence"
     },
-    "varieties": ["메가보만다"]
+    "varieties": { "kor": ["메가보만다"], "eng": [] }
   },
   {
     "no": 374,
@@ -2993,7 +3006,7 @@
       "kor": "메탕",
       "eng": "beldum"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 375,
@@ -3001,7 +3014,7 @@
       "kor": "메탕구",
       "eng": "metang"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 376,
@@ -3009,7 +3022,7 @@
       "kor": "메타그로스",
       "eng": "metagross"
     },
-    "varieties": ["메가메타그로스"]
+    "varieties": { "kor": ["메가메타그로스"], "eng": [] }
   },
   {
     "no": 377,
@@ -3017,7 +3030,7 @@
       "kor": "레지락",
       "eng": "regirock"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 378,
@@ -3025,7 +3038,7 @@
       "kor": "레지아이스",
       "eng": "regice"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 379,
@@ -3033,7 +3046,7 @@
       "kor": "레지스틸",
       "eng": "registeel"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 380,
@@ -3041,7 +3054,7 @@
       "kor": "라티아스",
       "eng": "latias"
     },
-    "varieties": ["메가라티아스"]
+    "varieties": { "kor": ["메가라티아스"], "eng": [] }
   },
   {
     "no": 381,
@@ -3049,7 +3062,7 @@
       "kor": "라티오스",
       "eng": "latios"
     },
-    "varieties": ["메가라티오스"]
+    "varieties": { "kor": ["메가라티오스"], "eng": [] }
   },
   {
     "no": 382,
@@ -3057,7 +3070,7 @@
       "kor": "가이오가",
       "eng": "kyogre"
     },
-    "varieties": ["원시가이오가"]
+    "varieties": { "kor": ["원시가이오가"], "eng": [] }
   },
   {
     "no": 383,
@@ -3065,7 +3078,7 @@
       "kor": "그란돈",
       "eng": "groudon"
     },
-    "varieties": ["원시그란돈"]
+    "varieties": { "kor": ["원시그란돈"], "eng": [] }
   },
   {
     "no": 384,
@@ -3073,7 +3086,7 @@
       "kor": "레쿠쟈",
       "eng": "rayquaza"
     },
-    "varieties": ["메가레쿠쟈"]
+    "varieties": { "kor": ["메가레쿠쟈"], "eng": [] }
   },
   {
     "no": 385,
@@ -3081,7 +3094,7 @@
       "kor": "지라치",
       "eng": "jirachi"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 386,
@@ -3089,11 +3102,14 @@
       "kor": "테오키스(노말폼)",
       "eng": "deoxys"
     },
-    "varieties": [
-      "테오키스(어택폼)",
-      "테오키스(디펜스폼)",
-      "테오키스(스피드폼)"
-    ]
+    "varieties": {
+      "kor": ["테오키스(어택폼)", "테오키스(디펜스폼)", "테오키스(스피드폼)"],
+      "eng": [
+        "Deoxys (Attack Forme)",
+        "Deoxys (Defense Forme)",
+        "Deoxys (Speed Forme)"
+      ]
+    }
   },
   {
     "no": 387,
@@ -3101,7 +3117,7 @@
       "kor": "모부기",
       "eng": "turtwig"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 388,
@@ -3109,7 +3125,7 @@
       "kor": "수풀부기",
       "eng": "grotle"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 389,
@@ -3117,7 +3133,7 @@
       "kor": "토대부기",
       "eng": "torterra"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 390,
@@ -3125,7 +3141,7 @@
       "kor": "불꽃숭이",
       "eng": "chimchar"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 391,
@@ -3133,7 +3149,7 @@
       "kor": "파이숭이",
       "eng": "monferno"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 392,
@@ -3141,7 +3157,7 @@
       "kor": "초염몽",
       "eng": "infernape"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 393,
@@ -3149,7 +3165,7 @@
       "kor": "팽도리",
       "eng": "piplup"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 394,
@@ -3157,7 +3173,7 @@
       "kor": "팽태자",
       "eng": "prinplup"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 395,
@@ -3165,7 +3181,7 @@
       "kor": "엠페르트",
       "eng": "empoleon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 396,
@@ -3173,7 +3189,7 @@
       "kor": "찌르꼬",
       "eng": "starly"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 397,
@@ -3181,7 +3197,7 @@
       "kor": "찌르버드",
       "eng": "staravia"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 398,
@@ -3189,7 +3205,7 @@
       "kor": "찌르호크",
       "eng": "staraptor"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 399,
@@ -3197,7 +3213,7 @@
       "kor": "비버니",
       "eng": "bidoof"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 400,
@@ -3205,7 +3221,7 @@
       "kor": "비버통",
       "eng": "bibarel"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 401,
@@ -3213,7 +3229,7 @@
       "kor": "귀뚤뚜기",
       "eng": "kricketot"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 402,
@@ -3221,7 +3237,7 @@
       "kor": "귀뚤톡크",
       "eng": "kricketune"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 403,
@@ -3229,7 +3245,7 @@
       "kor": "꼬링크",
       "eng": "shinx"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 404,
@@ -3237,7 +3253,7 @@
       "kor": "럭시오",
       "eng": "luxio"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 405,
@@ -3245,7 +3261,7 @@
       "kor": "렌트라",
       "eng": "luxray"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 406,
@@ -3253,7 +3269,7 @@
       "kor": "꼬몽울",
       "eng": "budew"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 407,
@@ -3261,7 +3277,7 @@
       "kor": "로즈레이드",
       "eng": "roserade"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 408,
@@ -3269,7 +3285,7 @@
       "kor": "두개도스",
       "eng": "cranidos"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 409,
@@ -3277,7 +3293,7 @@
       "kor": "램펄드",
       "eng": "rampardos"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 410,
@@ -3285,7 +3301,7 @@
       "kor": "방패톱스",
       "eng": "shieldon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 411,
@@ -3293,7 +3309,7 @@
       "kor": "바리톱스",
       "eng": "bastiodon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 412,
@@ -3301,7 +3317,10 @@
       "kor": "도롱충이(초목도롱)",
       "eng": "burmy"
     },
-    "varieties": ["도롱충이(모래땅도롱)", "도롱충이(슈레도롱)"]
+    "varieties": {
+      "kor": ["도롱충이(모래땅도롱)", "도롱충이(슈레도롱)"],
+      "eng": ["Burmy (Sandy Cloak)", "Burmy (Trash Cloak)"]
+    }
   },
   {
     "no": 413,
@@ -3309,7 +3328,10 @@
       "kor": "도롱마담(초목도롱)",
       "eng": "wormadam"
     },
-    "varieties": ["도롱마담(모래땅도롱)", "도롱마담(슈레도롱)"]
+    "varieties": {
+      "kor": ["도롱마담(모래땅도롱)", "도롱마담(슈레도롱)"],
+      "eng": ["Burmy (Sandy Cloak)", "Burmy (Trash Cloak)"]
+    }
   },
   {
     "no": 414,
@@ -3317,7 +3339,7 @@
       "kor": "나메일",
       "eng": "mothim"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 415,
@@ -3325,7 +3347,7 @@
       "kor": "세꿀버리",
       "eng": "combee"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 416,
@@ -3333,7 +3355,7 @@
       "kor": "비퀸",
       "eng": "vespiquen"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 417,
@@ -3341,7 +3363,7 @@
       "kor": "파치리스",
       "eng": "pachirisu"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 418,
@@ -3349,7 +3371,7 @@
       "kor": "브이젤",
       "eng": "buizel"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 419,
@@ -3357,7 +3379,7 @@
       "kor": "플로젤",
       "eng": "floatzel"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 420,
@@ -3365,7 +3387,7 @@
       "kor": "체리버",
       "eng": "cherubi"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 421,
@@ -3373,7 +3395,7 @@
       "kor": "체리꼬(네거폼)",
       "eng": "cherrim"
     },
-    "varieties": ["체리꼬(포지폼)"]
+    "varieties": { "kor": ["체리꼬(포지폼)"], "eng": [] }
   },
   {
     "no": 422,
@@ -3381,7 +3403,7 @@
       "kor": "깝질무(서쪽바다)",
       "eng": "shellos"
     },
-    "varieties": ["깝질무(동쪽바다)"]
+    "varieties": { "kor": ["깝질무(동쪽바다)"], "eng": [] }
   },
   {
     "no": 423,
@@ -3389,7 +3411,7 @@
       "kor": "트리토돈(서쪽바다)",
       "eng": "gastrodon"
     },
-    "varieties": ["트리토돈(동쪽바다)"]
+    "varieties": { "kor": ["트리토돈(동쪽바다)"], "eng": [] }
   },
   {
     "no": 424,
@@ -3397,7 +3419,7 @@
       "kor": "겟핸보숭",
       "eng": "ambipom"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 425,
@@ -3405,7 +3427,7 @@
       "kor": "흔들풍손",
       "eng": "drifloon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 426,
@@ -3413,7 +3435,7 @@
       "kor": "둥실라이드",
       "eng": "drifblim"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 427,
@@ -3421,7 +3443,7 @@
       "kor": "이어롤",
       "eng": "buneary"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 428,
@@ -3429,7 +3451,7 @@
       "kor": "이어롭",
       "eng": "lopunny"
     },
-    "varieties": ["메가이어롭"]
+    "varieties": { "kor": ["메가이어롭"], "eng": [] }
   },
   {
     "no": 429,
@@ -3437,7 +3459,7 @@
       "kor": "무우마직",
       "eng": "mismagius"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 430,
@@ -3445,7 +3467,7 @@
       "kor": "돈크로우",
       "eng": "honchkrow"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 431,
@@ -3453,7 +3475,7 @@
       "kor": "나옹마",
       "eng": "glameow"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 432,
@@ -3461,7 +3483,7 @@
       "kor": "몬냥이",
       "eng": "purugly"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 433,
@@ -3469,7 +3491,7 @@
       "kor": "랑딸랑",
       "eng": "chingling"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 434,
@@ -3477,7 +3499,7 @@
       "kor": "스컹뿡",
       "eng": "stunky"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 435,
@@ -3485,7 +3507,7 @@
       "kor": "스컹탱크",
       "eng": "skuntank"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 436,
@@ -3493,7 +3515,7 @@
       "kor": "동미러",
       "eng": "bronzor"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 437,
@@ -3501,7 +3523,7 @@
       "kor": "동탁군",
       "eng": "bronzong"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 438,
@@ -3509,7 +3531,7 @@
       "kor": "꼬지지",
       "eng": "bonsly"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 439,
@@ -3517,7 +3539,7 @@
       "kor": "흉내내",
       "eng": "mime-jr"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 440,
@@ -3525,7 +3547,7 @@
       "kor": "핑복",
       "eng": "happiny"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 441,
@@ -3533,7 +3555,7 @@
       "kor": "페라페",
       "eng": "chatot"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 442,
@@ -3541,7 +3563,7 @@
       "kor": "화강돌",
       "eng": "spiritomb"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 443,
@@ -3549,7 +3571,7 @@
       "kor": "딥상어동",
       "eng": "gible"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 444,
@@ -3557,7 +3579,7 @@
       "kor": "한바이트",
       "eng": "gabite"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 445,
@@ -3565,7 +3587,7 @@
       "kor": "한카리아스",
       "eng": "garchomp"
     },
-    "varieties": ["메가한카리아스"]
+    "varieties": { "kor": ["메가한카리아스"], "eng": [] }
   },
   {
     "no": 446,
@@ -3573,7 +3595,7 @@
       "kor": "먹고자",
       "eng": "munchlax"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 447,
@@ -3581,7 +3603,7 @@
       "kor": "리오르",
       "eng": "riolu"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 448,
@@ -3589,7 +3611,7 @@
       "kor": "루카리오",
       "eng": "lucario"
     },
-    "varieties": ["메가루카리오"]
+    "varieties": { "kor": ["메가루카리오"], "eng": [] }
   },
   {
     "no": 449,
@@ -3597,7 +3619,7 @@
       "kor": "히포포타스",
       "eng": "hippopotas"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 450,
@@ -3605,7 +3627,7 @@
       "kor": "하마돈",
       "eng": "hippowdon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 451,
@@ -3613,7 +3635,7 @@
       "kor": "스콜피",
       "eng": "skorupi"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 452,
@@ -3621,7 +3643,7 @@
       "kor": "드래피온",
       "eng": "drapion"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 453,
@@ -3629,7 +3651,7 @@
       "kor": "삐딱구리",
       "eng": "croagunk"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 454,
@@ -3637,7 +3659,7 @@
       "kor": "독개굴",
       "eng": "toxicroak"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 455,
@@ -3645,7 +3667,7 @@
       "kor": "무스틈니",
       "eng": "carnivine"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 456,
@@ -3653,7 +3675,7 @@
       "kor": "형광어",
       "eng": "finneon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 457,
@@ -3661,7 +3683,7 @@
       "kor": "네오라이트",
       "eng": "lumineon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 458,
@@ -3669,7 +3691,7 @@
       "kor": "타만타",
       "eng": "mantyke"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 459,
@@ -3677,7 +3699,7 @@
       "kor": "눈쓰개",
       "eng": "snover"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 460,
@@ -3685,7 +3707,7 @@
       "kor": "눈설왕",
       "eng": "abomasnow"
     },
-    "varieties": ["메가눈설왕"]
+    "varieties": { "kor": ["메가눈설왕"], "eng": [] }
   },
   {
     "no": 461,
@@ -3693,7 +3715,7 @@
       "kor": "포푸니라",
       "eng": "weavile"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 462,
@@ -3701,7 +3723,7 @@
       "kor": "자포코일",
       "eng": "magnezone"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 463,
@@ -3709,7 +3731,7 @@
       "kor": "내룸벨트",
       "eng": "lickilicky"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 464,
@@ -3717,7 +3739,7 @@
       "kor": "거대코뿌리",
       "eng": "rhyperior"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 465,
@@ -3725,7 +3747,7 @@
       "kor": "덩쿠림보",
       "eng": "tangrowth"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 466,
@@ -3733,7 +3755,7 @@
       "kor": "에레키블",
       "eng": "electivire"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 467,
@@ -3741,7 +3763,7 @@
       "kor": "마그마번",
       "eng": "magmortar"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 468,
@@ -3749,7 +3771,7 @@
       "kor": "토게키스",
       "eng": "togekiss"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 469,
@@ -3757,7 +3779,7 @@
       "kor": "메가자리",
       "eng": "yanmega"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 470,
@@ -3765,7 +3787,7 @@
       "kor": "리피아",
       "eng": "leafeon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 471,
@@ -3773,7 +3795,7 @@
       "kor": "글레이시아",
       "eng": "glaceon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 472,
@@ -3781,7 +3803,7 @@
       "kor": "글라이온",
       "eng": "gliscor"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 473,
@@ -3789,7 +3811,7 @@
       "kor": "맘모꾸리",
       "eng": "mamoswine"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 474,
@@ -3797,7 +3819,7 @@
       "kor": "폴리곤Z",
       "eng": "porygon-z"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 475,
@@ -3805,7 +3827,7 @@
       "kor": "엘레이드",
       "eng": "gallade"
     },
-    "varieties": ["메가엘레이드"]
+    "varieties": { "kor": ["메가엘레이드"], "eng": [] }
   },
   {
     "no": 476,
@@ -3813,7 +3835,7 @@
       "kor": "대코파스",
       "eng": "probopass"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 477,
@@ -3821,7 +3843,7 @@
       "kor": "야느와르몽",
       "eng": "dusknoir"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 478,
@@ -3829,7 +3851,7 @@
       "kor": "눈여아",
       "eng": "froslass"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 479,
@@ -3837,13 +3859,22 @@
       "kor": "로토무(로토무)",
       "eng": "rotom"
     },
-    "varieties": [
-      "로토무(히트로토무)",
-      "로토무(워시로토무)",
-      "로토무(프로스트로토무)",
-      "로토무(스핀로토무)",
-      "로토무(커트로토무)"
-    ]
+    "varieties": {
+      "kor": [
+        "로토무(히트로토무)",
+        "로토무(워시로토무)",
+        "로토무(프로스트로토무)",
+        "로토무(스핀로토무)",
+        "로토무(커트로토무)"
+      ],
+      "eng": [
+        "Rotom (Heat Rotom)",
+        "Rotom (Wash Rotom)",
+        "Rotom (Frost Rotom)",
+        "Rotom (Fan Rotom)",
+        "Rotom (Mow Rotom)"
+      ]
+    }
   },
   {
     "no": 480,
@@ -3851,7 +3882,7 @@
       "kor": "유크시",
       "eng": "uxie"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 481,
@@ -3859,7 +3890,7 @@
       "kor": "엠라이트",
       "eng": "mesprit"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 482,
@@ -3867,7 +3898,7 @@
       "kor": "아그놈",
       "eng": "azelf"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 483,
@@ -3875,7 +3906,10 @@
       "kor": "디아루가",
       "eng": "dialga"
     },
-    "varieties": ["디아루가(오리진폼)"]
+    "varieties": {
+      "kor": ["디아루가(오리진폼)"],
+      "eng": ["Dialga (Origin Forme)"]
+    }
   },
   {
     "no": 484,
@@ -3883,7 +3917,10 @@
       "kor": "펄기아",
       "eng": "palkia"
     },
-    "varieties": ["펄기아(오리진폼)"]
+    "varieties": {
+      "kor": ["펄기아(오리진폼)"],
+      "eng": ["Palkia (Origin Forme)"]
+    }
   },
   {
     "no": 485,
@@ -3891,7 +3928,7 @@
       "kor": "히드런",
       "eng": "heatran"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 486,
@@ -3899,7 +3936,7 @@
       "kor": "레지기가스",
       "eng": "regigigas"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 487,
@@ -3907,7 +3944,10 @@
       "kor": "기라티나(어나더폼)",
       "eng": "giratina"
     },
-    "varieties": ["기라티나(오리진폼)"]
+    "varieties": {
+      "kor": ["기라티나(오리진폼)"],
+      "eng": ["Giratina (Origin Forme)"]
+    }
   },
   {
     "no": 488,
@@ -3915,7 +3955,7 @@
       "kor": "크레세리아",
       "eng": "cresselia"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 489,
@@ -3923,7 +3963,7 @@
       "kor": "피오네",
       "eng": "phione"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 490,
@@ -3931,7 +3971,7 @@
       "kor": "마나피",
       "eng": "manaphy"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 491,
@@ -3939,7 +3979,7 @@
       "kor": "다크라이",
       "eng": "darkrai"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 492,
@@ -3947,7 +3987,10 @@
       "kor": "쉐이미(랜드폼)",
       "eng": "shaymin"
     },
-    "varieties": ["쉐이미(스카이폼)"]
+    "varieties": {
+      "kor": ["쉐이미(스카이폼)"],
+      "eng": ["Shaymin (Sky Form)"]
+    }
   },
   {
     "no": 493,
@@ -3955,7 +3998,7 @@
       "kor": "아르세우스",
       "eng": "arceus"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 494,
@@ -3963,7 +4006,7 @@
       "kor": "비크티니",
       "eng": "victini"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 495,
@@ -3971,7 +4014,7 @@
       "kor": "주리비얀",
       "eng": "snivy"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 496,
@@ -3979,7 +4022,7 @@
       "kor": "샤비",
       "eng": "servine"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 497,
@@ -3987,7 +4030,7 @@
       "kor": "샤로다",
       "eng": "serperior"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 498,
@@ -3995,7 +4038,7 @@
       "kor": "뚜꾸리",
       "eng": "tepig"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 499,
@@ -4003,7 +4046,7 @@
       "kor": "차오꿀",
       "eng": "pignite"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 500,
@@ -4011,7 +4054,7 @@
       "kor": "염무왕",
       "eng": "emboar"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 501,
@@ -4019,7 +4062,7 @@
       "kor": "수댕이",
       "eng": "oshawott"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 502,
@@ -4027,7 +4070,7 @@
       "kor": "쌍검자비",
       "eng": "dewott"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 503,
@@ -4035,7 +4078,7 @@
       "kor": "대검귀",
       "eng": "samurott"
     },
-    "varieties": ["대검귀(히스이)"]
+    "varieties": { "kor": ["대검귀(히스이)"], "eng": [] }
   },
   {
     "no": 504,
@@ -4043,7 +4086,7 @@
       "kor": "보르쥐",
       "eng": "patrat"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 505,
@@ -4051,7 +4094,7 @@
       "kor": "보르그",
       "eng": "watchog"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 506,
@@ -4059,7 +4102,7 @@
       "kor": "요테리",
       "eng": "lillipup"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 507,
@@ -4067,7 +4110,7 @@
       "kor": "하데리어",
       "eng": "herdier"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 508,
@@ -4075,7 +4118,7 @@
       "kor": "바랜드",
       "eng": "stoutland"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 509,
@@ -4083,7 +4126,7 @@
       "kor": "쌔비냥",
       "eng": "purrloin"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 510,
@@ -4091,7 +4134,7 @@
       "kor": "레파르다스",
       "eng": "liepard"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 511,
@@ -4099,7 +4142,7 @@
       "kor": "야나프",
       "eng": "pansage"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 512,
@@ -4107,7 +4150,7 @@
       "kor": "야나키",
       "eng": "simisage"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 513,
@@ -4115,7 +4158,7 @@
       "kor": "바오프",
       "eng": "pansear"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 514,
@@ -4123,7 +4166,7 @@
       "kor": "바오키",
       "eng": "simisear"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 515,
@@ -4131,7 +4174,7 @@
       "kor": "앗차프",
       "eng": "panpour"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 516,
@@ -4139,7 +4182,7 @@
       "kor": "앗차키",
       "eng": "simipour"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 517,
@@ -4147,7 +4190,7 @@
       "kor": "몽나",
       "eng": "munna"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 518,
@@ -4155,7 +4198,7 @@
       "kor": "몽얌나",
       "eng": "musharna"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 519,
@@ -4163,7 +4206,7 @@
       "kor": "콩둘기",
       "eng": "pidove"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 520,
@@ -4171,7 +4214,7 @@
       "kor": "유토브",
       "eng": "tranquill"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 521,
@@ -4179,7 +4222,7 @@
       "kor": "켄호로우(수컷)",
       "eng": "unfezant"
     },
-    "varieties": ["켄호로우(암컷)"]
+    "varieties": { "kor": ["켄호로우(암컷)"], "eng": [] }
   },
   {
     "no": 522,
@@ -4187,7 +4230,7 @@
       "kor": "줄뮤마",
       "eng": "blitzle"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 523,
@@ -4195,7 +4238,7 @@
       "kor": "제브라이카",
       "eng": "zebstrika"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 524,
@@ -4203,7 +4246,7 @@
       "kor": "단굴",
       "eng": "roggenrola"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 525,
@@ -4211,7 +4254,7 @@
       "kor": "암트르",
       "eng": "boldore"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 526,
@@ -4219,7 +4262,7 @@
       "kor": "기가이어스",
       "eng": "gigalith"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 527,
@@ -4227,7 +4270,7 @@
       "kor": "또르박쥐",
       "eng": "woobat"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 528,
@@ -4235,7 +4278,7 @@
       "kor": "맘박쥐",
       "eng": "swoobat"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 529,
@@ -4243,7 +4286,7 @@
       "kor": "두더류",
       "eng": "drilbur"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 530,
@@ -4251,7 +4294,7 @@
       "kor": "몰드류",
       "eng": "excadrill"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 531,
@@ -4259,7 +4302,7 @@
       "kor": "다부니",
       "eng": "audino"
     },
-    "varieties": ["메가다부니"]
+    "varieties": { "kor": ["메가다부니"], "eng": [] }
   },
   {
     "no": 532,
@@ -4267,7 +4310,7 @@
       "kor": "으랏차",
       "eng": "timburr"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 533,
@@ -4275,7 +4318,7 @@
       "kor": "토쇠골",
       "eng": "gurdurr"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 534,
@@ -4283,7 +4326,7 @@
       "kor": "노보청",
       "eng": "conkeldurr"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 535,
@@ -4291,7 +4334,7 @@
       "kor": "동챙이",
       "eng": "tympole"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 536,
@@ -4299,7 +4342,7 @@
       "kor": "두까비",
       "eng": "palpitoad"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 537,
@@ -4307,7 +4350,7 @@
       "kor": "두빅굴",
       "eng": "seismitoad"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 538,
@@ -4315,7 +4358,7 @@
       "kor": "던지미",
       "eng": "throh"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 539,
@@ -4323,7 +4366,7 @@
       "kor": "타격귀",
       "eng": "sawk"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 540,
@@ -4331,7 +4374,7 @@
       "kor": "두르보",
       "eng": "sewaddle"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 541,
@@ -4339,7 +4382,7 @@
       "kor": "두르쿤",
       "eng": "swadloon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 542,
@@ -4347,7 +4390,7 @@
       "kor": "모아머",
       "eng": "leavanny"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 543,
@@ -4355,7 +4398,7 @@
       "kor": "마디네",
       "eng": "venipede"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 544,
@@ -4363,7 +4406,7 @@
       "kor": "휠구",
       "eng": "whirlipede"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 545,
@@ -4371,7 +4414,7 @@
       "kor": "펜드라",
       "eng": "scolipede"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 546,
@@ -4379,7 +4422,7 @@
       "kor": "소미안",
       "eng": "cottonee"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 547,
@@ -4387,7 +4430,7 @@
       "kor": "엘풍",
       "eng": "whimsicott"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 548,
@@ -4395,7 +4438,7 @@
       "kor": "치릴리",
       "eng": "petilil"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 549,
@@ -4403,7 +4446,7 @@
       "kor": "드레디어",
       "eng": "lilligant"
     },
-    "varieties": ["드레디어(히스이)"]
+    "varieties": { "kor": ["드레디어(히스이)"], "eng": [] }
   },
   {
     "no": 550,
@@ -4411,7 +4454,10 @@
       "kor": "배쓰나이(적색근)",
       "eng": "basculin"
     },
-    "varieties": ["배쓰나이(청색근)", "배쓰나이(백색근)"]
+    "varieties": {
+      "kor": ["배쓰나이(청색근)", "배쓰나이(백색근)"],
+      "eng": ["Basculin (Blue-Striped Form)", "Basculin (White-Striped Form)"]
+    }
   },
   {
     "no": 551,
@@ -4419,7 +4465,7 @@
       "kor": "깜눈크",
       "eng": "sandile"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 552,
@@ -4427,7 +4473,7 @@
       "kor": "악비르",
       "eng": "krokorok"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 553,
@@ -4435,7 +4481,7 @@
       "kor": "악비아르",
       "eng": "krookodile"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 554,
@@ -4443,7 +4489,7 @@
       "kor": "달막화",
       "eng": "darumaka"
     },
-    "varieties": ["달막화(가라르)"]
+    "varieties": { "kor": ["달막화(가라르)"], "eng": [] }
   },
   {
     "no": 555,
@@ -4451,11 +4497,18 @@
       "kor": "불비달마(노말모드)",
       "eng": "darmanitan"
     },
-    "varieties": [
-      "불비달마(달마모드)",
-      "불비달마(가라르)",
-      "불비달마(가라르/달마모드)"
-    ]
+    "varieties": {
+      "kor": [
+        "불비달마(달마모드)",
+        "불비달마(가라르/기본형)",
+        "불비달마(가라르/달마모드)"
+      ],
+      "eng": [
+        "Darmanitan (Standard Mode)",
+        "Darmanitan (Galarian Form)",
+        "Darmanitan (Galarian Zen Mode)"
+      ]
+    }
   },
   {
     "no": 556,
@@ -4463,7 +4516,7 @@
       "kor": "마라카치",
       "eng": "maractus"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 557,
@@ -4471,7 +4524,7 @@
       "kor": "돌살이",
       "eng": "dwebble"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 558,
@@ -4479,7 +4532,7 @@
       "kor": "암팰리스",
       "eng": "crustle"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 559,
@@ -4487,7 +4540,7 @@
       "kor": "곤율랭",
       "eng": "scraggy"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 560,
@@ -4495,7 +4548,7 @@
       "kor": "곤율거니",
       "eng": "scrafty"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 561,
@@ -4503,7 +4556,7 @@
       "kor": "심보러",
       "eng": "sigilyph"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 562,
@@ -4511,7 +4564,7 @@
       "kor": "데스마스",
       "eng": "yamask"
     },
-    "varieties": ["데스마스(가라르)"]
+    "varieties": { "kor": ["데스마스(가라르)"], "eng": [] }
   },
   {
     "no": 563,
@@ -4519,7 +4572,7 @@
       "kor": "데스니칸",
       "eng": "cofagrigus"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 564,
@@ -4527,7 +4580,7 @@
       "kor": "프로토가",
       "eng": "tirtouga"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 565,
@@ -4535,7 +4588,7 @@
       "kor": "늑골라",
       "eng": "carracosta"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 566,
@@ -4543,7 +4596,7 @@
       "kor": "아켄",
       "eng": "archen"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 567,
@@ -4551,7 +4604,7 @@
       "kor": "아케오스",
       "eng": "archeops"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 568,
@@ -4559,7 +4612,7 @@
       "kor": "깨봉이",
       "eng": "trubbish"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 569,
@@ -4567,7 +4620,7 @@
       "kor": "더스트나",
       "eng": "garbodor"
     },
-    "varieties": ["더스트나(거다이맥스)"]
+    "varieties": { "kor": ["더스트나(거다이맥스)"], "eng": [] }
   },
   {
     "no": 570,
@@ -4575,7 +4628,7 @@
       "kor": "조로아",
       "eng": "zorua"
     },
-    "varieties": ["조로아(히스이)"]
+    "varieties": { "kor": ["조로아(히스이)"], "eng": [] }
   },
   {
     "no": 571,
@@ -4583,7 +4636,7 @@
       "kor": "조로아크",
       "eng": "zoroark"
     },
-    "varieties": ["조로아크(히스이)"]
+    "varieties": { "kor": ["조로아크(히스이)"], "eng": [] }
   },
   {
     "no": 572,
@@ -4591,7 +4644,7 @@
       "kor": "치라미",
       "eng": "minccino"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 573,
@@ -4599,7 +4652,7 @@
       "kor": "치라치노",
       "eng": "cinccino"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 574,
@@ -4607,7 +4660,7 @@
       "kor": "고디탱",
       "eng": "gothita"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 575,
@@ -4615,7 +4668,7 @@
       "kor": "고디보미",
       "eng": "gothorita"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 576,
@@ -4623,7 +4676,7 @@
       "kor": "고디모아젤",
       "eng": "gothitelle"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 577,
@@ -4631,7 +4684,7 @@
       "kor": "유니란",
       "eng": "solosis"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 578,
@@ -4639,7 +4692,7 @@
       "kor": "듀란",
       "eng": "duosion"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 579,
@@ -4647,7 +4700,7 @@
       "kor": "란쿨루스",
       "eng": "reuniclus"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 580,
@@ -4655,7 +4708,7 @@
       "kor": "꼬지보리",
       "eng": "ducklett"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 581,
@@ -4663,7 +4716,7 @@
       "kor": "스완나",
       "eng": "swanna"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 582,
@@ -4671,7 +4724,7 @@
       "kor": "바닐프티",
       "eng": "vanillite"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 583,
@@ -4679,7 +4732,7 @@
       "kor": "바닐리치",
       "eng": "vanillish"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 584,
@@ -4687,7 +4740,7 @@
       "kor": "배바닐라",
       "eng": "vanilluxe"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 585,
@@ -4695,7 +4748,14 @@
       "kor": "사철록(봄)",
       "eng": "deerling"
     },
-    "varieties": ["사철록(여름)", "사철록(가을)", "사철록(겨울)"]
+    "varieties": {
+      "kor": ["사철록(여름)", "사철록(가을)", "사철록(겨울)"],
+      "eng": [
+        "Deerling (Summer Form)",
+        "Deerling (Autumn Form)",
+        "Deerling (Winter Form)"
+      ]
+    }
   },
   {
     "no": 586,
@@ -4703,7 +4763,10 @@
       "kor": "바라철록(봄)",
       "eng": "sawsbuck"
     },
-    "varieties": ["바라철록(여름)", "바라철록(가을)", "바라철록(겨울)"]
+    "varieties": {
+      "kor": ["바라철록(여름)", "바라철록(가을)", "바라철록(겨울)"],
+      "eng": []
+    }
   },
   {
     "no": 587,
@@ -4711,7 +4774,7 @@
       "kor": "에몽가",
       "eng": "emolga"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 588,
@@ -4719,7 +4782,7 @@
       "kor": "딱정곤",
       "eng": "karrablast"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 589,
@@ -4727,7 +4790,7 @@
       "kor": "슈바르고",
       "eng": "escavalier"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 590,
@@ -4735,7 +4798,7 @@
       "kor": "깜놀버슬",
       "eng": "foongus"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 591,
@@ -4743,7 +4806,7 @@
       "kor": "뽀록나",
       "eng": "amoonguss"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 592,
@@ -4751,7 +4814,7 @@
       "kor": "탱그릴(수컷)",
       "eng": "frillish"
     },
-    "varieties": ["탱그릴(암컷)"]
+    "varieties": { "kor": ["탱그릴(암컷)"], "eng": [] }
   },
   {
     "no": 593,
@@ -4759,7 +4822,7 @@
       "kor": "탱탱겔(수컷)",
       "eng": "jellicent"
     },
-    "varieties": ["탱탱겔(암컷)"]
+    "varieties": { "kor": ["탱탱겔(암컷)"], "eng": [] }
   },
   {
     "no": 594,
@@ -4767,7 +4830,7 @@
       "kor": "맘복치",
       "eng": "alomomola"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 595,
@@ -4775,7 +4838,7 @@
       "kor": "파쪼옥",
       "eng": "joltik"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 596,
@@ -4783,7 +4846,7 @@
       "kor": "전툴라",
       "eng": "galvantula"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 597,
@@ -4791,7 +4854,7 @@
       "kor": "철시드",
       "eng": "ferroseed"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 598,
@@ -4799,7 +4862,7 @@
       "kor": "너트령",
       "eng": "ferrothorn"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 599,
@@ -4807,7 +4870,7 @@
       "kor": "기어르",
       "eng": "klink"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 600,
@@ -4815,7 +4878,7 @@
       "kor": "기기어르",
       "eng": "klang"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 601,
@@ -4823,7 +4886,7 @@
       "kor": "기기기어르",
       "eng": "klinklang"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 602,
@@ -4831,7 +4894,7 @@
       "kor": "저리어",
       "eng": "tynamo"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 603,
@@ -4839,7 +4902,7 @@
       "kor": "저리릴",
       "eng": "eelektrik"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 604,
@@ -4847,7 +4910,7 @@
       "kor": "저리더프",
       "eng": "eelektross"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 605,
@@ -4855,7 +4918,7 @@
       "kor": "리그레",
       "eng": "elgyem"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 606,
@@ -4863,7 +4926,7 @@
       "kor": "벰크",
       "eng": "beheeyem"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 607,
@@ -4871,7 +4934,7 @@
       "kor": "불켜미",
       "eng": "litwick"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 608,
@@ -4879,7 +4942,7 @@
       "kor": "램프라",
       "eng": "lampent"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 609,
@@ -4887,7 +4950,7 @@
       "kor": "샹델라",
       "eng": "chandelure"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 610,
@@ -4895,7 +4958,7 @@
       "kor": "터검니",
       "eng": "axew"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 611,
@@ -4903,7 +4966,7 @@
       "kor": "액슨도",
       "eng": "fraxure"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 612,
@@ -4911,7 +4974,7 @@
       "kor": "액스라이즈",
       "eng": "haxorus"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 613,
@@ -4919,7 +4982,7 @@
       "kor": "코고미",
       "eng": "cubchoo"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 614,
@@ -4927,7 +4990,7 @@
       "kor": "툰베어",
       "eng": "beartic"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 615,
@@ -4935,7 +4998,7 @@
       "kor": "프리지오",
       "eng": "cryogonal"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 616,
@@ -4943,7 +5006,7 @@
       "kor": "쪼마리",
       "eng": "shelmet"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 617,
@@ -4951,7 +5014,7 @@
       "kor": "어지리더",
       "eng": "accelgor"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 618,
@@ -4959,7 +5022,7 @@
       "kor": "메더",
       "eng": "stunfisk"
     },
-    "varieties": ["메더(가라르)"]
+    "varieties": { "kor": ["메더(가라르)"], "eng": [] }
   },
   {
     "no": 619,
@@ -4967,7 +5030,7 @@
       "kor": "비조푸",
       "eng": "mienfoo"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 620,
@@ -4975,7 +5038,7 @@
       "kor": "비조도",
       "eng": "mienshao"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 621,
@@ -4983,7 +5046,7 @@
       "kor": "크리만",
       "eng": "druddigon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 622,
@@ -4991,7 +5054,7 @@
       "kor": "골비람",
       "eng": "golett"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 623,
@@ -4999,7 +5062,7 @@
       "kor": "골루그",
       "eng": "golurk"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 624,
@@ -5007,7 +5070,7 @@
       "kor": "자망칼",
       "eng": "pawniard"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 625,
@@ -5015,7 +5078,7 @@
       "kor": "절각참",
       "eng": "bisharp"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 626,
@@ -5023,7 +5086,7 @@
       "kor": "버프론",
       "eng": "bouffalant"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 627,
@@ -5031,7 +5094,7 @@
       "kor": "수리둥보",
       "eng": "rufflet"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 628,
@@ -5039,7 +5102,7 @@
       "kor": "워글",
       "eng": "braviary"
     },
-    "varieties": ["워글(히스이)"]
+    "varieties": { "kor": ["워글(히스이)"], "eng": [] }
   },
   {
     "no": 629,
@@ -5047,7 +5110,7 @@
       "kor": "벌차이",
       "eng": "vullaby"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 630,
@@ -5055,7 +5118,7 @@
       "kor": "버랜지나",
       "eng": "mandibuzz"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 631,
@@ -5063,7 +5126,7 @@
       "kor": "앤티골",
       "eng": "heatmor"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 632,
@@ -5071,7 +5134,7 @@
       "kor": "아이앤트",
       "eng": "durant"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 633,
@@ -5079,7 +5142,7 @@
       "kor": "모노두",
       "eng": "deino"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 634,
@@ -5087,7 +5150,7 @@
       "kor": "디헤드",
       "eng": "zweilous"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 635,
@@ -5095,7 +5158,7 @@
       "kor": "삼삼드래",
       "eng": "hydreigon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 636,
@@ -5103,7 +5166,7 @@
       "kor": "활화르바",
       "eng": "larvesta"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 637,
@@ -5111,7 +5174,7 @@
       "kor": "불카모스",
       "eng": "volcarona"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 638,
@@ -5119,7 +5182,7 @@
       "kor": "코바르온",
       "eng": "cobalion"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 639,
@@ -5127,7 +5190,7 @@
       "kor": "테라키온",
       "eng": "terrakion"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 640,
@@ -5135,7 +5198,7 @@
       "kor": "비리디온",
       "eng": "virizion"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 641,
@@ -5143,7 +5206,10 @@
       "kor": "토네로스(화신폼)",
       "eng": "tornadus"
     },
-    "varieties": ["토네로스(영물폼)"]
+    "varieties": {
+      "kor": ["토네로스(영물폼)"],
+      "eng": ["Tornadus (Therian Forme)"]
+    }
   },
   {
     "no": 642,
@@ -5151,7 +5217,10 @@
       "kor": "볼트로스(화신폼)",
       "eng": "thundurus"
     },
-    "varieties": ["볼트로스(영물폼)"]
+    "varieties": {
+      "kor": ["볼트로스(영물폼)"],
+      "eng": ["Thundurus (Therian Forme)"]
+    }
   },
   {
     "no": 643,
@@ -5159,7 +5228,7 @@
       "kor": "레시라무",
       "eng": "reshiram"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 644,
@@ -5167,7 +5236,7 @@
       "kor": "제크로무",
       "eng": "zekrom"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 645,
@@ -5175,7 +5244,10 @@
       "kor": "랜드로스(화신폼)",
       "eng": "landorus"
     },
-    "varieties": ["랜드로스(영물폼)"]
+    "varieties": {
+      "kor": ["랜드로스(영물폼)"],
+      "eng": ["Landorus (Therian Forme)"]
+    }
   },
   {
     "no": 646,
@@ -5183,7 +5255,10 @@
       "kor": "큐레무(큐레무)",
       "eng": "kyurem"
     },
-    "varieties": ["큐레무(화이트큐레무)", "큐레무(블랙큐레무)"]
+    "varieties": {
+      "kor": ["큐레무(블랙큐레무)", "큐레무(화이트큐레무)"],
+      "eng": ["Kyurem (Black Kyurem)", "Kyurem (White Kyurem)"]
+    }
   },
   {
     "no": 647,
@@ -5191,7 +5266,10 @@
       "kor": "케르디오(평상시모습)",
       "eng": "keldeo"
     },
-    "varieties": ["케르디오(각오)"]
+    "varieties": {
+      "kor": ["케르디오(각오)"],
+      "eng": ["Keldeo (Resolute Form)"]
+    }
   },
   {
     "no": 648,
@@ -5199,7 +5277,10 @@
       "kor": "메로엣타(보이스폼)",
       "eng": "meloetta"
     },
-    "varieties": ["메로엣타(스텝폼)"]
+    "varieties": {
+      "kor": ["메로엣타(스텝폼)"],
+      "eng": ["Meloetta (Pirouette Forme)"]
+    }
   },
   {
     "no": 649,
@@ -5207,7 +5288,7 @@
       "kor": "게노세크트",
       "eng": "genesect"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 650,
@@ -5215,7 +5296,7 @@
       "kor": "도치마론",
       "eng": "chespin"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 651,
@@ -5223,7 +5304,7 @@
       "kor": "도치보구",
       "eng": "quilladin"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 652,
@@ -5231,7 +5312,7 @@
       "kor": "브리가론",
       "eng": "chesnaught"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 653,
@@ -5239,7 +5320,7 @@
       "kor": "푸호꼬",
       "eng": "fennekin"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 654,
@@ -5247,7 +5328,7 @@
       "kor": "테르나",
       "eng": "braixen"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 655,
@@ -5255,7 +5336,7 @@
       "kor": "마폭시",
       "eng": "delphox"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 656,
@@ -5263,7 +5344,7 @@
       "kor": "개구마르",
       "eng": "froakie"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 657,
@@ -5271,7 +5352,7 @@
       "kor": "개굴반장",
       "eng": "frogadier"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 658,
@@ -5279,7 +5360,7 @@
       "kor": "개굴닌자",
       "eng": "greninja"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 659,
@@ -5287,7 +5368,7 @@
       "kor": "파르빗",
       "eng": "bunnelby"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 660,
@@ -5295,7 +5376,7 @@
       "kor": "파르토",
       "eng": "diggersby"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 661,
@@ -5303,7 +5384,7 @@
       "kor": "화살꼬빈",
       "eng": "fletchling"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 662,
@@ -5311,7 +5392,7 @@
       "kor": "불화살빈",
       "eng": "fletchinder"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 663,
@@ -5319,7 +5400,7 @@
       "kor": "파이어로",
       "eng": "talonflame"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 664,
@@ -5327,7 +5408,7 @@
       "kor": "분이벌레",
       "eng": "scatterbug"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 665,
@@ -5335,7 +5416,7 @@
       "kor": "분떠도리",
       "eng": "spewpa"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 666,
@@ -5343,7 +5424,7 @@
       "kor": "비비용",
       "eng": "vivillon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 667,
@@ -5351,7 +5432,7 @@
       "kor": "레오꼬",
       "eng": "litleo"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 668,
@@ -5359,7 +5440,7 @@
       "kor": "화염레오(수컷)",
       "eng": "pyroar"
     },
-    "varieties": ["화염레오(암컷)"]
+    "varieties": { "kor": ["화염레오(암컷)"], "eng": [] }
   },
   {
     "no": 669,
@@ -5367,7 +5448,7 @@
       "kor": "플라베베",
       "eng": "flabebe"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 670,
@@ -5375,7 +5456,7 @@
       "kor": "플라엣테",
       "eng": "floette"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 671,
@@ -5383,7 +5464,7 @@
       "kor": "플라제스",
       "eng": "florges"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 672,
@@ -5391,7 +5472,7 @@
       "kor": "메이클",
       "eng": "skiddo"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 673,
@@ -5399,7 +5480,7 @@
       "kor": "고고트",
       "eng": "gogoat"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 674,
@@ -5407,7 +5488,7 @@
       "kor": "판짱",
       "eng": "pancham"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 675,
@@ -5415,7 +5496,7 @@
       "kor": "부란다",
       "eng": "pangoro"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 676,
@@ -5423,7 +5504,7 @@
       "kor": "트리미앙",
       "eng": "furfrou"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 677,
@@ -5431,7 +5512,7 @@
       "kor": "냐스퍼",
       "eng": "espurr"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 678,
@@ -5439,7 +5520,7 @@
       "kor": "냐오닉스(수컷)",
       "eng": "meowstic"
     },
-    "varieties": ["냐오닉스(암컷)"]
+    "varieties": { "kor": ["냐오닉스(암컷)"], "eng": [] }
   },
   {
     "no": 679,
@@ -5447,7 +5528,7 @@
       "kor": "단칼빙",
       "eng": "honedge"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 680,
@@ -5455,7 +5536,7 @@
       "kor": "쌍검킬",
       "eng": "doublade"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 681,
@@ -5463,7 +5544,10 @@
       "kor": "킬가르도(실드폼)",
       "eng": "aegislash"
     },
-    "varieties": ["킬가르도(블레이드폼)"]
+    "varieties": {
+      "kor": ["킬가르도(블레이드폼)"],
+      "eng": ["Aegislash (Blade Forme)"]
+    }
   },
   {
     "no": 682,
@@ -5471,7 +5555,7 @@
       "kor": "슈쁘",
       "eng": "spritzee"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 683,
@@ -5479,7 +5563,7 @@
       "kor": "프레프티르",
       "eng": "aromatisse"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 684,
@@ -5487,7 +5571,7 @@
       "kor": "나룸퍼프",
       "eng": "swirlix"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 685,
@@ -5495,7 +5579,7 @@
       "kor": "나루림",
       "eng": "slurpuff"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 686,
@@ -5503,7 +5587,7 @@
       "kor": "오케이징",
       "eng": "inkay"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 687,
@@ -5511,7 +5595,7 @@
       "kor": "칼라마네로",
       "eng": "malamar"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 688,
@@ -5519,7 +5603,7 @@
       "kor": "거북손손",
       "eng": "binacle"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 689,
@@ -5527,7 +5611,7 @@
       "kor": "거북손데스",
       "eng": "barbaracle"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 690,
@@ -5535,7 +5619,7 @@
       "kor": "수레기",
       "eng": "skrelp"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 691,
@@ -5543,7 +5627,7 @@
       "kor": "드래캄",
       "eng": "dragalge"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 692,
@@ -5551,7 +5635,7 @@
       "kor": "완철포",
       "eng": "clauncher"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 693,
@@ -5559,7 +5643,7 @@
       "kor": "블로스터",
       "eng": "clawitzer"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 694,
@@ -5567,7 +5651,7 @@
       "kor": "목도리키텔",
       "eng": "helioptile"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 695,
@@ -5575,7 +5659,7 @@
       "kor": "일레도리자드",
       "eng": "heliolisk"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 696,
@@ -5583,7 +5667,7 @@
       "kor": "티고라스",
       "eng": "tyrunt"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 697,
@@ -5591,7 +5675,7 @@
       "kor": "견고라스",
       "eng": "tyrantrum"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 698,
@@ -5599,7 +5683,7 @@
       "kor": "아마루스",
       "eng": "amaura"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 699,
@@ -5607,7 +5691,7 @@
       "kor": "아마루르가",
       "eng": "aurorus"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 700,
@@ -5615,7 +5699,7 @@
       "kor": "님피아",
       "eng": "sylveon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 701,
@@ -5623,7 +5707,7 @@
       "kor": "루차불",
       "eng": "hawlucha"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 702,
@@ -5631,7 +5715,7 @@
       "kor": "데덴네",
       "eng": "dedenne"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 703,
@@ -5639,7 +5723,7 @@
       "kor": "멜리시",
       "eng": "carbink"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 704,
@@ -5647,7 +5731,7 @@
       "kor": "미끄메라",
       "eng": "goomy"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 705,
@@ -5655,7 +5739,7 @@
       "kor": "미끄네일",
       "eng": "sliggoo"
     },
-    "varieties": ["미끄네일(히스이)"]
+    "varieties": { "kor": ["미끄네일(히스이)"], "eng": [] }
   },
   {
     "no": 706,
@@ -5663,7 +5747,7 @@
       "kor": "미끄래곤",
       "eng": "goodra"
     },
-    "varieties": ["미끄래곤(히스이)"]
+    "varieties": { "kor": ["미끄래곤(히스이)"], "eng": [] }
   },
   {
     "no": 707,
@@ -5671,7 +5755,7 @@
       "kor": "클레피",
       "eng": "klefki"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 708,
@@ -5679,7 +5763,7 @@
       "kor": "나목령",
       "eng": "phantump"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 709,
@@ -5687,7 +5771,7 @@
       "kor": "대로트",
       "eng": "trevenant"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 710,
@@ -5695,7 +5779,7 @@
       "kor": "호바귀",
       "eng": "pumpkaboo"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 711,
@@ -5703,7 +5787,7 @@
       "kor": "펌킨인",
       "eng": "gourgeist"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 712,
@@ -5711,7 +5795,7 @@
       "kor": "꽁어름",
       "eng": "bergmite"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 713,
@@ -5719,7 +5803,7 @@
       "kor": "크레베이스",
       "eng": "avalugg"
     },
-    "varieties": ["크레베이스(히스이)"]
+    "varieties": { "kor": ["크레베이스(히스이)"], "eng": [] }
   },
   {
     "no": 714,
@@ -5727,7 +5811,7 @@
       "kor": "음뱃",
       "eng": "noibat"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 715,
@@ -5735,7 +5819,7 @@
       "kor": "음번",
       "eng": "noivern"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 716,
@@ -5743,7 +5827,7 @@
       "kor": "제르네아스",
       "eng": "xerneas"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 717,
@@ -5751,7 +5835,7 @@
       "kor": "이벨타르",
       "eng": "yveltal"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 718,
@@ -5759,7 +5843,15 @@
       "kor": "지가르데(50%폼)",
       "eng": "zygarde"
     },
-    "varieties": ["지가르데(10%폼)", "지가르데(퍼펙트폼)"]
+    "varieties": {
+      "kor": [
+        "지가르데(10%폼)",
+        "지가르데(50%폼)",
+        "지가르데(퍼펙트폼)",
+        "(더미)"
+      ],
+      "eng": []
+    }
   },
   {
     "no": 719,
@@ -5767,7 +5859,7 @@
       "kor": "디안시",
       "eng": "diancie"
     },
-    "varieties": ["메가디안시"]
+    "varieties": { "kor": ["메가디안시"], "eng": [] }
   },
   {
     "no": 720,
@@ -5775,7 +5867,10 @@
       "kor": "후파(굴레에빠진후파)",
       "eng": "hoopa"
     },
-    "varieties": ["후파(굴레를벗어난후파)"]
+    "varieties": {
+      "kor": ["후파(굴레를벗어난후파)"],
+      "eng": ["Hoopa (Unbound)"]
+    }
   },
   {
     "no": 721,
@@ -5783,7 +5878,7 @@
       "kor": "볼케니온",
       "eng": "volcanion"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 722,
@@ -5791,7 +5886,7 @@
       "kor": "나몰빼미",
       "eng": "rowlet"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 723,
@@ -5799,7 +5894,7 @@
       "kor": "빼미스로우",
       "eng": "dartrix"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 724,
@@ -5807,7 +5902,7 @@
       "kor": "모크나이퍼",
       "eng": "decidueye"
     },
-    "varieties": ["모크나이퍼(히스이)"]
+    "varieties": { "kor": ["모크나이퍼(히스이)"], "eng": [] }
   },
   {
     "no": 725,
@@ -5815,7 +5910,7 @@
       "kor": "냐오불",
       "eng": "litten"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 726,
@@ -5823,7 +5918,7 @@
       "kor": "냐오히트",
       "eng": "torracat"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 727,
@@ -5831,7 +5926,7 @@
       "kor": "어흥염",
       "eng": "incineroar"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 728,
@@ -5839,7 +5934,7 @@
       "kor": "누리공",
       "eng": "popplio"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 729,
@@ -5847,7 +5942,7 @@
       "kor": "키요공",
       "eng": "brionne"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 730,
@@ -5855,7 +5950,7 @@
       "kor": "누리레느",
       "eng": "primarina"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 731,
@@ -5863,7 +5958,7 @@
       "kor": "콕코구리",
       "eng": "pikipek"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 732,
@@ -5871,7 +5966,7 @@
       "kor": "크라파",
       "eng": "trumbeak"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 733,
@@ -5879,7 +5974,7 @@
       "kor": "왕큰부리",
       "eng": "toucannon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 734,
@@ -5887,7 +5982,7 @@
       "kor": "영구스",
       "eng": "yungoos"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 735,
@@ -5895,7 +5990,7 @@
       "kor": "형사구스",
       "eng": "gumshoos"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 736,
@@ -5903,7 +5998,7 @@
       "kor": "턱지충이",
       "eng": "grubbin"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 737,
@@ -5911,7 +6006,7 @@
       "kor": "전지충이",
       "eng": "charjabug"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 738,
@@ -5919,7 +6014,7 @@
       "kor": "투구뿌논",
       "eng": "vikavolt"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 739,
@@ -5927,7 +6022,7 @@
       "kor": "오기지게",
       "eng": "crabrawler"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 740,
@@ -5935,7 +6030,7 @@
       "kor": "모단단게",
       "eng": "crabominable"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 741,
@@ -5943,11 +6038,18 @@
       "kor": "춤추새(이글이글스타일)",
       "eng": "oricorio"
     },
-    "varieties": [
-      "춤추새(파칙파칙스타일)",
-      "춤추새(훌라훌라스타일)",
-      "춤추새(하늘하늘스타일)"
-    ]
+    "varieties": {
+      "kor": [
+        "춤추새(파칙파칙스타일)",
+        "춤추새(훌라훌라스타일)",
+        "춤추새(하늘하늘스타일)"
+      ],
+      "eng": [
+        "Oricorio (Pom-Pom Style)",
+        "Oricorio (Pa'u Style)",
+        "Oricorio (Sensu Style)"
+      ]
+    }
   },
   {
     "no": 742,
@@ -5955,7 +6057,7 @@
       "kor": "에블리",
       "eng": "cutiefly"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 743,
@@ -5963,7 +6065,7 @@
       "kor": "에리본",
       "eng": "ribombee"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 744,
@@ -5971,7 +6073,7 @@
       "kor": "암멍이",
       "eng": "rockruff"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 745,
@@ -5979,7 +6081,10 @@
       "kor": "루가루암(한낮)",
       "eng": "lycanroc"
     },
-    "varieties": ["루가루암(한밤중)", "루가루암(황혼)"]
+    "varieties": {
+      "kor": ["루가루암(한밤중)", "루가루암(황혼)"],
+      "eng": ["Lycanroc (Midnight Form)", "Lycanroc (Dusk Form)"]
+    }
   },
   {
     "no": 746,
@@ -5987,7 +6092,10 @@
       "kor": "약어리(단독)",
       "eng": "wishiwashi"
     },
-    "varieties": ["약어리(군집)"]
+    "varieties": {
+      "kor": ["약어리(군집)"],
+      "eng": ["Yamask (Galarian Form)"]
+    }
   },
   {
     "no": 747,
@@ -5995,7 +6103,7 @@
       "kor": "시마사리",
       "eng": "mareanie"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 748,
@@ -6003,7 +6111,7 @@
       "kor": "더시마사리",
       "eng": "toxapex"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 749,
@@ -6011,7 +6119,7 @@
       "kor": "머드나기",
       "eng": "mudbray"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 750,
@@ -6019,7 +6127,7 @@
       "kor": "만마드",
       "eng": "mudsdale"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 751,
@@ -6027,7 +6135,7 @@
       "kor": "물거미",
       "eng": "dewpider"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 752,
@@ -6035,7 +6143,7 @@
       "kor": "깨비물거미",
       "eng": "araquanid"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 753,
@@ -6043,7 +6151,7 @@
       "kor": "짜랑랑",
       "eng": "fomantis"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 754,
@@ -6051,7 +6159,7 @@
       "kor": "라란티스",
       "eng": "lurantis"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 755,
@@ -6059,7 +6167,7 @@
       "kor": "자마슈",
       "eng": "morelull"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 756,
@@ -6067,7 +6175,7 @@
       "kor": "마셰이드",
       "eng": "shiinotic"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 757,
@@ -6075,7 +6183,7 @@
       "kor": "야도뇽",
       "eng": "salandit"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 758,
@@ -6083,7 +6191,7 @@
       "kor": "염뉴트",
       "eng": "salazzle"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 759,
@@ -6091,7 +6199,7 @@
       "kor": "포곰곰",
       "eng": "stufful"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 760,
@@ -6099,7 +6207,7 @@
       "kor": "이븐곰",
       "eng": "bewear"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 761,
@@ -6107,7 +6215,7 @@
       "kor": "달콤아",
       "eng": "bounsweet"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 762,
@@ -6115,7 +6223,7 @@
       "kor": "달무리나",
       "eng": "steenee"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 763,
@@ -6123,7 +6231,7 @@
       "kor": "달코퀸",
       "eng": "tsareena"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 764,
@@ -6131,7 +6239,7 @@
       "kor": "큐아링",
       "eng": "comfey"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 765,
@@ -6139,7 +6247,7 @@
       "kor": "하랑우탄",
       "eng": "oranguru"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 766,
@@ -6147,7 +6255,7 @@
       "kor": "내던숭이",
       "eng": "passimian"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 767,
@@ -6155,7 +6263,7 @@
       "kor": "꼬시레",
       "eng": "wimpod"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 768,
@@ -6163,7 +6271,7 @@
       "kor": "갑주무사",
       "eng": "golisopod"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 769,
@@ -6171,7 +6279,7 @@
       "kor": "모래꿍",
       "eng": "sandygast"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 770,
@@ -6179,7 +6287,7 @@
       "kor": "모래성이당",
       "eng": "palossand"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 771,
@@ -6187,7 +6295,7 @@
       "kor": "해무기",
       "eng": "pyukumuku"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 772,
@@ -6195,7 +6303,7 @@
       "kor": "타입:널",
       "eng": "type-null"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 773,
@@ -6203,7 +6311,7 @@
       "kor": "실버디(타입:노말)",
       "eng": "silvally"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 774,
@@ -6211,7 +6319,7 @@
       "kor": "메테노(유성)",
       "eng": "minior"
     },
-    "varieties": ["메테노(빨간색코어)"]
+    "varieties": { "kor": ["메테노(빨간색코어)"], "eng": [] }
   },
   {
     "no": 775,
@@ -6219,7 +6327,7 @@
       "kor": "자말라",
       "eng": "komala"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 776,
@@ -6227,7 +6335,7 @@
       "kor": "폭거북스",
       "eng": "turtonator"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 777,
@@ -6235,7 +6343,7 @@
       "kor": "토게데마루",
       "eng": "togedemaru"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 778,
@@ -6243,7 +6351,7 @@
       "kor": "따라큐(둔갑한모습)",
       "eng": "mimikyu"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 779,
@@ -6251,7 +6359,7 @@
       "kor": "치갈기",
       "eng": "bruxish"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 780,
@@ -6259,7 +6367,7 @@
       "kor": "할비롱",
       "eng": "drampa"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 781,
@@ -6267,7 +6375,7 @@
       "kor": "타타륜",
       "eng": "dhelmise"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 782,
@@ -6275,7 +6383,7 @@
       "kor": "짜랑꼬",
       "eng": "jangmo-o"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 783,
@@ -6283,7 +6391,7 @@
       "kor": "짜랑고우",
       "eng": "hakamo-o"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 784,
@@ -6291,7 +6399,7 @@
       "kor": "짜랑고우거",
       "eng": "kommo-o"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 785,
@@ -6299,7 +6407,7 @@
       "kor": "카푸꼬꼬꼭",
       "eng": "tapu-koko"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 786,
@@ -6307,7 +6415,7 @@
       "kor": "카푸나비나",
       "eng": "tapu-lele"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 787,
@@ -6315,7 +6423,7 @@
       "kor": "카푸브루루",
       "eng": "tapu-bulu"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 788,
@@ -6323,7 +6431,7 @@
       "kor": "카푸느지느",
       "eng": "tapu-fini"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 789,
@@ -6331,7 +6439,7 @@
       "kor": "코스모그",
       "eng": "cosmog"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 790,
@@ -6339,7 +6447,7 @@
       "kor": "코스모움",
       "eng": "cosmoem"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 791,
@@ -6347,7 +6455,7 @@
       "kor": "솔가레오",
       "eng": "solgaleo"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 792,
@@ -6355,7 +6463,7 @@
       "kor": "루나아라",
       "eng": "lunala"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 793,
@@ -6363,7 +6471,7 @@
       "kor": "텅비드",
       "eng": "nihilego"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 794,
@@ -6371,7 +6479,7 @@
       "kor": "매시붕",
       "eng": "buzzwole"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 795,
@@ -6379,7 +6487,7 @@
       "kor": "페로코체",
       "eng": "pheromosa"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 796,
@@ -6387,7 +6495,7 @@
       "kor": "전수목",
       "eng": "xurkitree"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 797,
@@ -6395,7 +6503,7 @@
       "kor": "철화구야",
       "eng": "celesteela"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 798,
@@ -6403,7 +6511,7 @@
       "kor": "종이신도",
       "eng": "kartana"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 799,
@@ -6411,7 +6519,7 @@
       "kor": "악식킹",
       "eng": "guzzlord"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 800,
@@ -6419,11 +6527,18 @@
       "kor": "네크로즈마",
       "eng": "necrozma"
     },
-    "varieties": [
-      "네크로즈마(황혼의갈기)",
-      "네크로즈마(새벽의날개)",
-      "네크로즈마(울트라네크로즈마)"
-    ]
+    "varieties": {
+      "kor": [
+        "네크로즈마(황혼의갈기)",
+        "네크로즈마(새벽의날개)",
+        "네크로즈마(울트라네크로즈마)"
+      ],
+      "eng": [
+        "Necrozma (Dusk Mane)",
+        "Necrozma (Dawn Wings)",
+        "Necrozma (Ultra Necrozma)"
+      ]
+    }
   },
   {
     "no": 801,
@@ -6431,7 +6546,7 @@
       "kor": "마기아나",
       "eng": "magearna"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 802,
@@ -6439,7 +6554,7 @@
       "kor": "마샤도",
       "eng": "marshadow"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 803,
@@ -6447,7 +6562,7 @@
       "kor": "베베놈",
       "eng": "poipole"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 804,
@@ -6455,7 +6570,7 @@
       "kor": "아고용",
       "eng": "naganadel"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 805,
@@ -6463,7 +6578,7 @@
       "kor": "차곡차곡",
       "eng": "stakataka"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 806,
@@ -6471,7 +6586,7 @@
       "kor": "두파팡",
       "eng": "blacephalon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 807,
@@ -6479,7 +6594,7 @@
       "kor": "제라오라",
       "eng": "zeraora"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 808,
@@ -6487,7 +6602,7 @@
       "kor": "멜탄",
       "eng": "meltan"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 809,
@@ -6495,7 +6610,7 @@
       "kor": "멜메탈",
       "eng": "melmetal"
     },
-    "varieties": ["멜메탈(거다이맥스)"]
+    "varieties": { "kor": ["멜메탈(거다이맥스)"], "eng": [] }
   },
   {
     "no": 810,
@@ -6503,7 +6618,7 @@
       "kor": "흥나숭",
       "eng": "grookey"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 811,
@@ -6511,7 +6626,7 @@
       "kor": "채키몽",
       "eng": "thwackey"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 812,
@@ -6519,7 +6634,7 @@
       "kor": "고릴타",
       "eng": "rillaboom"
     },
-    "varieties": ["고릴타(거다이맥스)"]
+    "varieties": { "kor": ["고릴타(거다이맥스)"], "eng": [] }
   },
   {
     "no": 813,
@@ -6527,7 +6642,7 @@
       "kor": "염버니",
       "eng": "scorbunny"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 814,
@@ -6535,7 +6650,7 @@
       "kor": "래비풋",
       "eng": "raboot"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 815,
@@ -6543,7 +6658,7 @@
       "kor": "에이스번",
       "eng": "cinderace"
     },
-    "varieties": ["에이스번(거다이맥스)"]
+    "varieties": { "kor": ["에이스번(거다이맥스)"], "eng": [] }
   },
   {
     "no": 816,
@@ -6551,7 +6666,7 @@
       "kor": "울머기",
       "eng": "sobble"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 817,
@@ -6559,7 +6674,7 @@
       "kor": "누겔레온",
       "eng": "drizzile"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 818,
@@ -6567,7 +6682,7 @@
       "kor": "인텔리레온",
       "eng": "inteleon"
     },
-    "varieties": ["인텔리레온(거다이맥스)"]
+    "varieties": { "kor": ["인텔리레온(거다이맥스)"], "eng": [] }
   },
   {
     "no": 819,
@@ -6575,7 +6690,7 @@
       "kor": "탐리스",
       "eng": "skwovet"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 820,
@@ -6583,7 +6698,7 @@
       "kor": "요씽리스",
       "eng": "greedent"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 821,
@@ -6591,7 +6706,7 @@
       "kor": "파라꼬",
       "eng": "rookidee"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 822,
@@ -6599,7 +6714,7 @@
       "kor": "파크로우",
       "eng": "corvisquire"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 823,
@@ -6607,7 +6722,7 @@
       "kor": "아머까오",
       "eng": "corviknight"
     },
-    "varieties": ["아머까오(거다이맥스)"]
+    "varieties": { "kor": ["아머까오(거다이맥스)"], "eng": [] }
   },
   {
     "no": 824,
@@ -6615,7 +6730,7 @@
       "kor": "두루지벌레",
       "eng": "blipbug"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 825,
@@ -6623,7 +6738,7 @@
       "kor": "레돔벌레",
       "eng": "dottler"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 826,
@@ -6631,7 +6746,7 @@
       "kor": "이올브",
       "eng": "orbeetle"
     },
-    "varieties": ["이올브(거다이맥스)"]
+    "varieties": { "kor": ["이올브(거다이맥스)"], "eng": [] }
   },
   {
     "no": 827,
@@ -6639,7 +6754,7 @@
       "kor": "훔처우",
       "eng": "nickit"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 828,
@@ -6647,7 +6762,7 @@
       "kor": "폭슬라이",
       "eng": "thievul"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 829,
@@ -6655,7 +6770,7 @@
       "kor": "꼬모카",
       "eng": "gossifleur"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 830,
@@ -6663,7 +6778,7 @@
       "kor": "백솜모카",
       "eng": "eldegoss"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 831,
@@ -6671,7 +6786,7 @@
       "kor": "우르",
       "eng": "wooloo"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 832,
@@ -6679,7 +6794,7 @@
       "kor": "배우르",
       "eng": "dubwool"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 833,
@@ -6687,7 +6802,7 @@
       "kor": "깨물부기",
       "eng": "chewtle"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 834,
@@ -6695,7 +6810,7 @@
       "kor": "갈가부기",
       "eng": "drednaw"
     },
-    "varieties": ["갈가부기(거다이맥스)"]
+    "varieties": { "kor": ["갈가부기(거다이맥스)"], "eng": [] }
   },
   {
     "no": 835,
@@ -6703,7 +6818,7 @@
       "kor": "멍파치",
       "eng": "yamper"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 836,
@@ -6711,7 +6826,7 @@
       "kor": "펄스멍",
       "eng": "boltund"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 837,
@@ -6719,7 +6834,7 @@
       "kor": "탄동",
       "eng": "rolycoly"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 838,
@@ -6727,7 +6842,7 @@
       "kor": "탄차곤",
       "eng": "carkol"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 839,
@@ -6735,7 +6850,7 @@
       "kor": "석탄산",
       "eng": "coalossal"
     },
-    "varieties": ["석탄산(거다이맥스)"]
+    "varieties": { "kor": ["석탄산(거다이맥스)"], "eng": [] }
   },
   {
     "no": 840,
@@ -6743,7 +6858,7 @@
       "kor": "과사삭벌레",
       "eng": "applin"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 841,
@@ -6751,7 +6866,7 @@
       "kor": "애프룡",
       "eng": "flapple"
     },
-    "varieties": ["애프룡(거다이맥스)"]
+    "varieties": { "kor": ["애프룡(거다이맥스)"], "eng": [] }
   },
   {
     "no": 842,
@@ -6759,7 +6874,7 @@
       "kor": "단지래플",
       "eng": "appletun"
     },
-    "varieties": ["단지래플(거다이맥스)"]
+    "varieties": { "kor": ["단지래플(거다이맥스)"], "eng": [] }
   },
   {
     "no": 843,
@@ -6767,7 +6882,7 @@
       "kor": "모래뱀",
       "eng": "silicobra"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 844,
@@ -6775,7 +6890,7 @@
       "kor": "사다이사",
       "eng": "sandaconda"
     },
-    "varieties": ["사다이사(거다이맥스)"]
+    "varieties": { "kor": ["사다이사(거다이맥스)"], "eng": [] }
   },
   {
     "no": 845,
@@ -6783,7 +6898,7 @@
       "kor": "윽우지",
       "eng": "cramorant"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 846,
@@ -6791,7 +6906,7 @@
       "kor": "찌로꼬치",
       "eng": "arrokuda"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 847,
@@ -6799,7 +6914,7 @@
       "kor": "꼬치조",
       "eng": "barraskewda"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 848,
@@ -6807,7 +6922,7 @@
       "kor": "일레즌",
       "eng": "toxel"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 849,
@@ -6815,11 +6930,14 @@
       "kor": "스트린더(하이한모습)",
       "eng": "toxtricity"
     },
-    "varieties": [
-      "스트린더(로우한모습)",
-      "스트린더(하이한모습/거다이맥스)",
-      "스트린더(로우한모습/거다이맥스)"
-    ]
+    "varieties": {
+      "kor": [
+        "스트린더(로우한모습)",
+        "스트린더(하이한모습/거다이맥스)",
+        "스트린더(로우한모습/거다이맥스)"
+      ],
+      "eng": []
+    }
   },
   {
     "no": 850,
@@ -6827,7 +6945,7 @@
       "kor": "태우지네",
       "eng": "sizzlipede"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 851,
@@ -6835,7 +6953,7 @@
       "kor": "다태우지네",
       "eng": "centiskorch"
     },
-    "varieties": ["다태우지네(거다이맥스)"]
+    "varieties": { "kor": ["다태우지네(거다이맥스)"], "eng": [] }
   },
   {
     "no": 852,
@@ -6843,7 +6961,7 @@
       "kor": "때때무노",
       "eng": "clobbopus"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 853,
@@ -6851,7 +6969,7 @@
       "kor": "케오퍼스",
       "eng": "grapploct"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 854,
@@ -6859,7 +6977,7 @@
       "kor": "데인차(위작폼)",
       "eng": "sinistea"
     },
-    "varieties": ["데인차(진작폼)"]
+    "varieties": { "kor": ["데인차(진작폼)"], "eng": [] }
   },
   {
     "no": 855,
@@ -6867,7 +6985,7 @@
       "kor": "포트데스(위작폼)",
       "eng": "polteageist"
     },
-    "varieties": ["포트데스(진작폼)"]
+    "varieties": { "kor": ["포트데스(진작폼)"], "eng": [] }
   },
   {
     "no": 856,
@@ -6875,7 +6993,7 @@
       "kor": "몸지브림",
       "eng": "hatenna"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 857,
@@ -6883,7 +7001,7 @@
       "kor": "손지브림",
       "eng": "hattrem"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 858,
@@ -6891,7 +7009,7 @@
       "kor": "브리무음",
       "eng": "hatterene"
     },
-    "varieties": ["브리무음(거다이맥스)"]
+    "varieties": { "kor": ["브리무음(거다이맥스)"], "eng": [] }
   },
   {
     "no": 859,
@@ -6899,7 +7017,7 @@
       "kor": "메롱꿍",
       "eng": "impidimp"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 860,
@@ -6907,7 +7025,7 @@
       "kor": "쏘겨모",
       "eng": "morgrem"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 861,
@@ -6915,7 +7033,7 @@
       "kor": "오롱털",
       "eng": "grimmsnarl"
     },
-    "varieties": ["오롱털(거다이맥스)"]
+    "varieties": { "kor": ["오롱털(거다이맥스)"], "eng": [] }
   },
   {
     "no": 862,
@@ -6923,7 +7041,7 @@
       "kor": "가로막구리",
       "eng": "obstagoon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 863,
@@ -6931,7 +7049,7 @@
       "kor": "나이킹",
       "eng": "perrserker"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 864,
@@ -6939,7 +7057,7 @@
       "kor": "산호르곤",
       "eng": "cursola"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 865,
@@ -6947,7 +7065,7 @@
       "kor": "창파나이트",
       "eng": "sirfetchd"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 866,
@@ -6955,7 +7073,7 @@
       "kor": "마임꽁꽁",
       "eng": "mr-rime"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 867,
@@ -6963,7 +7081,7 @@
       "kor": "데스판",
       "eng": "runerigus"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 868,
@@ -6971,7 +7089,7 @@
       "kor": "마빌크",
       "eng": "milcery"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 869,
@@ -6979,7 +7097,7 @@
       "kor": "마휘핑",
       "eng": "alcremie"
     },
-    "varieties": ["마휘핑(거다이맥스)"]
+    "varieties": { "kor": ["마휘핑(거다이맥스)"], "eng": [] }
   },
   {
     "no": 870,
@@ -6987,7 +7105,7 @@
       "kor": "대여르",
       "eng": "falinks"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 871,
@@ -6995,7 +7113,7 @@
       "kor": "찌르성게",
       "eng": "pincurchin"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 872,
@@ -7003,7 +7121,7 @@
       "kor": "누니머기",
       "eng": "snom"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 873,
@@ -7011,7 +7129,7 @@
       "kor": "모스노우",
       "eng": "frosmoth"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 874,
@@ -7019,7 +7137,7 @@
       "kor": "돌헨진",
       "eng": "stonjourner"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 875,
@@ -7027,7 +7145,10 @@
       "kor": "빙큐보(아이스페이스)",
       "eng": "eiscue"
     },
-    "varieties": ["빙큐보(나이스페이스)"]
+    "varieties": {
+      "kor": ["빙큐보(나이스페이스)"],
+      "eng": ["Eiscue (Noice Face)"]
+    }
   },
   {
     "no": 876,
@@ -7035,7 +7156,7 @@
       "kor": "에써르(수컷)",
       "eng": "indeedee"
     },
-    "varieties": ["에써르(암컷)"]
+    "varieties": { "kor": ["에써르(암컷)"], "eng": [] }
   },
   {
     "no": 877,
@@ -7043,7 +7164,10 @@
       "kor": "모르페코(배부른모양)",
       "eng": "morpeko"
     },
-    "varieties": ["모르페코(배고픈모양)"]
+    "varieties": {
+      "kor": ["모르페코(배고픈모양)"],
+      "eng": ["Morpeko (Full Belly Mode)"]
+    }
   },
   {
     "no": 878,
@@ -7051,7 +7175,7 @@
       "kor": "끼리동",
       "eng": "cufant"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 879,
@@ -7059,7 +7183,7 @@
       "kor": "대왕끼리동",
       "eng": "copperajah"
     },
-    "varieties": ["대왕끼리동(거다이맥스)"]
+    "varieties": { "kor": ["대왕끼리동(거다이맥스)"], "eng": [] }
   },
   {
     "no": 880,
@@ -7067,7 +7191,7 @@
       "kor": "파치래곤",
       "eng": "dracozolt"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 881,
@@ -7075,7 +7199,7 @@
       "kor": "파치르돈",
       "eng": "arctozolt"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 882,
@@ -7083,7 +7207,7 @@
       "kor": "어래곤",
       "eng": "dracovish"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 883,
@@ -7091,7 +7215,7 @@
       "kor": "어치르돈",
       "eng": "arctovish"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 884,
@@ -7099,7 +7223,7 @@
       "kor": "두랄루돈",
       "eng": "duraludon"
     },
-    "varieties": ["두랄루돈(거다이맥스)"]
+    "varieties": { "kor": ["두랄루돈(거다이맥스)"], "eng": [] }
   },
   {
     "no": 885,
@@ -7107,7 +7231,7 @@
       "kor": "드라꼰",
       "eng": "dreepy"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 886,
@@ -7115,7 +7239,7 @@
       "kor": "드래런치",
       "eng": "drakloak"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 887,
@@ -7123,7 +7247,7 @@
       "kor": "드래펄트",
       "eng": "dragapult"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 888,
@@ -7131,7 +7255,10 @@
       "kor": "자시안(역전의용사)",
       "eng": "zacian"
     },
-    "varieties": ["자시안(검왕)"]
+    "varieties": {
+      "kor": ["자시안(검왕)"],
+      "eng": ["Zacian (Crowned Sword)"]
+    }
   },
   {
     "no": 889,
@@ -7139,7 +7266,10 @@
       "kor": "자마젠타(역전의용사)",
       "eng": "zamazenta"
     },
-    "varieties": ["자마젠타(방패왕)"]
+    "varieties": {
+      "kor": ["자마젠타(방패왕)"],
+      "eng": ["Zamazenta (Crowned Shield)"]
+    }
   },
   {
     "no": 890,
@@ -7147,7 +7277,7 @@
       "kor": "무한다이노",
       "eng": "eternatus"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 891,
@@ -7155,7 +7285,7 @@
       "kor": "치고마",
       "eng": "kubfu"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 892,
@@ -7163,11 +7293,14 @@
       "kor": "우라오스(일격의태세)",
       "eng": "urshifu"
     },
-    "varieties": [
-      "우라오스(연격의태세)",
-      "우라오스(일격의태세/거다이맥스)",
-      "우라오스(연격의태세/거다이맥스)"
-    ]
+    "varieties": {
+      "kor": [
+        "우라오스(연격의태세)",
+        "우라오스(일격의태세/거다이맥스)",
+        "우라오스(연격의태세/거다이맥스)"
+      ],
+      "eng": []
+    }
   },
   {
     "no": 893,
@@ -7175,7 +7308,7 @@
       "kor": "자루도",
       "eng": "zarude"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 894,
@@ -7183,7 +7316,7 @@
       "kor": "레지에레키",
       "eng": "regieleki"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 895,
@@ -7191,7 +7324,7 @@
       "kor": "레지드래고",
       "eng": "regidrago"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 896,
@@ -7199,7 +7332,7 @@
       "kor": "블리자포스",
       "eng": "glastrier"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 897,
@@ -7207,7 +7340,7 @@
       "kor": "레이스포스",
       "eng": "spectrier"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 898,
@@ -7215,7 +7348,10 @@
       "kor": "버드렉스",
       "eng": "calyrex"
     },
-    "varieties": ["버드렉스(백마탄모습)", "버드렉스(흑마탄모습)"]
+    "varieties": {
+      "kor": ["버드렉스(백마탄모습)", "버드렉스(흑마탄모습)"],
+      "eng": ["Spectrier (Spectrier Form)", "Spectrier (Shadow Rider Form)"]
+    }
   },
   {
     "no": 899,
@@ -7223,7 +7359,7 @@
       "kor": "신비록",
       "eng": "wyrdeer"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 900,
@@ -7231,7 +7367,7 @@
       "kor": "사마자르",
       "eng": "kleavor"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 901,
@@ -7239,7 +7375,10 @@
       "kor": "다투곰",
       "eng": "ursaluna"
     },
-    "varieties": ["다투곰(붉은달)"]
+    "varieties": {
+      "kor": ["다투곰(붉은달)"],
+      "eng": ["Bewear (Shadow Form)"]
+    }
   },
   {
     "no": 902,
@@ -7247,7 +7386,7 @@
       "kor": "대쓰여너(수컷)",
       "eng": "basculegion"
     },
-    "varieties": ["대쓰여너(암컷)"]
+    "varieties": { "kor": ["대쓰여너(암컷)"], "eng": [] }
   },
   {
     "no": 903,
@@ -7255,7 +7394,7 @@
       "kor": "포푸니크",
       "eng": "sneasler"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 904,
@@ -7263,7 +7402,7 @@
       "kor": "장침바루",
       "eng": "overqwil"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 905,
@@ -7271,7 +7410,10 @@
       "kor": "러브로스(화신폼)",
       "eng": "enamorus"
     },
-    "varieties": ["러브로스(영물폼)"]
+    "varieties": {
+      "kor": ["러브로스(영물폼)"],
+      "eng": ["Loveross (Therian Forme)"]
+    }
   },
   {
     "no": 906,
@@ -7279,7 +7421,7 @@
       "kor": "나오하",
       "eng": "sprigatito"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 907,
@@ -7287,7 +7429,7 @@
       "kor": "나로테",
       "eng": "floragato"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 908,
@@ -7295,7 +7437,7 @@
       "kor": "마스카나",
       "eng": "meowscarada"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 909,
@@ -7303,7 +7445,7 @@
       "kor": "뜨아거",
       "eng": "fuecoco"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 910,
@@ -7311,7 +7453,7 @@
       "kor": "악뜨거",
       "eng": "crocalor"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 911,
@@ -7319,7 +7461,7 @@
       "kor": "라우드본",
       "eng": "skeledirge"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 912,
@@ -7327,7 +7469,7 @@
       "kor": "꾸왁스",
       "eng": "quaxly"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 913,
@@ -7335,7 +7477,7 @@
       "kor": "아꾸왁",
       "eng": "quaxwell"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 914,
@@ -7343,7 +7485,7 @@
       "kor": "웨이니발",
       "eng": "quaquaval"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 915,
@@ -7351,7 +7493,7 @@
       "kor": "맛보돈",
       "eng": "lechonk"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 916,
@@ -7359,7 +7501,7 @@
       "kor": "퍼퓨돈(수컷)",
       "eng": "oinkologne"
     },
-    "varieties": ["퍼퓨돈(암컷)"]
+    "varieties": { "kor": ["퍼퓨돈(암컷)"], "eng": [] }
   },
   {
     "no": 917,
@@ -7367,7 +7509,7 @@
       "kor": "타랜툴라",
       "eng": "tarountula"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 918,
@@ -7375,7 +7517,7 @@
       "kor": "트래피더",
       "eng": "spidops"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 919,
@@ -7383,7 +7525,7 @@
       "kor": "콩알뚜기",
       "eng": "nymble"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 920,
@@ -7391,7 +7533,7 @@
       "kor": "엑스레그",
       "eng": "lokix"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 921,
@@ -7399,7 +7541,7 @@
       "kor": "빠모",
       "eng": "pawmi"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 922,
@@ -7407,7 +7549,7 @@
       "kor": "빠모트",
       "eng": "pawmo"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 923,
@@ -7415,7 +7557,7 @@
       "kor": "빠르모트",
       "eng": "pawmot"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 924,
@@ -7423,7 +7565,7 @@
       "kor": "두리쥐",
       "eng": "tandemaus"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 925,
@@ -7431,7 +7573,10 @@
       "kor": "파밀리쥐(세식구)",
       "eng": "maushold"
     },
-    "varieties": ["파밀리쥐(네식구)"]
+    "varieties": {
+      "kor": ["파밀리쥐(네식구)"],
+      "eng": ["Pawmi (Four Members)"]
+    }
   },
   {
     "no": 926,
@@ -7439,7 +7584,7 @@
       "kor": "쫀도기",
       "eng": "fidough"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 927,
@@ -7447,7 +7592,7 @@
       "kor": "바우첼",
       "eng": "dachsbun"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 928,
@@ -7455,7 +7600,7 @@
       "kor": "미니브",
       "eng": "smoliv"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 929,
@@ -7463,7 +7608,7 @@
       "kor": "올리뇨",
       "eng": "dolliv"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 930,
@@ -7471,7 +7616,7 @@
       "kor": "올리르바",
       "eng": "arboliva"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 931,
@@ -7479,7 +7624,14 @@
       "kor": "시비꼬(그린페더)",
       "eng": "squawkabilly"
     },
-    "varieties": ["시비꼬(블루페더)", "시비꼬(옐로페더)", "시비꼬(화이트페더)"]
+    "varieties": {
+      "kor": ["시비꼬(블루페더)", "시비꼬(옐로페더)", "시비꼬(화이트페더)"],
+      "eng": [
+        "Squawkabilly (Blue-Feather)",
+        "Squawkabilly (Yellow-Feather)",
+        "Squawkabilly (White-Feather)"
+      ]
+    }
   },
   {
     "no": 932,
@@ -7487,7 +7639,7 @@
       "kor": "베베솔트",
       "eng": "nacli"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 933,
@@ -7495,7 +7647,7 @@
       "kor": "스태솔트",
       "eng": "naclstack"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 934,
@@ -7503,7 +7655,7 @@
       "kor": "콜로솔트",
       "eng": "garganacl"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 935,
@@ -7511,7 +7663,7 @@
       "kor": "카르본",
       "eng": "charcadet"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 936,
@@ -7519,7 +7671,7 @@
       "kor": "카디나르마",
       "eng": "armarouge"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 937,
@@ -7527,7 +7679,7 @@
       "kor": "파라블레이즈",
       "eng": "ceruledge"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 938,
@@ -7535,7 +7687,7 @@
       "kor": "빈나두",
       "eng": "tadbulb"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 939,
@@ -7543,7 +7695,7 @@
       "kor": "찌리배리",
       "eng": "bellibolt"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 940,
@@ -7551,7 +7703,7 @@
       "kor": "찌리비",
       "eng": "wattrel"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 941,
@@ -7559,7 +7711,7 @@
       "kor": "찌리비크",
       "eng": "kilowattrel"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 942,
@@ -7567,7 +7719,7 @@
       "kor": "오라티프",
       "eng": "maschiff"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 943,
@@ -7575,7 +7727,7 @@
       "kor": "마피티프",
       "eng": "mabosstiff"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 944,
@@ -7583,7 +7735,7 @@
       "kor": "땃쭈르",
       "eng": "shroodle"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 945,
@@ -7591,7 +7743,7 @@
       "kor": "태깅구르",
       "eng": "grafaiai"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 946,
@@ -7599,7 +7751,7 @@
       "kor": "그푸리",
       "eng": "bramblin"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 947,
@@ -7607,7 +7759,7 @@
       "kor": "공푸리",
       "eng": "brambleghast"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 948,
@@ -7615,7 +7767,7 @@
       "kor": "들눈해",
       "eng": "toedscool"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 949,
@@ -7623,7 +7775,7 @@
       "kor": "육파리",
       "eng": "toedscruel"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 950,
@@ -7631,7 +7783,7 @@
       "kor": "절벼게",
       "eng": "klawf"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 951,
@@ -7639,7 +7791,7 @@
       "kor": "캡싸이",
       "eng": "capsakid"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 952,
@@ -7647,7 +7799,7 @@
       "kor": "스코빌런",
       "eng": "scovillain"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 953,
@@ -7655,7 +7807,7 @@
       "kor": "구르데",
       "eng": "rellor"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 954,
@@ -7663,7 +7815,7 @@
       "kor": "베라카스",
       "eng": "rabsca"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 955,
@@ -7671,7 +7823,7 @@
       "kor": "하느라기",
       "eng": "flittle"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 956,
@@ -7679,7 +7831,7 @@
       "kor": "클레스퍼트라",
       "eng": "espathra"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 957,
@@ -7687,7 +7839,7 @@
       "kor": "어리짱",
       "eng": "tinkatink"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 958,
@@ -7695,7 +7847,7 @@
       "kor": "벼리짱",
       "eng": "tinkatuff"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 959,
@@ -7703,7 +7855,7 @@
       "kor": "두드리짱",
       "eng": "tinkaton"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 960,
@@ -7711,7 +7863,7 @@
       "kor": "바다그다",
       "eng": "wiglett"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 961,
@@ -7719,7 +7871,7 @@
       "kor": "바닥트리오",
       "eng": "wugtrio"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 962,
@@ -7727,7 +7879,7 @@
       "kor": "떨구새",
       "eng": "bombirdier"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 963,
@@ -7735,7 +7887,7 @@
       "kor": "맨돌핀",
       "eng": "finizen"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 964,
@@ -7743,7 +7895,10 @@
       "kor": "돌핀맨(나이브폼)",
       "eng": "palafin"
     },
-    "varieties": ["돌핀맨(마이티폼)"]
+    "varieties": {
+      "kor": ["돌핀맨(마이티폼)"],
+      "eng": ["Dudunsparce (Mighty Form)"]
+    }
   },
   {
     "no": 965,
@@ -7751,7 +7906,7 @@
       "kor": "부르롱",
       "eng": "varoom"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 966,
@@ -7759,7 +7914,7 @@
       "kor": "부르르룸",
       "eng": "revavroom"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 967,
@@ -7767,7 +7922,7 @@
       "kor": "모토마",
       "eng": "cyclizar"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 968,
@@ -7775,7 +7930,7 @@
       "kor": "꿈트렁",
       "eng": "orthworm"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 969,
@@ -7783,7 +7938,7 @@
       "kor": "초롱순",
       "eng": "glimmet"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 970,
@@ -7791,7 +7946,7 @@
       "kor": "킬라플로르",
       "eng": "glimmora"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 971,
@@ -7799,7 +7954,7 @@
       "kor": "망망이",
       "eng": "greavard"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 972,
@@ -7807,7 +7962,7 @@
       "kor": "묘두기",
       "eng": "houndstone"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 973,
@@ -7815,7 +7970,7 @@
       "kor": "꼬이밍고",
       "eng": "flamigo"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 974,
@@ -7823,7 +7978,7 @@
       "kor": "터벅고래",
       "eng": "cetoddle"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 975,
@@ -7831,7 +7986,7 @@
       "kor": "우락고래",
       "eng": "cetitan"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 976,
@@ -7839,7 +7994,7 @@
       "kor": "가비루사",
       "eng": "veluza"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 977,
@@ -7847,7 +8002,7 @@
       "kor": "어써러셔",
       "eng": "dondozo"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 978,
@@ -7855,7 +8010,10 @@
       "kor": "싸리용(젖힌모습)",
       "eng": "tatsugiri"
     },
-    "varieties": ["싸리용(늘어진모습)", "싸리용(뻗은모습)"]
+    "varieties": {
+      "kor": ["싸리용(늘어진모습)", "싸리용(뻗은모습)"],
+      "eng": ["Flittle (Relaxed Form)", "Flittle (Stretching Form)"]
+    }
   },
   {
     "no": 979,
@@ -7863,7 +8021,7 @@
       "kor": "저승갓숭",
       "eng": "annihilape"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 980,
@@ -7871,7 +8029,7 @@
       "kor": "토오",
       "eng": "clodsire"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 981,
@@ -7879,7 +8037,7 @@
       "kor": "키키링",
       "eng": "farigiraf"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 982,
@@ -7887,7 +8045,10 @@
       "kor": "노고고치(두마디폼)",
       "eng": "dudunsparce"
     },
-    "varieties": ["노고고치(세마디폼)"]
+    "varieties": {
+      "kor": ["노고고치(세마디폼)"],
+      "eng": ["Nacli (Three-Segment Form)"]
+    }
   },
   {
     "no": 983,
@@ -7895,7 +8056,7 @@
       "kor": "대도각참",
       "eng": "kingambit"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 984,
@@ -7903,7 +8064,7 @@
       "kor": "위대한엄니",
       "eng": "great-tusk"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 985,
@@ -7911,7 +8072,7 @@
       "kor": "우렁찬꼬리",
       "eng": "scream-tail"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 986,
@@ -7919,7 +8080,7 @@
       "kor": "사나운버섯",
       "eng": "brute-bonnet"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 987,
@@ -7927,7 +8088,7 @@
       "kor": "날개치는머리",
       "eng": "flutter-mane"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 988,
@@ -7935,7 +8096,7 @@
       "kor": "땅을기는날개",
       "eng": "slither-wing"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 989,
@@ -7943,7 +8104,7 @@
       "kor": "모래털가죽",
       "eng": "sandy-shocks"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 990,
@@ -7951,7 +8112,7 @@
       "kor": "무쇠바퀴",
       "eng": "iron-treads"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 991,
@@ -7959,7 +8120,7 @@
       "kor": "무쇠보따리",
       "eng": "iron-bundle"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 992,
@@ -7967,7 +8128,7 @@
       "kor": "무쇠손",
       "eng": "iron-hands"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 993,
@@ -7975,7 +8136,7 @@
       "kor": "무쇠머리",
       "eng": "iron-jugulis"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 994,
@@ -7983,7 +8144,7 @@
       "kor": "무쇠독나방",
       "eng": "iron-moth"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 995,
@@ -7991,7 +8152,7 @@
       "kor": "무쇠가시",
       "eng": "iron-thorns"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 996,
@@ -7999,7 +8160,7 @@
       "kor": "드니차",
       "eng": "frigibax"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 997,
@@ -8007,7 +8168,7 @@
       "kor": "드니꽁",
       "eng": "arctibax"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 998,
@@ -8015,7 +8176,7 @@
       "kor": "드닐레이브",
       "eng": "baxcalibur"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 999,
@@ -8023,7 +8184,10 @@
       "kor": "모으령(상자폼)",
       "eng": "gimmighoul"
     },
-    "varieties": ["모으령(도보폼)"]
+    "varieties": {
+      "kor": ["모으령(도보폼)"],
+      "eng": ["Lokix (Walking Form)"]
+    }
   },
   {
     "no": 1000,
@@ -8031,7 +8195,7 @@
       "kor": "타부자고",
       "eng": "gholdengo"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 1001,
@@ -8039,7 +8203,7 @@
       "kor": "총지엔",
       "eng": "wo-chien"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 1002,
@@ -8047,7 +8211,7 @@
       "kor": "파오젠",
       "eng": "chien-pao"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 1003,
@@ -8055,7 +8219,7 @@
       "kor": "딩루",
       "eng": "ting-lu"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 1004,
@@ -8063,7 +8227,7 @@
       "kor": "위유이",
       "eng": "chi-yu"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 1005,
@@ -8071,7 +8235,7 @@
       "kor": "고동치는달",
       "eng": "roaring-moon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 1006,
@@ -8079,7 +8243,7 @@
       "kor": "무쇠무인",
       "eng": "iron-valiant"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 1007,
@@ -8087,7 +8251,7 @@
       "kor": "코라이돈",
       "eng": "koraidon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 1008,
@@ -8095,7 +8259,7 @@
       "kor": "미라이돈",
       "eng": "miraidon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 1009,
@@ -8103,7 +8267,7 @@
       "kor": "굽이치는물결",
       "eng": "walking-wake"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 1010,
@@ -8111,7 +8275,7 @@
       "kor": "무쇠잎새",
       "eng": "iron-leaves"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 1011,
@@ -8119,7 +8283,7 @@
       "kor": "과미르",
       "eng": "dipplin"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 1012,
@@ -8127,7 +8291,10 @@
       "kor": "차데스(가짜배기)",
       "eng": "poltchageist"
     },
-    "varieties": ["차데스(알짜배기)"]
+    "varieties": {
+      "kor": ["차데스(알짜배기)"],
+      "eng": ["Wattrel (High Voltage)"]
+    }
   },
   {
     "no": 1013,
@@ -8135,7 +8302,7 @@
       "kor": "그우린차(범작)",
       "eng": "sinistcha"
     },
-    "varieties": ["그우린차(걸작)"]
+    "varieties": { "kor": ["그우린차(걸작)"], "eng": [] }
   },
   {
     "no": 1014,
@@ -8143,7 +8310,7 @@
       "kor": "조타구",
       "eng": "okidogi"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 1015,
@@ -8151,7 +8318,7 @@
       "kor": "이야후",
       "eng": "munkidori"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 1016,
@@ -8159,7 +8326,7 @@
       "kor": "기로치",
       "eng": "fezandipiti"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 1017,
@@ -8167,11 +8334,18 @@
       "kor": "오거폰(벽록의가면)",
       "eng": "ogerpon"
     },
-    "varieties": [
-      "오거폰(우물의가면)",
-      "오거폰(화덕의가면)",
-      "오거폰(주춧돌의가면)"
-    ]
+    "varieties": {
+      "kor": [
+        "오거폰(우물의가면)",
+        "오거폰(화덕의가면)",
+        "오거폰(주춧돌의가면)"
+      ],
+      "eng": [
+        "Great Tusk (Well Mask)",
+        "Great Tusk (Furnace Mask)",
+        "Great Tusk (Pillar Mask)"
+      ]
+    }
   },
   {
     "no": 1018,
@@ -8179,7 +8353,7 @@
       "kor": "브리두라스",
       "eng": "archaludon"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 1019,
@@ -8187,7 +8361,7 @@
       "kor": "과미드라",
       "eng": "hydrapple"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 1020,
@@ -8195,7 +8369,7 @@
       "kor": "꿰뚫는화염",
       "eng": "gouging-fire"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 1021,
@@ -8203,7 +8377,7 @@
       "kor": "날뛰는우레",
       "eng": "raging-bolt"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 1022,
@@ -8211,7 +8385,7 @@
       "kor": "무쇠암석",
       "eng": "iron-boulder"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 1023,
@@ -8219,7 +8393,7 @@
       "kor": "무쇠감투",
       "eng": "iron-crown"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   },
   {
     "no": 1024,
@@ -8227,7 +8401,10 @@
       "kor": "테라파고스(노말폼)",
       "eng": "terapagos"
     },
-    "varieties": ["테라파고스(테라스탈폼)", "테라파고스(스텔라폼)"]
+    "varieties": {
+      "kor": ["테라파고스(테라스탈폼)", "테라파고스(스텔라폼)"],
+      "eng": ["Tera Phagos (Terastral Form)", "Tera Phagos (Stellar Form)"]
+    }
   },
   {
     "no": 1025,
@@ -8235,6 +8412,6 @@
       "kor": "복숭악동",
       "eng": "pecharunt"
     },
-    "varieties": []
+    "varieties": { "kor": [], "eng": [] }
   }
 ]

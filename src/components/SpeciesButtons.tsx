@@ -24,7 +24,6 @@ const SpeciesButtons = ({
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const btnIdx = e.currentTarget.dataset.idx;
     const urlIdx = e.currentTarget.dataset.url?.match(/\/(\d+)\/$/)?.[1];
-    console.log(urlIdx)
     if (btnIdx !== undefined) {
       setClickedBtn(Number(btnIdx));
       setSearchParams({
@@ -47,6 +46,7 @@ const SpeciesButtons = ({
       <div css={speciesTypes}>
         {varietiesData.varieties.map((species: any, idx: number) => {
           if (species.is_visible === false) return null;
+          
           const label = getSpeciesTranslate(species.pokemon.name, language.type)
           if (!label) return null;
 
@@ -83,6 +83,8 @@ const speciesBtn = css`
   border: 1px solid var(--border);
   cursor: pointer;
   transition: all 0.2s;
+  background-color: var(--primary);
+  color: var(--text);
 `;
 
 const selectedBtn = css`
