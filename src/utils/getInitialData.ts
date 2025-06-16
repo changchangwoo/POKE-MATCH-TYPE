@@ -1,5 +1,9 @@
 import { createContext, Dispatch, SetStateAction } from "react";
-import { TLanguageData, TLanguageType, TThemeData } from "../models/settingData";
+import {
+  TLanguageData,
+  TLanguageType,
+  TThemeData,
+} from "../models/settingData";
 import { LANGUAGE_TEXTS } from "../const/language_text";
 
 type TThemeContext = {
@@ -10,8 +14,8 @@ type TThemeContext = {
 type TLanguageContext = {
   language: TLanguageData;
   setLanguage: Dispatch<SetStateAction<TLanguageData>>;
-  text : any;
-  setText: Dispatch<SetStateAction<any>>
+  text: any;
+  setText: Dispatch<SetStateAction<any>>;
 };
 
 export const ThemeContext = createContext<TThemeContext>({
@@ -25,11 +29,11 @@ export const ThemeContext = createContext<TThemeContext>({
 
 export const LanguageContext = createContext<TLanguageContext>({
   language: {
-    type: "kor"
+    type: "kor",
   },
   setLanguage: () => {},
   text: LANGUAGE_TEXTS.kor,
-  setText: () => {}
+  setText: () => {},
 });
 
 export const getInitialTheme = (): TThemeData => {
@@ -45,18 +49,32 @@ export const getInitialTheme = (): TThemeData => {
       };
     }
   }
-
-  return {
-    name: "태양의 돌",
-    num: 1,
-    type: "light",
-  };
+  const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  if (isDark) {
+    return {
+      name: "달의 돌",
+      num: 2,
+      type: "dark",
+    };
+  } else {
+    return {
+      name: "태양의 돌",
+      num: 1,
+      type: "light",
+    };
+  }
 };
 export const getInitialLanguage = (): TLanguageData => {
   const sessionLanguage = localStorage.getItem("language") as TLanguageType;
+
   if (sessionLanguage) {
-    return {type : sessionLanguage};
-   
+    return { type: sessionLanguage };
   }
-  return {type: "kor"}
+
+  const lang = navigator.language.toLowerCase();
+  if (lang.startsWith("ko")) {
+    return { type: "kor" };
+  }
+
+  return { type: "eng" };
 };

@@ -31,17 +31,16 @@ const AccordianListContainer = () => css`
   cursor: pointer;
   margin: auto;
 
-
   .copyrightContents {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
     p {
-  margin: auto;
-color: var(--text);
-text-align: center;
-font-size: var(--fontSmall);
-max-width: 600px;
+      margin: auto;
+      color: var(--text);
+      text-align: center;
+      font-size: var(--fontSmall);
+      max-width: 600px;
     }
   }
 
@@ -71,7 +70,7 @@ max-width: 600px;
   }
 
   p {
-        margin: auto;
+    margin: auto;
     display: flex;
     gap: 10px;
     color: var(--text);

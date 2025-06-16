@@ -35,7 +35,7 @@ export const LANGUAGE_TEXTS = {
         DESCRIPTION_3:
           "지금은 많이 부족하지만, 도움을 주신다면 멋진 서비스가 될 것입니다.",
         DESCRIPTION_4:
-          "어떤 내용이라도 남겨주신다면 확인 후 꼭 반영하겠습니다!!",
+          "어떤 내용이라도 남겨주신다면 확인 후 꼭 반영하겠습니다!",
         DESCRIPTION_5: "그럼 좋은하루 되세요!",
       },
       CHANGE_BUTTON: {

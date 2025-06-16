@@ -21,7 +21,7 @@ type PokemonType =
   | "fairy"
   | "unknown"
   | "shadow"
-  | string; 
+  | string;
 
 const typeMapping: Record<TLanguageType, Record<PokemonType, string>> = {
   kor: {
@@ -67,12 +67,12 @@ const typeMapping: Record<TLanguageType, Record<PokemonType, string>> = {
     fairy: "Fairy",
     unknown: "Unknown",
     shadow: "Shadow",
-  }
+  },
 };
 
 export const getTranslateType = (
   englishType: PokemonType,
   language: TLanguageType
 ): string => {
-  return typeMapping[language]?.[englishType] ?? "알 수 없음";
+  return typeMapping[language]?.[englishType] ?? "undefined";
 };

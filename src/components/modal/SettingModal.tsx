@@ -95,6 +95,7 @@ const ModalOverlay = css`
 const ModalContainer = css`
   width: 100%;
   height: 100%;
+  overflow-y: auto;
   background-color: var(--primary);
 
   .ModalDescription {
