@@ -19,6 +19,7 @@ const SelectAbility = ({
 
   const handleAbilityChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = event.target.value;
+    console.log(selectedValue);
     setSelectedAbility(selectedValue);
     let currentPath = location.pathname + "/typecheck";
     localStorage.setItem(currentPath, selectedValue);

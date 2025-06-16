@@ -5,7 +5,7 @@ import { getAddAbility } from "../../utils/getAddAbility";
 
 const useFetchDetailType = (no: number[], selectedAbility?: string) => {
   return useQuery({
-    queryKey: ["detailType", no],
+    queryKey: ["detailType", no, selectedAbility],
     queryFn: async () => {
       const fetchDetailTypeData = await fetchDetailType(no);
       const circulateTypeData = await getDetailType(fetchDetailTypeData);

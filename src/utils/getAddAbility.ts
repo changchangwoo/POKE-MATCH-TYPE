@@ -85,6 +85,7 @@ export const getAddAbility = async (
 
   if (typeCalculator.length > 0) {
     types = types.map((type) => {
+      console.log(type, typeCalculator);
       typeCalculator.forEach((element) => {
         if (type.name === element.type) {
           type.damage *= element.effects;
@@ -93,6 +94,8 @@ export const getAddAbility = async (
       return type;
     });
   }
+
+  console.log(typeCalculator);
 
   return typeCalculator;
 };
