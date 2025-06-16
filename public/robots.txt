@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://poke-match-type.vercel.app/sitemap.xml
