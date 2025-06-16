@@ -1,9 +1,10 @@
-import quizIntroImg from "../imgs/quiz_intro.jpg";
-import quizCorrectImg from "../imgs/quiz_correct.jpg";
-import quizIncorrectImg from "../imgs/quiz_incorrect.jpg";
-import quizFailedImg from "../imgs/quiz_failed.jpg";
-import quizReadyImg from "../imgs/quiz_ready.jpg";
-import quizSuccessImg from "../imgs/quiz_success.png";
+import quizIntroImg from "./imgs/quiz_intro.jpg";
+import quizCorrectImg from "./imgs/quiz_correct.jpg";
+import quizIncorrectImg from "./imgs/quiz_incorrect.jpg";
+import quizFailedImg from "./imgs/quiz_failed.jpg";
+import quizReadyImg from "./imgs/quiz_ready.jpg";
+import quizSuccessImg from "./imgs/quiz_success.png";
+
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Main from "./pages/Main";

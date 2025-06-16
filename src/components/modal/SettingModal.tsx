@@ -15,7 +15,7 @@ interface SettingModalProps {
 }
 
 const SettingModal = ({ setModal }: SettingModalProps) => {
-    const { text } = useContext(LanguageContext);
+  const { text } = useContext(LanguageContext);
 
   return (
     <div css={ModalOverlay}>
@@ -29,8 +29,11 @@ const SettingModal = ({ setModal }: SettingModalProps) => {
         <ul className="ModalContents">
           <div className="ModalDescription">
             <h1>{text.APP.SETTING.DESCRIPTION_TITLE}</h1>
-            <p>{text.APP.SETTING.DESCRIPTION_SUB_1}<br/>
-              {text.APP.SETTING.DESCRIPTION_SUB_2}</p>
+            <p>
+              {text.APP.SETTING.DESCRIPTION_SUB_1}
+              <br />
+              {text.APP.SETTING.DESCRIPTION_SUB_2}
+            </p>
             <Footer />
           </div>
           <AccordianList title={text.APP.THEME.TITLE}>
@@ -53,19 +56,21 @@ const SettingModal = ({ setModal }: SettingModalProps) => {
               <p>{text.APP.FEEDBACK.DESCRIPTION_3}</p>
               <p>{text.APP.FEEDBACK.DESCRIPTION_4}</p>
               <p>{text.APP.FEEDBACK.DESCRIPTION_5}</p>
-              <br/>
-    <a
-      href="https://github.com/changchangwoo/POKE-MATCH-TYPE"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="githubLink"
-    >
-          <FaGithub />
-      changchangwoo/POKE-MATCH-TYPE
-        </a>
+              <br />
+              <a
+                href="https://github.com/changchangwoo/POKE-MATCH-TYPE"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="githubLink"
+              >
+                <FaGithub />
+                changchangwoo/POKE-MATCH-TYPE
+              </a>
               <p>
                 <IoMailSharp />
-                changchangwoo@naver.com</p><br/>
+                changchangwoo@naver.com
+              </p>
+              <br />
             </div>
           </AccordianList>
         </ul>
@@ -79,7 +84,7 @@ const ModalOverlay = css`
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.6);
   display: flex;

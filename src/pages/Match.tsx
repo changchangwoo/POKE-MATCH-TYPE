@@ -12,6 +12,10 @@ const Match = () => {
   const location = useLocation();
 
   useEffect(() => {
+    setCheckedType([]);
+  }, []);
+
+  useEffect(() => {
     if (checkedType.length > 0) {
       localStorage.setItem(
         location.pathname + "/matchDatas",
