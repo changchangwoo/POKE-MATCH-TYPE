@@ -13,15 +13,15 @@ interface MatchMainProps {
   searchParams: URLSearchParams;
 }
 
-const MatchMain = ({ setSearchParams, searchParams }: MatchMainProps) => {
-  const { language } = useContext(LanguageContext);
-  const [selectedAbility, setSelectedAbility] = useState("");
-
   const pokedexHash = new Map();
   pokedex.map((item) => {
   item.name.kor = item.name.kor.replace(/\s*\(.*?\)\s*/g, "").trim();
   pokedexHash.set(item.no, item);
 });
+
+const MatchMain = ({ setSearchParams, searchParams }: MatchMainProps) => {
+  const { language } = useContext(LanguageContext);
+  const [selectedAbility, setSelectedAbility] = useState("");
 
   const name = searchParams.get("name");
   const no = searchParams.get("no");

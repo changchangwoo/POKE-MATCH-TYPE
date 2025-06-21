@@ -26,7 +26,7 @@ const MatchCard = ({
   setSelectedAbility,
   setSearchParams,
 }: MatchCardProps) => {
-      const {language, text} = useContext(LanguageContext);
+  const {language, text} = useContext(LanguageContext);
   return (
     <div css={matchCardContainer}>
       <h1>{text.MAIN.MATCH.MATCH_CARD_TITLE}</h1>

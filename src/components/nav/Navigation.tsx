@@ -3,6 +3,8 @@ import { IoSettingsSharp } from "react-icons/io5";
 import { useContext, useState } from "react";
 import SettingModal from "../modal/SettingModal";
 import { LanguageContext } from "../../utils/getInitialData";
+import Logo from "../../imgs/logo.png"
+
 
 
 const Navigation = () => {
@@ -13,6 +15,7 @@ const Navigation = () => {
   return (
     <>
       <div css={navigationStyle}>
+        <img src={Logo} className="logo"/>
         <span>{text.APP.TITLE}</span>
         <button onClick={() => setModal(!isModal)}>
           <IoSettingsSharp />
@@ -35,6 +38,11 @@ const navigationStyle = css`
   position: absolute;
   box-sizing: border-box;
   padding: 20px;
+
+  .logo {
+    width: 35px;
+    height: 35px;
+  }
 
   button {
     position: absolute;

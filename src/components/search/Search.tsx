@@ -35,6 +35,9 @@ const Search = ({
     useState<number>(-1);
   const searchRef = useRef<HTMLDivElement>(null);
 
+
+
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
