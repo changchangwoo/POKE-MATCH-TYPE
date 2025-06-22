@@ -44,13 +44,13 @@ const MatchMain = ({ setSearchParams, searchParams }: MatchMainProps) => {
   console.log(varietiesDataError)
 
   useEffect(() => {
-    const getSessionMatchDatas = localStorage.getItem(
+    const getSessionMatchDatas = sessionStorage.getItem(
       location.pathname + "/matchDatas"
     );
-    const getSessionTypeCheck = localStorage.getItem(
+    const getSessionTypeCheck = sessionStorage.getItem(
       location.pathname + "/typecheck"
     );
-    const getSessionVarietiesIdx = localStorage.getItem(
+    const getSessionVarietiesIdx = sessionStorage.getItem(
       location.pathname + "/varietiesIdx"
     );
     if (getSessionMatchDatas) {
@@ -60,7 +60,7 @@ const MatchMain = ({ setSearchParams, searchParams }: MatchMainProps) => {
         : "0";
       setSearchParams({
         ...parseMatchDatas,
-        varietiesIdx: parsedVarietiesIdx.varietiesIdx || "0",
+        varietiesIdx: parsedVarietiesIdx.varietiesIdx,
       });
     }
     if (getSessionTypeCheck) setSelectedAbility(getSessionTypeCheck);
