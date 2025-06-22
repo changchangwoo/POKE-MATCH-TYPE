@@ -8,7 +8,7 @@ const useDefaultSetting = (imageList: string[]) => {
       img.src = src;
     });
   }, [imageList]);
-
 };
+
 
 export default useDefaultSetting;

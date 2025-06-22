@@ -41,8 +41,6 @@ const MatchMain = ({ setSearchParams, searchParams }: MatchMainProps) => {
     isLoading: varietiesDataLoading,
   } = useFetchPokemonVarieties(no || "", name || "", pokedexHash, language.type);
 
-  console.log(varietiesDataError)
-
   useEffect(() => {
     const getSessionMatchDatas = sessionStorage.getItem(
       location.pathname + "/matchDatas"
