@@ -11,5 +11,6 @@
   "sinnoh": { "kor": "신오", "eng": "sinnoh" },
   "unova": { "kor": "하나", "eng": "unova" },
   "kalos": { "kor": "칼로스", "eng": "kalos" },
+  "primal": {"kor":"원시","eng":"primal"},
   "default" : {"kor" : "기본형", "eng" : "default"}
 }

@@ -15,6 +15,7 @@ const FILTER_POKEDEX_KOR = [
   "신오",
   "하나",
   "칼로스",
+  "원시"
 ];
 
 const FILTER_VARIETIES = [
@@ -28,6 +29,7 @@ const FILTER_VARIETIES = [
   "-sinnoh",
   "-unova",
   "-kalos",
+  "-primal"
 ];
 
 const FILTER_EXTRA = [
@@ -53,7 +55,7 @@ const FILTER_EXCEPTION = [
   "toxtricity-amped-gmax",
   "toxtricity-low-key-gmax",
   "urshifu-single-strike-gmax",
-  "urshifu-rapid-strike-gmax"
+  "urshifu-rapid-strike-gmax",
 ];
 
 export const getFilterFixVarieties = (
@@ -76,6 +78,7 @@ export const getFilterFixVarieties = (
   );
   const originData = fetchVarietiesData;
   // 두 배열의 개수가 일치하는 경우
+  console.log(filterPokeDexVarieties, filterfetchVarieties)
   if (filterPokeDexVarieties?.length === filterfetchVarieties.length - 1) {
     filterPokeDexVarieties?.forEach((el) => {
       if (el.name === "더미") {
@@ -108,6 +111,7 @@ const getFilterfetchVarieties = (
   }[],
   language: TLanguageType
 ) => {
+  // 받아온 포켓몬 전체 폼 확인하는 변수 console.log(fetchVarietiesData)
   const regexes = FILTER_VARIETIES.map((pattern) => new RegExp(pattern));
   const regexesExtra = FILTER_EXTRA.map((pattern) => new RegExp(pattern));
   const regexesException = FILTER_EXCEPTION.map(
