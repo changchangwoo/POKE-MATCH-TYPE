@@ -112,6 +112,7 @@ export const LANGUAGE_TEXTS = {
         FAILD_1: "피카츄가 아직 길을 헤매고 있어요",
         FAILD_2: "다시 한번 피카츄를 도와줄까요?",
         SYSTEM: "10문제 중 {correctCount} 문제 맞추셨습니다!✨",
+        RETRY: "다시하기",
       },
     },
   },
@@ -232,6 +233,8 @@ export const LANGUAGE_TEXTS = {
         FAILD_1: "Pikachu is still lost in the forest.",
         FAILD_2: "Would you like to try helping Pikachu again?",
         SYSTEM: "You got {correctCount} out of 10 questions right! ✨",
+        RETRY: "RETRY",
+
       },
     },
   },

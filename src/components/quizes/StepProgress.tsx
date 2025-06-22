@@ -9,7 +9,7 @@ const StepProgress = ({ currentStep, progressArr }: StepProgressProps) => {
   return (
     <div css={container}>
       <div>
-        {currentStep} / {progressArr.length}
+        {currentStep+1} / {progressArr.length}
       </div>
       <div css={progressContainer}>
         {progressArr.map((progress, idx) => {

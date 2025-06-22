@@ -2,22 +2,25 @@ import { quizReadyContainer } from "./QuizReady";
 import quizSuccessImg from "../../imgs/quiz_success.png";
 import quizFailedImg from "../../imgs/quiz_failed.jpg";
 import { QuizIntroImgContainer } from "./QuizIntro";
-import { useContext } from "react";
+import { Dispatch, SetStateAction, useContext } from "react";
 import { LanguageContext } from "../../utils/getInitialData";
+import { css } from "@emotion/react";
 
 interface QuizEndProps {
   progressArr: { step: string }[];
+    setSection: Dispatch<SetStateAction<number>>;
+    setProgressArr: Dispatch<SetStateAction<{ step: string }[]>>;
+  
 }
 
-const QuizEnd = ({ progressArr }: QuizEndProps) => {
+const QuizEnd = ({ progressArr, setSection, setProgressArr }: QuizEndProps) => {
   const { text } = useContext(LanguageContext);
 
   const correctCount = progressArr.filter(
     (item) => item.step === "correct"
   ).length;
   const renderMessage = () => {
-    if (correctCount === 10) {
-    } else if (correctCount >= 7) {
+    if (correctCount >= 7) {
       return (
         <>
           {text.QUIZ.END.SUCCESS_1}
@@ -37,7 +40,10 @@ const QuizEnd = ({ progressArr }: QuizEndProps) => {
   return (
     <div css={quizReadyContainer}>
       <span>
-        {text.QUIZ.END.SYSTEM.replace("{correctCount}", correctCount.toString())}
+        {text.QUIZ.END.SYSTEM.replace(
+          "{correctCount}",
+          correctCount.toString()
+        )}
       </span>
 
       <img
@@ -46,9 +52,33 @@ const QuizEnd = ({ progressArr }: QuizEndProps) => {
       ></img>
 
       <span css={{ textAlign: "center" }}>{renderMessage()}</span>
+
+      <button onClick={() => {
+        setSection(2);
+        setProgressArr(() =>
+    new Array(10).fill(null).map(() => ({ step: "none" })))
+      }} css={retryBtn}>
+        {text.QUIZ.END.RETRY}
+      </button>
     </div>
   );
 };
+
+const retryBtn = css`
+  width: 30%;
+  height: 45px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--primary);
+  cursor: pointer;
+  color: var(--text);
+  pointer-events: all;
+
+  &:hover {
+    transition: all 0.2s;
+    background-color: var(--border);
+  }
+`;
 
 export default QuizEnd;
 /*

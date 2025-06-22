@@ -31,7 +31,7 @@ const Quiz = () => {
               />
             );
           case 3:
-            return <QuizEnd progressArr={progressArr} />;
+            return <QuizEnd progressArr={progressArr} setSection={setSection} setProgressArr={setProgressArr}/>;
           default:
             return <div>{text.QUIZ.ERROR}</div>;
         }
