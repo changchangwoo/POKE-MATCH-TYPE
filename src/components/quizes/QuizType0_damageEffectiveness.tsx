@@ -7,6 +7,7 @@ import { useGetDetailPokemonForQuiz } from "../../hooks/useGetDetailPokemonForQu
 import QuizAnswer from "./QuizAnswer";
 import { useContext } from "react";
 import { LanguageContext } from "../../utils/getInitialData";
+import { QuizType0_Skeleton } from "../skeleton/Quiz_Skeleton";
 
 
 interface QuizType0_Props {
@@ -24,7 +25,8 @@ const QuizType0_damageEffectiveness = ({
   const { questionArr, quizNum, groupResult, matchDatas, answerIdx } =
     useGetDetailPokemonForQuiz(progress);
   if (!questionArr || quizNum === undefined || !groupResult || !matchDatas) {
-    return null;
+  // if (true) {
+    return <QuizType0_Skeleton/>
   }
   return (
     <>

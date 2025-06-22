@@ -8,6 +8,7 @@ import pokedex from "../datas/pokedex.json";
 import { SetURLSearchParams } from "react-router-dom";
 import { LanguageContext } from "../utils/getInitialData";
 import { TLanguageType } from "../models/settingData";
+import { MatchMain_Skeleton } from "./skeleton/MatchMain_Skeleton";
 
 interface MatchMainProps {
   setSearchParams: SetURLSearchParams;
@@ -65,7 +66,10 @@ const MatchMain = ({ setSearchParams, searchParams }: MatchMainProps) => {
     if (getSessionTypeCheck) setSelectedAbility(getSessionTypeCheck);
   }, [location.pathname]);
 
-  if (detailDataLoading || varietiesDataLoading) return null;
+  if (detailDataLoading || varietiesDataLoading) {
+  // if (true) {
+    return (<MatchMain_Skeleton/>)
+  }
   if (detailDataError) return null;
 
   return (
@@ -90,7 +94,7 @@ const MatchMain = ({ setSearchParams, searchParams }: MatchMainProps) => {
   );
 };
 
-const MainContainer = css`
+export const MainContainer = css`
   display: flex;
   height: auto;
   justify-content: center;
