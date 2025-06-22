@@ -3,12 +3,14 @@ import { css } from "@emotion/react";
 import { useContext, useState } from "react";
 import { getSpeciesTranslate } from "../utils/getSpeciesTranslate";
 import { LanguageContext } from "../utils/getInitialData";
+import { TLanguageType } from "../models/settingData";
 
 interface SpeciesButtonsProps {
   varietiesData: any;
   varietiesIdx: string | null;
   name: string;
   setSearchParams: SetURLSearchParams;
+  searchLanguage : TLanguageType | "";
 }
 
 const SpeciesButtons = ({
@@ -16,6 +18,7 @@ const SpeciesButtons = ({
   varietiesIdx,
   name,
   setSearchParams,
+  searchLanguage
 }: SpeciesButtonsProps) => {
   const [clickedBtn, setClickedBtn] = useState<number | null>(
     Number(varietiesIdx)
@@ -30,6 +33,7 @@ const SpeciesButtons = ({
         no: urlIdx || "",
         name: name || "",
         varietiesIdx: btnIdx || "0",
+        searchLanguage : searchLanguage || ""
       });
       localStorage.setItem(
         location.pathname + "/varietiesIdx",

@@ -40,6 +40,7 @@ export const useGetDetailPokemonForQuiz = (progress: number) => {
         }),
         no: Number(randomNum),
         imgs: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${randomNum}.png`,
+        searchLanguage : ""
       };
       const typeNo = matchDatas.types.map((type) => type.no);
       const fetchDetailTypeData = await fetchDetailType(typeNo);

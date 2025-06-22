@@ -5,6 +5,7 @@ export interface MatchInfo {
   name: string;
   types: Types[];
   imgs: string;
+  searchLanguage: TLanguageType | "";
 }
 
 export interface Types {

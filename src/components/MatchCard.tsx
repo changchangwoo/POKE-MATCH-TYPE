@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { MatchInfo as IMatchInfo } from "../models/pokemonData";
-import { Dispatch, SetStateAction, useContext } from "react";
+import { Dispatch, SetStateAction, useContext, useEffect, useState } from "react";
 import { SetURLSearchParams } from "react-router-dom";
 import TypeBadge from "./commons/TypeBadge";
 import { getTranslateType } from "../utils/getTranslateType";
@@ -8,6 +8,9 @@ import SelectAbility from "./commons/SelectAbility";
 import { v4 as uuidv4 } from "uuid";
 import SpeciesButtons from "./SpeciesButtons";
 import { LanguageContext } from "../utils/getInitialData";
+import pokedex from "../datas/pokedex.json";
+import { TLanguageType } from "../models/settingData";
+
 
 interface MatchCardProps {
   MatchInfo: IMatchInfo;
@@ -27,6 +30,15 @@ const MatchCard = ({
   setSearchParams,
 }: MatchCardProps) => {
   const {language, text} = useContext(LanguageContext);
+  const [name, setName] = useState<string>(MatchInfo.name);
+  const searchLanguage = MatchInfo.searchLanguage
+  const searchName = MatchInfo.name
+
+  useEffect(() => {
+    const pokedexItem = pokedex.filter((item) => item.name[searchLanguage as TLanguageType] === searchName)
+    setName(pokedexItem[0].name[language.type])
+  }, [language, MatchInfo])
+
   return (
     <div css={matchCardContainer}>
       <h1>{text.MAIN.MATCH.MATCH_CARD_TITLE}</h1>
@@ -37,7 +49,7 @@ const MatchCard = ({
           alt={`Pokemon ${MatchInfo.no}`}
         />
       </div>
-      <h2>{MatchInfo.name}</h2>
+      <h2>{name}</h2>
       <div css={pokeTypes}>
         {MatchInfo.types.map((type) => (
           <TypeBadge key={uuidv4()} no={type.no}>
@@ -51,6 +63,7 @@ const MatchCard = ({
           setSearchParams={setSearchParams}
           name={MatchInfo.name}
           varietiesIdx={varietiesIdx}
+          searchLanguage={searchLanguage}
         />
       )}
       <SelectAbility
@@ -112,3 +125,5 @@ export const pokeTypes = css`
 `;
 
 export default MatchCard;
+
+

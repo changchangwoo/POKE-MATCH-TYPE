@@ -7,6 +7,7 @@ import useFetchPokemonVarieties from "../hooks/queries/useFetchPokemonVarieties"
 import pokedex from "../datas/pokedex.json";
 import { SetURLSearchParams } from "react-router-dom";
 import { LanguageContext } from "../utils/getInitialData";
+import { TLanguageType } from "../models/settingData";
 
 interface MatchMainProps {
   setSearchParams: SetURLSearchParams;
@@ -26,12 +27,13 @@ const MatchMain = ({ setSearchParams, searchParams }: MatchMainProps) => {
   const name = searchParams.get("name");
   const no = searchParams.get("no");
   const varietiesIdx = searchParams.get("varietiesIdx");
+  const searchLanguage = searchParams.get("searchLanguage") as TLanguageType;
 
   const {
     data: matchInfo,
     error: detailDataError,
     isLoading: detailDataLoading,
-  } = useFetchDetailPokemon(no || "", name || "");
+  } = useFetchDetailPokemon(no || "", name || "", searchLanguage || ""); 
   const {
     data: varietiesData,
     error: varietiesDataError,

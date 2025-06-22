@@ -1,8 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchDetailPokemon } from "../../api/api";
 import { MatchInfo } from "../../models/pokemonData";
+import { TLanguageType } from "../../models/settingData";
 
-const useFetchDetailPokemon = (no: string, name: string) => {
+const useFetchDetailPokemon = (no: string, name: string, searchLanguage : TLanguageType | "") => {
   return useQuery({
     queryKey: ["detailPokemon", no],
     queryFn: async () => {
@@ -23,6 +24,7 @@ const useFetchDetailPokemon = (no: string, name: string) => {
         }),
         no: Number(no),
         imgs: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${no}.png`,
+        searchLanguage 
       };
       localStorage.setItem(
         location.pathname + "/matchDatas",

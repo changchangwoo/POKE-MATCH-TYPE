@@ -35,9 +35,6 @@ const Search = ({
     useState<number>(-1);
   const searchRef = useRef<HTMLDivElement>(null);
 
-
-
-
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -88,6 +85,7 @@ const Search = ({
       newSearchParams.set("no", String(suggestions[0].no));
       newSearchParams.set("name", String(suggestions[0].name));
       newSearchParams.set("varietiesIdx", "0");
+      newSearchParams.set("searchLanguage", language.type);
       setSearchParams(newSearchParams);
       setSuggestions([]);
     }
