@@ -35,7 +35,7 @@ const SpeciesButtons = ({
         varietiesIdx: btnIdx || "0",
         searchLanguage : searchLanguage || ""
       });
-      localStorage.setItem(
+      sessionStorage.setItem(
         location.pathname + "/varietiesIdx",
         JSON.stringify({
           varietiesIdx: btnIdx,

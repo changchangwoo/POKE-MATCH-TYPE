@@ -26,7 +26,7 @@ const useFetchDetailPokemon = (no: string, name: string, searchLanguage : TLangu
         imgs: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${no}.png`,
         searchLanguage 
       };
-      localStorage.setItem(
+      sessionStorage.setItem(
         location.pathname + "/matchDatas",
         JSON.stringify(matchDatas)
       );

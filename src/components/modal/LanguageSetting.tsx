@@ -12,7 +12,7 @@ const LanguageSetting = () => {
     { label: text.APP.LANGUAGE.DATA_ENG, type: "eng" },
   ];
 
-const handleAbilityChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
   const selectedValue = event.target.value as "kor" | "eng";
   setSelectLanguage(selectedValue);
   setLanguage({ type: selectedValue });
@@ -24,7 +24,7 @@ const handleAbilityChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     <div css={SelectAbilityContainer}>
       <select
         value={selectLanguage}
-        onChange={handleAbilityChange}
+        onChange={handleLanguageChange}
         onClick={(e) => e.stopPropagation()}
       >
         {languageList.map((language) => (

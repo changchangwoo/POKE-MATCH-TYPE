@@ -14,7 +14,7 @@ const useFetchPokemonVarieties = (
     queryKey: ["pokemonSpecies", no],
     queryFn: async () => {
       const fetchDatas = await fetchPokemonSpecies(no);
-      const sessionDatas = localStorage.getItem("varieties");
+      const sessionDatas = sessionStorage.getItem("varieties");
       if (
         !sessionDatas ||
         sessionDatas === "{}" ||
@@ -38,7 +38,7 @@ const useFetchPokemonVarieties = (
           name: name,
           varieties: fetchVarietiesData,
         };
-        localStorage.setItem("varieties", JSON.stringify(varietiesData));
+        sessionStorage.setItem("varieties", JSON.stringify(varietiesData));
         return varietiesData;
       }
       return JSON.parse(sessionDatas);

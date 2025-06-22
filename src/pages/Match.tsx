@@ -17,7 +17,7 @@ const Match = () => {
 
   useEffect(() => {
     if (checkedType.length > 0) {
-      localStorage.setItem(
+      sessionStorage.setItem(
         location.pathname + "/matchDatas",
         JSON.stringify(checkedType)
       );
@@ -25,10 +25,10 @@ const Match = () => {
   }, [checkedType, location.pathname]);
 
   useEffect(() => {
-    const getSessionCheckedDatas = localStorage.getItem(
+    const getSessionCheckedDatas = sessionStorage.getItem(
       location.pathname + "/matchDatas"
     );
-    const getSessionTypeCheck = localStorage.getItem(
+    const getSessionTypeCheck = sessionStorage.getItem(
       location.pathname + "/typecheck"
     );
 

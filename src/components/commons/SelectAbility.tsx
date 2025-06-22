@@ -21,7 +21,7 @@ const SelectAbility = ({
     const selectedValue = event.target.value;
     setSelectedAbility(selectedValue);
     let currentPath = location.pathname + "/typecheck";
-    localStorage.setItem(currentPath, selectedValue);
+    sessionStorage.setItem(currentPath, selectedValue);
   };
 
   return (

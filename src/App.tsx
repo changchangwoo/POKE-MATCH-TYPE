@@ -25,7 +25,7 @@ import {
   ThemeContext,
 } from "./utils/getInitialData";
 import { LANGUAGE_TEXTS } from "./const/language_text";
-import useImagePreLoader from "./hooks/useImagePreLoader";
+import useDefaultSetting from "./hooks/useDefaultSetting";
 
 const imageList = [
   quizIntroImg,
@@ -45,7 +45,7 @@ function App() {
     LANGUAGE_TEXTS[initialLanguage.type as TLanguageType]
   );
 
-  useImagePreLoader(imageList);
+  useDefaultSetting(imageList);
 
   return (
     <>
