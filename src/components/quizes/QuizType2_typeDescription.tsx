@@ -81,10 +81,16 @@ const QuizType2_typeDescription = ({
     <>
       <h1 css={title}>
         <div>
-          {getTranslateType(attacker.name, language.type)}{text.QUIZ.MAIN_3.TITLE_1}<br />
-            {getTranslateType(defender[0].name, language.type)}/{getTranslateType(defender[1].name, language.type)}{" "}
-            {text.QUIZ.MAIN_3.TITLE_2}
-        </div>
+          {text.QUIZ.MAIN_3.TITLE_1.replace(
+            "{type1}",
+            getTranslateType(attacker.name, language.type)
+          )}<br />
+          {text.QUIZ.MAIN_3.TITLE_2.replace(
+            "{type2}/{type3}",
+            getTranslateType(defender[0].name, language.type)+"/"+getTranslateType(defender[1].name, language.type)
+          )}
+
+    </div>
       </h1>
       <div css={quizContainer}>
         <div css={quizTypeContainer} data-name={text.QUIZ.MAIN_3.DATA_NAME_ATTACK}>
@@ -112,7 +118,9 @@ const QuizType2_typeDescription = ({
               data-name={damage}
               css={answerButton(isChecked, (isNext && answerIdx === idx))}
             >
-              {damage}{text.QUIZ.MAIN_3.DESCRIPTION}
+          {text.QUIZ.MAIN_3.DESCRIPTION.replace(
+            "{damage}",damage
+          )}    
             </button>
           );
         })}

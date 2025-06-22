@@ -8,7 +8,7 @@ const Table = () => {
     <div css={tableContainer}>
       <h1>{text.TABLE.TITLE}</h1>
       <div className="tableContents">
-        <h1>Temp</h1>
+        <h1>구현중</h1>
       </div>
     </div>
   );

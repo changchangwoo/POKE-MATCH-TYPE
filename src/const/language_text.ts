@@ -87,22 +87,22 @@ export const LANGUAGE_TEXTS = {
       },
       MAIN_1: {
         TITLE_1: "해당 포켓몬을 공격했을 때,",
-        TITLE_2: "배의 데미지를 가하는 타입은?",
+        TITLE_2: "{damageNum}x의 데미지를 가하는 타입은?",
       },
       MAIN_2: {
         TITLE: "에 들어갈 타입은?",
       },
       MAIN_3: {
-        TITLE_1: "타입 공격에 대한",
-        TITLE_2: "타입의 피해량은?",
-        DESCRIPTION: "배의 피해를 입는다.",
+        TITLE_1: "{type1}타입 공격에 대한",
+        TITLE_2: "{type2}/{type3}타입의 피해량은?",
+        DESCRIPTION: "{damage}x의 피해를 입는다.",
         DATA_NAME_ATTACK: "공격",
         DATA_NAME_DEFENSE: "방어",
       },
       ALERT: {
         SUCCESS: "정답입니다!",
         FAILED: "오답입니다..",
-        MESSAGE: "정답은 {answerText} 타입 입니다.",
+        MESSAGE: "정답은 {answerText} 입니다.",
         TYPE_1: "정답",
         TYPE_2: "오답",
       },
@@ -208,15 +208,15 @@ export const LANGUAGE_TEXTS = {
       },
       MAIN_1: {
         TITLE_1: "When you attack this Pokémon,",
-        TITLE_2: "which type deals double damage?",
+        TITLE_2: "which type deals {damageNum}x damage?",
       },
       MAIN_2: {
-        TITLE: "Which type goes in the blank?",
+        TITLE: " Which type goes in the blank?",
       },
       MAIN_3: {
-        TITLE_1: "When attacked by a",
-        TITLE_2: "type, how much damage does the",
-        DESCRIPTION: "Takes double damage.",
+        TITLE_1: "When attacked by a {type1}",
+        TITLE_2: "how much damage does the {type2}/{type3}",
+        DESCRIPTION: "Takes {damage}x damage.",
         DATA_NAME_ATTACK: "Attack",
         DATA_NAME_DEFENSE: "Defense",
       },

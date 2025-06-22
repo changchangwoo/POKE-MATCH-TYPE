@@ -42,7 +42,7 @@ const QuizMain = ({
   ) => {
     const isCorrect = answerIdx === correctIdx;
     if (correctData.name) setAnswerText(getTranslateType(correctData.name, language.type));
-    else if (correctData.damage) setAnswerText(`${correctData.damage}배`);
+    else if (correctData.damage) setAnswerText(`${correctData.damage}x`);
 
     setAlertType(isCorrect ? "correct" : "incorrect");
     setProgressArr(

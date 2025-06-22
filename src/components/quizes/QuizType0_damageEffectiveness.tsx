@@ -9,9 +9,12 @@ import { useContext } from "react";
 import { LanguageContext } from "../../utils/getInitialData";
 import { QuizType0_Skeleton } from "../skeleton/Quiz_Skeleton";
 
-
 interface QuizType0_Props {
-  submitAnswer: (answerIdx: number, correctIdx: number, correctData : any) => void;
+  submitAnswer: (
+    answerIdx: number,
+    correctIdx: number,
+    correctData: any
+  ) => void;
   progress: number;
   isNext: boolean;
 }
@@ -19,34 +22,43 @@ interface QuizType0_Props {
 const QuizType0_damageEffectiveness = ({
   submitAnswer,
   progress,
-  isNext
+  isNext,
 }: QuizType0_Props) => {
-      const {language, text} = useContext(LanguageContext);
+  const { language, text } = useContext(LanguageContext);
   const { questionArr, quizNum, groupResult, matchDatas, answerIdx } =
     useGetDetailPokemonForQuiz(progress);
   if (!questionArr || quizNum === undefined || !groupResult || !matchDatas) {
-  // if (true) {
-    return <QuizType0_Skeleton/>
+    // if (true) {
+    return <QuizType0_Skeleton />;
   }
   return (
     <>
       <h1 css={title}>
         {text.QUIZ.MAIN_1.TITLE_1}
         <br />
-        <b>{groupResult[quizNum].damage}{text.QUIZ.MAIN_1.TITLE_2}</b>
+        <b>
+          {text.QUIZ.MAIN_1.TITLE_2.replace(
+            "{damageNum}",
+            groupResult[quizNum].damage
+          )}
+        </b>
       </h1>
       <div css={imgBox(matchDatas.types[0].no)}>
         <img src={matchDatas.imgs} alt={`Pokemon ${matchDatas.no}`} />
       </div>
       <div css={pokeTypes}>
-        {
-        matchDatas.types.map((type) => (
+        {matchDatas.types.map((type) => (
           <TypeBadge key={uuidv4()} no={type.no}>
             {getTranslateType(type.name, language.type)}
           </TypeBadge>
         ))}
       </div>
-      <QuizAnswer questionArr={questionArr} submitAnswer={submitAnswer} isNext={isNext} answerIdx={answerIdx} />
+      <QuizAnswer
+        questionArr={questionArr}
+        submitAnswer={submitAnswer}
+        isNext={isNext}
+        answerIdx={answerIdx}
+      />
     </>
   );
 };
