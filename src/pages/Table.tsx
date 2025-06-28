@@ -1,23 +1,31 @@
 import { css } from "@emotion/react";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { LanguageContext } from "../utils/getInitialData";
 import typeEffectivenessData from "../datas/tableData.json";
 import { getTranslateType } from "../utils/getTranslateType";
+import TableDescription from "../components/table/TableDescription";
 
 const Table = () => {
   const { language, text } = useContext(LanguageContext);
   const { columnHeaders, rowData } = typeEffectivenessData;
+  const [clearDatas, setClearDatas] = useState<number[]>([]);
 
-  const getCellClassName = (value: any) => {
-    switch (value) {
-      case "●":
-        return "super-effective";
-      case "▲":
-        return "not-very-effective";
-      case "x":
-        return "no-effect";
-      default:
-        return "";
+  const handleBodyHeader = (e: React.MouseEvent<HTMLElement>) => {
+    const target = e.currentTarget;
+    if (clearDatas.includes(Number(target.dataset.type))) {
+      setClearDatas(
+        clearDatas.filter((no) => no !== Number(target.dataset.type))
+      );
+    } else {
+      setClearDatas([...clearDatas, Number(target.dataset.type)]);
+    }
+  };
+
+  const handleAllHeader = () => {
+    if (clearDatas.length === columnHeaders.length) {
+      setClearDatas([]);
+    } else {
+      setClearDatas(columnHeaders.map((header) => header.no));
     }
   };
 
@@ -29,86 +37,39 @@ const Table = () => {
           <table>
             <thead>
               <tr>
-                <th>선택 해제</th>
+                <th onClick={handleAllHeader}>전체 선택</th>
                 {columnHeaders.map((header, index) => (
-                  <th css={tableHeaderStyle(header.no)} key={index}>
+                  <th css={tableHeaderStyle(header.no, false)} key={index}>
                     {getTranslateType(header.name, language.type)}
                   </th>
                 ))}
               </tr>
             </thead>
             <tbody>
-              {rowData.map((row, rowIndex) => (
-                <tr key={rowIndex}>
-                  <th css={tableHeaderStyle(row.no)}>
-                    {getTranslateType(row.type, language.type)}
-                  </th>
-                  {row.values.map((value, colIndex) => (
-                    <td key={colIndex} css={valueColor(value)}>
-                      {value}
-                    </td>
-                  ))}
-                </tr>
-              ))}
+              {rowData.map((row, rowIndex) => {
+                const isClicked = clearDatas.includes(row.no);
+                return (
+                  <tr key={rowIndex}>
+                    <th
+                      css={tableHeaderStyle(row.no, isClicked)}
+                      onClick={handleBodyHeader}
+                      data-type={row.no}
+                    >
+                      {getTranslateType(row.type, language.type)}
+                    </th>
+                    {row.values.map((value, colIndex) => (
+                      <td key={colIndex} css={valueColor(value, isClicked)}>
+                        {value}
+                      </td>
+                    ))}
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
       </div>
-      <div css={tableDescription}>
-        <div className="box">
-          <div>
-            <span style={{ color: "var(--type14)" }}>●</span> : 효과가 굉장했다!
-            (x2)
-          </div>
-          <div>
-            <span style={{ color: "var(--type7)" }}>▲</span> : 효과가 별로인 것
-            같다... (x0.5)
-          </div>
-          <div>
-            <span style={{ color: "var(--type16)", marginLeft: "3px" }}>✕</span>{" "}
-            : 효과가 없는 것 같다... (x0)
-          </div>
-        </div>
-        <div className="extraBox">
-          <div>
-            <span style={{ color: "var(--type10)" }}>●</span> 불꽃타입 화상 면역
-          </div>
-          <div>
-            <span style={{ color: "var(--type12)" }}>●</span> 풀 타입
-            씨뿌리기·가루·포자 면역
-          </div>
-          <div>
-            <span style={{ color: "var(--type13)" }}>●</span> 전기타입 마비 면역
-          </div>
-          <div>
-            <span style={{ color: "var(--type15)" }}>●</span> 얼음타입
-            얼음·싸라기눈 면역
-          </div>
-          <div>
-            <span style={{ color: "var(--type4)" }}>●</span> 독타입 독·맹독 면역
-          </div>
-          <div>
-            <span style={{ color: "var(--type5)" }}>●</span> 땅타입
-            전기자석파·모래바람 면역
-          </div>
-          <div>
-            <span style={{ color: "var(--type3)" }}>●</span> 비행타입 압정뿌리기
-            면역
-          </div>
-          <div>
-            <span style={{ color: "var(--type6)" }}>●</span> 바위타입 모래바람
-            면역
-          </div>
-          <div>
-            <span style={{ color: "var(--type8)" }}>●</span> 고스트타입 도망치기
-            제한 기술 면역
-          </div>
-          <div>
-            <span style={{ color: "var(--type9)" }}>●</span> 강철타입
-            독·맹독·모래바람 면역
-          </div>
-        </div>
-      </div>
+      <TableDescription />
     </div>
   );
 };
@@ -124,60 +85,6 @@ const tableContainer = css`
   color: var(--text);
 `;
 
-const tableDescription = css`
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  color: var(--text);
-  text-align: center;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  background-color: var(--background);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  padding: 20px;
-  box-sizing: border-box;
-
-  .box {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    color: var(--text);
-    border: 1px solid var(--border);
-    padding: 20px;
-    background-color: var(--primary);
-    border-radius: 8px;
-    text-align: left;
-    box-sizing: border-box;
-  }
-  .extraBox {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    color: var(--text);
-    width: 100%;
-    background-color: var(--primary);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 20px;
-    box-sizing: border-box;
-
-    @media screen and (max-width: 600px) {
-      grid-template-columns: 1fr;
-    }
-
-    div {
-      display: flex;
-      gap: 10px;
-    }
-    div span {
-      text-align: left;
-    }
-  }
-`;
-
 const tableContents = css`
   width: 100%;
   box-sizing: border-box;
@@ -188,7 +95,6 @@ const tableContents = css`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 20px 0px;
 
   h1 {
     text-align: center;
@@ -199,6 +105,7 @@ const tableContents = css`
     width: max-content;
     border-style: hidden;
     box-shadow: 0 0 0 1px var(--border);
+    font-size: var(--fontMedium);
   }
 
   thead th {
@@ -217,6 +124,10 @@ const tableContents = css`
     position: sticky;
     vertical-align: middle;
     left: 0;
+    :hover {
+      opacity: 0.8;
+      transition: all 0.2s;
+    }
   }
 
   td {
@@ -227,14 +138,18 @@ const tableContents = css`
   }
 `;
 
-const tableHeaderStyle = (no: number) => css`
-  background-color: var(--type${no});
+const tableHeaderStyle = (no: number, isClicked: boolean = false) => css`
+  background-color: ${isClicked ? "transparent" : `var(--type${no})`};
   height: 30px;
   vertical-align: middle;
   color: #ffffff;
+  :hover{
+    background-color: var(--type${no});
+  }
 `;
 
-const valueColor = (value: string) => css`
+const valueColor = (value: string, isClicked: boolean) => css`
+  visibility: ${isClicked ? "hidden" : "visible"};
   color: ${value === "●"
     ? "var(--type14)"
     : value === "▲"
