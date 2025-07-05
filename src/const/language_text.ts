@@ -66,6 +66,23 @@ export const LANGUAGE_TEXTS = {
     },
     TABLE: {
       TITLE: "타입 상성 표",
+      EFFECT_SUMMARY: {
+        SUPER_EFFECT: "효과가 굉장했다!",
+        NORMAL_EFFECT: "효과가 별로인 것 같다...",
+        NOT_EFFECT: "효과가 없는 것 같다...",
+      },
+      IMMUNITY_LIST: {
+        FIRE: "불꽃타입 화상 면역",
+        GRASS: "풀 타입 씨뿌리기·가루·포자 면역",
+        ELECTRIC: "전기타입 마비 면역",
+        ICE: "얼음타입 얼음·싸라기눈 면역",
+        POISON: "독타입 독·맹독 면역",
+        GROUND: "땅타입 전기자석파·모래바람 면역",
+        FLYING: "비행타입 압정뿌리기 면역",
+        ROCK: "바위타입 모래바람 면역",
+        GHOST: "고스트타입 도망 제한 기술 면역",
+        STEEL: "강철타입 독·맹독·모래바람 면역",
+      }
     },
     QUIZ: {
       TITLE: "포켓몬 상성 퀴즈",
@@ -184,9 +201,26 @@ export const LANGUAGE_TEXTS = {
         TITLE: "Ability",
       },
     },
-    TABLE: {
-      TITLE: "Type Compatibility Chart",
-    },
+TABLE: {
+  TITLE: "Type Matchup Table",
+  EFFECT_SUMMARY: {
+    SUPER_EFFECT: "It's super effective!",
+    NORMAL_EFFECT: "It's not very effective...",
+    NOT_EFFECT: "It doesn't affect...",
+  },
+  IMMUNITY_LIST: {
+    FIRE: "Fire‑type burn immunity",
+    GRASS: "Grass‑type immunity to Leech Seed, powder, and spore moves",
+    ELECTRIC: "Electric‑type paralysis immunity",
+    ICE: "Ice‑type immunity to freeze and hail",
+    POISON: "Poison‑type immunity to poison and badly poisoned",
+    GROUND: "Ground‑type immunity to Thunder Wave and sandstorm",
+    FLYING: "Flying‑type immunity to Spikes",
+    ROCK: "Rock‑type sandstorm immunity",
+    GHOST: "Ghost‑type immunity to trapping moves",
+    STEEL: "Steel‑type immunity to poison, badly poisoned, and sandstorm",
+  }
+},
     QUIZ: {
       TITLE: "Pokémon Type Quiz",
       ERROR: "Error Page",

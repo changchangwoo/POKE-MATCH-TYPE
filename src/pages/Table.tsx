@@ -39,7 +39,10 @@ const Table = () => {
               <tr>
                 <th onClick={handleAllHeader}>전체 선택</th>
                 {columnHeaders.map((header, index) => (
-                  <th css={tableHeaderStyle(header.no, false)} key={index}>
+                  <th
+                    css={tableHeaderStyle(header.no, false, true)}
+                    key={index}
+                  >
                     {getTranslateType(header.name, language.type)}
                   </th>
                 ))}
@@ -69,7 +72,7 @@ const Table = () => {
           </table>
         </div>
       </div>
-      <TableDescription />
+      <TableDescription text={text} />
     </div>
   );
 };
@@ -110,12 +113,16 @@ const tableContents = css`
 
   thead th {
     width: 90px;
-    :nth-child(1) {
+    :nth-of-type(1) {
       background-color: var(--background);
       position: sticky;
       vertical-align: middle;
       cursor: pointer;
       left: 0;
+    }
+    :nth-of-type(1):hover {
+      filter: brightness(85%);
+      transition: all 0.2s;
     }
   }
 
@@ -124,8 +131,9 @@ const tableContents = css`
     position: sticky;
     vertical-align: middle;
     left: 0;
+    border: 1px solid var(--border);
     :hover {
-      opacity: 0.8;
+      filter: brightness(85%);
       transition: all 0.2s;
     }
   }
@@ -138,13 +146,17 @@ const tableContents = css`
   }
 `;
 
-const tableHeaderStyle = (no: number, isClicked: boolean = false) => css`
-  background-color: ${isClicked ? "transparent" : `var(--type${no})`};
+const tableHeaderStyle = (
+  no: number,
+  isClicked: boolean = false,
+  isHeader: boolean = false
+) => css`
+  background-color: ${isClicked ? "var(--primary)" : `var(--type${no})`};
   height: 30px;
   vertical-align: middle;
-  color: #ffffff;
-  :hover{
-    background-color: var(--type${no});
+  color: ${isHeader ? "#ffffff" : isClicked ? "var(--tableText)" : "#ffffff"};
+  :hover {
+    background-color: var(--type ${no});
   }
 `;
 

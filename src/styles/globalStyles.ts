@@ -21,7 +21,7 @@ const themes: Record<TTheme, TThemeStyles> = {
     border: "#d9d9d9",
     text_reverse: "white",
     highlight: "#fbc02d",
-    skeleton: "#e0e0e0"
+    skeleton: "#e0e0e0",
   },
   dark: {
     point: "#AEC6B5",
@@ -31,7 +31,7 @@ const themes: Record<TTheme, TThemeStyles> = {
     border: "#3A3A3A",
     text_reverse: "black",
     highlight: "#ffd54f",
-    skeleton: "#171717"
+    skeleton: "#171717",
 
   },
 };
