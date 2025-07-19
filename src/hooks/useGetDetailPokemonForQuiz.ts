@@ -67,10 +67,14 @@ export const useGetDetailPokemonForQuiz = (progress: number) => {
         }
       }
 
+      let infiniteLoopCheck = 0;
+
       while (result.length < 6) {
         let randGroupNum = getRandomNum(quiz0_dataGroupResult.length);
         if (randGroupNum === quizNum) continue;
 
+        if(infiniteLoopCheck > 300) break;
+        infiniteLoopCheck++;
         const types = quiz0_dataGroupResult[randGroupNum].types;
         const randTypeNum = getRandomNum(types.length);
         const candidate = types[randTypeNum];
