@@ -73,8 +73,13 @@ const Search = ({
 
   const handleSuggestionClick = (suggestion: PokemonNameType) => {
     setSearchTerm(suggestion.name);
+    newSearchParams.set("no", String(suggestion.no));
+    newSearchParams.set("name", String(suggestion.name));
+    newSearchParams.set("varietiesIdx", "0");
+    newSearchParams.set("searchLanguage", language.type);
+    setSearchParams(newSearchParams);
+    setSearchTerm("");
     setSuggestions([]);
-    handleSubmit();
   };
 
   const handleSubmit = (event?: FormEvent) => {
