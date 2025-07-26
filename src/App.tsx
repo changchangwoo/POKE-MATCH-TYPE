@@ -26,6 +26,7 @@ import {
 } from "./utils/getInitialData";
 import { LANGUAGE_TEXTS } from "./const/language_text";
 import useDefaultSetting from "./hooks/useDefaultSetting";
+import RouteTracker from "./components/RouteTracker";
 
 const imageList = [
   quizIntroImg,
@@ -58,6 +59,7 @@ function App() {
         </ThemeContext.Provider>
         <div css={Container}>
           <ChangeButtons />
+          s<RouteTracker />
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/type" element={<Match />} />
