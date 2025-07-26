@@ -1,3 +1,10 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://poke-match-type.site/$1",
+      "permanent": true
+    }
+  ]
 }
