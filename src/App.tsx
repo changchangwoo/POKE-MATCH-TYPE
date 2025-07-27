@@ -59,7 +59,7 @@ function App() {
         </ThemeContext.Provider>
         <div css={Container}>
           <ChangeButtons />
-          s<RouteTracker />
+          <RouteTracker />
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/type" element={<Match />} />
