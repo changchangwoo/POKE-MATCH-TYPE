@@ -28,6 +28,7 @@ export const QuizAnswer = ({
     <>
       <div css={AnswerContainer}>
         <SelectType
+          aria-label="Select Type"
           checkedType={checkedType}
           setCheckedType={setCheckedType}
           quizModeDatas={questionArr}
@@ -36,6 +37,7 @@ export const QuizAnswer = ({
         />
       </div>
       <button
+        aria-label="Submit Answer"
         onClick={() =>
           submitAnswer(checkedType[0].idx, answerIdx, questionArr[answerIdx])
         }

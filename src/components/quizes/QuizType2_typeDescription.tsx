@@ -117,10 +117,11 @@ const QuizType2_typeDescription = ({
               onClick={() => setCheckedAnswer({damage, idx})}
               data-name={damage}
               css={answerButton(isChecked, (isNext && answerIdx === idx))}
+              aria-label={`Select Damage ${damage}`}
             >
-          {text.QUIZ.MAIN_3.DESCRIPTION.replace(
-            "{damage}",damage
-          )}    
+              {text.QUIZ.MAIN_3.DESCRIPTION.replace(
+                "{damage}",damage
+              )}
             </button>
           );
         })}

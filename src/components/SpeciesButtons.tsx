@@ -56,6 +56,7 @@ const SpeciesButtons = ({
 
           return (
             <button
+            aria-label="Select Species"
               key={species.pokemon.name}
               css={[speciesBtn, clickedBtn === idx && selectedBtn]}
               data-idx={idx}

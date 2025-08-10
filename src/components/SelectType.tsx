@@ -50,6 +50,7 @@ const SelectType = ({
           );
           return (
             <button
+            aria-label="Select Type"
               css={item(
                 isChecked ? type.no : undefined,
                 isNext && answerIdx === idx

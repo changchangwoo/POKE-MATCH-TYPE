@@ -23,6 +23,7 @@ const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
   return (
     <div css={SelectAbilityContainer}>
       <select
+        aria-label="Select Language"
         value={selectLanguage}
         onChange={handleLanguageChange}
         onClick={(e) => e.stopPropagation()}

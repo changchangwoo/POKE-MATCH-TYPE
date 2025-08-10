@@ -113,7 +113,10 @@ const QuizMain = ({
           }
         })()}
         {isNext && (
-          <button css={nextButton} onClick={handleNextButton}>
+        
+          <button
+            aria-label="Next Question"
+            css={nextButton} onClick={handleNextButton}>
             {text.QUIZ.NEXT}
           </button>
         )}

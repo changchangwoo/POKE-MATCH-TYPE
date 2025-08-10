@@ -132,6 +132,10 @@ export const LANGUAGE_TEXTS = {
         RETRY: "다시하기",
       },
     },
+    ERROR: {
+      TITLE: "404 오류",
+      DESCRIPTION: "앗! 야생의 404가 나타났다! URL을 다시 확인해주세요."
+    }
   },
   eng: {
     APP: {
@@ -271,5 +275,9 @@ TABLE: {
 
       },
     },
+        ERROR: {
+      TITLE: "404 Error",
+      DESCRIPTION: "Uh-oh! A wild 404 appeared! Please check your URL.",
+    }
   },
 };

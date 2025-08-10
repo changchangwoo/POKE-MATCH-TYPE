@@ -40,6 +40,7 @@ const Theme = () => {
         const isClicked = theme.num === idx + 1;
         return (
           <button
+            aria-label={`SetTheme-${data.name}`}
             key={data.name}
             css={themeButton(isClicked)}
             onClick={(e) => handleThemeBtn(e, data)}

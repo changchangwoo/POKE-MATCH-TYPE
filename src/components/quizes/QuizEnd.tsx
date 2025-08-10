@@ -53,7 +53,9 @@ const QuizEnd = ({ progressArr, setSection, setProgressArr }: QuizEndProps) => {
 
       <span css={{ textAlign: "center" }}>{renderMessage()}</span>
 
-      <button onClick={() => {
+      <button 
+      aria-label="Retry Quiz"
+      onClick={() => {
         setSection(2);
         setProgressArr(() =>
     new Array(10).fill(null).map(() => ({ step: "none" })))

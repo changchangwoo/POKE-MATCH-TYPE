@@ -27,6 +27,7 @@ const QuizIntro = ({ setSection }: QuizIntroProps) => {
         </span>
       </div>
       <button
+      aria-label="Start Quiz"
         css={quizStartBtn}
         onClick={() => {
           setSection((prev) => prev + 1);

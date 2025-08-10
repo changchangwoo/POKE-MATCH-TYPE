@@ -29,7 +29,8 @@ const SelectAbility = ({
       <div css={SelectAbilityContainer}>
         <h1>{text.MATCH.SELECT_ABILITY.TITLE}</h1>
 
-        <select value={selectedAbility} onChange={handleAbilityChange}>
+        <select value={selectedAbility} onChange={handleAbilityChange}
+        aria-label="Select Ability">
           {abilities.map((ability) => (
             <option key={uuidv4()} value={ability.value}>
               {ability.label[language.type]}

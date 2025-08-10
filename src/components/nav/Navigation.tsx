@@ -15,9 +15,10 @@ const Navigation = () => {
   return (
     <>
       <div css={navigationStyle}>
-        <img src={Logo} className="logo"/>
+        <img src={Logo} className="logo" alt="logo Image"/>
         <span>{text.APP.TITLE}</span>
-        <button onClick={() => setModal(!isModal)}>
+        <button onClick={() => setModal(!isModal)}
+          aria-label="SetModal">
           <IoSettingsSharp />
         </button>
       </div>

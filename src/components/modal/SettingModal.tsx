@@ -22,7 +22,8 @@ const SettingModal = ({ setModal }: SettingModalProps) => {
       <div css={ModalContainer}>
         <div className="ModalHeader">
           <span>{text.APP.SETTING.TITLE}</span>
-          <button onClick={() => setModal((prev) => !prev)}>
+          <button aria-label="Open Setting" onClick={() => setModal((prev) => !prev)
+          }>
             <IoMdClose />
           </button>
         </div>

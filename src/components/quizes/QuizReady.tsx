@@ -20,6 +20,7 @@ const QuizReady = ({ setSection }: QuizReadyProps) => {
           <li>{text.QUIZ.READY.TITLE_SUB_3}</li>
         </ul>
         <button
+          aria-label="Start Quiz"
           css={quizStartBtn}
           onClick={() => {
             setSection((prev) => prev + 1);
