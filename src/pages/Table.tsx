@@ -4,6 +4,7 @@ import { LanguageContext } from "../utils/getInitialData";
 import typeEffectivenessData from "../datas/tableData.json";
 import { getTranslateType } from "../utils/getTranslateType";
 import TableDescription from "../components/table/TableDescription";
+import { GoogleAdsenseHorizontal } from "../components/googleAdd";
 
 const Table = () => {
   const { language, text } = useContext(LanguageContext);
@@ -30,50 +31,53 @@ const Table = () => {
   };
 
   return (
-    <div css={tableContainer}>
-      <h1>{text.TABLE.TITLE}</h1>
-      <div css={tableContents}>
-        <div>
-          <table>
-            <thead>
-              <tr>
-                <th onClick={handleAllHeader}>전체 선택</th>
-                {columnHeaders.map((header, index) => (
-                  <th
-                    css={tableHeaderStyle(header.no, false, true)}
-                    key={index}
-                  >
-                    {getTranslateType(header.name, language.type)}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {rowData.map((row, rowIndex) => {
-                const isClicked = clearDatas.includes(row.no);
-                return (
-                  <tr key={rowIndex}>
+    <>
+      <div css={tableContainer}>
+        <h1>{text.TABLE.TITLE}</h1>
+        <div css={tableContents}>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th onClick={handleAllHeader}>전체 선택</th>
+                  {columnHeaders.map((header, index) => (
                     <th
-                      css={tableHeaderStyle(row.no, isClicked)}
-                      onClick={handleBodyHeader}
-                      data-type={row.no}
+                      css={tableHeaderStyle(header.no, false, true)}
+                      key={index}
                     >
-                      {getTranslateType(row.type, language.type)}
+                      {getTranslateType(header.name, language.type)}
                     </th>
-                    {row.values.map((value, colIndex) => (
-                      <td key={colIndex} css={valueColor(value, isClicked)}>
-                        {value}
-                      </td>
-                    ))}
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {rowData.map((row, rowIndex) => {
+                  const isClicked = clearDatas.includes(row.no);
+                  return (
+                    <tr key={rowIndex}>
+                      <th
+                        css={tableHeaderStyle(row.no, isClicked)}
+                        onClick={handleBodyHeader}
+                        data-type={row.no}
+                      >
+                        {getTranslateType(row.type, language.type)}
+                      </th>
+                      {row.values.map((value, colIndex) => (
+                        <td key={colIndex} css={valueColor(value, isClicked)}>
+                          {value}
+                        </td>
+                      ))}
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
         </div>
+        <TableDescription text={text} />
       </div>
-      <TableDescription text={text} />
-    </div>
+      <GoogleAdsenseHorizontal />
+    </>
   );
 };
 

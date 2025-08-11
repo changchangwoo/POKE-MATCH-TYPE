@@ -4,7 +4,7 @@ import quizIncorrectImg from "./imgs/quiz_incorrect.jpg";
 import quizFailedImg from "./imgs/quiz_failed.jpg";
 import quizReadyImg from "./imgs/quiz_ready.jpg";
 import quizSuccessImg from "./imgs/quiz_success.png";
-import Logo from "./imgs/logo.png"
+import Logo from "./imgs/logo.png";
 
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
@@ -27,7 +27,6 @@ import {
 import { LANGUAGE_TEXTS } from "./const/language_text";
 import useDefaultSetting from "./hooks/useDefaultSetting";
 import RouteTracker from "./components/RouteTracker";
-import GoogleAdsenseHorizontal from "./components/googleAdd";
 import Error from "./pages/Error";
 
 const imageList = [
@@ -37,7 +36,7 @@ const imageList = [
   quizFailedImg,
   quizReadyImg,
   quizSuccessImg,
-  Logo
+  Logo,
 ];
 
 function App() {
@@ -69,7 +68,6 @@ function App() {
             <Route path="/quiz" element={<Quiz />} />
             <Route path="*" element={<Error />} />
           </Routes>
-          <GoogleAdsenseHorizontal />
         </div>
       </LanguageContext.Provider>
     </>
