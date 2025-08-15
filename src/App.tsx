@@ -27,7 +27,6 @@ import {
 import { LANGUAGE_TEXTS } from "./const/language_text";
 import useDefaultSetting from "./hooks/useDefaultSetting";
 import RouteTracker from "./components/RouteTracker";
-import GoogleAdsenseHorizontal from "./components/googleAdd";
 import Error from "./pages/Error";
 
 const imageList = [
@@ -69,7 +68,6 @@ function App() {
             <Route path="/quiz" element={<Quiz />} />
             <Route path="*" element={<Error />} />
           </Routes>
-          <GoogleAdsenseHorizontal />
         </div>
       </LanguageContext.Provider>
     </>

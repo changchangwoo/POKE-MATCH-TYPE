@@ -5,7 +5,7 @@ import { LanguageContext } from "../utils/getInitialData";
 
 
 const Error = () => {
-  const {language, text} = useContext(LanguageContext);
+  const {text} = useContext(LanguageContext);
   
   return (
     <div css={errorContainer}>

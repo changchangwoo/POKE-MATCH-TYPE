@@ -6,7 +6,6 @@ interface TableDescriptionProps {
 }
 
 const TableDescription = ({ text }: TableDescriptionProps) => {
-  console.log(text);
   const EFFECT_SUMMARY = [
   { icon: "●", typeNo: 14, description: text.TABLE.EFFECT_SUMMARY.SUPER_EFFECT, factor: "x2" },
   { icon: "▲", typeNo: 7,  description: text.TABLE.EFFECT_SUMMARY.NORMAL_EFFECT, factor: "x0.5" },
