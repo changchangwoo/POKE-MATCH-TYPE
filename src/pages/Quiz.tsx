@@ -5,7 +5,6 @@ import QuizMain from "../components/quizes/QuizMain";
 import QuizEnd from "../components/quizes/QuizEnd";
 import QuizIntro from "../components/quizes/QuizIntro";
 import { LanguageContext } from "../utils/getInitialData";
-import { GoogleAdsenseHorizontal } from "../components/googleAdd";
 
 const Quiz = () => {
   const { text } = useContext(LanguageContext);
@@ -45,7 +44,6 @@ const Quiz = () => {
           }
         })()}
       </div>
-      <GoogleAdsenseHorizontal />
     </>
   );
 };

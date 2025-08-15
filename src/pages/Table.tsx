@@ -4,7 +4,6 @@ import { LanguageContext } from "../utils/getInitialData";
 import typeEffectivenessData from "../datas/tableData.json";
 import { getTranslateType } from "../utils/getTranslateType";
 import TableDescription from "../components/table/TableDescription";
-import { GoogleAdsenseHorizontal } from "../components/googleAdd";
 
 const Table = () => {
   const { language, text } = useContext(LanguageContext);
@@ -76,7 +75,6 @@ const Table = () => {
         </div>
         <TableDescription text={text} />
       </div>
-      <GoogleAdsenseHorizontal />
     </>
   );
 };
