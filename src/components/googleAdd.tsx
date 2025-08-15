@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
 interface GoogleAdsenseHorizontalProps {
   adClient?: string;
@@ -9,10 +9,10 @@ interface GoogleAdsenseHorizontalProps {
 }
 
 const GoogleAdsenseHorizontal: React.FC<GoogleAdsenseHorizontalProps> = ({
-  adClient = 'ca-pub-9488712450371317',
-  adSlot = '1498772082',
-  style = { display: 'block' },
-  format = 'auto',
+  adClient = "ca-pub-9488712450371317",
+  adSlot = "1498772082",
+  style = { display: "block", backgroundColor: "orange", position: "relative" },
+  format = "auto",
   fullWidthResponsive = true,
 }) => {
   useEffect(() => {
@@ -20,7 +20,7 @@ const GoogleAdsenseHorizontal: React.FC<GoogleAdsenseHorizontalProps> = ({
       // @ts-ignore - adsbygoogle is loaded by Google's script
       (window.adsbygoogle = window.adsbygoogle || []).push({});
     } catch (e) {
-      console.error('Adsense error:', e);
+      console.error("Adsense error:", e);
     }
   }, []);
 
@@ -36,4 +36,4 @@ const GoogleAdsenseHorizontal: React.FC<GoogleAdsenseHorizontalProps> = ({
   );
 };
 
-export default GoogleAdsenseHorizontal;
+export { GoogleAdsenseHorizontal };

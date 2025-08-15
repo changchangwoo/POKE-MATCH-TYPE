@@ -5,6 +5,7 @@ import { checkedTypes } from "../models/pokemonData";
 import TypeCard from "../components/commons/TypeCard";
 import { useLocation } from "react-router-dom";
 import SelectAbility from "../components/commons/SelectAbility";
+import { GoogleAdsenseHorizontal } from "../components/googleAdd";
 
 const Match = () => {
   const [checkedType, setCheckedType] = useState<checkedTypes[]>([]);
@@ -52,6 +53,7 @@ const Match = () => {
         setSelectedAbility={setSelectedAbility}
       />
       <TypeCard MatchTypes={checkedType} selectedAbility={selectedAbility} />
+      <GoogleAdsenseHorizontal />
     </div>
   );
 };

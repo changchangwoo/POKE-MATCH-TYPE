@@ -4,7 +4,7 @@ import quizIncorrectImg from "./imgs/quiz_incorrect.jpg";
 import quizFailedImg from "./imgs/quiz_failed.jpg";
 import quizReadyImg from "./imgs/quiz_ready.jpg";
 import quizSuccessImg from "./imgs/quiz_success.png";
-import Logo from "./imgs/logo.png"
+import Logo from "./imgs/logo.png";
 
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
@@ -36,7 +36,7 @@ const imageList = [
   quizFailedImg,
   quizReadyImg,
   quizSuccessImg,
-  Logo
+  Logo,
 ];
 
 function App() {
