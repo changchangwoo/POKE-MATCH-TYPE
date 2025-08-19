@@ -1,10 +1,10 @@
 export const LANGUAGE_TEXTS = {
   kor: {
     APP: {
-      TITLE: "포켓몬 약점 계산기",
+      TITLE: "포켓몬 상성 계산기",
       SETTING: {
         TITLE: "설정",
-        DESCRIPTION_TITLE: "포켓몬스터 약점 계산기 -v02",
+        DESCRIPTION_TITLE: "포켓몬스터 상성 계산기 -v02",
         DESCRIPTION_SUB_1: "본 서비스는 포켓몬 상성 계산 서비스를 제공합니다",
         DESCRIPTION_SUB_2: "초보 유저의 이해 및 지원을 목적으로 하고있습니다.",
       },
@@ -82,7 +82,7 @@ export const LANGUAGE_TEXTS = {
         ROCK: "바위타입 모래바람 면역",
         GHOST: "고스트타입 도망 제한 기술 면역",
         STEEL: "강철타입 독·맹독·모래바람 면역",
-      }
+      },
     },
     QUIZ: {
       TITLE: "포켓몬 상성 퀴즈",
@@ -134,8 +134,8 @@ export const LANGUAGE_TEXTS = {
     },
     ERROR: {
       TITLE: "404 오류",
-      DESCRIPTION: "앗! 야생의 404가 나타났다! URL을 다시 확인해주세요."
-    }
+      DESCRIPTION: "앗! 야생의 404가 나타났다! URL을 다시 확인해주세요.",
+    },
   },
   eng: {
     APP: {
@@ -205,26 +205,26 @@ export const LANGUAGE_TEXTS = {
         TITLE: "Ability",
       },
     },
-TABLE: {
-  TITLE: "Type Matchup Table",
-  EFFECT_SUMMARY: {
-    SUPER_EFFECT: "It's super effective!",
-    NORMAL_EFFECT: "It's not very effective...",
-    NOT_EFFECT: "It doesn't affect...",
-  },
-  IMMUNITY_LIST: {
-    FIRE: "Fire‑type burn immunity",
-    GRASS: "Grass‑type immunity to Leech Seed, powder, and spore moves",
-    ELECTRIC: "Electric‑type paralysis immunity",
-    ICE: "Ice‑type immunity to freeze and hail",
-    POISON: "Poison‑type immunity to poison and badly poisoned",
-    GROUND: "Ground‑type immunity to Thunder Wave and sandstorm",
-    FLYING: "Flying‑type immunity to Spikes",
-    ROCK: "Rock‑type sandstorm immunity",
-    GHOST: "Ghost‑type immunity to trapping moves",
-    STEEL: "Steel‑type immunity to poison, badly poisoned, and sandstorm",
-  }
-},
+    TABLE: {
+      TITLE: "Type Matchup Table",
+      EFFECT_SUMMARY: {
+        SUPER_EFFECT: "It's super effective!",
+        NORMAL_EFFECT: "It's not very effective...",
+        NOT_EFFECT: "It doesn't affect...",
+      },
+      IMMUNITY_LIST: {
+        FIRE: "Fire‑type burn immunity",
+        GRASS: "Grass‑type immunity to Leech Seed, powder, and spore moves",
+        ELECTRIC: "Electric‑type paralysis immunity",
+        ICE: "Ice‑type immunity to freeze and hail",
+        POISON: "Poison‑type immunity to poison and badly poisoned",
+        GROUND: "Ground‑type immunity to Thunder Wave and sandstorm",
+        FLYING: "Flying‑type immunity to Spikes",
+        ROCK: "Rock‑type sandstorm immunity",
+        GHOST: "Ghost‑type immunity to trapping moves",
+        STEEL: "Steel‑type immunity to poison, badly poisoned, and sandstorm",
+      },
+    },
     QUIZ: {
       TITLE: "Pokémon Type Quiz",
       ERROR: "Error Page",
@@ -272,12 +272,11 @@ TABLE: {
         FAILD_2: "Would you like to try helping Pikachu again?",
         SYSTEM: "You got {correctCount} out of 10 questions right! ✨",
         RETRY: "RETRY",
-
       },
     },
-        ERROR: {
+    ERROR: {
       TITLE: "404 Error",
       DESCRIPTION: "Uh-oh! A wild 404 appeared! Please check your URL.",
-    }
+    },
   },
 };

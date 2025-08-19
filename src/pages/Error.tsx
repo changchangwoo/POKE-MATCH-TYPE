@@ -2,18 +2,16 @@ import { css } from "@emotion/react";
 import { useContext } from "react";
 import { LanguageContext } from "../utils/getInitialData";
 
-
-
 const Error = () => {
-  const {text} = useContext(LanguageContext);
-  
+  const { text } = useContext(LanguageContext);
+
   return (
     <div css={errorContainer}>
-        <h1>{text.ERROR.TITLE}</h1>
-        <h2>{text.ERROR.DESCRIPTION}</h2>
+      <h1>{text.ERROR.TITLE}</h1>
+      <h2>{text.ERROR.DESCRIPTION}</h2>
     </div>
-  )
-}
+  );
+};
 
 const errorContainer = css`
   color: var(--white);
@@ -28,6 +26,8 @@ const errorContainer = css`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 20px;
+
   h1 {
     font-size: 32px;
   }
@@ -35,5 +35,5 @@ const errorContainer = css`
   h2 {
     font-size: var(--fontMedium);
   }
-
-`;export default Error
+`;
+export default Error;
