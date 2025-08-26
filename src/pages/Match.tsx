@@ -52,7 +52,7 @@ const Match = () => {
         selectedAbility={selectedAbility}
         setSelectedAbility={setSelectedAbility}
       />
-      <CoupangBanner />
+      <CoupangBanner id="911655" />
       <TypeCard MatchTypes={checkedType} selectedAbility={selectedAbility} />
     </div>
   );

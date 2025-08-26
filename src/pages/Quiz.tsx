@@ -44,7 +44,7 @@ const Quiz = () => {
               return <div>{text.QUIZ.ERROR}</div>;
           }
         })()}
-        <CoupangBanner />
+        <CoupangBanner id="911656" />
       </div>
     </>
   );

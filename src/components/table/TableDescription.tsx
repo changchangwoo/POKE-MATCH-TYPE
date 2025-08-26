@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import CoupangBanner from "../../ads/CoupangBanner";
 
 interface TableDescriptionProps {
   text: any;

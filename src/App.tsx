@@ -28,7 +28,6 @@ import { LANGUAGE_TEXTS } from "./const/language_text";
 import useDefaultSetting from "./hooks/useDefaultSetting";
 import RouteTracker from "./components/RouteTracker";
 import Error from "./pages/Error";
-import Footer from "./components/Footer";
 
 const imageList = [
   quizIntroImg,

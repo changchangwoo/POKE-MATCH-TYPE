@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 import { useState, useEffect } from "react";
 
 interface CoupangBannerProps {
-  id?: number;
+  id?: string;
   template?: string;
   trackingCode?: string;
   subId?: string;
@@ -16,7 +16,7 @@ const DEVICE_BANNER_SIZES = {
 };
 
 export default function CoupangBanner({
-  id = 95180,
+  id = "911580",
   template = "carousel",
   trackingCode = "AF8230631",
   subId = "",
