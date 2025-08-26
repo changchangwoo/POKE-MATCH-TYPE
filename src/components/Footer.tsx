@@ -1,15 +1,15 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { FaGithub } from "react-icons/fa";
+import { FaCopyright, FaGithub } from "react-icons/fa";
 import { FaPencil } from "react-icons/fa6";
 
 const Footer = () => {
   return (
     <div css={FooterContainer}>
       <>
-        {/* <h3>
+        <h3>
           <FaCopyright /> Data provided by PokeAPI
-        </h3> */}
+        </h3>
 
         <a href="https://github.com/changchangwoo/POKE-MATCH-TYPE">
           <FaGithub />
@@ -19,6 +19,11 @@ const Footer = () => {
           <FaPencil />
           velog.io/@changwoo
         </a>
+
+        <h2>
+          본 서비스는 쿠팡 파트너스 활동의 일환으로 <br />
+          이에 따른 일정액의 수수료를 제공받습니다.
+        </h2>
       </>
     </div>
   );
@@ -52,6 +57,12 @@ const FooterContainer = css`
     font-size: 14px;
     color: var(--text);
     margin-bottom: 10px;
+  }
+
+  h2 {
+    margin-top: 10px;
+    color: grey;
+    text-align: center;
   }
 `;
 

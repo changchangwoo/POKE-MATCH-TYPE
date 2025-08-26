@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-
+import CoupangBanner from "../../ads/CoupangBanner";
 
 interface TableDescriptionProps {
   text: any;
@@ -7,23 +7,38 @@ interface TableDescriptionProps {
 
 const TableDescription = ({ text }: TableDescriptionProps) => {
   const EFFECT_SUMMARY = [
-  { icon: "●", typeNo: 14, description: text.TABLE.EFFECT_SUMMARY.SUPER_EFFECT, factor: "x2" },
-  { icon: "▲", typeNo: 7,  description: text.TABLE.EFFECT_SUMMARY.NORMAL_EFFECT, factor: "x0.5" },
-  { icon: "✕", typeNo: 16, description: text.TABLE.EFFECT_SUMMARY.NOT_EFFECT, factor: "x0" },
+    {
+      icon: "●",
+      typeNo: 14,
+      description: text.TABLE.EFFECT_SUMMARY.SUPER_EFFECT,
+      factor: "x2",
+    },
+    {
+      icon: "▲",
+      typeNo: 7,
+      description: text.TABLE.EFFECT_SUMMARY.NORMAL_EFFECT,
+      factor: "x0.5",
+    },
+    {
+      icon: "✕",
+      typeNo: 16,
+      description: text.TABLE.EFFECT_SUMMARY.NOT_EFFECT,
+      factor: "x0",
+    },
   ];
 
-const IMMUNITY_LIST = [
-  { typeNo: 10, description: text.TABLE.IMMUNITY_LIST.FIRE },
-  { typeNo: 12, description: text.TABLE.IMMUNITY_LIST.GRASS },
-  { typeNo: 13, description: text.TABLE.IMMUNITY_LIST.ELECTRIC },
-  { typeNo: 15, description: text.TABLE.IMMUNITY_LIST.ICE },
-  { typeNo: 4,  description: text.TABLE.IMMUNITY_LIST.POISON },
-  { typeNo: 5,  description: text.TABLE.IMMUNITY_LIST.GROUND },
-  { typeNo: 3,  description: text.TABLE.IMMUNITY_LIST.FLYING },
-  { typeNo: 6,  description: text.TABLE.IMMUNITY_LIST.ROCK },
-  { typeNo: 8,  description: text.TABLE.IMMUNITY_LIST.GHOST },
-  { typeNo: 9,  description: text.TABLE.IMMUNITY_LIST.STEEL },
-];
+  const IMMUNITY_LIST = [
+    { typeNo: 10, description: text.TABLE.IMMUNITY_LIST.FIRE },
+    { typeNo: 12, description: text.TABLE.IMMUNITY_LIST.GRASS },
+    { typeNo: 13, description: text.TABLE.IMMUNITY_LIST.ELECTRIC },
+    { typeNo: 15, description: text.TABLE.IMMUNITY_LIST.ICE },
+    { typeNo: 4, description: text.TABLE.IMMUNITY_LIST.POISON },
+    { typeNo: 5, description: text.TABLE.IMMUNITY_LIST.GROUND },
+    { typeNo: 3, description: text.TABLE.IMMUNITY_LIST.FLYING },
+    { typeNo: 6, description: text.TABLE.IMMUNITY_LIST.ROCK },
+    { typeNo: 8, description: text.TABLE.IMMUNITY_LIST.GHOST },
+    { typeNo: 9, description: text.TABLE.IMMUNITY_LIST.STEEL },
+  ];
 
   return (
     <div css={tableDescriptionStyle}>
@@ -31,21 +46,23 @@ const IMMUNITY_LIST = [
         {EFFECT_SUMMARY.map(({ icon, typeNo, description, factor }) => (
           <div key={icon}>
             <span style={{ color: `var(--type${typeNo})` }}>{icon}</span>:
-          <span>{description} ({factor})</span>
-        </div>
-      ))}
-    </div>
+            <span>
+              {description} ({factor})
+            </span>
+          </div>
+        ))}
+      </div>
 
-    <div className="extraBox">
-      {IMMUNITY_LIST.map(({ typeNo, description }) => (
-        <div key={description}>
-          <span style={{ color: `var(--type${typeNo})` }}>●</span>
-          <span>{description}</span>
-        </div>
-      ))}
+      <div className="extraBox">
+        {IMMUNITY_LIST.map(({ typeNo, description }) => (
+          <div key={description}>
+            <span style={{ color: `var(--type${typeNo})` }}>●</span>
+            <span>{description}</span>
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
 };
 
 const tableDescriptionStyle = css`
@@ -75,15 +92,15 @@ const tableDescriptionStyle = css`
     border-radius: 8px;
     text-align: left;
     box-sizing: border-box;
-    min-width: 295px;
+    width: 100%;
   }
 
   .box div {
     display: flex;
     gap: 10px;
-          @media screen and (max-width: 415px) {
-        letter-spacing: -2px;
-      }
+    @media screen and (max-width: 415px) {
+      letter-spacing: -2px;
+    }
   }
 
   .box div:nth-of-type(3) {

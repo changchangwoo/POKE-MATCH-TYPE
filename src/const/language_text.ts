@@ -134,7 +134,8 @@ export const LANGUAGE_TEXTS = {
     },
     ERROR: {
       TITLE: "404 오류",
-      DESCRIPTION: "앗! 야생의 404가 나타났다! URL을 다시 확인해주세요.",
+      DESCRIPTION_1: "앗! 야생의 404가 나타났다!",
+      DESCRIPTION_2: "URL을 다시 확인해주세요.",
     },
   },
   eng: {
@@ -276,7 +277,8 @@ export const LANGUAGE_TEXTS = {
     },
     ERROR: {
       TITLE: "404 Error",
-      DESCRIPTION: "Uh-oh! A wild 404 appeared! Please check your URL.",
+      DESCRIPTION_1: "Uh-oh! A wild 404 appeared!",
+      DESCRIPTION_2: "Please check your URL.",
     },
   },
 };

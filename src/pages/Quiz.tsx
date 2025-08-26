@@ -5,6 +5,7 @@ import QuizMain from "../components/quizes/QuizMain";
 import QuizEnd from "../components/quizes/QuizEnd";
 import QuizIntro from "../components/quizes/QuizIntro";
 import { LanguageContext } from "../utils/getInitialData";
+import CoupangBanner from "../ads/CoupangBanner";
 
 const Quiz = () => {
   const { text } = useContext(LanguageContext);
@@ -43,6 +44,7 @@ const Quiz = () => {
               return <div>{text.QUIZ.ERROR}</div>;
           }
         })()}
+        <CoupangBanner />
       </div>
     </>
   );

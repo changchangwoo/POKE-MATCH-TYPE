@@ -2,3 +2,4 @@ User-agent: *
 Disallow:
 
 Sitemap: https://poke-match-type.site/sitemap.xml
+d2plbxmxiwisci.cloudfront.net.

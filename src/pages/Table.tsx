@@ -4,6 +4,7 @@ import { LanguageContext } from "../utils/getInitialData";
 import typeEffectivenessData from "../datas/tableData.json";
 import { getTranslateType } from "../utils/getTranslateType";
 import TableDescription from "../components/table/TableDescription";
+import CoupangBanner from "../ads/CoupangBanner";
 
 const Table = () => {
   const { language, text } = useContext(LanguageContext);
@@ -73,6 +74,8 @@ const Table = () => {
             </table>
           </div>
         </div>
+        <CoupangBanner />
+
         <TableDescription text={text} />
       </div>
     </>

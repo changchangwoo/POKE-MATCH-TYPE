@@ -8,7 +8,8 @@ const Error = () => {
   return (
     <div css={errorContainer}>
       <h1>{text.ERROR.TITLE}</h1>
-      <h2>{text.ERROR.DESCRIPTION}</h2>
+      <h2>{text.ERROR.DESCRIPTION_1}</h2>
+      <h2>{text.ERROR.DESCRIPTION_2}</h2>
     </div>
   );
 };
@@ -25,11 +26,13 @@ const errorContainer = css`
   border: 1px solid var(--border);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
   padding: 20px;
+  box-sizing: border-box;
 
   h1 {
     font-size: 32px;
+    margin-bottom: 15px;
   }
 
   h2 {
@@ -37,3 +40,4 @@ const errorContainer = css`
   }
 `;
 export default Error;
+
