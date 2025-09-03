@@ -1,11 +1,11 @@
 import { css } from "@emotion/react";
 import { useContext, useState } from "react";
-import QuizReady from "../components/quizes/QuizReady";
-import QuizMain from "../components/quizes/QuizMain";
+import KakaoAdfitBanner from "../ads/KakaoAdfitBanner";
 import QuizEnd from "../components/quizes/QuizEnd";
 import QuizIntro from "../components/quizes/QuizIntro";
+import QuizMain from "../components/quizes/QuizMain";
+import QuizReady from "../components/quizes/QuizReady";
 import { LanguageContext } from "../utils/getInitialData";
-import CoupangBanner from "../ads/CoupangBanner";
 
 const Quiz = () => {
   const { text } = useContext(LanguageContext);
@@ -44,7 +44,7 @@ const Quiz = () => {
               return <div>{text.QUIZ.ERROR}</div>;
           }
         })()}
-        <CoupangBanner id="911656" />
+        <KakaoAdfitBanner />
       </div>
     </>
   );

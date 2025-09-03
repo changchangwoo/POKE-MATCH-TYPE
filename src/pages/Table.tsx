@@ -1,10 +1,10 @@
 import { css } from "@emotion/react";
 import { useContext, useState } from "react";
-import { LanguageContext } from "../utils/getInitialData";
-import typeEffectivenessData from "../datas/tableData.json";
-import { getTranslateType } from "../utils/getTranslateType";
+import KakaoAdfitBanner from "../ads/KakaoAdfitBanner";
 import TableDescription from "../components/table/TableDescription";
-import CoupangBanner from "../ads/CoupangBanner";
+import typeEffectivenessData from "../datas/tableData.json";
+import { LanguageContext } from "../utils/getInitialData";
+import { getTranslateType } from "../utils/getTranslateType";
 
 const Table = () => {
   const { language, text } = useContext(LanguageContext);
@@ -74,7 +74,7 @@ const Table = () => {
             </table>
           </div>
         </div>
-        <CoupangBanner />
+        <KakaoAdfitBanner />
 
         <TableDescription text={text} />
       </div>

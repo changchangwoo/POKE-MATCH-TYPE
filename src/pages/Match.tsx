@@ -1,11 +1,11 @@
 import { css } from "@emotion/react";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import KakaoAdfitBanner from "../ads/KakaoAdfitBanner";
+import SelectAbility from "../components/commons/SelectAbility";
+import TypeCard from "../components/commons/TypeCard";
 import SelectType from "../components/SelectType";
 import { checkedTypes } from "../models/pokemonData";
-import TypeCard from "../components/commons/TypeCard";
-import { useLocation } from "react-router-dom";
-import SelectAbility from "../components/commons/SelectAbility";
-import CoupangBanner from "../ads/CoupangBanner";
 
 const Match = () => {
   const [checkedType, setCheckedType] = useState<checkedTypes[]>([]);
@@ -52,7 +52,7 @@ const Match = () => {
         selectedAbility={selectedAbility}
         setSelectedAbility={setSelectedAbility}
       />
-      <CoupangBanner id="911655" />
+      <KakaoAdfitBanner />
       <TypeCard MatchTypes={checkedType} selectedAbility={selectedAbility} />
     </div>
   );

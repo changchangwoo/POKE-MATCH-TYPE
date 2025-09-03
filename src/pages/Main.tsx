@@ -1,8 +1,8 @@
-import Search from "../components/search/Search";
 import { useSearchParams } from "react-router-dom";
-import pokedex from "../datas/pokedex.json";
+import KakaoAdfitBanner from "../ads/KakaoAdfitBanner";
 import MatchMain from "../components/MatchMain";
-import CoupangBanner from "../ads/CoupangBanner";
+import Search from "../components/search/Search";
+import pokedex from "../datas/pokedex.json";
 
 const Main = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -13,7 +13,7 @@ const Main = () => {
         setSearchParams={setSearchParams}
         pokemonNames={pokedex}
       />
-      <CoupangBanner />
+      <KakaoAdfitBanner />
       <MatchMain
         searchParams={searchParams}
         setSearchParams={setSearchParams}
