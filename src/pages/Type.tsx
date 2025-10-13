@@ -9,7 +9,7 @@ import { checkedTypes } from "../models/pokemonData";
 const Type = () => {
   const [checkedType, setCheckedType] = useState<checkedTypes[]>([]);
   const [selectedAbility, setSelectedAbility] = useState<string>("");
-  const [selectedTrastal, setSelectedTrastal] = useState<{
+  const [selectedTrastal, setSelectedTerastal] = useState<{
     value: string;
     no: string;
   }>({ value: "", no: "" });
@@ -52,7 +52,7 @@ const Type = () => {
 
     if (getSessionTerastal) {
       const parseSesstionTerastal = JSON.parse(getSessionTerastal);
-      setSelectedTrastal(parseSesstionTerastal);
+      setSelectedTerastal(parseSesstionTerastal);
     }
   }, [location.pathname]);
 
@@ -65,7 +65,7 @@ const Type = () => {
         selectedAbility={selectedAbility}
         selectedTerastal={selectedTrastal}
         setSelectedAbility={setSelectedAbility}
-        setSelectedTerastal={setSelectedTrastal}
+        setSelectedTerastal={setSelectedTerastal}
       />
 
       <TypeCard

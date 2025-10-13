@@ -73,6 +73,10 @@ const MatchMain = ({
     const getSessionVarietiesIdx = sessionStorage.getItem(
       location.pathname + "/varietiesIdx"
     );
+    const getSessionTerastal = sessionStorage.getItem(
+      location.pathname + "/terastal"
+    );
+
     if (getSessionMatchDatas) {
       const parseMatchDatas = JSON.parse(getSessionMatchDatas);
       const parsedVarietiesIdx = getSessionVarietiesIdx
@@ -82,6 +86,11 @@ const MatchMain = ({
         ...parseMatchDatas,
         varietiesIdx: parsedVarietiesIdx.varietiesIdx,
       });
+    }
+
+    if (getSessionTerastal) {
+      const parseSesstionTerastal = JSON.parse(getSessionTerastal);
+      setSelectedTerastal(parseSesstionTerastal);
     }
     if (getSessionTypeCheck) setSelectedAbility(getSessionTypeCheck);
   }, [location.pathname]);
