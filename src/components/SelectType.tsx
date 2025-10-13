@@ -59,14 +59,16 @@ const SelectType = ({
           );
         })}
       </div>
-      <SelectAbility
-        selectedAbility={selectedAbility}
-        setSelectedAbility={setSelectedAbility}
-      />
-      <SelectTerastal
-        selectedTerastal={selectedTerastal.value}
-        setSelectedTerastal={setSelectedTerastal}
-      />
+      <div className="addBox">
+        <SelectAbility
+          selectedAbility={selectedAbility}
+          setSelectedAbility={setSelectedAbility}
+        />
+        <SelectTerastal
+          selectedTerastal={selectedTerastal.value}
+          setSelectedTerastal={setSelectedTerastal}
+        />
+      </div>
     </div>
   );
 };
@@ -84,6 +86,13 @@ const selectTypeContainer = css`
   border-radius: 8px;
   padding: 20px;
   background-color: var(--background);
+
+  .addBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
 `;
 
 const selectTypes = css`

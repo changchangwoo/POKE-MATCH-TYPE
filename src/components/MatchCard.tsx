@@ -78,14 +78,16 @@ const MatchCard = ({
           searchLanguage={searchLanguage}
         />
       )}
-      <SelectAbility
-        selectedAbility={selectedAbility}
-        setSelectedAbility={setSelectedAbility}
-      />
-      <SelectTerastal
-        selectedTerastal={selectedTerastal}
-        setSelectedTerastal={setSelectedTerastal}
-      />
+      <div className="addBox">
+        <SelectAbility
+          selectedAbility={selectedAbility}
+          setSelectedAbility={setSelectedAbility}
+        />
+        <SelectTerastal
+          selectedTerastal={selectedTerastal}
+          setSelectedTerastal={setSelectedTerastal}
+        />
+      </div>
     </div>
   );
 };
@@ -107,6 +109,13 @@ export const matchCardContainer = css`
   align-items: center;
   gap: 10px;
   min-height: 450px;
+
+  .addBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
 `;
 
 export const imgBox = (no: number) => css`
