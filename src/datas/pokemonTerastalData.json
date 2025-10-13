@@ -1,0 +1,21 @@
+[
+  { "value": "", "label": { "kor": "없음", "eng": "None" } },
+  { "value": "normal", "label": { "kor": "노말", "eng": "Normal" } },
+  { "value": "fighting", "label": { "kor": "격투", "eng": "Fighting" } },
+  { "value": "flying", "label": { "kor": "비행", "eng": "Flying" } },
+  { "value": "poison", "label": { "kor": "독", "eng": "Poison" } },
+  { "value": "ground", "label": { "kor": "땅", "eng": "Ground" } },
+  { "value": "rock", "label": { "kor": "바위", "eng": "Rock" } },
+  { "value": "bug", "label": { "kor": "벌레", "eng": "Bug" } },
+  { "value": "ghost", "label": { "kor": "고스트", "eng": "Ghost" } },
+  { "value": "steel", "label": { "kor": "강철", "eng": "Steel" } },
+  { "value": "fire", "label": { "kor": "불꽃", "eng": "Fire" } },
+  { "value": "water", "label": { "kor": "물", "eng": "Water" } },
+  { "value": "grass", "label": { "kor": "풀", "eng": "Grass" } },
+  { "value": "electric", "label": { "kor": "전기", "eng": "Electric" } },
+  { "value": "psychic", "label": { "kor": "에스퍼", "eng": "Psychic" } },
+  { "value": "ice", "label": { "kor": "얼음", "eng": "Ice" } },
+  { "value": "dragon", "label": { "kor": "드래곤", "eng": "Dragon" } },
+  { "value": "dark", "label": { "kor": "악", "eng": "Dark" } },
+  { "value": "fairy", "label": { "kor": "페어리", "eng": "Fairy" } }
+]

@@ -6,10 +6,12 @@ import SelectAbility from "../components/commons/SelectAbility";
 import TypeCard from "../components/commons/TypeCard";
 import SelectType from "../components/SelectType";
 import { checkedTypes } from "../models/pokemonData";
+import SelectTerastal from "../components/commons/SelectTerastal";
 
-const Match = () => {
+const Type = () => {
   const [checkedType, setCheckedType] = useState<checkedTypes[]>([]);
   const [selectedAbility, setSelectedAbility] = useState("");
+  const [selectedTrastal, setSelectedTrastal] = useState("");
   const location = useLocation();
 
   useEffect(() => {
@@ -52,6 +54,11 @@ const Match = () => {
         selectedAbility={selectedAbility}
         setSelectedAbility={setSelectedAbility}
       />
+      <SelectTerastal
+        selectedTerastal={selectedTrastal}
+        setSelectedTerastal={setSelectedTrastal}
+      />
+
       <KakaoAdfitBanner />
       <TypeCard MatchTypes={checkedType} selectedAbility={selectedAbility} />
     </div>
@@ -66,4 +73,4 @@ const matchContainer = css`
   justify-content: center;
 `;
 
-export default Match;
+export default Type;

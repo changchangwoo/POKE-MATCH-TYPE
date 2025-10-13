@@ -63,6 +63,9 @@ export const LANGUAGE_TEXTS = {
       SELECT_ABILITY: {
         TITLE: "특성",
       },
+      SELECT_TERASTAL: {
+        TITLE: "테라스탈",
+      },
     },
     TABLE: {
       TITLE: "타입 상성 표",
@@ -204,6 +207,9 @@ export const LANGUAGE_TEXTS = {
       },
       SELECT_ABILITY: {
         TITLE: "Ability",
+      },
+      SELECT_TERASTAL: {
+        TITLE: "Terastal",
       },
     },
     TABLE: {

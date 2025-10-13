@@ -1,6 +1,12 @@
 import { css } from "@emotion/react";
 import { MatchInfo as IMatchInfo } from "../models/pokemonData";
-import { Dispatch, SetStateAction, useContext, useEffect, useState } from "react";
+import {
+  Dispatch,
+  SetStateAction,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import { SetURLSearchParams } from "react-router-dom";
 import TypeBadge from "./commons/TypeBadge";
 import { getTranslateType } from "../utils/getTranslateType";
@@ -10,34 +16,40 @@ import SpeciesButtons from "./SpeciesButtons";
 import { LanguageContext } from "../utils/getInitialData";
 import pokedex from "../datas/pokedex.json";
 import { TLanguageType } from "../models/settingData";
-
+import SelectTerastal from "./commons/SelectTerastal";
 
 interface MatchCardProps {
   MatchInfo: IMatchInfo;
   selectedAbility: string;
+  selectedTerastal: string;
   varietiesData: any;
   varietiesIdx: string | null;
   setSelectedAbility: Dispatch<SetStateAction<string>>;
+  setSelectedTerastal: Dispatch<SetStateAction<string>>;
   setSearchParams: SetURLSearchParams;
 }
 
 const MatchCard = ({
   MatchInfo,
   selectedAbility,
+  selectedTerastal,
   varietiesData,
   varietiesIdx,
   setSelectedAbility,
+  setSelectedTerastal,
   setSearchParams,
 }: MatchCardProps) => {
-  const {language, text} = useContext(LanguageContext);
+  const { language, text } = useContext(LanguageContext);
   const [name, setName] = useState<string>(MatchInfo.name);
-  const searchLanguage = MatchInfo.searchLanguage
-  const searchName = MatchInfo.name
+  const searchLanguage = MatchInfo.searchLanguage;
+  const searchName = MatchInfo.name;
 
   useEffect(() => {
-    const pokedexItem = pokedex.filter((item) => item.name[searchLanguage as TLanguageType] === searchName)
-    setName(pokedexItem[0].name[language.type])
-  }, [language, MatchInfo])
+    const pokedexItem = pokedex.filter(
+      (item) => item.name[searchLanguage as TLanguageType] === searchName
+    );
+    setName(pokedexItem[0].name[language.type]);
+  }, [language, MatchInfo]);
 
   return (
     <div css={matchCardContainer}>
@@ -69,6 +81,10 @@ const MatchCard = ({
       <SelectAbility
         selectedAbility={selectedAbility}
         setSelectedAbility={setSelectedAbility}
+      />
+      <SelectTerastal
+        selectedTerastal={selectedTerastal}
+        setSelectedTerastal={setSelectedTerastal}
       />
     </div>
   );
@@ -125,5 +141,3 @@ export const pokeTypes = css`
 `;
 
 export default MatchCard;
-
-

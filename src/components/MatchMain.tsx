@@ -15,8 +15,8 @@ interface MatchMainProps {
   searchParams: URLSearchParams;
 }
 
-  const pokedexHash = new Map();
-  pokedex.map((item) => {
+const pokedexHash = new Map();
+pokedex.map((item) => {
   item.name.kor = item.name.kor.replace(/\s*\(.*?\)\s*/g, "").trim();
   pokedexHash.set(item.no, item);
 });
@@ -24,6 +24,7 @@ interface MatchMainProps {
 const MatchMain = ({ setSearchParams, searchParams }: MatchMainProps) => {
   const { language } = useContext(LanguageContext);
   const [selectedAbility, setSelectedAbility] = useState("");
+  const [selectedTerastal, setSelectedTerastal] = useState("");
 
   const name = searchParams.get("name");
   const no = searchParams.get("no");
@@ -34,14 +35,19 @@ const MatchMain = ({ setSearchParams, searchParams }: MatchMainProps) => {
     data: matchInfo,
     error: detailDataError,
     isLoading: detailDataLoading,
-  } = useFetchDetailPokemon(no || "", name || "", searchLanguage || ""); 
+  } = useFetchDetailPokemon(no || "", name || "", searchLanguage || "");
   const {
     data: varietiesData,
     error: varietiesDataError,
     isLoading: varietiesDataLoading,
-  } = useFetchPokemonVarieties(no || "", name || "", pokedexHash, language.type);
+  } = useFetchPokemonVarieties(
+    no || "",
+    name || "",
+    pokedexHash,
+    language.type
+  );
 
-  console.log(varietiesDataError)
+  console.log(varietiesDataError);
   useEffect(() => {
     const getSessionMatchDatas = sessionStorage.getItem(
       location.pathname + "/matchDatas"
@@ -66,8 +72,8 @@ const MatchMain = ({ setSearchParams, searchParams }: MatchMainProps) => {
   }, [location.pathname]);
 
   if (detailDataLoading || varietiesDataLoading) {
-  // if (true) {
-    return (<MatchMain_Skeleton/>)
+    // if (true) {
+    return <MatchMain_Skeleton />;
   }
   if (detailDataError) return null;
 
@@ -75,9 +81,11 @@ const MatchMain = ({ setSearchParams, searchParams }: MatchMainProps) => {
     <div css={MainContainer}>
       {matchInfo && (
         <MatchCard
-        MatchInfo={matchInfo}
+          MatchInfo={matchInfo}
           selectedAbility={selectedAbility}
+          selectedTerastal={selectedTerastal}
           setSelectedAbility={setSelectedAbility}
+          setSelectedTerastal={setSelectedTerastal}
           setSearchParams={setSearchParams}
           varietiesData={varietiesData}
           varietiesIdx={varietiesIdx}

@@ -9,7 +9,7 @@ import Logo from "./imgs/logo.png";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Main from "./pages/Main";
-import Match from "./pages/Match";
+import Type from "./pages/Type";
 import { css, Global } from "@emotion/react";
 import Navigation from "./components/nav/Navigation";
 import ChangeButtons from "./components/nav/ChangeButtons";
@@ -63,7 +63,7 @@ function App() {
           <RouteTracker />
           <Routes>
             <Route path="/" element={<Main />} />
-            <Route path="/type" element={<Match />} />
+            <Route path="/type" element={<Type />} />
             <Route path="/table" element={<Table />} />
             <Route path="/quiz" element={<Quiz />} />
             <Route path="*" element={<Error />} />
