@@ -1,13 +1,14 @@
 import { css } from "@emotion/react";
 import { v4 as uuidv4 } from "uuid";
 import terastalTypes from "../../datas/pokemonTerastalData.json";
+import defaultTypes from "../../datas/defaultTypes.json";
 import { Dispatch, SetStateAction, useContext } from "react";
 import { useLocation } from "react-router-dom";
 import { LanguageContext } from "../../utils/getInitialData";
 
 interface SelectTerastalProps {
   selectedTerastal: string;
-  setSelectedTerastal: Dispatch<SetStateAction<string>>;
+  setSelectedTerastal: Dispatch<SetStateAction<{ value: string; no: string }>>;
 }
 
 const SelectTerastal = ({
@@ -21,9 +22,26 @@ const SelectTerastal = ({
     event: React.ChangeEvent<HTMLSelectElement>
   ) => {
     const selectedValue = event.target.value;
-    setSelectedTerastal(selectedValue);
     let currentPath = location.pathname + "/terastal";
-    sessionStorage.setItem(currentPath, selectedValue);
+
+    if (selectedValue === "") {
+      setSelectedTerastal({ value: "", no: "" });
+      sessionStorage.removeItem(currentPath);
+      return;
+    }
+
+    const selectedType = defaultTypes.find(
+      (type) => type.name === selectedValue
+    );
+    const typeNo = selectedType ? String(selectedType.no) : "";
+
+    const terastalData = {
+      value: selectedValue,
+      no: typeNo,
+    };
+
+    setSelectedTerastal(terastalData);
+    sessionStorage.setItem(currentPath, JSON.stringify(terastalData));
   };
 
   return (

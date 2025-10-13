@@ -10,8 +10,11 @@ import SelectTerastal from "../components/commons/SelectTerastal";
 
 const Type = () => {
   const [checkedType, setCheckedType] = useState<checkedTypes[]>([]);
-  const [selectedAbility, setSelectedAbility] = useState("");
-  const [selectedTrastal, setSelectedTrastal] = useState("");
+  const [selectedAbility, setSelectedAbility] = useState<string>("");
+  const [selectedTrastal, setSelectedTrastal] = useState<{
+    value: string;
+    no: string;
+  }>({ value: "", no: "" });
   const location = useLocation();
 
   useEffect(() => {
@@ -34,6 +37,9 @@ const Type = () => {
     const getSessionTypeCheck = sessionStorage.getItem(
       location.pathname + "/typecheck"
     );
+    const getSessionTerastal = sessionStorage.getItem(
+      location.pathname + "/terastal"
+    );
 
     if (getSessionCheckedDatas) {
       const parsedCheckedDatas = JSON.parse(getSessionCheckedDatas);
@@ -45,6 +51,11 @@ const Type = () => {
     if (getSessionTypeCheck) {
       setSelectedAbility(getSessionTypeCheck);
     }
+
+    if (getSessionTerastal) {
+      const parseSesstionTerastal = JSON.parse(getSessionTerastal);
+      setSelectedTrastal(parseSesstionTerastal);
+    }
   }, [location.pathname]);
 
   return (
@@ -55,12 +66,16 @@ const Type = () => {
         setSelectedAbility={setSelectedAbility}
       />
       <SelectTerastal
-        selectedTerastal={selectedTrastal}
+        selectedTerastal={selectedTrastal.value}
         setSelectedTerastal={setSelectedTrastal}
       />
 
       <KakaoAdfitBanner />
-      <TypeCard MatchTypes={checkedType} selectedAbility={selectedAbility} />
+      <TypeCard
+        MatchTypes={checkedType}
+        selectedAbility={selectedAbility}
+        selectedTerastal_no={selectedTrastal.no}
+      />
     </div>
   );
 };

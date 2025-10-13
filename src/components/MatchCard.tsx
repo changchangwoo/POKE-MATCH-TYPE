@@ -25,7 +25,7 @@ interface MatchCardProps {
   varietiesData: any;
   varietiesIdx: string | null;
   setSelectedAbility: Dispatch<SetStateAction<string>>;
-  setSelectedTerastal: Dispatch<SetStateAction<string>>;
+  setSelectedTerastal: Dispatch<SetStateAction<{ value: string; no: string }>>;
   setSearchParams: SetURLSearchParams;
 }
 

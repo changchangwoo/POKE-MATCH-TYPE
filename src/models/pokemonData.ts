@@ -15,13 +15,13 @@ export interface Types {
 
 export interface checkedTypes {
   no: number;
-  name : string;
-  idx : number
+  name: string;
+  idx: number;
 }
 
 export interface IPokeDex {
   no: number;
-  name : Record<TLanguageType, string>;
+  name: Record<TLanguageType, string>;
   varieties: Record<TLanguageType, string[]>;
 }
 

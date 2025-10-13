@@ -8,10 +8,10 @@ import { IDamageData } from "../../utils/getDetailType";
 import useFetchDetailType from "../../hooks/queries/useFetchDetailType";
 import { LanguageContext } from "../../utils/getInitialData";
 
-
 interface MatchCardProps {
   MatchTypes: Types[];
-  selectedAbility?: string;
+  selectedAbility: string;
+  selectedTerastal_no: string;
 }
 
 export interface ITypeRelations {
@@ -19,17 +19,21 @@ export interface ITypeRelations {
   types: IDamageData[];
 }
 
-const TypeCard = ({ MatchTypes, selectedAbility }: MatchCardProps) => {
-    const { language, text } = useContext(LanguageContext);
-  
+const TypeCard = ({
+  MatchTypes,
+  selectedAbility,
+  selectedTerastal_no,
+}: MatchCardProps) => {
+  const { language, text } = useContext(LanguageContext);
+
   const no = MatchTypes.map((type) => type.no);
   const {
     data: typeRelations,
     isLoading,
     isError,
-  } = useFetchDetailType(no, selectedAbility);
-  
-  console.log(isError)
+  } = useFetchDetailType(no, selectedAbility, selectedTerastal_no);
+
+  console.log(isError);
 
   if (!typeRelations) return;
   if (isLoading) return <div>{text.MAIN.LOADING}</div>;
@@ -39,11 +43,13 @@ const TypeCard = ({ MatchTypes, selectedAbility }: MatchCardProps) => {
       <div css={typeCardContainer}>
         {typeRelations.map((type) => (
           <Fragment key={uuidv4()}>
-            <div css={title}>{text.MAIN.MATCH.TYPE_CARD_DAMAGE} x {type.damage}</div>
+            <div css={title}>
+              {text.MAIN.MATCH.TYPE_CARD_DAMAGE} x {type.damage}
+            </div>
             <div css={typeSection}>
               {type.types.map((item) => (
                 <TypeBadge key={uuidv4()} no={item.no}>
-              {getTranslateType(item.name, language.type)}
+                  {getTranslateType(item.name, language.type)}
                 </TypeBadge>
               ))}
             </div>

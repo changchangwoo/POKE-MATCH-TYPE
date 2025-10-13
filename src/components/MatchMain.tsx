@@ -24,7 +24,13 @@ pokedex.map((item) => {
 const MatchMain = ({ setSearchParams, searchParams }: MatchMainProps) => {
   const { language } = useContext(LanguageContext);
   const [selectedAbility, setSelectedAbility] = useState("");
-  const [selectedTerastal, setSelectedTerastal] = useState("");
+  const [selectedTerastal, setSelectedTerastal] = useState<{
+    value: string;
+    no: string;
+  }>({
+    value: "",
+    no: "",
+  });
 
   const name = searchParams.get("name");
   const no = searchParams.get("no");
@@ -83,7 +89,7 @@ const MatchMain = ({ setSearchParams, searchParams }: MatchMainProps) => {
         <MatchCard
           MatchInfo={matchInfo}
           selectedAbility={selectedAbility}
-          selectedTerastal={selectedTerastal}
+          selectedTerastal={selectedTerastal.value}
           setSelectedAbility={setSelectedAbility}
           setSelectedTerastal={setSelectedTerastal}
           setSearchParams={setSearchParams}
@@ -95,6 +101,7 @@ const MatchMain = ({ setSearchParams, searchParams }: MatchMainProps) => {
         <TypeCard
           MatchTypes={matchInfo.types}
           selectedAbility={selectedAbility}
+          selectedTerastal_no={selectedTerastal.no}
         />
       )}
     </div>
