@@ -1,11 +1,5 @@
 import { css } from "@emotion/react";
-import {
-  Dispatch,
-  SetStateAction,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import { Dispatch, SetStateAction, useContext, useEffect } from "react";
 import TypeCard from "./commons/TypeCard";
 import MatchCard from "./MatchCard";
 import useFetchDetailPokemon from "../hooks/queries/useFetchDetailPokemon";
