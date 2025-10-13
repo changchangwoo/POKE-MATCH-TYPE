@@ -2,11 +2,9 @@ import { css } from "@emotion/react";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import KakaoAdfitBanner from "../ads/KakaoAdfitBanner";
-import SelectAbility from "../components/commons/SelectAbility";
 import TypeCard from "../components/commons/TypeCard";
 import SelectType from "../components/SelectType";
 import { checkedTypes } from "../models/pokemonData";
-import SelectTerastal from "../components/commons/SelectTerastal";
 
 const Type = () => {
   const [checkedType, setCheckedType] = useState<checkedTypes[]>([]);
@@ -60,17 +58,16 @@ const Type = () => {
 
   return (
     <div css={matchContainer}>
-      <SelectType checkedType={checkedType} setCheckedType={setCheckedType} />
-      <SelectAbility
+      <KakaoAdfitBanner />
+      <SelectType
+        checkedType={checkedType}
+        setCheckedType={setCheckedType}
         selectedAbility={selectedAbility}
+        selectedTerastal={selectedTrastal}
         setSelectedAbility={setSelectedAbility}
-      />
-      <SelectTerastal
-        selectedTerastal={selectedTrastal.value}
         setSelectedTerastal={setSelectedTrastal}
       />
 
-      <KakaoAdfitBanner />
       <TypeCard
         MatchTypes={checkedType}
         selectedAbility={selectedAbility}

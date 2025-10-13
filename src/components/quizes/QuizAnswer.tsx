@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import SelectType from "../SelectType";
+import SelectTypeForQuiz from "../SelectTypeForQuiz";
 import { checkedTypes, Types } from "../../models/pokemonData";
 import { css } from "@emotion/react";
 import { LanguageContext } from "../../utils/getInitialData";
@@ -27,7 +27,7 @@ export const QuizAnswer = ({
   return (
     <>
       <div css={AnswerContainer}>
-        <SelectType
+        <SelectTypeForQuiz
           aria-label="Select Type"
           checkedType={checkedType}
           setCheckedType={setCheckedType}

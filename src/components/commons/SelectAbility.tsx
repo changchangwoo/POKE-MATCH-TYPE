@@ -65,6 +65,7 @@ export const SelectAbilityContainer = css`
     border-radius: 4px;
     height: 30px;
     padding: 5px;
+    padding-left: 17px;
     box-sizing: border-box;
     font-size: var(--fontMedium);
 
