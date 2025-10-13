@@ -1,4 +1,12 @@
-import { useState, useEffect, ChangeEvent, FormEvent, useContext } from "react";
+import {
+  useState,
+  useEffect,
+  ChangeEvent,
+  FormEvent,
+  useContext,
+  SetStateAction,
+  Dispatch,
+} from "react";
 import { FaSearch } from "react-icons/fa";
 import {
   searchContainer,
@@ -17,15 +25,19 @@ interface PokemonNameType {
 }
 
 interface SearchProps {
-  setSearchParams: SetURLSearchParams;
   searchParams: URLSearchParams;
   pokemonNames: IPokeDex[];
+  setSearchParams: SetURLSearchParams;
+  setSelectedAbility: Dispatch<SetStateAction<string>>;
+  setSelectedTerastal: Dispatch<SetStateAction<{ value: string; no: string }>>;
 }
 
 const Search = ({
   setSearchParams,
   searchParams,
   pokemonNames,
+  setSelectedAbility,
+  setSelectedTerastal,
 }: SearchProps) => {
   const { language, text } = useContext(LanguageContext);
   const newSearchParams = new URLSearchParams(searchParams);
@@ -79,6 +91,8 @@ const Search = ({
     newSearchParams.set("searchLanguage", language.type);
     setSearchParams(newSearchParams);
     setSearchTerm("");
+    setSelectedAbility("");
+    setSelectedTerastal({ value: "", no: "" });
     setSuggestions([]);
   };
 
@@ -93,6 +107,8 @@ const Search = ({
       newSearchParams.set("searchLanguage", language.type);
       setSearchParams(newSearchParams);
       setSuggestions([]);
+      setSelectedAbility("");
+      setSelectedTerastal({ value: "", no: "" });
     }
   };
 

@@ -41,7 +41,9 @@ const SelectTerastal = ({
     };
 
     setSelectedTerastal(terastalData);
-    sessionStorage.setItem(currentPath, JSON.stringify(terastalData));
+    if (location.pathname !== "/") {
+      sessionStorage.setItem(currentPath, JSON.stringify(terastalData));
+    }
   };
 
   return (

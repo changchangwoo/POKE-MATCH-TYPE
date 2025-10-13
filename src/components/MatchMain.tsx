@@ -1,5 +1,11 @@
 import { css } from "@emotion/react";
-import { useContext, useEffect, useState } from "react";
+import {
+  Dispatch,
+  SetStateAction,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import TypeCard from "./commons/TypeCard";
 import MatchCard from "./MatchCard";
 import useFetchDetailPokemon from "../hooks/queries/useFetchDetailPokemon";
@@ -11,8 +17,12 @@ import { TLanguageType } from "../models/settingData";
 import { MatchMain_Skeleton } from "./skeleton/MatchMain_Skeleton";
 
 interface MatchMainProps {
-  setSearchParams: SetURLSearchParams;
   searchParams: URLSearchParams;
+  selectedAbility: string;
+  selectedTerastal: { value: string; no: string };
+  setSearchParams: SetURLSearchParams;
+  setSelectedAbility: Dispatch<SetStateAction<string>>;
+  setSelectedTerastal: Dispatch<SetStateAction<{ value: string; no: string }>>;
 }
 
 const pokedexHash = new Map();
@@ -21,16 +31,15 @@ pokedex.map((item) => {
   pokedexHash.set(item.no, item);
 });
 
-const MatchMain = ({ setSearchParams, searchParams }: MatchMainProps) => {
+const MatchMain = ({
+  setSearchParams,
+  searchParams,
+  selectedAbility,
+  selectedTerastal,
+  setSelectedAbility,
+  setSelectedTerastal,
+}: MatchMainProps) => {
   const { language } = useContext(LanguageContext);
-  const [selectedAbility, setSelectedAbility] = useState("");
-  const [selectedTerastal, setSelectedTerastal] = useState<{
-    value: string;
-    no: string;
-  }>({
-    value: "",
-    no: "",
-  });
 
   const name = searchParams.get("name");
   const no = searchParams.get("no");
