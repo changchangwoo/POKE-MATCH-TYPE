@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { Dispatch, SetStateAction, useContext } from "react";
-import QuizIntroImg from "../../imgs/quiz_intro.jpg";
+import QuizIntroImg from "../../imgs/quiz_intro.webp";
 import { quizReadyText } from "./QuizReady";
 import { LanguageContext } from "../../utils/getInitialData";
 

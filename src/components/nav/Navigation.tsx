@@ -3,7 +3,7 @@ import { IoSettingsSharp } from "react-icons/io5";
 import { useContext, useState } from "react";
 import SettingModal from "../modal/SettingModal";
 import { LanguageContext } from "../../utils/getInitialData";
-import Logo from "../../imgs/logo.png"
+import Logo from "../../imgs/logo.webp"
 
 
 
