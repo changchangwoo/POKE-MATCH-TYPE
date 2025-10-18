@@ -71,5 +71,7 @@ This project is open source and available under the MIT License.
 # blog
 
 For detailed development process and troubleshooting stories, visit:
+
 [효과는 굉장했다! 포켓몬 상성 계산기 만들기](https://velog.io/@changwoo/%ED%9A%A8%EA%B3%BC%EB%8A%94-%EA%B5%89%EC%9E%A5%ED%96%88%EB%8B%A4-%ED%8F%AC%EC%BC%93%EB%AA%AC-%EC%95%BD%EC%A0%90-%EA%B3%84%EC%82%B0%EA%B8%B0)
+
 [방문객 수 10배 증가! 포켓몬 약점 계산기 리팩토링](https://velog.io/@changwoo/%EB%B0%A9%EB%AC%B8%EA%B0%9D-%EC%88%98-10%EB%B0%B0-%EC%A6%9D%EA%B0%80-%ED%8F%AC%EC%BC%93%EB%AA%AC-%EC%95%BD%EC%A0%90-%EA%B3%84%EC%82%B0%EA%B8%B0-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81)
