@@ -1,9 +1,3 @@
-import quizIntroImg from "./imgs/quiz_intro.webp";
-import quizCorrectImg from "./imgs/quiz_correct.webp";
-import quizIncorrectImg from "./imgs/quiz_incorrect.webp";
-import quizFailedImg from "./imgs/quiz_failed.webp";
-import quizReadyImg from "./imgs/quiz_ready.webp";
-import quizSuccessImg from "./imgs/quiz_success.webp";
 import Logo from "./imgs/logo.webp";
 
 import "./App.css";
@@ -29,15 +23,7 @@ import useDefaultSetting from "./hooks/useDefaultSetting";
 import RouteTracker from "./components/RouteTracker";
 import Error from "./pages/Error";
 
-const imageList = [
-  quizIntroImg,
-  quizCorrectImg,
-  quizIncorrectImg,
-  quizFailedImg,
-  quizReadyImg,
-  quizSuccessImg,
-  Logo,
-];
+const imageList = [Logo];
 
 function App() {
   const [theme, setTheme] = useState<TThemeData>(getInitialTheme());

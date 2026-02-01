@@ -22,25 +22,20 @@ export const fetchPokemonSpecies = async (no: string) => {
 }
 
 export const fetchDetailType = async (numbers: number[]) => {
-  const damageRelations = [];
-  for (let no of numbers) {
-    try {
-      const typeDatas = await API(`type/${no}/`);
-      damageRelations.push({
-        key: "doubleDamage",
-        types: typeDatas.damage_relations.double_damage_from,
-      });
-      damageRelations.push({
-        key: "halfDamage",
-        types: typeDatas.damage_relations.half_damage_from,
-      });
-      damageRelations.push({
-        key: "noDamage",
-        types: typeDatas.damage_relations.no_damage_from,
-      });
-    } catch (error) {
-      console.error("Error fetching type data:", error);
-    }
-  }
-  return damageRelations;
+  const results = await Promise.all(
+    numbers.map(async (no) => {
+      try {
+        const typeDatas = await API(`type/${no}/`);
+        return [
+          { key: "doubleDamage", types: typeDatas.damage_relations.double_damage_from },
+          { key: "halfDamage", types: typeDatas.damage_relations.half_damage_from },
+          { key: "noDamage", types: typeDatas.damage_relations.no_damage_from },
+        ];
+      } catch (error) {
+        console.error("Error fetching type data:", error);
+        return [];
+      }
+    })
+  );
+  return results.flat();
 };

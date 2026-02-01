@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 import { Dispatch, SetStateAction, useContext } from "react";
 import defaultTypesData from "../../src/datas/defaultTypes.json";
 import { getTranslateType } from "../utils/getTranslateType";
-import { v4 as uuidv4 } from "uuid";
+
 import { checkedTypes } from "../models/pokemonData";
 import { LanguageContext } from "../utils/getInitialData";
 import SelectAbility from "./commons/SelectAbility";
@@ -52,7 +52,7 @@ const SelectType = ({
               aria-label="Select Type"
               css={item(isChecked ? type.no : undefined)}
               onClick={() => handleSelect(type, idx)}
-              key={uuidv4()}
+              key={type.no}
             >
               {getTranslateType(type.name, language.type)}
             </button>

@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import TypeBadge from "../commons/TypeBadge";
 import { getTranslateType } from "../../utils/getTranslateType";
-import { v4 as uuidv4 } from "uuid";
+
 import { imgBox, pokeTypes } from "../MatchCard";
 import { useGetDetailPokemonForQuiz } from "../../hooks/useGetDetailPokemonForQuiz";
 import QuizAnswer from "./QuizAnswer";
@@ -48,7 +48,7 @@ const QuizType0_damageEffectiveness = ({
       </div>
       <div css={pokeTypes}>
         {matchDatas.types.map((type) => (
-          <TypeBadge key={uuidv4()} no={type.no}>
+          <TypeBadge key={type.no} no={type.no}>
             {getTranslateType(type.name, language.type)}
           </TypeBadge>
         ))}

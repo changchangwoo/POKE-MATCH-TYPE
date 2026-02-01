@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import { Dispatch, SetStateAction, useContext } from "react";
 import { getTranslateType } from "../utils/getTranslateType";
-import { v4 as uuidv4 } from "uuid";
+
 import { checkedTypes, Types } from "../models/pokemonData";
 import { LanguageContext } from "../utils/getInitialData";
 
@@ -52,7 +52,7 @@ const SelectTypeForQuiz = ({
                 isNext && answerIdx === idx
               )}
               onClick={() => handleSelect(type, idx)}
-              key={uuidv4()}
+              key={type.no}
             >
               {getTranslateType(type.name, language.type)}
             </button>

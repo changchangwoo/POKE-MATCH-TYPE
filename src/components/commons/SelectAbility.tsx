@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { v4 as uuidv4 } from "uuid";
+
 import abilities from "../../datas/pokemonAbilityData.json";
 import { Dispatch, SetStateAction, useContext } from "react";
 import { useLocation } from "react-router-dom";
@@ -32,7 +32,7 @@ const SelectAbility = ({
         <select value={selectedAbility} onChange={handleAbilityChange}
         aria-label="Select Ability">
           {abilities.map((ability) => (
-            <option key={uuidv4()} value={ability.value}>
+            <option key={ability.value} value={ability.value}>
               {ability.label[language.type]}
             </option>
           ))}

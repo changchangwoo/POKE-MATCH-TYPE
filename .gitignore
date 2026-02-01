@@ -24,3 +24,6 @@ poke-match-type-deploy
 *.sln
 *.sw?
 .env
+
+CLAUDE.md
+docs/

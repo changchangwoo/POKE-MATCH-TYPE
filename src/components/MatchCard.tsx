@@ -11,7 +11,7 @@ import { SetURLSearchParams } from "react-router-dom";
 import TypeBadge from "./commons/TypeBadge";
 import { getTranslateType } from "../utils/getTranslateType";
 import SelectAbility from "./commons/SelectAbility";
-import { v4 as uuidv4 } from "uuid";
+
 import SpeciesButtons from "./SpeciesButtons";
 import { LanguageContext } from "../utils/getInitialData";
 import pokedex from "../datas/pokedex.json";
@@ -64,7 +64,7 @@ const MatchCard = ({
       <h2>{name}</h2>
       <div css={pokeTypes}>
         {MatchInfo.types.map((type) => (
-          <TypeBadge key={uuidv4()} no={type.no}>
+          <TypeBadge key={type.no} no={type.no}>
             {getTranslateType(type.name, language.type)}
           </TypeBadge>
         ))}

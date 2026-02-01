@@ -1,15 +1,11 @@
-import { useContext, useEffect, useState } from "react";
-import { fetchDetailType } from "../../api/api";
-import { getRandomNum } from "../../utils/getRandomNum";
-import defaultTypes from "../../datas/defaultTypes.json";
-import { getDetailType, getGroupType } from "../../utils/getDetailType";
-import { Types } from "../../models/pokemonData";
+import { useContext, useState } from "react";
+import { useFetchQuizType2 } from "../../hooks/queries/useFetchQuizType2";
 import { title } from "./QuizType0_damageEffectiveness";
 import { css } from "@emotion/react";
 import { getTranslateType } from "../../utils/getTranslateType";
 import TypeBadge from "../commons/TypeBadge";
 import { submitBtn } from "./QuizAnswer";
-import { v4 as uuidv4 } from "uuid";
+
 import { LanguageContext } from "../../utils/getInitialData";
 
 
@@ -25,57 +21,16 @@ const QuizType2_typeDescription = ({
   isNext,
 }: QuizType2_Props) => {
       const {language, text} = useContext(LanguageContext);
-  const [attacker, setAttacker] = useState<Types>();
-  const [defender, setDefender] = useState<Types[]>([]);
-  const [questionArr, setQuestionArr] = useState<number[]>([]);
+  const { attacker, defender, questionArr, answerIdx, answer } = useFetchQuizType2(progress);
   const [checkedAnswer, setCheckedAnswer] = useState<{
     damage : number;
-    idx : number 
+    idx : number
    }>(
     {
       damage : 0,
       idx : -1
     }
    );
-  const [answerIdx, setAnswerIdx] = useState<number>(0);
-  const [answer, setAnswer] = useState<any>(null);
-  useEffect(() => {
-    const fetchDetailTypeQuiz = async () => {
-      const randomTypes: number[] = [];
-      while (true) {
-        let randomTypeNum = getRandomNum(defaultTypes.length - 1);
-        if (!randomTypes.includes(defaultTypes[randomTypeNum].no))
-          randomTypes.push(defaultTypes[randomTypeNum].no);
-        if (randomTypes.length === 2) break;
-      }
-      const fetchDatas = await fetchDetailType(randomTypes);
-      const circulateTypeData = await getDetailType(fetchDatas);
-      let groupResult = await getGroupType(circulateTypeData);
-
-      let randomIndex = getRandomNum(groupResult.length);
-      setAnswer(groupResult[randomIndex]);
-      setAnswerIdx(randomIndex);
-      let questionArr: number[] = [];
-      groupResult.forEach((result) => {
-        questionArr.push(result.damage);
-      });
-      let randomNum = getRandomNum(groupResult[randomIndex].types.length);
-      let attacker = {
-        name: groupResult[randomIndex].types[randomNum].name,
-        no: groupResult[randomIndex].types[randomNum].no,
-      };
-      let defender = randomTypes.map((no) => {
-        return {
-          name: defaultTypes[no - 1].name,
-          no: defaultTypes[no - 1].no,
-        };
-      });
-      setAttacker(attacker);
-      setDefender(defender);
-      setQuestionArr(questionArr);
-    };
-    fetchDetailTypeQuiz();
-  }, [progress]);
   if (!attacker || !defender) return;
   return (
     <>
@@ -113,7 +68,7 @@ const QuizType2_typeDescription = ({
           const isChecked = checkedAnswer.idx === idx;
           return (
             <button
-              key={uuidv4()}
+              key={idx}
               onClick={() => setCheckedAnswer({damage, idx})}
               data-name={damage}
               css={answerButton(isChecked, (isNext && answerIdx === idx))}

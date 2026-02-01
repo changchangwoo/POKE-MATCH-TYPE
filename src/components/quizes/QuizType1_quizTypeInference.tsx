@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { getRandomNum, getShuffleArr } from "../../utils/getRandomNum";
 import { css } from "@emotion/react";
 import TypeBadge from "../commons/TypeBadge";
-import { v4 as uuidv4 } from "uuid";
+
 import { getTranslateType } from "../../utils/getTranslateType";
 import quizType1_data from "../../datas/quizType1Data.json";
 import { Types } from "../../models/pokemonData";
@@ -78,7 +78,7 @@ const QuizType1_quizTypeInference = ({
       <div css={questionContainer}>
         <div css={badgeContainer}>
           {quizType1_data[randQuiz].map((type, idx) => (
-            <React.Fragment key={uuidv4()}>
+            <React.Fragment key={idx}>
               {idx === randBlank ? (
                 <TypeBadge no={100} quizMode={true}>
                   ?

@@ -3,7 +3,7 @@ import { Fragment, useContext } from "react";
 import { Types } from "../../models/pokemonData";
 import TypeBadge from "./TypeBadge";
 import { getTranslateType } from "../../utils/getTranslateType";
-import { v4 as uuidv4 } from "uuid";
+
 import { IDamageData } from "../../utils/getDetailType";
 import useFetchDetailType from "../../hooks/queries/useFetchDetailType";
 import { LanguageContext } from "../../utils/getInitialData";
@@ -42,13 +42,13 @@ const TypeCard = ({
     return (
       <div css={typeCardContainer}>
         {typeRelations.map((type) => (
-          <Fragment key={uuidv4()}>
+          <Fragment key={type.damage}>
             <div css={title}>
               {text.MAIN.MATCH.TYPE_CARD_DAMAGE} x {type.damage}
             </div>
             <div css={typeSection}>
               {type.types.map((item) => (
-                <TypeBadge key={uuidv4()} no={item.no}>
+                <TypeBadge key={item.no} no={item.no}>
                   {getTranslateType(item.name, language.type)}
                 </TypeBadge>
               ))}

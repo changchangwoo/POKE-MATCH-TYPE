@@ -33,24 +33,36 @@ export default function KakaoAdfitBanner({}: KakaoAdfitBannerProps) {
   const currentSize = DEVICE_BANNER_SIZES[deviceType];
 
   useEffect(() => {
-    const scriptId = "kakao-adfit-script";
-    if (!document.getElementById(scriptId)) {
-      const script = document.createElement("script");
-      script.id = scriptId;
-      script.async = true;
-      script.type = "text/javascript";
-      script.src = "https://t1.daumcdn.net/kas/static/ba.min.js";
+    const loadScript = () => {
+      const scriptId = "kakao-adfit-script";
+      if (!document.getElementById(scriptId)) {
+        const script = document.createElement("script");
+        script.id = scriptId;
+        script.async = true;
+        script.type = "text/javascript";
+        script.src = "https://t1.daumcdn.net/kas/static/ba.min.js";
+        document.body.appendChild(script);
+      }
+    };
 
-      document.body.appendChild(script);
-    }
+    const hasIdleCallback = typeof window.requestIdleCallback === "function";
+    const idleId = hasIdleCallback
+      ? window.requestIdleCallback(loadScript)
+      : window.setTimeout(loadScript, 0);
 
     return () => {
+      if (hasIdleCallback) {
+        window.cancelIdleCallback(idleId as number);
+      } else {
+        window.clearTimeout(idleId);
+      }
+
       const globalAdfit = window.adfit;
       if (globalAdfit) {
         globalAdfit.destroy(currentSize.unitId);
       }
 
-      const scriptEl = document.getElementById(scriptId);
+      const scriptEl = document.getElementById("kakao-adfit-script");
       if (scriptEl && scriptEl.parentNode) {
         scriptEl.parentNode.removeChild(scriptEl);
       }

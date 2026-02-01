@@ -1,110 +1,44 @@
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import PokeDex from "../datas/pokedex.json";
 import { fetchDetailPokemon, fetchDetailType } from "../api/api";
-import { MatchInfo, Types } from "../models/pokemonData";
 import {
   getDetailType,
   getGroupType,
-  IDamageData,
 } from "../utils/getDetailType";
-import { getRandomNum, getShuffleArr } from "../utils/getRandomNum";
+import { buildMatchInfo, generateQuizType0Question } from "../utils/generateQuiz";
 
 export const useGetDetailPokemonForQuiz = (progress: number) => {
-  const [groupResult, setGroupResult] =
-    useState<{ damage: number; types: IDamageData[] }[]>();
-  const [matchDatas, setMatchDatas] = useState<MatchInfo>();
-  const [questionArr, setQuetstionArr] = useState<Types[]>([]);
-  const [quizNum, setQuizNum] = useState<number>(0);
-  const [answerIdx, setAnswerIdx] = useState<number>(0);
-
-  useEffect(() => {
-    let isCancelled = false;
-    const useFetchDetailPokemonQuiz = async (name: string = "") => {
+  const query = useQuery({
+    queryKey: ["quizType0", progress],
+    queryFn: async () => {
       const lastNum = PokeDex[PokeDex.length - 1].no;
       const randomNum = Math.floor(Math.random() * lastNum);
-      let correct;
       const fetchDatas = await fetchDetailPokemon(String(randomNum));
-      const matchDatas: MatchInfo = {
-        name,
-        types: fetchDatas.types.map((typeInfo: any) => {
-          if (typeInfo.type.url) {
-            const match = typeInfo.type.url.match(/\/(\d+)\/$/);
-            const typeNo = match ? match[1] : null;
-            return {
-              no: typeNo ? Number(typeNo) : null,
-              name: typeInfo.type.name,
-            };
-          } else {
-            return { no: null, name: typeInfo.type.name };
-          }
-        }),
-        no: Number(randomNum),
-        imgs: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${randomNum}.png`,
-        searchLanguage : ""
-      };
+      if (!fetchDatas) throw new Error("Pokemon not found");
+
+      const matchDatas = buildMatchInfo(fetchDatas, randomNum);
       const typeNo = matchDatas.types.map((type) => type.no);
       const fetchDetailTypeData = await fetchDetailType(typeNo);
       const circulateTypeData = await getDetailType(fetchDetailTypeData);
+      const groupResult = await getGroupType(circulateTypeData);
 
-      let groupResult = await getGroupType(circulateTypeData);
-      const quiz0_dataGroupResult = groupResult;
-      if (!quiz0_dataGroupResult) return;
-      const quizNum = getRandomNum(groupResult.length);
+      const quiz = generateQuizType0Question(groupResult);
+      if (!quiz) throw new Error("Failed to generate quiz");
 
-      const answerSet = new Set<string>();
-      const result: Types[] = [];
-
-      while (true) {
-        const randTypeNum = getRandomNum(
-          quiz0_dataGroupResult[quizNum].types.length
-        );
-        const candidate = quiz0_dataGroupResult[quizNum].types[randTypeNum];
-        correct = candidate;
-        if (!answerSet.has(candidate.name)) {
-          result.push(candidate);
-          answerSet.add(candidate.name);
-          break;
-        }
-      }
-
-      let infiniteLoopCheck = 0;
-
-      while (result.length < 6) {
-        let randGroupNum = getRandomNum(quiz0_dataGroupResult.length);
-        if (randGroupNum === quizNum) continue;
-
-        if(infiniteLoopCheck > 300) break;
-        infiniteLoopCheck++;
-        const types = quiz0_dataGroupResult[randGroupNum].types;
-        const randTypeNum = getRandomNum(types.length);
-        const candidate = types[randTypeNum];
-
-        if (!answerSet.has(candidate.name)) {
-          result.push(candidate);
-          answerSet.add(candidate.name);
-        }
-      }
-      const shuffleResult = getShuffleArr(result);
-      if (isCancelled) return;
-      setAnswerIdx(shuffleResult.findIndex((item) => item.no === correct.no));
-      setGroupResult(groupResult);
-      setMatchDatas(matchDatas);
-      setQuizNum(quizNum);
-      setQuetstionArr(shuffleResult);
-    };
-
-    useFetchDetailPokemonQuiz();
-
-    return () => {
-      isCancelled = true;
-    };
-  }, [progress]);
+      return { matchDatas, groupResult, ...quiz };
+    },
+    staleTime: Infinity,
+    gcTime: 0,
+    retry: 2,
+  });
 
   return {
-    questionArr,
-    quizNum,
-    groupResult,
-    matchDatas,
-    answerIdx,
+    questionArr: query.data?.questionArr ?? [],
+    quizNum: query.data?.quizNum ?? 0,
+    groupResult: query.data?.groupResult,
+    matchDatas: query.data?.matchDatas,
+    answerIdx: query.data?.answerIdx ?? 0,
+    isLoading: query.isLoading,
+    isError: query.isError,
   };
 };

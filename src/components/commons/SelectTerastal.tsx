@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { v4 as uuidv4 } from "uuid";
+
 import terastalTypes from "../../datas/pokemonTerastalData.json";
 import defaultTypes from "../../datas/defaultTypes.json";
 import { Dispatch, SetStateAction, useContext } from "react";
@@ -55,7 +55,7 @@ const SelectTerastal = ({
           aria-label="Select Terastal"
         >
           {terastalTypes.map((type) => (
-            <option key={uuidv4()} value={type.value}>
+            <option key={type.value} value={type.value}>
               {type.label[language.type]}
             </option>
           ))}
