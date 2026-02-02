@@ -1,13 +1,13 @@
 import { css } from "@emotion/react";
-import TypeBadge from "../commons/TypeBadge";
-import { getTranslateType } from "../../utils/getTranslateType";
+import TypeBadge from "@components/commons/TypeBadge";
+import { getTranslateType } from "@utils/getTranslateType";
 
-import { imgBox, pokeTypes } from "../match/MatchCard";
-import { useGetDetailPokemonForQuiz } from "../../hooks/useGetDetailPokemonForQuiz";
+import { imgBox, pokeTypes } from "@components/match/MatchCard";
+import { useGetDetailPokemonForQuiz } from "@hooks/useGetDetailPokemonForQuiz";
 import QuizAnswer from "./QuizAnswer";
 import { useContext } from "react";
-import { LanguageContext } from "../../utils/getInitialData";
-import { QuizType0_Skeleton } from "../skeleton/Quiz_Skeleton";
+import { LanguageContext } from "@services/getInitialData";
+import { QuizType0_Skeleton } from "@components/skeleton/Quiz_Skeleton";
 
 interface QuizType0_Props {
   submitAnswer: (

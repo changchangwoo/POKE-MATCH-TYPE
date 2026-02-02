@@ -1,10 +1,10 @@
 import { css } from "@emotion/react";
 import { Dispatch, SetStateAction, useContext } from "react";
-import defaultTypesData from "../../datas/defaultTypes.json";
-import { getTranslateType } from "../../utils/getTranslateType";
+import defaultTypesData from "@datas/defaultTypes.json";
+import { getTranslateType } from "@utils/getTranslateType";
 
-import { checkedTypes } from "../../models/pokemonData";
-import { LanguageContext } from "../../utils/getInitialData";
+import { checkedTypes } from "@models/pokemonData";
+import { LanguageContext } from "@services/getInitialData";
 import SelectAbility from "./SelectAbility";
 import SelectTerastal from "./SelectTerastal";
 

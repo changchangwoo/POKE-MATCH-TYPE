@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchDetailType } from "../../api/api";
-import { getDetailType, getGroupType } from "../../utils/getDetailType";
-import { getAddAbility } from "../../utils/getAddAbility";
+import { fetchDetailType } from "@api/api";
+import { getDetailType, getGroupType } from "@services/getDetailType";
+import { getAddAbility } from "@services/getAddAbility";
 
 const useFetchDetailType = (
   no: number[],

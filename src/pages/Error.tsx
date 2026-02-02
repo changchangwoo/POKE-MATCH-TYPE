@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { useContext } from "react";
-import { LanguageContext } from "../utils/getInitialData";
+import { LanguageContext } from "@services/getInitialData";
 
 const Error = () => {
   const { text } = useContext(LanguageContext);

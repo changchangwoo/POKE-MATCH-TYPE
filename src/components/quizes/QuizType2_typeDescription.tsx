@@ -1,12 +1,12 @@
 import { useContext, useState } from "react";
-import { useFetchQuizType2 } from "../../hooks/queries/useFetchQuizType2";
+import { useFetchQuizType2 } from "@hooks/queries/useFetchQuizType2";
 import { title } from "./QuizType0_damageEffectiveness";
 import { css } from "@emotion/react";
-import { getTranslateType } from "../../utils/getTranslateType";
-import TypeBadge from "../commons/TypeBadge";
+import { getTranslateType } from "@utils/getTranslateType";
+import TypeBadge from "@components/commons/TypeBadge";
 import { submitBtn } from "./QuizAnswer";
 
-import { LanguageContext } from "../../utils/getInitialData";
+import { LanguageContext } from "@services/getInitialData";
 
 
 interface QuizType2_Props {

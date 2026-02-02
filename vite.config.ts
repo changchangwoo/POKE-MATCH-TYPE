@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({server: {
@@ -7,6 +8,22 @@ export default defineConfig({server: {
     usePolling: true
   },
 },
+  resolve: {
+    alias: {
+      '@api': path.resolve(__dirname, 'src/api'),
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@const': path.resolve(__dirname, 'src/const'),
+      '@datas': path.resolve(__dirname, 'src/datas'),
+      '@hooks': path.resolve(__dirname, 'src/hooks'),
+      '@imgs': path.resolve(__dirname, 'src/imgs'),
+      '@models': path.resolve(__dirname, 'src/models'),
+      '@pages': path.resolve(__dirname, 'src/pages'),
+      '@services': path.resolve(__dirname, 'src/services'),
+      '@styles': path.resolve(__dirname, 'src/styles'),
+      '@utils': path.resolve(__dirname, 'src/utils'),
+      '@ads': path.resolve(__dirname, 'src/ads'),
+    },
+  },
   plugins: [
     react({
       jsxImportSource: '@emotion/react',

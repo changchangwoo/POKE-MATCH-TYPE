@@ -1,4 +1,4 @@
-import { MatchInfo } from "../models/pokemonData";
+import { MatchInfo } from "@models/pokemonData";
 
 export const DEFAULT_MATCH_DATA: MatchInfo = {
   name: "피카츄",

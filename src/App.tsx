@@ -1,27 +1,27 @@
-import Logo from "./imgs/logo.webp";
+import Logo from "@imgs/logo.webp";
 
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import Main from "./pages/Main";
-import Type from "./pages/Type";
+import Main from "@pages/Main";
+import Type from "@pages/Type";
 import { css, Global } from "@emotion/react";
-import Navigation from "./components/nav/Navigation";
-import ChangeButtons from "./components/nav/ChangeButtons";
-import Table from "./pages/Table";
-import Quiz from "./pages/Quiz";
-import { globalStyles } from "./styles/globalStyles";
+import Navigation from "@components/nav/Navigation";
+import ChangeButtons from "@components/nav/ChangeButtons";
+import Table from "@pages/Table";
+import Quiz from "@pages/Quiz";
+import { globalStyles } from "@styles/globalStyles";
 import { useMemo, useState } from "react";
-import { TLanguageData, TLanguageType, TThemeData } from "./models/settingData";
+import { TLanguageData, TLanguageType, TThemeData } from "@models/settingData";
 import {
   getInitialLanguage,
   getInitialTheme,
   LanguageContext,
   ThemeContext,
-} from "./utils/getInitialData";
-import { LANGUAGE_TEXTS } from "./const/language_text";
-import useDefaultSetting from "./hooks/useDefaultSetting";
-import RouteTracker from "./components/nav/RouteTracker";
-import Error from "./pages/Error";
+} from "@services/getInitialData";
+import { LANGUAGE_TEXTS } from "@const/language_text";
+import useDefaultSetting from "@hooks/useDefaultSetting";
+import RouteTracker from "@components/nav/RouteTracker";
+import Error from "@pages/Error";
 
 const imageList = [Logo];
 

@@ -1,12 +1,12 @@
 import { css } from "@emotion/react";
 import { Fragment, useContext } from "react";
-import { Types } from "../../models/pokemonData";
+import { Types } from "@models/pokemonData";
 import TypeBadge from "./TypeBadge";
-import { getTranslateType } from "../../utils/getTranslateType";
+import { getTranslateType } from "@utils/getTranslateType";
 
-import { IDamageData } from "../../utils/getDetailType";
-import useFetchDetailType from "../../hooks/queries/useFetchDetailType";
-import { LanguageContext } from "../../utils/getInitialData";
+import { IDamageData } from "@services/getDetailType";
+import useFetchDetailType from "@hooks/queries/useFetchDetailType";
+import { LanguageContext } from "@services/getInitialData";
 
 interface MatchCardProps {
   MatchTypes: Types[];

@@ -1,7 +1,7 @@
-import { MatchInfo, Types } from "../models/pokemonData";
+import { MatchInfo, Types } from "@models/pokemonData";
 import { IDamageData } from "./getDetailType";
-import { getRandomNum, getShuffleArr } from "./getRandomNum";
-import defaultTypes from "../datas/defaultTypes.json";
+import { getRandomNum, getShuffleArr } from "@utils/getRandomNum";
+import defaultTypes from "@datas/defaultTypes.json";
 
 type GroupResult = { damage: number; types: IDamageData[] }[];
 

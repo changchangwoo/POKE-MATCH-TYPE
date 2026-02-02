@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { TTheme } from "../models/settingData";
+import { TTheme } from "@models/settingData";
 
 type TThemeStyles = {
   point: string;

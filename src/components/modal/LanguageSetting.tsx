@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
-import { SelectAbilityContainer } from "../commons/SelectAbility";
-import { LanguageContext } from "../../utils/getInitialData";
-import { LANGUAGE_TEXTS } from "../../const/language_text";
+import { SelectAbilityContainer } from "@components/commons/SelectAbility";
+import { LanguageContext } from "@services/getInitialData";
+import { LANGUAGE_TEXTS } from "@const/language_text";
 
 const LanguageSetting = () => {
   const { language, setLanguage, text, setText } = useContext(LanguageContext);

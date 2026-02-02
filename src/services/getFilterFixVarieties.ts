@@ -1,6 +1,6 @@
-import { IPokeDex } from "../models/pokemonData";
-import { TLanguageType } from "../models/settingData";
-import { getSpeciesTranslate } from "./getSpeciesTranslate";
+import { IPokeDex } from "@models/pokemonData";
+import { TLanguageType } from "@models/settingData";
+import { getSpeciesTranslate } from "@utils/getSpeciesTranslate";
 // pokeDEX 우선 분리
 
 const FILTER_POKEDEX_KOR = [

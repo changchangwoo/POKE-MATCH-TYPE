@@ -8,13 +8,13 @@ import {
 import QuizType0_damageEffectiveness from "./QuizType0_damageEffectiveness";
 import QuizType1_quizTypeInference from "./QuizType1_quizTypeInference";
 import QuizType2_typeDescription from "./QuizType2_typeDescription";
-import { getRandomNum } from "../../utils/getRandomNum";
+import { getRandomNum } from "@utils/getRandomNum";
 import StepProgress from "./StepProgress";
-import QuizAlert from "../modal/QuizAlert";
-import { getTranslateType } from "../../utils/getTranslateType";
-import { matchCardContainer } from "../match/MatchCard";
+import QuizAlert from "@components/modal/QuizAlert";
+import { getTranslateType } from "@utils/getTranslateType";
+import { matchCardContainer } from "@components/match/MatchCard";
 import { css } from "@emotion/react";
-import { LanguageContext } from "../../utils/getInitialData";
+import { LanguageContext } from "@services/getInitialData";
 
 interface QuizMainProps {
   setSection: Dispatch<SetStateAction<number>>;

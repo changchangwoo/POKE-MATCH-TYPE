@@ -1,4 +1,4 @@
-import defaultTypesData from "../../src/datas/defaultTypes.json";
+import defaultTypesData from "@datas/defaultTypes.json";
 
 export interface IDamageData {
   no: number;

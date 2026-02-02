@@ -1,14 +1,14 @@
 import { css } from "@emotion/react";
 import { Dispatch, SetStateAction, useContext } from "react";
 import { IoMdClose } from "react-icons/io";
-import Footer from "../nav/Footer";
-import AccordianList from "../commons/AccordianList";
+import Footer from "@components/nav/Footer";
+import AccordianList from "@components/commons/AccordianList";
 import Theme from "./Theme";
 import LanguageSetting from "./LanguageSetting";
 
 import { FaGithub } from "react-icons/fa";
 import { IoMailSharp } from "react-icons/io5";
-import { LanguageContext } from "../../utils/getInitialData";
+import { LanguageContext } from "@services/getInitialData";
 
 interface SettingModalProps {
   setModal: Dispatch<SetStateAction<boolean>>;

@@ -1,15 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
-import { getRandomNum, getShuffleArr } from "../../utils/getRandomNum";
+import { getRandomNum, getShuffleArr } from "@utils/getRandomNum";
 import { css } from "@emotion/react";
-import TypeBadge from "../commons/TypeBadge";
+import TypeBadge from "@components/commons/TypeBadge";
 
-import { getTranslateType } from "../../utils/getTranslateType";
-import quizType1_data from "../../datas/quizType1Data.json";
-import { Types } from "../../models/pokemonData";
-import defaultTypes from "../../datas/defaultTypes.json";
+import { getTranslateType } from "@utils/getTranslateType";
+import quizType1_data from "@datas/quizType1Data.json";
+import { Types } from "@models/pokemonData";
+import defaultTypes from "@datas/defaultTypes.json";
 import QuizAnswer from "./QuizAnswer";
 import { title } from "./QuizType0_damageEffectiveness";
-import { LanguageContext } from "../../utils/getInitialData";
+import { LanguageContext } from "@services/getInitialData";
 
 
 interface QuizType1_Props {

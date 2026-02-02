@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchPokemonSpecies } from "../../api/api";
-import { IPokeDex } from "../../models/pokemonData";
-import { getFilterFixVarieties } from "../../utils/getFilterFixVarieties";
-import { TLanguageType } from "../../models/settingData";
+import { fetchPokemonSpecies } from "@api/api";
+import { IPokeDex } from "@models/pokemonData";
+import { getFilterFixVarieties } from "@services/getFilterFixVarieties";
+import { TLanguageType } from "@models/settingData";
 
 const useFetchPokemonVarieties = (
   no: string,

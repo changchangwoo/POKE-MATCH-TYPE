@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { MatchInfo as IMatchInfo } from "../../models/pokemonData";
+import { MatchInfo as IMatchInfo } from "@models/pokemonData";
 import {
   Dispatch,
   SetStateAction,
@@ -8,15 +8,15 @@ import {
   useState,
 } from "react";
 import { SetURLSearchParams } from "react-router-dom";
-import TypeBadge from "../commons/TypeBadge";
-import { getTranslateType } from "../../utils/getTranslateType";
-import SelectAbility from "../commons/SelectAbility";
+import TypeBadge from "@components/commons/TypeBadge";
+import { getTranslateType } from "@utils/getTranslateType";
+import SelectAbility from "@components/commons/SelectAbility";
 
 import SpeciesButtons from "./SpeciesButtons";
-import { LanguageContext } from "../../utils/getInitialData";
-import pokedex from "../../datas/pokedex.json";
-import { TLanguageType } from "../../models/settingData";
-import SelectTerastal from "../commons/SelectTerastal";
+import { LanguageContext } from "@services/getInitialData";
+import pokedex from "@datas/pokedex.json";
+import { TLanguageType } from "@models/settingData";
+import SelectTerastal from "@components/commons/SelectTerastal";
 
 interface MatchCardProps {
   MatchInfo: IMatchInfo;

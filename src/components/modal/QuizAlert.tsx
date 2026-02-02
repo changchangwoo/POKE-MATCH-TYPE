@@ -1,8 +1,8 @@
 import { css } from "@emotion/react";
-import QuizCorrrectImg from "../../imgs/quiz_correct.webp";
-import QuizIncorrectImg from "../../imgs/quiz_incorrect.webp";
+import QuizCorrrectImg from "@imgs/quiz_correct.webp";
+import QuizIncorrectImg from "@imgs/quiz_incorrect.webp";
 import { useContext, useEffect, useState } from "react";
-import { LanguageContext } from "../../utils/getInitialData";
+import { LanguageContext } from "@services/getInitialData";
 
 interface QuizAlertProps {
   quizType: "correct" | "incorrect";

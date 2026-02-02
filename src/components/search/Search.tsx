@@ -15,8 +15,8 @@ import {
   activeSuggestion,
 } from "./SearchStyles";
 import { SetURLSearchParams } from "react-router-dom";
-import { IPokeDex } from "../../models/pokemonData";
-import { LanguageContext } from "../../utils/getInitialData";
+import { IPokeDex } from "@models/pokemonData";
+import { LanguageContext } from "@services/getInitialData";
 import { useRef } from "react";
 
 interface PokemonNameType {

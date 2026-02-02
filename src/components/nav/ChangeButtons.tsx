@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import { useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { LanguageContext } from "../../utils/getInitialData";
+import { LanguageContext } from "@services/getInitialData";
 
 const ChangeButtons = () => {
   const navigator = useNavigate();

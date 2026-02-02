@@ -1,8 +1,8 @@
 import { useSearchParams } from "react-router-dom";
-import KakaoAdfitBanner from "../ads/KakaoAdfitBanner";
-import MatchMain from "../components/match/MatchMain";
-import Search from "../components/search/Search";
-import pokedex from "../datas/pokedex.json";
+import KakaoAdfitBanner from "@ads/KakaoAdfitBanner";
+import MatchMain from "@components/match/MatchMain";
+import Search from "@components/search/Search";
+import pokedex from "@datas/pokedex.json";
 import { useState } from "react";
 
 const Main = () => {

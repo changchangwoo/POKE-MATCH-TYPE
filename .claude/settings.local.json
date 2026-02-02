@@ -9,7 +9,9 @@
       "Bash(npm install)",
       "Bash(npx tsc:*)",
       "Bash(npx vite build:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(cd:*)",
+      "Bash(npm install:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
 import SelectTypeForQuiz from "./SelectTypeForQuiz";
-import { checkedTypes, Types } from "../../models/pokemonData";
+import { checkedTypes, Types } from "@models/pokemonData";
 import { css } from "@emotion/react";
-import { LanguageContext } from "../../utils/getInitialData";
+import { LanguageContext } from "@services/getInitialData";
 
 interface QuizAnswerProps {
   questionArr: Types[];

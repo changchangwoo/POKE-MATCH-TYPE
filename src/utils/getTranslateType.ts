@@ -1,4 +1,4 @@
-import { TLanguageType } from "../models/settingData";
+import { TLanguageType } from "@models/settingData";
 
 type PokemonType =
   | "normal"

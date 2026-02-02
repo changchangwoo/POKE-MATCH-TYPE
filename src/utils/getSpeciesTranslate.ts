@@ -1,5 +1,5 @@
-import { TLanguageType } from "../models/settingData";
-import speciesData from "../datas/speciesData.json";
+import { TLanguageType } from "@models/settingData";
+import speciesData from "@datas/speciesData.json";
 
 export const getSpeciesTranslate = (
   name: string,

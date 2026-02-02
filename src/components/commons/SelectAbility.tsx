@@ -1,9 +1,9 @@
 import { css } from "@emotion/react";
 
-import abilities from "../../datas/pokemonAbilityData.json";
+import abilities from "@datas/pokemonAbilityData.json";
 import { Dispatch, SetStateAction, useContext } from "react";
 import { useLocation } from "react-router-dom";
-import { LanguageContext } from "../../utils/getInitialData";
+import { LanguageContext } from "@services/getInitialData";
 
 interface TypeCheckProps {
   selectedAbility: string;

@@ -1,10 +1,10 @@
 import { css } from "@emotion/react";
 
-import terastalTypes from "../../datas/pokemonTerastalData.json";
-import defaultTypes from "../../datas/defaultTypes.json";
+import terastalTypes from "@datas/pokemonTerastalData.json";
+import defaultTypes from "@datas/defaultTypes.json";
 import { Dispatch, SetStateAction, useContext } from "react";
 import { useLocation } from "react-router-dom";
-import { LanguageContext } from "../../utils/getInitialData";
+import { LanguageContext } from "@services/getInitialData";
 
 interface SelectTerastalProps {
   selectedTerastal: string;

@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchDetailType } from "../../api/api";
-import { getDetailType, getGroupType } from "../../utils/getDetailType";
-import { generateQuizType2Question, generateRandomTypeNos } from "../../utils/generateQuiz";
+import { fetchDetailType } from "@api/api";
+import { getDetailType, getGroupType } from "@services/getDetailType";
+import { generateQuizType2Question, generateRandomTypeNos } from "@services/generateQuiz";
 
 export const useFetchQuizType2 = (progress: number) => {
   const query = useQuery({

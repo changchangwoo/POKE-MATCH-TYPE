@@ -1,9 +1,9 @@
 import { quizReadyContainer } from "./QuizReady";
-import quizSuccessImg from "../../imgs/quiz_success.webp";
-import quizFailedImg from "../../imgs/quiz_failed.webp";
+import quizSuccessImg from "@imgs/quiz_success.webp";
+import quizFailedImg from "@imgs/quiz_failed.webp";
 import { QuizIntroImgContainer } from "./QuizIntro";
 import { Dispatch, SetStateAction, useContext } from "react";
-import { LanguageContext } from "../../utils/getInitialData";
+import { LanguageContext } from "@services/getInitialData";
 import { css } from "@emotion/react";
 
 interface QuizEndProps {

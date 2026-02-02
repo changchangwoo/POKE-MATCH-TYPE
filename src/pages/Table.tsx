@@ -1,10 +1,10 @@
 import { css } from "@emotion/react";
 import { useContext, useState } from "react";
-import KakaoAdfitBanner from "../ads/KakaoAdfitBanner";
-import TableDescription from "../components/table/TableDescription";
-import typeEffectivenessData from "../datas/tableData.json";
-import { LanguageContext } from "../utils/getInitialData";
-import { getTranslateType } from "../utils/getTranslateType";
+import KakaoAdfitBanner from "@ads/KakaoAdfitBanner";
+import TableDescription from "@components/table/TableDescription";
+import typeEffectivenessData from "@datas/tableData.json";
+import { LanguageContext } from "@services/getInitialData";
+import { getTranslateType } from "@utils/getTranslateType";
 
 const Table = () => {
   const { language, text } = useContext(LanguageContext);

@@ -1,11 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
-import PokeDex from "../datas/pokedex.json";
-import { fetchDetailPokemon, fetchDetailType } from "../api/api";
+import PokeDex from "@datas/pokedex.json";
+import { fetchDetailPokemon, fetchDetailType } from "@api/api";
 import {
   getDetailType,
   getGroupType,
-} from "../utils/getDetailType";
-import { buildMatchInfo, generateQuizType0Question } from "../utils/generateQuiz";
+} from "@services/getDetailType";
+import { buildMatchInfo, generateQuizType0Question } from "@services/generateQuiz";
 
 export const useGetDetailPokemonForQuiz = (progress: number) => {
   const query = useQuery({

@@ -3,8 +3,8 @@ import {
   TLanguageData,
   TLanguageType,
   TThemeData,
-} from "../models/settingData";
-import { LANGUAGE_TEXTS } from "../const/language_text";
+} from "@models/settingData";
+import { LANGUAGE_TEXTS } from "@const/language_text";
 
 type TThemeContext = {
   theme: TThemeData;

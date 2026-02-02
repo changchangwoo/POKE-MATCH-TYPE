@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { MainContainer } from "../match/MatchMain";
+import { MainContainer } from "@components/match/MatchMain";
 
 export const MatchMain_Skeleton = () => {
   return (

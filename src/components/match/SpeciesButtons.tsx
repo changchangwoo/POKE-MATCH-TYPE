@@ -1,9 +1,9 @@
 import { SetURLSearchParams } from "react-router-dom";
 import { css } from "@emotion/react";
 import { useContext, useState } from "react";
-import { getSpeciesTranslate } from "../../utils/getSpeciesTranslate";
-import { LanguageContext } from "../../utils/getInitialData";
-import { TLanguageType } from "../../models/settingData";
+import { getSpeciesTranslate } from "@utils/getSpeciesTranslate";
+import { LanguageContext } from "@services/getInitialData";
+import { TLanguageType } from "@models/settingData";
 
 interface SpeciesButtonsProps {
   varietiesData: any;

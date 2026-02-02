@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import { useContext } from "react";
-import { TThemeData } from "../../models/settingData";
-import { LanguageContext, ThemeContext } from "../../utils/getInitialData";
+import { TThemeData } from "@models/settingData";
+import { LanguageContext, ThemeContext } from "@services/getInitialData";
 
 const Theme = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -22,7 +22,7 @@ const Theme = () => {
 
   const handleThemeBtn = (
     e: React.MouseEvent<HTMLButtonElement>,
-    data: TThemeData
+    data: TThemeData,
   ) => {
     e.stopPropagation();
     setTheme(data);
@@ -30,7 +30,7 @@ const Theme = () => {
       "theme",
       JSON.stringify({
         ...data,
-      })
+      }),
     );
   };
 
