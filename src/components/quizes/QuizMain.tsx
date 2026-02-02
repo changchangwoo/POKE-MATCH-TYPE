@@ -45,8 +45,8 @@ const QuizMain = ({
     else if (correctData.damage) setAnswerText(`${correctData.damage}x`);
 
     setAlertType(isCorrect ? "correct" : "incorrect");
-    setProgressArr(
-      progressArr.map((item, idx) =>
+    setProgressArr((prev) =>
+      prev.map((item, idx) =>
         idx === progress ? { step: isCorrect ? "correct" : "wrong" } : item
       )
     );
@@ -65,8 +65,8 @@ const QuizMain = ({
       setSection((prev) => prev + 1);
       return;
     }
-    setProgressArr(
-      progressArr.map((item, idx) =>
+    setProgressArr((prev) =>
+      prev.map((item, idx) =>
         idx === progress ? { step: "current" } : item
       )
     );

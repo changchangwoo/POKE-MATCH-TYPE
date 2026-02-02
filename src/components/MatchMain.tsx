@@ -20,7 +20,7 @@ interface MatchMainProps {
 }
 
 const pokedexHash = new Map();
-pokedex.map((item) => {
+pokedex.forEach((item) => {
   item.name.kor = item.name.kor.replace(/\s*\(.*?\)\s*/g, "").trim();
   pokedexHash.set(item.no, item);
 });

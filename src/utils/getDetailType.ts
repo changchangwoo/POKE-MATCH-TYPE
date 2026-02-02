@@ -19,15 +19,18 @@ export const getDetailType = async (typeData: IDamageRelations[]) => {
     JSON.stringify(defaultTypesData)
   );
 
-  const getCirculType = async (
+  const getCirculType = (
     updateTypes: IDamageData[],
     damageRelations: IDamageRelations[]
   ) => {
-    for (let relation of damageRelations) {
+    const typeMap = new Map<string, IDamageData>();
+    for (const type of updateTypes) {
+      typeMap.set(type.name, type);
+    }
+
+    for (const relation of damageRelations) {
       relation.types.forEach((element) => {
-        const typeToUpdate = updateTypes.find(
-          (type) => type.name === element.name
-        );
+        const typeToUpdate = typeMap.get(element.name);
         if (typeToUpdate) {
           switch (relation.key) {
             case "doubleDamage":
@@ -48,7 +51,7 @@ export const getDetailType = async (typeData: IDamageRelations[]) => {
   const fetchAllDetails = async () => {
     const detailResponses = await Promise.all(typeData);
     const allDamageRelations = detailResponses.flat();
-    await getCirculType(initialTypes, allDamageRelations);
+    getCirculType(initialTypes, allDamageRelations);
     return initialTypes;
   };
   const detailTypes = await fetchAllDetails();

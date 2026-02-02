@@ -13,7 +13,7 @@ interface QuizType0_Props {
   submitAnswer: (
     answerIdx: number,
     correctIdx: number,
-    correctData: any
+    correctData: any,
   ) => void;
   progress: number;
   isNext: boolean;
@@ -28,7 +28,6 @@ const QuizType0_damageEffectiveness = ({
   const { questionArr, quizNum, groupResult, matchDatas, answerIdx } =
     useGetDetailPokemonForQuiz(progress);
   if (!questionArr || quizNum === undefined || !groupResult || !matchDatas) {
-    // if (true) {
     return <QuizType0_Skeleton />;
   }
   return (
@@ -39,7 +38,7 @@ const QuizType0_damageEffectiveness = ({
         <b>
           {text.QUIZ.MAIN_1.TITLE_2.replace(
             "{damageNum}",
-            groupResult[quizNum].damage
+            groupResult[quizNum].damage,
           )}
         </b>
       </h1>

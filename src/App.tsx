@@ -10,7 +10,7 @@ import ChangeButtons from "./components/nav/ChangeButtons";
 import Table from "./pages/Table";
 import Quiz from "./pages/Quiz";
 import { globalStyles } from "./styles/globalStyles";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { TLanguageData, TLanguageType, TThemeData } from "./models/settingData";
 import {
   getInitialLanguage,
@@ -35,13 +35,21 @@ function App() {
 
   useDefaultSetting(imageList);
 
+  const languageContextValue = useMemo(
+    () => ({ language, setLanguage, text, setText }),
+    [language, setLanguage, text, setText]
+  );
+
+  const themeContextValue = useMemo(
+    () => ({ theme, setTheme }),
+    [theme, setTheme]
+  );
+
   return (
     <>
       <Global styles={globalStyles(theme.type)} />
-      <LanguageContext.Provider
-        value={{ language, setLanguage, text, setText }}
-      >
-        <ThemeContext.Provider value={{ theme, setTheme }}>
+      <LanguageContext.Provider value={languageContextValue}>
+        <ThemeContext.Provider value={themeContextValue}>
           <Navigation />
         </ThemeContext.Provider>
         <div css={Container}>
