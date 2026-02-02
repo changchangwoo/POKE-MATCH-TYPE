@@ -30,10 +30,7 @@ const TypeCard = ({
   const {
     data: typeRelations,
     isLoading,
-    isError,
   } = useFetchDetailType(no, selectedAbility, selectedTerastal_no);
-
-  console.log(isError);
 
   if (!typeRelations) return;
   if (isLoading) return <div>{text.MAIN.LOADING}</div>;

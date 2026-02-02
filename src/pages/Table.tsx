@@ -39,7 +39,7 @@ const Table = () => {
             <table>
               <thead>
                 <tr>
-                  <th onClick={handleAllHeader}>전체 선택</th>
+                  <th onClick={handleAllHeader}>{text.TABLE.SELECT_ALL}</th>
                   {columnHeaders.map((header, index) => (
                     <th
                       css={tableHeaderStyle(header.no, false, true)}
@@ -161,7 +161,7 @@ const tableHeaderStyle = (
   vertical-align: middle;
   color: ${isHeader ? "#ffffff" : isClicked ? "var(--tableText)" : "#ffffff"};
   :hover {
-    background-color: var(--type ${no});
+    background-color: var(--type${no});
   }
 `;
 

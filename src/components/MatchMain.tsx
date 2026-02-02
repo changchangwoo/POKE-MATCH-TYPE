@@ -47,7 +47,6 @@ const MatchMain = ({
   } = useFetchDetailPokemon(no || "", name || "", searchLanguage || "");
   const {
     data: varietiesData,
-    error: varietiesDataError,
     isLoading: varietiesDataLoading,
   } = useFetchPokemonVarieties(
     no || "",
@@ -56,7 +55,6 @@ const MatchMain = ({
     language.type
   );
 
-  console.log(varietiesDataError);
   useEffect(() => {
     const getSessionMatchDatas = sessionStorage.getItem(
       location.pathname + "/matchDatas"
@@ -90,7 +88,6 @@ const MatchMain = ({
   }, [location.pathname]);
 
   if (detailDataLoading || varietiesDataLoading) {
-    // if (true) {
     return <MatchMain_Skeleton />;
   }
   if (detailDataError) return null;

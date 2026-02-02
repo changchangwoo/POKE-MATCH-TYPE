@@ -1,8 +1,6 @@
 import { css } from "@emotion/react";
 import { useEffect, useRef, useState } from "react";
 
-interface KakaoAdfitBannerProps {}
-
 const DEVICE_BANNER_SIZES = {
   mobile: { width: 320, height: 100, unitId: "DAN-RlQorOBvg7B1cDJc" },
   desktop: { width: 728, height: 90, unitId: "DAN-GjyVUynqNALh5jyk" },
@@ -17,7 +15,7 @@ declare global {
   }
 }
 
-export default function KakaoAdfitBanner({}: KakaoAdfitBannerProps) {
+export default function KakaoAdfitBanner() {
   const [deviceType, setDeviceType] = useState<"mobile" | "desktop">("mobile");
   const adRef = useRef<HTMLModElement>(null);
 

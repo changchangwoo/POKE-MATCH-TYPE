@@ -14,7 +14,7 @@ export interface IDamageRelations {
   }[];
 }
 
-export const getDetailType = async (typeData: IDamageRelations[]) => {
+export const getDetailType = (typeData: IDamageRelations[]) => {
   const initialTypes: IDamageData[] = JSON.parse(
     JSON.stringify(defaultTypesData)
   );
@@ -48,17 +48,12 @@ export const getDetailType = async (typeData: IDamageRelations[]) => {
     }
   };
 
-  const fetchAllDetails = async () => {
-    const detailResponses = await Promise.all(typeData);
-    const allDamageRelations = detailResponses.flat();
-    getCirculType(initialTypes, allDamageRelations);
-    return initialTypes;
-  };
-  const detailTypes = await fetchAllDetails();
-  return detailTypes;
+  const allDamageRelations = typeData.flat();
+  getCirculType(initialTypes, allDamageRelations);
+  return initialTypes;
 };
 
-export const getGroupType = async (types: IDamageData[]) => {
+export const getGroupType = (types: IDamageData[]) => {
   const grouped = types.reduce((acc, type) => {
     if (!acc[type.damage]) {
       acc[type.damage] = [];

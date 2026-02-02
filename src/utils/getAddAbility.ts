@@ -2,7 +2,7 @@ import { IDamageData } from "./getDetailType";
 
 type typeCalculatorType = { type: string; effects: number };
 
-export const getAddAbility = async (
+export const getAddAbility = (
   types: IDamageData[],
   selectedAbility: string
 ) => {
@@ -20,10 +20,8 @@ export const getAddAbility = async (
       typeCalculator.push({ type: "fire", effects: 0 });
       break;
     case "delta_stream":
+      // TODO: 비행타입 약점이 없어지는 절댓값 구현 필요
       typeCalculator.push({ type: "flying", effects: 1 });
-      // 비행타입 약점이 없어지는 절댓값
-      // *****아직 못구현했삼..
-
       break;
     case "thick_fat":
       typeCalculator.push({ type: "fire", effects: 0.5 });
@@ -39,7 +37,7 @@ export const getAddAbility = async (
       typeCalculator.push({ type: "ground", effects: 0 });
       break;
     case "wonder_guard":
-      // *****아직 못구현했삼..
+      // TODO: 효과가 굉장한 기술만 맞는 특성 구현 필요
       break;
     case "water_bubble":
       typeCalculator.push({ type: "fire", effects: 0.5 });
@@ -60,9 +58,7 @@ export const getAddAbility = async (
       typeCalculator.push({ type: "fire", effects: 0 });
       break;
     case "tera_shell":
-      // 특정 타입 공격의 데미지를 줄이거나 방어력을 올림
-      // *****아직 못구현했삼..
-
+      // TODO: 특정 타입 공격의 데미지를 줄이거나 방어력을 올림 구현 필요
       break;
     case "lightning_rod":
       typeCalculator.push({ type: "electric", effects: 0 });
@@ -74,9 +70,7 @@ export const getAddAbility = async (
       typeCalculator.push({ type: "grass", effects: 0 });
       break;
     case "filter":
-      // 효과가 굉장한 공격의 데미지를 줄임
-      // 약점의 데미지를 75%줄임
-      // *****아직 못구현했삼..
+      // TODO: 효과가 굉장한 공격의 데미지를 75% 줄임 구현 필요
       break;
     default:
       // 없음: 특성 없음

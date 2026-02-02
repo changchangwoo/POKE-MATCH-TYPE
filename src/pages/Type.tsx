@@ -9,7 +9,7 @@ import { checkedTypes } from "../models/pokemonData";
 const Type = () => {
   const [checkedType, setCheckedType] = useState<checkedTypes[]>([]);
   const [selectedAbility, setSelectedAbility] = useState<string>("");
-  const [selectedTrastal, setSelectedTerastal] = useState<{
+  const [selectedTerastal, setSelectedTerastal] = useState<{
     value: string;
     no: string;
   }>({ value: "", no: "" });
@@ -63,7 +63,7 @@ const Type = () => {
         checkedType={checkedType}
         setCheckedType={setCheckedType}
         selectedAbility={selectedAbility}
-        selectedTerastal={selectedTrastal}
+        selectedTerastal={selectedTerastal}
         setSelectedAbility={setSelectedAbility}
         setSelectedTerastal={setSelectedTerastal}
       />
@@ -71,7 +71,7 @@ const Type = () => {
       <TypeCard
         MatchTypes={checkedType}
         selectedAbility={selectedAbility}
-        selectedTerastal_no={selectedTrastal.no}
+        selectedTerastal_no={selectedTerastal.no}
       />
     </div>
   );

@@ -2,11 +2,11 @@ import { css } from "@emotion/react";
 import { useState } from "react";
 import { FaCaretDown } from "react-icons/fa";
 
-interface AccrodianProps {
+interface AccordionProps {
   children: React.ReactNode;
   title: string;
 }
-const AccordianList = ({ children, title }: AccrodianProps) => {
+const AccordianList = ({ children, title }: AccordionProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(true);
   return (
     <div

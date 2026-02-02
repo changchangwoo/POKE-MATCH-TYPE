@@ -30,20 +30,17 @@ function App() {
   const initialLanguage = getInitialLanguage();
   const [language, setLanguage] = useState<TLanguageData>(initialLanguage);
   const [text, setText] = useState(
-    LANGUAGE_TEXTS[initialLanguage.type as TLanguageType]
+    LANGUAGE_TEXTS[initialLanguage.type as TLanguageType],
   );
 
   useDefaultSetting(imageList);
 
   const languageContextValue = useMemo(
     () => ({ language, setLanguage, text, setText }),
-    [language, setLanguage, text, setText]
+    [language, text],
   );
 
-  const themeContextValue = useMemo(
-    () => ({ theme, setTheme }),
-    [theme, setTheme]
-  );
+  const themeContextValue = useMemo(() => ({ theme, setTheme }), [theme]);
 
   return (
     <>

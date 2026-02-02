@@ -17,7 +17,6 @@ const useFetchDetailType = (
         typeNoArray = [Number(selectedTerastal_no)];
       }
 
-      console.log(typeNoArray);
       const fetchDetailTypeData = await fetchDetailType(typeNoArray);
       const circulateTypeData = await getDetailType(fetchDetailTypeData);
       if (selectedAbility && selectedAbility !== "") {

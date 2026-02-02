@@ -69,6 +69,7 @@ export const LANGUAGE_TEXTS = {
     },
     TABLE: {
       TITLE: "타입 상성 표",
+      SELECT_ALL: "전체 선택",
       EFFECT_SUMMARY: {
         SUPER_EFFECT: "효과가 굉장했다!",
         NORMAL_EFFECT: "효과가 별로인 것 같다...",
@@ -214,6 +215,7 @@ export const LANGUAGE_TEXTS = {
     },
     TABLE: {
       TITLE: "Type Matchup Table",
+      SELECT_ALL: "Select All",
       EFFECT_SUMMARY: {
         SUPER_EFFECT: "It's super effective!",
         NORMAL_EFFECT: "It's not very effective...",
