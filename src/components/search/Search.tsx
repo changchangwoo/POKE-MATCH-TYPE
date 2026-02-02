@@ -32,6 +32,7 @@ const Search = ({
     suggestions,
     activeSuggestionIndex,
     searchRef,
+    inputRef,
     handleInputChange,
     handleSuggestionClick,
     handleSubmit,
@@ -49,6 +50,7 @@ const Search = ({
       <form css={inputBox} onSubmit={handleSubmit}>
         <FaSearch />
         <input
+          ref={inputRef}
           value={searchTerm}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}

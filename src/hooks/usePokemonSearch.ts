@@ -39,6 +39,11 @@ const usePokemonSearch = ({
   const [activeSuggestionIndex, setActiveSuggestionIndex] =
     useState<number>(-1);
   const searchRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -109,11 +114,11 @@ const usePokemonSearch = ({
     if (suggestions.length > 0) {
       if (event.key === "ArrowDown") {
         setActiveSuggestionIndex((prevIndex) =>
-          prevIndex === suggestions.length - 1 ? 0 : prevIndex + 1
+          prevIndex === suggestions.length - 1 ? 0 : prevIndex + 1,
         );
       } else if (event.key === "ArrowUp") {
         setActiveSuggestionIndex((prevIndex) =>
-          prevIndex === 0 ? suggestions.length - 1 : prevIndex - 1
+          prevIndex === 0 ? suggestions.length - 1 : prevIndex - 1,
         );
       } else if (event.key === "Enter") {
         if (
@@ -131,6 +136,7 @@ const usePokemonSearch = ({
     suggestions,
     activeSuggestionIndex,
     searchRef,
+    inputRef,
     handleInputChange,
     handleSuggestionClick,
     handleSubmit,

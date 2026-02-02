@@ -46,15 +46,8 @@ const MatchMain = ({
     error: detailDataError,
     isLoading: detailDataLoading,
   } = useFetchDetailPokemon(no || "", name || "", searchLanguage || "");
-  const {
-    data: varietiesData,
-    isLoading: varietiesDataLoading,
-  } = useFetchPokemonVarieties(
-    no || "",
-    name || "",
-    pokedexHash,
-    language.type
-  );
+  const { data: varietiesData, isLoading: varietiesDataLoading } =
+    useFetchPokemonVarieties(no || "", name || "", pokedexHash, language.type);
 
   useMatchSession(setSearchParams, setSelectedAbility, setSelectedTerastal);
 

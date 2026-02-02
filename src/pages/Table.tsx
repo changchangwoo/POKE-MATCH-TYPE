@@ -15,7 +15,7 @@ const Table = () => {
     const target = e.currentTarget;
     if (clearDatas.includes(Number(target.dataset.type))) {
       setClearDatas(
-        clearDatas.filter((no) => no !== Number(target.dataset.type))
+        clearDatas.filter((no) => no !== Number(target.dataset.type)),
       );
     } else {
       setClearDatas([...clearDatas, Number(target.dataset.type)]);
@@ -33,6 +33,7 @@ const Table = () => {
   return (
     <>
       <div css={tableContainer}>
+        <KakaoAdfitBanner />
         <h1>{text.TABLE.TITLE}</h1>
         <div css={tableContents}>
           <div>
@@ -74,7 +75,6 @@ const Table = () => {
             </table>
           </div>
         </div>
-        <KakaoAdfitBanner />
 
         <TableDescription text={text} />
       </div>
@@ -154,7 +154,7 @@ const tableContents = css`
 const tableHeaderStyle = (
   no: number,
   isClicked: boolean = false,
-  isHeader: boolean = false
+  isHeader: boolean = false,
 ) => css`
   background-color: ${isClicked ? "var(--primary)" : `var(--type${no})`};
   height: 30px;
@@ -170,10 +170,10 @@ const valueColor = (value: string, isClicked: boolean) => css`
   color: ${value === "●"
     ? "var(--type14)"
     : value === "▲"
-    ? "var(--type7)"
-    : value === "✕"
-    ? "var(--type16)"
-    : "inherit"};
+      ? "var(--type7)"
+      : value === "✕"
+        ? "var(--type16)"
+        : "inherit"};
 `;
 
 export default Table;

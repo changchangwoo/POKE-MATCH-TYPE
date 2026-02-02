@@ -11,12 +11,13 @@ const Quiz = () => {
   const { text } = useContext(LanguageContext);
   const [section, setSection] = useState<number>(0);
   const [progressArr, setProgressArr] = useState<{ step: string }[]>(() =>
-    new Array(10).fill(null).map(() => ({ step: "none" }))
+    new Array(10).fill(null).map(() => ({ step: "none" })),
   );
 
   return (
     <>
       <div css={quizContainer}>
+        <KakaoAdfitBanner />
         <h1>{text.QUIZ.TITLE}</h1>
         {(() => {
           switch (section) {
@@ -44,7 +45,6 @@ const Quiz = () => {
               return <div>{text.QUIZ.ERROR}</div>;
           }
         })()}
-        <KakaoAdfitBanner />
       </div>
     </>
   );
