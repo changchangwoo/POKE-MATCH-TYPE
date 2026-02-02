@@ -4,10 +4,10 @@ import { useLocation } from "react-router-dom";
 import KakaoAdfitBanner from "@ads/KakaoAdfitBanner";
 import TypeCard from "@components/commons/TypeCard";
 import SelectType from "@components/commons/SelectType";
-import { checkedTypes } from "@models/pokemonData";
+import { CheckedType } from "@models/pokemonData";
 
 const Type = () => {
-  const [checkedType, setCheckedType] = useState<checkedTypes[]>([]);
+  const [checkedType, setCheckedType] = useState<CheckedType[]>([]);
   const [selectedAbility, setSelectedAbility] = useState<string>("");
   const [selectedTerastal, setSelectedTerastal] = useState<{
     value: string;

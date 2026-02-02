@@ -1,11 +1,11 @@
-import { TLanguageType } from "./settingData";
+import { LanguageType } from "./settingData";
 
 export interface MatchInfo {
   no: number;
   name: string;
   types: Types[];
   imgs: string;
-  searchLanguage: TLanguageType | "";
+  searchLanguage: LanguageType | "";
 }
 
 export interface Types {
@@ -13,19 +13,19 @@ export interface Types {
   name: string;
 }
 
-export interface checkedTypes {
+export interface CheckedType {
   no: number;
   name: string;
   idx: number;
 }
 
-export interface IPokeDex {
+export interface PokeDex {
   no: number;
-  name: Record<TLanguageType, string>;
-  varieties: Record<TLanguageType, string[]>;
+  name: Record<LanguageType, string>;
+  varieties: Record<LanguageType, string[]>;
 }
 
-export type TSpecises =
+export type Species =
   | "메가진화"
   | "거다이맥스"
   | "기본형"

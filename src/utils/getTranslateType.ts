@@ -1,4 +1,4 @@
-import { TLanguageType } from "@models/settingData";
+import { LanguageType } from "@models/settingData";
 
 type PokemonType =
   | "normal"
@@ -23,7 +23,7 @@ type PokemonType =
   | "shadow"
   | string;
 
-const typeMapping: Record<TLanguageType, Record<PokemonType, string>> = {
+const typeMapping: Record<LanguageType, Record<PokemonType, string>> = {
   kor: {
     normal: "노말",
     fighting: "격투",
@@ -72,7 +72,7 @@ const typeMapping: Record<TLanguageType, Record<PokemonType, string>> = {
 
 export const getTranslateType = (
   englishType: PokemonType,
-  language: TLanguageType
+  language: LanguageType
 ): string => {
   return typeMapping[language]?.[englishType] ?? "undefined";
 };

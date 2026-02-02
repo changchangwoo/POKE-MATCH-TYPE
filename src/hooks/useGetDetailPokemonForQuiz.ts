@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import PokeDex from "@datas/pokedex.json";
+import PokeDex from "@data/pokedex.json";
 import { fetchDetailPokemon, fetchDetailType } from "@api/api";
 import {
   getDetailType,

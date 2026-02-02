@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { Dispatch, SetStateAction, useContext } from "react";
-import QuizIntroImg from "@imgs/quiz_intro.webp";
+import QuizIntroImg from "@images/quiz_intro.webp";
 import { quizReadyText } from "./QuizReady";
 import { LanguageContext } from "@services/getInitialData";
 
@@ -12,8 +12,8 @@ interface QuizIntroProps {
 const QuizIntro = ({ setSection }: QuizIntroProps) => {
       const {text} = useContext(LanguageContext);
   return (
-    <div css={QuizIntroContainer}>
-      <img src={QuizIntroImg} css={QuizIntroImgContainer}></img>
+    <div css={quizIntroContainer}>
+      <img src={QuizIntroImg} css={quizIntroImgContainer}></img>
       <div css={quizReadyText}>
         <span>
           {text.QUIZ.INTRO.TITLE_1}
@@ -41,7 +41,7 @@ const QuizIntro = ({ setSection }: QuizIntroProps) => {
 
 export default QuizIntro;
 
-export const QuizIntroImgContainer = css`
+export const quizIntroImgContainer = css`
   width: 100%;
   height: 250px;
   background-color: var(--border);
@@ -51,7 +51,7 @@ export const QuizIntroImgContainer = css`
   object-fit: cover;
 `;
 
-export const QuizIntroContainer = css`
+export const quizIntroContainer = css`
   width: 100%;
   padding: 20px;
   box-sizing: border-box;

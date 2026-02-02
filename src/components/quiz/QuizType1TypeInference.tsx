@@ -4,25 +4,25 @@ import { css } from "@emotion/react";
 import TypeBadge from "@components/commons/TypeBadge";
 
 import { getTranslateType } from "@utils/getTranslateType";
-import quizType1_data from "@datas/quizType1Data.json";
+import quizType1_data from "@data/quizType1Data.json";
 import { Types } from "@models/pokemonData";
-import defaultTypes from "@datas/defaultTypes.json";
+import defaultTypes from "@data/defaultTypes.json";
 import QuizAnswer from "./QuizAnswer";
-import { title } from "./QuizType0_damageEffectiveness";
+import { title } from "./QuizType0DamageEffectiveness";
 import { LanguageContext } from "@services/getInitialData";
 
 
-interface QuizType1_Props {
+interface QuizType1Props {
   submitAnswer: (answerIdx: number, correctIdx: number, correctData : any) => void;
   progress: number;
   isNext: boolean;
 }
 
-const QuizType1_quizTypeInference = ({
+const QuizType1TypeInference = ({
   submitAnswer,
   progress,
   isNext,
-}: QuizType1_Props) => {
+}: QuizType1Props) => {
       const {language, text} = useContext(LanguageContext);
   const [questionArr, setQuetstionArr] = useState<Types[]>([]);
   const [answerIdx, setAnswerIdx] = useState<number>(0);
@@ -141,4 +141,4 @@ const badgeContainer = css`
   gap: 20px;
 `;
 
-export default QuizType1_quizTypeInference;
+export default QuizType1TypeInference;

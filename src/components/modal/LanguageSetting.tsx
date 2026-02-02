@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { SelectAbilityContainer } from "@components/commons/SelectAbility";
+import { selectAbilityContainer } from "@components/commons/SelectAbility";
 import { LanguageContext } from "@services/getInitialData";
 import { LANGUAGE_TEXTS } from "@const/language_text";
 
@@ -21,7 +21,7 @@ const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
 };
 
   return (
-    <div css={SelectAbilityContainer}>
+    <div css={selectAbilityContainer}>
       <select
         aria-label="Select Language"
         value={selectLanguage}

@@ -1,14 +1,14 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchPokemonSpecies } from "@api/api";
-import { IPokeDex } from "@models/pokemonData";
+import { PokeDex } from "@models/pokemonData";
 import { getFilterFixVarieties } from "@services/getFilterFixVarieties";
-import { TLanguageType } from "@models/settingData";
+import { LanguageType } from "@models/settingData";
 
 const useFetchPokemonVarieties = (
   no: string,
   name: string,
-  pokeDexHash: Map<number, IPokeDex>,
-  language: TLanguageType,
+  pokeDexHash: Map<number, PokeDex>,
+  language: LanguageType,
 ) => {
   return useQuery({
     queryKey: ["pokemonSpecies", no],

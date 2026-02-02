@@ -1,18 +1,18 @@
 import { css } from "@emotion/react";
 import { Dispatch, SetStateAction, useContext } from "react";
-import defaultTypesData from "@datas/defaultTypes.json";
+import defaultTypesData from "@data/defaultTypes.json";
 import { getTranslateType } from "@utils/getTranslateType";
 
-import { checkedTypes } from "@models/pokemonData";
+import { CheckedType } from "@models/pokemonData";
 import { LanguageContext } from "@services/getInitialData";
 import SelectAbility from "./SelectAbility";
 import SelectTerastal from "./SelectTerastal";
 
 interface SelectTypeProps {
-  checkedType: checkedTypes[];
+  checkedType: CheckedType[];
   selectedAbility: string;
   selectedTerastal: { value: string; no: string };
-  setCheckedType: Dispatch<SetStateAction<checkedTypes[]>>;
+  setCheckedType: Dispatch<SetStateAction<CheckedType[]>>;
   setSelectedAbility: Dispatch<SetStateAction<string>>;
   setSelectedTerastal: Dispatch<SetStateAction<{ value: string; no: string }>>;
 }

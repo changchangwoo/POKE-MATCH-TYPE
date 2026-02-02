@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import SelectTypeForQuiz from "./SelectTypeForQuiz";
-import { checkedTypes, Types } from "@models/pokemonData";
+import { CheckedType, Types } from "@models/pokemonData";
 import { css } from "@emotion/react";
 import { LanguageContext } from "@services/getInitialData";
 
@@ -21,12 +21,12 @@ export const QuizAnswer = ({
   isNext,
   answerIdx,
 }: QuizAnswerProps) => {
-  const [checkedType, setCheckedType] = useState<checkedTypes[]>([]);
+  const [checkedType, setCheckedType] = useState<CheckedType[]>([]);
   const { text } = useContext(LanguageContext);
 
   return (
     <>
-      <div css={AnswerContainer}>
+      <div css={answerContainer}>
         <SelectTypeForQuiz
           aria-label="Select Type"
           checkedType={checkedType}
@@ -49,7 +49,7 @@ export const QuizAnswer = ({
   );
 };
 
-export const AnswerContainer = css`
+export const answerContainer = css`
   width: 100%;
 `;
 

@@ -1,9 +1,9 @@
-import { TLanguageType } from "@models/settingData";
-import speciesData from "@datas/speciesData.json";
+import { LanguageType } from "@models/settingData";
+import speciesData from "@data/speciesData.json";
 
 export const getSpeciesTranslate = (
   name: string,
-  language: TLanguageType
+  language: LanguageType
 ): string => {
   if (/-mega-x$/.test(name)) return speciesData["megaX"][language]
   if (/-mega-y$/.test(name)) return speciesData["megaY"][language]

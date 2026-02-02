@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
-import QuizCorrrectImg from "@imgs/quiz_correct.webp";
-import QuizIncorrectImg from "@imgs/quiz_incorrect.webp";
+import QuizCorrrectImg from "@images/quiz_correct.webp";
+import QuizIncorrectImg from "@images/quiz_incorrect.webp";
 import { useContext, useEffect, useState } from "react";
 import { LanguageContext } from "@services/getInitialData";
 

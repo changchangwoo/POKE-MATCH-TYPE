@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 
-import terastalTypes from "@datas/pokemonTerastalData.json";
-import defaultTypes from "@datas/defaultTypes.json";
+import terastalTypes from "@data/pokemonTerastalData.json";
+import defaultTypes from "@data/defaultTypes.json";
 import { Dispatch, SetStateAction, useContext } from "react";
 import { useLocation } from "react-router-dom";
 import { LanguageContext } from "@services/getInitialData";
@@ -46,7 +46,7 @@ const SelectTerastal = ({
 
   return (
     <>
-      <div css={SelectTerastalContainer}>
+      <div css={selectTerastalContainer}>
         <h1>{text.MATCH.SELECT_TERASTAL.TITLE}</h1>
 
         <select
@@ -65,7 +65,7 @@ const SelectTerastal = ({
   );
 };
 
-export const SelectTerastalContainer = css`
+export const selectTerastalContainer = css`
   width: 100%;
   display: flex;
   flex-direction: column;

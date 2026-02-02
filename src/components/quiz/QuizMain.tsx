@@ -5,9 +5,9 @@ import {
   useEffect,
   useState,
 } from "react";
-import QuizType0_damageEffectiveness from "./QuizType0_damageEffectiveness";
-import QuizType1_quizTypeInference from "./QuizType1_quizTypeInference";
-import QuizType2_typeDescription from "./QuizType2_typeDescription";
+import QuizType0DamageEffectiveness from "./QuizType0DamageEffectiveness";
+import QuizType1TypeInference from "./QuizType1TypeInference";
+import QuizType2TypeDescription from "./QuizType2TypeDescription";
 import { getRandomNum } from "@utils/getRandomNum";
 import StepProgress from "./StepProgress";
 import QuizAlert from "@components/modal/QuizAlert";
@@ -83,7 +83,7 @@ const QuizMain = ({
           switch (quizType) {
             case 0:
               return (
-                <QuizType0_damageEffectiveness
+                <QuizType0DamageEffectiveness
                   key={progress}
                   submitAnswer={submitAnswer}
                   progress={progress}
@@ -92,7 +92,7 @@ const QuizMain = ({
               );
             case 1:
               return (
-                <QuizType1_quizTypeInference
+                <QuizType1TypeInference
                   key={progress}
                   submitAnswer={submitAnswer}
                   progress={progress}
@@ -101,7 +101,7 @@ const QuizMain = ({
               );
             case 2:
               return (
-                <QuizType2_typeDescription
+                <QuizType2TypeDescription
                   key={progress}
                   submitAnswer={submitAnswer}
                   progress={progress}

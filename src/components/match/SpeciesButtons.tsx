@@ -1,16 +1,17 @@
 import { SetURLSearchParams } from "react-router-dom";
 import { css } from "@emotion/react";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { getSpeciesTranslate } from "@utils/getSpeciesTranslate";
 import { LanguageContext } from "@services/getInitialData";
-import { TLanguageType } from "@models/settingData";
+import { LanguageType } from "@models/settingData";
+import useSpeciesSelect from "@hooks/useSpeciesSelect";
 
 interface SpeciesButtonsProps {
   varietiesData: any;
   varietiesIdx: string | null;
   name: string;
   setSearchParams: SetURLSearchParams;
-  searchLanguage : TLanguageType | "";
+  searchLanguage : LanguageType | "";
 }
 
 const SpeciesButtons = ({
@@ -20,29 +21,13 @@ const SpeciesButtons = ({
   setSearchParams,
   searchLanguage
 }: SpeciesButtonsProps) => {
-  const [clickedBtn, setClickedBtn] = useState<number | null>(
-    Number(varietiesIdx)
-  );
   const { language, text } = useContext(LanguageContext);
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const btnIdx = e.currentTarget.dataset.idx;
-    const urlIdx = e.currentTarget.dataset.url?.match(/\/(\d+)\/$/)?.[1];
-    if (btnIdx !== undefined) {
-      setClickedBtn(Number(btnIdx));
-      setSearchParams({
-        no: urlIdx || "",
-        name: name || "",
-        varietiesIdx: btnIdx || "0",
-        searchLanguage : searchLanguage || ""
-      });
-      sessionStorage.setItem(
-        location.pathname + "/varietiesIdx",
-        JSON.stringify({
-          varietiesIdx: btnIdx,
-        })
-      );
-    }
-  };
+  const { clickedBtn, handleClick } = useSpeciesSelect({
+    varietiesIdx,
+    name,
+    searchLanguage,
+    setSearchParams,
+  });
 
   return (
     <>

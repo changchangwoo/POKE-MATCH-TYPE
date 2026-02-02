@@ -1,13 +1,13 @@
 import { css } from "@emotion/react";
 import { useContext } from "react";
-import { TThemeData } from "@models/settingData";
+import { ThemeData } from "@models/settingData";
 import { LanguageContext, ThemeContext } from "@services/getInitialData";
 
 const Theme = () => {
   const { theme, setTheme } = useContext(ThemeContext);
   const { text } = useContext(LanguageContext);
 
-  const ThemeDatas: TThemeData[] = [
+  const ThemeDatas: ThemeData[] = [
     {
       name: text.APP.THEME.DATA_SUN_STONE,
       num: 1,
@@ -22,7 +22,7 @@ const Theme = () => {
 
   const handleThemeBtn = (
     e: React.MouseEvent<HTMLButtonElement>,
-    data: TThemeData,
+    data: ThemeData,
   ) => {
     e.stopPropagation();
     setTheme(data);

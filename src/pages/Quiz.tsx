@@ -1,10 +1,10 @@
 import { css } from "@emotion/react";
 import { useContext, useState } from "react";
 import KakaoAdfitBanner from "@ads/KakaoAdfitBanner";
-import QuizEnd from "@components/quizes/QuizEnd";
-import QuizIntro from "@components/quizes/QuizIntro";
-import QuizMain from "@components/quizes/QuizMain";
-import QuizReady from "@components/quizes/QuizReady";
+import QuizEnd from "@components/quiz/QuizEnd";
+import QuizIntro from "@components/quiz/QuizIntro";
+import QuizMain from "@components/quiz/QuizMain";
+import QuizReady from "@components/quiz/QuizReady";
 import { LanguageContext } from "@services/getInitialData";
 
 const Quiz = () => {

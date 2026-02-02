@@ -1,9 +1,9 @@
-import { IDamageData } from "./getDetailType";
+import { DamageData } from "./getDetailType";
 
 type typeCalculatorType = { type: string; effects: number };
 
 export const getAddAbility = (
-  types: IDamageData[],
+  types: DamageData[],
   selectedAbility: string
 ) => {
   const typeCalculator: typeCalculatorType[] = [];

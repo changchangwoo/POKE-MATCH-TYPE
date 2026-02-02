@@ -1,9 +1,9 @@
 import { css } from "@emotion/react";
-import { MainContainer } from "@components/match/MatchMain";
+import { mainContainer } from "@components/match/MatchMain";
 
-export const MatchMain_Skeleton = () => {
+export const MatchMainSkeleton = () => {
   return (
-    <div css={MainContainer}>
+    <div css={mainContainer}>
       <div css={matchCardContainerSkeleton}>
         <div className="dummy_titleBox"/>
         <div className="dummy_imgBox" />

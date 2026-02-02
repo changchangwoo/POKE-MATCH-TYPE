@@ -1,4 +1,4 @@
-import Logo from "@imgs/logo.webp";
+import Logo from "@images/logo.webp";
 
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
@@ -11,7 +11,7 @@ import Table from "@pages/Table";
 import Quiz from "@pages/Quiz";
 import { globalStyles } from "@styles/globalStyles";
 import { useMemo, useState } from "react";
-import { TLanguageData, TLanguageType, TThemeData } from "@models/settingData";
+import { LanguageData, LanguageType, ThemeData } from "@models/settingData";
 import {
   getInitialLanguage,
   getInitialTheme,
@@ -26,11 +26,11 @@ import Error from "@pages/Error";
 const imageList = [Logo];
 
 function App() {
-  const [theme, setTheme] = useState<TThemeData>(getInitialTheme());
+  const [theme, setTheme] = useState<ThemeData>(getInitialTheme());
   const initialLanguage = getInitialLanguage();
-  const [language, setLanguage] = useState<TLanguageData>(initialLanguage);
+  const [language, setLanguage] = useState<LanguageData>(initialLanguage);
   const [text, setText] = useState(
-    LANGUAGE_TEXTS[initialLanguage.type as TLanguageType],
+    LANGUAGE_TEXTS[initialLanguage.type as LanguageType],
   );
 
   useDefaultSetting(imageList);

@@ -1,7 +1,7 @@
 import { quizReadyContainer } from "./QuizReady";
-import quizSuccessImg from "@imgs/quiz_success.webp";
-import quizFailedImg from "@imgs/quiz_failed.webp";
-import { QuizIntroImgContainer } from "./QuizIntro";
+import quizSuccessImg from "@images/quiz_success.webp";
+import quizFailedImg from "@images/quiz_failed.webp";
+import { quizIntroImgContainer } from "./QuizIntro";
 import { Dispatch, SetStateAction, useContext } from "react";
 import { LanguageContext } from "@services/getInitialData";
 import { css } from "@emotion/react";
@@ -48,7 +48,7 @@ const QuizEnd = ({ progressArr, setSection, setProgressArr }: QuizEndProps) => {
 
       <img
         src={correctCount >= 7 ? quizSuccessImg : quizFailedImg}
-        css={QuizIntroImgContainer}
+        css={quizIntroImgContainer}
       ></img>
 
       <span css={{ textAlign: "center" }}>{renderMessage()}</span>

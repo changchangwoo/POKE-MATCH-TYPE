@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { useFetchQuizType2 } from "@hooks/queries/useFetchQuizType2";
-import { title } from "./QuizType0_damageEffectiveness";
+import { title } from "./QuizType0DamageEffectiveness";
 import { css } from "@emotion/react";
 import { getTranslateType } from "@utils/getTranslateType";
 import TypeBadge from "@components/commons/TypeBadge";
@@ -9,17 +9,17 @@ import { submitBtn } from "./QuizAnswer";
 import { LanguageContext } from "@services/getInitialData";
 
 
-interface QuizType2_Props {
+interface QuizType2Props {
   submitAnswer: (answerIdx: number, correctIdx: number, correctData : any) => void;
   progress: number;
   isNext: boolean;
 }
 
-const QuizType2_typeDescription = ({
+const QuizType2TypeDescription = ({
   submitAnswer,
   progress,
   isNext,
-}: QuizType2_Props) => {
+}: QuizType2Props) => {
       const {language, text} = useContext(LanguageContext);
   const { attacker, defender, questionArr, answerIdx, answer } = useFetchQuizType2(progress);
   const [checkedAnswer, setCheckedAnswer] = useState<{
@@ -92,7 +92,7 @@ const QuizType2_typeDescription = ({
   );
 };
 
-export default QuizType2_typeDescription;
+export default QuizType2TypeDescription;
 
 const selectDamageContainer = (isNext : boolean) => css`
   display: flex;

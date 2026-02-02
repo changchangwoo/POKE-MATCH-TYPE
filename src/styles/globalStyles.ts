@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
-import { TTheme } from "@models/settingData";
+import { Theme } from "@models/settingData";
 
-type TThemeStyles = {
+type ThemeStyles = {
   point: string;
   primary: string;
   background: string;
@@ -12,7 +12,7 @@ type TThemeStyles = {
   skeleton: string;
 };
 
-const themes: Record<TTheme, TThemeStyles> = {
+const themes: Record<Theme, ThemeStyles> = {
   light: {
     point: "#DE7038",
     primary: "#f8f9fa",

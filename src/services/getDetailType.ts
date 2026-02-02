@@ -1,12 +1,12 @@
-import defaultTypesData from "@datas/defaultTypes.json";
+import defaultTypesData from "@data/defaultTypes.json";
 
-export interface IDamageData {
+export interface DamageData {
   no: number;
   name: string;
   damage: number;
 }
 
-export interface IDamageRelations {
+export interface DamageRelations {
   key: string;
   types: {
     name: string;
@@ -14,16 +14,16 @@ export interface IDamageRelations {
   }[];
 }
 
-export const getDetailType = (typeData: IDamageRelations[]) => {
-  const initialTypes: IDamageData[] = JSON.parse(
+export const getDetailType = (typeData: DamageRelations[]) => {
+  const initialTypes: DamageData[] = JSON.parse(
     JSON.stringify(defaultTypesData)
   );
 
   const getCirculType = (
-    updateTypes: IDamageData[],
-    damageRelations: IDamageRelations[]
+    updateTypes: DamageData[],
+    damageRelations: DamageRelations[]
   ) => {
-    const typeMap = new Map<string, IDamageData>();
+    const typeMap = new Map<string, DamageData>();
     for (const type of updateTypes) {
       typeMap.set(type.name, type);
     }
@@ -53,14 +53,14 @@ export const getDetailType = (typeData: IDamageRelations[]) => {
   return initialTypes;
 };
 
-export const getGroupType = (types: IDamageData[]) => {
+export const getGroupType = (types: DamageData[]) => {
   const grouped = types.reduce((acc, type) => {
     if (!acc[type.damage]) {
       acc[type.damage] = [];
     }
     acc[type.damage].push(type);
     return acc;
-  }, {} as Record<number, IDamageData[]>);
+  }, {} as Record<number, DamageData[]>);
 
   const groupedArray = Object.keys(grouped).map((damage) => ({
     damage: Number(damage),

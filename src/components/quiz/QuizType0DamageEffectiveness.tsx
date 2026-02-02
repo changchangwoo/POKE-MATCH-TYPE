@@ -7,9 +7,9 @@ import { useGetDetailPokemonForQuiz } from "@hooks/useGetDetailPokemonForQuiz";
 import QuizAnswer from "./QuizAnswer";
 import { useContext } from "react";
 import { LanguageContext } from "@services/getInitialData";
-import { QuizType0_Skeleton } from "@components/skeleton/Quiz_Skeleton";
+import { QuizType0Skeleton } from "@components/skeleton/QuizSkeleton";
 
-interface QuizType0_Props {
+interface QuizType0Props {
   submitAnswer: (
     answerIdx: number,
     correctIdx: number,
@@ -19,16 +19,16 @@ interface QuizType0_Props {
   isNext: boolean;
 }
 
-const QuizType0_damageEffectiveness = ({
+const QuizType0DamageEffectiveness = ({
   submitAnswer,
   progress,
   isNext,
-}: QuizType0_Props) => {
+}: QuizType0Props) => {
   const { language, text } = useContext(LanguageContext);
   const { questionArr, quizNum, groupResult, matchDatas, answerIdx } =
     useGetDetailPokemonForQuiz(progress);
   if (!questionArr || quizNum === undefined || !groupResult || !matchDatas) {
-    return <QuizType0_Skeleton />;
+    return <QuizType0Skeleton />;
   }
   return (
     <>
@@ -62,7 +62,7 @@ const QuizType0_damageEffectiveness = ({
   );
 };
 
-export default QuizType0_damageEffectiveness;
+export default QuizType0DamageEffectiveness;
 
 export const title = css`
   b {

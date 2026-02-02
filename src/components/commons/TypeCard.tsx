@@ -4,7 +4,7 @@ import { Types } from "@models/pokemonData";
 import TypeBadge from "./TypeBadge";
 import { getTranslateType } from "@utils/getTranslateType";
 
-import { IDamageData } from "@services/getDetailType";
+import { DamageData } from "@services/getDetailType";
 import useFetchDetailType from "@hooks/queries/useFetchDetailType";
 import { LanguageContext } from "@services/getInitialData";
 
@@ -14,9 +14,9 @@ interface MatchCardProps {
   selectedTerastal_no: string;
 }
 
-export interface ITypeRelations {
+export interface TypeRelations {
   damage: number;
-  types: IDamageData[];
+  types: DamageData[];
 }
 
 const TypeCard = ({

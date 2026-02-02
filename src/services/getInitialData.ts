@@ -1,24 +1,24 @@
 import { createContext, Dispatch, SetStateAction } from "react";
 import {
-  TLanguageData,
-  TLanguageType,
-  TThemeData,
+  LanguageData,
+  LanguageType,
+  ThemeData,
 } from "@models/settingData";
 import { LANGUAGE_TEXTS } from "@const/language_text";
 
-type TThemeContext = {
-  theme: TThemeData;
-  setTheme: Dispatch<SetStateAction<TThemeData>>;
+type ThemeContextType = {
+  theme: ThemeData;
+  setTheme: Dispatch<SetStateAction<ThemeData>>;
 };
 
-type TLanguageContext = {
-  language: TLanguageData;
-  setLanguage: Dispatch<SetStateAction<TLanguageData>>;
+type LanguageContextType = {
+  language: LanguageData;
+  setLanguage: Dispatch<SetStateAction<LanguageData>>;
   text: any;
   setText: Dispatch<SetStateAction<any>>;
 };
 
-export const ThemeContext = createContext<TThemeContext>({
+export const ThemeContext = createContext<ThemeContextType>({
   theme: {
     name: "태양의 돌",
     num: 1,
@@ -27,7 +27,7 @@ export const ThemeContext = createContext<TThemeContext>({
   setTheme: () => {},
 });
 
-export const LanguageContext = createContext<TLanguageContext>({
+export const LanguageContext = createContext<LanguageContextType>({
   language: {
     type: "kor",
   },
@@ -36,11 +36,11 @@ export const LanguageContext = createContext<TLanguageContext>({
   setText: () => {},
 });
 
-export const getInitialTheme = (): TThemeData => {
+export const getInitialTheme = (): ThemeData => {
   const sessionTheme = localStorage.getItem("theme");
   if (sessionTheme) {
     try {
-      return JSON.parse(sessionTheme) as TThemeData;
+      return JSON.parse(sessionTheme) as ThemeData;
     } catch {
       return {
         name: "태양의 돌",
@@ -64,8 +64,8 @@ export const getInitialTheme = (): TThemeData => {
     };
   }
 };
-export const getInitialLanguage = (): TLanguageData => {
-  const sessionLanguage = localStorage.getItem("language") as TLanguageType;
+export const getInitialLanguage = (): LanguageData => {
+  const sessionLanguage = localStorage.getItem("language") as LanguageType;
 
   if (sessionLanguage) {
     return { type: sessionLanguage };

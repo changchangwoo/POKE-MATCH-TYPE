@@ -1,5 +1,5 @@
-import { IPokeDex } from "@models/pokemonData";
-import { TLanguageType } from "@models/settingData";
+import { PokeDex } from "@models/pokemonData";
+import { LanguageType } from "@models/settingData";
 import { getSpeciesTranslate } from "@utils/getSpeciesTranslate";
 // pokeDEX 우선 분리
 
@@ -59,10 +59,10 @@ const FILTER_EXCEPTION = [
 ];
 
 export const getFilterFixVarieties = (
-  pokeDexHash: Map<number, IPokeDex>,
+  pokeDexHash: Map<number, PokeDex>,
   no: string,
   fetchVarietiesData: any,
-  language: TLanguageType
+  language: LanguageType
 ) => {
   const pokeDexData = pokeDexHash.get(Number(no));
   const cloneFetchVarietiesData = JSON.parse(
@@ -109,7 +109,7 @@ const getFilterfetchVarieties = (
       url: string;
     };
   }[],
-  language: TLanguageType
+  language: LanguageType
 ) => {
   // 받아온 포켓몬 전체 폼 확인하는 변수 console.log(fetchVarietiesData)
   const regexes = FILTER_VARIETIES.map((pattern) => new RegExp(pattern));
@@ -138,8 +138,8 @@ const getFilterfetchVarieties = (
 };
 
 const getFilterPokeDexVarieties = (
-  language: TLanguageType,
-  pokeDexData?: IPokeDex
+  language: LanguageType,
+  pokeDexData?: PokeDex
 ) => {
   
   if (!pokeDexData) return;

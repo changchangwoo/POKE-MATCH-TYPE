@@ -1,12 +1,6 @@
 import { css } from "@emotion/react";
-import { MatchInfo as IMatchInfo } from "@models/pokemonData";
-import {
-  Dispatch,
-  SetStateAction,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import { MatchInfo } from "@models/pokemonData";
+import { Dispatch, SetStateAction, useContext } from "react";
 import { SetURLSearchParams } from "react-router-dom";
 import TypeBadge from "@components/commons/TypeBadge";
 import { getTranslateType } from "@utils/getTranslateType";
@@ -14,12 +8,11 @@ import SelectAbility from "@components/commons/SelectAbility";
 
 import SpeciesButtons from "./SpeciesButtons";
 import { LanguageContext } from "@services/getInitialData";
-import pokedex from "@datas/pokedex.json";
-import { TLanguageType } from "@models/settingData";
+import usePokemonName from "@hooks/usePokemonName";
 import SelectTerastal from "@components/commons/SelectTerastal";
 
 interface MatchCardProps {
-  MatchInfo: IMatchInfo;
+  MatchInfo: MatchInfo;
   selectedAbility: string;
   selectedTerastal: string;
   varietiesData: any;
@@ -40,16 +33,8 @@ const MatchCard = ({
   setSearchParams,
 }: MatchCardProps) => {
   const { language, text } = useContext(LanguageContext);
-  const [name, setName] = useState<string>(MatchInfo.name);
+  const name = usePokemonName(MatchInfo);
   const searchLanguage = MatchInfo.searchLanguage;
-  const searchName = MatchInfo.name;
-
-  useEffect(() => {
-    const pokedexItem = pokedex.filter(
-      (item) => item.name[searchLanguage as TLanguageType] === searchName
-    );
-    setName(pokedexItem[0].name[language.type]);
-  }, [language, MatchInfo]);
 
   return (
     <div css={matchCardContainer}>

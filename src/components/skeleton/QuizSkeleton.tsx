@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 
-export const QuizType0_Skeleton = () => {
+export const QuizType0Skeleton = () => {
   return (
     <div css={quizType0_SkeletionStyle}>
     <div className='title'/>

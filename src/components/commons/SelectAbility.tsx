@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 
-import abilities from "@datas/pokemonAbilityData.json";
+import abilities from "@data/pokemonAbilityData.json";
 import { Dispatch, SetStateAction, useContext } from "react";
 import { useLocation } from "react-router-dom";
 import { LanguageContext } from "@services/getInitialData";
@@ -26,7 +26,7 @@ const SelectAbility = ({
 
   return (
     <>
-      <div css={SelectAbilityContainer}>
+      <div css={selectAbilityContainer}>
         <h1>{text.MATCH.SELECT_ABILITY.TITLE}</h1>
 
         <select value={selectedAbility} onChange={handleAbilityChange}
@@ -42,7 +42,7 @@ const SelectAbility = ({
   );
 };
 
-export const SelectAbilityContainer = css`
+export const selectAbilityContainer = css`
   width: 100%;
   display: flex;
   flex-direction: column;

@@ -1,9 +1,9 @@
 import { MatchInfo, Types } from "@models/pokemonData";
-import { IDamageData } from "./getDetailType";
+import { DamageData } from "./getDetailType";
 import { getRandomNum, getShuffleArr } from "@utils/getRandomNum";
-import defaultTypes from "@datas/defaultTypes.json";
+import defaultTypes from "@data/defaultTypes.json";
 
-type GroupResult = { damage: number; types: IDamageData[] }[];
+type GroupResult = { damage: number; types: DamageData[] }[];
 
 export interface QuizType0Result {
   quizNum: number;
@@ -56,7 +56,7 @@ export interface QuizType2Result {
   defender: Types[];
   questionArr: number[];
   answerIdx: number;
-  answer: { damage: number; types: IDamageData[] };
+  answer: { damage: number; types: DamageData[] };
 }
 
 export const generateQuizType2Question = (
