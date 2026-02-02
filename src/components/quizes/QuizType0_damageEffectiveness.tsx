@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 import TypeBadge from "../commons/TypeBadge";
 import { getTranslateType } from "../../utils/getTranslateType";
 
-import { imgBox, pokeTypes } from "../MatchCard";
+import { imgBox, pokeTypes } from "../match/MatchCard";
 import { useGetDetailPokemonForQuiz } from "../../hooks/useGetDetailPokemonForQuiz";
 import QuizAnswer from "./QuizAnswer";
 import { useContext } from "react";

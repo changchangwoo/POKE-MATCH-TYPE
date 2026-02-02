@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import { Dispatch, SetStateAction, useContext } from "react";
 import { IoMdClose } from "react-icons/io";
-import Footer from "../Footer";
+import Footer from "../nav/Footer";
 import AccordianList from "../commons/AccordianList";
 import Theme from "./Theme";
 import LanguageSetting from "./LanguageSetting";

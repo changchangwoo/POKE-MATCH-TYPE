@@ -1,14 +1,14 @@
 import { css } from "@emotion/react";
 import { Dispatch, SetStateAction, useContext, useEffect } from "react";
-import TypeCard from "./commons/TypeCard";
+import TypeCard from "../commons/TypeCard";
 import MatchCard from "./MatchCard";
-import useFetchDetailPokemon from "../hooks/queries/useFetchDetailPokemon";
-import useFetchPokemonVarieties from "../hooks/queries/useFetchPokemonVarieties";
-import pokedex from "../datas/pokedex.json";
+import useFetchDetailPokemon from "../../hooks/queries/useFetchDetailPokemon";
+import useFetchPokemonVarieties from "../../hooks/queries/useFetchPokemonVarieties";
+import pokedex from "../../datas/pokedex.json";
 import { SetURLSearchParams } from "react-router-dom";
-import { LanguageContext } from "../utils/getInitialData";
-import { TLanguageType } from "../models/settingData";
-import { MatchMain_Skeleton } from "./skeleton/MatchMain_Skeleton";
+import { LanguageContext } from "../../utils/getInitialData";
+import { TLanguageType } from "../../models/settingData";
+import { MatchMain_Skeleton } from "../skeleton/MatchMain_Skeleton";
 
 interface MatchMainProps {
   searchParams: URLSearchParams;

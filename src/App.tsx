@@ -20,7 +20,7 @@ import {
 } from "./utils/getInitialData";
 import { LANGUAGE_TEXTS } from "./const/language_text";
 import useDefaultSetting from "./hooks/useDefaultSetting";
-import RouteTracker from "./components/RouteTracker";
+import RouteTracker from "./components/nav/RouteTracker";
 import Error from "./pages/Error";
 
 const imageList = [Logo];

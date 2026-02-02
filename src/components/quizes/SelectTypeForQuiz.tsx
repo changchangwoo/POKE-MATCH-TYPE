@@ -1,9 +1,9 @@
 import { css } from "@emotion/react";
 import { Dispatch, SetStateAction, useContext } from "react";
-import { getTranslateType } from "../utils/getTranslateType";
+import { getTranslateType } from "../../utils/getTranslateType";
 
-import { checkedTypes, Types } from "../models/pokemonData";
-import { LanguageContext } from "../utils/getInitialData";
+import { checkedTypes, Types } from "../../models/pokemonData";
+import { LanguageContext } from "../../utils/getInitialData";
 
 interface SelectTypeForQuizProps {
   checkedType: checkedTypes[];

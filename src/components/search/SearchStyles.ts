@@ -34,16 +34,19 @@ export const inputBox = css`
 `;
 
 export const suggestionsList = css`
+  position: absolute;
   top: 50px;
+  left: 0;
   color: var(--text);
   z-index: 100;
   width: 100%;
+  box-sizing: border-box;
   border: 1px solid var(--border);
   background-color: var(--background);
   border-radius: 8px;
   list-style-type: none;
   padding: 0;
-  margin-top: 10px;
+  margin: 0;
   overflow-y: auto;
   max-height: 700px;
 

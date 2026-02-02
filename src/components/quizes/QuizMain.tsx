@@ -12,7 +12,7 @@ import { getRandomNum } from "../../utils/getRandomNum";
 import StepProgress from "./StepProgress";
 import QuizAlert from "../modal/QuizAlert";
 import { getTranslateType } from "../../utils/getTranslateType";
-import { matchCardContainer } from "../MatchCard";
+import { matchCardContainer } from "../match/MatchCard";
 import { css } from "@emotion/react";
 import { LanguageContext } from "../../utils/getInitialData";
 

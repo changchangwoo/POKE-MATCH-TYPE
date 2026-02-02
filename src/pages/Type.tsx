@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import KakaoAdfitBanner from "../ads/KakaoAdfitBanner";
 import TypeCard from "../components/commons/TypeCard";
-import SelectType from "../components/SelectType";
+import SelectType from "../components/commons/SelectType";
 import { checkedTypes } from "../models/pokemonData";
 
 const Type = () => {
