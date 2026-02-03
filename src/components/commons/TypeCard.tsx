@@ -32,29 +32,34 @@ const TypeCard = ({
     isLoading,
   } = useFetchDetailType(no, selectedAbility, selectedTerastal_no);
 
-  if (!typeRelations) return;
-  if (isLoading) return <div>{text.MAIN.LOADING}</div>;
+  if (isLoading) return <div css={typeCardContainer}>{text.MAIN.LOADING}</div>;
 
-  if (typeRelations.length > 1) {
+  if (!typeRelations || typeRelations.length <= 1) {
     return (
       <div css={typeCardContainer}>
-        {typeRelations.map((type) => (
-          <Fragment key={type.damage}>
-            <div css={title}>
-              {text.MAIN.MATCH.TYPE_CARD_DAMAGE} x {type.damage}
-            </div>
-            <div css={typeSection}>
-              {type.types.map((item) => (
-                <TypeBadge key={item.no} no={item.no}>
-                  {getTranslateType(item.name, language.type)}
-                </TypeBadge>
-              ))}
-            </div>
-          </Fragment>
-        ))}
+        <div css={emptyState}>{text.MAIN.MATCH.TYPE_CARD_EMPTY}</div>
       </div>
     );
   }
+
+  return (
+    <div css={typeCardContainer}>
+      {typeRelations.map((type) => (
+        <Fragment key={type.damage}>
+          <div css={title}>
+            {text.MAIN.MATCH.TYPE_CARD_DAMAGE} x {type.damage}
+          </div>
+          <div css={typeSection}>
+            {type.types.map((item) => (
+              <TypeBadge key={item.no} no={item.no}>
+                {getTranslateType(item.name, language.type)}
+              </TypeBadge>
+            ))}
+          </div>
+        </Fragment>
+      ))}
+    </div>
+  );
 };
 
 const typeCardContainer = css`
@@ -67,6 +72,15 @@ const typeCardContainer = css`
   border: 1px solid var(--border);
   border-radius: 8px;
   gap: 10px;
+`;
+
+const emptyState = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  color: var(--type1);
+  font-size: var(--fontMedium);
 `;
 
 const title = css`

@@ -48,11 +48,13 @@ export const LANGUAGE_TEXTS = {
     MAIN: {
       LOADING: "로딩 중",
       SEARCH: {
+        SUBTITLE: "초간단 포켓몬 상성 계산 서비스",
         PLACE_HOLDER: "매칭된 포켓몬을 입력해주세요",
       },
       MATCH: {
         MATCH_CARD_TITLE: "매치 포켓몬",
         TYPE_CARD_DAMAGE: "데미지",
+        TYPE_CARD_EMPTY: "타입을 선택하면 상성 결과가 표시됩니다",
         FORM: "폼",
       },
     },
@@ -194,11 +196,13 @@ export const LANGUAGE_TEXTS = {
     MAIN: {
       LOADING: "Loading...",
       SEARCH: {
+        SUBTITLE: "Simple Pokémon Type Calculator",
         PLACE_HOLDER: "Please enter the matched Pokémon",
       },
       MATCH: {
         MATCH_CARD_TITLE: "Matched Pokémon",
         TYPE_CARD_DAMAGE: "Damage",
+        TYPE_CARD_EMPTY: "Select a type to see matchup results",
         FORM: "Form",
       },
     },

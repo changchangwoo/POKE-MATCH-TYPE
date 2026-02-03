@@ -92,10 +92,19 @@ export const mainContainer = css`
   display: flex;
   height: auto;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  align-items: stretch;
   gap: 20px;
   overflow: hidden;
+
+  > div {
+    flex: 1;
+    min-width: 0;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export default MatchMain;

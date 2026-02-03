@@ -17,7 +17,7 @@ const Quiz = () => {
   return (
     <>
       <div css={quizContainer}>
-        <KakaoAdfitBanner />
+        {/* <KakaoAdfitBanner /> */}
         <h1>{text.QUIZ.TITLE}</h1>
         {(() => {
           switch (section) {

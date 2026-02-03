@@ -24,7 +24,7 @@ const Main = () => {
         setSelectedTerastal={setSelectedTerastal}
         pokemonNames={pokedex}
       />
-      <KakaoAdfitBanner />
+      {/* <KakaoAdfitBanner /> */}
       <MatchMain
         searchParams={searchParams}
         selectedAbility={selectedAbility}

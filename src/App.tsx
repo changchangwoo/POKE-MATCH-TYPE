@@ -1,12 +1,11 @@
 import Logo from "@images/logo.webp";
 
 import "./App.css";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Main from "@pages/Main";
 import Type from "@pages/Type";
 import { css, Global } from "@emotion/react";
 import Navigation from "@components/nav/Navigation";
-import ChangeButtons from "@components/nav/ChangeButtons";
 import Table from "@pages/Table";
 import Quiz from "@pages/Quiz";
 import { globalStyles } from "@styles/globalStyles";
@@ -26,7 +25,6 @@ import Error from "@pages/Error";
 const IMAGE_LIST = [Logo] as const;
 
 function App() {
-  const location = useLocation();
   const [theme, setTheme] = useState<ThemeData>(getInitialTheme());
   const initialLanguage = getInitialLanguage();
   const [language, setLanguage] = useState<LanguageData>(initialLanguage);
@@ -50,8 +48,7 @@ function App() {
         <ThemeContext.Provider value={themeContextValue}>
           <Navigation />
         </ThemeContext.Provider>
-        <div css={Container(location.pathname === "/table")}>
-          <ChangeButtons />
+        <div css={Container}>
           <RouteTracker />
           <Routes>
             <Route path="/" element={<Main />} />
@@ -65,10 +62,10 @@ function App() {
     </>
   );
 }
-const Container = (isTablePage: boolean) => css`
+const Container = () => css`
   width: 100vw;
-  max-width: ${isTablePage ? "1050px" : "800px"};
-  padding: 50px 20px 20px 20px;
+  max-width: 1200px;
+  padding: 60px 20px 20px 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;

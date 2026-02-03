@@ -38,7 +38,6 @@ const MatchCard = ({
 
   return (
     <div css={matchCardContainer}>
-      <h1>{text.MAIN.MATCH.MATCH_CARD_TITLE}</h1>
       <div css={imgBox(MatchInfo.types[0].no)}>
         <img
           src={MatchInfo.imgs}

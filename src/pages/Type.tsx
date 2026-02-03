@@ -53,7 +53,7 @@ const Type = () => {
 
   return (
     <div css={matchContainer}>
-      <KakaoAdfitBanner />
+      {/* <KakaoAdfitBanner /> */}
       <SelectType
         checkedType={checkedType}
         setCheckedType={setCheckedType}
@@ -75,9 +75,23 @@ const Type = () => {
 const matchContainer = css`
   width: 100%;
   display: flex;
-  flex-direction: column;
   gap: 20px;
   justify-content: center;
+  align-items: stretch;
+  padding-top: 40px;
+
+  > div {
+    flex: 1;
+    min-width: 0;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    > div {
+      width: 100%;
+    }
+  }
 `;
 
 export default Type;

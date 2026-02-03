@@ -86,6 +86,9 @@ const selectTypeContainer = css`
   border-radius: 8px;
   padding: 20px;
   background-color: var(--background);
+  height: 520px;
+  box-sizing: border-box;
+  align-self: flex-start;
 
   .addBox {
     width: 100%;
@@ -108,7 +111,7 @@ const selectTypes = css`
 
 const item = (no: number | undefined) => css`
   background-color: ${no ? `var(--type${no})` : "var(--border)"};
-  height: 25px;
+  height: 32px;
   border: 1px solid var(--border);
   border-radius: 4px;
   display: flex;
