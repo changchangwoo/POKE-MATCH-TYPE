@@ -143,6 +143,11 @@ const tableContents = css`
     }
   }
 
+  tbody tr {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 30px;
+  }
+
   td {
     text-align: center;
     vertical-align: middle;

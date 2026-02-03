@@ -23,7 +23,7 @@ import useDefaultSetting from "@hooks/useDefaultSetting";
 import RouteTracker from "@components/nav/RouteTracker";
 import Error from "@pages/Error";
 
-const imageList = [Logo];
+const IMAGE_LIST = [Logo] as const;
 
 function App() {
   const [theme, setTheme] = useState<ThemeData>(getInitialTheme());
@@ -33,7 +33,7 @@ function App() {
     LANGUAGE_TEXTS[initialLanguage.type as LanguageType],
   );
 
-  useDefaultSetting(imageList);
+  useDefaultSetting(IMAGE_LIST);
 
   const languageContextValue = useMemo(
     () => ({ language, setLanguage, text, setText }),

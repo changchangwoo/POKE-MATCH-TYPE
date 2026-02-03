@@ -67,7 +67,7 @@ const QuizType1TypeInference = ({
     <>
       <h1 css={title}>
         <div>
-          <div style={{ display: "inline-block", marginRight: "5px"}}>
+          <div css={inlineTypeBadgeWrapper}>
             <TypeBadge no={100} quizMode={true}>
               ?
             </TypeBadge>
@@ -88,14 +88,7 @@ const QuizType1TypeInference = ({
                   {getTranslateType(type.name, language.type)}
                 </TypeBadge>
               )}
-              <h2
-                style={{
-                  color:
-                    idx === quizType1_data[randQuiz].length - 1
-                      ? "transparent"
-                      : "var(--text)",
-                }}
-              >
+              <h2 css={arrowText(idx === quizType1_data[randQuiz].length - 1)}>
                 {"<"}
               </h2>
             </React.Fragment>
@@ -139,6 +132,15 @@ const badgeContainer = css`
   align-items: center;
   justify-content: center;
   gap: 20px;
+`;
+
+const inlineTypeBadgeWrapper = css`
+  display: inline-block;
+  margin-right: 5px;
+`;
+
+const arrowText = (isLast: boolean) => css`
+  color: ${isLast ? "transparent" : "var(--text)"};
 `;
 
 export default QuizType1TypeInference;

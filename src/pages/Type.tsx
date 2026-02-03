@@ -29,15 +29,10 @@ const Type = () => {
   }, [checkedType, location.pathname]);
 
   useEffect(() => {
-    const getSessionCheckedDatas = sessionStorage.getItem(
-      location.pathname + "/matchDatas"
-    );
-    const getSessionTypeCheck = sessionStorage.getItem(
-      location.pathname + "/typecheck"
-    );
-    const getSessionTerastal = sessionStorage.getItem(
-      location.pathname + "/terastal"
-    );
+    const pathPrefix = location.pathname;
+    const getSessionCheckedDatas = sessionStorage.getItem(`${pathPrefix}/matchDatas`);
+    const getSessionTypeCheck = sessionStorage.getItem(`${pathPrefix}/typecheck`);
+    const getSessionTerastal = sessionStorage.getItem(`${pathPrefix}/terastal`);
 
     if (getSessionCheckedDatas) {
       const parsedCheckedDatas = JSON.parse(getSessionCheckedDatas);

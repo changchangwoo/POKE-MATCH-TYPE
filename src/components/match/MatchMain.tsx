@@ -20,11 +20,18 @@ interface MatchMainProps {
   setSelectedTerastal: Dispatch<SetStateAction<{ value: string; no: string }>>;
 }
 
-const pokedexHash = new Map();
-pokedex.forEach((item) => {
-  item.name.kor = item.name.kor.replace(/\s*\(.*?\)\s*/g, "").trim();
-  pokedexHash.set(item.no, item);
-});
+const pokedexHash = new Map(
+  pokedex.map((item) => [
+    item.no,
+    {
+      ...item,
+      name: {
+        ...item.name,
+        kor: item.name.kor.replace(/\s*\(.*?\)\s*/g, "").trim()
+      }
+    }
+  ])
+);
 
 const MatchMain = ({
   setSearchParams,

@@ -6,6 +6,10 @@ export const getAddAbility = (
   types: DamageData[],
   selectedAbility: string
 ) => {
+  if (!selectedAbility || selectedAbility === "") {
+    return types;
+  }
+
   const typeCalculator: typeCalculatorType[] = [];
 
   switch (selectedAbility) {
@@ -79,14 +83,18 @@ export const getAddAbility = (
 
   if (typeCalculator.length > 0) {
     types = types.map((type) => {
-      typeCalculator.forEach((element) => {
-        if (type.name === element.type) {
-          type.damage *= element.effects;
-        }
-      });
+      const matchingEffect = typeCalculator.find((el) => el.type === type.name);
+
+      if (matchingEffect) {
+        return {
+          ...type,
+          damage: type.damage * matchingEffect.effects
+        };
+      }
+
       return type;
     });
   }
 
-  return typeCalculator;
+  return types;
 };
