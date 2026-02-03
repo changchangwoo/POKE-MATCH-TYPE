@@ -40,7 +40,7 @@ const Table = () => {
             <table>
               <thead>
                 <tr>
-                  <th onClick={handleAllHeader}>{text.TABLE.SELECT_ALL}</th>
+                  <th onClick={handleAllHeader}></th>
                   {columnHeaders.map((header, index) => (
                     <th
                       css={tableHeaderStyle(header.no, false, true)}
@@ -84,6 +84,7 @@ const Table = () => {
 
 const tableContainer = css`
   width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,7 +95,8 @@ const tableContainer = css`
 `;
 
 const tableContents = css`
-  width: 100%;
+  width: fit-content;
+  max-width: 100%;
   box-sizing: border-box;
   overflow-x: auto;
   background-color: var(--background);
@@ -117,7 +119,7 @@ const tableContents = css`
   }
 
   thead th {
-    width: 90px;
+    width: 50px;
     :nth-of-type(1) {
       background-color: var(--background);
       position: sticky;

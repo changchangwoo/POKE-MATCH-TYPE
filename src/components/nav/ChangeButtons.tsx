@@ -11,28 +11,28 @@ const ChangeButtons = () => {
   return (
     <div css={ChangeSectionContainer}>
       <button
-      aria-label="ChangeContent-home"
+        aria-label="ChangeContent-home"
         onClick={() => navigator("/")}
         className={location.pathname === "/" ? "active" : ""}
       >
         {text.APP.CHANGE_BUTTON.COMPARE_POKEMON}
       </button>
       <button
-      aria-label="ChangeContent-type"
+        aria-label="ChangeContent-type"
         onClick={() => navigator("/type")}
         className={location.pathname === "/type" ? "active" : ""}
       >
         {text.APP.CHANGE_BUTTON.COMPARE_TYPE}
       </button>
       <button
-      aria-label="ChangeContent-table"
+        aria-label="ChangeContent-table"
         onClick={() => navigator("/table")}
         className={`new ${location.pathname === "/table" ? "active" : ""}`}
       >
         {text.APP.CHANGE_BUTTON.COPATIBILITY_TABLE}
       </button>
       <button
-      aria-label="ChangeContent-quiz"
+        aria-label="ChangeContent-quiz"
         onClick={() => navigator("/quiz")}
         className={`new ${location.pathname === "/quiz" ? "active" : ""}`}
       >
@@ -72,15 +72,6 @@ const ChangeSectionContainer = css`
     &.active {
       background-color: var(--point);
       color: var(--background);
-    }
-
-    &.new::after {
-      content: "new";
-      color: var(--highlight) !important;
-      left: 43%;
-      top: -8px;
-      position: absolute;
-      font-size: 14px;
     }
   }
 `;
