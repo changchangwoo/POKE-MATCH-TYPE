@@ -3,8 +3,6 @@ import { Dispatch, SetStateAction, useContext } from "react";
 import { IoMdClose } from "react-icons/io";
 import Footer from "@components/nav/Footer";
 import AccordianList from "@components/commons/AccordianList";
-import Theme from "./Theme";
-import LanguageSetting from "./LanguageSetting";
 
 import { FaGithub } from "react-icons/fa";
 import { IoMailSharp } from "react-icons/io5";
@@ -37,12 +35,8 @@ const SettingModal = ({ setModal }: SettingModalProps) => {
             </p>
             <Footer />
           </div>
-          <AccordianList title={text.APP.THEME.TITLE}>
-            <Theme />
-          </AccordianList>
-          <AccordianList title={text.APP.LANGUAGE.TITLE}>
-            <LanguageSetting />
-          </AccordianList>
+
+
           <AccordianList title={text.APP.COPYRIGHT.TITLE}>
             <div className="copyrightContents">
               <p>{text.APP.COPYRIGHT.DESCIRPTION_1}</p>
@@ -152,10 +146,3 @@ const ModalContainer = css`
 
 export default SettingModal;
 
-/*
-아코디언 컴포넌트를 만드려고 했을 때 유의사항들
-아코디언 버튼을 클릭하는 경우 데이터가 출력되고 제어할 수 있는건 기본적임
-=> 공통 컴포넌트로 묶기 위해서는
-아코디언 contents 부분을 합성컴포넌트로 받고, 아코디언 타이틀 부분만 제어 
-
-*/
