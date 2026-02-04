@@ -71,6 +71,7 @@ const typeCardContainer = css`
   flex-direction: column;
   border: 1px solid var(--border);
   border-radius: 8px;
+  justify-content: center;
   gap: 10px;
 `;
 

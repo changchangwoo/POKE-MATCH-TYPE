@@ -32,7 +32,7 @@ const MatchCard = ({
   setSelectedTerastal,
   setSearchParams,
 }: MatchCardProps) => {
-  const { language, text } = useContext(LanguageContext);
+  const { language } = useContext(LanguageContext);
   const name = usePokemonName(MatchInfo);
   const searchLanguage = MatchInfo.searchLanguage;
 
@@ -89,16 +89,17 @@ export const matchCardContainer = css`
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 10px;
-  min-height: 450px;
+  min-height: 510px;
 
   .addBox {
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 20px;
+    margin-top: auto;
   }
 `;
 
@@ -129,7 +130,6 @@ export const pokeTypes = css`
   justify-content: center;
   align-items: center;
   color: var(--background);
-  margin: auto;
   margin-bottom: 10px;
 `;
 

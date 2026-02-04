@@ -52,8 +52,9 @@ const Type = () => {
   }, [location.pathname]);
 
   return (
+    <>
+          <KakaoAdfitBanner />
     <div css={matchContainer}>
-      {/* <KakaoAdfitBanner /> */}
       <SelectType
         checkedType={checkedType}
         setCheckedType={setCheckedType}
@@ -69,6 +70,7 @@ const Type = () => {
         selectedTerastal_no={selectedTerastal.no}
       />
     </div>
+  </>
   );
 };
 
@@ -78,7 +80,6 @@ const matchContainer = css`
   gap: 20px;
   justify-content: center;
   align-items: stretch;
-  padding-top: 40px;
 
   > div {
     flex: 1;

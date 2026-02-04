@@ -33,7 +33,7 @@ const Table = () => {
   return (
     <>
       <div css={tableContainer}>
-        {/* <KakaoAdfitBanner /> */}
+        <KakaoAdfitBanner />
         <h1>{text.TABLE.TITLE}</h1>
         <div css={tableContents}>
           <div>

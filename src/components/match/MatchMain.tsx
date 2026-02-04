@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { Dispatch, SetStateAction, useContext } from "react";
+import { Dispatch, SetStateAction, useContext, useMemo } from "react";
 import TypeCard from "@components/commons/TypeCard";
 import MatchCard from "./MatchCard";
 import useFetchDetailPokemon from "@hooks/queries/useFetchDetailPokemon";
@@ -48,13 +48,22 @@ const MatchMain = ({
   const varietiesIdx = searchParams.get("varietiesIdx");
   const searchLanguage = searchParams.get("searchLanguage") as LanguageType;
 
+  const randomPokemon = useMemo(() => {
+    const random = pokedex[Math.floor(Math.random() * pokedex.length)];
+    return { no: String(random.no), name: random.name[language.type] };
+  }, []);
+
+  const effectiveNo = no || randomPokemon.no;
+  const effectiveName = name || randomPokemon.name;
+  const effectiveSearchLanguage = searchLanguage || language.type;
+
   const {
     data: matchInfo,
     error: detailDataError,
     isLoading: detailDataLoading,
-  } = useFetchDetailPokemon(no || "", name || "", searchLanguage || "");
+  } = useFetchDetailPokemon(effectiveNo, effectiveName, effectiveSearchLanguage);
   const { data: varietiesData, isLoading: varietiesDataLoading } =
-    useFetchPokemonVarieties(no || "", name || "", pokedexHash, language.type);
+    useFetchPokemonVarieties(effectiveNo, effectiveName, pokedexHash, language.type);
 
   useMatchSession(setSearchParams, setSelectedAbility, setSelectedTerastal);
 

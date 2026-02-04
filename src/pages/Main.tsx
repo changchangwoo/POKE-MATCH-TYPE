@@ -1,5 +1,4 @@
 import { useSearchParams } from "react-router-dom";
-import KakaoAdfitBanner from "@ads/KakaoAdfitBanner";
 import MatchMain from "@components/match/MatchMain";
 import Search from "@components/search/Search";
 import pokedex from "@data/pokedex.json";
@@ -24,7 +23,6 @@ const Main = () => {
         setSelectedTerastal={setSelectedTerastal}
         pokemonNames={pokedex}
       />
-      {/* <KakaoAdfitBanner /> */}
       <MatchMain
         searchParams={searchParams}
         selectedAbility={selectedAbility}

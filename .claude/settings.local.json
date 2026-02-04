@@ -11,7 +11,8 @@
       "Bash(npx vite build:*)",
       "Bash(dir:*)",
       "Bash(cd:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(git stash:*)"
     ],
     "deny": [],
     "ask": []

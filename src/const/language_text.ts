@@ -50,6 +50,7 @@ export const LANGUAGE_TEXTS = {
       SEARCH: {
         SUBTITLE: "초간단 포켓몬 상성 계산 서비스",
         PLACE_HOLDER: "매칭된 포켓몬을 입력해주세요",
+        RECENT_SEARCH: "최근 검색",
       },
       MATCH: {
         MATCH_CARD_TITLE: "매치 포켓몬",
@@ -198,6 +199,7 @@ export const LANGUAGE_TEXTS = {
       SEARCH: {
         SUBTITLE: "Simple Pokémon Type Calculator",
         PLACE_HOLDER: "Please enter the matched Pokémon",
+        RECENT_SEARCH: "Recent",
       },
       MATCH: {
         MATCH_CARD_TITLE: "Matched Pokémon",

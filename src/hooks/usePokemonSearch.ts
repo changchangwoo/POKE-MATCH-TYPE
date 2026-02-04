@@ -11,6 +11,7 @@ import {
 import { SetURLSearchParams } from "react-router-dom";
 import { PokeDex } from "@models/pokemonData";
 import { LanguageContext } from "@services/getInitialData";
+import { RecentSearchItem } from "@hooks/useRecentSearch";
 
 interface PokemonNameType {
   no: number;
@@ -23,6 +24,7 @@ interface UsePokemonSearchParams {
   setSearchParams: SetURLSearchParams;
   setSelectedAbility: Dispatch<SetStateAction<string>>;
   setSelectedTerastal: Dispatch<SetStateAction<{ value: string; no: string }>>;
+  addRecentSearch: (item: RecentSearchItem) => void;
 }
 
 const usePokemonSearch = ({
@@ -31,6 +33,7 @@ const usePokemonSearch = ({
   setSearchParams,
   setSelectedAbility,
   setSelectedTerastal,
+  addRecentSearch,
 }: UsePokemonSearchParams) => {
   const { language } = useContext(LanguageContext);
   const newSearchParams = new URLSearchParams(searchParams);
@@ -88,6 +91,10 @@ const usePokemonSearch = ({
     newSearchParams.set("varietiesIdx", "0");
     newSearchParams.set("searchLanguage", language.type);
     setSearchParams(newSearchParams);
+    const pokemon = pokemonNames.find((p) => p.no === suggestion.no);
+    if (pokemon) {
+      addRecentSearch({ no: pokemon.no, name: pokemon.name });
+    }
     setSearchTerm("");
     setSelectedAbility("");
     setSelectedTerastal({ value: "", no: "" });
@@ -104,6 +111,11 @@ const usePokemonSearch = ({
       newSearchParams.set("varietiesIdx", "0");
       newSearchParams.set("searchLanguage", language.type);
       setSearchParams(newSearchParams);
+      const pokemon = pokemonNames.find((p) => p.no === suggestions[0].no);
+      if (pokemon) {
+        addRecentSearch({ no: pokemon.no, name: pokemon.name });
+      }
+      setSearchTerm("");
       setSuggestions([]);
       setSelectedAbility("");
       setSelectedTerastal({ value: "", no: "" });

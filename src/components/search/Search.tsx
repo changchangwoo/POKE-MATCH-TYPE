@@ -13,6 +13,8 @@ import { SetURLSearchParams } from "react-router-dom";
 import { PokeDex } from "@models/pokemonData";
 import { LanguageContext } from "@services/getInitialData";
 import usePokemonSearch from "@hooks/usePokemonSearch";
+import useRecentSearch from "@hooks/useRecentSearch";
+import RecentSearch from "./RecentSearch";
 
 interface SearchProps {
   searchParams: URLSearchParams;
@@ -30,6 +32,8 @@ const Search = ({
   setSelectedTerastal,
 }: SearchProps) => {
   const { text } = useContext(LanguageContext);
+  const { recentSearches, addRecentSearch, handleRecentClick } =
+    useRecentSearch(setSearchParams);
   const {
     searchTerm,
     suggestions,
@@ -46,6 +50,7 @@ const Search = ({
     setSearchParams,
     setSelectedAbility,
     setSelectedTerastal,
+    addRecentSearch,
   });
 
   return (
@@ -86,6 +91,10 @@ const Search = ({
           </ul>
         )}
       </div>
+      <RecentSearch
+        recentSearches={recentSearches}
+        handleRecentClick={handleRecentClick}
+      />
     </div>
   );
 };

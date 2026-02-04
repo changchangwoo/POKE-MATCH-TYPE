@@ -115,27 +115,72 @@ export const suggestionsList = css`
   z-index: 100;
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   background-color: var(--background);
-  border-radius: 8px;
+  border-radius: 16px;
   list-style-type: none;
-  padding: 0;
   margin: 0;
   overflow-y: auto;
-  max-height: 700px;
+  max-height: 300px;
 
   li {
-    padding: 10px;
+    padding: 10px 20px;
     cursor: pointer;
+    transition: background-color 0.2s;
 
     &:hover {
-      background-color: #f0f0f0;
-      color: var(--black);
+      background-color: color-mix(in srgb, var(--point) 15%, transparent);
+      color: var(--point);
     }
   }
 `;
 
 export const activeSuggestion = css`
-  background-color: #f0f0f0;
-  color: var(--black);
+  background-color: color-mix(in srgb, var(--point) 15%, transparent);
+  color: var(--point);
+`;
+
+export const recentSearchContainer = css`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+`;
+
+export const recentSearchLabel = css`
+  font-size: var(--fontSmall);
+  color: var(--type1);
+  flex-shrink: 0;
+`;
+
+export const recentSearchChip = css`
+  font-size: var(--fontSmall);
+  color: var(--text);
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 4px 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+  white-space: nowrap;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+
+  &:hover {
+    border-color: var(--point);
+    color: var(--point);
+  }
 `;
