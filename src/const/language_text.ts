@@ -42,7 +42,9 @@ export const LANGUAGE_TEXTS = {
       },
       SELECT_TERASTAL: {
         TITLE: "테라스탈",
+        SELECTED: "테라스탈 선택됨",
       },
+      RESET: "초기화",
     },
     TABLE: {
       TITLE: "타입 상성 표",
@@ -120,7 +122,7 @@ export const LANGUAGE_TEXTS = {
     },
     FOOTER: {
       COPYRIGHT: "포켓몬 상성 계산기. All rights reserved.",
-      DISCLAIMER: "본 사이트는 팬 제작 프로젝트이며, 공식 포켓몬 컨텐츠가 아닙니다.",
+      DISCLAIMER: "본 사이트는 팬 제작 프로젝트입니다.",
     },
   },
   eng: {
@@ -166,7 +168,9 @@ export const LANGUAGE_TEXTS = {
       },
       SELECT_TERASTAL: {
         TITLE: "Terastal",
+        SELECTED: "Terastal Selected",
       },
+      RESET: "Reset",
     },
     TABLE: {
       TITLE: "Type Matchup Table",

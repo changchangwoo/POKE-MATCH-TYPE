@@ -71,6 +71,9 @@ const Container = (isMain: boolean) => css`
   max-width: 1200px;
   padding: 60px 20px 20px 20px;
   ${!isMain && `margin-top: 40px;`}
+  @media (max-width: 768px) {
+    ${!isMain && `margin-top: 20px;`}
+  }
   display: flex;
   flex-direction: column;
   gap: 20px;
