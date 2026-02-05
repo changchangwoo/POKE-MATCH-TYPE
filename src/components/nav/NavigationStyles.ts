@@ -142,8 +142,8 @@ export const navigationStyle = css`
     }
   }
 
-  .setting-btn,
-  .theme-btn {
+  .theme-btn,
+  .inquiry-btn {
     max-width: 36px;
     height: 36px;
     font-size: 18px;
@@ -173,6 +173,7 @@ export const navigationStyle = css`
     }
 
     .theme-btn,
+    .inquiry-btn,
     .lang-dropdown {
       display: none;
     }

@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Main from "@pages/Main";
 import Type from "@pages/Type";
 import { css, Global } from "@emotion/react";
-import Navigation from "@components/nav/Navigation";
+import {Footer, Navigation, RouteTracker } from "@components/nav";
 import Table from "@pages/Table";
 import Quiz from "@pages/Quiz";
 import { globalStyles } from "@styles/globalStyles";
@@ -19,7 +19,6 @@ import {
 } from "@services/getInitialData";
 import { LANGUAGE_TEXTS } from "@const/language_text";
 import useDefaultSetting from "@hooks/useDefaultSetting";
-import RouteTracker from "@components/nav/RouteTracker";
 import Error from "@pages/Error";
 
 const IMAGE_LIST = [Logo] as const;
@@ -45,6 +44,7 @@ function App() {
     <>
       <Global styles={globalStyles(theme.type)} />
       <LanguageContext.Provider value={languageContextValue}>
+        <div css={Layout}>
         <ThemeContext.Provider value={themeContextValue}>
           <Navigation />
         </ThemeContext.Provider>
@@ -57,6 +57,8 @@ function App() {
             <Route path="/quiz" element={<Quiz />} />
             <Route path="*" element={<Error />} />
           </Routes>
+        </div>
+        <Footer/>
         </div>
       </LanguageContext.Provider>
     </>
@@ -71,4 +73,10 @@ const Container = () => css`
   gap: 20px;
   box-sizing: border-box;
 `;
+
+const Layout = () => css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
 export default App;

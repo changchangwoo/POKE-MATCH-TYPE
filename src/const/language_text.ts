@@ -2,12 +2,6 @@ export const LANGUAGE_TEXTS = {
   kor: {
     APP: {
       TITLE: "포켓몬 상성 계산기",
-      SETTING: {
-        TITLE: "설정",
-        DESCRIPTION_TITLE: "포켓몬스터 상성 계산기 -v02",
-        DESCRIPTION_SUB_1: "본 서비스는 포켓몬 상성 계산 서비스를 제공합니다",
-        DESCRIPTION_SUB_2: "초보 유저의 이해 및 지원을 목적으로 하고있습니다.",
-      },
       THEME: {
         TITLE: "테마 선택",
         DATA_SUN_STONE: "태양의 돌",
@@ -17,26 +11,6 @@ export const LANGUAGE_TEXTS = {
         TITLE: "언어 선택",
         DATA_KOR: "한국어",
         DATA_ENG: "영어",
-      },
-      COPYRIGHT: {
-        TITLE: "저작권",
-        DESCIRPTION_1:
-          "본 서비스는 PokeAPI에서 제공하는 공개 API 데이터를 사용합니다.",
-        DESCIRPTION_2:
-          "포켓몬의 이름, 이미지, 타입 등 모든 포켓몬 관련 콘텐츠의 저작권은 Nintendo, Creatures Inc. ,GAME FREAK Inc.에 있습니다.",
-        DESCIRPTION_3: "또한 개인 포트폴리오 및 학습 목적의 프로젝트입니다.",
-      },
-      FEEDBACK: {
-        TITLE: "피드백",
-        DESCRIPTION_1:
-          "안녕하세요! 제가 만든 서비스를 이용해주셔서 정말 감사합니다.",
-        DESCRIPTION_2:
-          "훌륭한 여러분들과 본 서비스를 비롯하여 다양한 의견을 교류하고싶습니다.",
-        DESCRIPTION_3:
-          "지금은 많이 부족하지만, 도움을 주신다면 멋진 서비스가 될 것입니다.",
-        DESCRIPTION_4:
-          "어떤 내용이라도 남겨주신다면 확인 후 꼭 반영하겠습니다!",
-        DESCRIPTION_5: "그럼 좋은하루 되세요!",
       },
       CHANGE_BUTTON: {
         COMPARE_POKEMON: "포켓몬으로 비교",
@@ -144,18 +118,14 @@ export const LANGUAGE_TEXTS = {
       DESCRIPTION_1: "앗! 야생의 404가 나타났다!",
       DESCRIPTION_2: "URL을 다시 확인해주세요.",
     },
+    FOOTER: {
+      COPYRIGHT: "포켓몬 상성 계산기. All rights reserved.",
+      DISCLAIMER: "본 사이트는 팬 제작 프로젝트이며, 공식 포켓몬 컨텐츠가 아닙니다.",
+    },
   },
   eng: {
     APP: {
       TITLE: "Pokémon Type Calculator",
-      SETTING: {
-        TITLE: "Settings",
-        DESCRIPTION_TITLE: "Pokémon Type Calculator -v02",
-        DESCRIPTION_SUB_1:
-          "This service provides Pokémon type compatibility calculations.",
-        DESCRIPTION_SUB_2:
-          "It is intended to support and assist beginner players.",
-      },
       THEME: {
         TITLE: "Theme",
         DATA_SUN_STONE: "Sun Stone",
@@ -165,27 +135,6 @@ export const LANGUAGE_TEXTS = {
         TITLE: "Language",
         DATA_KOR: "Korean",
         DATA_ENG: "English",
-      },
-      COPYRIGHT: {
-        TITLE: "Copyright",
-        DESCIRPTION_1:
-          "This service uses data from the publicly available PokeAPI.",
-        DESCIRPTION_2:
-          "All content related to Pokémon including names, images, and types is copyrighted by Nintendo, Creatures Inc., and GAME FREAK Inc.",
-        DESCIRPTION_3:
-          "This is a personal project for portfolio and learning purposes.",
-      },
-      FEEDBACK: {
-        TITLE: "Feedback",
-        DESCRIPTION_1:
-          "Hello! Thank you so much for using the service I created.",
-        DESCRIPTION_2:
-          "I’d love to exchange thoughts and ideas with amazing users like you.",
-        DESCRIPTION_3:
-          "Although the service is still lacking, with your help it can become much better.",
-        DESCRIPTION_4:
-          "Any feedback you leave will be carefully reviewed and reflected!",
-        DESCRIPTION_5: "Wishing you a wonderful day!",
       },
       CHANGE_BUTTON: {
         COMPARE_POKEMON: "Compare by Pokémon",
@@ -293,6 +242,10 @@ export const LANGUAGE_TEXTS = {
       TITLE: "404 Error",
       DESCRIPTION_1: "Uh-oh! A wild 404 appeared!",
       DESCRIPTION_2: "Please check your URL.",
+    },
+    FOOTER: {
+      COPYRIGHT: "Pokémon Type Calculator. All rights reserved.",
+      DISCLAIMER: "This is a fan-made project and is not official Pokémon content.",
     },
   },
 };

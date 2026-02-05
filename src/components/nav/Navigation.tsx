@@ -1,8 +1,7 @@
-import { IoSettingsSharp, IoSunny, IoMoon, IoChevronDown } from "react-icons/io5";
+import { IoSunny, IoMoon, IoChevronDown, IoHelpCircle } from "react-icons/io5";
 import { HiMenu, HiX } from "react-icons/hi";
 import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import SettingModal from "@components/modal/SettingModal";
 import { LanguageContext, ThemeContext } from "@services/getInitialData";
 import { LANGUAGE_TEXTS } from "@const/language_text";
 import { LanguageType } from "@models/settingData";
@@ -11,7 +10,6 @@ import { navigationStyle, overlayStyle, drawerStyle } from "./NavigationStyles";
 const ROUTES = ["/", "/type", "/table", "/quiz"] as const;
 
 const Navigation = () => {
-  const [isModal, setModal] = useState<boolean>(false);
   const [isDrawerOpen, setDrawerOpen] = useState<boolean>(false);
   const [isLangOpen, setLangOpen] = useState<boolean>(false);
   const { language, setLanguage, text, setText } = useContext(LanguageContext);
@@ -149,9 +147,11 @@ const Navigation = () => {
           >
             {theme.type === "light" ? <IoSunny /> : <IoMoon />}
           </button>
-          <button className="setting-btn" onClick={() => setModal(!isModal)}
-            aria-label="SetModal">
-            <IoSettingsSharp />
+          <button
+            className="inquiry-btn"
+            onClick={() => window.open('https://forms.gle/AYkAFR5kYKNVsQf19', '_blank', 'noopener,noreferrer')}
+            aria-label="Inquiry">
+            <IoHelpCircle />
           </button>
         </div>
       </div>
@@ -173,7 +173,6 @@ const Navigation = () => {
         </nav>
       </aside>
 
-      {isModal && <SettingModal setModal={setModal} />}
     </>
   );
 };

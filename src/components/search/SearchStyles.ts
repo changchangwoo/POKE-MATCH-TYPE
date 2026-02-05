@@ -11,8 +11,8 @@ export const searchHeader = css`
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 
   @media (max-width: 768px) {
     margin-top: 30px;
