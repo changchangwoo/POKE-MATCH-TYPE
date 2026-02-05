@@ -20,6 +20,8 @@
 - Utilities typically use `get` prefix (e.g., `getTypeEffect.ts`).
 - Styling uses Emotion (`@emotion/react`, `@emotion/styled`) with global CSS variables in `src/styles/`.
 - Linting is enforced via ESLint (`.eslintrc.cjs`). Run `npm run lint` before PRs.
+## Mandatory Documentation Update (Strict)
+- **Non-negotiable rule:** Any change to `src/components/` or `src/hooks/` (including `src/hooks/queries/`) **must** be accompanied by a corresponding update to the relevant Markdown documentation file(s) inside those folders. Do **not** merge or finalize changes without updating the internal MD docs to reflect the new behavior, props, and side effects.
 
 ## Testing Guidelines
 - No test framework is currently configured.

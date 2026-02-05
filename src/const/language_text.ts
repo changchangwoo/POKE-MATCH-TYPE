@@ -18,6 +18,7 @@ export const LANGUAGE_TEXTS = {
         COPATIBILITY_TABLE: "상성 표",
         COMPATIBILITY_QUIZ: "상성 퀴즈",
       },
+      FEEDBACK: "피드백",
     },
     MAIN: {
       LOADING: "로딩 중",
@@ -144,6 +145,7 @@ export const LANGUAGE_TEXTS = {
         COPATIBILITY_TABLE: "Type Table",
         COMPATIBILITY_QUIZ: "Type Quiz",
       },
+      FEEDBACK: "Feedback",
     },
     MAIN: {
       LOADING: "Loading...",

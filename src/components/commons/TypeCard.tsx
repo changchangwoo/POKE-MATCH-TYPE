@@ -32,7 +32,19 @@ const TypeCard = ({
     isLoading,
   } = useFetchDetailType(no, selectedAbility, selectedTerastal_no);
 
-  if (isLoading) return <div css={typeCardContainer}>{text.MAIN.LOADING}</div>;
+  if (isLoading) {
+    return (
+      <div css={typeCardContainer}>
+        <div css={loadingContainer}>
+          <div css={skeletonTypeSection}>
+            {[...Array(18)].map((_, badgeIndex) => (
+              <div key={badgeIndex} css={[skeletonBadge, shimmer]} />
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (!typeRelations || typeRelations.length <= 1) {
     return (
@@ -99,6 +111,54 @@ const typeSection = css`
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
   grid-gap: 5px;
+`;
+
+const loadingContainer = css`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+`;
+
+const skeletonTitle = css`
+  margin-top: 10px;
+  height: 20px;
+  width: 100px;
+  background-color: var(--border);
+  border-radius: 4px;
+`;
+
+const skeletonTypeSection = css`
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  @media screen and (min-width: 600px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  @media screen and (min-width: 800px) {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  grid-gap: 5px;
+`;
+
+const skeletonBadge = css`
+  height: 36px;
+  background-color: var(--border);
+  border-radius: 6px;
+`;
+
+const shimmer = css`
+  @keyframes shimmer {
+    0% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.6;
+    }
+  }
+  animation: shimmer 1.5s ease-in-out infinite;
 `;
 
 export default TypeCard;
