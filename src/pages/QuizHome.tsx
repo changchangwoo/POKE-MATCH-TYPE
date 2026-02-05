@@ -16,7 +16,7 @@ const quizHomeContainer = css`
   display: flex;
   gap: 20px;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
 
   > div:first-of-type {
     flex: 0 0 38%;

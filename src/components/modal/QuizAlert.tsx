@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
-import QuizCorrrectImg from "@images/quiz_correct.webp";
-import QuizIncorrectImg from "@images/quiz_incorrect.webp";
+import QuizSuccessImg from "@images/quiz/q1-success.png";
+import QuizMissImg from "@images/quiz/q1-miss.png";
 import { useContext, useEffect, useState } from "react";
 import { LanguageContext } from "@services/getInitialData";
 
@@ -23,7 +23,7 @@ const QuizAlert = ({ quizType, answerText }: QuizAlertProps) => {
     <div css={QuizAlertContainer(quizType === "correct")}>
       <div className="quizAlertContents">
         <img
-          src={quizType === "correct" ? QuizCorrrectImg : QuizIncorrectImg}
+          src={quizType === "correct" ? QuizSuccessImg : QuizMissImg}
         ></img>
       </div>
       <div className="quizAlertText">

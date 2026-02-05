@@ -26,52 +26,51 @@ const QuizDashboard = () => {
 
   return (
     <div css={dashboardContainer}>
-      <div css={summaryCard}>
-        <h2 css={cardTitle}>학습 현황</h2>
-        <div css={statsGrid}>
-          <div css={statItem}>
-            <span css={statLabel}>총 시도</span>
-            <span css={statValue}>{mockProgress.totalAttempts}회</span>
-          </div>
-          <div css={statItem}>
-            <span css={statLabel}>최고 점수</span>
-            <span css={statValue}>
-              {mockProgress.bestScore}
-              <span css={statUnit}>/10</span>
-            </span>
-          </div>
-          <div css={statItem}>
-            <span css={statLabel}>평균 점수</span>
-            <span css={statValue}>
-              {mockProgress.averageScore.toFixed(1)}
-              <span css={statUnit}>/10</span>
-            </span>
-          </div>
-        </div>
-      </div>
+      <h2 css={cardTitle}>학습 현황</h2>
 
-      <div css={recentResultsCard}>
-        <h2 css={cardTitle}>최근 퀴즈 결과</h2>
-        <div css={resultsList}>
-          {mockProgress.recentQuizzes.map((quiz, index) => (
-            <div key={index} css={resultItem}>
-              <span css={resultDate}>{quiz.date}</span>
-              <span css={resultScore(quiz.score >= 7)}>
-                {quiz.score}/{quiz.total}
-              </span>
-            </div>
-          ))}
+      <div css={statsGrid}>
+        <div css={statItem}>
+          <span css={statLabel}>총 시도</span>
+          <span css={statValue}>{mockProgress.totalAttempts}회</span>
         </div>
-      </div>
-
-      <div css={visualizationCard}>
-        <h2 css={cardTitle}>학습 추이</h2>
-        <div css={chartPlaceholder}>
-          <span css={placeholderText}>차트 영역</span>
-          <span css={placeholderSubtext}>
-            학습 데이터가 축적되면 여기에 차트가 표시됩니다
+        <div css={statItem}>
+          <span css={statLabel}>최고 점수</span>
+          <span css={statValue}>
+            {mockProgress.bestScore}
+            <span css={statUnit}>/10</span>
           </span>
         </div>
+        <div css={statItem}>
+          <span css={statLabel}>평균 점수</span>
+          <span css={statValue}>
+            {mockProgress.averageScore.toFixed(1)}
+            <span css={statUnit}>/10</span>
+          </span>
+        </div>
+      </div>
+
+      <div css={sectionDivider}>
+        <h3 css={sectionTitle}>최근 퀴즈 결과</h3>
+      </div>
+      <div css={resultsList}>
+        {mockProgress.recentQuizzes.map((quiz, index) => (
+          <div key={index} css={resultItem}>
+            <span css={resultDate}>{quiz.date}</span>
+            <span css={resultScore(quiz.score >= 7)}>
+              {quiz.score}/{quiz.total}
+            </span>
+          </div>
+        ))}
+      </div>
+
+      <div css={sectionDivider}>
+        <h3 css={sectionTitle}>학습 추이</h3>
+      </div>
+      <div css={chartPlaceholder}>
+        <span css={placeholderText}>차트 영역</span>
+        <span css={placeholderSubtext}>
+          학습 데이터가 축적되면 여기에 차트가 표시됩니다
+        </span>
       </div>
     </div>
   );
@@ -80,37 +79,31 @@ const QuizDashboard = () => {
 const dashboardContainer = css`
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  position: sticky;
-  top: 80px;
-  align-self: flex-start;
-
-  @media (max-width: 768px) {
-    position: static;
-  }
-`;
-
-const cardBase = css`
+  gap: 15px;
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
   border: 1px solid var(--border);
   background-color: var(--background);
   border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
 `;
 
 const cardTitle = css`
   font-size: var(--fontLarge);
-  font-weight: 700;
   color: var(--text);
   margin: 0;
 `;
 
-const summaryCard = css`
-  ${cardBase}
+const sectionDivider = css`
+  border-top: 1px solid var(--border);
+  padding-top: 15px;
+  margin-top: 5px;
+`;
+
+const sectionTitle = css`
+  font-size: var(--fontMedium);
+  color: var(--text);
+  margin: 0;
 `;
 
 const statsGrid = css`
@@ -155,10 +148,6 @@ const statUnit = css`
   opacity: 0.6;
 `;
 
-const recentResultsCard = css`
-  ${cardBase}
-`;
-
 const resultsList = css`
   display: flex;
   flex-direction: column;
@@ -185,15 +174,6 @@ const resultScore = (isGood: boolean) => css`
   font-size: var(--fontMedium);
   font-weight: 700;
   color: ${isGood ? "var(--type12)" : "var(--type14)"};
-`;
-
-const visualizationCard = css`
-  ${cardBase}
-  min-height: 200px;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
 `;
 
 const chartPlaceholder = css`

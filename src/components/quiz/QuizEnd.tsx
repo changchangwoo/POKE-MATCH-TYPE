@@ -1,6 +1,6 @@
 import { quizReadyContainer } from "./QuizReady";
-import quizSuccessImg from "@images/quiz_success.webp";
-import quizFailedImg from "@images/quiz_failed.webp";
+import quizSuccessImg from "@images/quiz/q1-clear.png";
+import quizFailedImg from "@images/quiz/q1-fail.png";
 import { quizIntroImgContainer } from "./QuizIntro";
 import { Dispatch, SetStateAction, useContext } from "react";
 import { LanguageContext } from "@services/getInitialData";
