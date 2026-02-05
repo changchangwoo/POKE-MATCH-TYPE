@@ -97,7 +97,7 @@ const cardContent = css`
 
 const imageWrapper = css`
   flex-shrink: 0;
-  width: 100px;
+  max-width: 140px;
   height: 100px;
   border-radius: 8px;
   overflow: hidden;
@@ -167,18 +167,6 @@ const cardDescription = css`
   flex: 1;
 `;
 
-const cardFooter = css`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-  margin-top: auto;
-`;
 
-const questionCountText = css`
-  font-size: var(--fontSmall);
-  color: var(--text);
-  opacity: 0.7;
-`;
 
 export default QuizSelectionCard;

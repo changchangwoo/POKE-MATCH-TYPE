@@ -1,7 +1,7 @@
 import Logo from "@images/logo.webp";
 
 import "./App.css";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Main from "@pages/Main";
 import Type from "@pages/Type";
 import { css, Global } from "@emotion/react";
@@ -25,8 +25,6 @@ import Error from "@pages/Error";
 const IMAGE_LIST = [Logo] as const;
 
 function App() {
-  const location = useLocation();
-  const isMain = location.pathname === "/";
   const [theme, setTheme] = useState<ThemeData>(getInitialTheme());
   const initialLanguage = getInitialLanguage();
   const [language, setLanguage] = useState<LanguageData>(initialLanguage);
@@ -51,7 +49,7 @@ function App() {
         <ThemeContext.Provider value={themeContextValue}>
           <Navigation />
         </ThemeContext.Provider>
-        <div css={Container(isMain)}>
+        <div css={Container}>
           <RouteTracker />
           <Routes>
             <Route path="/" element={<Main />} />
@@ -62,29 +60,36 @@ function App() {
             <Route path="*" element={<Error />} />
           </Routes>
         </div>
-        <Footer/>
+        {/* <Footer/> */}
         </div>
       </LanguageContext.Provider>
     </>
   );
 }
-const Container = (isMain: boolean) => css`
+const Container = css`
   width: 100vw;
   max-width: 1405px;
-  padding: 60px 20px 20px 20px;
-  ${!isMain && `margin-top: 40px;`}
-  @media (max-width: 768px) {
-    ${!isMain && `margin-top: 20px;`}
-  }
   display: flex;
   flex-direction: column;
   gap: 20px;
   box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 40px 20px 20px 20px;
+    margin-top: 20px;
+  }
 `;
 
-const Layout = () => css`
+const Layout = css`
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    min-height: auto;
+    justify-content: flex-start;
+  }
 `
 export default App;

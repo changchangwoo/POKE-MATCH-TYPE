@@ -18,7 +18,7 @@ const Quiz = () => {
     <div css={quizPageContainer}>
       <div css={quizContentWrapper}>
         <div css={quizContainer}>
-          <h1>{text.QUIZ.TITLE}</h1>
+          {/* <h1>{text.QUIZ.TITLE}</h1> */}
           {(() => {
             switch (section) {
               case 0:

@@ -8,10 +8,13 @@ export const navigationStyle = css`
   display: flex;
   align-items: center;
   color: var(--background);
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   box-sizing: border-box;
   padding: 0 20px;
   z-index: 10;
+  background-color: var(--background);
 
   .menu-btn {
     display: none;

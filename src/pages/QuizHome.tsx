@@ -5,8 +5,8 @@ import QuizSelectionList from "@components/quizHome/QuizSelectionList";
 const QuizHome = () => {
   return (
     <div css={quizHomeContainer}>
-      <QuizDashboard />
       <QuizSelectionList />
+      <QuizDashboard />
     </div>
   );
 };
@@ -19,12 +19,12 @@ const quizHomeContainer = css`
   align-items: stretch;
 
   > div:first-of-type {
-    flex: 0 0 38%;
+    flex: 0 0 65%;
     min-width: 0;
   }
 
   > div:last-of-type {
-    flex: 0 0 62%;
+    flex: 0 0 35%;
     min-width: 0;
   }
 
