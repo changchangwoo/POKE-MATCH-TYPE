@@ -60,8 +60,7 @@ export const navigationStyle = css`
 
     &.active {
       opacity: 1;
-          color: var(--point);
-
+      color: var(--point);
     }
   }
 
@@ -72,7 +71,9 @@ export const navigationStyle = css`
     height: 3px;
     background-color: var(--point);
     border-radius: 3px 3px 0 0;
-    transition: transform 0.3s ease, width 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      width 0.3s ease;
     opacity: 0;
   }
 
@@ -131,7 +132,6 @@ export const navigationStyle = css`
     z-index: 20;
     list-style: none;
     margin: 0;
-    padding: 4px 0;
 
     li {
       font-size: var(--fontSmall);
@@ -236,7 +236,6 @@ export const drawerStyle = (isOpen: boolean) => css`
       margin: 0;
       font-size: var(--fontLarge);
       color: var(--text);
-      font-weight: 600;
     }
   }
 
@@ -334,7 +333,8 @@ export const drawerStyle = (isOpen: boolean) => css`
     opacity: 0;
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
-    transition-property: max-height, opacity, border-top-color, border-bottom-color;
+    transition-property:
+      max-height, opacity, border-top-color, border-bottom-color;
     transition-duration: 0.3s;
     transition-timing-function: ease;
 

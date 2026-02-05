@@ -37,10 +37,10 @@ const Search = ({
   setSelectedTerastal,
 }: SearchProps) => {
   const { text } = useContext(LanguageContext);
-  const randomLogo = useMemo(
-    () => LOGOS[Math.floor(Math.random() * LOGOS.length)],
-    [],
-  );
+  const randomLogos = useMemo(() => {
+    const shuffled = [...LOGOS].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, 3);
+  }, []);
   const { recentSearches, addRecentSearch, handleRecentClick } =
     useRecentSearch(setSearchParams);
   const {
@@ -70,8 +70,10 @@ const Search = ({
           <h1>{text.APP.TITLE}</h1>
           <h2>{text.MAIN.SEARCH.SUBTITLE}</h2>
         </div>
-                <div className="logo-wrapper">
-          <img src={randomLogo} className="logo" alt="logo" />
+        <div className="logo-wrapper">
+          {randomLogos.map((logoSrc, idx) => (
+            <img key={`${logoSrc}-${idx}`} src={logoSrc} className="logo" alt="logo" />
+          ))}
         </div>
       </div>
       <div css={inputWrapper}>

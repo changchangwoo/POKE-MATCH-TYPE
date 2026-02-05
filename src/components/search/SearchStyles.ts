@@ -23,22 +23,46 @@ export const searchHeader = css`
   }
 
   .logo-wrapper {
-    width: 50px;
-    height: 50px;
-    /* background-color: var(--point); */
-    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 6px;
     box-sizing: border-box;
     flex-shrink: 0;
+    gap: 8px;
   }
 
   .logo {
-    width: 100%;
-    height: 100%;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
+    position: relative;
+    animation: logoHop 900ms ease-out 1;
+  }
+
+  .logo:nth-of-type(2) {
+    animation-delay: 120ms;
+  }
+
+  .logo:nth-of-type(3) {
+    animation-delay: 240ms;
+  }
+
+  @keyframes logoHop {
+    0% {
+      top: 0;
+    }
+    30% {
+      top: -12px;
+    }
+    60% {
+      top: 0;
+    }
+    80% {
+      top: -6px;
+    }
+    100% {
+      top: 0;
+    }
   }
 
   .text {

@@ -1,12 +1,11 @@
-import { IoSunny, IoMoon, IoChevronDown, IoHelpCircle } from "react-icons/io5";
-import { HiMenu } from "react-icons/hi";
 import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { LanguageContext, ThemeContext } from "@services/getInitialData";
 import { LANGUAGE_TEXTS } from "@const/language_text";
 import { LanguageType } from "@models/settingData";
-import { navigationStyle, overlayStyle, drawerStyle } from "./NavigationStyles";
-import logo from "@images/logo.webp";
+import { overlayStyle } from "./NavigationStyles";
+import DesktopNav from "./DesktopNav";
+import MobileDrawer from "./MobileDrawer";
 
 const ROUTES = ["/", "/type", "/table", "/quiz"] as const;
 
@@ -33,6 +32,24 @@ const Navigation = () => {
     setText(LANGUAGE_TEXTS[type]);
     localStorage.setItem("language", type);
     setLangOpen(false);
+    setDrawerLangOpen(false);
+  };
+
+  const handleThemeToggle = () => {
+    const next =
+      theme.type === "light"
+        ? { name: "달의 돌", num: 2 as Number, type: "dark" as const }
+        : { name: "태양의 돌", num: 1 as Number, type: "light" as const };
+    setTheme(next);
+    localStorage.setItem("theme", JSON.stringify(next));
+  };
+
+  const handleFeedbackClick = () => {
+    window.open(
+      "https://forms.gle/AYkAFR5kYKNVsQf19",
+      "_blank",
+      "noopener,noreferrer"
+    );
   };
 
   useEffect(() => {
@@ -94,168 +111,46 @@ const Navigation = () => {
 
   return (
     <>
-      <div css={navigationStyle}>
-        <button
-          className="menu-btn"
-          onClick={() => setDrawerOpen(!isDrawerOpen)}
-          aria-label="Menu"
-        >
-          <HiMenu />
-        </button>
-        <img src={logo} alt="Logo" className="mobile-logo" />
-        <nav className="nav-links" ref={navRef}>
-          {navItems.map(({ path, label }) => (
-            <a
-              key={path}
-              onClick={() => navigator(path)}
-              className={location.pathname === path ? "active" : ""}
-            >
-              {label}
-            </a>
-          ))}
-          <div className="indicator" ref={indicatorRef} />
-        </nav>
-        <div className="nav-actions">
-          <div className="lang-dropdown" ref={langRef}>
-            <button
-              className={`lang-dropdown-toggle${isLangOpen ? " open" : ""}`}
-              onClick={() => setLangOpen(!isLangOpen)}
-              aria-label="Select Language"
-            >
-              <span>
-                {languageList.find((l) => l.type === language.type)?.label}
-              </span>
-              <IoChevronDown size={12} />
-            </button>
-            {isLangOpen && (
-              <ul className="lang-dropdown-menu">
-                {languageList.map((item) => (
-                  <li
-                    key={item.type}
-                    className={language.type === item.type ? "selected" : ""}
-                    onClick={() => handleLanguageSelect(item.type)}
-                  >
-                    {item.label}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-          <button
-            className="theme-btn"
-            onClick={() => {
-              const next =
-                theme.type === "light"
-                  ? { name: "달의 돌", num: 2 as Number, type: "dark" as const }
-                  : {
-                      name: "태양의 돌",
-                      num: 1 as Number,
-                      type: "light" as const,
-                    };
-              setTheme(next);
-              localStorage.setItem("theme", JSON.stringify(next));
-            }}
-            aria-label="Toggle Theme"
-          >
-            {theme.type === "light" ? <IoSunny /> : <IoMoon />}
-          </button>
-          <button
-            className="inquiry-btn"
-            onClick={() =>
-              window.open(
-                "https://forms.gle/AYkAFR5kYKNVsQf19",
-                "_blank",
-                "noopener,noreferrer",
-              )
-            }
-            aria-label="Inquiry"
-          >
-            <IoHelpCircle />
-          </button>
-        </div>
-      </div>
+      <DesktopNav
+        navItems={navItems}
+        currentPath={location.pathname}
+        languageList={languageList}
+        currentLanguage={language.type}
+        theme={theme}
+        isLangOpen={isLangOpen}
+        onNavigate={navigator}
+        onLanguageToggle={() => setLangOpen(!isLangOpen)}
+        onLanguageSelect={handleLanguageSelect}
+        onThemeToggle={handleThemeToggle}
+        onFeedbackClick={handleFeedbackClick}
+        onMenuToggle={() => setDrawerOpen(!isDrawerOpen)}
+        navRef={navRef}
+        indicatorRef={indicatorRef}
+        langRef={langRef}
+      />
+
+      <MobileDrawer
+        isOpen={isDrawerOpen}
+        navItems={navItems}
+        currentPath={location.pathname}
+        languageList={languageList}
+        currentLanguage={language.type}
+        theme={theme}
+        isLangOpen={isDrawerLangOpen}
+        appTitle={text.APP.TITLE}
+        themeLightLabel={text.APP.THEME.DATA_SUN_STONE}
+        themeDarkLabel={text.APP.THEME.DATA_MOON_STONE}
+        feedbackLabel={text.APP.FEEDBACK}
+        onNavigate={handleDrawerNavigate}
+        onLanguageToggle={() => setDrawerLangOpen(!isDrawerLangOpen)}
+        onLanguageSelect={handleLanguageSelect}
+        onThemeToggle={handleThemeToggle}
+        onFeedbackClick={handleFeedbackClick}
+      />
 
       {isDrawerOpen && (
         <div css={overlayStyle} onClick={() => setDrawerOpen(false)} />
       )}
-      <aside css={drawerStyle(isDrawerOpen)}>
-        <div className="drawer-header">
-          <img src={logo} alt="Logo" className="drawer-logo" />
-          <h2>{text.APP.TITLE}</h2>
-        </div>
-        <nav className="drawer-nav">
-          {navItems.map(({ path, label }) => (
-            <a
-              key={path}
-              onClick={() => handleDrawerNavigate(path)}
-              className={location.pathname === path ? "active" : ""}
-            >
-              {label}
-            </a>
-          ))}
-        </nav>
-        <div className="drawer-divider" />
-        <div className="drawer-actions">
-          <div className="drawer-lang-accordion">
-            <button
-              className="drawer-action-btn"
-              onClick={() => setDrawerLangOpen(!isDrawerLangOpen)}
-            >
-              <IoChevronDown className={isDrawerLangOpen ? "rotated" : ""} />
-              <span>{languageList.find((l) => l.type === language.type)?.label}</span>
-            </button>
-            <div className={`drawer-lang-list${isDrawerLangOpen ? " open" : ""}`}>
-              {languageList.map((item) => (
-                <button
-                  key={item.type}
-                  className={`drawer-lang-item${language.type === item.type ? " active" : ""}`}
-                  onClick={() => {
-                    handleLanguageSelect(item.type);
-                    setDrawerLangOpen(false);
-                  }}
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
-          </div>
-          <button
-            className="drawer-action-btn"
-            onClick={() => {
-              const next =
-                theme.type === "light"
-                  ? { name: "달의 돌", num: 2 as Number, type: "dark" as const }
-                  : {
-                      name: "태양의 돌",
-                      num: 1 as Number,
-                      type: "light" as const,
-                    };
-              setTheme(next);
-              localStorage.setItem("theme", JSON.stringify(next));
-            }}
-          >
-            {theme.type === "light" ? <IoSunny /> : <IoMoon />}
-            <span>
-              {theme.type === "light"
-                ? text.APP.THEME.DATA_SUN_STONE
-                : text.APP.THEME.DATA_MOON_STONE}
-            </span>
-          </button>
-          <button
-            className="drawer-action-btn"
-            onClick={() =>
-              window.open(
-                "https://forms.gle/AYkAFR5kYKNVsQf19",
-                "_blank",
-                "noopener,noreferrer",
-              )
-            }
-          >
-            <IoHelpCircle />
-            <span>{text.APP.FEEDBACK}</span>
-          </button>
-        </div>
-      </aside>
     </>
   );
 };

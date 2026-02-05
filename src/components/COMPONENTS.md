@@ -42,7 +42,7 @@ This file summarizes each component in `src/components/` so an agent can quickly
 - `src/components/quiz/index.ts`: Barrel exports for quiz components.
 
 **search**
-- `src/components/search/Search.tsx`: Search UI with random logo, input, suggestions, and recent searches. Uses `usePokemonSearch` and `useRecentSearch` to manage UX and URL params.
+- `src/components/search/Search.tsx`: Search UI with a row of 3 randomly selected logos (one-time hop animation), input, suggestions, and recent searches. Uses `usePokemonSearch` and `useRecentSearch` to manage UX and URL params.
 - `src/components/search/RecentSearch.tsx`: Chips for recent searches, localized per language.
 - `src/components/search/SearchStyles.ts`: Emotion CSS for search layout, input, suggestions, and recent-search chips.
 - `src/components/search/index.ts`: Barrel export for search components.
