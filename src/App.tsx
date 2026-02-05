@@ -8,6 +8,7 @@ import { css, Global } from "@emotion/react";
 import {Footer, Navigation, RouteTracker } from "@components/nav";
 import Table from "@pages/Table";
 import Quiz from "@pages/Quiz";
+import QuizHome from "@pages/QuizHome";
 import { globalStyles } from "@styles/globalStyles";
 import { useMemo, useState } from "react";
 import { LanguageData, LanguageType, ThemeData } from "@models/settingData";
@@ -56,7 +57,8 @@ function App() {
             <Route path="/" element={<Main />} />
             <Route path="/type" element={<Type />} />
             <Route path="/table" element={<Table />} />
-            <Route path="/quiz" element={<Quiz />} />
+            <Route path="/quiz" element={<QuizHome />} />
+            <Route path="/quiz/play" element={<Quiz />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </div>

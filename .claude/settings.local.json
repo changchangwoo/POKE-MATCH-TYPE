@@ -15,7 +15,8 @@
       "Bash(git stash:*)",
       "Bash(ren:*)",
       "Bash(npm run dev:*)",
-      "Bash(timeout /t:*)"
+      "Bash(timeout /t:*)",
+      "Bash(timeout 5 cmd:*)"
     ],
     "deny": [],
     "ask": []
