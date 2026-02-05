@@ -32,7 +32,7 @@ const Table = () => {
   return (
     <>
       <div css={tableContainer}>
-        <h1>{text.TABLE.TITLE}</h1>
+        {/* <h1>{text.TABLE.TITLE}</h1> */}
         <div css={tableContents}>
           <div>
             <table>
@@ -84,12 +84,22 @@ const tableContainer = css`
   width: 100%;
   max-width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 30px;
+  align-items: stretch;
   gap: 20px;
   color: var(--text);
+
+  > div:first-of-type {
+    flex: 7.3;
+    min-width: 0;
+  }
+  > div:last-of-type {
+    flex: 2.7;
+    min-width: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const tableContents = css`

@@ -1,5 +1,5 @@
 import { IoSunny, IoMoon, IoChevronDown, IoHelpCircle } from "react-icons/io5";
-import { HiMenu, HiX } from "react-icons/hi";
+import { HiMenu } from "react-icons/hi";
 import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { LanguageContext, ThemeContext } from "@services/getInitialData";
@@ -96,7 +96,7 @@ const Navigation = () => {
           onClick={() => setDrawerOpen(!isDrawerOpen)}
           aria-label="Menu"
         >
-          {isDrawerOpen ? <HiX /> : <HiMenu />}
+        <HiMenu />
         </button>
         <nav className="nav-links" ref={navRef}>
           {navItems.map(({ path, label }) => (

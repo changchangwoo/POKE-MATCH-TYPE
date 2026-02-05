@@ -1,6 +1,9 @@
-import { Dispatch, SetStateAction, useContext } from "react";
+import { Dispatch, SetStateAction, useContext, useMemo } from "react";
 import { FaSearch } from "react-icons/fa";
-import Logo from "@images/logo.webp";
+import LogoBulbasaur from "@images/logo_bulbasar.png";
+import LogoCharmander from "@images/logo_charmander.png";
+import LogoSquirtle from "@images/logo_squirtle.png";
+import LogoPikachu from "@images/logo_pikachu.png";
 import {
   searchContainer,
   searchHeader,
@@ -24,6 +27,8 @@ interface SearchProps {
   setSelectedTerastal: Dispatch<SetStateAction<{ value: string; no: string }>>;
 }
 
+const LOGOS = [LogoBulbasaur, LogoCharmander, LogoSquirtle, LogoPikachu];
+
 const Search = ({
   setSearchParams,
   searchParams,
@@ -32,6 +37,10 @@ const Search = ({
   setSelectedTerastal,
 }: SearchProps) => {
   const { text } = useContext(LanguageContext);
+  const randomLogo = useMemo(
+    () => LOGOS[Math.floor(Math.random() * LOGOS.length)],
+    [],
+  );
   const { recentSearches, addRecentSearch, handleRecentClick } =
     useRecentSearch(setSearchParams);
   const {
@@ -56,12 +65,13 @@ const Search = ({
   return (
     <div css={searchContainer} ref={searchRef}>
       <div css={searchHeader}>
-        <div className="logo-wrapper">
-          <img src={Logo} className="logo" alt="logo" />
-        </div>
+
         <div className="text">
           <h1>{text.APP.TITLE}</h1>
           <h2>{text.MAIN.SEARCH.SUBTITLE}</h2>
+        </div>
+                <div className="logo-wrapper">
+          <img src={randomLogo} className="logo" alt="logo" />
         </div>
       </div>
       <div css={inputWrapper}>

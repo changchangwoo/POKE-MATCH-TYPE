@@ -3,6 +3,10 @@ import { css } from "@emotion/react";
 export const searchContainer = css`
   width: 100%;
   height: auto;
+
+  @media (max-width: 768px) {
+    padding-top: 20px;
+  }
 `;
 
 export const searchHeader = css`
@@ -15,14 +19,13 @@ export const searchHeader = css`
   margin-bottom: 40px;
 
   @media (max-width: 768px) {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    display: none;
   }
 
   .logo-wrapper {
     width: 50px;
     height: 50px;
-    background-color: var(--point);
+    /* background-color: var(--point); */
     border-radius: 12px;
     display: flex;
     align-items: center;

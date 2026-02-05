@@ -68,7 +68,7 @@ function App() {
 }
 const Container = (isMain: boolean) => css`
   width: 100vw;
-  max-width: 1200px;
+  max-width: 1405px;
   padding: 60px 20px 20px 20px;
   ${!isMain && `margin-top: 40px;`}
   @media (max-width: 768px) {

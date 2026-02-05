@@ -107,19 +107,17 @@ const tableDescriptionStyle = css`
   }
   .extraBox {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 10px;
     color: var(--text);
     width: 100%;
+    height: 100%;
     background-color: var(--primary);
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 20px;
     box-sizing: border-box;
-
-    @media screen and (max-width: 600px) {
       grid-template-columns: 1fr;
-    }
 
     div {
       display: flex;

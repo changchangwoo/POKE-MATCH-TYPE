@@ -12,7 +12,8 @@
       "Bash(dir:*)",
       "Bash(cd:*)",
       "Bash(npm install:*)",
-      "Bash(git stash:*)"
+      "Bash(git stash:*)",
+      "Bash(ren:*)"
     ],
     "deny": [],
     "ask": []

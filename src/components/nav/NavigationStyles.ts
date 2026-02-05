@@ -22,14 +22,13 @@ export const navigationStyle = css`
     color: var(--text);
     font-size: 24px;
     cursor: pointer;
-    padding: 4px;
     line-height: 1;
   }
 
   .nav-links {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 32px;
     margin: 0 auto;
     position: relative;
     height: 100%;
@@ -53,6 +52,8 @@ export const navigationStyle = css`
 
     &.active {
       opacity: 1;
+          color: var(--point);
+
     }
   }
 
