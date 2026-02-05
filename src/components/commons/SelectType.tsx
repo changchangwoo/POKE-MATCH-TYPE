@@ -34,8 +34,11 @@ const SelectType = ({
     if (isAlreadyChecked) {
       setCheckedType(checkedType.filter((checked) => checked.no !== type.no));
     } else {
-      if (checkedType.length >= 2) return;
-      setCheckedType([...checkedType, { no: type.no, name: type.name, idx }]);
+      if (checkedType.length >= 2) {
+        setCheckedType([...checkedType.slice(1), { no: type.no, name: type.name, idx }]);
+      } else {
+        setCheckedType([...checkedType, { no: type.no, name: type.name, idx }]);
+      }
     }
   };
 

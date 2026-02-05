@@ -1,6 +1,5 @@
 import { css } from "@emotion/react";
 import { useContext, useState } from "react";
-import KakaoAdfitBanner from "@ads/KakaoAdfitBanner";
 import QuizEnd from "@components/quiz/QuizEnd";
 import QuizIntro from "@components/quiz/QuizIntro";
 import QuizMain from "@components/quiz/QuizMain";
@@ -16,7 +15,6 @@ const Quiz = () => {
 
   return (
     <>
-            <KakaoAdfitBanner />
       <div css={quizContainer}>
         <h1>{text.QUIZ.TITLE}</h1>
         {(() => {

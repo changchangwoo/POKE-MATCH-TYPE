@@ -1,7 +1,7 @@
 import Logo from "@images/logo.webp";
 
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Main from "@pages/Main";
 import Type from "@pages/Type";
 import { css, Global } from "@emotion/react";
@@ -24,6 +24,8 @@ import Error from "@pages/Error";
 const IMAGE_LIST = [Logo] as const;
 
 function App() {
+  const location = useLocation();
+  const isMain = location.pathname === "/";
   const [theme, setTheme] = useState<ThemeData>(getInitialTheme());
   const initialLanguage = getInitialLanguage();
   const [language, setLanguage] = useState<LanguageData>(initialLanguage);
@@ -48,7 +50,7 @@ function App() {
         <ThemeContext.Provider value={themeContextValue}>
           <Navigation />
         </ThemeContext.Provider>
-        <div css={Container}>
+        <div css={Container(isMain)}>
           <RouteTracker />
           <Routes>
             <Route path="/" element={<Main />} />
@@ -64,10 +66,11 @@ function App() {
     </>
   );
 }
-const Container = () => css`
+const Container = (isMain: boolean) => css`
   width: 100vw;
   max-width: 1200px;
   padding: 60px 20px 20px 20px;
+  ${!isMain && `margin-top: 40px;`}
   display: flex;
   flex-direction: column;
   gap: 20px;

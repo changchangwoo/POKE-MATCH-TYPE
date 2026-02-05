@@ -1,6 +1,5 @@
 import { css } from "@emotion/react";
 import { useContext, useState } from "react";
-import KakaoAdfitBanner from "@ads/KakaoAdfitBanner";
 import TableDescription from "@components/table/TableDescription";
 import typeEffectivenessData from "@data/tableData.json";
 import { LanguageContext } from "@services/getInitialData";
@@ -33,7 +32,6 @@ const Table = () => {
   return (
     <>
       <div css={tableContainer}>
-        <KakaoAdfitBanner />
         <h1>{text.TABLE.TITLE}</h1>
         <div css={tableContents}>
           <div>

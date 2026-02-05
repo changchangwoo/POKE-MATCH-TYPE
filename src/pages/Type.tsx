@@ -1,7 +1,6 @@
 import { css } from "@emotion/react";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import KakaoAdfitBanner from "@ads/KakaoAdfitBanner";
 import TypeCard from "@components/commons/TypeCard";
 import SelectType from "@components/commons/SelectType";
 import { CheckedType } from "@models/pokemonData";
@@ -53,7 +52,6 @@ const Type = () => {
 
   return (
     <>
-          <KakaoAdfitBanner />
     <div css={matchContainer}>
       <SelectType
         checkedType={checkedType}

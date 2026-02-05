@@ -101,6 +101,14 @@ export const matchCardContainer = css`
     gap: 20px;
     margin-top: auto;
   }
+
+  @media (max-width: 768px) {
+    min-height: auto;
+
+    .addBox {
+      margin-top: 0;
+    }
+  }
 `;
 
 export const imgBox = (no: number) => css`
