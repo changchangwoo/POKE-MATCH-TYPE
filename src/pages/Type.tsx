@@ -74,6 +74,7 @@ const Type = () => {
 
 const matchContainer = css`
   width: 100%;
+  height: 100%;
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -86,6 +87,8 @@ const matchContainer = css`
 
   @media (max-width: 768px) {
     flex-direction: column;
+    padding-top: 20px;
+    height: auto;
 
     > div {
       width: 100%;

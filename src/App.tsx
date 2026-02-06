@@ -75,8 +75,7 @@ const Container = css`
   box-sizing: border-box;
 
   @media (max-width: 768px) {
-    padding: 40px 20px 20px 20px;
-    margin-top: 20px;
+    padding: 60px 20px 20px 20px;
   }
 `;
 

@@ -30,6 +30,23 @@ const QuizType1TypeInference = ({
   const [randBlank, setRandBlank] = useState<any>(null);
 
   useEffect(() => {
+    // Check session storage for cached question data
+    const session = sessionStorage.getItem("quizSession");
+    if (session) {
+      const parsed = JSON.parse(session);
+      const cachedData = parsed.questions[progress]?.questionData;
+
+      // If cached data exists, restore it
+      if (cachedData && cachedData.questionArr) {
+        setQuetstionArr(cachedData.questionArr);
+        setAnswerIdx(cachedData.answerIdx);
+        setRandQuiz(cachedData.randQuiz);
+        setRandBlank(cachedData.randBlank);
+        return; // Early return, don't generate new data
+      }
+    }
+
+    // Generate new data only if no cache exists
     const randQuiz = getRandomNum(quizType1_data.length);
     let randBlank = 0;
     while (
@@ -62,6 +79,22 @@ const QuizType1TypeInference = ({
     setRandQuiz(randQuiz)
     setRandBlank(randBlank)
     setQuetstionArr(shuffleResult);
+
+    // Save to session storage
+    const session2 = sessionStorage.getItem("quizSession");
+    if (session2) {
+      const parsed = JSON.parse(session2);
+      parsed.questions[progress] = {
+        ...parsed.questions[progress],
+        questionData: {
+          questionArr: shuffleResult,
+          answerIdx,
+          randQuiz,
+          randBlank,
+        },
+      };
+      sessionStorage.setItem("quizSession", JSON.stringify(parsed));
+    }
   }, [progress]);
   return (
     <>

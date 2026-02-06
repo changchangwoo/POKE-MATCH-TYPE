@@ -1,11 +1,28 @@
 import { css } from "@emotion/react";
+import { Dispatch, SetStateAction } from "react";
 
 interface StepProgressProps {
   currentStep: number;
   progressArr: { step: string }[];
+  setProgress?: Dispatch<SetStateAction<number>>;
 }
 
-const StepProgress = ({ currentStep, progressArr }: StepProgressProps) => {
+const StepProgress = ({ currentStep, progressArr, setProgress }: StepProgressProps) => {
+  const handleProgressClick = (index: number) => {
+    if (!setProgress) return;
+
+    const questionStatus = progressArr[index].step;
+    // Allow clicking on answered questions or current question
+    if (
+      questionStatus === "correct" ||
+      questionStatus === "wrong" ||
+      questionStatus === "current" ||
+      index === currentStep
+    ) {
+      setProgress(index);
+    }
+  };
+
   return (
     <div css={container}>
       <div>
@@ -13,7 +30,28 @@ const StepProgress = ({ currentStep, progressArr }: StepProgressProps) => {
       </div>
       <div css={progressContainer}>
         {progressArr.map((progress, idx) => {
-          return <div key={idx} css={progressBox(progress.step)} />;
+          const isClickable = setProgress && (
+            progress.step === "correct" ||
+            progress.step === "wrong" ||
+            progress.step === "current" ||
+            idx === currentStep
+          );
+          return (
+            <div
+              key={idx}
+              css={progressBox(progress.step, isClickable || false)}
+              onClick={() => handleProgressClick(idx)}
+              role={isClickable ? "button" : undefined}
+              aria-label={isClickable ? `Go to question ${idx + 1}` : undefined}
+              tabIndex={isClickable ? 0 : undefined}
+              onKeyDown={(e) => {
+                if (isClickable && (e.key === "Enter" || e.key === " ")) {
+                  e.preventDefault();
+                  handleProgressClick(idx);
+                }
+              }}
+            />
+          );
         })}
       </div>
     </div>
@@ -23,11 +61,12 @@ const StepProgress = ({ currentStep, progressArr }: StepProgressProps) => {
 export default StepProgress;
 
 const container = css`
+  width: 100%;
   display: flex;
   gap: 15px;
   justify-content: center;
   align-items: center;
-  margin: 16px 0;
+  margin: 16px 0 30px 0;
   flex-direction: column;
   div {
     color: var(--text);
@@ -37,13 +76,17 @@ const container = css`
 const progressContainer = css`
   display: flex;
   gap: 10px;
+  min-height: 26px;
+  align-items: center;
+  contain: layout;
 `;
 
-const progressBox = (step: string) => css`
+const progressBox = (step: string, isClickable: boolean) => css`
   width: 16px;
   height: 16px;
+  flex-shrink: 0;
   border-radius: 25%;
-  border: 1px solid var(--border);
+  border: ${step === "current" ? "2px" : "1px"} solid var(--border);
   background-color: ${step === "current"
     ? `grey`
     : step === "correct"
@@ -51,5 +94,27 @@ const progressBox = (step: string) => css`
     : step === "wrong"
     ? "var(--type14)"
     : "var(--background)"};
-  transition: background-color 0.3s;
+  transition: all 0.3s;
+  cursor: ${isClickable ? "pointer" : "default"};
+  will-change: ${isClickable || step === "current" ? "transform" : "auto"};
+  transform: ${step === "current" ? "scale(1.3)" : "scale(1)"};
+  box-shadow: ${step === "current" ? "0 0 8px rgba(0, 0, 0, 0.2)" : "none"};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  ${isClickable &&
+  `
+    &:hover {
+      transform: scale(1.3);
+      border-width: 2px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    }
+
+    &:focus {
+      outline: 2px solid var(--point);
+      outline-offset: 2px;
+    }
+  `}
 `;

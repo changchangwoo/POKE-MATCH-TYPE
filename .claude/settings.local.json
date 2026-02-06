@@ -16,7 +16,9 @@
       "Bash(ren:*)",
       "Bash(npm run dev:*)",
       "Bash(timeout /t:*)",
-      "Bash(timeout 5 cmd:*)"
+      "Bash(timeout 5 cmd:*)",
+      "Bash(npm run type-check:*)",
+      "Bash(npm run:*)"
     ],
     "deny": [],
     "ask": []

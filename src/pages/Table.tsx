@@ -83,6 +83,7 @@ const Table = () => {
 const tableContainer = css`
   width: 100%;
   max-width: 100%;
+  height: 100%;
   display: flex;
   align-items: stretch;
   gap: 20px;
@@ -99,6 +100,8 @@ const tableContainer = css`
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    padding-top: 20px;
+    height: auto;
   }
 `;
 

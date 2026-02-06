@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 
 interface QuizOption {
-  id: string;
+  id: number;
   title: string;
   description: string;
   story: string;
@@ -11,7 +11,7 @@ interface QuizOption {
 
 interface QuizSelectionCardProps {
   quiz: QuizOption;
-  onSelect: (quizId: string) => void;
+  onSelect: (quizId: number) => void;
 }
 
 const QuizSelectionCard = ({

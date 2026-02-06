@@ -7,10 +7,15 @@ import {
 } from "@services/getDetailType";
 import { buildMatchInfo, generateQuizType0Question } from "@services/generateQuiz";
 
-export const useGetDetailPokemonForQuiz = (progress: number) => {
+export const useGetDetailPokemonForQuiz = (progress: number, cachedData?: any) => {
   const query = useQuery({
     queryKey: ["quizType0", progress],
     queryFn: async () => {
+      // If cached data exists, return it immediately
+      if (cachedData) {
+        return cachedData;
+      }
+
       const lastNum = PokeDex[PokeDex.length - 1].no;
       const randomNum = Math.floor(Math.random() * lastNum);
       const fetchDatas = await fetchDetailPokemon(String(randomNum));
@@ -28,7 +33,7 @@ export const useGetDetailPokemonForQuiz = (progress: number) => {
       return { matchDatas, groupResult, ...quiz };
     },
     staleTime: Infinity,
-    gcTime: 0,
+    gcTime: 1000 * 60 * 5, // 5 minutes instead of 0
     retry: 2,
   });
 
