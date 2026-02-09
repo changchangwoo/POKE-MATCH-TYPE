@@ -207,6 +207,7 @@ export const overlayStyle = css`
 `;
 
 export const drawerStyle = (isOpen: boolean) => css`
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -369,5 +370,9 @@ export const drawerStyle = (isOpen: boolean) => css`
       background-color: color-mix(in srgb, var(--point) 10%, transparent);
       border-right-color: var(--point);
     }
+  }
+
+  @media (max-width: 768px) {
+    display: block;
   }
 `;

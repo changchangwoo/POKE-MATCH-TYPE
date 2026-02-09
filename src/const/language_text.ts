@@ -96,9 +96,9 @@ export const LANGUAGE_TEXTS = {
       },
       DASHBOARD: {
         TITLE: "내 타입 지식, 실전에서 통할까?",
-        DESC: "포켓몬 배틀의 승패는 {0}이 좌우해요!",
+        DESC: "배틀의 승패는 {0}이 좌우해요!",
         DESC_STRONG: "타입 상성",
-        LIST_1: "여러 포켓몬들이 도움을 기다리고 있어요👀",
+        LIST_1: "포켓몬들이 도움을 기다리고 있어요👀",
         LIST_2: "총 {0}, 과연 맞힐 수 있을까요?",
         LIST_2_STRONG: "10번의 선택",
         LIST_3: "4가지 퀴즈 유형 중 골라서 도전하세요!",
@@ -119,12 +119,12 @@ export const LANGUAGE_TEXTS = {
       },
       SELECTION: {
         Q1_TITLE: "타입 종합 퀴즈",
-        Q1_CARD_STORY: "숲 속에서 길을 잃은 피카츄를 도와 길을 찾아주세요!",
+        Q1_CARD_STORY: "숲 속에서 길 잃은 피카츄를 도와 길을 찾아주세요!",
         Q1_CARD_DESC: "포켓몬 타입 상성을 종합적으로 테스트하는 퀴즈",
         Q1_INTRO_STORY:
           "숲 속에서 길을 잃은 피카츄를 도와 안전한 길을 찾아주세요!",
         Q1_INTRO_LORE:
-          "깊은 숲 속에서 피카츄가 도움을 요청하고 있어요. \n 각 타입의 강점과 약점을 정확히 꿰뚫고 피카츄를 무사히 집까지 데려다주세요!",
+          "숲 속에서 피카츄가 도움을 요청하고 있어요. \n 각 타입의 강점과 약점을 정확히 꿰뚫고 피카츄를 무사히 집까지 데려다주세요!",
         Q2_TITLE: "피해량 맞추기",
         Q2_CARD_STORY: "이상해씨와 함께 맛있는 요리를 완성해 보세요!",
         Q2_CARD_DESC: "타입 공격에 대한 피해량을 맞추는 퀴즈",
@@ -144,7 +144,7 @@ export const LANGUAGE_TEXTS = {
         Q4_INTRO_STORY:
           "파이리 산타가 들키지 않고 선물을 전달할 수 있도록 도와주세요!",
         Q4_INTRO_LORE:
-          "모두가 잠든 크리스마스 이브 \n 파이리 산타가 마을에 선물을 배달하고 있어요. \n정확한 배수를 계산해야 들키지 않고 선물을 전달할 수 있답니다!",
+          "모두가 잠든 크리스마스 이브 \n 파이리가 마을에 선물을 배달하고 있어요. \n정확한 배수를 계산해야 들키지 않고 선물을 전달할 수 있답니다!",
       },
       INTRO: {
         START: "시작하기",
@@ -322,8 +322,7 @@ export const LANGUAGE_TEXTS = {
           "Bulbasaur's special cooking contest has begun!\nJudge the correct type attack damage to help Bulbasaur finish the recipe!",
         Q3_TITLE: "Guess the Inequality",
         Q3_CARD_STORY: "Help firefighter Squirtle put out the fire!",
-        Q3_CARD_DESC:
-          "A quiz comparing type matchups using inequality signs",
+        Q3_CARD_DESC: "A quiz comparing type matchups using inequality signs",
         Q3_INTRO_STORY: "Help firefighter Squirtle put out the fire!",
         Q3_INTRO_LORE:
           "A fire has broken out in town!\nFirefighter Squirtle is on the scene.\nCompare the two types and choose the right inequality sign to help Squirtle's strategy!",
