@@ -37,8 +37,16 @@ const Navigation = () => {
   const handleThemeToggle = () => {
     const next =
       theme.type === "light"
-        ? { name: "달의 돌", num: 2 as number, type: "dark" as const }
-        : { name: "태양의 돌", num: 1 as number, type: "light" as const };
+        ? {
+            name: text.APP.THEME.DATA_MOON_STONE,
+            num: 2 as number,
+            type: "dark" as const,
+          }
+        : {
+            name: text.APP.THEME.DATA_SUN_STONE,
+            num: 1 as number,
+            type: "light" as const,
+          };
     setTheme(next);
     localStorage.setItem("theme", JSON.stringify(next));
   };
@@ -149,3 +157,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+

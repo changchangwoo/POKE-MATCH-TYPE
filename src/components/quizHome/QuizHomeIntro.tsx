@@ -83,12 +83,14 @@ const QuizHomeIntro = ({ selectedQuiz, onStart }: QuizHomeIntroProps) => {
         </div>
         <p css={introStory}>{currentQuiz.story}</p>
         <p css={introLore}>
-          {(currentQuiz.lore as string).split("\n").map((line: string, i: number) => (
-            <span key={i}>
-              {i > 0 && <br />}
-              {line}
-            </span>
-          ))}
+          {(currentQuiz.lore as string)
+            .split("\n")
+            .map((line: string, i: number) => (
+              <span key={i}>
+                {i > 0 && <br />}
+                {line}
+              </span>
+            ))}
         </p>
       </div>
       <button aria-label="Start Quiz" css={startButton} onClick={onStart}>
@@ -103,7 +105,7 @@ const introContainer = css`
   height: 100%;
   padding: 20px;
   box-sizing: border-box;
-  min-height: 400px;
+  min-height: 515px;
   border: 1px solid var(--border);
   border-radius: 10px;
   background-color: var(--background);
@@ -166,14 +168,6 @@ const introLore = css`
   opacity: 0.8;
   margin: 0;
   line-height: 1.7;
-`;
-
-const introDescription = css`
-  font-size: var(--fontSmall);
-  color: var(--text);
-  opacity: 0.7;
-  margin: 0;
-  line-height: 1.5;
 `;
 
 const startButton = css`

@@ -120,13 +120,6 @@ const loadingContainer = css`
   width: 100%;
 `;
 
-const skeletonTitle = css`
-  margin-top: 10px;
-  height: 20px;
-  width: 100px;
-  background-color: var(--border);
-  border-radius: 4px;
-`;
 
 const skeletonTypeSection = css`
   display: grid;

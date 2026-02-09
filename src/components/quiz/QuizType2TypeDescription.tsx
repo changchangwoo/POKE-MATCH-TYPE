@@ -93,7 +93,7 @@ const QuizType2TypeDescription = ({
         </div>
         <div css={quizTypeContainer} data-name={text.QUIZ.MAIN_3.DATA_NAME_DEFENSE}>
           <>
-            {defender.map((type, idx) => {
+            {defender.map((type: { no: number; name: string }, idx: number) => {
               return (
                 <TypeBadge no={type.no} key={idx}>
                   {getTranslateType(type.name, language.type)}
@@ -104,7 +104,7 @@ const QuizType2TypeDescription = ({
         </div>
       </div>
       <div css={selectDamageContainer(isNext)}>
-        {questionArr.map((damage, idx) => {
+        {questionArr.map((damage: number, idx: number) => {
           const isChecked = checkedAnswer.idx === idx;
           return (
             <button

@@ -104,7 +104,7 @@ const endContainer = css`
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
-  min-height: 400px;
+  min-height: 515px;
   border: 1px solid var(--border);
   border-radius: 10px;
   background-color: var(--background);

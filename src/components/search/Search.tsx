@@ -1,12 +1,7 @@
-﻿import { Dispatch, SetStateAction, useContext, useMemo } from "react";
+﻿import { Dispatch, SetStateAction, useContext } from "react";
 import { FaSearch } from "react-icons/fa";
-import LogoBulbasaur from "@images/logo_bulbasar.webp";
-import LogoCharmander from "@images/logo_charmander.webp";
-import LogoSquirtle from "@images/logo_squirtle.webp";
-import LogoPikachu from "@images/logo_pikachu.webp";
 import {
   searchContainer,
-  searchHeader,
   inputWrapper,
   inputBox,
   suggestionsList,
@@ -27,8 +22,6 @@ interface SearchProps {
   setSelectedTerastal: Dispatch<SetStateAction<{ value: string; no: string }>>;
 }
 
-const LOGOS = [LogoBulbasaur, LogoCharmander, LogoSquirtle, LogoPikachu];
-
 const Search = ({
   setSearchParams,
   searchParams,
@@ -37,10 +30,6 @@ const Search = ({
   setSelectedTerastal,
 }: SearchProps) => {
   const { text } = useContext(LanguageContext);
-  const randomLogos = useMemo(() => {
-    const shuffled = [...LOGOS].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, 3);
-  }, []);
   const { recentSearches, addRecentSearch, handleRecentClick } =
     useRecentSearch(setSearchParams);
   const {

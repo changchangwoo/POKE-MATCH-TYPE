@@ -27,7 +27,7 @@ import MainTitle from "@components/mainTitle";
 
 const IMAGE_LIST = [Logo] as const;
 const SITE_ORIGIN = "https://poke-match-type.site";
-const DEFAULT_IMAGE_URL = `${SITE_ORIGIN}/favicon.ico`;
+const DEFAULT_IMAGE_URL = `${SITE_ORIGIN}/og.png`;
 
 type SeoData = {
   title: string;
@@ -177,7 +177,7 @@ const applySeoData = (seoData: SeoData, languageType: LanguageType) => {
   upsertMetaTag("property", "og:description", seoData.description);
   upsertMetaTag("property", "og:url", canonicalUrl);
   upsertMetaTag("property", "og:image", DEFAULT_IMAGE_URL);
-  upsertMetaTag("name", "twitter:card", "summary");
+  upsertMetaTag("name", "twitter:card", "summary_large_image");
   upsertMetaTag("name", "twitter:title", seoData.title);
   upsertMetaTag("name", "twitter:description", seoData.description);
   upsertMetaTag("name", "twitter:image", DEFAULT_IMAGE_URL);

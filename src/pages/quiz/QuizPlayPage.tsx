@@ -63,7 +63,7 @@ const QuizPlayPage = () => {
 
     window.addEventListener("beforeunload", handleBeforeUnload);
     return () => window.removeEventListener("beforeunload", handleBeforeUnload);
-  }, [progress]);
+  }, [progress, text]);
 
   if (!sessionLoaded) {
     return null;

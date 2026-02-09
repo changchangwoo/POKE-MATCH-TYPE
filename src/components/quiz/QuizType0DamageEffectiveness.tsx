@@ -90,7 +90,7 @@ const QuizType0DamageEffectiveness = ({
         <img src={matchDatas.imgs} alt={`Pokemon ${matchDatas.no}`} />
       </div>
       <div css={pokeTypes}>
-        {matchDatas.types.map((type) => (
+        {matchDatas.types.map((type: { no: number; name: string }) => (
           <TypeBadge key={type.no} no={type.no}>
             {getTranslateType(type.name, language.type)}
           </TypeBadge>
