@@ -38,10 +38,11 @@ export const QuizAnswer = ({
       </div>
       <button
         aria-label="Submit Answer"
-        onClick={() =>
-          submitAnswer(checkedType[0].idx, answerIdx, questionArr[answerIdx])
-        }
-        css={submitBtn(isNext)}
+        onClick={() => {
+          if (checkedType.length === 0) return;
+          submitAnswer(checkedType[0].idx, answerIdx, questionArr[answerIdx]);
+        }}
+        css={submitBtn(isNext || checkedType.length === 0)}
       >
         {text.QUIZ.SUBMIT}
       </button>

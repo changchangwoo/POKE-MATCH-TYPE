@@ -17,7 +17,7 @@ const QuizDashboard = () => {
   return (
     <div css={container}>
       <div css={introCard}>
-        <h2 css={introTitle}>내 타입 지식, 진짜 통할까?</h2>
+        <h2 css={introTitle}>내 타입 지식, 실전에서 통할까?</h2>
         <p css={introDesc}>
           포켓몬 배틀의 승패는 <strong>타입 상성</strong>이 좌우해요!
         </p>

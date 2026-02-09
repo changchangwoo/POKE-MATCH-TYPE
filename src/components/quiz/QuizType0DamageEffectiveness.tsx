@@ -61,7 +61,15 @@ const QuizType0DamageEffectiveness = ({
         sessionStorage.setItem("quizSession", JSON.stringify(parsed));
       }
     }
-  }, [questionArr, answerIdx, matchDatas, groupResult, quizNum, cachedData, progress]);
+  }, [
+    questionArr,
+    answerIdx,
+    matchDatas,
+    groupResult,
+    quizNum,
+    cachedData,
+    progress,
+  ]);
 
   if (!questionArr || quizNum === undefined || !groupResult || !matchDatas) {
     return <QuizType0Skeleton />;
@@ -102,7 +110,6 @@ export default QuizType0DamageEffectiveness;
 
 export const title = css`
   b {
-    font-weight: bold;
   }
   text-align: center;
   width: 100%;

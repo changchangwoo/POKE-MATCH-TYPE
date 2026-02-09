@@ -35,7 +35,9 @@ const QuizProgressList = ({
             css={progressItem(
               item.step,
               index === progress,
-              item.step === "correct" || item.step === "wrong" || index === progress
+              item.step === "correct" ||
+                item.step === "wrong" ||
+                index === progress,
             )}
             onClick={() => handleQuestionClick(index)}
             aria-label={`Question ${index + 1}`}
@@ -50,10 +52,10 @@ const QuizProgressList = ({
               {item.step === "correct"
                 ? "✓"
                 : item.step === "wrong"
-                ? "✗"
-                : item.step === "current"
-                ? "→"
-                : ""}
+                  ? "✗"
+                  : item.step === "current"
+                    ? "→"
+                    : ""}
             </span>
           </button>
         ))}
@@ -93,7 +95,6 @@ const progressListTitle = css`
   font-size: var(--fontLarge);
   color: var(--text);
   margin: 0;
-  font-weight: bold;
 `;
 
 const progressList = css`
@@ -121,7 +122,7 @@ const progressList = css`
 const progressItem = (
   step: string,
   isCurrent: boolean,
-  isClickable: boolean
+  isClickable: boolean,
 ) => css`
   width: 100%;
   padding: 12px 16px;
@@ -129,10 +130,10 @@ const progressItem = (
     ${step === "correct"
       ? "var(--type12)"
       : step === "wrong"
-      ? "var(--type10)"
-      : isCurrent
-      ? "var(--point)"
-      : "var(--border)"};
+        ? "var(--type10)"
+        : isCurrent
+          ? "var(--point)"
+          : "var(--border)"};
   border-radius: 8px;
   background-color: ${isCurrent ? "var(--border)" : "var(--background)"};
   display: flex;
@@ -158,7 +159,6 @@ const progressItem = (
 const questionNumber = css`
   font-size: var(--fontMedium);
   color: var(--text);
-  font-weight: 500;
 `;
 
 const questionStatus = (step: string) => css`
@@ -166,11 +166,10 @@ const questionStatus = (step: string) => css`
   color: ${step === "correct"
     ? "var(--type12)"
     : step === "wrong"
-    ? "var(--type10)"
-    : step === "current"
-    ? "var(--point)"
-    : "var(--text)"};
-  font-weight: bold;
+      ? "var(--type10)"
+      : step === "current"
+        ? "var(--point)"
+        : "var(--text)"};
 `;
 
 export default QuizProgressList;

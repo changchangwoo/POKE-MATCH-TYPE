@@ -1,25 +1,63 @@
 import { css } from "@emotion/react";
+import { useState } from "react";
 
 interface RankingItem {
   rank: number;
   username: string;
   score: number;
+  time: number;
   date: string;
 }
 
+type TabType = "daily" | "weekly";
+
+const mockDaily: RankingItem[] = [
+  {
+    rank: 1,
+    username: "피카츄마스터",
+    score: 10,
+    time: 38,
+    date: "2024-02-05",
+  },
+  { rank: 2, username: "이상해씨", score: 9, time: 45, date: "2024-02-05" },
+  { rank: 3, username: "꼬부기킹", score: 9, time: 52, date: "2024-02-05" },
+  { rank: 4, username: "파이리덕후", score: 8, time: 61, date: "2024-02-05" },
+  { rank: 5, username: "뮤츠킬러", score: 8, time: 74, date: "2024-02-05" },
+  { rank: 6, username: "망나뇽러버", score: 8, time: 88, date: "2024-02-05" },
+  { rank: 7, username: "잠만보123", score: 7, time: 95, date: "2024-02-05" },
+  { rank: 8, username: "갸라도스", score: 7, time: 102, date: "2024-02-05" },
+  { rank: 9, username: "라프라스팬", score: 7, time: 118, date: "2024-02-05" },
+  { rank: 10, username: "포켓몬박사", score: 6, time: 130, date: "2024-02-05" },
+];
+
+const mockWeekly: RankingItem[] = [
+  { rank: 1, username: "타입장인", score: 10, time: 32, date: "2024-02-03" },
+  {
+    rank: 2,
+    username: "피카츄마스터",
+    score: 10,
+    time: 38,
+    date: "2024-02-05",
+  },
+  { rank: 3, username: "상성의신", score: 10, time: 41, date: "2024-02-01" },
+  { rank: 4, username: "이상해씨", score: 9, time: 45, date: "2024-02-05" },
+  { rank: 5, username: "꼬부기킹", score: 9, time: 52, date: "2024-02-03" },
+  { rank: 6, username: "루기아팬", score: 9, time: 58, date: "2024-02-02" },
+  { rank: 7, username: "파이리덕후", score: 8, time: 61, date: "2024-02-05" },
+  { rank: 8, username: "뮤츠킬러", score: 8, time: 74, date: "2024-02-04" },
+  { rank: 9, username: "망나뇽러버", score: 8, time: 88, date: "2024-02-01" },
+  { rank: 10, username: "잠만보123", score: 7, time: 95, date: "2024-02-04" },
+];
+
 const RankingList = () => {
-  const mockRankings: RankingItem[] = [
-    { rank: 1, username: "피카츄마스터", score: 10, date: "2024-02-05" },
-    { rank: 2, username: "이상해씨", score: 9, date: "2024-02-04" },
-    { rank: 3, username: "꼬부기킹", score: 9, date: "2024-02-03" },
-    { rank: 4, username: "파이리덕후", score: 8, date: "2024-02-05" },
-    { rank: 5, username: "뮤츠킬러", score: 8, date: "2024-02-02" },
-    { rank: 6, username: "망나뇽러버", score: 8, date: "2024-02-01" },
-    { rank: 7, username: "잠만보123", score: 7, date: "2024-02-04" },
-    { rank: 8, username: "갸라도스", score: 7, date: "2024-01-31" },
-    { rank: 9, username: "라프라스팬", score: 7, date: "2024-01-30" },
-    { rank: 10, username: "포켓몬박사", score: 6, date: "2024-02-05" },
-  ];
+  const [activeTab, setActiveTab] = useState<TabType>("daily");
+  const rankings = activeTab === "daily" ? mockDaily : mockWeekly;
+
+  const formatTime = (seconds: number) => {
+    const m = Math.floor(seconds / 60);
+    const s = seconds % 60;
+    return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+  };
 
   const getRankBadgeStyle = (rank: number) => {
     if (rank === 1) return rankBadgeGold;
@@ -39,11 +77,24 @@ const RankingList = () => {
     <div css={rankingContainer}>
       <div css={rankingHeader}>
         <h2 css={rankingTitle}>명예의 전당</h2>
-        <span css={rankingSubtitle}>최고 점수 순위</span>
+        <div css={tabRow}>
+          <button
+            css={tabButton(activeTab === "daily")}
+            onClick={() => setActiveTab("daily")}
+          >
+            일간
+          </button>
+          <button
+            css={tabButton(activeTab === "weekly")}
+            onClick={() => setActiveTab("weekly")}
+          >
+            주간
+          </button>
+        </div>
       </div>
 
-      <div css={rankingList}>
-        {mockRankings.map((item) => (
+      <div css={rankingListStyle}>
+        {rankings.map((item) => (
           <div key={item.rank} css={rankingItem(item.rank)}>
             <div css={rankBadge(item.rank)}>
               <span css={getRankBadgeStyle(item.rank)}>
@@ -57,17 +108,14 @@ const RankingList = () => {
             </div>
 
             <div css={scoreDisplay}>
-              <span css={scoreValue}>{item.score}</span>
-              <span css={scoreMax}>/10</span>
+              <div css={scoreRow}>
+                <span css={scoreValue}>{item.score}</span>
+                <span css={scoreMax}>/10</span>
+              </div>
+              <span css={timeDisplay}>{formatTime(item.time)}</span>
             </div>
           </div>
         ))}
-      </div>
-
-      <div css={rankingFooter}>
-        <span css={footerText}>
-          내 최고 기록: <strong>8점</strong> (15위)
-        </span>
       </div>
     </div>
   );
@@ -91,27 +139,42 @@ const rankingContainer = css`
 const rankingHeader = css`
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
   padding: 16px;
   background-color: var(--background);
   border: 1px solid var(--border);
   border-radius: 8px;
+  text-align: center;
 `;
 
 const rankingTitle = css`
   font-size: var(--fontLarge);
-  font-weight: 700;
   color: var(--text);
   margin: 0;
 `;
 
-const rankingSubtitle = css`
-  font-size: var(--fontSmall);
-  color: var(--text);
-  opacity: 0.7;
+const tabRow = css`
+  display: flex;
+  gap: 6px;
+  justify-content: center;
 `;
 
-const rankingList = css`
+const tabButton = (isActive: boolean) => css`
+  padding: 6px 16px;
+  border-radius: 6px;
+  border: 1px solid ${isActive ? "var(--point)" : "var(--border)"};
+  background-color: ${isActive ? "var(--point)" : "var(--background)"};
+  color: ${isActive ? "white" : "var(--text)"};
+  font-size: var(--fontSmall);
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    border-color: var(--point);
+  }
+`;
+
+const rankingListStyle = css`
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -196,7 +259,6 @@ const rankBadgeBronze = css`
 
 const rankBadgeDefault = css`
   font-size: var(--fontSmall);
-  font-weight: 700;
   color: var(--text);
   opacity: 0.7;
 `;
@@ -211,7 +273,6 @@ const rankingInfo = css`
 
 const username = css`
   font-size: var(--fontSmall);
-  font-weight: 600;
   color: var(--text);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -226,42 +287,33 @@ const rankDate = css`
 
 const scoreDisplay = css`
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+`;
+
+const scoreRow = css`
+  display: flex;
   align-items: baseline;
   gap: 2px;
 `;
 
 const scoreValue = css`
   font-size: var(--fontLarge);
-  font-weight: 700;
   color: var(--point);
 `;
 
 const scoreMax = css`
   font-size: var(--fontSmall);
-  font-weight: 400;
   color: var(--text);
   opacity: 0.6;
 `;
 
-const rankingFooter = css`
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 12px 16px;
-  background-color: var(--background);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-`;
-
-const footerText = css`
-  font-size: var(--fontSmall);
+const timeDisplay = css`
+  font-size: var(--fontExtraSmall);
   color: var(--text);
-  text-align: center;
-
-  strong {
-    color: var(--point);
-    font-weight: 700;
-  }
+  opacity: 0.5;
+  font-variant-numeric: tabular-nums;
 `;
 
 export default RankingList;

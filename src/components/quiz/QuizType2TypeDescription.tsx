@@ -67,7 +67,11 @@ const QuizType2TypeDescription = ({
       idx : -1
     }
    );
-  if (!attacker || !defender) return;
+
+  useEffect(() => {
+    setCheckedAnswer({ damage: 0, idx: -1 });
+  }, [progress]);
+  if (!attacker || !defender) return null;
   return (
     <>
       <h1 css={title}>

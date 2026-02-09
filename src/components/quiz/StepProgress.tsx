@@ -77,7 +77,6 @@ const container = css`
 
 const countText = css`
   font-size: var(--fontSmall);
-  font-weight: 600;
   white-space: nowrap;
   flex-shrink: 0;
 `;

@@ -1,7 +1,9 @@
 import { css } from "@emotion/react";
+import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import QuizHomeIntro from "@components/quizHome/QuizHomeIntro";
 import RankingList from "@components/quiz/RankingList";
+import { initSession } from "@hooks/useQuizSession";
 
 const VALID_QUIZ_IDS = [1, 2, 3, 4];
 
@@ -10,14 +12,20 @@ const QuizIntroPage = () => {
   const navigate = useNavigate();
   const quizId = Number(id);
 
-  if (!id || !VALID_QUIZ_IDS.includes(quizId)) {
-    navigate("/quiz", { replace: true });
-    return null;
-  }
+  useEffect(() => {
+    if (!id || !VALID_QUIZ_IDS.includes(quizId)) {
+      navigate("/quiz", { replace: true });
+    }
+  }, [id, quizId, navigate]);
 
   const handleStart = () => {
+    initSession(quizId);
     navigate(`/quiz/${quizId}/play`);
   };
+
+  if (!id || !VALID_QUIZ_IDS.includes(quizId)) {
+    return null;
+  }
 
   return (
     <div css={quizPageWrapper}>

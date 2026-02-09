@@ -81,7 +81,6 @@ export const searchHeader = css`
     font-size: var(--fontLarge);
     color: var(--type1);
     margin: 0;
-    font-weight: normal;
   }
 `;
 

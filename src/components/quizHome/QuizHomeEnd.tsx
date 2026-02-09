@@ -24,7 +24,7 @@ const QuizHomeEnd = ({
   onSelectDifferent,
 }: QuizHomeEndProps) => {
   const correctCount = progressArr.filter(
-    (item) => item.step === "correct"
+    (item) => item.step === "correct",
   ).length;
 
   const resultImages = {
@@ -54,13 +54,9 @@ const QuizHomeEnd = ({
   return (
     <div css={endContainer}>
       <div css={scoreSection}>
-        <h2 css={scoreText}>
-          10문제 중 {correctCount}개 정답
-        </h2>
+        <h2 css={scoreText}>10문제 중 {correctCount}개 정답</h2>
         {elapsedSeconds != null && (
-          <span css={timeText}>
-            소요 시간 {formatTime(elapsedSeconds)}
-          </span>
+          <span css={timeText}>소요 시간 {formatTime(elapsedSeconds)}</span>
         )}
       </div>
 
@@ -81,11 +77,7 @@ const QuizHomeEnd = ({
       </div>
 
       <div css={buttonGroup}>
-        <button
-          aria-label="Retry Quiz"
-          css={retryButton}
-          onClick={handleRetry}
-        >
+        <button aria-label="Retry Quiz" css={retryButton} onClick={handleRetry}>
           다시 도전
         </button>
         <button
@@ -125,13 +117,11 @@ const scoreText = css`
   font-size: var(--fontLarge);
   color: var(--text);
   margin: 0;
-  font-weight: bold;
 `;
 
 const timeText = css`
   font-size: var(--fontMedium);
   color: var(--point);
-  font-weight: 600;
   font-variant-numeric: tabular-nums;
 `;
 
@@ -178,7 +168,6 @@ const retryButton = css`
   cursor: pointer;
   color: var(--text);
   font-size: var(--fontMedium);
-  font-weight: 500;
 
   &:hover {
     transition: all 0.2s;
@@ -195,7 +184,6 @@ const selectButton = css`
   cursor: pointer;
   color: var(--point);
   font-size: var(--fontMedium);
-  font-weight: 500;
 
   &:hover {
     transition: all 0.2s;

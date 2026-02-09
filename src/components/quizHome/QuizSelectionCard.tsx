@@ -14,10 +14,7 @@ interface QuizSelectionCardProps {
   onSelect: (quizId: number) => void;
 }
 
-const QuizSelectionCard = ({
-  quiz,
-  onSelect,
-}: QuizSelectionCardProps) => {
+const QuizSelectionCard = ({ quiz, onSelect }: QuizSelectionCardProps) => {
   const difficultyColors = {
     easy: "var(--type12)",
     medium: "var(--type13)",
@@ -53,7 +50,6 @@ const QuizSelectionCard = ({
 
           <p css={cardStory}>{quiz.story}</p>
           <p css={cardDescription}>{quiz.description}</p>
-
         </div>
       </div>
     </button>
@@ -163,7 +159,6 @@ const difficultyBadge = (color: string) => css`
 const cardStory = css`
   font-size: var(--fontSmall);
   color: var(--point);
-  font-weight: 500;
   margin: 0;
   line-height: 1.4;
   font-style: italic;
@@ -181,7 +176,5 @@ const cardDescription = css`
     display: none;
   }
 `;
-
-
 
 export default QuizSelectionCard;

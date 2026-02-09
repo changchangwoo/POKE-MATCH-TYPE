@@ -146,63 +146,44 @@ const QuizHomeMain = ({
       return;
     }
 
-    // Use functional update to avoid dependency on progressArr
-    setProgressArr((prev) => {
-      const currentStatus = prev[progress]?.step;
+    const currentStatus = progressArr[progress]?.step;
 
-      // If navigating to a previously answered question
-      if (currentStatus === "correct" || currentStatus === "wrong") {
-        // Only show Next button, no modal
-        setIsNext(true);
+    if (currentStatus === "correct" || currentStatus === "wrong") {
+      setIsNext(true);
 
-        // Try to restore answer text from session
-        const session = sessionStorage.getItem("quizSession");
-        if (session) {
-          const parsed = JSON.parse(session);
-          const questionData = parsed.questions[progress];
-          if (questionData && questionData.correctAnswer) {
-            if (questionData.correctAnswer.name) {
-              setAnswerText(
-                getTranslateType(
-                  questionData.correctAnswer.name,
-                  language.type,
-                ),
-              );
-            } else if (questionData.correctAnswer.damage) {
-              setAnswerText(`${questionData.correctAnswer.damage}x`);
-            }
+      const session = sessionStorage.getItem("quizSession");
+      if (session) {
+        const parsed = JSON.parse(session);
+        const questionData = parsed.questions[progress];
+        if (questionData && questionData.correctAnswer) {
+          if (questionData.correctAnswer.name) {
+            setAnswerText(
+              getTranslateType(questionData.correctAnswer.name, language.type),
+            );
+          } else if (questionData.correctAnswer.damage) {
+            setAnswerText(`${questionData.correctAnswer.damage}x`);
           }
         }
-
-        // Don't update progressArr, return unchanged
-        return prev;
       }
-
-      // Moving to a new question
+    } else {
       setAlertType(null);
       setIsNext(false);
-      return prev.map((item, idx) => {
-        // Set current question to "current"
-        if (idx === progress) {
-          return { step: "current" };
-        }
-        // Reset previous "current" to "none" if not answered
-        if (item.step === "current") {
-          return { step: "none" };
-        }
-        // Keep other statuses unchanged
-        return item;
-      });
-    });
+      setProgressArr((prev) =>
+        prev.map((item, idx) => {
+          if (idx === progress) return { step: "current" };
+          if (item.step === "current") return { step: "none" };
+          return item;
+        }),
+      );
+    }
 
-    // Update session progress
     const session = sessionStorage.getItem("quizSession");
     if (session) {
       const parsed = JSON.parse(session);
       parsed.progress = progress;
       sessionStorage.setItem("quizSession", JSON.stringify(parsed));
     }
-  }, [progress, setProgressArr, onComplete, language.type]);
+  }, [progress, onComplete, language.type]);
 
   return (
     <div css={quizMainContainer}>
@@ -231,7 +212,7 @@ const QuizHomeMain = ({
         </div>
       </div>
       <div css={quizCardContainer}>
-        {(() => {
+        {progress >= 10 ? null : (() => {
           switch (currentQuizType) {
             case 0:
               return (
@@ -302,14 +283,15 @@ const quizMainContainer = css`
   flex-direction: column;
   align-items: flex-start;
   max-height: 800px;
+  margin-top: 20px;
 `;
 
 const controlBar = css`
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-bottom: 12px;
+  gap: 20px;
+  margin-bottom: 30px;
 `;
 
 const topRow = css`
@@ -338,7 +320,6 @@ const progressRow = css`
 
 const timerDisplay = css`
   font-size: var(--fontMedium);
-  font-weight: 700;
   color: var(--point);
   font-variant-numeric: tabular-nums;
   padding: 8px 16px;

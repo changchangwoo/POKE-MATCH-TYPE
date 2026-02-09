@@ -28,7 +28,7 @@ const QuizHomeIntro = ({ selectedQuiz, onStart }: QuizHomeIntroProps) => {
       title: "타입 종합 퀴즈",
       difficulty: "medium" as const,
       story: "숲 속에서 길을 잃은 피카츄를 도와 안전한 길을 찾아주세요!",
-      lore: "깊은 숲 속에서 길을 잃은 피카츄가 도움을 요청하고 있어요. \n 각 타입의 강점과 약점을 정확히 꿰뚫고 피카츄를 무사히 집까지 데려다주세요!",
+      lore: "깊은 숲 속에서 피카츄가 도움을 요청하고 있어요. \n 각 타입의 강점과 약점을 정확히 꿰뚫고 피카츄를 무사히 집까지 데려다주세요!",
       image: q1Intro,
     },
     {
@@ -43,8 +43,8 @@ const QuizHomeIntro = ({ selectedQuiz, onStart }: QuizHomeIntroProps) => {
       id: 3,
       title: "부등호 방향 맞추기",
       difficulty: "easy" as const,
-      story: "소방관 꼬부기와 함께 침착하게 불을 진압하세요!",
-      lore: "마을에 화재가 발생했어요! 소방관 꼬부기가 출동했습니다. \n두 타입의 상성을 비교하고 올바른 부등호 방향을 선택해서 꼬부기의 진화 작전을 도와주세요!",
+      story: "소방관 꼬부기와 함께 불을 진압하세요!",
+      lore: "마을에 화재가 발생했어요! \n 소방관 꼬부기가 출동했습니다. \n두 타입의 상성을 비교하고 올바른 부등호 방향을 선택해서 꼬부기의 진화 작전을 도와주세요!",
       image: q3Intro,
     },
     {
@@ -52,7 +52,7 @@ const QuizHomeIntro = ({ selectedQuiz, onStart }: QuizHomeIntroProps) => {
       title: "타입 배수 구하기",
       difficulty: "medium" as const,
       story: "파이리 산타가 들키지 않고 선물을 전달할 수 있도록 도와주세요!",
-      lore: "크리스마스 이브, 파이리 산타가 포켓몬 마을에 선물을 배달하고 있어요. \n정확한 배수를 계산해야 들키지 않고 선물을 전달할 수 있답니다!",
+      lore: "모두가 잠든 크리스마스 이브 \n 파이리 산타가 마을에 선물을 배달하고 있어요. \n정확한 배수를 계산해야 들키지 않고 선물을 전달할 수 있답니다!",
       image: q4Intro,
     },
   ];
@@ -76,7 +76,14 @@ const QuizHomeIntro = ({ selectedQuiz, onStart }: QuizHomeIntroProps) => {
           </span>
         </div>
         <p css={introStory}>{currentQuiz.story}</p>
-        <p css={introLore}>{currentQuiz.lore}</p>
+        <p css={introLore}>
+          {currentQuiz.lore.split("\n").map((line, i) => (
+            <span key={i}>
+              {i > 0 && <br />}
+              {line}
+            </span>
+          ))}
+        </p>
       </div>
       <button aria-label="Start Quiz" css={startButton} onClick={onStart}>
         시작하기
@@ -128,14 +135,12 @@ const introTitle = css`
   font-size: var(--fontLarge);
   color: var(--text);
   margin: 0;
-  font-weight: bold;
 `;
 
 const introDifficultyBadge = (color: string) => css`
   padding: 4px 12px;
   border-radius: 12px;
   font-size: var(--fontSmall);
-  font-weight: 600;
   background-color: ${color};
   color: var(--background);
   white-space: nowrap;
@@ -144,7 +149,6 @@ const introDifficultyBadge = (color: string) => css`
 const introStory = css`
   font-size: var(--fontMedium);
   color: var(--point);
-  font-weight: 500;
   margin: 0;
   line-height: 1.5;
   font-style: italic;

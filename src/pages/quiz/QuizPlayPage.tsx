@@ -2,7 +2,11 @@ import { css } from "@emotion/react";
 import { useCallback, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import QuizHomeMain from "@components/quizHome/QuizHomeMain";
-import { loadSession, clearSession, finishSession } from "@hooks/useQuizSession";
+import {
+  loadSession,
+  clearSession,
+  finishSession,
+} from "@hooks/useQuizSession";
 
 const VALID_QUIZ_IDS = [1, 2, 3, 4];
 
@@ -12,7 +16,7 @@ const QuizPlayPage = () => {
   const quizId = Number(id);
 
   const [progressArr, setProgressArr] = useState<{ step: string }[]>(() =>
-    new Array(10).fill(null).map(() => ({ step: "none" }))
+    new Array(10).fill(null).map(() => ({ step: "none" })),
   );
   const [progress, setProgress] = useState<number>(0);
   const [questionTypes, setQuestionTypes] = useState<number[]>([]);
@@ -32,9 +36,7 @@ const QuizPlayPage = () => {
 
     setProgress(session.progress);
     setQuestionTypes(session.questionTypes);
-    setProgressArr(
-      session.questions.map((q) => ({ step: q.status }))
-    );
+    setProgressArr(session.questions.map((q) => ({ step: q.status })));
     setSessionLoaded(true);
   }, []);
 
@@ -67,7 +69,6 @@ const QuizPlayPage = () => {
   return (
     <div css={quizPageWrapper}>
       <div css={pageContainer}>
-        <div css={contentWrapper}>
         <QuizHomeMain
           selectedQuiz={quizId}
           questionTypes={questionTypes}
@@ -78,7 +79,6 @@ const QuizPlayPage = () => {
           onComplete={handleComplete}
           onExit={handleExit}
         />
-        </div>
       </div>
     </div>
   );
@@ -110,19 +110,6 @@ const pageContainer = css`
   @media (max-width: 768px) {
     flex-direction: column;
     height: auto;
-  }
-`;
-
-const contentWrapper = css`
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-
-  @media (max-width: 768px) {
-    flex: 1;
-    width: 100%;
   }
 `;
 
