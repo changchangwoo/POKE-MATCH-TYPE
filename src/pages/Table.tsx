@@ -1,6 +1,5 @@
 import { css } from "@emotion/react";
 import { useContext, useState } from "react";
-import KakaoAdfitBanner from "@ads/KakaoAdfitBanner";
 import TableDescription from "@components/table/TableDescription";
 import typeEffectivenessData from "@data/tableData.json";
 import { LanguageContext } from "@services/getInitialData";
@@ -33,14 +32,13 @@ const Table = () => {
   return (
     <>
       <div css={tableContainer}>
-        <KakaoAdfitBanner />
-        <h1>{text.TABLE.TITLE}</h1>
+        {/* <h1>{text.TABLE.TITLE}</h1> */}
         <div css={tableContents}>
           <div>
             <table>
               <thead>
                 <tr>
-                  <th onClick={handleAllHeader}>{text.TABLE.SELECT_ALL}</th>
+                  <th onClick={handleAllHeader}></th>
                   {columnHeaders.map((header, index) => (
                     <th
                       css={tableHeaderStyle(header.no, false, true)}
@@ -84,22 +82,35 @@ const Table = () => {
 
 const tableContainer = css`
   width: 100%;
+  max-width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 30px;
+  align-items: stretch;
   gap: 20px;
   color: var(--text);
+
+  > div:first-of-type {
+    flex: 7.3;
+    min-width: 0;
+  }
+  > div:last-of-type {
+    flex: 2.7;
+    min-width: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding-top: 10px;
+    height: auto;
+  }
 `;
 
 const tableContents = css`
-  width: 100%;
+  margin: auto;
+  width: fit-content;
+  max-width: 100%;
   box-sizing: border-box;
   overflow-x: auto;
-  background-color: var(--background);
-  border: 1px solid var(--border);
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -109,15 +120,17 @@ const tableContents = css`
   }
 
   table {
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     width: max-content;
-    border-style: hidden;
-    box-shadow: 0 0 0 1px var(--border);
+    border: 1px solid var(--border);
     font-size: var(--fontMedium);
+    border-radius: 20px;
+    overflow: hidden;
   }
 
   thead th {
-    width: 90px;
+    width: 50px;
     :nth-of-type(1) {
       background-color: var(--background);
       position: sticky;
@@ -141,6 +154,11 @@ const tableContents = css`
       filter: brightness(85%);
       transition: all 0.2s;
     }
+  }
+
+  tbody tr {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 30px;
   }
 
   td {

@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { useFetchQuizType2 } from "@hooks/queries/useFetchQuizType2";
 import { title } from "./QuizType0DamageEffectiveness";
 import { css } from "@emotion/react";
@@ -20,8 +20,44 @@ const QuizType2TypeDescription = ({
   progress,
   isNext,
 }: QuizType2Props) => {
-      const {language, text} = useContext(LanguageContext);
-  const { attacker, defender, questionArr, answerIdx, answer } = useFetchQuizType2(progress);
+  const {language, text} = useContext(LanguageContext);
+
+  // Check session storage for cached question data
+  const getCachedQuestionData = () => {
+    const session = sessionStorage.getItem("quizSession");
+    if (session) {
+      const parsed = JSON.parse(session);
+      return parsed.questions[progress]?.questionData;
+    }
+    return null;
+  };
+
+  const cachedData = getCachedQuestionData();
+
+  // Fetch question data, using cached data if available
+  const { attacker, defender, questionArr, answerIdx, answer } = useFetchQuizType2(progress, cachedData);
+
+  // Save newly fetched data to session storage
+  useEffect(() => {
+    if (questionArr && questionArr.length > 0 && attacker && defender && !cachedData) {
+      const session = sessionStorage.getItem("quizSession");
+      if (session) {
+        const parsed = JSON.parse(session);
+        parsed.questions[progress] = {
+          ...parsed.questions[progress],
+          questionData: {
+            questionArr,
+            answerIdx,
+            attacker,
+            defender,
+            answer,
+          },
+        };
+        sessionStorage.setItem("quizSession", JSON.stringify(parsed));
+      }
+    }
+  }, [questionArr, answerIdx, attacker, defender, answer, cachedData, progress]);
+
   const [checkedAnswer, setCheckedAnswer] = useState<{
     damage : number;
     idx : number
@@ -31,7 +67,11 @@ const QuizType2TypeDescription = ({
       idx : -1
     }
    );
-  if (!attacker || !defender) return;
+
+  useEffect(() => {
+    setCheckedAnswer({ damage: 0, idx: -1 });
+  }, [progress]);
+  if (!attacker || !defender) return null;
   return (
     <>
       <h1 css={title}>
@@ -53,7 +93,7 @@ const QuizType2TypeDescription = ({
         </div>
         <div css={quizTypeContainer} data-name={text.QUIZ.MAIN_3.DATA_NAME_DEFENSE}>
           <>
-            {defender.map((type, idx) => {
+            {defender.map((type: { no: number; name: string }, idx: number) => {
               return (
                 <TypeBadge no={type.no} key={idx}>
                   {getTranslateType(type.name, language.type)}
@@ -64,7 +104,7 @@ const QuizType2TypeDescription = ({
         </div>
       </div>
       <div css={selectDamageContainer(isNext)}>
-        {questionArr.map((damage, idx) => {
+        {questionArr.map((damage: number, idx: number) => {
           const isChecked = checkedAnswer.idx === idx;
           return (
             <button

@@ -30,6 +30,23 @@ const QuizType1TypeInference = ({
   const [randBlank, setRandBlank] = useState<any>(null);
 
   useEffect(() => {
+    // Check session storage for cached question data
+    const session = sessionStorage.getItem("quizSession");
+    if (session) {
+      const parsed = JSON.parse(session);
+      const cachedData = parsed.questions[progress]?.questionData;
+
+      // If cached data exists, restore it
+      if (cachedData && cachedData.questionArr) {
+        setQuetstionArr(cachedData.questionArr);
+        setAnswerIdx(cachedData.answerIdx);
+        setRandQuiz(cachedData.randQuiz);
+        setRandBlank(cachedData.randBlank);
+        return; // Early return, don't generate new data
+      }
+    }
+
+    // Generate new data only if no cache exists
     const randQuiz = getRandomNum(quizType1_data.length);
     let randBlank = 0;
     while (
@@ -62,12 +79,28 @@ const QuizType1TypeInference = ({
     setRandQuiz(randQuiz)
     setRandBlank(randBlank)
     setQuetstionArr(shuffleResult);
+
+    // Save to session storage
+    const session2 = sessionStorage.getItem("quizSession");
+    if (session2) {
+      const parsed = JSON.parse(session2);
+      parsed.questions[progress] = {
+        ...parsed.questions[progress],
+        questionData: {
+          questionArr: shuffleResult,
+          answerIdx,
+          randQuiz,
+          randBlank,
+        },
+      };
+      sessionStorage.setItem("quizSession", JSON.stringify(parsed));
+    }
   }, [progress]);
   return (
     <>
       <h1 css={title}>
         <div>
-          <div style={{ display: "inline-block", marginRight: "5px"}}>
+          <div css={inlineTypeBadgeWrapper}>
             <TypeBadge no={100} quizMode={true}>
               ?
             </TypeBadge>
@@ -88,14 +121,7 @@ const QuizType1TypeInference = ({
                   {getTranslateType(type.name, language.type)}
                 </TypeBadge>
               )}
-              <h2
-                style={{
-                  color:
-                    idx === quizType1_data[randQuiz].length - 1
-                      ? "transparent"
-                      : "var(--text)",
-                }}
-              >
+              <h2 css={arrowText(idx === quizType1_data[randQuiz].length - 1)}>
                 {"<"}
               </h2>
             </React.Fragment>
@@ -139,6 +165,15 @@ const badgeContainer = css`
   align-items: center;
   justify-content: center;
   gap: 20px;
+`;
+
+const inlineTypeBadgeWrapper = css`
+  display: inline-block;
+  margin-right: 5px;
+`;
+
+const arrowText = (isLast: boolean) => css`
+  color: ${isLast ? "transparent" : "var(--text)"};
 `;
 
 export default QuizType1TypeInference;

@@ -4,6 +4,7 @@ html,
   font-family: 'NeoDunggeunmo', sans-serif;
   background-color: var(--primary);
   display: flex;
+  flex-direction : column;
   justify-content: center;
   overflow-x: hidden;
 }

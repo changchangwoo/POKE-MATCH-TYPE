@@ -32,13 +32,12 @@ const MatchCard = ({
   setSelectedTerastal,
   setSearchParams,
 }: MatchCardProps) => {
-  const { language, text } = useContext(LanguageContext);
+  const { language } = useContext(LanguageContext);
   const name = usePokemonName(MatchInfo);
   const searchLanguage = MatchInfo.searchLanguage;
 
   return (
     <div css={matchCardContainer}>
-      <h1>{text.MAIN.MATCH.MATCH_CARD_TITLE}</h1>
       <div css={imgBox(MatchInfo.types[0].no)}>
         <img
           src={MatchInfo.imgs}
@@ -90,16 +89,25 @@ export const matchCardContainer = css`
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 10px;
-  min-height: 450px;
+  min-height: 510px;
 
   .addBox {
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 20px;
+    margin-top: auto;
+  }
+
+  @media (max-width: 768px) {
+    min-height: auto;
+
+    .addBox {
+      margin-top: 0;
+    }
   }
 `;
 
@@ -130,7 +138,6 @@ export const pokeTypes = css`
   justify-content: center;
   align-items: center;
   color: var(--background);
-  margin: auto;
   margin-bottom: 10px;
 `;
 

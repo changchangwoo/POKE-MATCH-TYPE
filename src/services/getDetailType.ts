@@ -23,34 +23,36 @@ export const getDetailType = (typeData: DamageRelations[]) => {
     updateTypes: DamageData[],
     damageRelations: DamageRelations[]
   ) => {
-    const typeMap = new Map<string, DamageData>();
-    for (const type of updateTypes) {
-      typeMap.set(type.name, type);
-    }
+    return updateTypes.map((type) => {
+      let multiplier = 1;
 
-    for (const relation of damageRelations) {
-      relation.types.forEach((element) => {
-        const typeToUpdate = typeMap.get(element.name);
-        if (typeToUpdate) {
+      for (const relation of damageRelations) {
+        const matchingType = relation.types.find((el) => el.name === type.name);
+        if (matchingType) {
           switch (relation.key) {
             case "doubleDamage":
-              typeToUpdate.damage *= 2;
+              multiplier *= 2;
               break;
             case "halfDamage":
-              typeToUpdate.damage *= 0.5;
+              multiplier *= 0.5;
               break;
             case "noDamage":
-              typeToUpdate.damage *= 0;
+              multiplier = 0;
               break;
           }
         }
-      });
-    }
+      }
+
+      return {
+        ...type,
+        damage: type.damage * multiplier
+      };
+    });
   };
 
   const allDamageRelations = typeData.flat();
-  getCirculType(initialTypes, allDamageRelations);
-  return initialTypes;
+  const updatedTypes = getCirculType(initialTypes, allDamageRelations);
+  return updatedTypes;
 };
 
 export const getGroupType = (types: DamageData[]) => {

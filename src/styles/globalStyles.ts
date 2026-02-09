@@ -15,7 +15,7 @@ type ThemeStyles = {
 const themes: Record<Theme, ThemeStyles> = {
   light: {
     point: "#DE7038",
-    primary: "#f8f9fa",
+    primary: "#EDF0F4",
     background: "#ffffff",
     text: "#000000",
     border: "#d9d9d9",
@@ -76,6 +76,8 @@ export const globalStyles = (themeMode: keyof typeof themes = "light") => {
       --type20: #4c4948; /* shadow */
       --type100: grey; /* blank */
 
+        --fontTitle: 26px;
+        --fontExtra: 20px;
         --fontLarge: 16px;
         --fontMedium: 14px;
         --fontSmall : 13px;

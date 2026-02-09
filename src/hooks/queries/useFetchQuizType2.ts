@@ -3,10 +3,15 @@ import { fetchDetailType } from "@api/api";
 import { getDetailType, getGroupType } from "@services/getDetailType";
 import { generateQuizType2Question, generateRandomTypeNos } from "@services/generateQuiz";
 
-export const useFetchQuizType2 = (progress: number) => {
+export const useFetchQuizType2 = (progress: number, cachedData?: any) => {
   const query = useQuery({
     queryKey: ["quizType2", progress],
     queryFn: async () => {
+      // If cached data exists, return it immediately
+      if (cachedData) {
+        return cachedData;
+      }
+
       const randomTypes = generateRandomTypeNos();
       const fetchDatas = await fetchDetailType(randomTypes);
       const circulateTypeData = await getDetailType(fetchDatas);
@@ -18,7 +23,7 @@ export const useFetchQuizType2 = (progress: number) => {
       return quiz;
     },
     staleTime: Infinity,
-    gcTime: 0,
+    gcTime: 1000 * 60 * 5, // 5 minutes instead of 0
     retry: 2,
   });
 

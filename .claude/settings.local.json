@@ -11,7 +11,15 @@
       "Bash(npx vite build:*)",
       "Bash(dir:*)",
       "Bash(cd:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(git stash:*)",
+      "Bash(ren:*)",
+      "Bash(npm run dev:*)",
+      "Bash(timeout /t:*)",
+      "Bash(timeout 5 cmd:*)",
+      "Bash(npm run type-check:*)",
+      "Bash(npm run:*)",
+      "Bash(git checkout:*)"
     ],
     "deny": [],
     "ask": []

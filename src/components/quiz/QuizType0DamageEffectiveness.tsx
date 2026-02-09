@@ -5,7 +5,7 @@ import { getTranslateType } from "@utils/getTranslateType";
 import { imgBox, pokeTypes } from "@components/match/MatchCard";
 import { useGetDetailPokemonForQuiz } from "@hooks/useGetDetailPokemonForQuiz";
 import QuizAnswer from "./QuizAnswer";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { LanguageContext } from "@services/getInitialData";
 import { QuizType0Skeleton } from "@components/skeleton/QuizSkeleton";
 
@@ -25,8 +25,52 @@ const QuizType0DamageEffectiveness = ({
   isNext,
 }: QuizType0Props) => {
   const { language, text } = useContext(LanguageContext);
+
+  // Check session storage for cached question data
+  const getCachedQuestionData = () => {
+    const session = sessionStorage.getItem("quizSession");
+    if (session) {
+      const parsed = JSON.parse(session);
+      return parsed.questions[progress]?.questionData;
+    }
+    return null;
+  };
+
+  const cachedData = getCachedQuestionData();
+
+  // Fetch question data, using cached data if available
   const { questionArr, quizNum, groupResult, matchDatas, answerIdx } =
-    useGetDetailPokemonForQuiz(progress);
+    useGetDetailPokemonForQuiz(progress, cachedData);
+
+  // Save newly fetched data to session storage
+  useEffect(() => {
+    if (questionArr && questionArr.length > 0 && !cachedData) {
+      const session = sessionStorage.getItem("quizSession");
+      if (session) {
+        const parsed = JSON.parse(session);
+        parsed.questions[progress] = {
+          ...parsed.questions[progress],
+          questionData: {
+            questionArr,
+            answerIdx,
+            matchDatas,
+            groupResult,
+            quizNum,
+          },
+        };
+        sessionStorage.setItem("quizSession", JSON.stringify(parsed));
+      }
+    }
+  }, [
+    questionArr,
+    answerIdx,
+    matchDatas,
+    groupResult,
+    quizNum,
+    cachedData,
+    progress,
+  ]);
+
   if (!questionArr || quizNum === undefined || !groupResult || !matchDatas) {
     return <QuizType0Skeleton />;
   }
@@ -46,7 +90,7 @@ const QuizType0DamageEffectiveness = ({
         <img src={matchDatas.imgs} alt={`Pokemon ${matchDatas.no}`} />
       </div>
       <div css={pokeTypes}>
-        {matchDatas.types.map((type) => (
+        {matchDatas.types.map((type: { no: number; name: string }) => (
           <TypeBadge key={type.no} no={type.no}>
             {getTranslateType(type.name, language.type)}
           </TypeBadge>
@@ -66,7 +110,6 @@ export default QuizType0DamageEffectiveness;
 
 export const title = css`
   b {
-    font-weight: bold;
   }
   text-align: center;
   width: 100%;

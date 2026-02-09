@@ -58,6 +58,10 @@ const FILTER_EXCEPTION = [
   "urshifu-rapid-strike-gmax",
 ];
 
+const FILTER_VARIETIES_REGEX = FILTER_VARIETIES.map((pattern) => new RegExp(pattern));
+const FILTER_EXTRA_REGEX = FILTER_EXTRA.map((pattern) => new RegExp(pattern));
+const FILTER_EXCEPTION_REGEX = FILTER_EXCEPTION.map((pattern) => new RegExp(pattern));
+
 export const getFilterFixVarieties = (
   pokeDexHash: Map<number, PokeDex>,
   no: string,
@@ -78,7 +82,6 @@ export const getFilterFixVarieties = (
   );
   const originData = fetchVarietiesData;
   // 두 배열의 개수가 일치하는 경우
-  console.log(filterPokeDexVarieties, filterfetchVarieties)
   if (filterPokeDexVarieties?.length === filterfetchVarieties.length - 1) {
     filterPokeDexVarieties?.forEach((el) => {
       if (el.name === "더미") {
@@ -111,18 +114,13 @@ const getFilterfetchVarieties = (
   }[],
   language: LanguageType
 ) => {
-  // 받아온 포켓몬 전체 폼 확인하는 변수 console.log(fetchVarietiesData)
-  const regexes = FILTER_VARIETIES.map((pattern) => new RegExp(pattern));
-  const regexesExtra = FILTER_EXTRA.map((pattern) => new RegExp(pattern));
-  const regexesException = FILTER_EXCEPTION.map(
-    (pattern) => new RegExp(pattern)
-  );
+  // 받아온 포켓몬 전체 폼 확인하는 변수
   const filterDatas: { idx: number; name: string }[] = [];
   fetchVarietiesData.forEach((element, idx) => {
     const name = element.pokemon.name;
-    const isException = regexesException.some((regex) => regex.test(name));
-    const isMatch = regexes.some((regex) => regex.test(name));
-    const isExtra = regexesExtra.some((regex) => regex.test(name));
+    const isException = FILTER_EXCEPTION_REGEX.some((regex) => regex.test(name));
+    const isMatch = FILTER_VARIETIES_REGEX.some((regex) => regex.test(name));
+    const isExtra = FILTER_EXTRA_REGEX.some((regex) => regex.test(name));
 
     if (isExtra) {
       filterDatas.push({ idx, name: "removeData" });

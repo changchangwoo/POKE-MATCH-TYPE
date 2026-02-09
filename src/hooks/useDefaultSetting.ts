@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const useDefaultSetting = (imageList: string[]) => {
+const useDefaultSetting = (imageList: readonly string[]) => {
   
   useEffect(() => {
     imageList.forEach((src) => {

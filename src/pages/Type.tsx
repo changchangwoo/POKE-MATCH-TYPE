@@ -1,7 +1,6 @@
 import { css } from "@emotion/react";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import KakaoAdfitBanner from "@ads/KakaoAdfitBanner";
 import TypeCard from "@components/commons/TypeCard";
 import SelectType from "@components/commons/SelectType";
 import { CheckedType } from "@models/pokemonData";
@@ -23,21 +22,20 @@ const Type = () => {
     if (checkedType.length > 0) {
       sessionStorage.setItem(
         location.pathname + "/matchDatas",
-        JSON.stringify(checkedType)
+        JSON.stringify(checkedType),
       );
     }
   }, [checkedType, location.pathname]);
 
   useEffect(() => {
+    const pathPrefix = location.pathname;
     const getSessionCheckedDatas = sessionStorage.getItem(
-      location.pathname + "/matchDatas"
+      `${pathPrefix}/matchDatas`,
     );
     const getSessionTypeCheck = sessionStorage.getItem(
-      location.pathname + "/typecheck"
+      `${pathPrefix}/typecheck`,
     );
-    const getSessionTerastal = sessionStorage.getItem(
-      location.pathname + "/terastal"
-    );
+    const getSessionTerastal = sessionStorage.getItem(`${pathPrefix}/terastal`);
 
     if (getSessionCheckedDatas) {
       const parsedCheckedDatas = JSON.parse(getSessionCheckedDatas);
@@ -57,32 +55,49 @@ const Type = () => {
   }, [location.pathname]);
 
   return (
-    <div css={matchContainer}>
-      <KakaoAdfitBanner />
-      <SelectType
-        checkedType={checkedType}
-        setCheckedType={setCheckedType}
-        selectedAbility={selectedAbility}
-        selectedTerastal={selectedTerastal}
-        setSelectedAbility={setSelectedAbility}
-        setSelectedTerastal={setSelectedTerastal}
-      />
+    <>
+      <div css={matchContainer}>
+        <SelectType
+          checkedType={checkedType}
+          setCheckedType={setCheckedType}
+          selectedAbility={selectedAbility}
+          selectedTerastal={selectedTerastal}
+          setSelectedAbility={setSelectedAbility}
+          setSelectedTerastal={setSelectedTerastal}
+        />
 
-      <TypeCard
-        MatchTypes={checkedType}
-        selectedAbility={selectedAbility}
-        selectedTerastal_no={selectedTerastal.no}
-      />
-    </div>
+        <TypeCard
+          MatchTypes={checkedType}
+          selectedAbility={selectedAbility}
+          selectedTerastal_no={selectedTerastal.no}
+        />
+      </div>
+    </>
   );
 };
 
 const matchContainer = css`
   width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
   gap: 20px;
   justify-content: center;
+  align-items: stretch;
+
+  > div {
+    flex: 1;
+    min-width: 0;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding-top: 10px;
+    height: auto;
+
+    > div {
+      width: 100%;
+    }
+  }
 `;
 
 export default Type;

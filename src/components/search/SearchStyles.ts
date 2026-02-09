@@ -3,65 +3,210 @@ import { css } from "@emotion/react";
 export const searchContainer = css`
   width: 100%;
   height: auto;
+
+  @media (max-width: 768px) {
+    padding-top: 20px;
+  }
+`;
+
+export const searchHeader = css`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    gap: 8px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    position: relative;
+    animation: logoHop 900ms ease-out 1;
+  }
+
+  .logo:nth-of-type(2) {
+    animation-delay: 120ms;
+  }
+
+  .logo:nth-of-type(3) {
+    animation-delay: 240ms;
+  }
+
+  @keyframes logoHop {
+    0% {
+      top: 0;
+    }
+    30% {
+      top: -12px;
+    }
+    60% {
+      top: 0;
+    }
+    80% {
+      top: -6px;
+    }
+    100% {
+      top: 0;
+    }
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  h1 {
+    font-size: var(--fontTitle);
+    color: var(--text);
+    margin: 0;
+  }
+
+  h2 {
+    font-size: var(--fontLarge);
+    color: var(--type1);
+    margin: 0;
+  }
+`;
+
+export const inputWrapper = css`
   position: relative;
+  width: 100%;
 `;
 
 export const inputBox = css`
   position: relative;
   background-color: var(--background);
-  padding: 10px;
+  padding: 0 20px;
   box-sizing: border-box;
   width: 100%;
-  height: 40px;
-  border: 1px solid var(--border);
+  height: 60px;
+  border: 2px solid var(--border);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border-radius: 8px;
+  border-radius: 30px;
+  cursor: text;
+  transition: border-color 0.2s;
+
+  &:focus-within {
+    border-color: var(--point);
+
+    svg {
+      fill: var(--point);
+    }
+  }
 
   svg {
     fill: grey;
     font-size: var(--fontMedium);
+    flex-shrink: 0;
+    transition: fill 0.2s;
   }
 
   input {
     flex: 1;
-    font-size: var(--fontMedium);
+    font-size: var(--fontLarge);
     background-color: var(--background);
     color: var(--text);
+    padding: 20px 0;
+    height: 100%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
   }
 `;
 
 export const suggestionsList = css`
   position: absolute;
-  top: 50px;
+  top: calc(100% + 4px);
   left: 0;
   color: var(--text);
   z-index: 100;
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   background-color: var(--background);
-  border-radius: 8px;
+  border-radius: 16px;
   list-style-type: none;
-  padding: 0;
   margin: 0;
   overflow-y: auto;
-  max-height: 700px;
+  max-height: 300px;
 
   li {
-    padding: 10px;
+    padding: 10px 20px;
     cursor: pointer;
+    transition: background-color 0.2s;
 
     &:hover {
-      background-color: #f0f0f0;
-      color: var(--black);
+      background-color: color-mix(in srgb, var(--point) 15%, transparent);
+      color: var(--point);
     }
   }
 `;
 
 export const activeSuggestion = css`
-  background-color: #f0f0f0;
-  color: var(--black);
+  background-color: color-mix(in srgb, var(--point) 15%, transparent);
+  color: var(--point);
+`;
+
+export const recentSearchContainer = css`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+`;
+
+export const recentSearchLabel = css`
+  font-size: var(--fontSmall);
+  color: var(--type1);
+  flex-shrink: 0;
+`;
+
+export const recentSearchChip = css`
+  font-size: var(--fontSmall);
+  color: var(--text);
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 4px 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+  white-space: nowrap;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+
+  &:hover {
+    border-color: var(--point);
+    color: var(--point);
+  }
 `;

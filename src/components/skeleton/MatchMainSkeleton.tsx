@@ -54,7 +54,7 @@ export const matchCardContainerSkeleton = css`
   justify-content: center;
   align-items: center;
   gap: 20px;
-  min-height: 500px;
+  min-height: 510px;
   .dummy_titleBox {
   
     width: 30%;

@@ -2,7 +2,6 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchDetailPokemon } from "@api/api";
 import { MatchInfo } from "@models/pokemonData";
 import { LanguageType } from "@models/settingData";
-import { DEFAULT_MATCH_DATA } from "@const/initial_const";
 
 const useFetchDetailPokemon = (no: string, name: string, searchLanguage : LanguageType | "") => {
   return useQuery({
@@ -34,7 +33,6 @@ const useFetchDetailPokemon = (no: string, name: string, searchLanguage : Langua
       return matchDatas;
     },
     enabled: !!no,
-      initialData: no === "" ? DEFAULT_MATCH_DATA : undefined,
 
   });
 };

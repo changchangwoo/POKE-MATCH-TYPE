@@ -1,64 +1,50 @@
-/** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { FaCopyright, FaGithub } from "react-icons/fa";
-import { FaPencil } from "react-icons/fa6";
+import { useContext } from "react";
+import { LanguageContext } from "@services/getInitialData";
 
 const Footer = () => {
-  return (
-    <div css={FooterContainer}>
-      <>
-        <h3>
-          <FaCopyright /> Data provided by PokeAPI
-        </h3>
+  const { text } = useContext(LanguageContext);
+  const currentYear = new Date().getFullYear();
 
-        <a href="https://github.com/changchangwoo/POKE-MATCH-TYPE">
-          <FaGithub />
-          changchangwoo/github.io
-        </a>
-        <a href="https://velog.io/@changwoo/posts">
-          <FaPencil />
-          velog.io/@changwoo
-        </a>
-      </>
-    </div>
+  return (
+    <footer css={footerContainer}>
+      <div css={footerContent}>
+        <p css={copyright}>
+          © {currentYear} {text.FOOTER.COPYRIGHT}
+        </p>
+        <p css={disclaimer}>{text.FOOTER.DISCLAIMER}</p>
+      </div>
+    </footer>
   );
 };
 
-const FooterContainer = css`
-  padding: 20px;
-  box-sizing: border-box;
-  margin: auto;
+const footerContainer = css`
+  width: 100%;
+  margin-top: auto;
+  padding: 10px 20px 20px 10px;
+`;
+
+const footerContent = css`
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  font-size: 13px;
+  align-items: center;
+  gap: 4px;
+`;
 
-  a,
-  h3 {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    text-decoration: none;
-  }
+const copyright = css`
+  font-size: 14px;
+  color: var(--text);
+  opacity: 0.7;
+  margin: 0;
+`;
 
-  a {
-    font-size: 11px;
-    color: grey;
-  }
-
-  h3 {
-    font-size: 14px;
-    color: var(--text);
-    margin-bottom: 10px;
-  }
-
-  h2 {
-    margin-top: 10px;
-    color: grey;
-    text-align: center;
-  }
+const disclaimer = css`
+  font-size: 12px;
+  color: var(--text);
+  opacity: 0.5;
+  margin: 0;
+  text-align: center;
 `;
 
 export default Footer;
