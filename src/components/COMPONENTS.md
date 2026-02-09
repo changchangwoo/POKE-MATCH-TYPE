@@ -22,10 +22,12 @@ This file summarizes each component in `src/components/` so an agent can quickly
 - `src/components/modal/index.ts`: Barrel exports for modal components.
 
 **nav**
-- `src/components/nav/Navigation.tsx`: Top navigation with route links and active indicator, language dropdown, theme toggle, inquiry link, and a mobile drawer. Handles click-outside for dropdown and updates on resize/location changes.
+- `src/components/nav/Navigation.tsx`: Top navigation orchestrator. Manages language/theme/inquiry actions, drawer open state, active indicator updates on resize/location changes, and closes the mobile drawer after route-link clicks.
 - `src/components/nav/NavigationStyles.ts`: Emotion CSS for navigation layout, dropdown, overlay, and drawer.
 - `src/components/nav/Footer.tsx`: Footer with current year, copyright, and disclaimer from language text.
 - `src/components/nav/RouteTracker.tsx`: Sends analytics pageview on route changes.
+- `src/components/nav/DesktopNav.tsx`: Desktop navigation links rendered with `NavLink` for crawlable route anchors and active class styling.
+- `src/components/nav/MobileDrawer.tsx`: Mobile drawer links rendered with `NavLink`; closes drawer on link selection while preserving active route styling.
 - `src/components/nav/index.ts`: Barrel exports for nav components.
 
 **quiz**

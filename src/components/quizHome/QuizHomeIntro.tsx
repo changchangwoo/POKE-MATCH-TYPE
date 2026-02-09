@@ -1,4 +1,6 @@
 import { css } from "@emotion/react";
+import { useContext } from "react";
+import { LanguageContext } from "@services/getInitialData";
 import q1Intro from "@images/quiz/q1-intro.webp";
 import q2Intro from "@images/quiz/q2-intro.webp";
 import q3Intro from "@images/quiz/q3-intro.webp";
@@ -15,44 +17,48 @@ const difficultyColors = {
   hard: "var(--type14)",
 };
 
-const difficultyLabels = {
-  easy: "쉬움",
-  medium: "보통",
-  hard: "어려움",
-};
-
 const QuizHomeIntro = ({ selectedQuiz, onStart }: QuizHomeIntroProps) => {
+  const { text } = useContext(LanguageContext);
+  const sel = text.QUIZ.SELECTION;
+  const diff = text.QUIZ.DIFFICULTY;
+
+  const difficultyLabels = {
+    easy: diff.EASY,
+    medium: diff.MEDIUM,
+    hard: diff.HARD,
+  };
+
   const quizData = [
     {
       id: 1,
-      title: "타입 종합 퀴즈",
+      title: sel.Q1_TITLE,
       difficulty: "medium" as const,
-      story: "숲 속에서 길을 잃은 피카츄를 도와 안전한 길을 찾아주세요!",
-      lore: "깊은 숲 속에서 피카츄가 도움을 요청하고 있어요. \n 각 타입의 강점과 약점을 정확히 꿰뚫고 피카츄를 무사히 집까지 데려다주세요!",
+      story: sel.Q1_INTRO_STORY,
+      lore: sel.Q1_INTRO_LORE,
       image: q1Intro,
     },
     {
       id: 2,
-      title: "피해량 맞추기",
-      difficulty: "hard" as const,
-      story: "이상해씨와 함께 맛있는 요리를 완성해 보세요!",
-      lore: "이상해씨의 특별한 요리 대회가 열렸어요! \n타입 공격의 피해량을 정확히 판단해 이상해씨와 요리를 완성해주세요!",
+      title: sel.Q2_TITLE,
+      difficulty: "medium" as const,
+      story: sel.Q2_INTRO_STORY,
+      lore: sel.Q2_INTRO_LORE,
       image: q2Intro,
     },
     {
       id: 3,
-      title: "부등호 방향 맞추기",
+      title: sel.Q3_TITLE,
       difficulty: "easy" as const,
-      story: "소방관 꼬부기와 함께 불을 진압하세요!",
-      lore: "마을에 화재가 발생했어요! \n 소방관 꼬부기가 출동했습니다. \n두 타입의 상성을 비교하고 올바른 부등호 방향을 선택해서 꼬부기의 진화 작전을 도와주세요!",
+      story: sel.Q3_INTRO_STORY,
+      lore: sel.Q3_INTRO_LORE,
       image: q3Intro,
     },
     {
       id: 4,
-      title: "타입 배수 구하기",
-      difficulty: "medium" as const,
-      story: "파이리 산타가 들키지 않고 선물을 전달할 수 있도록 도와주세요!",
-      lore: "모두가 잠든 크리스마스 이브 \n 파이리 산타가 마을에 선물을 배달하고 있어요. \n정확한 배수를 계산해야 들키지 않고 선물을 전달할 수 있답니다!",
+      title: sel.Q4_TITLE,
+      difficulty: "hard" as const,
+      story: sel.Q4_INTRO_STORY,
+      lore: sel.Q4_INTRO_LORE,
       image: q4Intro,
     },
   ];
@@ -60,7 +66,7 @@ const QuizHomeIntro = ({ selectedQuiz, onStart }: QuizHomeIntroProps) => {
   const currentQuiz = quizData.find((q) => q.id === selectedQuiz);
 
   if (!currentQuiz) {
-    return <div>퀴즈를 찾을 수 없습니다.</div>;
+    return <div>{text.QUIZ.INTRO.NOT_FOUND}</div>;
   }
 
   return (
@@ -77,7 +83,7 @@ const QuizHomeIntro = ({ selectedQuiz, onStart }: QuizHomeIntroProps) => {
         </div>
         <p css={introStory}>{currentQuiz.story}</p>
         <p css={introLore}>
-          {currentQuiz.lore.split("\n").map((line, i) => (
+          {(currentQuiz.lore as string).split("\n").map((line: string, i: number) => (
             <span key={i}>
               {i > 0 && <br />}
               {line}
@@ -86,7 +92,7 @@ const QuizHomeIntro = ({ selectedQuiz, onStart }: QuizHomeIntroProps) => {
         </p>
       </div>
       <button aria-label="Start Quiz" css={startButton} onClick={onStart}>
-        시작하기
+        {text.QUIZ.INTRO.START}
       </button>
     </div>
   );

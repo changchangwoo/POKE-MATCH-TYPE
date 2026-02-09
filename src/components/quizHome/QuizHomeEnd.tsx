@@ -1,4 +1,6 @@
 import { css } from "@emotion/react";
+import { useContext } from "react";
+import { LanguageContext } from "@services/getInitialData";
 import q1Clear from "@images/quiz/q1-clear.webp";
 import q1Fail from "@images/quiz/q1-fail.webp";
 import q2Clear from "@images/quiz/q2-clear.webp";
@@ -23,6 +25,8 @@ const QuizHomeEnd = ({
   onRetry,
   onSelectDifferent,
 }: QuizHomeEndProps) => {
+  const { text } = useContext(LanguageContext);
+  const t = text.QUIZ.END;
   const correctCount = progressArr.filter(
     (item) => item.step === "correct",
   ).length;
@@ -54,9 +58,13 @@ const QuizHomeEnd = ({
   return (
     <div css={endContainer}>
       <div css={scoreSection}>
-        <h2 css={scoreText}>10문제 중 {correctCount}개 정답</h2>
+        <h2 css={scoreText}>
+          {t.SCORE.replace("{correctCount}", String(correctCount))}
+        </h2>
         {elapsedSeconds != null && (
-          <span css={timeText}>소요 시간 {formatTime(elapsedSeconds)}</span>
+          <span css={timeText}>
+            {t.TIME.replace("{time}", formatTime(elapsedSeconds))}
+          </span>
         )}
       </div>
 
@@ -65,27 +73,27 @@ const QuizHomeEnd = ({
       <div css={resultMessage}>
         {isSuccess ? (
           <>
-            <p>축하합니다! 퀴즈를 통과했습니다!</p>
-            <p>타입 상성에 대한 이해도가 뛰어나시네요!</p>
+            <p>{t.SUCCESS_1}</p>
+            <p>{t.SUCCESS_2}</p>
           </>
         ) : (
           <>
-            <p>아쉽지만 조금 더 공부가 필요해요.</p>
-            <p>타입 표를 참고하여 다시 도전해보세요!</p>
+            <p>{t.FAIL_1}</p>
+            <p>{t.FAIL_2}</p>
           </>
         )}
       </div>
 
       <div css={buttonGroup}>
         <button aria-label="Retry Quiz" css={retryButton} onClick={handleRetry}>
-          다시 도전
+          {t.RETRY}
         </button>
         <button
           aria-label="Select Different Quiz"
           css={selectButton}
           onClick={handleSelectDifferentQuiz}
         >
-          다른 퀴즈 선택
+          {t.SELECT_DIFFERENT}
         </button>
       </div>
     </div>

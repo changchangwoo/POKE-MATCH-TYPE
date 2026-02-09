@@ -1,4 +1,5 @@
 import { IoSunny, IoMoon, IoChevronDown, IoHelpCircle } from "react-icons/io5";
+import { NavLink } from "react-router-dom";
 import { LanguageType, ThemeData } from "@models/settingData";
 import { drawerStyle } from "./NavigationStyles";
 import logo from "@images/logo.webp";
@@ -6,7 +7,6 @@ import logo from "@images/logo.webp";
 interface MobileDrawerProps {
   isOpen: boolean;
   navItems: { path: string; label: string }[];
-  currentPath: string;
   languageList: { label: string; type: LanguageType }[];
   currentLanguage: LanguageType;
   theme: ThemeData;
@@ -15,7 +15,7 @@ interface MobileDrawerProps {
   themeLightLabel: string;
   themeDarkLabel: string;
   feedbackLabel: string;
-  onNavigate: (path: string) => void;
+  onLinkClick: () => void;
   onLanguageToggle: () => void;
   onLanguageSelect: (type: LanguageType) => void;
   onThemeToggle: () => void;
@@ -25,7 +25,6 @@ interface MobileDrawerProps {
 const MobileDrawer: React.FC<MobileDrawerProps> = ({
   isOpen,
   navItems,
-  currentPath,
   languageList,
   currentLanguage,
   theme,
@@ -34,7 +33,7 @@ const MobileDrawer: React.FC<MobileDrawerProps> = ({
   themeLightLabel,
   themeDarkLabel,
   feedbackLabel,
-  onNavigate,
+  onLinkClick,
   onLanguageToggle,
   onLanguageSelect,
   onThemeToggle,
@@ -49,13 +48,14 @@ const MobileDrawer: React.FC<MobileDrawerProps> = ({
 
       <nav className="drawer-nav">
         {navItems.map(({ path, label }) => (
-          <a
+          <NavLink
             key={path}
-            onClick={() => onNavigate(path)}
-            className={currentPath === path ? "active" : ""}
+            to={path}
+            onClick={onLinkClick}
+            className={({ isActive }) => (isActive ? "active" : "")}
           >
             {label}
-          </a>
+          </NavLink>
         ))}
       </nav>
 

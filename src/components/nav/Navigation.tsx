@@ -1,5 +1,5 @@
-import { useCallback, useContext, useEffect, useRef, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+﻿import { useCallback, useContext, useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { LanguageContext, ThemeContext } from "@services/getInitialData";
 import { LANGUAGE_TEXTS } from "@const/language_text";
 import { LanguageType } from "@models/settingData";
@@ -16,7 +16,6 @@ const Navigation = () => {
   const { language, setLanguage, text, setText } = useContext(LanguageContext);
   const { theme, setTheme } = useContext(ThemeContext);
   const langRef = useRef<HTMLDivElement>(null);
-  const navigator = useNavigate();
   const location = useLocation();
 
   const navRef = useRef<HTMLElement>(null);
@@ -38,8 +37,8 @@ const Navigation = () => {
   const handleThemeToggle = () => {
     const next =
       theme.type === "light"
-        ? { name: "달의 돌", num: 2 as Number, type: "dark" as const }
-        : { name: "태양의 돌", num: 1 as Number, type: "light" as const };
+        ? { name: "달의 돌", num: 2 as number, type: "dark" as const }
+        : { name: "태양의 돌", num: 1 as number, type: "light" as const };
     setTheme(next);
     localStorage.setItem("theme", JSON.stringify(next));
   };
@@ -48,7 +47,7 @@ const Navigation = () => {
     window.open(
       "https://forms.gle/AYkAFR5kYKNVsQf19",
       "_blank",
-      "noopener,noreferrer"
+      "noopener,noreferrer",
     );
   };
 
@@ -74,8 +73,10 @@ const Navigation = () => {
     const indicator = indicatorRef.current;
     if (!nav || !indicator) return;
 
-    const activeIndex = ROUTES.indexOf(
-      location.pathname as (typeof ROUTES)[number],
+    const activeIndex = ROUTES.findIndex((route) =>
+      route === "/"
+        ? location.pathname === "/"
+        : location.pathname.startsWith(route),
     );
     if (activeIndex === -1) {
       indicator.style.opacity = "0";
@@ -92,10 +93,10 @@ const Navigation = () => {
     indicator.style.width = `${linkRect.width}px`;
     indicator.style.transform = `translateX(${linkRect.left - navRect.left}px)`;
     indicator.style.opacity = "1";
-  }, [location.pathname]);
+  }, [location.pathname, language.type]);
 
   useEffect(() => {
-    updateIndicator();
+    requestAnimationFrame(updateIndicator);
     window.addEventListener("resize", updateIndicator);
     return () => window.removeEventListener("resize", updateIndicator);
   }, [updateIndicator]);
@@ -104,21 +105,14 @@ const Navigation = () => {
     setDrawerOpen(false);
   }, [location.pathname]);
 
-  const handleDrawerNavigate = (path: string) => {
-    navigator(path);
-    setDrawerOpen(false);
-  };
-
   return (
     <>
       <DesktopNav
         navItems={navItems}
-        currentPath={location.pathname}
         languageList={languageList}
         currentLanguage={language.type}
         theme={theme}
         isLangOpen={isLangOpen}
-        onNavigate={navigator}
         onLanguageToggle={() => setLangOpen(!isLangOpen)}
         onLanguageSelect={handleLanguageSelect}
         onThemeToggle={handleThemeToggle}
@@ -132,7 +126,6 @@ const Navigation = () => {
       <MobileDrawer
         isOpen={isDrawerOpen}
         navItems={navItems}
-        currentPath={location.pathname}
         languageList={languageList}
         currentLanguage={language.type}
         theme={theme}
@@ -141,7 +134,7 @@ const Navigation = () => {
         themeLightLabel={text.APP.THEME.DATA_SUN_STONE}
         themeDarkLabel={text.APP.THEME.DATA_MOON_STONE}
         feedbackLabel={text.APP.FEEDBACK}
-        onNavigate={handleDrawerNavigate}
+        onLinkClick={() => setDrawerOpen(false)}
         onLanguageToggle={() => setDrawerLangOpen(!isDrawerLangOpen)}
         onLanguageSelect={handleLanguageSelect}
         onThemeToggle={handleThemeToggle}

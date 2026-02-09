@@ -106,3 +106,34 @@ export const updateSessionProgress = (progress: number): void => {
     sessionStorage.setItem(SESSION_KEY, JSON.stringify(parsed));
   }
 };
+
+// --- 스탬프 (localStorage) ---
+
+export interface QuizStamp {
+  best: number;
+  time: number;
+}
+
+export type QuizStamps = Record<string, QuizStamp>;
+
+const STAMP_KEY = "quizStamps";
+
+export const loadStamps = (): QuizStamps => {
+  try {
+    const stored = localStorage.getItem(STAMP_KEY);
+    return stored ? JSON.parse(stored) : {};
+  } catch {
+    return {};
+  }
+};
+
+export const saveStamp = (quizId: number, score: number, time: number): void => {
+  const stamps = loadStamps();
+  const key = String(quizId);
+  const existing = stamps[key];
+
+  if (!existing || score > existing.best || (score === existing.best && time < existing.time)) {
+    stamps[key] = { best: score, time };
+    localStorage.setItem(STAMP_KEY, JSON.stringify(stamps));
+  }
+};

@@ -200,7 +200,7 @@ const QuizHomeMain = ({
             onClick={handleExitQuiz}
             aria-label="Exit Quiz"
           >
-            {text.QUIZ?.EXIT || "나가기"}
+            {text.QUIZ.PLAY.EXIT}
           </button>
         </div>
         <div css={progressRow}>
@@ -260,14 +260,14 @@ const QuizHomeMain = ({
       {showExitConfirm && (
         <div css={modalOverlay}>
           <div css={modalContent}>
-            <h2 css={modalTitle}>퀴즈를 종료하시겠습니까?</h2>
-            <p css={modalMessage}>현재까지의 진행 상황이 저장되지 않습니다.</p>
+            <h2 css={modalTitle}>{text.QUIZ.PLAY.EXIT_TITLE}</h2>
+            <p css={modalMessage}>{text.QUIZ.PLAY.EXIT_MESSAGE}</p>
             <div css={modalButtons}>
               <button css={modalButton(false)} onClick={cancelExit}>
-                계속하기
+                {text.QUIZ.PLAY.EXIT_CONTINUE}
               </button>
               <button css={modalButton(true)} onClick={confirmExit}>
-                나가기
+                {text.QUIZ.PLAY.EXIT}
               </button>
             </div>
           </div>

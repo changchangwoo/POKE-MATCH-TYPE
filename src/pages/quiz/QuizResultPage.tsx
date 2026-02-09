@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import QuizHomeEnd from "@components/quizHome/QuizHomeEnd";
 import RankingList from "@components/quiz/RankingList";
-import { loadSession, clearSession } from "@hooks/useQuizSession";
+import { loadSession, clearSession, saveStamp } from "@hooks/useQuizSession";
 
 const VALID_QUIZ_IDS = [1, 2, 3, 4];
 
@@ -17,6 +17,7 @@ const QuizResultPage = () => {
   const [sessionLoaded, setSessionLoaded] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (!id || !VALID_QUIZ_IDS.includes(quizId)) {
       navigate("/quiz", { replace: true });
       return;
@@ -30,6 +31,12 @@ const QuizResultPage = () => {
 
     setProgressArr(session.questions.map((q) => ({ step: q.status })));
     setElapsedSeconds(session.elapsedSeconds);
+
+    const correctCount = session.questions.filter((q) => q.status === "correct").length;
+    if (session.elapsedSeconds !== null) {
+      saveStamp(quizId, correctCount, session.elapsedSeconds);
+    }
+
     setSessionLoaded(true);
   }, []);
 
@@ -86,7 +93,7 @@ const pageContainer = css`
   display: flex;
   gap: 20px;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -110,6 +117,8 @@ const contentWrapper = css`
 const rightWrapper = css`
   flex: 0 0 35%;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: 768px) {
     flex: 1;

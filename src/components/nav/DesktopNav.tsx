@@ -1,18 +1,17 @@
 import { IoSunny, IoMoon, IoChevronDown, IoHelpCircle } from "react-icons/io5";
 import { HiMenu } from "react-icons/hi";
 import { RefObject } from "react";
+import { NavLink } from "react-router-dom";
 import { LanguageType, ThemeData } from "@models/settingData";
 import { navigationStyle } from "./NavigationStyles";
 import logo from "@images/logo.webp";
 
 interface DesktopNavProps {
   navItems: { path: string; label: string }[];
-  currentPath: string;
   languageList: { label: string; type: LanguageType }[];
   currentLanguage: LanguageType;
   theme: ThemeData;
   isLangOpen: boolean;
-  onNavigate: (path: string) => void;
   onLanguageToggle: () => void;
   onLanguageSelect: (type: LanguageType) => void;
   onThemeToggle: () => void;
@@ -25,12 +24,10 @@ interface DesktopNavProps {
 
 const DesktopNav: React.FC<DesktopNavProps> = ({
   navItems,
-  currentPath,
   languageList,
   currentLanguage,
   theme,
   isLangOpen,
-  onNavigate,
   onLanguageToggle,
   onLanguageSelect,
   onThemeToggle,
@@ -52,13 +49,13 @@ const DesktopNav: React.FC<DesktopNavProps> = ({
       <img src={logo} alt="Logo" className="mobile-logo" />
       <nav className="nav-links" ref={navRef}>
         {navItems.map(({ path, label }) => (
-          <a
+          <NavLink
             key={path}
-            onClick={() => onNavigate(path)}
-            className={currentPath === path ? "active" : ""}
+            to={path}
+            className={({ isActive }) => (isActive ? "active" : "")}
           >
             {label}
-          </a>
+          </NavLink>
         ))}
         <div className="indicator" ref={indicatorRef} />
       </nav>

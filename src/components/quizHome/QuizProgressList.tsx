@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useContext } from "react";
+import { LanguageContext } from "@services/getInitialData";
 import StepProgress from "@components/quiz/StepProgress";
 
 interface QuizProgressListProps {
@@ -13,6 +14,9 @@ const QuizProgressList = ({
   progress,
   setProgress,
 }: QuizProgressListProps) => {
+  const { text } = useContext(LanguageContext);
+  const t = text.QUIZ.PROGRESS;
+
   const handleQuestionClick = (index: number) => {
     const questionStatus = progressArr[index].step;
     if (
@@ -27,7 +31,7 @@ const QuizProgressList = ({
   return (
     <div css={progressListContainer}>
       <StepProgress currentStep={progress} progressArr={progressArr} />
-      <h3 css={progressListTitle}>문제 진행 목록</h3>
+      <h3 css={progressListTitle}>{t.TITLE}</h3>
       <div css={progressList}>
         {progressArr.map((item, index) => (
           <button
@@ -47,7 +51,7 @@ const QuizProgressList = ({
               index !== progress
             }
           >
-            <span css={questionNumber}>문제 {index + 1}</span>
+            <span css={questionNumber}>{t.QUESTION.replace("{0}", String(index + 1))}</span>
             <span css={questionStatus(item.step)}>
               {item.step === "correct"
                 ? "✓"

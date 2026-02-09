@@ -1,4 +1,6 @@
 import { css } from "@emotion/react";
+import { useContext } from "react";
+import { LanguageContext } from "@services/getInitialData";
 
 interface QuizOption {
   id: number;
@@ -15,6 +17,9 @@ interface QuizSelectionCardProps {
 }
 
 const QuizSelectionCard = ({ quiz, onSelect }: QuizSelectionCardProps) => {
+  const { text } = useContext(LanguageContext);
+  const diff = text.QUIZ.DIFFICULTY;
+
   const difficultyColors = {
     easy: "var(--type12)",
     medium: "var(--type13)",
@@ -22,9 +27,9 @@ const QuizSelectionCard = ({ quiz, onSelect }: QuizSelectionCardProps) => {
   };
 
   const difficultyLabels = {
-    easy: "쉬움",
-    medium: "보통",
-    hard: "어려움",
+    easy: diff.EASY,
+    medium: diff.MEDIUM,
+    hard: diff.HARD,
   };
 
   return (

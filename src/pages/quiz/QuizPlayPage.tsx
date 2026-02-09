@@ -1,6 +1,7 @@
 import { css } from "@emotion/react";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { LanguageContext } from "@services/getInitialData";
 import QuizHomeMain from "@components/quizHome/QuizHomeMain";
 import {
   loadSession,
@@ -13,6 +14,7 @@ const VALID_QUIZ_IDS = [1, 2, 3, 4];
 const QuizPlayPage = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
+  const { text } = useContext(LanguageContext);
   const quizId = Number(id);
 
   const [progressArr, setProgressArr] = useState<{ step: string }[]>(() =>
@@ -23,6 +25,7 @@ const QuizPlayPage = () => {
   const [sessionLoaded, setSessionLoaded] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (!id || !VALID_QUIZ_IDS.includes(quizId)) {
       navigate("/quiz", { replace: true });
       return;
@@ -54,7 +57,7 @@ const QuizPlayPage = () => {
     const handleBeforeUnload = (e: BeforeUnloadEvent) => {
       if (progress < 10) {
         e.preventDefault();
-        e.returnValue = "퀴즈가 진행 중입니다. 페이지를 나가시겠습니까?";
+        e.returnValue = text.QUIZ.PLAY.BEFOREUNLOAD;
       }
     };
 

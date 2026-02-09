@@ -13,6 +13,7 @@ const QuizIntroPage = () => {
   const quizId = Number(id);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (!id || !VALID_QUIZ_IDS.includes(quizId)) {
       navigate("/quiz", { replace: true });
     }

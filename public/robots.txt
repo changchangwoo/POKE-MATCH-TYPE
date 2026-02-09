@@ -1,5 +1,6 @@
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /quiz/*/play
+Disallow: /quiz/*/result
 
 Sitemap: https://poke-match-type.site/sitemap.xml
-d2plbxmxiwisci.cloudfront.net.

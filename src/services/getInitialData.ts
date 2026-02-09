@@ -49,20 +49,11 @@ export const getInitialTheme = (): ThemeData => {
       };
     }
   }
-  const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  if (isDark) {
-    return {
-      name: "달의 돌",
-      num: 2,
-      type: "dark",
-    };
-  } else {
-    return {
-      name: "태양의 돌",
-      num: 1,
-      type: "light",
-    };
-  }
+  return {
+    name: "달의 돌",
+    num: 2,
+    type: "dark",
+  };
 };
 export const getInitialLanguage = (): LanguageData => {
   const sessionLanguage = localStorage.getItem("language") as LanguageType;

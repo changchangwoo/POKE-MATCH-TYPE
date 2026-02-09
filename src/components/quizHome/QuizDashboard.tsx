@@ -1,11 +1,37 @@
 import { css } from "@emotion/react";
+import { useContext } from "react";
+import { LanguageContext } from "@services/getInitialData";
+import { loadStamps } from "@hooks/useQuizSession";
 
 const QuizDashboard = () => {
+  const { text } = useContext(LanguageContext);
+  const t = text.QUIZ.DASHBOARD;
+  const stamps = loadStamps();
   const stampData = [
-    { id: 1, label: "종합", best: 8, time: 95 },
-    { id: 2, label: "피해량", best: null, time: null },
-    { id: 3, label: "부등호", best: 10, time: 42 },
-    { id: 4, label: "배수", best: 7, time: 128 },
+    {
+      id: 1,
+      label: t.STAMP_LABEL_1,
+      best: stamps["1"]?.best ?? null,
+      time: stamps["1"]?.time ?? null,
+    },
+    {
+      id: 2,
+      label: t.STAMP_LABEL_2,
+      best: stamps["2"]?.best ?? null,
+      time: stamps["2"]?.time ?? null,
+    },
+    {
+      id: 3,
+      label: t.STAMP_LABEL_3,
+      best: stamps["3"]?.best ?? null,
+      time: stamps["3"]?.time ?? null,
+    },
+    {
+      id: 4,
+      label: t.STAMP_LABEL_4,
+      best: stamps["4"]?.best ?? null,
+      time: stamps["4"]?.time ?? null,
+    },
   ];
 
   const formatTime = (seconds: number) => {
@@ -17,23 +43,30 @@ const QuizDashboard = () => {
   return (
     <div css={container}>
       <div css={introCard}>
-        <h2 css={introTitle}>내 타입 지식, 실전에서 통할까?</h2>
+        <h2 css={introTitle}>{t.TITLE}</h2>
         <p css={introDesc}>
-          포켓몬 배틀의 승패는 <strong>타입 상성</strong>이 좌우해요!
+          {t.DESC.split("{0}")[0]}
+          <strong>{t.DESC_STRONG}</strong>
+          {t.DESC.split("{0}")[1]}
         </p>
         <ul css={introList}>
-          <li>포켓몬들이 도움을 기다리고 있어요👀</li>
+          <li>{t.LIST_1}</li>
           <li>
-            총 <strong>10번의 선택</strong>, 과연 맞힐 수 있을까요?
+            {t.LIST_2.split("{0}")[0]}
+            <strong>{t.LIST_2_STRONG}</strong>
+            {t.LIST_2.split("{0}")[1]}
           </li>
-          <li>4가지 퀴즈 유형 중 골라서 도전!</li>
+          <li>{t.LIST_3}</li>
           <li>
-            7문제 이상 맞히면 <strong>타입 트레이너 합격 🎉</strong>
+            {t.LIST_4.split("{0}")[0]}
+            <strong>{t.LIST_4_STRONG}</strong>
+            {t.LIST_4.split("{0}")[1]}
           </li>
         </ul>
       </div>
 
       <div css={stampCard}>
+        <p css={stampHint}>{t.STAMP_HINT}</p>
         <div css={stampRow}>
           {stampData.map((stamp) => (
             <div key={stamp.id} css={stampBox(stamp.best !== null)}>
@@ -42,7 +75,7 @@ const QuizDashboard = () => {
                 <>
                   <span css={stampScore(stamp.best >= 7)}>{stamp.best}/10</span>
                   <span css={stampBadge(stamp.best >= 7)}>
-                    {stamp.best >= 7 ? "CLEAR" : "FAIL"}
+                    {stamp.best >= 7 ? t.STAMP_CLEAR : t.STAMP_FAIL}
                   </span>
                   {stamp.time !== null && (
                     <span css={stampTime}>{formatTime(stamp.time)}</span>
@@ -78,12 +111,14 @@ const introCard = css`
   border: 1px solid var(--border);
   background-color: var(--background);
   border-radius: 8px;
+  text-align: center;
 `;
 
 const introTitle = css`
   font-size: var(--fontExtra);
   color: var(--point);
   margin: 0;
+  text-align: center;
 
   @media (max-width: 768px) {
     font-size: var(--fontLarge);
@@ -132,6 +167,18 @@ const stampCard = css`
   border: 1px solid var(--border);
   background-color: var(--background);
   border-radius: 8px;
+`;
+
+const stampHint = css`
+  margin: 0 0 10px 0;
+  font-size: var(--fontSmall);
+  color: var(--text);
+  opacity: 0.5;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: var(--fontExtraSmall);
+  }
 `;
 
 const stampRow = css`
