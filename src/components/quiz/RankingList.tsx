@@ -119,7 +119,8 @@ const rankingList = css`
   background-color: var(--background);
   border: 1px solid var(--border);
   border-radius: 8px;
-  max-height: 480px;
+  flex: 1;
+  max-height: 400px;
   overflow-y: auto;
 
   &::-webkit-scrollbar {

@@ -14,11 +14,11 @@ const QuizSelectPage = () => {
 
   return (
     <div css={pageContainer}>
+      <div css={leftWrapper}>
+        <QuizDashboard />
+      </div>
       <div css={contentWrapper}>
         <QuizSelectionList onSelect={handleQuizSelect} />
-      </div>
-      <div css={rightWrapper}>
-        <QuizDashboard />
       </div>
     </div>
   );
@@ -26,21 +26,21 @@ const QuizSelectPage = () => {
 
 const pageContainer = css`
   width: 100%;
-  height: 100%;
   display: flex;
   gap: 20px;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
+  max-height: 615px;
 
   @media (max-width: 768px) {
     flex-direction: column;
     padding-top: 20px;
-    height: auto;
+    max-height: none;
   }
 `;
 
-const contentWrapper = css`
-  flex: 0 0 65%;
+const leftWrapper = css`
+  flex: 0 0 45%;
   min-width: 0;
   display: flex;
   flex-direction: column;
@@ -51,9 +51,11 @@ const contentWrapper = css`
   }
 `;
 
-const rightWrapper = css`
-  flex: 0 0 35%;
+const contentWrapper = css`
+  flex: 0 0 55%;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: 768px) {
     flex: 1;

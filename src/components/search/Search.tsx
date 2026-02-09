@@ -64,20 +64,12 @@ const Search = ({
 
   return (
     <div css={searchContainer} ref={searchRef}>
-      <div css={searchHeader}>
-
-        <div className="text">
-          <h1>{text.APP.TITLE}</h1>
-          <h2>{text.MAIN.SEARCH.SUBTITLE}</h2>
-        </div>
-        <div className="logo-wrapper">
-          {randomLogos.map((logoSrc, idx) => (
-            <img key={`${logoSrc}-${idx}`} src={logoSrc} className="logo" alt="logo" />
-          ))}
-        </div>
-      </div>
       <div css={inputWrapper}>
-        <form css={inputBox} onSubmit={handleSubmit} onClick={() => inputRef.current?.focus()}>
+        <form
+          css={inputBox}
+          onSubmit={handleSubmit}
+          onClick={() => inputRef.current?.focus()}
+        >
           <FaSearch />
           <input
             ref={inputRef}

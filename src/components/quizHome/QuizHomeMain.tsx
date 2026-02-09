@@ -39,7 +39,7 @@ const QuizHomeMain = ({
 }: QuizHomeMainProps) => {
   const { language, text } = useContext(LanguageContext);
   const [alertType, setAlertType] = useState<"correct" | "incorrect" | null>(
-    null
+    null,
   );
   const [answerText, setAnswerText] = useState<string>("");
   const [isNext, setIsNext] = useState<boolean>(false);
@@ -49,7 +49,9 @@ const QuizHomeMain = ({
 
   useEffect(() => {
     const session = loadSession();
-    const startTime = session ? new Date(session.startTime).getTime() : Date.now();
+    const startTime = session
+      ? new Date(session.startTime).getTime()
+      : Date.now();
 
     const tick = () => {
       setElapsedSeconds(Math.floor((Date.now() - startTime) / 1000));
@@ -71,7 +73,7 @@ const QuizHomeMain = ({
   const getQuizTypeForQuestion = (
     quizId: number,
     questionIndex: number,
-    typeSequence: number[]
+    typeSequence: number[],
   ): number => {
     if (quizId === 1) {
       return typeSequence[questionIndex];
@@ -82,13 +84,13 @@ const QuizHomeMain = ({
   const currentQuizType = getQuizTypeForQuestion(
     selectedQuiz,
     progress,
-    questionTypes
+    questionTypes,
   );
 
   const submitAnswer = (
     answerIdx: number,
     correctIdx: number,
-    correctData: any
+    correctData: any,
   ) => {
     const isCorrect = answerIdx === correctIdx;
     if (correctData.name)
@@ -98,8 +100,8 @@ const QuizHomeMain = ({
     setAlertType(isCorrect ? "correct" : "incorrect");
     setProgressArr((prev) =>
       prev.map((item, idx) =>
-        idx === progress ? { step: isCorrect ? "correct" : "wrong" } : item
-      )
+        idx === progress ? { step: isCorrect ? "correct" : "wrong" } : item,
+      ),
     );
     setIsNext(true);
 
@@ -160,7 +162,12 @@ const QuizHomeMain = ({
           const questionData = parsed.questions[progress];
           if (questionData && questionData.correctAnswer) {
             if (questionData.correctAnswer.name) {
-              setAnswerText(getTranslateType(questionData.correctAnswer.name, language.type));
+              setAnswerText(
+                getTranslateType(
+                  questionData.correctAnswer.name,
+                  language.type,
+                ),
+              );
             } else if (questionData.correctAnswer.damage) {
               setAnswerText(`${questionData.correctAnswer.damage}x`);
             }
@@ -201,7 +208,11 @@ const QuizHomeMain = ({
     <div css={quizMainContainer}>
       <div css={topBar}>
         <span css={timerDisplay}>{formatTime(elapsedSeconds)}</span>
-        <button css={exitButton} onClick={handleExitQuiz} aria-label="Exit Quiz">
+        <button
+          css={exitButton}
+          onClick={handleExitQuiz}
+          aria-label="Exit Quiz"
+        >
           {text.QUIZ?.EXIT || "나가기"}
         </button>
       </div>
@@ -244,7 +255,9 @@ const QuizHomeMain = ({
       </div>
       {isNext && (
         <div css={bottomActionsContainer}>
-          {alertType && <QuizAlert quizType={alertType} answerText={answerText} />}
+          {alertType && (
+            <QuizAlert quizType={alertType} answerText={answerText} />
+          )}
           <button
             aria-label="Next Question"
             css={nextButton}
@@ -258,9 +271,7 @@ const QuizHomeMain = ({
         <div css={modalOverlay}>
           <div css={modalContent}>
             <h2 css={modalTitle}>퀴즈를 종료하시겠습니까?</h2>
-            <p css={modalMessage}>
-              현재까지의 진행 상황이 저장되지 않습니다.
-            </p>
+            <p css={modalMessage}>현재까지의 진행 상황이 저장되지 않습니다.</p>
             <div css={modalButtons}>
               <button css={modalButton(false)} onClick={cancelExit}>
                 계속하기
@@ -281,6 +292,7 @@ const quizMainContainer = css`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  max-height: 800px;
 `;
 
 const topBar = css`
@@ -436,8 +448,8 @@ const modalButton = (isDanger: boolean) => css`
   padding: 10px 20px;
   border-radius: 6px;
   border: 1px solid var(--border);
-  background-color: ${isDanger ? 'var(--type10)' : 'var(--background)'};
-  color: ${isDanger ? 'white' : 'var(--text)'};
+  background-color: ${isDanger ? "var(--type10)" : "var(--background)"};
+  color: ${isDanger ? "white" : "var(--text)"};
   cursor: pointer;
   font-size: var(--fontMedium);
   transition: all 0.2s;
@@ -451,8 +463,7 @@ const modalButton = (isDanger: boolean) => css`
       `
       : `
         background-color: var(--border);
-      `
-    }
+      `}
   }
 `;
 

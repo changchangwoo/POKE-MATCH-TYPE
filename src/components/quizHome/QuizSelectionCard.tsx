@@ -107,8 +107,8 @@ const imageWrapper = css`
   justify-content: center;
 
   @media (max-width: 768px) {
-    width: 60px;
-    height: 60px;
+    width: 120px;
+    height: 100px;
   }
 `;
 

@@ -1,205 +1,175 @@
 import { css } from "@emotion/react";
 
-interface QuizProgress {
-  totalAttempts: number;
-  bestScore: number;
-  averageScore: number;
-  recentQuizzes: Array<{
-    date: string;
-    score: number;
-    total: number;
-  }>;
-}
-
 const QuizDashboard = () => {
-  const mockProgress: QuizProgress = {
-    totalAttempts: 12,
-    bestScore: 8,
-    averageScore: 6.5,
-    recentQuizzes: [
-      { date: "2024-02-05", score: 7, total: 10 },
-      { date: "2024-02-03", score: 8, total: 10 },
-      { date: "2024-02-01", score: 6, total: 10 },
-      { date: "2024-01-30", score: 5, total: 10 },
-    ],
-  };
+  const stampData = [
+    { id: 1, label: "종합", best: 8 },
+    { id: 2, label: "피해량", best: null },
+    { id: 3, label: "부등호", best: 10 },
+    { id: 4, label: "배수", best: 7 },
+  ];
 
   return (
-    <div css={dashboardContainer}>
-      <h2 css={cardTitle}>학습 현황</h2>
-
-      <div css={statsGrid}>
-        <div css={statItem}>
-          <span css={statLabel}>총 시도</span>
-          <span css={statValue}>{mockProgress.totalAttempts}회</span>
-        </div>
-        <div css={statItem}>
-          <span css={statLabel}>최고 점수</span>
-          <span css={statValue}>
-            {mockProgress.bestScore}
-            <span css={statUnit}>/10</span>
-          </span>
-        </div>
-        <div css={statItem}>
-          <span css={statLabel}>평균 점수</span>
-          <span css={statValue}>
-            {mockProgress.averageScore.toFixed(1)}
-            <span css={statUnit}>/10</span>
-          </span>
-        </div>
+    <div css={container}>
+      <div css={introCard}>
+        <h2 css={introTitle}>내 타입 지식, 실전에서 통할까?</h2>
+        <p css={introDesc}>
+          포켓몬 배틀의 승패는 <strong>타입 상성</strong>에서 갈립니다.
+        </p>
+        <ul css={introList}>
+          <li>위험에 빠진 포켓몬들을 도와 타입 선택을 내려보세요</li>
+          <li>
+            총 <strong>10번의 선택</strong>이 당신을 기다립니다
+          </li>
+          <li>4가지 퀴즈 유형 중 하나를 골라 도전</li>
+          <li>
+            7문제 이상 정답이면 <strong>타입 트레이너 합격</strong>
+          </li>
+          <li>당신의 판단 속도도 함께 기록됩니다</li>
+        </ul>
       </div>
 
-      <div css={sectionDivider}>
-        <h3 css={sectionTitle}>최근 퀴즈 결과</h3>
-      </div>
-      <div css={resultsList}>
-        {mockProgress.recentQuizzes.map((quiz, index) => (
-          <div key={index} css={resultItem}>
-            <span css={resultDate}>{quiz.date}</span>
-            <span css={resultScore(quiz.score >= 7)}>
-              {quiz.score}/{quiz.total}
-            </span>
-          </div>
-        ))}
+      <div css={stampCard}>
+        <div css={stampRow}>
+          {stampData.map((stamp) => (
+            <div key={stamp.id} css={stampBox(stamp.best !== null)}>
+              <span css={stampLabel}>{stamp.label}</span>
+              {stamp.best !== null ? (
+                <>
+                  <span css={stampScore(stamp.best >= 7)}>{stamp.best}/10</span>
+                  <span css={stampBadge(stamp.best >= 7)}>
+                    {stamp.best >= 7 ? "CLEAR" : "FAIL"}
+                  </span>
+                </>
+              ) : (
+                <span css={stampEmpty}>---</span>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
 
-      <div css={sectionDivider}>
-        <h3 css={sectionTitle}>학습 추이</h3>
-      </div>
-      <div css={chartPlaceholder}>
-        <span css={placeholderText}>차트 영역</span>
-        <span css={placeholderSubtext}>
-          학습 데이터가 축적되면 여기에 차트가 표시됩니다
-        </span>
-      </div>
     </div>
   );
 };
 
-const dashboardContainer = css`
+const container = css`
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  width: 100%;
+  gap: 16px;
+  height: 100%;
+`;
+
+const introCard = css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
   padding: 20px;
+  flex: 8;
   box-sizing: border-box;
   border: 1px solid var(--border);
   background-color: var(--background);
   border-radius: 8px;
 `;
 
-const cardTitle = css`
+const introTitle = css`
   font-size: var(--fontLarge);
-  color: var(--text);
+  font-weight: 700;
+  color: var(--point);
   margin: 0;
 `;
 
-const sectionDivider = css`
-  border-top: 1px solid var(--border);
-  padding-top: 15px;
-  margin-top: 5px;
-`;
-
-const sectionTitle = css`
+const introDesc = css`
   font-size: var(--fontMedium);
   color: var(--text);
   margin: 0;
+  line-height: 1.5;
 `;
 
-const statsGrid = css`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+const introList = css`
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  li {
+    font-size: var(--fontSmall);
+    color: var(--text);
+    line-height: 1.6;
+    opacity: 0.85;
+  }
+
+  strong {
+    color: var(--point);
+    font-weight: 600;
+  }
+`;
+
+const stampCard = css`
+  padding: 16px;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  border-radius: 8px;
+`;
+
+const stampRow = css`
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 
   @media (max-width: 768px) {
-    grid-template-columns: repeat(3, 1fr);
     gap: 8px;
   }
 `;
 
-const statItem = css`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  padding: 12px;
-  background-color: var(--background);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-`;
-
-const statLabel = css`
-  font-size: var(--fontSmall);
-  color: var(--text);
-  opacity: 0.7;
-  text-align: center;
-`;
-
-const statValue = css`
-  font-size: var(--fontExtra);
-  font-weight: 700;
-  color: var(--point);
-`;
-
-const statUnit = css`
-  font-size: var(--fontMedium);
-  font-weight: 400;
-  color: var(--text);
-  opacity: 0.6;
-`;
-
-const resultsList = css`
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-`;
-
-const resultItem = css`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 12px;
-  background-color: var(--background);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-`;
-
-const resultDate = css`
-  font-size: var(--fontSmall);
-  color: var(--text);
-  opacity: 0.7;
-`;
-
-const resultScore = (isGood: boolean) => css`
-  font-size: var(--fontMedium);
-  font-weight: 700;
-  color: ${isGood ? "var(--type12)" : "var(--type14)"};
-`;
-
-const chartPlaceholder = css`
+const stampBox = (hasRecord: boolean) => css`
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
-  border: 2px dashed var(--border);
-  border-radius: 6px;
-  padding: 20px;
+  gap: 6px;
+  padding: 12px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  opacity: ${hasRecord ? 1 : 0.5};
+
+  @media (max-width: 768px) {
+    padding: 10px 6px;
+  }
 `;
 
-const placeholderText = css`
-  font-size: var(--fontMedium);
+const stampLabel = css`
+  font-size: var(--fontSmall);
   font-weight: 600;
   color: var(--text);
-  opacity: 0.5;
 `;
 
-const placeholderSubtext = css`
-  font-size: var(--fontSmall);
+const stampScore = (isGood: boolean) => css`
+  font-size: var(--fontLarge);
+  font-weight: 700;
+  color: ${isGood ? "var(--type12)" : "var(--type14)"};
+`;
+
+const stampBadge = (isGood: boolean) => css`
+  font-size: var(--fontExtraSmall);
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background-color: ${isGood ? "var(--type12)" : "var(--type14)"};
+  color: white;
+`;
+
+const stampEmpty = css`
+  font-size: var(--fontLarge);
+  font-weight: 700;
   color: var(--text);
-  opacity: 0.4;
-  text-align: center;
+  opacity: 0.3;
 `;
 
 export default QuizDashboard;

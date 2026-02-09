@@ -106,13 +106,11 @@ const tableContainer = css`
 `;
 
 const tableContents = css`
+  margin: auto;
   width: fit-content;
   max-width: 100%;
   box-sizing: border-box;
   overflow-x: auto;
-  background-color: var(--background);
-  border: 1px solid var(--border);
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -122,11 +120,13 @@ const tableContents = css`
   }
 
   table {
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     width: max-content;
-    border-style: hidden;
-    box-shadow: 0 0 0 1px var(--border);
+    border: 1px solid var(--border);
     font-size: var(--fontMedium);
+    border-radius: 20px;
+    overflow: hidden;
   }
 
   thead th {

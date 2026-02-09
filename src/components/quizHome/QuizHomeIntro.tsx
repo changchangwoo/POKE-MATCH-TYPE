@@ -55,11 +55,7 @@ const QuizHomeIntro = ({ selectedQuiz, onStart }: QuizHomeIntroProps) => {
         <p css={introStory}>{currentQuiz.story}</p>
         <p css={introDescription}>{currentQuiz.description}</p>
       </div>
-      <button
-        aria-label="Start Quiz"
-        css={startButton}
-        onClick={onStart}
-      >
+      <button aria-label="Start Quiz" css={startButton} onClick={onStart}>
         시작하기
       </button>
     </div>
@@ -68,6 +64,7 @@ const QuizHomeIntro = ({ selectedQuiz, onStart }: QuizHomeIntroProps) => {
 
 const introContainer = css`
   width: 100%;
+  height: 100%;
   padding: 20px;
   box-sizing: border-box;
   min-height: 400px;

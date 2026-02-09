@@ -37,7 +37,7 @@ const pageContainer = css`
   display: flex;
   gap: 20px;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -61,6 +61,8 @@ const contentWrapper = css`
 const rightWrapper = css`
   flex: 0 0 35%;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: 768px) {
     flex: 1;

@@ -14,7 +14,7 @@ const QuizSelectionList = ({ onSelect }: QuizSelectionListProps) => {
     {
       id: 1,
       title: "타입 종합 퀴즈",
-      story: "숲 속에서 길을 잃은 피카츄를 도와 안전한 길을 찾아주세요!",
+      story: "숲 속에서 길을 잃은 피카츄를 도와 길을 찾아주세요!",
       description: "포켓몬 타입 상성을 종합적으로 테스트하는 퀴즈",
       difficulty: "medium" as const,
       image: q1Intro,
@@ -48,11 +48,7 @@ const QuizSelectionList = ({ onSelect }: QuizSelectionListProps) => {
   return (
     <div css={selectionListContainer}>
       {quizOptions.map((quiz) => (
-        <QuizSelectionCard
-          key={quiz.id}
-          quiz={quiz}
-          onSelect={onSelect}
-        />
+        <QuizSelectionCard key={quiz.id} quiz={quiz} onSelect={onSelect} />
       ))}
     </div>
   );

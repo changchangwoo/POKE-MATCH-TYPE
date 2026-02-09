@@ -1,11 +1,11 @@
 import Logo from "@images/logo.webp";
 
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Main from "@pages/Main";
 import Type from "@pages/Type";
 import { css, Global } from "@emotion/react";
-import {Footer, Navigation, RouteTracker } from "@components/nav";
+import { Footer, Navigation, RouteTracker } from "@components/nav";
 import Table from "@pages/Table";
 import QuizSelectPage from "@pages/quiz/QuizSelectPage";
 import QuizIntroPage from "@pages/quiz/QuizIntroPage";
@@ -23,6 +23,7 @@ import {
 import { LANGUAGE_TEXTS } from "@const/language_text";
 import useDefaultSetting from "@hooks/useDefaultSetting";
 import Error from "@pages/Error";
+import MainTitle from "@components/mainTitle";
 
 const IMAGE_LIST = [Logo] as const;
 
@@ -42,44 +43,48 @@ function App() {
   );
 
   const themeContextValue = useMemo(() => ({ theme, setTheme }), [theme]);
+  const { pathname } = useLocation();
+  const isTablePage = pathname === "/table";
+  const isQuizSubPage = /^\/quiz\/\d+\//.test(pathname);
 
   return (
     <>
       <Global styles={globalStyles(theme.type)} />
       <LanguageContext.Provider value={languageContextValue}>
         <div css={Layout}>
-        <ThemeContext.Provider value={themeContextValue}>
-          <Navigation />
-        </ThemeContext.Provider>
-        <div css={Container}>
-          <RouteTracker />
-          <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="/type" element={<Type />} />
-            <Route path="/table" element={<Table />} />
-            <Route path="/quiz" element={<QuizSelectPage />} />
-            <Route path="/quiz/:id/intro" element={<QuizIntroPage />} />
-            <Route path="/quiz/:id/play" element={<QuizPlayPage />} />
-            <Route path="/quiz/:id/result" element={<QuizResultPage />} />
-            <Route path="*" element={<Error />} />
-          </Routes>
-        </div>
-        {/* <Footer/> */}
+          <ThemeContext.Provider value={themeContextValue}>
+            <Navigation />
+          </ThemeContext.Provider>
+          <div css={container(isTablePage)}>
+            <RouteTracker />
+            {!isQuizSubPage && <MainTitle />}
+            <Routes>
+              <Route path="/" element={<Main />} />
+              <Route path="/type" element={<Type />} />
+              <Route path="/table" element={<Table />} />
+              <Route path="/quiz" element={<QuizSelectPage />} />
+              <Route path="/quiz/:id/intro" element={<QuizIntroPage />} />
+              <Route path="/quiz/:id/play" element={<QuizPlayPage />} />
+              <Route path="/quiz/:id/result" element={<QuizResultPage />} />
+              <Route path="*" element={<Error />} />
+            </Routes>
+          </div>
+          {/* <Footer/> */}
         </div>
       </LanguageContext.Provider>
     </>
   );
 }
-const Container = css`
+const container = (isWide: boolean) => css`
   width: 100vw;
-  max-width: 1405px;
+  max-width: ${isWide ? "1420px" : "1240px"};
   display: flex;
   flex-direction: column;
   gap: 20px;
   box-sizing: border-box;
 
   @media (max-width: 768px) {
-    padding: 60px 20px 20px 20px;
+    padding: 0px 20px 20px 20px;
   }
 `;
 
@@ -87,12 +92,7 @@ const Layout = css`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
-  justify-content: center;
-
-  @media (max-width: 768px) {
-    min-height: auto;
-    justify-content: flex-start;
-  }
-`
+  padding-top: 70px;
+  justify-content: flex-start;
+`;
 export default App;
