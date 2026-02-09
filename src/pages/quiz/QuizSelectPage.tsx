@@ -30,7 +30,7 @@ const pageContainer = css`
   gap: 20px;
   justify-content: center;
   align-items: stretch;
-  max-height: 615px;
+  max-height: 625px;
 
   @media (max-width: 768px) {
     flex-direction: column;
