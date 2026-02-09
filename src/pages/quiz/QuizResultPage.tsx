@@ -48,22 +48,37 @@ const QuizResultPage = () => {
   }
 
   return (
-    <div css={pageContainer}>
-      <div css={contentWrapper}>
-        <QuizHomeEnd
-          selectedQuiz={quizId}
-          progressArr={progressArr}
-          elapsedSeconds={elapsedSeconds}
-          onRetry={handleRetry}
-          onSelectDifferent={handleSelectDifferent}
-        />
-      </div>
-      <div css={rightWrapper}>
-        <RankingList />
+    <div css={quizPageWrapper}>
+      <div css={pageContainer}>
+        <div css={contentWrapper}>
+          <QuizHomeEnd
+            selectedQuiz={quizId}
+            progressArr={progressArr}
+            elapsedSeconds={elapsedSeconds}
+            onRetry={handleRetry}
+            onSelectDifferent={handleSelectDifferent}
+          />
+        </div>
+        <div css={rightWrapper}>
+          <RankingList />
+        </div>
       </div>
     </div>
   );
 };
+
+const quizPageWrapper = css`
+  width: 100%;
+  min-height: calc(100vh - 130px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    min-height: auto;
+    align-items: flex-start;
+  }
+`;
 
 const pageContainer = css`
   width: 100%;
@@ -75,7 +90,7 @@ const pageContainer = css`
 
   @media (max-width: 768px) {
     flex-direction: column;
-    padding-top: 20px;
+    padding-top: 10px;
     height: auto;
   }
 `;

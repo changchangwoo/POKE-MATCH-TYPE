@@ -100,7 +100,7 @@ const tableContainer = css`
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    padding-top: 20px;
+    padding-top: 10px;
     height: auto;
   }
 `;

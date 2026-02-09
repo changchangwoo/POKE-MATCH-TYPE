@@ -9,34 +9,50 @@ interface QuizHomeIntroProps {
   onStart: () => void;
 }
 
+const difficultyColors = {
+  easy: "var(--type12)",
+  medium: "var(--type13)",
+  hard: "var(--type14)",
+};
+
+const difficultyLabels = {
+  easy: "쉬움",
+  medium: "보통",
+  hard: "어려움",
+};
+
 const QuizHomeIntro = ({ selectedQuiz, onStart }: QuizHomeIntroProps) => {
   const quizData = [
     {
       id: 1,
       title: "타입 종합 퀴즈",
+      difficulty: "medium" as const,
       story: "숲 속에서 길을 잃은 피카츄를 도와 안전한 길을 찾아주세요!",
-      description: "포켓몬 타입 상성을 종합적으로 테스트하는 퀴즈",
+      lore: "깊은 숲 속에서 길을 잃은 피카츄가 도움을 요청하고 있어요. \n 각 타입의 강점과 약점을 정확히 꿰뚫고 피카츄를 무사히 집까지 데려다주세요!",
       image: q1Intro,
     },
     {
       id: 2,
       title: "피해량 맞추기",
+      difficulty: "hard" as const,
       story: "이상해씨와 함께 맛있는 요리를 완성해 보세요!",
-      description: "타입 공격에 대한 피해량을 맞추는 퀴즈",
+      lore: "이상해씨의 특별한 요리 대회가 열렸어요! \n타입 공격의 피해량을 정확히 판단해 이상해씨와 요리를 완성해주세요!",
       image: q2Intro,
     },
     {
       id: 3,
       title: "부등호 방향 맞추기",
+      difficulty: "easy" as const,
       story: "소방관 꼬부기와 함께 침착하게 불을 진압하세요!",
-      description: "두 타입의 상성을 비교하여 부등호 방향을 맞추는 퀴즈",
+      lore: "마을에 화재가 발생했어요! 소방관 꼬부기가 출동했습니다. \n두 타입의 상성을 비교하고 올바른 부등호 방향을 선택해서 꼬부기의 진화 작전을 도와주세요!",
       image: q3Intro,
     },
     {
       id: 4,
       title: "타입 배수 구하기",
+      difficulty: "medium" as const,
       story: "파이리 산타가 들키지 않고 선물을 전달할 수 있도록 도와주세요!",
-      description: "주어진 포켓몬에 가하는 타입 배수를 구하는 퀴즈",
+      lore: "크리스마스 이브, 파이리 산타가 포켓몬 마을에 선물을 배달하고 있어요. \n정확한 배수를 계산해야 들키지 않고 선물을 전달할 수 있답니다!",
       image: q4Intro,
     },
   ];
@@ -51,9 +67,16 @@ const QuizHomeIntro = ({ selectedQuiz, onStart }: QuizHomeIntroProps) => {
     <div css={introContainer}>
       <img src={currentQuiz.image} css={introImage} alt={currentQuiz.title} />
       <div css={introText}>
-        <h2 css={introTitle}>{currentQuiz.title}</h2>
+        <div css={titleRow}>
+          <h2 css={introTitle}>{currentQuiz.title}</h2>
+          <span
+            css={introDifficultyBadge(difficultyColors[currentQuiz.difficulty])}
+          >
+            {difficultyLabels[currentQuiz.difficulty]}
+          </span>
+        </div>
         <p css={introStory}>{currentQuiz.story}</p>
-        <p css={introDescription}>{currentQuiz.description}</p>
+        <p css={introLore}>{currentQuiz.lore}</p>
       </div>
       <button aria-label="Start Quiz" css={startButton} onClick={onStart}>
         시작하기
@@ -94,11 +117,28 @@ const introText = css`
   text-align: center;
 `;
 
+const titleRow = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+`;
+
 const introTitle = css`
   font-size: var(--fontLarge);
   color: var(--text);
   margin: 0;
   font-weight: bold;
+`;
+
+const introDifficultyBadge = (color: string) => css`
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: var(--fontSmall);
+  font-weight: 600;
+  background-color: ${color};
+  color: var(--background);
+  white-space: nowrap;
 `;
 
 const introStory = css`
@@ -108,6 +148,14 @@ const introStory = css`
   margin: 0;
   line-height: 1.5;
   font-style: italic;
+`;
+
+const introLore = css`
+  font-size: var(--fontSmall);
+  color: var(--text);
+  opacity: 0.8;
+  margin: 0;
+  line-height: 1.7;
 `;
 
 const introDescription = css`

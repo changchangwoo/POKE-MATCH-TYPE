@@ -2,29 +2,34 @@ import { css } from "@emotion/react";
 
 const QuizDashboard = () => {
   const stampData = [
-    { id: 1, label: "종합", best: 8 },
-    { id: 2, label: "피해량", best: null },
-    { id: 3, label: "부등호", best: 10 },
-    { id: 4, label: "배수", best: 7 },
+    { id: 1, label: "종합", best: 8, time: 95 },
+    { id: 2, label: "피해량", best: null, time: null },
+    { id: 3, label: "부등호", best: 10, time: 42 },
+    { id: 4, label: "배수", best: 7, time: 128 },
   ];
+
+  const formatTime = (seconds: number) => {
+    const m = Math.floor(seconds / 60);
+    const s = seconds % 60;
+    return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+  };
 
   return (
     <div css={container}>
       <div css={introCard}>
-        <h2 css={introTitle}>내 타입 지식, 실전에서 통할까?</h2>
+        <h2 css={introTitle}>내 타입 지식, 진짜 통할까?</h2>
         <p css={introDesc}>
-          포켓몬 배틀의 승패는 <strong>타입 상성</strong>에서 갈립니다.
+          포켓몬 배틀의 승패는 <strong>타입 상성</strong>이 좌우해요!
         </p>
         <ul css={introList}>
-          <li>위험에 빠진 포켓몬들을 도와 타입 선택을 내려보세요</li>
+          <li>포켓몬들이 도움을 기다리고 있어요👀</li>
           <li>
-            총 <strong>10번의 선택</strong>이 당신을 기다립니다
+            총 <strong>10번의 선택</strong>, 과연 맞힐 수 있을까요?
           </li>
-          <li>4가지 퀴즈 유형 중 하나를 골라 도전</li>
+          <li>4가지 퀴즈 유형 중 골라서 도전!</li>
           <li>
-            7문제 이상 정답이면 <strong>타입 트레이너 합격</strong>
+            7문제 이상 맞히면 <strong>타입 트레이너 합격 🎉</strong>
           </li>
-          <li>당신의 판단 속도도 함께 기록됩니다</li>
         </ul>
       </div>
 
@@ -39,6 +44,9 @@ const QuizDashboard = () => {
                   <span css={stampBadge(stamp.best >= 7)}>
                     {stamp.best >= 7 ? "CLEAR" : "FAIL"}
                   </span>
+                  {stamp.time !== null && (
+                    <span css={stampTime}>{formatTime(stamp.time)}</span>
+                  )}
                 </>
               ) : (
                 <span css={stampEmpty}>---</span>
@@ -47,7 +55,6 @@ const QuizDashboard = () => {
           ))}
         </div>
       </div>
-
     </div>
   );
 };
@@ -74,17 +81,24 @@ const introCard = css`
 `;
 
 const introTitle = css`
-  font-size: var(--fontLarge);
-  font-weight: 700;
+  font-size: var(--fontExtra);
   color: var(--point);
   margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: var(--fontLarge);
+  }
 `;
 
 const introDesc = css`
-  font-size: var(--fontMedium);
+  font-size: var(--fontLarge);
   color: var(--text);
   margin: 0;
   line-height: 1.5;
+
+  @media (max-width: 768px) {
+    font-size: var(--fontMedium);
+  }
 `;
 
 const introList = css`
@@ -97,15 +111,18 @@ const introList = css`
   gap: 6px;
 
   li {
-    font-size: var(--fontSmall);
+    font-size: var(--fontMedium);
     color: var(--text);
     line-height: 1.6;
     opacity: 0.85;
+
+    @media (max-width: 768px) {
+      font-size: var(--fontSmall);
+    }
   }
 
   strong {
     color: var(--point);
-    font-weight: 600;
   }
 `;
 
@@ -145,31 +162,54 @@ const stampBox = (hasRecord: boolean) => css`
 `;
 
 const stampLabel = css`
-  font-size: var(--fontSmall);
-  font-weight: 600;
+  font-size: var(--fontMedium);
   color: var(--text);
+
+  @media (max-width: 768px) {
+    font-size: var(--fontSmall);
+  }
 `;
 
 const stampScore = (isGood: boolean) => css`
-  font-size: var(--fontLarge);
-  font-weight: 700;
+  font-size: var(--fontExtra);
   color: ${isGood ? "var(--type12)" : "var(--type14)"};
+
+  @media (max-width: 768px) {
+    font-size: var(--fontLarge);
+  }
 `;
 
 const stampBadge = (isGood: boolean) => css`
-  font-size: var(--fontExtraSmall);
-  font-weight: 700;
+  font-size: var(--fontSmall);
   padding: 2px 8px;
   border-radius: 4px;
   background-color: ${isGood ? "var(--type12)" : "var(--type14)"};
   color: white;
+
+  @media (max-width: 768px) {
+    font-size: var(--fontExtraSmall);
+  }
+`;
+
+const stampTime = css`
+  font-size: var(--fontSmall);
+  color: var(--text);
+  opacity: 0.6;
+  font-variant-numeric: tabular-nums;
+
+  @media (max-width: 768px) {
+    font-size: var(--fontExtraSmall);
+  }
 `;
 
 const stampEmpty = css`
-  font-size: var(--fontLarge);
-  font-weight: 700;
+  font-size: var(--fontExtra);
   color: var(--text);
   opacity: 0.3;
+
+  @media (max-width: 768px) {
+    font-size: var(--fontLarge);
+  }
 `;
 
 export default QuizDashboard;

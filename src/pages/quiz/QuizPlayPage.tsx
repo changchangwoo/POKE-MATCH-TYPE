@@ -65,8 +65,9 @@ const QuizPlayPage = () => {
   }
 
   return (
-    <div css={pageContainer}>
-      <div css={contentWrapper}>
+    <div css={quizPageWrapper}>
+      <div css={pageContainer}>
+        <div css={contentWrapper}>
         <QuizHomeMain
           selectedQuiz={quizId}
           questionTypes={questionTypes}
@@ -77,10 +78,24 @@ const QuizPlayPage = () => {
           onComplete={handleComplete}
           onExit={handleExit}
         />
+        </div>
       </div>
     </div>
   );
 };
+
+const quizPageWrapper = css`
+  width: 100%;
+  min-height: calc(100vh - 130px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    min-height: auto;
+    align-items: flex-start;
+  }
+`;
 
 const pageContainer = css`
   width: 100%;

@@ -206,21 +206,30 @@ const QuizHomeMain = ({
 
   return (
     <div css={quizMainContainer}>
-      <div css={topBar}>
-        <span css={timerDisplay}>{formatTime(elapsedSeconds)}</span>
-        <button
-          css={exitButton}
-          onClick={handleExitQuiz}
-          aria-label="Exit Quiz"
-        >
-          {text.QUIZ?.EXIT || "나가기"}
-        </button>
+      <div css={controlBar}>
+        <div css={topRow}>
+          <span css={timerDisplay}>{formatTime(elapsedSeconds)}</span>
+          <StepProgress
+            currentStep={progress}
+            progressArr={progressArr}
+            setProgress={setProgress}
+          />
+          <button
+            css={exitButton}
+            onClick={handleExitQuiz}
+            aria-label="Exit Quiz"
+          >
+            {text.QUIZ?.EXIT || "나가기"}
+          </button>
+        </div>
+        <div css={progressRow}>
+          <StepProgress
+            currentStep={progress}
+            progressArr={progressArr}
+            setProgress={setProgress}
+          />
+        </div>
       </div>
-      <StepProgress
-        currentStep={progress}
-        progressArr={progressArr}
-        setProgress={setProgress}
-      />
       <div css={quizCardContainer}>
         {(() => {
           switch (currentQuizType) {
@@ -295,12 +304,36 @@ const quizMainContainer = css`
   max-height: 800px;
 `;
 
-const topBar = css`
+const controlBar = css`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+`;
+
+const topRow = css`
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 4px;
+  gap: 12px;
+
+  @media (max-width: 768px) {
+    & > div {
+      display: none;
+    }
+  }
+`;
+
+const progressRow = css`
+  display: none;
+  width: 100%;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
 `;
 
 const timerDisplay = css`

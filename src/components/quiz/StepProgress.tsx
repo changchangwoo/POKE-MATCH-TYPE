@@ -7,7 +7,11 @@ interface StepProgressProps {
   setProgress?: Dispatch<SetStateAction<number>>;
 }
 
-const StepProgress = ({ currentStep, progressArr, setProgress }: StepProgressProps) => {
+const StepProgress = ({
+  currentStep,
+  progressArr,
+  setProgress,
+}: StepProgressProps) => {
   const handleProgressClick = (index: number) => {
     if (!setProgress) return;
 
@@ -25,17 +29,17 @@ const StepProgress = ({ currentStep, progressArr, setProgress }: StepProgressPro
 
   return (
     <div css={container}>
-      <div>
+      {/* <span css={countText}>
         {currentStep+1} / {progressArr.length}
-      </div>
+      </span> */}
       <div css={progressContainer}>
         {progressArr.map((progress, idx) => {
-          const isClickable = setProgress && (
-            progress.step === "correct" ||
-            progress.step === "wrong" ||
-            progress.step === "current" ||
-            idx === currentStep
-          );
+          const isClickable =
+            setProgress &&
+            (progress.step === "correct" ||
+              progress.step === "wrong" ||
+              progress.step === "current" ||
+              idx === currentStep);
           return (
             <div
               key={idx}
@@ -61,24 +65,33 @@ const StepProgress = ({ currentStep, progressArr, setProgress }: StepProgressPro
 export default StepProgress;
 
 const container = css`
-  width: 100%;
+  flex: 1;
   display: flex;
-  gap: 15px;
+  gap: 10px;
   justify-content: center;
   align-items: center;
-  margin: 16px 0 30px 0;
-  flex-direction: column;
-  div {
-    color: var(--text);
-  }
+  flex-direction: row;
+  min-width: 0;
+  color: var(--text);
+`;
+
+const countText = css`
+  font-size: var(--fontSmall);
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
 `;
 
 const progressContainer = css`
   display: flex;
-  gap: 10px;
+  gap: 6px;
   min-height: 26px;
   align-items: center;
   contain: layout;
+
+  @media (max-width: 600px) {
+    gap: 4px;
+  }
 `;
 
 const progressBox = (step: string, isClickable: boolean) => css`
@@ -90,10 +103,10 @@ const progressBox = (step: string, isClickable: boolean) => css`
   background-color: ${step === "current"
     ? `grey`
     : step === "correct"
-    ? "var(--type12)"
-    : step === "wrong"
-    ? "var(--type14)"
-    : "var(--background)"};
+      ? "var(--type12)"
+      : step === "wrong"
+        ? "var(--type14)"
+        : "var(--background)"};
   transition: all 0.3s;
   cursor: ${isClickable ? "pointer" : "default"};
   will-change: ${isClickable || step === "current" ? "transform" : "auto"};

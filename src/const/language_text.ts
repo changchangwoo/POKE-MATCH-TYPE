@@ -199,7 +199,7 @@ export const LANGUAGE_TEXTS = {
       TITLE: "Pokémon Type Quiz",
       ERROR: "Error Page",
       NEXT: "Next Question",
-      SUBMIT: "Submit Answer",
+      SUBMIT: "Submit",
       READY: {
         TITLE:
           "Test your understanding of type compatibility through this quiz!",
@@ -251,7 +251,8 @@ export const LANGUAGE_TEXTS = {
     },
     FOOTER: {
       COPYRIGHT: "Pokémon Type Calculator. All rights reserved.",
-      DISCLAIMER: "This is a fan-made project and is not official Pokémon content.",
+      DISCLAIMER:
+        "This is a fan-made project and is not official Pokémon content.",
     },
   },
 };

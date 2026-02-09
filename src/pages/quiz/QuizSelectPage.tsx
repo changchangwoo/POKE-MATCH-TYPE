@@ -34,7 +34,7 @@ const pageContainer = css`
 
   @media (max-width: 768px) {
     flex-direction: column;
-    padding-top: 20px;
+    padding-top: 10px;
     max-height: none;
   }
 `;

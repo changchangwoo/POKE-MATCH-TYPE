@@ -124,6 +124,11 @@ const cardInfo = css`
   display: flex;
   flex-direction: column;
   gap: 8px;
+  position: relative;
+
+  @media (max-width: 768px) {
+    padding-bottom: 28px;
+  }
 `;
 
 const cardHeader = css`
@@ -147,6 +152,12 @@ const difficultyBadge = (color: string) => css`
   background-color: ${color};
   color: var(--background);
   white-space: nowrap;
+
+  @media (max-width: 768px) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 `;
 
 const cardStory = css`
@@ -165,6 +176,10 @@ const cardDescription = css`
   margin: 0;
   line-height: 1.4;
   flex: 1;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 

@@ -22,15 +22,19 @@ const Type = () => {
     if (checkedType.length > 0) {
       sessionStorage.setItem(
         location.pathname + "/matchDatas",
-        JSON.stringify(checkedType)
+        JSON.stringify(checkedType),
       );
     }
   }, [checkedType, location.pathname]);
 
   useEffect(() => {
     const pathPrefix = location.pathname;
-    const getSessionCheckedDatas = sessionStorage.getItem(`${pathPrefix}/matchDatas`);
-    const getSessionTypeCheck = sessionStorage.getItem(`${pathPrefix}/typecheck`);
+    const getSessionCheckedDatas = sessionStorage.getItem(
+      `${pathPrefix}/matchDatas`,
+    );
+    const getSessionTypeCheck = sessionStorage.getItem(
+      `${pathPrefix}/typecheck`,
+    );
     const getSessionTerastal = sessionStorage.getItem(`${pathPrefix}/terastal`);
 
     if (getSessionCheckedDatas) {
@@ -52,23 +56,23 @@ const Type = () => {
 
   return (
     <>
-    <div css={matchContainer}>
-      <SelectType
-        checkedType={checkedType}
-        setCheckedType={setCheckedType}
-        selectedAbility={selectedAbility}
-        selectedTerastal={selectedTerastal}
-        setSelectedAbility={setSelectedAbility}
-        setSelectedTerastal={setSelectedTerastal}
-      />
+      <div css={matchContainer}>
+        <SelectType
+          checkedType={checkedType}
+          setCheckedType={setCheckedType}
+          selectedAbility={selectedAbility}
+          selectedTerastal={selectedTerastal}
+          setSelectedAbility={setSelectedAbility}
+          setSelectedTerastal={setSelectedTerastal}
+        />
 
-      <TypeCard
-        MatchTypes={checkedType}
-        selectedAbility={selectedAbility}
-        selectedTerastal_no={selectedTerastal.no}
-      />
-    </div>
-  </>
+        <TypeCard
+          MatchTypes={checkedType}
+          selectedAbility={selectedAbility}
+          selectedTerastal_no={selectedTerastal.no}
+        />
+      </div>
+    </>
   );
 };
 
@@ -87,7 +91,7 @@ const matchContainer = css`
 
   @media (max-width: 768px) {
     flex-direction: column;
-    padding-top: 20px;
+    padding-top: 10px;
     height: auto;
 
     > div {
