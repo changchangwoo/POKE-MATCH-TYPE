@@ -4,6 +4,7 @@ import {
   SetStateAction,
   useContext,
   useEffect,
+  useRef,
   useState,
 } from "react";
 import QuizType0DamageEffectiveness from "@components/quiz/QuizType0DamageEffectiveness";
@@ -13,6 +14,7 @@ import QuizAlert from "@components/modal/QuizAlert";
 import { getTranslateType } from "@utils/getTranslateType";
 import { LanguageContext } from "@services/getInitialData";
 import StepProgress from "@components/quiz/StepProgress";
+import { loadSession } from "@hooks/useQuizSession";
 
 interface QuizHomeMainProps {
   selectedQuiz: number;
@@ -21,7 +23,8 @@ interface QuizHomeMainProps {
   setProgress: Dispatch<SetStateAction<number>>;
   progressArr: { step: string }[];
   setProgressArr: Dispatch<SetStateAction<{ step: string }[]>>;
-  setSection: Dispatch<SetStateAction<number>>;
+  onComplete: () => void;
+  onExit: () => void;
 }
 
 const QuizHomeMain = ({
@@ -31,7 +34,8 @@ const QuizHomeMain = ({
   setProgress,
   progressArr,
   setProgressArr,
-  setSection,
+  onComplete,
+  onExit,
 }: QuizHomeMainProps) => {
   const { language, text } = useContext(LanguageContext);
   const [alertType, setAlertType] = useState<"correct" | "incorrect" | null>(
@@ -40,6 +44,29 @@ const QuizHomeMain = ({
   const [answerText, setAnswerText] = useState<string>("");
   const [isNext, setIsNext] = useState<boolean>(false);
   const [showExitConfirm, setShowExitConfirm] = useState<boolean>(false);
+  const [elapsedSeconds, setElapsedSeconds] = useState<number>(0);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  useEffect(() => {
+    const session = loadSession();
+    const startTime = session ? new Date(session.startTime).getTime() : Date.now();
+
+    const tick = () => {
+      setElapsedSeconds(Math.floor((Date.now() - startTime) / 1000));
+    };
+    tick();
+    timerRef.current = setInterval(tick, 1000);
+
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, []);
+
+  const formatTime = (totalSeconds: number): string => {
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
+    return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+  };
 
   const getQuizTypeForQuestion = (
     quizId: number,
@@ -104,7 +131,7 @@ const QuizHomeMain = ({
 
   const confirmExit = () => {
     sessionStorage.removeItem("quizSession");
-    setSection(0);
+    onExit();
   };
 
   const cancelExit = () => {
@@ -113,7 +140,7 @@ const QuizHomeMain = ({
 
   useEffect(() => {
     if (progress >= 10) {
-      setSection(3);
+      onComplete();
       return;
     }
 
@@ -168,13 +195,16 @@ const QuizHomeMain = ({
       parsed.progress = progress;
       sessionStorage.setItem("quizSession", JSON.stringify(parsed));
     }
-  }, [progress, setProgressArr, setSection, language.type]);
+  }, [progress, setProgressArr, onComplete, language.type]);
 
   return (
     <div css={quizMainContainer}>
-      <button css={exitButton} onClick={handleExitQuiz} aria-label="Exit Quiz">
-        {text.QUIZ?.EXIT || "나가기"}
-      </button>
+      <div css={topBar}>
+        <span css={timerDisplay}>{formatTime(elapsedSeconds)}</span>
+        <button css={exitButton} onClick={handleExitQuiz} aria-label="Exit Quiz">
+          {text.QUIZ?.EXIT || "나가기"}
+        </button>
+      </div>
       <StepProgress
         currentStep={progress}
         progressArr={progressArr}
@@ -247,11 +277,34 @@ const QuizHomeMain = ({
 };
 
 const quizMainContainer = css`
-  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+`;
+
+const topBar = css`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+`;
+
+const timerDisplay = css`
+  font-size: var(--fontMedium);
+  font-weight: 700;
+  color: var(--point);
+  font-variant-numeric: tabular-nums;
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background-color: var(--background);
+
+  @media (max-width: 600px) {
+    font-size: var(--fontSmall);
+    padding: 6px 12px;
+  }
 `;
 
 const quizCardContainer = css`
@@ -278,9 +331,6 @@ const quizCardContainer = css`
 `;
 
 const exitButton = css`
-  position: absolute;
-  top: 0;
-  right: 0;
   background-color: var(--background);
   border: 1px solid var(--border);
   color: var(--text);
@@ -290,7 +340,6 @@ const exitButton = css`
   font-size: var(--fontSmall);
   white-space: nowrap;
   transition: all 0.2s;
-  z-index: 10;
 
   &:hover {
     background-color: var(--type10);
@@ -299,8 +348,6 @@ const exitButton = css`
   }
 
   @media (max-width: 600px) {
-    top: -10px;
-    right: 0;
     font-size: var(--fontExtraSmall);
     padding: 6px 12px;
   }

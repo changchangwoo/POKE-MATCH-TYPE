@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import { Dispatch, SetStateAction } from "react";
 import q1Clear from "@images/quiz/q1-clear.png";
 import q1Fail from "@images/quiz/q1-fail.png";
 import q2Clear from "@images/quiz/q2-clear.png";
@@ -12,21 +11,17 @@ import q4Fail from "@images/quiz/q4-fail.jpeg";
 interface QuizHomeEndProps {
   selectedQuiz: number;
   progressArr: { step: string }[];
-  setSection: Dispatch<SetStateAction<number>>;
-  setSelectedQuiz: Dispatch<SetStateAction<number | null>>;
-  setProgress: Dispatch<SetStateAction<number>>;
-  setProgressArr: Dispatch<SetStateAction<{ step: string }[]>>;
-  setQuestionTypes: Dispatch<SetStateAction<number[]>>;
+  elapsedSeconds: number | null;
+  onRetry: () => void;
+  onSelectDifferent: () => void;
 }
 
 const QuizHomeEnd = ({
   selectedQuiz,
   progressArr,
-  setSection,
-  setSelectedQuiz,
-  setProgress,
-  setProgressArr,
-  setQuestionTypes,
+  elapsedSeconds,
+  onRetry,
+  onSelectDifferent,
 }: QuizHomeEndProps) => {
   const correctCount = progressArr.filter(
     (item) => item.step === "correct"
@@ -42,27 +37,32 @@ const QuizHomeEnd = ({
     ? resultImages.clear[selectedQuiz - 1]
     : resultImages.fail[selectedQuiz - 1];
 
+  const formatTime = (totalSeconds: number): string => {
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
+    return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+  };
+
   const handleRetry = () => {
-    setProgress(0);
-    setProgressArr(new Array(10).fill(null).map(() => ({ step: "none" })));
-    sessionStorage.removeItem("quizSession");
-    setSection(2);
+    onRetry();
   };
 
   const handleSelectDifferentQuiz = () => {
-    setSelectedQuiz(null);
-    setProgress(0);
-    setProgressArr(new Array(10).fill(null).map(() => ({ step: "none" })));
-    setQuestionTypes([]);
-    sessionStorage.removeItem("quizSession");
-    setSection(0);
+    onSelectDifferent();
   };
 
   return (
     <div css={endContainer}>
-      <h2 css={scoreText}>
-        10문제 중 {correctCount}개 정답
-      </h2>
+      <div css={scoreSection}>
+        <h2 css={scoreText}>
+          10문제 중 {correctCount}개 정답
+        </h2>
+        {elapsedSeconds != null && (
+          <span css={timeText}>
+            소요 시간 {formatTime(elapsedSeconds)}
+          </span>
+        )}
+      </div>
 
       <img src={resultImage} css={resultImageStyle} alt="Quiz Result" />
 
@@ -114,11 +114,25 @@ const endContainer = css`
   gap: 20px;
 `;
 
+const scoreSection = css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+`;
+
 const scoreText = css`
   font-size: var(--fontLarge);
   color: var(--text);
   margin: 0;
   font-weight: bold;
+`;
+
+const timeText = css`
+  font-size: var(--fontMedium);
+  color: var(--point);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
 `;
 
 const resultImageStyle = css`

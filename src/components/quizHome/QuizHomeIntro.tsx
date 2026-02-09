@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import { Dispatch, SetStateAction } from "react";
 import q1Intro from "@images/quiz/q1-intro.webp";
 import q2Intro from "@images/quiz/q2-intro.jpeg";
 import q3Intro from "@images/quiz/q3-intro.jpeg";
@@ -7,10 +6,10 @@ import q4Intro from "@images/quiz/q4-intro.jpeg";
 
 interface QuizHomeIntroProps {
   selectedQuiz: number;
-  setSection: Dispatch<SetStateAction<number>>;
+  onStart: () => void;
 }
 
-const QuizHomeIntro = ({ selectedQuiz, setSection }: QuizHomeIntroProps) => {
+const QuizHomeIntro = ({ selectedQuiz, onStart }: QuizHomeIntroProps) => {
   const quizData = [
     {
       id: 1,
@@ -59,7 +58,7 @@ const QuizHomeIntro = ({ selectedQuiz, setSection }: QuizHomeIntroProps) => {
       <button
         aria-label="Start Quiz"
         css={startButton}
-        onClick={() => setSection(2)}
+        onClick={onStart}
       >
         시작하기
       </button>

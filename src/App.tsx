@@ -7,8 +7,10 @@ import Type from "@pages/Type";
 import { css, Global } from "@emotion/react";
 import {Footer, Navigation, RouteTracker } from "@components/nav";
 import Table from "@pages/Table";
-import Quiz from "@pages/Quiz";
-import QuizHome from "@pages/QuizHome";
+import QuizSelectPage from "@pages/quiz/QuizSelectPage";
+import QuizIntroPage from "@pages/quiz/QuizIntroPage";
+import QuizPlayPage from "@pages/quiz/QuizPlayPage";
+import QuizResultPage from "@pages/quiz/QuizResultPage";
 import { globalStyles } from "@styles/globalStyles";
 import { useMemo, useState } from "react";
 import { LanguageData, LanguageType, ThemeData } from "@models/settingData";
@@ -55,8 +57,10 @@ function App() {
             <Route path="/" element={<Main />} />
             <Route path="/type" element={<Type />} />
             <Route path="/table" element={<Table />} />
-            <Route path="/quiz" element={<QuizHome />} />
-            <Route path="/quiz/play" element={<Quiz />} />
+            <Route path="/quiz" element={<QuizSelectPage />} />
+            <Route path="/quiz/:id/intro" element={<QuizIntroPage />} />
+            <Route path="/quiz/:id/play" element={<QuizPlayPage />} />
+            <Route path="/quiz/:id/result" element={<QuizResultPage />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </div>
