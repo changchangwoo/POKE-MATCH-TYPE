@@ -212,41 +212,47 @@ const QuizHomeMain = ({
         </div>
       </div>
       <div css={quizCardContainer}>
-        {progress >= 10 ? null : (() => {
-          switch (currentQuizType) {
-            case 0:
-              return (
-                <QuizType0DamageEffectiveness
-                  submitAnswer={submitAnswer}
-                  progress={progress}
-                  isNext={isNext}
-                />
-              );
-            case 1:
-              return (
-                <QuizType1TypeInference
-                  submitAnswer={submitAnswer}
-                  progress={progress}
-                  isNext={isNext}
-                />
-              );
-            case 2:
-              return (
-                <QuizType2TypeDescription
-                  submitAnswer={submitAnswer}
-                  progress={progress}
-                  isNext={isNext}
-                />
-              );
-            default:
-              return <div>{text.QUIZ.ERROR}</div>;
-          }
-        })()}
+        {progress >= 10
+          ? null
+          : (() => {
+              switch (currentQuizType) {
+                case 0:
+                  return (
+                    <QuizType0DamageEffectiveness
+                      submitAnswer={submitAnswer}
+                      progress={progress}
+                      isNext={isNext}
+                    />
+                  );
+                case 1:
+                  return (
+                    <QuizType1TypeInference
+                      submitAnswer={submitAnswer}
+                      progress={progress}
+                      isNext={isNext}
+                    />
+                  );
+                case 2:
+                  return (
+                    <QuizType2TypeDescription
+                      submitAnswer={submitAnswer}
+                      progress={progress}
+                      isNext={isNext}
+                    />
+                  );
+                default:
+                  return <div>{text.QUIZ.ERROR}</div>;
+              }
+            })()}
       </div>
       {isNext && (
         <div css={bottomActionsContainer}>
           {alertType && (
-            <QuizAlert quizType={alertType} answerText={answerText} selectedQuiz={selectedQuiz} />
+            <QuizAlert
+              quizType={alertType}
+              answerText={answerText}
+              selectedQuiz={selectedQuiz}
+            />
           )}
           <button
             aria-label="Next Question"
@@ -258,8 +264,8 @@ const QuizHomeMain = ({
         </div>
       )}
       {showExitConfirm && (
-        <div css={modalOverlay}>
-          <div css={modalContent}>
+        <div css={modalOverlay} onClick={cancelExit}>
+          <div css={modalContent} onClick={(e) => e.stopPropagation()}>
             <h2 css={modalTitle}>{text.QUIZ.PLAY.EXIT_TITLE}</h2>
             <p css={modalMessage}>{text.QUIZ.PLAY.EXIT_MESSAGE}</p>
             <div css={modalButtons}>
@@ -358,8 +364,8 @@ const quizCardContainer = css`
 
 const exitButton = css`
   background-color: var(--background);
-  border: 1px solid var(--border);
-  color: var(--text);
+  border: 1px solid var(--point);
+  color: var(--point);
   padding: 8px 16px;
   border-radius: 6px;
   cursor: pointer;
@@ -368,9 +374,9 @@ const exitButton = css`
   transition: all 0.2s;
 
   &:hover {
-    background-color: var(--type10);
+    background-color: var(--point);
     color: white;
-    border-color: var(--type10);
+    border-color: var(--point);
   }
 
   @media (max-width: 600px) {
@@ -462,7 +468,7 @@ const modalButton = (isDanger: boolean) => css`
   padding: 10px 20px;
   border-radius: 6px;
   border: 1px solid var(--border);
-  background-color: ${isDanger ? "var(--type10)" : "var(--background)"};
+  background-color: ${isDanger ? "var(--point)" : "var(--background)"};
   color: ${isDanger ? "white" : "var(--text)"};
   cursor: pointer;
   font-size: var(--fontMedium);
@@ -472,8 +478,7 @@ const modalButton = (isDanger: boolean) => css`
   &:hover {
     ${isDanger
       ? `
-        background-color: var(--type14);
-        border-color: var(--type14);
+        background-color: var(--point);
       `
       : `
         background-color: var(--border);
