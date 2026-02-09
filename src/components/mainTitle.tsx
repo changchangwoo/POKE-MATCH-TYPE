@@ -1,10 +1,10 @@
-import { css } from "@emotion/react";
+﻿import { css } from "@emotion/react";
 import { useContext, useMemo } from "react";
 import { LanguageContext } from "@services/getInitialData";
-import LogoBulbasaur from "@images/logo_bulbasar.png";
-import LogoCharmander from "@images/logo_charmander.png";
-import LogoSquirtle from "@images/logo_squirtle.png";
-import LogoPikachu from "@images/logo_pikachu.png";
+import LogoBulbasaur from "@images/logo_bulbasar.webp";
+import LogoCharmander from "@images/logo_charmander.webp";
+import LogoSquirtle from "@images/logo_squirtle.webp";
+import LogoPikachu from "@images/logo_pikachu.webp";
 
 const LOGOS = [LogoBulbasaur, LogoCharmander, LogoSquirtle, LogoPikachu];
 
@@ -106,3 +106,4 @@ const logo = css`
 `;
 
 export default MainTitle;
+

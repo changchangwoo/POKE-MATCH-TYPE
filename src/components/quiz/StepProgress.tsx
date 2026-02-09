@@ -75,21 +75,15 @@ const container = css`
   color: var(--text);
 `;
 
-const countText = css`
-  font-size: var(--fontSmall);
-  white-space: nowrap;
-  flex-shrink: 0;
-`;
-
 const progressContainer = css`
   display: flex;
-  gap: 6px;
+  gap: 10px;
   min-height: 26px;
   align-items: center;
   contain: layout;
 
   @media (max-width: 600px) {
-    gap: 4px;
+    gap: 10px;
   }
 `;
 

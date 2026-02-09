@@ -1,9 +1,9 @@
 import { css } from "@emotion/react";
 import QuizSelectionCard from "./QuizSelectionCard";
 import q1Intro from "@images/quiz/q1-intro.webp";
-import q2Intro from "@images/quiz/q2-intro.jpeg";
-import q3Intro from "@images/quiz/q3-intro.jpeg";
-import q4Intro from "@images/quiz/q4-intro.jpeg";
+import q2Intro from "@images/quiz/q2-intro.webp";
+import q3Intro from "@images/quiz/q3-intro.webp";
+import q4Intro from "@images/quiz/q4-intro.webp";
 
 interface QuizSelectionListProps {
   onSelect: (quizId: number) => void;

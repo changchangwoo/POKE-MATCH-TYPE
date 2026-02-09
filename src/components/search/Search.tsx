@@ -1,9 +1,9 @@
-import { Dispatch, SetStateAction, useContext, useMemo } from "react";
+﻿import { Dispatch, SetStateAction, useContext, useMemo } from "react";
 import { FaSearch } from "react-icons/fa";
-import LogoBulbasaur from "@images/logo_bulbasar.png";
-import LogoCharmander from "@images/logo_charmander.png";
-import LogoSquirtle from "@images/logo_squirtle.png";
-import LogoPikachu from "@images/logo_pikachu.png";
+import LogoBulbasaur from "@images/logo_bulbasar.webp";
+import LogoCharmander from "@images/logo_charmander.webp";
+import LogoSquirtle from "@images/logo_squirtle.webp";
+import LogoPikachu from "@images/logo_pikachu.webp";
 import {
   searchContainer,
   searchHeader,
@@ -104,3 +104,4 @@ const Search = ({
 };
 
 export default Search;
+

@@ -1,12 +1,12 @@
 import { css } from "@emotion/react";
-import q1Clear from "@images/quiz/q1-clear.png";
-import q1Fail from "@images/quiz/q1-fail.png";
-import q2Clear from "@images/quiz/q2-clear.png";
-import q2Fail from "@images/quiz/q2-fail.png";
-import q3Clear from "@images/quiz/q3-clear.png";
-import q3Fail from "@images/quiz/q3-fail.png";
-import q4Clear from "@images/quiz/q4-clear.jpeg";
-import q4Fail from "@images/quiz/q4-fail.jpeg";
+import q1Clear from "@images/quiz/q1-clear.webp";
+import q1Fail from "@images/quiz/q1-fail.webp";
+import q2Clear from "@images/quiz/q2-clear.webp";
+import q2Fail from "@images/quiz/q2-fail.webp";
+import q3Clear from "@images/quiz/q3-clear.webp";
+import q3Fail from "@images/quiz/q3-fail.webp";
+import q4Clear from "@images/quiz/q4-clear.webp";
+import q4Fail from "@images/quiz/q4-fail.webp";
 
 interface QuizHomeEndProps {
   selectedQuiz: number;

@@ -246,7 +246,7 @@ const QuizHomeMain = ({
       {isNext && (
         <div css={bottomActionsContainer}>
           {alertType && (
-            <QuizAlert quizType={alertType} answerText={answerText} />
+            <QuizAlert quizType={alertType} answerText={answerText} selectedQuiz={selectedQuiz} />
           )}
           <button
             aria-label="Next Question"

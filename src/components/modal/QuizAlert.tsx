@@ -1,15 +1,25 @@
-import { css } from "@emotion/react";
-import QuizSuccessImg from "@images/quiz/q1-success.png";
-import QuizMissImg from "@images/quiz/q1-miss.png";
+﻿import { css } from "@emotion/react";
+import q1Success from "@images/quiz/q1-success.webp";
+import q1Miss from "@images/quiz/q1-miss.webp";
+import q2Success from "@images/quiz/q2-success.webp";
+import q2Miss from "@images/quiz/q2-miss.webp";
+import q3Success from "@images/quiz/q3-success.webp";
+import q3Miss from "@images/quiz/q3-miss.webp";
+import q4Success from "@images/quiz/q4-success.webp";
+import q4Miss from "@images/quiz/q4-miss.webp";
 import { useContext, useEffect, useState } from "react";
 import { LanguageContext } from "@services/getInitialData";
+
+const successImages = [q1Success, q2Success, q3Success, q4Success];
+const missImages = [q1Miss, q2Miss, q3Miss, q4Miss];
 
 interface QuizAlertProps {
   quizType: "correct" | "incorrect";
   answerText: string;
+  selectedQuiz: number;
 }
 
-const QuizAlert = ({ quizType, answerText }: QuizAlertProps) => {
+const QuizAlert = ({ quizType, answerText, selectedQuiz }: QuizAlertProps) => {
   const [visible, setVisible] = useState(true);
   const { text } = useContext(LanguageContext);
 
@@ -23,7 +33,7 @@ const QuizAlert = ({ quizType, answerText }: QuizAlertProps) => {
     <div css={QuizAlertContainer(quizType === "correct")}>
       <div className="quizAlertContents">
         <img
-          src={quizType === "correct" ? QuizSuccessImg : QuizMissImg}
+          src={quizType === "correct" ? successImages[selectedQuiz - 1] : missImages[selectedQuiz - 1]}
         ></img>
       </div>
       <div className="quizAlertText">
@@ -128,3 +138,4 @@ const QuizAlertContainer = (isCorrect: boolean) => css`
 `;
 
 export default QuizAlert;
+
