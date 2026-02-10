@@ -91,7 +91,7 @@ export const generateQuizType2Question = (
 export const generateRandomTypeNos = (): number[] => {
   const randomTypes: number[] = [];
   while (randomTypes.length < 2) {
-    const randomTypeNum = getRandomNum(defaultTypes.length - 1);
+    const randomTypeNum = getRandomNum(defaultTypes.length);
     if (!randomTypes.includes(defaultTypes[randomTypeNum].no)) {
       randomTypes.push(defaultTypes[randomTypeNum].no);
     }

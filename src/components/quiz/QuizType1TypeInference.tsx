@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { getRandomNum, getShuffleArr } from "@utils/getRandomNum";
+import { isValidForBlank } from "@utils/quizType1Validator";
 import { css } from "@emotion/react";
 import TypeBadge from "@components/commons/TypeBadge";
 
@@ -61,17 +62,19 @@ const QuizType1TypeInference = ({
     result.push(answer);
     answerSet.add(answer.name);
     const correct = result[0];
-    while (true) {
+    let attempts = 0;
+    while (result.length < 6) {
+      if (attempts > 300) break;
+      attempts++;
+
       const randTypeNum = getRandomNum(defaultTypes.length);
       const candidate = defaultTypes[randTypeNum];
-      if (!answerSet.has(candidate.name)) {
-        result.push({
-          no: candidate.no,
-          name: candidate.name,
-        });
-        answerSet.add(candidate.name);
-      }
-      if (result.length === 6) break;
+
+      if (answerSet.has(candidate.name)) continue;
+      if (isValidForBlank(candidate.name, quizType1_data[randQuiz], randBlank)) continue;
+
+      result.push({ no: candidate.no, name: candidate.name });
+      answerSet.add(candidate.name);
     }
     const shuffleResult = getShuffleArr(result);
     const answerIdx = shuffleResult.findIndex((item) => item.no === correct.no)
