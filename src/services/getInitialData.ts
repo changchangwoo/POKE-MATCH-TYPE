@@ -67,5 +67,5 @@ export const getInitialLanguage = (): LanguageData => {
     return { type: "kor" };
   }
 
-  return { type: "eng" };
+  return { type: "kor" };
 };
