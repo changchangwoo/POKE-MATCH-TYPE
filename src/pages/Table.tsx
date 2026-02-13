@@ -10,7 +10,7 @@ const Table = () => {
   const { columnHeaders, rowData } = typeEffectivenessData;
   const [clearDatas, setClearDatas] = useState<number[]>([]);
 
-  const handleBodyHeader = (e: React.MouseEvent<HTMLElement>) => {
+  const handleBodyHeader = (e: React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement>) => {
     const target = e.currentTarget;
     if (clearDatas.includes(Number(target.dataset.type))) {
       setClearDatas(
@@ -38,9 +38,21 @@ const Table = () => {
             <table>
               <thead>
                 <tr>
-                  <th onClick={handleAllHeader}></th>
+                  <th
+                    onClick={handleAllHeader}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        handleAllHeader();
+                      }
+                    }}
+                    role="button"
+                    tabIndex={0}
+                    aria-label={text.TABLE.SELECT_ALL}
+                  ></th>
                   {columnHeaders.map((header, index) => (
                     <th
+                      scope="col"
                       css={tableHeaderStyle(header.no, false, true)}
                       key={index}
                     >
@@ -55,14 +67,36 @@ const Table = () => {
                   return (
                     <tr key={rowIndex}>
                       <th
+                        scope="row"
                         css={tableHeaderStyle(row.no, isClicked)}
                         onClick={handleBodyHeader}
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter" || e.key === " ") {
+                            e.preventDefault();
+                            handleBodyHeader(e);
+                          }
+                        }}
+                        role="button"
+                        tabIndex={0}
+                        aria-pressed={isClicked}
                         data-type={row.no}
                       >
                         {getTranslateType(row.type, language.type)}
                       </th>
                       {row.values.map((value, colIndex) => (
-                        <td key={colIndex} css={valueColor(value, isClicked)}>
+                        <td
+                          key={colIndex}
+                          css={valueColor(value, isClicked)}
+                          aria-label={
+                            value === "●"
+                              ? text.TABLE.EFFECT_SUMMARY.SUPER_EFFECT
+                              : value === "▲"
+                                ? text.TABLE.EFFECT_SUMMARY.NORMAL_EFFECT
+                                : value === "✕"
+                                  ? text.TABLE.EFFECT_SUMMARY.NOT_EFFECT
+                                  : undefined
+                          }
+                        >
                           {value}
                         </td>
                       ))}

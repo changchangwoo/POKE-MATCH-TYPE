@@ -3,7 +3,7 @@ import { mainContainer } from "@components/match/MatchMain";
 
 export const MatchMainSkeleton = () => {
   return (
-    <div css={mainContainer}>
+    <div css={mainContainer} role="status" aria-busy="true" aria-label="Loading">
       <div css={matchCardContainerSkeleton}>
         <div className="dummy_titleBox"/>
         <div className="dummy_imgBox" />

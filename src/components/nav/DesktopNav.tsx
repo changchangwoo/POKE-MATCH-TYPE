@@ -46,7 +46,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({
       >
         <HiMenu />
       </button>
-      <img src={logo} alt="Logo" className="mobile-logo" />
+      <img src={logo} alt={currentLanguage === "kor" ? "포켓몬 타입 계산기 홈" : "Pokémon Type Calculator Home"} className="mobile-logo" />
       <nav className="nav-links" ref={navRef}>
         {navItems.map(({ path, label }) => (
           <NavLink
@@ -66,6 +66,8 @@ const DesktopNav: React.FC<DesktopNavProps> = ({
             className={`lang-dropdown-toggle${isLangOpen ? " open" : ""}`}
             onClick={onLanguageToggle}
             aria-label="Select Language"
+            aria-expanded={isLangOpen}
+            aria-haspopup="listbox"
           >
             <span>
               {languageList.find((l) => l.type === currentLanguage)?.label}
@@ -73,10 +75,12 @@ const DesktopNav: React.FC<DesktopNavProps> = ({
             <IoChevronDown size={12} />
           </button>
           {isLangOpen && (
-            <ul className="lang-dropdown-menu">
+            <ul className="lang-dropdown-menu" role="listbox" aria-label="Language">
               {languageList.map((item) => (
                 <li
                   key={item.type}
+                  role="option"
+                  aria-selected={currentLanguage === item.type}
                   className={currentLanguage === item.type ? "selected" : ""}
                   onClick={() => onLanguageSelect(item.type)}
                 >
@@ -98,7 +102,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({
         <button
           className="inquiry-btn"
           onClick={onFeedbackClick}
-          aria-label="Inquiry"
+          aria-label={currentLanguage === "kor" ? "피드백 (새 창에서 열림)" : "Feedback (opens in new window)"}
         >
           <IoHelpCircle />
         </button>

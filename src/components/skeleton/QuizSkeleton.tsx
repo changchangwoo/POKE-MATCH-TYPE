@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 
 export const QuizType0Skeleton = () => {
   return (
-    <div css={quizType0_SkeletionStyle}>
+    <div css={quizType0_SkeletionStyle} role="status" aria-busy="true" aria-label="Loading">
     <div className='title'/>
     <div className='dummy_imgBox'/>
     <div className='dummy_typeBox'/>

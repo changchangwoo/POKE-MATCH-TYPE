@@ -34,7 +34,8 @@ const QuizAlert = ({ quizType, answerText, selectedQuiz }: QuizAlertProps) => {
       <div className="quizAlertContents">
         <img
           src={quizType === "correct" ? successImages[selectedQuiz - 1] : missImages[selectedQuiz - 1]}
-        ></img>
+          alt={quizType === "correct" ? text.QUIZ.ALERT.TYPE_1 : text.QUIZ.ALERT.TYPE_2}
+        />
       </div>
       <div className="quizAlertText">
         {quizType === "correct" ? (

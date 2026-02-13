@@ -38,8 +38,9 @@ export const QuizAnswer = ({
       </div>
       <button
         aria-label="Submit Answer"
+        aria-disabled={isNext || checkedType.length === 0}
         onClick={() => {
-          if (checkedType.length === 0) return;
+          if (isNext || checkedType.length === 0) return;
           submitAnswer(checkedType[0].idx, answerIdx, questionArr[answerIdx]);
         }}
         css={submitBtn(isNext || checkedType.length === 0)}

@@ -47,12 +47,14 @@ const SelectTerastal = ({
   return (
     <>
       <div css={selectTerastalContainer}>
-        <h1>{text.MATCH.SELECT_TERASTAL.TITLE}</h1>
+        <label htmlFor="select-terastal">
+          <h2>{text.MATCH.SELECT_TERASTAL.TITLE}</h2>
+        </label>
 
         <select
+          id="select-terastal"
           value={selectedTerastal}
           onChange={handleTerastalChange}
-          aria-label="Select Terastal"
         >
           {terastalTypes.map((type) => (
             <option key={type.value} value={type.value}>
@@ -72,7 +74,7 @@ export const selectTerastalContainer = css`
   justify-content: center;
   gap: 10px;
 
-  h1 {
+  h2 {
     text-align: center;
     color: var(--text);
   }

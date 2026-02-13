@@ -53,7 +53,7 @@ const Search = ({
 
   return (
     <div css={searchContainer} ref={searchRef}>
-      <div css={inputWrapper}>
+      <div css={inputWrapper} aria-live="polite" aria-atomic="false">
         <form
           css={inputBox}
           onSubmit={handleSubmit}
@@ -66,6 +66,7 @@ const Search = ({
             onChange={handleInputChange}
             onKeyDown={handleKeyDown}
             placeholder={text.MAIN.SEARCH.PLACE_HOLDER}
+            aria-label={text.MAIN.SEARCH.PLACE_HOLDER}
           />
         </form>
         {suggestions.length > 0 && (

@@ -150,7 +150,16 @@ const Navigation = () => {
       />
 
       {isDrawerOpen && (
-        <div css={overlayStyle} onClick={() => setDrawerOpen(false)} />
+        <div
+          css={overlayStyle}
+          onClick={() => setDrawerOpen(false)}
+          onKeyDown={(e) => {
+            if (e.key === "Escape" || e.key === "Enter") setDrawerOpen(false);
+          }}
+          role="button"
+          tabIndex={0}
+          aria-label={language.type === "kor" ? "메뉴 닫기" : "Close menu"}
+        />
       )}
     </>
   );

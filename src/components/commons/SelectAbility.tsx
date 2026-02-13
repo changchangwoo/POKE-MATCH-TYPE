@@ -27,10 +27,11 @@ const SelectAbility = ({
   return (
     <>
       <div css={selectAbilityContainer}>
-        <h1>{text.MATCH.SELECT_ABILITY.TITLE}</h1>
+        <label htmlFor="select-ability">
+          <h2>{text.MATCH.SELECT_ABILITY.TITLE}</h2>
+        </label>
 
-        <select value={selectedAbility} onChange={handleAbilityChange}
-        aria-label="Select Ability">
+        <select id="select-ability" value={selectedAbility} onChange={handleAbilityChange}>
           {abilities.map((ability) => (
             <option key={ability.value} value={ability.value}>
               {ability.label[language.type]}
@@ -49,7 +50,7 @@ export const selectAbilityContainer = css`
   justify-content: center;
   gap: 10px;
 
-  h1 {
+  h2 {
     text-align: center;
     color: var(--text);
   }

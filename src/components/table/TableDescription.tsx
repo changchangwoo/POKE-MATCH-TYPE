@@ -43,8 +43,8 @@ const TableDescription = ({ text }: TableDescriptionProps) => {
     <div css={tableDescriptionStyle}>
       <div className="box">
         {EFFECT_SUMMARY.map(({ icon, typeNo, description, factor }) => (
-          <div key={icon}>
-            <span style={{ color: `var(--type${typeNo})` }}>{icon}</span>:
+          <div key={icon} aria-label={`${icon}: ${description} (${factor})`}>
+            <span style={{ color: `var(--type${typeNo})` }} aria-hidden="true">{icon}</span>:
             <span>
               {description} ({factor})
             </span>
@@ -54,8 +54,8 @@ const TableDescription = ({ text }: TableDescriptionProps) => {
 
       <div className="extraBox">
         {IMMUNITY_LIST.map(({ typeNo, description }) => (
-          <div key={description}>
-            <span style={{ color: `var(--type${typeNo})` }}>●</span>
+          <div key={description} aria-label={description}>
+            <span style={{ color: `var(--type${typeNo})` }} aria-hidden="true">●</span>
             <span>{description}</span>
           </div>
         ))}

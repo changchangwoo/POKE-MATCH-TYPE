@@ -66,7 +66,8 @@ const SelectType = ({
             );
             return (
               <button
-                aria-label="Select Type"
+                aria-label={`${getTranslateType(type.name, language.type)} ${text.MATCH.SELECT_TYPE.TITLE}`}
+                aria-pressed={isChecked}
                 css={item(isChecked ? type.no : undefined)}
                 onClick={() => handleSelect(type, idx)}
                 key={type.no}

@@ -31,7 +31,7 @@ const SpeciesButtons = ({
 
   return (
     <>
-      <h1>{text.MAIN.MATCH.FORM}</h1>
+      <h2>{text.MAIN.MATCH.FORM}</h2>
       <div css={speciesTypes}>
         {varietiesData.varieties.map((species: any, idx: number) => {
           if (species.is_visible === false) return null;
@@ -41,7 +41,8 @@ const SpeciesButtons = ({
 
           return (
             <button
-            aria-label="Select Species"
+              aria-label={label}
+              aria-pressed={clickedBtn === idx}
               key={species.pokemon.name}
               css={[speciesBtn, clickedBtn === idx && selectedBtn]}
               data-idx={idx}

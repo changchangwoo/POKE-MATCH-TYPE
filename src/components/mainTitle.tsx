@@ -23,7 +23,7 @@ const MainTitle = () => {
       </div>
       <div css={logoWrapper}>
         {randomLogos.map((logoSrc, idx) => (
-          <img key={`${logoSrc}-${idx}`} src={logoSrc} css={logo} alt="logo" />
+          <img key={`${logoSrc}-${idx}`} src={logoSrc} css={logo} alt="" />
         ))}
       </div>
     </div>

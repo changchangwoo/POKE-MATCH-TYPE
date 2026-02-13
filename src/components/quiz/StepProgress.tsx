@@ -46,7 +46,19 @@ const StepProgress = ({
               css={progressBox(progress.step, isClickable || false)}
               onClick={() => handleProgressClick(idx)}
               role={isClickable ? "button" : undefined}
-              aria-label={isClickable ? `Go to question ${idx + 1}` : undefined}
+              aria-label={
+                isClickable
+                  ? `Question ${idx + 1} (${
+                      progress.step === "correct"
+                        ? "correct"
+                        : progress.step === "wrong"
+                          ? "incorrect"
+                          : progress.step === "current"
+                            ? "current"
+                            : "unanswered"
+                    })`
+                  : `Question ${idx + 1}`
+              }
               tabIndex={isClickable ? 0 : undefined}
               onKeyDown={(e) => {
                 if (isClickable && (e.key === "Enter" || e.key === " ")) {

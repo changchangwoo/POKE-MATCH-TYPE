@@ -40,9 +40,9 @@ const MobileDrawer: React.FC<MobileDrawerProps> = ({
   onFeedbackClick,
 }) => {
   return (
-    <aside css={drawerStyle(isOpen)}>
+    <aside css={drawerStyle(isOpen)} aria-label={currentLanguage === "kor" ? "모바일 메뉴" : "Mobile menu"}>
       <div className="drawer-header">
-        <img src={logo} alt="Logo" className="drawer-logo" />
+        <img src={logo} alt={currentLanguage === "kor" ? "포켓몬 타입 계산기 홈" : "Pokémon Type Calculator Home"} className="drawer-logo" />
         <h2>{appTitle}</h2>
       </div>
 
@@ -63,7 +63,7 @@ const MobileDrawer: React.FC<MobileDrawerProps> = ({
 
       <div className="drawer-actions">
         <div className="drawer-lang-accordion">
-          <button className="drawer-action-btn" onClick={onLanguageToggle}>
+          <button className="drawer-action-btn" onClick={onLanguageToggle} aria-expanded={isLangOpen}>
             <IoChevronDown className={isLangOpen ? "rotated" : ""} />
             <span>
               {languageList.find((l) => l.type === currentLanguage)?.label}
@@ -89,7 +89,11 @@ const MobileDrawer: React.FC<MobileDrawerProps> = ({
           </span>
         </button>
 
-        <button className="drawer-action-btn" onClick={onFeedbackClick}>
+        <button
+          className="drawer-action-btn"
+          onClick={onFeedbackClick}
+          aria-label={`${feedbackLabel} ${currentLanguage === "kor" ? "(새 창에서 열림)" : "(opens in new window)"}`}
+        >
           <IoHelpCircle />
           <span>{feedbackLabel}</span>
         </button>

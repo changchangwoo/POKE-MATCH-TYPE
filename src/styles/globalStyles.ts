@@ -39,6 +39,11 @@ const themes: Record<Theme, ThemeStyles> = {
 export const globalStyles = (themeMode: keyof typeof themes = "light") => {
   const theme = themes[themeMode];
   return css`
+    *:focus-visible {
+      outline: 2px solid ${theme.point};
+      outline-offset: 2px;
+    }
+
     :root {
       /* 컬러 */
       /* --point: #eb9191; */
