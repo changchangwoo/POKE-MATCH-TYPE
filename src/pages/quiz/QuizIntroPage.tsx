@@ -69,7 +69,7 @@ const QuizIntroPage = () => {
           <QuizHomeIntro selectedQuiz={quizId} onStart={handleStart} />
         </div>
         <div css={rightWrapper}>
-          <RankingList />
+          <RankingList quizId={quizId} />
         </div>
       </div>
     </div>

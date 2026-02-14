@@ -164,8 +164,10 @@ export const LANGUAGE_TEXTS = {
       RANKING: {
         TITLE: "명예의 전당",
         RESET_NOTICE: "매 주 월요일에 초기화됩니다",
-        OVERLAY: "작업중",
         RANK_SUFFIX: "위",
+        ERROR: "랭킹을 불러올 수 없습니다",
+        EMPTY: "아직 기록이 없습니다",
+        RETRY: "다시 시도",
       },
       END: {
         SCORE: "10문제 중 {correctCount}개 정답",
@@ -353,8 +355,10 @@ export const LANGUAGE_TEXTS = {
       RANKING: {
         TITLE: "Hall of Fame",
         RESET_NOTICE: "Resets every Monday",
-        OVERLAY: "In Progress",
         RANK_SUFFIX: "th",
+        ERROR: "Failed to load rankings",
+        EMPTY: "No records yet",
+        RETRY: "Retry",
       },
       END: {
         SCORE: "{correctCount} out of 10 correct",

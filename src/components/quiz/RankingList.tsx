@@ -1,38 +1,16 @@
 import { css } from "@emotion/react";
 import { useContext } from "react";
 import { LanguageContext } from "@services/getInitialData";
+import { useFetchQuizRanking } from "@hooks/queries";
 
-interface RankingItem {
-  rank: number;
-  username: string;
-  score: number;
-  time: number;
-  date: string;
+interface RankingListProps {
+  quizId: number;
 }
 
-const mockWeekly: RankingItem[] = [
-  { rank: 1, username: "타입장인", score: 10, time: 32, date: "2024-02-03" },
-  {
-    rank: 2,
-    username: "피카츄마스터",
-    score: 10,
-    time: 38,
-    date: "2024-02-05",
-  },
-  { rank: 3, username: "상성의신", score: 10, time: 41, date: "2024-02-01" },
-  { rank: 4, username: "이상해씨", score: 9, time: 45, date: "2024-02-05" },
-  { rank: 5, username: "꼬부기킹", score: 9, time: 52, date: "2024-02-03" },
-  { rank: 6, username: "루기아팬", score: 9, time: 58, date: "2024-02-02" },
-  { rank: 7, username: "파이리덕후", score: 8, time: 61, date: "2024-02-05" },
-  { rank: 8, username: "뮤츠킬러", score: 8, time: 74, date: "2024-02-04" },
-  { rank: 9, username: "망나뇽러버", score: 8, time: 88, date: "2024-02-01" },
-  { rank: 10, username: "잠만보123", score: 7, time: 95, date: "2024-02-04" },
-];
-
-const RankingList = () => {
+const RankingList = ({ quizId }: RankingListProps) => {
   const { text } = useContext(LanguageContext);
   const t = text.QUIZ.RANKING;
-  const rankings = mockWeekly;
+  const { data: rankings, isLoading, isError, refetch } = useFetchQuizRanking(quizId);
 
   const formatTime = (seconds: number) => {
     const m = Math.floor(seconds / 60);
@@ -54,11 +32,64 @@ const RankingList = () => {
     return `${rank}${t.RANK_SUFFIX}`;
   };
 
+  const renderContent = () => {
+    if (isLoading) {
+      return (
+        <div css={statusContainer}>
+          <div css={spinner} />
+        </div>
+      );
+    }
+
+    if (isError) {
+      return (
+        <div css={statusContainer}>
+          <span css={statusText}>{t.ERROR}</span>
+          <button css={retryButton} onClick={() => refetch()}>
+            {t.RETRY}
+          </button>
+        </div>
+      );
+    }
+
+    if (!rankings || rankings.length === 0) {
+      return (
+        <div css={statusContainer}>
+          <span css={statusText}>{t.EMPTY}</span>
+        </div>
+      );
+    }
+
+    return (
+      <div css={rankingListStyle}>
+        {rankings.map((item) => (
+          <div key={item.rank} css={rankingItem(item.rank)}>
+            <div css={rankBadge(item.rank)}>
+              <span css={getRankBadgeStyle(item.rank)}>
+                {getRankIcon(item.rank)}
+              </span>
+            </div>
+
+            <div css={rankingInfo}>
+              <span css={usernameStyle}>{item.username}</span>
+              <span css={rankDate}>{item.date}</span>
+            </div>
+
+            <div css={scoreDisplay}>
+              <div css={scoreRow}>
+                <span css={scoreValue}>{item.score}</span>
+                <span css={scoreMax}>/10</span>
+              </div>
+              <span css={timeDisplay}>{formatTime(item.time)}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   return (
     <div css={rankingOuter}>
-      <div css={overlay}>
-        <span css={overlayText}>{t.OVERLAY}</span>
-      </div>
       <div css={rankingContainer}>
         <div css={rankingHeader}>
           <h2 css={rankingTitle}>{t.TITLE}</h2>
@@ -66,30 +97,7 @@ const RankingList = () => {
         </div>
 
         <div css={rankingListWrapper}>
-          <div css={rankingListStyle}>
-          {rankings.map((item) => (
-            <div key={item.rank} css={rankingItem(item.rank)}>
-              <div css={rankBadge(item.rank)}>
-                <span css={getRankBadgeStyle(item.rank)}>
-                  {getRankIcon(item.rank)}
-                </span>
-              </div>
-
-              <div css={rankingInfo}>
-                <span css={username}>{item.username}</span>
-                <span css={rankDate}>{item.date}</span>
-              </div>
-
-              <div css={scoreDisplay}>
-                <div css={scoreRow}>
-                  <span css={scoreValue}>{item.score}</span>
-                  <span css={scoreMax}>/10</span>
-                </div>
-                <span css={timeDisplay}>{formatTime(item.time)}</span>
-              </div>
-            </div>
-          ))}
-          </div>
+          {renderContent()}
         </div>
       </div>
     </div>
@@ -144,21 +152,54 @@ const rankingListWrapper = css`
   flex: 1;
 `;
 
-const overlay = css`
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 8px;
+const statusContainer = css`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 10;
+  gap: 12px;
+  padding: 40px 12px;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  min-height: 200px;
 `;
 
-const overlayText = css`
-  color: white;
-  font-size: var(--fontLarge);
-  font-weight: bold;
+const statusText = css`
+  font-size: var(--fontSmall);
+  color: var(--text);
+  opacity: 0.7;
+  text-align: center;
+`;
+
+const retryButton = css`
+  padding: 8px 20px;
+  font-size: var(--fontSmall);
+  color: var(--background);
+  background-color: var(--point);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+`;
+
+const spinner = css`
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--border);
+  border-top-color: var(--point);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
 `;
 
 const rankingListStyle = css`
@@ -258,7 +299,7 @@ const rankingInfo = css`
   min-width: 0;
 `;
 
-const username = css`
+const usernameStyle = css`
   font-size: var(--fontSmall);
   color: var(--text);
   overflow: hidden;
