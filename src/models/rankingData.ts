@@ -18,3 +18,14 @@ export interface RankingItem {
   time: number;
   date: string;
 }
+
+export interface RankingSubmitRequest {
+  username: string;
+  score: number;
+  timeSeconds: number;
+}
+
+export interface RankingSubmitResponse {
+  rank: number;
+  recordedAt: string;
+}

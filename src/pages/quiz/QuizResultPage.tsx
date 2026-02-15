@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import QuizHomeEnd from "@components/quizHome/QuizHomeEnd";
 import RankingList from "@components/quiz/RankingList";
-import { loadSession, clearSession, saveStamp } from "@hooks/useQuizSession";
+import SubmitModal from "@components/quiz/SubmitModal";
+import { loadSession, clearSession, saveStamp, isAlreadySubmitted, markSubmitted } from "@hooks/useQuizSession";
 
 const VALID_QUIZ_IDS = [1, 2, 3, 4];
 
@@ -15,6 +16,9 @@ const QuizResultPage = () => {
   const [progressArr, setProgressArr] = useState<{ step: string }[]>([]);
   const [elapsedSeconds, setElapsedSeconds] = useState<number | null>(null);
   const [sessionLoaded, setSessionLoaded] = useState(false);
+  const [correctCount, setCorrectCount] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalDismissed, setIsModalDismissed] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -32,9 +36,14 @@ const QuizResultPage = () => {
     setProgressArr(session.questions.map((q) => ({ step: q.status })));
     setElapsedSeconds(session.elapsedSeconds);
 
-    const correctCount = session.questions.filter((q) => q.status === "correct").length;
+    const count = session.questions.filter((q) => q.status === "correct").length;
+    setCorrectCount(count);
     if (session.elapsedSeconds !== null) {
-      saveStamp(quizId, correctCount, session.elapsedSeconds);
+      saveStamp(quizId, count, session.elapsedSeconds);
+    }
+
+    if (count >= 7 && session.elapsedSeconds !== null && !isAlreadySubmitted(quizId)) {
+      setIsModalOpen(true);
     }
 
     setSessionLoaded(true);
@@ -48,6 +57,15 @@ const QuizResultPage = () => {
   const handleSelectDifferent = () => {
     clearSession();
     navigate("/quiz");
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+    setIsModalDismissed(true);
+  };
+
+  const handleSubmitSuccess = () => {
+    markSubmitted(quizId);
   };
 
   if (!sessionLoaded) {
@@ -70,6 +88,16 @@ const QuizResultPage = () => {
           <RankingList quizId={quizId} />
         </div>
       </div>
+      {!isModalDismissed && elapsedSeconds !== null && (
+        <SubmitModal
+          quizId={quizId}
+          score={correctCount}
+          timeSeconds={elapsedSeconds}
+          isOpen={isModalOpen}
+          onClose={handleModalClose}
+          onSubmitSuccess={handleSubmitSuccess}
+        />
+      )}
     </div>
   );
 };

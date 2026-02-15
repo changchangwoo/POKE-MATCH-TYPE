@@ -107,6 +107,18 @@ export const updateSessionProgress = (progress: number): void => {
   }
 };
 
+// --- 랭킹 제출 완료 플래그 (sessionStorage) ---
+
+const SUBMITTED_KEY = "quizRankingSubmitted";
+
+export const markSubmitted = (quizId: number): void => {
+  sessionStorage.setItem(`${SUBMITTED_KEY}_${quizId}`, "true");
+};
+
+export const isAlreadySubmitted = (quizId: number): boolean => {
+  return sessionStorage.getItem(`${SUBMITTED_KEY}_${quizId}`) === "true";
+};
+
 // --- 스탬프 (localStorage) ---
 
 export interface QuizStamp {

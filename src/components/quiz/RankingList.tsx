@@ -95,7 +95,6 @@ const RankingList = ({ quizId }: RankingListProps) => {
           <h2 css={rankingTitle}>{t.TITLE}</h2>
           <span css={resetNotice}>{t.RESET_NOTICE}</span>
         </div>
-
         <div css={rankingListWrapper}>
           {renderContent()}
         </div>
@@ -108,17 +107,22 @@ const rankingOuter = css`
   position: relative;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 `;
 
 const rankingContainer = css`
   display: flex;
   flex-direction: column;
-  gap: 12px;
   width: 100%;
   height: 100%;
   position: sticky;
   top: 80px;
   align-self: flex-start;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
 
   @media (max-width: 768px) {
     position: static;
@@ -130,9 +134,6 @@ const rankingHeader = css`
   flex-direction: column;
   gap: 8px;
   padding: 16px;
-  background-color: var(--background);
-  border: 1px solid var(--border);
-  border-radius: 8px;
   text-align: center;
 `;
 
@@ -159,10 +160,7 @@ const statusContainer = css`
   justify-content: center;
   gap: 12px;
   padding: 40px 12px;
-  background-color: var(--background);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  min-height: 200px;
+  flex: 1;
 `;
 
 const statusText = css`
@@ -206,12 +204,8 @@ const rankingListStyle = css`
   display: flex;
   flex-direction: column;
   gap: 6px;
-  padding: 12px;
-  background-color: var(--background);
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  padding: 0 12px 12px;
   flex: 1;
-  max-height: 400px;
   overflow-y: auto;
 
   &::-webkit-scrollbar {

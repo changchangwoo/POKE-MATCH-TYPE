@@ -170,14 +170,54 @@ export const LANGUAGE_TEXTS = {
         RETRY: "다시 시도",
       },
       END: {
-        SCORE: "10문제 중 {correctCount}개 정답",
-        TIME: "소요 시간 {time}",
-        SUCCESS_1: "축하합니다! 퀴즈를 통과했습니다!",
-        SUCCESS_2: "타입 상성에 대한 이해도가 뛰어나시네요!",
-        FAIL_1: "아쉽지만 조금 더 공부가 필요해요.",
-        FAIL_2: "타입 표를 참고하여 다시 도전해보세요!",
+        SCORE: "10문제 중 {correctCount}문제 정답",
+        TIME: "소요 시간: {time}",
         RETRY: "다시 도전",
         SELECT_DIFFERENT: "다른 퀴즈 선택",
+        Q1: {
+          SUCCESS_1:
+            "길을 찾았어요!\n 피카츄가 번개처럼 앞장서며 숲을 빠져나갑니다!",
+          SUCCESS_2:
+            "상성을 정확히 꿰뚫었네요.\n 이제 집까지 안전하게 갈 수 있어요!",
+          FAIL_1:
+            "길이 또 갈라졌어요…\n 피카츄가 잠깐 멈춰 서서 두리번거립니다.",
+          FAIL_2: "조금만 더 도와줄까요?\n 타입 표를 보고 다시 길을 찾아봐요!",
+        },
+        Q2: {
+          SUCCESS_1:
+            "요리 완성!\n 한입 맛본 포켓몬들이 전부 엄지를 치켜세웠어요!",
+          SUCCESS_2:
+            "피해량 계산이 딱 맞았네요.\n 이상해씨도 뿌듯해하고 있어요!",
+          FAIL_1:
+            "앗… 간이 조금 달라졌어요.\n 이상해씨가 레시피를 다시 펼쳐봅니다.",
+          FAIL_2: "최고의 요리를 위해서 다시 도전해볼까요? ",
+        },
+        Q3: {
+          SUCCESS_1: "진압 완료! 마을의 영웅이 되어버린 꼬부기!",
+          SUCCESS_2:
+            "부등호 선택이 완벽했어요. 이제 안전한 마을로 돌아갈 수 있어요!",
+          FAIL_1: "불길이 더 거세졌어요… \n꼬부기가 다시 도움을 요청합니다!",
+          FAIL_2: "꼬부기가 끝까지 진압할 수 있도록 도와줄까요?",
+        },
+        Q4: {
+          SUCCESS_1:
+            "이번 크리스마스도 무사히 성공!\n 파이리가 조용히 선물을 전달했어요!",
+          SUCCESS_2:
+            "배수 계산이 정확했네요. 들키지 않고 마지막 집까지 도착했어요!",
+          FAIL_1: "아차… 발자국 소리가 났어요!\n 파이리가 급히 숨습니다.",
+          FAIL_2:
+            "파이리의 정체가 탄로났어요… 배수를 다시 계산해서 완벽히 잠입해봐요!",
+        },
+      },
+      RESULT_SUBMIT: {
+        MODAL_TITLE: "랭킹 등록",
+        ID_PLACEHOLDER: "닉네임 입력 (1~20자)",
+        BUTTON: "제출",
+        CANCEL: "취소",
+        SUCCESS: "제출 완료!",
+        ERROR: "제출에 실패했습니다. 다시 시도해주세요.",
+        RETRY: "다시 시도",
+        VALIDATION_LENGTH: "1~20자 이내로 입력해주세요.",
       },
     },
     ERROR: {
@@ -363,12 +403,58 @@ export const LANGUAGE_TEXTS = {
       END: {
         SCORE: "{correctCount} out of 10 correct",
         TIME: "Time: {time}",
-        SUCCESS_1: "Congratulations! You passed the quiz!",
-        SUCCESS_2: "You have an excellent understanding of type matchups!",
-        FAIL_1: "Not quite there yet, keep studying!",
-        FAIL_2: "Check the type chart and try again!",
         RETRY: "Try Again",
         SELECT_DIFFERENT: "Choose Another Quiz",
+        Q1: {
+          SUCCESS_1:
+            "You found the way!\n Pikachu dashes ahead like lightning through the forest!",
+          SUCCESS_2:
+            "You nailed every type matchup.\n Pikachu can safely make it home now!",
+          FAIL_1:
+            "The path splits again…\n Pikachu pauses and looks around nervously.",
+          FAIL_2:
+            "Need a little more help?\n Check the type chart and find the way!",
+        },
+        Q2: {
+          SUCCESS_1:
+            "Dish complete!\n Every Pokémon who tasted it gave a thumbs up!",
+          SUCCESS_2:
+            "Your damage calculations were spot on.\n Bulbasaur is proud of you!",
+          FAIL_1:
+            "Oops… the seasoning is a bit off.\n Bulbasaur opens the recipe again.",
+          FAIL_2:
+            "Want to try again for the perfect dish?",
+        },
+        Q3: {
+          SUCCESS_1:
+            "Fire extinguished! Squirtle has become the hero of the town!",
+          SUCCESS_2:
+            "Your inequality choices were perfect.\n The town is safe again!",
+          FAIL_1:
+            "The flames are growing stronger…\n Squirtle is calling for backup!",
+          FAIL_2:
+            "Can you help Squirtle put out every last flame?",
+        },
+        Q4: {
+          SUCCESS_1:
+            "Another Christmas success!\n Charmander quietly delivered all the presents!",
+          SUCCESS_2:
+            "Your multiplier calculations were perfect.\n Made it to the last house undetected!",
+          FAIL_1:
+            "Uh oh… footsteps were heard!\n Charmander hides in a hurry.",
+          FAIL_2:
+            "Charmander's cover is blown…\n Recalculate the multipliers for a perfect stealth run!",
+        },
+      },
+      RESULT_SUBMIT: {
+        MODAL_TITLE: "Register Ranking",
+        ID_PLACEHOLDER: "Enter nickname (1-20 chars)",
+        BUTTON: "Submit",
+        CANCEL: "Cancel",
+        SUCCESS: "Submitted!",
+        ERROR: "Submission failed. Please try again.",
+        RETRY: "Retry",
+        VALIDATION_LENGTH: "Please enter 1-20 characters.",
       },
     },
     ERROR: {
