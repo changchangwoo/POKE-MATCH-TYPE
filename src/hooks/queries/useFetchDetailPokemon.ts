@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchDetailPokemon } from "@api/api";
+import { POKEMON_SPRITE_URL } from "@const/apiConfig";
 import { MatchInfo } from "@models/pokemonData";
 import { LanguageType } from "@models/settingData";
 
@@ -23,7 +24,7 @@ const useFetchDetailPokemon = (no: string, name: string, searchLanguage : Langua
           }
         }),
         no: Number(no),
-        imgs: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${no}.png`,
+        imgs: `${POKEMON_SPRITE_URL}/${no}.png`,
         searchLanguage 
       };
       sessionStorage.setItem(

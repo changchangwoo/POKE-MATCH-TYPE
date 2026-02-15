@@ -1,6 +1,7 @@
 import axios from "axios";
+import { POKEAPI_URL } from "@const/apiConfig";
 
-const baseURL = "https://pokeapi.co/api/v2/";
+const baseURL = POKEAPI_URL;
 
 export const API = async (url: string) => {
   try {

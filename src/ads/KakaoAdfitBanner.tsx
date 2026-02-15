@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 import { useEffect, useRef, useState } from "react";
+import { KAKAO_ADFIT_URL } from "@const/apiConfig";
 
 const DEVICE_BANNER_SIZES = {
   mobile: { width: 320, height: 100, unitId: "DAN-RlQorOBvg7B1cDJc" },
@@ -38,7 +39,7 @@ export default function KakaoAdfitBanner() {
         script.id = scriptId;
         script.async = true;
         script.type = "text/javascript";
-        script.src = "https://t1.daumcdn.net/kas/static/ba.min.js";
+        script.src = KAKAO_ADFIT_URL;
         document.body.appendChild(script);
       }
     };

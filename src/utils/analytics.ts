@@ -4,7 +4,8 @@ declare global {
   }
 }
 
-export const GA_ID = import.meta.env.VITE_GA_ID || "G-CTYBWT7FV7";
+import { GA_ID } from "@const/apiConfig";
+export { GA_ID };
 
 export const pageview = (url: string) => {
   if (!window.gtag) return;

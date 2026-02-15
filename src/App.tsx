@@ -21,12 +21,12 @@ import {
   ThemeContext,
 } from "@services/getInitialData";
 import { LANGUAGE_TEXTS } from "@const/language_text";
+import { SITE_ORIGIN } from "@const/apiConfig";
 import useDefaultSetting from "@hooks/useDefaultSetting";
 import Error from "@pages/Error";
 import MainTitle from "@components/mainTitle";
 
 const IMAGE_LIST = [Logo] as const;
-const SITE_ORIGIN = "https://poke-match-type.site";
 const DEFAULT_IMAGE_URL = `${SITE_ORIGIN}/og.png`;
 
 type SeoData = {

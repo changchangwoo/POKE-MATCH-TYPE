@@ -2,6 +2,7 @@
 import { useLocation } from "react-router-dom";
 import { LanguageContext, ThemeContext } from "@services/getInitialData";
 import { LANGUAGE_TEXTS } from "@const/language_text";
+import { FEEDBACK_URL } from "@const/apiConfig";
 import { LanguageType } from "@models/settingData";
 import { overlayStyle } from "./NavigationStyles";
 import DesktopNav from "./DesktopNav";
@@ -53,7 +54,7 @@ const Navigation = () => {
 
   const handleFeedbackClick = () => {
     window.open(
-      "https://forms.gle/AYkAFR5kYKNVsQf19",
+      FEEDBACK_URL,
       "_blank",
       "noopener,noreferrer",
     );

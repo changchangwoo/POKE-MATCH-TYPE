@@ -2,6 +2,7 @@ import { MatchInfo, Types } from "@models/pokemonData";
 import { DamageData } from "./getDetailType";
 import { getRandomNum, getShuffleArr } from "@utils/getRandomNum";
 import defaultTypes from "@data/defaultTypes.json";
+import { POKEMON_SPRITE_URL } from "@const/apiConfig";
 
 type GroupResult = { damage: number; types: DamageData[] }[];
 
@@ -119,7 +120,7 @@ export const buildMatchInfo = (
       }
     }),
     no: Number(randomNum),
-    imgs: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${randomNum}.png`,
+    imgs: `${POKEMON_SPRITE_URL}/${randomNum}.png`,
     searchLanguage: "",
   };
 };
