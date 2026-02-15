@@ -46,6 +46,7 @@ const QuizHomeMain = ({
   const [showExitConfirm, setShowExitConfirm] = useState<boolean>(false);
   const [elapsedSeconds, setElapsedSeconds] = useState<number>(0);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const session = loadSession();
@@ -185,6 +186,13 @@ const QuizHomeMain = ({
     }
   }, [progress, onComplete, language.type]);
 
+  useEffect(() => {
+    if (isNext && bottomRef.current) {
+      bottomRef.current.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    }
+  }, [isNext]);
+
   return (
     <div css={quizMainContainer}>
       <div css={controlBar}>
@@ -246,7 +254,7 @@ const QuizHomeMain = ({
             })()}
       </div>
       {isNext && (
-        <div css={bottomActionsContainer}>
+        <div ref={bottomRef} css={bottomActionsContainer}>
           {alertType && (
             <QuizAlert
               quizType={alertType}

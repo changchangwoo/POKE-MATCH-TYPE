@@ -123,8 +123,11 @@ const QuizType2TypeDescription = ({
       </div>
 
       <button
-        onClick={() => submitAnswer(checkedAnswer.idx, answerIdx, answer)}
-        css={submitBtn(isNext)}
+        onClick={() => {
+          if (isNext || checkedAnswer.idx === -1) return;
+          submitAnswer(checkedAnswer.idx, answerIdx, answer);
+        }}
+        css={submitBtn(isNext || checkedAnswer.idx === -1)}
       >
         {text.QUIZ.SUBMIT}
       </button>

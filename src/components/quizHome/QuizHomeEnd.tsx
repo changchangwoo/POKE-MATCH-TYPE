@@ -27,6 +27,8 @@ const QuizHomeEnd = ({
 }: QuizHomeEndProps) => {
   const { text } = useContext(LanguageContext);
   const t = text.QUIZ.END;
+  const quizKey = `Q${selectedQuiz}` as "Q1" | "Q2" | "Q3" | "Q4";
+  const story = t[quizKey];
   const correctCount = progressArr.filter(
     (item) => item.step === "correct",
   ).length;
@@ -73,13 +75,13 @@ const QuizHomeEnd = ({
       <div css={resultMessage}>
         {isSuccess ? (
           <>
-            <p>{t.SUCCESS_1}</p>
-            <p>{t.SUCCESS_2}</p>
+            <p>{story.SUCCESS_1}</p>
+            <p>{story.SUCCESS_2}</p>
           </>
         ) : (
           <>
-            <p>{t.FAIL_1}</p>
-            <p>{t.FAIL_2}</p>
+            <p>{story.FAIL_1}</p>
+            <p>{story.FAIL_2}</p>
           </>
         )}
       </div>
@@ -153,6 +155,7 @@ const resultMessage = css`
     color: var(--text);
     margin: 0;
     line-height: 1.5;
+    white-space: pre-line;
   }
 `;
 

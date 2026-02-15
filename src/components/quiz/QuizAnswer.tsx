@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import SelectTypeForQuiz from "./SelectTypeForQuiz";
 import { CheckedType, Types } from "@models/pokemonData";
 import { css } from "@emotion/react";
@@ -23,6 +23,10 @@ export const QuizAnswer = ({
 }: QuizAnswerProps) => {
   const [checkedType, setCheckedType] = useState<CheckedType[]>([]);
   const { text } = useContext(LanguageContext);
+
+  useEffect(() => {
+    setCheckedType([]);
+  }, [questionArr]);
 
   return (
     <>
