@@ -141,7 +141,7 @@ const getSeoData = (pathname: string, languageType: LanguageType): SeoData => {
         : "Pokemon quiz flow page.",
       h1: isKorean ? `포켓몬 상성 퀴즈 ${quizId}` : `Pokemon Type Quiz ${quizId}`,
       robots: isIndexable ? "noindex, follow" : "noindex, nofollow",
-      canonicalPath: pathname,
+      canonicalPath: "/quiz",
     };
   }
 
@@ -154,7 +154,7 @@ const getSeoData = (pathname: string, languageType: LanguageType): SeoData => {
       : "The page you requested could not be found.",
     h1: isKorean ? "페이지를 찾을 수 없습니다" : "Page Not Found",
     robots: "noindex, nofollow",
-    canonicalPath: pathname,
+    canonicalPath: "/",
   };
 };
 
@@ -167,7 +167,11 @@ const applySeoData = (seoData: SeoData, languageType: LanguageType) => {
   upsertMetaTag("name", "description", seoData.description);
   upsertMetaTag("name", "robots", seoData.robots);
   upsertMetaTag("property", "og:type", "website");
-  upsertMetaTag("property", "og:site_name", "Pokemon Type Calculator");
+  upsertMetaTag(
+    "property",
+    "og:site_name",
+    languageType === "kor" ? "포켓몬 상성 계산기" : "Pokemon Type Calculator",
+  );
   upsertMetaTag(
     "property",
     "og:locale",
