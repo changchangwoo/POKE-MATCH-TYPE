@@ -78,8 +78,8 @@ const getSeoData = (pathname: string, languageType: LanguageType): SeoData => {
         ? "포켓몬 상성 계산기 | 포켓몬 타입별 상성 계산"
         : "Pokemon Type Calculator | Pokemon Type Matchup Tool",
       description: isKorean
-        ? "포켓몬 이름 검색으로 타입 상성을 빠르게 확인하는 포켓몬 상성 계산기."
-        : "Quickly check Pokemon type matchups with a beginner-friendly Pokemon type calculator.",
+        ? "포켓몬 상성 계산기 - 초보자를 위한 초간단 포켓몬 상성 계산 서비스. 포켓몬 이름 검색을 통해서 쉽게 타입 상성을 확인하세요!"
+        : "Pokemon Type Calculator - A simple Pokemon type matchup tool for beginners. Search by Pokemon name to quickly check type effectiveness and weaknesses!",
       h1: isKorean ? "포켓몬 상성 계산기" : "Pokemon Type Calculator",
       robots: "index, follow",
       canonicalPath: "/",
@@ -92,8 +92,8 @@ const getSeoData = (pathname: string, languageType: LanguageType): SeoData => {
         ? "타입 상성 비교 | 포켓몬 상성 계산기"
         : "Type Matchup Compare | Pokemon Type Calculator",
       description: isKorean
-        ? "두 타입을 직접 선택해 공격·방어 상성을 비교해 보세요."
-        : "Select one or two types and compare attack and defense effectiveness.",
+        ? "포켓몬 타입 상성 비교 - 두 타입을 직접 선택해 공격·방어 상성을 비교해 보세요. 초보자도 쉽게 타입별 약점과 강점을 확인할 수 있습니다."
+        : "Pokemon Type Matchup Compare - Select one or two types to compare attack and defense effectiveness. Easily find type strengths and weaknesses.",
       h1: isKorean ? "포켓몬 타입 상성 비교" : "Pokemon Type Matchup Compare",
       robots: "index, follow",
       canonicalPath: "/type",
@@ -106,8 +106,8 @@ const getSeoData = (pathname: string, languageType: LanguageType): SeoData => {
         ? "포켓몬 타입 상성표 | 포켓몬 상성 계산기"
         : "Pokemon Type Chart | Pokemon Type Calculator",
       description: isKorean
-        ? "포켓몬 18개 타입 상성표를 한눈에 확인하고 약점과 반감을 빠르게 찾으세요."
-        : "View the full 18-type matchup chart and quickly find strengths and weaknesses.",
+        ? "포켓몬 타입 상성표 - 포켓몬 18개 타입의 공격·방어 상성표를 한눈에 확인하세요. 약점과 반감을 빠르게 찾아 배틀 전략을 세울 수 있습니다."
+        : "Pokemon Type Chart - View the full 18-type matchup chart at a glance. Quickly find weaknesses and resistances to plan your battle strategy.",
       h1: isKorean ? "포켓몬 타입 상성표" : "Pokemon Type Matchup Table",
       robots: "index, follow",
       canonicalPath: "/table",
@@ -120,8 +120,8 @@ const getSeoData = (pathname: string, languageType: LanguageType): SeoData => {
         ? "포켓몬 상성 퀴즈 | 포켓몬 상성 계산기"
         : "Pokemon Type Quiz | Pokemon Type Calculator",
       description: isKorean
-        ? "포켓몬 상성 퀴즈로 타입 지식을 점검하고 실전 감각을 높여보세요."
-        : "Test and improve your type matchup knowledge with interactive Pokemon quizzes.",
+        ? "포켓몬 상성 퀴즈 - 포켓몬 타입 상성 퀴즈로 타입 지식을 점검하고 실전 배틀 감각을 높여 보세요. 다양한 난이도의 퀴즈를 풀어볼 수 있습니다."
+        : "Pokemon Type Quiz - Test and improve your type matchup knowledge with interactive Pokemon quizzes. Try different difficulty levels!",
       h1: isKorean ? "포켓몬 상성 퀴즈" : "Pokemon Type Quiz",
       robots: "index, follow",
       canonicalPath: "/quiz",
@@ -137,8 +137,8 @@ const getSeoData = (pathname: string, languageType: LanguageType): SeoData => {
         ? `${quizId}번 퀴즈 ${quizStep} | 포켓몬 상성 계산기`
         : `Quiz ${quizId} ${quizStep} | Pokemon Type Calculator`,
       description: isKorean
-        ? "퀴즈 진행 페이지입니다."
-        : "Pokemon quiz flow page.",
+        ? "포켓몬 상성 퀴즈 - 타입 상성 문제를 풀고 나의 포켓몬 지식을 확인해 보세요."
+        : "Pokemon Type Quiz - Solve type matchup questions and test your Pokemon knowledge.",
       h1: isKorean ? `포켓몬 상성 퀴즈 ${quizId}` : `Pokemon Type Quiz ${quizId}`,
       robots: isIndexable ? "noindex, follow" : "noindex, nofollow",
       canonicalPath: "/quiz",
@@ -165,6 +165,11 @@ const applySeoData = (seoData: SeoData, languageType: LanguageType) => {
   document.documentElement.lang = languageType === "kor" ? "ko" : "en";
 
   upsertMetaTag("name", "description", seoData.description);
+  upsertMetaTag(
+    "name",
+    "keywords",
+    "포켓몬, 상성 계산기, 포켓몬 타입, 포켓몬 상성, 타입 계산기, 타입 퀴즈, Pokémon, weakness calculator, type chart, type matchup, type effectiveness",
+  );
   upsertMetaTag("name", "robots", seoData.robots);
   upsertMetaTag("property", "og:type", "website");
   upsertMetaTag(
