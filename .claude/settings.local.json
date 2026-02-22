@@ -19,7 +19,10 @@
       "Bash(timeout 5 cmd:*)",
       "Bash(npm run type-check:*)",
       "Bash(npm run:*)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(findstr:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []

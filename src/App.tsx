@@ -92,8 +92,8 @@ const getSeoData = (pathname: string, languageType: LanguageType): SeoData => {
         ? "타입 상성 비교 | 포켓몬 상성 계산기"
         : "Type Matchup Compare | Pokemon Type Calculator",
       description: isKorean
-        ? "두 타입을 직접 선택해 공격·방어 상성을 비교해 보세요."
-        : "Select one or two types and compare attack and defense effectiveness.",
+        ? "포켓몬 타입 상성 비교 - 두 타입을 직접 선택해 공격·방어 상성을 비교해 보세요. 초보자도 쉽게 타입별 약점과 강점을 확인할 수 있습니다."
+        : "Pokemon Type Matchup Compare - Select one or two types to compare attack and defense effectiveness. Easily find type strengths and weaknesses.",
       h1: isKorean ? "포켓몬 타입 상성 비교" : "Pokemon Type Matchup Compare",
       robots: "index, follow",
       canonicalPath: "/type",
@@ -106,8 +106,8 @@ const getSeoData = (pathname: string, languageType: LanguageType): SeoData => {
         ? "포켓몬 타입 상성표 | 포켓몬 상성 계산기"
         : "Pokemon Type Chart | Pokemon Type Calculator",
       description: isKorean
-        ? "포켓몬 18개 타입 상성표를 한눈에 확인하고 약점과 반감을 빠르게 찾으세요."
-        : "View the full 18-type matchup chart and quickly find strengths and weaknesses.",
+        ? "포켓몬 타입 상성표 - 포켓몬 18개 타입의 공격·방어 상성표를 한눈에 확인하세요. 약점과 반감을 빠르게 찾아 배틀 전략을 세울 수 있습니다."
+        : "Pokemon Type Chart - View the full 18-type matchup chart at a glance. Quickly find weaknesses and resistances to plan your battle strategy.",
       h1: isKorean ? "포켓몬 타입 상성표" : "Pokemon Type Matchup Table",
       robots: "index, follow",
       canonicalPath: "/table",
@@ -143,7 +143,7 @@ const getSeoData = (pathname: string, languageType: LanguageType): SeoData => {
         ? `포켓몬 상성 퀴즈 ${quizId}`
         : `Pokemon Type Quiz ${quizId}`,
       robots: isIndexable ? "noindex, follow" : "noindex, nofollow",
-      canonicalPath: pathname,
+      canonicalPath: "/quiz",
     };
   }
 
@@ -156,7 +156,7 @@ const getSeoData = (pathname: string, languageType: LanguageType): SeoData => {
       : "The page you requested could not be found.",
     h1: isKorean ? "페이지를 찾을 수 없습니다" : "Page Not Found",
     robots: "noindex, nofollow",
-    canonicalPath: pathname,
+    canonicalPath: "/",
   };
 };
 
@@ -167,9 +167,18 @@ const applySeoData = (seoData: SeoData, languageType: LanguageType) => {
   document.documentElement.lang = languageType === "kor" ? "ko" : "en";
 
   upsertMetaTag("name", "description", seoData.description);
+  upsertMetaTag(
+    "name",
+    "keywords",
+    "포켓몬, 상성 계산기, 포켓몬 타입, 포켓몬 상성, 타입 계산기, 타입 퀴즈, Pokémon, weakness calculator, type chart, type matchup, type effectiveness",
+  );
   upsertMetaTag("name", "robots", seoData.robots);
   upsertMetaTag("property", "og:type", "website");
-  upsertMetaTag("property", "og:site_name", "Pokemon Type Calculator");
+  upsertMetaTag(
+    "property",
+    "og:site_name",
+    languageType === "kor" ? "포켓몬 상성 계산기" : "Pokemon Type Calculator",
+  );
   upsertMetaTag(
     "property",
     "og:locale",
