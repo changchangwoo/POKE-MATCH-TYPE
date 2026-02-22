@@ -75,12 +75,12 @@ const getSeoData = (pathname: string, languageType: LanguageType): SeoData => {
   if (pathname === "/") {
     return {
       title: isKorean
-        ? "포켓몬 상성 계산기 | 포켓몬 타입별 상성 계산"
+        ? "포켓몬 상성 계산기 | 포켓몬 타입 계산"
         : "Pokemon Type Calculator | Pokemon Type Matchup Tool",
       description: isKorean
-        ? "포켓몬 이름 검색으로 타입 상성을 빠르게 확인하는 포켓몬 상성 계산기."
+        ? "초보자를 위한 초간단 포켓몬 상성 계산 서비스 - 포켓몬 이름 검색을 통해서 쉽게 타입 상성을 확인하세요! 간편한 포켓몬 타입 계산 기능을 제공합니다."
         : "Quickly check Pokemon type matchups with a beginner-friendly Pokemon type calculator.",
-      h1: isKorean ? "포켓몬 상성 계산기" : "Pokemon Type Calculator",
+      h1: isKorean ? "포켓몬 타입 상성 계산기" : "Pokemon Type Calculator",
       robots: "index, follow",
       canonicalPath: "/",
     };
@@ -122,7 +122,7 @@ const getSeoData = (pathname: string, languageType: LanguageType): SeoData => {
       description: isKorean
         ? "포켓몬 상성 퀴즈로 타입 지식을 점검하고 실전 감각을 높여보세요."
         : "Test and improve your type matchup knowledge with interactive Pokemon quizzes.",
-      h1: isKorean ? "포켓몬 상성 퀴즈" : "Pokemon Type Quiz",
+      h1: isKorean ? "포켓몬 타입 상성 퀴즈" : "Pokemon Type Quiz",
       robots: "index, follow",
       canonicalPath: "/quiz",
     };
@@ -139,7 +139,9 @@ const getSeoData = (pathname: string, languageType: LanguageType): SeoData => {
       description: isKorean
         ? "퀴즈 진행 페이지입니다."
         : "Pokemon quiz flow page.",
-      h1: isKorean ? `포켓몬 상성 퀴즈 ${quizId}` : `Pokemon Type Quiz ${quizId}`,
+      h1: isKorean
+        ? `포켓몬 상성 퀴즈 ${quizId}`
+        : `Pokemon Type Quiz ${quizId}`,
       robots: isIndexable ? "noindex, follow" : "noindex, nofollow",
       canonicalPath: pathname,
     };

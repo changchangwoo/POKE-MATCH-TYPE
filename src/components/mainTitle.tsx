@@ -18,7 +18,7 @@ const MainTitle = () => {
   return (
     <div css={titleContainer}>
       <div css={textWrapper}>
-        <h1 css={title}>{text.APP.TITLE}</h1>
+        <h2 css={title}>{text.APP.TITLE}</h2>
         <h2 css={subtitle}>{text.MAIN.SEARCH.SUBTITLE}</h2>
       </div>
       <div css={logoWrapper}>

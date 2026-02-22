@@ -15,15 +15,15 @@ export const LANGUAGE_TEXTS = {
       CHANGE_BUTTON: {
         COMPARE_POKEMON: "포켓몬으로 비교",
         COMPARE_TYPE: "타입으로 비교",
-        COPATIBILITY_TABLE: "상성 표",
-        COMPATIBILITY_QUIZ: "상성 퀴즈",
+        COPATIBILITY_TABLE: "타입 상성표",
+        COMPATIBILITY_QUIZ: "타입 상성 퀴즈",
       },
       FEEDBACK: "피드백",
     },
     MAIN: {
       LOADING: "로딩 중",
       SEARCH: {
-        SUBTITLE: "초간단 포켓몬 상성 계산 서비스",
+        SUBTITLE: "포켓몬 타입 상성 계산 서비스",
         PLACE_HOLDER: "매칭된 포켓몬을 입력해주세요",
         RECENT_SEARCH: "최근 검색",
       },
