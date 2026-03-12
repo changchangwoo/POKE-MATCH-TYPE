@@ -107,11 +107,13 @@ const pageContainer = css`
 const contentWrapper = css`
   flex: 0 0 65%;
   min-width: 0;
+  max-height: 516px;
   display: flex;
   flex-direction: column;
 
   @media (max-width: 768px) {
     flex: 1;
+    max-height: none;
     width: 100%;
   }
 `;
@@ -119,11 +121,13 @@ const contentWrapper = css`
 const rightWrapper = css`
   flex: 0 0 35%;
   min-width: 0;
+  max-height: 516px;
   display: flex;
   flex-direction: column;
 
   @media (max-width: 768px) {
     flex: 1;
+    max-height: none;
     width: 100%;
   }
 `;

@@ -115,7 +115,8 @@ const rankingContainer = css`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  min-height: 515px;
+  max-height: calc(100vh - 160px);
   position: sticky;
   top: 80px;
   align-self: flex-start;
@@ -126,6 +127,8 @@ const rankingContainer = css`
 
   @media (max-width: 768px) {
     position: static;
+    min-height: auto;
+    max-height: 400px;
   }
 `;
 
@@ -151,6 +154,8 @@ const resetNotice = css`
 
 const rankingListWrapper = css`
   flex: 1;
+  min-height: 0;
+  overflow-y: auto;
 `;
 
 const statusContainer = css`

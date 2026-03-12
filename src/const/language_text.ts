@@ -163,7 +163,7 @@ export const LANGUAGE_TEXTS = {
       },
       RANKING: {
         TITLE: "명예의 전당",
-        RESET_NOTICE: "매 주 월요일에 초기화됩니다",
+        RESET_NOTICE: "포켓몬 마스터가 되어보세요!",
         RANK_SUFFIX: "위",
         ERROR: "랭킹을 불러올 수 없습니다",
         EMPTY: "아직 기록이 없습니다",
@@ -394,7 +394,7 @@ export const LANGUAGE_TEXTS = {
       },
       RANKING: {
         TITLE: "Hall of Fame",
-        RESET_NOTICE: "Resets every Monday",
+        RESET_NOTICE: "Become a Pokémon Master!",
         RANK_SUFFIX: "th",
         ERROR: "Failed to load rankings",
         EMPTY: "No records yet",
