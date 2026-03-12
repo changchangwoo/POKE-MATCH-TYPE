@@ -75,10 +75,10 @@ const getSeoData = (pathname: string, languageType: LanguageType): SeoData => {
   if (pathname === "/") {
     return {
       title: isKorean
-        ? "포켓몬 상성 계산기 | 포켓몬 타입 계산"
+        ? "포켓몬 상성 계산기 | 포켓몬 타입별 상성 계산"
         : "Pokemon Type Calculator | Pokemon Type Matchup Tool",
       description: isKorean
-        ? "초보자를 위한 초간단 포켓몬 상성 계산 서비스 - 포켓몬 이름 검색을 통해서 쉽게 타입 상성을 확인하세요! 간편한 포켓몬 타입 계산 기능을 제공합니다."
+        ? "포켓몬 이름 검색으로 타입 상성을 빠르게 확인하는 포켓몬 상성 계산기. 초보자도 쉽게 사용할 수 있는 타입별 약점·강점 계산 서비스."
         : "Quickly check Pokemon type matchups with a beginner-friendly Pokemon type calculator.",
       h1: isKorean ? "포켓몬 타입 상성 계산기" : "Pokemon Type Calculator",
       robots: "index, follow",
@@ -92,7 +92,7 @@ const getSeoData = (pathname: string, languageType: LanguageType): SeoData => {
         ? "타입 상성 비교 | 포켓몬 상성 계산기"
         : "Type Matchup Compare | Pokemon Type Calculator",
       description: isKorean
-        ? "포켓몬 타입 상성 비교 - 두 타입을 직접 선택해 공격·방어 상성을 비교해 보세요. 초보자도 쉽게 타입별 약점과 강점을 확인할 수 있습니다."
+        ? "두 타입을 직접 선택해 공격·방어 상성을 비교하는 포켓몬 타입 상성 비교 도구."
         : "Pokemon Type Matchup Compare - Select one or two types to compare attack and defense effectiveness. Easily find type strengths and weaknesses.",
       h1: isKorean ? "포켓몬 타입 상성 비교" : "Pokemon Type Matchup Compare",
       robots: "index, follow",
@@ -106,7 +106,7 @@ const getSeoData = (pathname: string, languageType: LanguageType): SeoData => {
         ? "포켓몬 타입 상성표 | 포켓몬 상성 계산기"
         : "Pokemon Type Chart | Pokemon Type Calculator",
       description: isKorean
-        ? "포켓몬 타입 상성표 - 포켓몬 18개 타입의 공격·방어 상성표를 한눈에 확인하세요. 약점과 반감을 빠르게 찾아 배틀 전략을 세울 수 있습니다."
+        ? "포켓몬 18개 타입의 공격·방어 상성표를 한눈에 확인. 약점과 반감을 빠르게 찾으세요."
         : "Pokemon Type Chart - View the full 18-type matchup chart at a glance. Quickly find weaknesses and resistances to plan your battle strategy.",
       h1: isKorean ? "포켓몬 타입 상성표" : "Pokemon Type Matchup Table",
       robots: "index, follow",
@@ -174,11 +174,7 @@ const applySeoData = (seoData: SeoData, languageType: LanguageType) => {
   );
   upsertMetaTag("name", "robots", seoData.robots);
   upsertMetaTag("property", "og:type", "website");
-  upsertMetaTag(
-    "property",
-    "og:site_name",
-    languageType === "kor" ? "포켓몬 상성 계산기" : "Pokemon Type Calculator",
-  );
+  upsertMetaTag("property", "og:site_name", "Pokemon Type Calculator");
   upsertMetaTag(
     "property",
     "og:locale",
